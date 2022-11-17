@@ -1,38 +1,28 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
-A library for controlling Brompton systems over a network
+A library for controlling Brompton Tessera systems over a network
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+This package is generated from the OpenApi spec that can be found in `/lib/swaggers/brompton.yaml`. All
+endpoints [documented here][1] should be available.
 
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
 ```dart
-const like = 'sample';
+import 'package:dart_brompton/brompton.dart';
+
+Future<void> main() async {
+  final brompton = Brompton.create(baseUrl: "http://10.10.10.10/api");
+
+  await brompton.outputGlobalColourBrightnessGet(
+      $set: 200); // Set global brightness to 200 nits
+}
+
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+You can report issues and request features on the [github repo][2]
+
+[1]: https://dl.bromptontech.com/tessera/docs/TesseraIPControlAPI3_4_3.pdf
+[2]: https://github.com/point-source/dart_brompton

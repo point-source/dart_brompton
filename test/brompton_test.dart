@@ -1,16 +1,12 @@
-import 'package:dart_brompton/dart_brompton.dart';
+import 'package:dart_brompton/brompton.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('A group of tests', () {
-    final awesome = Awesome();
+  group('Init: ', () {
+    final brompton = Brompton.create(baseUrl: "http://10.10.10.10/api");
 
-    setUp(() {
-      // Additional setup goes here.
-    });
-
-    test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
+    test('Instance', () {
+      expect(brompton, isA<Brompton>());
     });
   });
 }

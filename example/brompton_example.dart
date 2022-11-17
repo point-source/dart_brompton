@@ -1,10 +1,8 @@
-import 'package:brompton/brompton.dart';
+import 'package:dart_brompton/brompton.dart';
 
 Future<void> main() async {
-  for (var i = 1; i < 13; i++) {
-    final octet = i + 200;
-    final brompton = BromptonApiService.create(ipAddress: '37.101.8.$octet');
-    print('setting 37.101.8.$octet');
-    await brompton.setGlobalBrightness(1200);
-  }
+  final brompton = Brompton.create(baseUrl: "http://10.10.10.10/api");
+
+  await brompton.outputGlobalColourBrightnessGet(
+      $set: 200); // Set global brightness to 200 nits
 }
