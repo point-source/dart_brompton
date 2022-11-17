@@ -1217,6 +1217,63 @@ Map<String, dynamic> _$InputActiveSourcePortNumberPut$RequestBodyToJson(
       'data': instance.data,
     };
 
+InputActiveSourcePortTypePut$RequestBody
+    _$InputActiveSourcePortTypePut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputActiveSourcePortTypePut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic> _$InputActiveSourcePortTypePut$RequestBodyToJson(
+        InputActiveSourcePortTypePut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
+InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody
+    _$InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic>
+    _$InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBodyToJson(
+            InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody
+                instance) =>
+        <String, dynamic>{
+          'data': instance.data,
+        };
+
+InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody
+    _$InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic>
+    _$InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBodyToJson(
+            InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody
+                instance) =>
+        <String, dynamic>{
+          'data': instance.data,
+        };
+
+InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody
+    _$InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String,
+    dynamic> _$InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBodyToJson(
+        InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
 InputPortsDviDviPortNumberDynacalBlueXPut$RequestBody
     _$InputPortsDviDviPortNumberDynacalBlueXPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
@@ -1245,6 +1302,20 @@ Map<String, dynamic>
           'data': instance.data,
         };
 
+InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody
+    _$InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String,
+    dynamic> _$InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBodyToJson(
+        InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
 InputPortsDviDviPortNumberDynacalGreenXPut$RequestBody
     _$InputPortsDviDviPortNumberDynacalGreenXPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
@@ -1272,6 +1343,20 @@ Map<String, dynamic>
         <String, dynamic>{
           'data': instance.data,
         };
+
+InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody
+    _$InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String,
+    dynamic> _$InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBodyToJson(
+        InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
 
 InputPortsDviDviPortNumberDynacalRedXPut$RequestBody
     _$InputPortsDviDviPortNumberDynacalRedXPut$RequestBodyFromJson(
@@ -1315,6 +1400,20 @@ Map<String, dynamic>
         <String, dynamic>{
           'data': instance.data,
         };
+
+InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody
+    _$InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String,
+    dynamic> _$InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBodyToJson(
+        InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
 
 InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBody
     _$InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBodyFromJson(
@@ -1488,6 +1587,21 @@ Map<String,
       'data': instance.data,
     };
 
+InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody
+    _$InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic>
+    _$InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBodyToJson(
+            InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody
+                instance) =>
+        <String, dynamic>{
+          'data': instance.data,
+        };
+
 InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBody
     _$InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
@@ -1498,6 +1612,36 @@ InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$Reque
 Map<String, dynamic>
     _$InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBodyToJson(
             InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBody
+                instance) =>
+        <String, dynamic>{
+          'data': instance.data,
+        };
+
+InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody
+    _$InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic>
+    _$InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBodyToJson(
+            InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody
+                instance) =>
+        <String, dynamic>{
+          'data': instance.data,
+        };
+
+InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody
+    _$InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic>
+    _$InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBodyToJson(
+            InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody
                 instance) =>
         <String, dynamic>{
           'data': instance.data,
@@ -1563,6 +1707,36 @@ Map<String, dynamic>
           'data': instance.data,
         };
 
+InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody
+    _$InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic>
+    _$InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBodyToJson(
+            InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody
+                instance) =>
+        <String, dynamic>{
+          'data': instance.data,
+        };
+
+InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody
+    _$InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic>
+    _$InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBodyToJson(
+            InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody
+                instance) =>
+        <String, dynamic>{
+          'data': instance.data,
+        };
+
 InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBody
     _$InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
@@ -1591,6 +1765,21 @@ Map<String, dynamic>
           'data': instance.data,
         };
 
+InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody
+    _$InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic>
+    _$InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBodyToJson(
+            InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody
+                instance) =>
+        <String, dynamic>{
+          'data': instance.data,
+        };
+
 InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBody
     _$InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
@@ -1615,6 +1804,20 @@ InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBody
 Map<String,
     dynamic> _$InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBodyToJson(
         InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
+InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody
+    _$InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String,
+    dynamic> _$InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBodyToJson(
+        InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody instance) =>
     <String, dynamic>{
       'data': instance.data,
     };
@@ -1657,6 +1860,21 @@ InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBody
 Map<String, dynamic>
     _$InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBodyToJson(
             InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBody
+                instance) =>
+        <String, dynamic>{
+          'data': instance.data,
+        };
+
+InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody
+    _$InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic>
+    _$InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBodyToJson(
+            InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody
                 instance) =>
         <String, dynamic>{
           'data': instance.data,
@@ -1838,6 +2056,35 @@ Map<String, dynamic>
           'data': instance.data,
         };
 
+InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody
+    _$InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic>
+    _$InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBodyToJson(
+            InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody
+                instance) =>
+        <String, dynamic>{
+          'data': instance.data,
+        };
+
+InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody
+    _$InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String,
+    dynamic> _$InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBodyToJson(
+        InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
 InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBody
     _$InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
@@ -1897,6 +2144,20 @@ Map<String, dynamic>
           'data': instance.data,
         };
 
+InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody
+    _$InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String,
+    dynamic> _$InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBodyToJson(
+        InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
 InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBody
     _$InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
@@ -1925,6 +2186,20 @@ Map<String, dynamic>
           'data': instance.data,
         };
 
+InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody
+    _$InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String,
+    dynamic> _$InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBodyToJson(
+        InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
 InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBody
     _$InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
@@ -1952,6 +2227,20 @@ Map<String, dynamic>
         <String, dynamic>{
           'data': instance.data,
         };
+
+InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody
+    _$InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String,
+    dynamic> _$InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBodyToJson(
+        InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
 
 InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBody
     _$InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBodyFromJson(
@@ -1995,6 +2284,20 @@ Map<String, dynamic>
         <String, dynamic>{
           'data': instance.data,
         };
+
+InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody
+    _$InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String,
+    dynamic> _$InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBodyToJson(
+        InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
 
 InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBody
     _$InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBodyFromJson(
@@ -2168,6 +2471,19 @@ Map<String,
       'data': instance.data,
     };
 
+OutputDynacalPanelTypeBlueModePut$RequestBody
+    _$OutputDynacalPanelTypeBlueModePut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        OutputDynacalPanelTypeBlueModePut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic> _$OutputDynacalPanelTypeBlueModePut$RequestBodyToJson(
+        OutputDynacalPanelTypeBlueModePut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
 OutputDynacalPanelTypeBlueXPut$RequestBody
     _$OutputDynacalPanelTypeBlueXPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
@@ -2190,6 +2506,19 @@ OutputDynacalPanelTypeBlueYPut$RequestBody
 
 Map<String, dynamic> _$OutputDynacalPanelTypeBlueYPut$RequestBodyToJson(
         OutputDynacalPanelTypeBlueYPut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
+OutputDynacalPanelTypeGreenModePut$RequestBody
+    _$OutputDynacalPanelTypeGreenModePut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        OutputDynacalPanelTypeGreenModePut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic> _$OutputDynacalPanelTypeGreenModePut$RequestBodyToJson(
+        OutputDynacalPanelTypeGreenModePut$RequestBody instance) =>
     <String, dynamic>{
       'data': instance.data,
     };
@@ -2230,6 +2559,32 @@ OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBody
 Map<String,
     dynamic> _$OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBodyToJson(
         OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
+OutputDynacalPanelTypeModePut$RequestBody
+    _$OutputDynacalPanelTypeModePut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        OutputDynacalPanelTypeModePut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic> _$OutputDynacalPanelTypeModePut$RequestBodyToJson(
+        OutputDynacalPanelTypeModePut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
+OutputDynacalPanelTypeRedModePut$RequestBody
+    _$OutputDynacalPanelTypeRedModePut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        OutputDynacalPanelTypeRedModePut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic> _$OutputDynacalPanelTypeRedModePut$RequestBodyToJson(
+        OutputDynacalPanelTypeRedModePut$RequestBody instance) =>
     <String, dynamic>{
       'data': instance.data,
     };
@@ -2588,6 +2943,20 @@ Map<String,
       'data': instance.data,
     };
 
+OutputNetworkFrameRemappingFramesFrameModePut$RequestBody
+    _$OutputNetworkFrameRemappingFramesFrameModePut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        OutputNetworkFrameRemappingFramesFrameModePut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String,
+    dynamic> _$OutputNetworkFrameRemappingFramesFrameModePut$RequestBodyToJson(
+        OutputNetworkFrameRemappingFramesFrameModePut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
 OutputNetworkFrameRemappingFramesFrameRedPut$RequestBody
     _$OutputNetworkFrameRemappingFramesFrameRedPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
@@ -2703,6 +3072,32 @@ Map<String, dynamic>
           'data': instance.data,
         };
 
+OutputNetworkGenlockPhaseOffsetModePut$RequestBody
+    _$OutputNetworkGenlockPhaseOffsetModePut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        OutputNetworkGenlockPhaseOffsetModePut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic> _$OutputNetworkGenlockPhaseOffsetModePut$RequestBodyToJson(
+        OutputNetworkGenlockPhaseOffsetModePut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
+OutputNetworkGenlockSourcePut$RequestBody
+    _$OutputNetworkGenlockSourcePut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        OutputNetworkGenlockSourcePut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic> _$OutputNetworkGenlockSourcePut$RequestBodyToJson(
+        OutputNetworkGenlockSourcePut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
 OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBody
     _$OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
@@ -2748,6 +3143,19 @@ Map<String, dynamic>
           'data': instance.data,
         };
 
+OutputNetworkShuttersyncModePut$RequestBody
+    _$OutputNetworkShuttersyncModePut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        OutputNetworkShuttersyncModePut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic> _$OutputNetworkShuttersyncModePut$RequestBodyToJson(
+        OutputNetworkShuttersyncModePut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
 OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBody
     _$OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
@@ -2773,6 +3181,19 @@ OutputNetworkShuttersyncSensorReadoutTimePut$RequestBody
 Map<String,
     dynamic> _$OutputNetworkShuttersyncSensorReadoutTimePut$RequestBodyToJson(
         OutputNetworkShuttersyncSensorReadoutTimePut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
+OutputNetworkShuttersyncSensorTypePut$RequestBody
+    _$OutputNetworkShuttersyncSensorTypePut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        OutputNetworkShuttersyncSensorTypePut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic> _$OutputNetworkShuttersyncSensorTypePut$RequestBodyToJson(
+        OutputNetworkShuttersyncSensorTypePut$RequestBody instance) =>
     <String, dynamic>{
       'data': instance.data,
     };
@@ -3201,6 +3622,21 @@ Map<String, dynamic>
           'data': instance.data,
         };
 
+OverrideTestPatternCustomGradientOrientationPut$RequestBody
+    _$OverrideTestPatternCustomGradientOrientationPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        OverrideTestPatternCustomGradientOrientationPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic>
+    _$OverrideTestPatternCustomGradientOrientationPut$RequestBodyToJson(
+            OverrideTestPatternCustomGradientOrientationPut$RequestBody
+                instance) =>
+        <String, dynamic>{
+          'data': instance.data,
+        };
+
 OverrideTestPatternCustomGradientStartColourBluePut$RequestBody
     _$OverrideTestPatternCustomGradientStartColourBluePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
@@ -3259,6 +3695,19 @@ Map<String, dynamic> _$OverrideTestPatternEnabledPut$RequestBodyToJson(
       'data': instance.data,
     };
 
+OverrideTestPatternFormatPut$RequestBody
+    _$OverrideTestPatternFormatPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        OverrideTestPatternFormatPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic> _$OverrideTestPatternFormatPut$RequestBodyToJson(
+        OverrideTestPatternFormatPut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
 OverrideTestPatternRestrictToAchievableColoursPut$RequestBody
     _$OverrideTestPatternRestrictToAchievableColoursPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
@@ -3273,6 +3722,19 @@ Map<String, dynamic>
         <String, dynamic>{
           'data': instance.data,
         };
+
+OverrideTestPatternTypePut$RequestBody
+    _$OverrideTestPatternTypePut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        OverrideTestPatternTypePut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic> _$OverrideTestPatternTypePut$RequestBodyToJson(
+        OverrideTestPatternTypePut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
 
 PresetsActiveNumberPut$RequestBody _$PresetsActiveNumberPut$RequestBodyFromJson(
         Map<String, dynamic> json) =>
@@ -4082,6 +4544,19 @@ ProcessingColourReplaceEnabledPut$RequestBody
 
 Map<String, dynamic> _$ProcessingColourReplaceEnabledPut$RequestBodyToJson(
         ProcessingColourReplaceEnabledPut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
+ProcessingColourReplaceMethodPut$RequestBody
+    _$ProcessingColourReplaceMethodPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        ProcessingColourReplaceMethodPut$RequestBody(
+          data: json['data'] as String,
+        );
+
+Map<String, dynamic> _$ProcessingColourReplaceMethodPut$RequestBodyToJson(
+        ProcessingColourReplaceMethodPut$RequestBody instance) =>
     <String, dynamic>{
       'data': instance.data,
     };

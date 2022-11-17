@@ -4,6 +4,8 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:collection/collection.dart';
 import 'dart:convert';
 
+import 'brompton.enums.swagger.dart' as enums;
+
 part 'brompton.models.swagger.g.dart';
 
 @JsonSerializable(explicitToJson: true)
@@ -5475,6 +5477,207 @@ extension $InputActiveSourcePortNumberPut$RequestBodyExtension
 }
 
 @JsonSerializable(explicitToJson: true)
+class InputActiveSourcePortTypePut$RequestBody {
+  InputActiveSourcePortTypePut$RequestBody({
+    required this.data,
+  });
+
+  factory InputActiveSourcePortTypePut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputActiveSourcePortTypePut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputActiveSourcePortTypePut$RequestBodyFromJson;
+  static const toJsonFactory = _$InputActiveSourcePortTypePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputActiveSourcePortTypePut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputActiveSourcePortTypePut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputActiveSourcePortTypePut$RequestBodyExtension
+    on InputActiveSourcePortTypePut$RequestBody {
+  InputActiveSourcePortTypePut$RequestBody copyWith({String? data}) {
+    return InputActiveSourcePortTypePut$RequestBody(data: data ?? this.data);
+  }
+
+  InputActiveSourcePortTypePut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return InputActiveSourcePortTypePut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody {
+  InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBodyToJson(
+          this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBodyExtension
+    on InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody {
+  InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody
+      copyWithWrapped({Wrapped<String>? data}) {
+    return InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody {
+  InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBodyToJson(
+          this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBodyExtension
+    on InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody {
+  InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody
+      copyWithWrapped({Wrapped<String>? data}) {
+    return InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody {
+  InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBodyExtension
+    on InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody {
+  InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberDynacalBlueXPut$RequestBody {
   InputPortsDviDviPortNumberDynacalBlueXPut$RequestBody({
     required this.data,
@@ -5575,6 +5778,57 @@ extension $InputPortsDviDviPortNumberDynacalBlueYPut$RequestBodyExtension
 }
 
 @JsonSerializable(explicitToJson: true)
+class InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody {
+  InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBodyExtension
+    on InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody {
+  InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberDynacalGreenXPut$RequestBody {
   InputPortsDviDviPortNumberDynacalGreenXPut$RequestBody({
     required this.data,
@@ -5670,6 +5924,56 @@ extension $InputPortsDviDviPortNumberDynacalGreenYPut$RequestBodyExtension
   InputPortsDviDviPortNumberDynacalGreenYPut$RequestBody copyWithWrapped(
       {Wrapped<double>? data}) {
     return InputPortsDviDviPortNumberDynacalGreenYPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody {
+  InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBodyExtension
+    on InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody {
+  InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody(
         data: (data != null ? data.value : this.data));
   }
 }
@@ -5822,6 +6126,57 @@ extension $InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBod
   InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBody
       copyWithWrapped({Wrapped<int>? data}) {
     return InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody {
+  InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBodyExtension
+    on InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody {
+  InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody(
         data: (data != null ? data.value : this.data));
   }
 }
@@ -6436,6 +6791,58 @@ extension $InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBodyExtension
 }
 
 @JsonSerializable(explicitToJson: true)
+class InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody {
+  InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBodyToJson(
+          this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBodyExtension
+    on InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody {
+  InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody
+      copyWithWrapped({Wrapped<String>? data}) {
+    return InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBody {
   InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBody({
     required this.data,
@@ -6483,6 +6890,110 @@ extension $InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabl
   InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBody
       copyWithWrapped({Wrapped<Object>? data}) {
     return InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody {
+  InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBodyToJson(
+          this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBodyExtension
+    on InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody {
+  InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody
+      copyWithWrapped({Wrapped<String>? data}) {
+    return InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody {
+  InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBodyToJson(
+          this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBodyExtension
+    on InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody {
+  InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody(
         data: (data != null ? data.value : this.data));
   }
 }
@@ -6696,6 +7207,109 @@ extension $InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$R
 }
 
 @JsonSerializable(explicitToJson: true)
+class InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody {
+  InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBodyToJson(
+          this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBodyExtension
+    on InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody {
+  InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody
+      copyWithWrapped({Wrapped<String>? data}) {
+    return InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody {
+  InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBodyExtension
+    on InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody {
+  InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBody {
   InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBody({
     required this.data,
@@ -6796,6 +7410,58 @@ extension $InputPortsHdmiHdmiPortNumberDynacalBlueYPut$RequestBodyExtension
 }
 
 @JsonSerializable(explicitToJson: true)
+class InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody {
+  InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBodyToJson(
+          this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBodyExtension
+    on InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody {
+  InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBody {
   InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBody({
     required this.data,
@@ -6891,6 +7557,57 @@ extension $InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBodyExtension
   InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBody copyWithWrapped(
       {Wrapped<double>? data}) {
     return InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody {
+  InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBodyExtension
+    on InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody {
+  InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody(
         data: (data != null ? data.value : this.data));
   }
 }
@@ -7043,6 +7760,58 @@ extension $InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestB
   InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBody
       copyWithWrapped({Wrapped<int>? data}) {
     return InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody {
+  InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBodyToJson(
+          this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBodyExtension
+    on InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody {
+  InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody(
         data: (data != null ? data.value : this.data));
   }
 }
@@ -7663,6 +8432,109 @@ extension $InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBodyExtension
 }
 
 @JsonSerializable(explicitToJson: true)
+class InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody {
+  InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBodyToJson(
+          this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBodyExtension
+    on InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody {
+  InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody
+      copyWithWrapped({Wrapped<String>? data}) {
+    return InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody {
+  InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBodyExtension
+    on InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody {
+  InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBody {
   InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBody({
     required this.data,
@@ -7870,6 +8742,56 @@ extension $InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$Req
 }
 
 @JsonSerializable(explicitToJson: true)
+class InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody {
+  InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBodyExtension
+    on InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody {
+  InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBody {
   InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBody({
     required this.data,
@@ -7970,6 +8892,57 @@ extension $InputPortsSdiSdiPortNumberDynacalBlueYPut$RequestBodyExtension
 }
 
 @JsonSerializable(explicitToJson: true)
+class InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody {
+  InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBodyExtension
+    on InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody {
+  InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBody {
   InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBody({
     required this.data,
@@ -8065,6 +9038,56 @@ extension $InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBodyExtension
   InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBody copyWithWrapped(
       {Wrapped<double>? data}) {
     return InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody {
+  InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBodyExtension
+    on InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody {
+  InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody(
         data: (data != null ? data.value : this.data));
   }
 }
@@ -8217,6 +9240,57 @@ extension $InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBod
   InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBody
       copyWithWrapped({Wrapped<int>? data}) {
     return InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody {
+  InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody({
+    required this.data,
+  });
+
+  factory InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBodyExtension
+    on InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody {
+  InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody copyWith(
+      {String? data}) {
+    return InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody(
         data: (data != null ? data.value : this.data));
   }
 }
@@ -8831,6 +9905,55 @@ extension $InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBodyExtension
 }
 
 @JsonSerializable(explicitToJson: true)
+class OutputDynacalPanelTypeBlueModePut$RequestBody {
+  OutputDynacalPanelTypeBlueModePut$RequestBody({
+    required this.data,
+  });
+
+  factory OutputDynacalPanelTypeBlueModePut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$OutputDynacalPanelTypeBlueModePut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputDynacalPanelTypeBlueModePut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$OutputDynacalPanelTypeBlueModePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OutputDynacalPanelTypeBlueModePut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is OutputDynacalPanelTypeBlueModePut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $OutputDynacalPanelTypeBlueModePut$RequestBodyExtension
+    on OutputDynacalPanelTypeBlueModePut$RequestBody {
+  OutputDynacalPanelTypeBlueModePut$RequestBody copyWith({String? data}) {
+    return OutputDynacalPanelTypeBlueModePut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  OutputDynacalPanelTypeBlueModePut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return OutputDynacalPanelTypeBlueModePut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class OutputDynacalPanelTypeBlueXPut$RequestBody {
   OutputDynacalPanelTypeBlueXPut$RequestBody({
     required this.data,
@@ -8922,6 +10045,55 @@ extension $OutputDynacalPanelTypeBlueYPut$RequestBodyExtension
   OutputDynacalPanelTypeBlueYPut$RequestBody copyWithWrapped(
       {Wrapped<double>? data}) {
     return OutputDynacalPanelTypeBlueYPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class OutputDynacalPanelTypeGreenModePut$RequestBody {
+  OutputDynacalPanelTypeGreenModePut$RequestBody({
+    required this.data,
+  });
+
+  factory OutputDynacalPanelTypeGreenModePut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$OutputDynacalPanelTypeGreenModePut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputDynacalPanelTypeGreenModePut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$OutputDynacalPanelTypeGreenModePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OutputDynacalPanelTypeGreenModePut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is OutputDynacalPanelTypeGreenModePut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $OutputDynacalPanelTypeGreenModePut$RequestBodyExtension
+    on OutputDynacalPanelTypeGreenModePut$RequestBody {
+  OutputDynacalPanelTypeGreenModePut$RequestBody copyWith({String? data}) {
+    return OutputDynacalPanelTypeGreenModePut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  OutputDynacalPanelTypeGreenModePut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return OutputDynacalPanelTypeGreenModePut$RequestBody(
         data: (data != null ? data.value : this.data));
   }
 }
@@ -9069,6 +10241,103 @@ extension $OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBodyExtension
   OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBody copyWithWrapped(
       {Wrapped<int>? data}) {
     return OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class OutputDynacalPanelTypeModePut$RequestBody {
+  OutputDynacalPanelTypeModePut$RequestBody({
+    required this.data,
+  });
+
+  factory OutputDynacalPanelTypeModePut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$OutputDynacalPanelTypeModePut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputDynacalPanelTypeModePut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$OutputDynacalPanelTypeModePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OutputDynacalPanelTypeModePut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is OutputDynacalPanelTypeModePut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $OutputDynacalPanelTypeModePut$RequestBodyExtension
+    on OutputDynacalPanelTypeModePut$RequestBody {
+  OutputDynacalPanelTypeModePut$RequestBody copyWith({String? data}) {
+    return OutputDynacalPanelTypeModePut$RequestBody(data: data ?? this.data);
+  }
+
+  OutputDynacalPanelTypeModePut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return OutputDynacalPanelTypeModePut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class OutputDynacalPanelTypeRedModePut$RequestBody {
+  OutputDynacalPanelTypeRedModePut$RequestBody({
+    required this.data,
+  });
+
+  factory OutputDynacalPanelTypeRedModePut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$OutputDynacalPanelTypeRedModePut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputDynacalPanelTypeRedModePut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$OutputDynacalPanelTypeRedModePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OutputDynacalPanelTypeRedModePut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is OutputDynacalPanelTypeRedModePut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $OutputDynacalPanelTypeRedModePut$RequestBodyExtension
+    on OutputDynacalPanelTypeRedModePut$RequestBody {
+  OutputDynacalPanelTypeRedModePut$RequestBody copyWith({String? data}) {
+    return OutputDynacalPanelTypeRedModePut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  OutputDynacalPanelTypeRedModePut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return OutputDynacalPanelTypeRedModePut$RequestBody(
         data: (data != null ? data.value : this.data));
   }
 }
@@ -10360,6 +11629,56 @@ extension $OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBodyExtension
 }
 
 @JsonSerializable(explicitToJson: true)
+class OutputNetworkFrameRemappingFramesFrameModePut$RequestBody {
+  OutputNetworkFrameRemappingFramesFrameModePut$RequestBody({
+    required this.data,
+  });
+
+  factory OutputNetworkFrameRemappingFramesFrameModePut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$OutputNetworkFrameRemappingFramesFrameModePut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputNetworkFrameRemappingFramesFrameModePut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$OutputNetworkFrameRemappingFramesFrameModePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OutputNetworkFrameRemappingFramesFrameModePut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is OutputNetworkFrameRemappingFramesFrameModePut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $OutputNetworkFrameRemappingFramesFrameModePut$RequestBodyExtension
+    on OutputNetworkFrameRemappingFramesFrameModePut$RequestBody {
+  OutputNetworkFrameRemappingFramesFrameModePut$RequestBody copyWith(
+      {String? data}) {
+    return OutputNetworkFrameRemappingFramesFrameModePut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  OutputNetworkFrameRemappingFramesFrameModePut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return OutputNetworkFrameRemappingFramesFrameModePut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class OutputNetworkFrameRemappingFramesFrameRedPut$RequestBody {
   OutputNetworkFrameRemappingFramesFrameRedPut$RequestBody({
     required this.data,
@@ -10765,6 +12084,103 @@ extension $OutputNetworkGenlockPhaseOffsetFractionPut$RequestBodyExtension
 }
 
 @JsonSerializable(explicitToJson: true)
+class OutputNetworkGenlockPhaseOffsetModePut$RequestBody {
+  OutputNetworkGenlockPhaseOffsetModePut$RequestBody({
+    required this.data,
+  });
+
+  factory OutputNetworkGenlockPhaseOffsetModePut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$OutputNetworkGenlockPhaseOffsetModePut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputNetworkGenlockPhaseOffsetModePut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$OutputNetworkGenlockPhaseOffsetModePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OutputNetworkGenlockPhaseOffsetModePut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is OutputNetworkGenlockPhaseOffsetModePut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $OutputNetworkGenlockPhaseOffsetModePut$RequestBodyExtension
+    on OutputNetworkGenlockPhaseOffsetModePut$RequestBody {
+  OutputNetworkGenlockPhaseOffsetModePut$RequestBody copyWith({String? data}) {
+    return OutputNetworkGenlockPhaseOffsetModePut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  OutputNetworkGenlockPhaseOffsetModePut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return OutputNetworkGenlockPhaseOffsetModePut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class OutputNetworkGenlockSourcePut$RequestBody {
+  OutputNetworkGenlockSourcePut$RequestBody({
+    required this.data,
+  });
+
+  factory OutputNetworkGenlockSourcePut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$OutputNetworkGenlockSourcePut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputNetworkGenlockSourcePut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$OutputNetworkGenlockSourcePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OutputNetworkGenlockSourcePut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is OutputNetworkGenlockSourcePut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $OutputNetworkGenlockSourcePut$RequestBodyExtension
+    on OutputNetworkGenlockSourcePut$RequestBody {
+  OutputNetworkGenlockSourcePut$RequestBody copyWith({String? data}) {
+    return OutputNetworkGenlockSourcePut$RequestBody(data: data ?? this.data);
+  }
+
+  OutputNetworkGenlockSourcePut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return OutputNetworkGenlockSourcePut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBody {
   OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBody({
     required this.data,
@@ -10921,6 +12337,54 @@ extension $OutputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut$RequestBod
 }
 
 @JsonSerializable(explicitToJson: true)
+class OutputNetworkShuttersyncModePut$RequestBody {
+  OutputNetworkShuttersyncModePut$RequestBody({
+    required this.data,
+  });
+
+  factory OutputNetworkShuttersyncModePut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$OutputNetworkShuttersyncModePut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputNetworkShuttersyncModePut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$OutputNetworkShuttersyncModePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OutputNetworkShuttersyncModePut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is OutputNetworkShuttersyncModePut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $OutputNetworkShuttersyncModePut$RequestBodyExtension
+    on OutputNetworkShuttersyncModePut$RequestBody {
+  OutputNetworkShuttersyncModePut$RequestBody copyWith({String? data}) {
+    return OutputNetworkShuttersyncModePut$RequestBody(data: data ?? this.data);
+  }
+
+  OutputNetworkShuttersyncModePut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return OutputNetworkShuttersyncModePut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBody {
   OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBody({
     required this.data,
@@ -11018,6 +12482,55 @@ extension $OutputNetworkShuttersyncSensorReadoutTimePut$RequestBodyExtension
   OutputNetworkShuttersyncSensorReadoutTimePut$RequestBody copyWithWrapped(
       {Wrapped<double>? data}) {
     return OutputNetworkShuttersyncSensorReadoutTimePut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class OutputNetworkShuttersyncSensorTypePut$RequestBody {
+  OutputNetworkShuttersyncSensorTypePut$RequestBody({
+    required this.data,
+  });
+
+  factory OutputNetworkShuttersyncSensorTypePut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$OutputNetworkShuttersyncSensorTypePut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputNetworkShuttersyncSensorTypePut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$OutputNetworkShuttersyncSensorTypePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OutputNetworkShuttersyncSensorTypePut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is OutputNetworkShuttersyncSensorTypePut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $OutputNetworkShuttersyncSensorTypePut$RequestBodyExtension
+    on OutputNetworkShuttersyncSensorTypePut$RequestBody {
+  OutputNetworkShuttersyncSensorTypePut$RequestBody copyWith({String? data}) {
+    return OutputNetworkShuttersyncSensorTypePut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  OutputNetworkShuttersyncSensorTypePut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return OutputNetworkShuttersyncSensorTypePut$RequestBody(
         data: (data != null ? data.value : this.data));
   }
 }
@@ -12519,6 +14032,57 @@ extension $OverrideTestPatternCustomGradientEndColourRedPut$RequestBodyExtension
 }
 
 @JsonSerializable(explicitToJson: true)
+class OverrideTestPatternCustomGradientOrientationPut$RequestBody {
+  OverrideTestPatternCustomGradientOrientationPut$RequestBody({
+    required this.data,
+  });
+
+  factory OverrideTestPatternCustomGradientOrientationPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$OverrideTestPatternCustomGradientOrientationPut$RequestBodyFromJson(
+          json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OverrideTestPatternCustomGradientOrientationPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$OverrideTestPatternCustomGradientOrientationPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OverrideTestPatternCustomGradientOrientationPut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is OverrideTestPatternCustomGradientOrientationPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $OverrideTestPatternCustomGradientOrientationPut$RequestBodyExtension
+    on OverrideTestPatternCustomGradientOrientationPut$RequestBody {
+  OverrideTestPatternCustomGradientOrientationPut$RequestBody copyWith(
+      {String? data}) {
+    return OverrideTestPatternCustomGradientOrientationPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  OverrideTestPatternCustomGradientOrientationPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return OverrideTestPatternCustomGradientOrientationPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class OverrideTestPatternCustomGradientStartColourBluePut$RequestBody {
   OverrideTestPatternCustomGradientStartColourBluePut$RequestBody({
     required this.data,
@@ -12723,6 +14287,53 @@ extension $OverrideTestPatternEnabledPut$RequestBodyExtension
 }
 
 @JsonSerializable(explicitToJson: true)
+class OverrideTestPatternFormatPut$RequestBody {
+  OverrideTestPatternFormatPut$RequestBody({
+    required this.data,
+  });
+
+  factory OverrideTestPatternFormatPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$OverrideTestPatternFormatPut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OverrideTestPatternFormatPut$RequestBodyFromJson;
+  static const toJsonFactory = _$OverrideTestPatternFormatPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OverrideTestPatternFormatPut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is OverrideTestPatternFormatPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $OverrideTestPatternFormatPut$RequestBodyExtension
+    on OverrideTestPatternFormatPut$RequestBody {
+  OverrideTestPatternFormatPut$RequestBody copyWith({String? data}) {
+    return OverrideTestPatternFormatPut$RequestBody(data: data ?? this.data);
+  }
+
+  OverrideTestPatternFormatPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return OverrideTestPatternFormatPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class OverrideTestPatternRestrictToAchievableColoursPut$RequestBody {
   OverrideTestPatternRestrictToAchievableColoursPut$RequestBody({
     required this.data,
@@ -12770,6 +14381,53 @@ extension $OverrideTestPatternRestrictToAchievableColoursPut$RequestBodyExtensio
   OverrideTestPatternRestrictToAchievableColoursPut$RequestBody copyWithWrapped(
       {Wrapped<Object>? data}) {
     return OverrideTestPatternRestrictToAchievableColoursPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class OverrideTestPatternTypePut$RequestBody {
+  OverrideTestPatternTypePut$RequestBody({
+    required this.data,
+  });
+
+  factory OverrideTestPatternTypePut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$OverrideTestPatternTypePut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OverrideTestPatternTypePut$RequestBodyFromJson;
+  static const toJsonFactory = _$OverrideTestPatternTypePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OverrideTestPatternTypePut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is OverrideTestPatternTypePut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $OverrideTestPatternTypePut$RequestBodyExtension
+    on OverrideTestPatternTypePut$RequestBody {
+  OverrideTestPatternTypePut$RequestBody copyWith({String? data}) {
+    return OverrideTestPatternTypePut$RequestBody(data: data ?? this.data);
+  }
+
+  OverrideTestPatternTypePut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return OverrideTestPatternTypePut$RequestBody(
         data: (data != null ? data.value : this.data));
   }
 }
@@ -15723,6 +17381,55 @@ extension $ProcessingColourReplaceEnabledPut$RequestBodyExtension
   ProcessingColourReplaceEnabledPut$RequestBody copyWithWrapped(
       {Wrapped<Object>? data}) {
     return ProcessingColourReplaceEnabledPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class ProcessingColourReplaceMethodPut$RequestBody {
+  ProcessingColourReplaceMethodPut$RequestBody({
+    required this.data,
+  });
+
+  factory ProcessingColourReplaceMethodPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$ProcessingColourReplaceMethodPut$RequestBodyFromJson(json);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceMethodPut$RequestBodyFromJson;
+  static const toJsonFactory =
+      _$ProcessingColourReplaceMethodPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$ProcessingColourReplaceMethodPut$RequestBodyToJson(this);
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is ProcessingColourReplaceMethodPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $ProcessingColourReplaceMethodPut$RequestBodyExtension
+    on ProcessingColourReplaceMethodPut$RequestBody {
+  ProcessingColourReplaceMethodPut$RequestBody copyWith({String? data}) {
+    return ProcessingColourReplaceMethodPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  ProcessingColourReplaceMethodPut$RequestBody copyWithWrapped(
+      {Wrapped<String>? data}) {
+    return ProcessingColourReplaceMethodPut$RequestBody(
         data: (data != null ? data.value : this.data));
   }
 }

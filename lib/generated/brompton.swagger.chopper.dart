@@ -634,7 +634,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<PortType>> _inputActiveSourcePortTypePut(
-      {required dynamic body}) {
+      {required InputActiveSourcePortTypePut$RequestBody? body}) {
     final String $url = '/input/active/source/port-type';
     final $body = body;
     final Request $request = Request(
@@ -668,7 +668,8 @@ class _$Brompton extends Brompton {
   Future<Response<Colour>>
       _inputPortsDviDviPortNumberControlsColourSpaceColourPut({
     required int? dviPortNumber,
-    required dynamic body,
+    required InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody?
+        body,
   }) {
     final String $url =
         '/input/ports/dvi/${dviPortNumber}/controls/colour-space/colour';
@@ -704,7 +705,8 @@ class _$Brompton extends Brompton {
   Future<Response<DviColourFormat>>
       _inputPortsDviDviPortNumberControlsDviColourFormatPut({
     required int? dviPortNumber,
-    required dynamic body,
+    required InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody?
+        body,
   }) {
     final String $url =
         '/input/ports/dvi/${dviPortNumber}/controls/dvi-colour-format';
@@ -737,7 +739,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Gamut>> _inputPortsDviDviPortNumberDynacalBlueGamutPut({
     required int? dviPortNumber,
-    required dynamic body,
+    required InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody? body,
   }) {
     final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/blue/gamut';
     final $body = body;
@@ -833,7 +835,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Gamut>> _inputPortsDviDviPortNumberDynacalGreenGamutPut({
     required int? dviPortNumber,
-    required dynamic body,
+    required InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody? body,
   }) {
     final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/green/gamut';
     final $body = body;
@@ -929,7 +931,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Gamut>> _inputPortsDviDviPortNumberDynacalRedGamutPut({
     required int? dviPortNumber,
-    required dynamic body,
+    required InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody? body,
   }) {
     final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/red/gamut';
     final $body = body;
@@ -1062,7 +1064,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Gamut>> _inputPortsDviDviPortNumberDynacalWhiteGamutPut({
     required int? dviPortNumber,
-    required dynamic body,
+    required InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody? body,
   }) {
     final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/white/gamut';
     final $body = body;
@@ -1549,7 +1551,8 @@ class _$Brompton extends Brompton {
   Future<Response<Colour>>
       _inputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut({
     required int? hdmiPortNumber,
-    required dynamic body,
+    required InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody?
+        body,
   }) {
     final String $url =
         '/input/ports/hdmi/${hdmiPortNumber}/controls/colour-space/colour';
@@ -1624,7 +1627,8 @@ class _$Brompton extends Brompton {
   Future<Response<HdmiColourFormat>>
       _inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut({
     required int? hdmiPortNumber,
-    required dynamic body,
+    required InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody?
+        body,
   }) {
     final String $url =
         '/input/ports/hdmi/${hdmiPortNumber}/controls/hdmi-colour-format';
@@ -1658,7 +1662,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Format>> _inputPortsHdmiHdmiPortNumberControlsHdrFormatPut({
     required int? hdmiPortNumber,
-    required dynamic body,
+    required InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody? body,
   }) {
     final String $url =
         '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/format';
@@ -1839,7 +1843,8 @@ class _$Brompton extends Brompton {
   Future<Response<QuantisationRange>>
       _inputPortsHdmiHdmiPortNumberControlsQuantisationRangePut({
     required int? hdmiPortNumber,
-    required dynamic body,
+    required InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody?
+        body,
   }) {
     final String $url =
         '/input/ports/hdmi/${hdmiPortNumber}/controls/quantisation-range';
@@ -1873,7 +1878,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Gamut>> _inputPortsHdmiHdmiPortNumberDynacalBlueGamutPut({
     required int? hdmiPortNumber,
-    required dynamic body,
+    required InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody? body,
   }) {
     final String $url =
         '/input/ports/hdmi/${hdmiPortNumber}/dynacal/blue/gamut';
@@ -1971,7 +1976,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Gamut>> _inputPortsHdmiHdmiPortNumberDynacalGreenGamutPut({
     required int? hdmiPortNumber,
-    required dynamic body,
+    required InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody? body,
   }) {
     final String $url =
         '/input/ports/hdmi/${hdmiPortNumber}/dynacal/green/gamut';
@@ -2068,7 +2073,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Gamut>> _inputPortsHdmiHdmiPortNumberDynacalRedGamutPut({
     required int? hdmiPortNumber,
-    required dynamic body,
+    required InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody? body,
   }) {
     final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/red/gamut';
     final $body = body;
@@ -2202,7 +2207,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Gamut>> _inputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut({
     required int? hdmiPortNumber,
-    required dynamic body,
+    required InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody? body,
   }) {
     final String $url =
         '/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/gamut';
@@ -2310,23 +2315,6 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
       parameters: $params,
-    );
-    return client.send<Format, Format>($request);
-  }
-
-  @override
-  Future<Response<Format>> _inputPortsHdmiHdmiPortNumberMetaDataHdrFormatPut({
-    required int? hdmiPortNumber,
-    required dynamic body,
-  }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/meta-data/hdr/format';
-    final $body = body;
-    final Request $request = Request(
-      'PUT',
-      $url,
-      client.baseUrl,
-      body: $body,
     );
     return client.send<Format, Format>($request);
   }
@@ -2770,7 +2758,8 @@ class _$Brompton extends Brompton {
   Future<Response<Colour>>
       _inputPortsSdiSdiPortNumberControlsColourSpaceColourPut({
     required int? sdiPortNumber,
-    required dynamic body,
+    required InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody?
+        body,
   }) {
     final String $url =
         '/input/ports/sdi/${sdiPortNumber}/controls/colour-space/colour';
@@ -2803,7 +2792,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Format>> _inputPortsSdiSdiPortNumberControlsHdrFormatPut({
     required int? sdiPortNumber,
-    required dynamic body,
+    required InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody? body,
   }) {
     final String $url = '/input/ports/sdi/${sdiPortNumber}/controls/hdr/format';
     final $body = body;
@@ -2980,7 +2969,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Gamut>> _inputPortsSdiSdiPortNumberDynacalBlueGamutPut({
     required int? sdiPortNumber,
-    required dynamic body,
+    required InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody? body,
   }) {
     final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/blue/gamut';
     final $body = body;
@@ -3076,7 +3065,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Gamut>> _inputPortsSdiSdiPortNumberDynacalGreenGamutPut({
     required int? sdiPortNumber,
-    required dynamic body,
+    required InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody? body,
   }) {
     final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/green/gamut';
     final $body = body;
@@ -3172,7 +3161,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Gamut>> _inputPortsSdiSdiPortNumberDynacalRedGamutPut({
     required int? sdiPortNumber,
-    required dynamic body,
+    required InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody? body,
   }) {
     final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/red/gamut';
     final $body = body;
@@ -3305,7 +3294,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Gamut>> _inputPortsSdiSdiPortNumberDynacalWhiteGamutPut({
     required int? sdiPortNumber,
-    required dynamic body,
+    required InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody? body,
   }) {
     final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/white/gamut';
     final $body = body;
@@ -3789,7 +3778,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Mode>> _outputDynacalPanelTypeBlueModePut({
     required String? panelType,
-    required dynamic body,
+    required OutputDynacalPanelTypeBlueModePut$RequestBody? body,
   }) {
     final String $url = '/output/dynacal/${panelType}/blue/mode';
     final $body = body;
@@ -3885,7 +3874,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Mode>> _outputDynacalPanelTypeGreenModePut({
     required String? panelType,
-    required dynamic body,
+    required OutputDynacalPanelTypeGreenModePut$RequestBody? body,
   }) {
     final String $url = '/output/dynacal/${panelType}/green/mode';
     final $body = body;
@@ -4015,7 +4004,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Mode>> _outputDynacalPanelTypeModePut({
     required String? panelType,
-    required dynamic body,
+    required OutputDynacalPanelTypeModePut$RequestBody? body,
   }) {
     final String $url = '/output/dynacal/${panelType}/mode';
     final $body = body;
@@ -4047,7 +4036,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Mode>> _outputDynacalPanelTypeRedModePut({
     required String? panelType,
-    required dynamic body,
+    required OutputDynacalPanelTypeRedModePut$RequestBody? body,
   }) {
     final String $url = '/output/dynacal/${panelType}/red/mode';
     final $body = body;
@@ -4543,23 +4532,6 @@ class _$Brompton extends Brompton {
   }
 
   @override
-  Future<Response<State>> _outputNetworkCableRedundancyLoopsLoopNumberStatePut({
-    required int? loopNumber,
-    required dynamic body,
-  }) {
-    final String $url =
-        '/output/network/cable-redundancy/loops/${loopNumber}/state';
-    final $body = body;
-    final Request $request = Request(
-      'PUT',
-      $url,
-      client.baseUrl,
-      body: $body,
-    );
-    return client.send<State, State>($request);
-  }
-
-  @override
   Future<Response<RequestFailover>>
       _outputNetworkFailoverActionsRequestFailoverGet({String? $set}) {
     final String $url = '/output/network/failover/actions/request-failover';
@@ -4989,7 +4961,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Mode>> _outputNetworkFrameRemappingFramesFrameModePut({
     required int? frame,
-    required dynamic body,
+    required OutputNetworkFrameRemappingFramesFrameModePut$RequestBody? body,
   }) {
     final String $url = '/output/network/frame-remapping/frames/${frame}/mode';
     final $body = body;
@@ -5260,7 +5232,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Mode>> _outputNetworkGenlockPhaseOffsetModePut(
-      {required dynamic body}) {
+      {required OutputNetworkGenlockPhaseOffsetModePut$RequestBody? body}) {
     final String $url = '/output/network/genlock/phase-offset/mode';
     final $body = body;
     final Request $request = Request(
@@ -5287,7 +5259,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Source>> _outputNetworkGenlockSourcePut(
-      {required dynamic body}) {
+      {required OutputNetworkGenlockSourcePut$RequestBody? body}) {
     final String $url = '/output/network/genlock/source';
     final $body = body;
     final Request $request = Request(
@@ -5412,7 +5384,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Mode>> _outputNetworkShuttersyncModePut(
-      {required dynamic body}) {
+      {required OutputNetworkShuttersyncModePut$RequestBody? body}) {
     final String $url = '/output/network/shuttersync/mode';
     final $body = body;
     final Request $request = Request(
@@ -5500,7 +5472,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<SensorType>> _outputNetworkShuttersyncSensorTypePut(
-      {required dynamic body}) {
+      {required OutputNetworkShuttersyncSensorTypePut$RequestBody? body}) {
     final String $url = '/output/network/shuttersync/sensor-type';
     final $body = body;
     final Request $request = Request(
@@ -6396,7 +6368,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Orientation>>
       _overrideTestPatternCustomGradientOrientationPut(
-          {required dynamic body}) {
+          {required OverrideTestPatternCustomGradientOrientationPut$RequestBody?
+              body}) {
     final String $url = '/override/test-pattern/custom-gradient/orientation';
     final $body = body;
     final Request $request = Request(
@@ -6543,7 +6516,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Format>> _overrideTestPatternFormatPut(
-      {required dynamic body}) {
+      {required OverrideTestPatternFormatPut$RequestBody? body}) {
     final String $url = '/override/test-pattern/format';
     final $body = body;
     final Request $request = Request(
@@ -6601,7 +6574,8 @@ class _$Brompton extends Brompton {
   }
 
   @override
-  Future<Response<Type$>> _overrideTestPatternTypePut({required dynamic body}) {
+  Future<Response<Type$>> _overrideTestPatternTypePut(
+      {required OverrideTestPatternTypePut$RequestBody? body}) {
     final String $url = '/override/test-pattern/type';
     final $body = body;
     final Request $request = Request(
@@ -8339,7 +8313,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Method$>> _processingColourReplaceMethodPut(
-      {required dynamic body}) {
+      {required ProcessingColourReplaceMethodPut$RequestBody? body}) {
     final String $url = '/processing/colour-replace/method';
     final $body = body;
     final Request $request = Request(
@@ -8736,20 +8710,6 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
       parameters: $params,
-    );
-    return client.send<ProcessorType, ProcessorType>($request);
-  }
-
-  @override
-  Future<Response<ProcessorType>> _systemProcessorTypePut(
-      {required dynamic body}) {
-    final String $url = '/system/processor-type';
-    final $body = body;
-    final Request $request = Request(
-      'PUT',
-      $url,
-      client.baseUrl,
-      body: $body,
     );
     return client.send<ProcessorType, ProcessorType>($request);
   }

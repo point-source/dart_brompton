@@ -1,890 +1,860 @@
 import 'package:json_annotation/json_annotation.dart';
 
-enum InputActiveSourcePortTypePut$RequestBody {
+enum InputActiveSourcePortTypeGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('dvi')
   dvi,
-  @JsonValue(' hdmi')
+  @JsonValue('hdmi')
   hdmi,
-  @JsonValue(' sdi')
+  @JsonValue('sdi')
   sdi
 }
 
-const $InputActiveSourcePortTypePut$RequestBodyMap = {
-  InputActiveSourcePortTypePut$RequestBody.dvi: 'dvi',
-  InputActiveSourcePortTypePut$RequestBody.hdmi: ' hdmi',
-  InputActiveSourcePortTypePut$RequestBody.sdi: ' sdi'
+const $InputActiveSourcePortTypeGetSetMap = {
+  InputActiveSourcePortTypeGetSet.dvi: 'dvi',
+  InputActiveSourcePortTypeGetSet.hdmi: 'hdmi',
+  InputActiveSourcePortTypeGetSet.sdi: 'sdi'
 };
 
-enum InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody {
+enum InputPortsDviDviPortNumberControlsColourSpaceColourGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('rec-2020')
   rec2020,
-  @JsonValue(' dci-p3')
+  @JsonValue('dci-p3')
   dciP3,
-  @JsonValue(' rec-709')
+  @JsonValue('rec-709')
   rec709,
-  @JsonValue(' aces-cg')
+  @JsonValue('aces-cg')
   acesCg,
-  @JsonValue(' custom')
+  @JsonValue('custom')
   custom
 }
 
-const $InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBodyMap = {
-  InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody.rec2020:
-      'rec-2020',
-  InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody.dciP3:
-      ' dci-p3',
-  InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody.rec709:
-      ' rec-709',
-  InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody.acesCg:
-      ' aces-cg',
-  InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody.custom:
-      ' custom'
+const $InputPortsDviDviPortNumberControlsColourSpaceColourGetSetMap = {
+  InputPortsDviDviPortNumberControlsColourSpaceColourGetSet.rec2020: 'rec-2020',
+  InputPortsDviDviPortNumberControlsColourSpaceColourGetSet.dciP3: 'dci-p3',
+  InputPortsDviDviPortNumberControlsColourSpaceColourGetSet.rec709: 'rec-709',
+  InputPortsDviDviPortNumberControlsColourSpaceColourGetSet.acesCg: 'aces-cg',
+  InputPortsDviDviPortNumberControlsColourSpaceColourGetSet.custom: 'custom'
 };
 
-enum InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody {
+enum InputPortsDviDviPortNumberControlsDviColourFormatGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('rgb')
   rgb,
-  @JsonValue(' ypbpr601')
+  @JsonValue('ypbpr601')
   ypbpr601,
-  @JsonValue(' ypbpr709')
+  @JsonValue('ypbpr709')
   ypbpr709
 }
 
-const $InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBodyMap = {
-  InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody.rgb: 'rgb',
-  InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody.ypbpr601:
-      ' ypbpr601',
-  InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody.ypbpr709:
-      ' ypbpr709'
+const $InputPortsDviDviPortNumberControlsDviColourFormatGetSetMap = {
+  InputPortsDviDviPortNumberControlsDviColourFormatGetSet.rgb: 'rgb',
+  InputPortsDviDviPortNumberControlsDviColourFormatGetSet.ypbpr601: 'ypbpr601',
+  InputPortsDviDviPortNumberControlsDviColourFormatGetSet.ypbpr709: 'ypbpr709'
 };
 
-enum InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody {
+enum InputPortsDviDviPortNumberDynacalBlueGamutGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('rec-2020')
   rec2020,
-  @JsonValue(' dci-p3')
+  @JsonValue('dci-p3')
   dciP3,
-  @JsonValue(' rec-709')
+  @JsonValue('rec-709')
   rec709,
-  @JsonValue(' aces-cg')
+  @JsonValue('aces-cg')
   acesCg,
-  @JsonValue(' custom Access Specifier: ReadWrite')
-  customAccessSpecifierReadwrite
+  @JsonValue('custom')
+  custom
 }
 
-const $InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBodyMap = {
-  InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody.rec2020: 'rec-2020',
-  InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody.dciP3: ' dci-p3',
-  InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody.rec709: ' rec-709',
-  InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody.acesCg: ' aces-cg',
-  InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody
-      .customAccessSpecifierReadwrite: ' custom Access Specifier: ReadWrite'
+const $InputPortsDviDviPortNumberDynacalBlueGamutGetSetMap = {
+  InputPortsDviDviPortNumberDynacalBlueGamutGetSet.rec2020: 'rec-2020',
+  InputPortsDviDviPortNumberDynacalBlueGamutGetSet.dciP3: 'dci-p3',
+  InputPortsDviDviPortNumberDynacalBlueGamutGetSet.rec709: 'rec-709',
+  InputPortsDviDviPortNumberDynacalBlueGamutGetSet.acesCg: 'aces-cg',
+  InputPortsDviDviPortNumberDynacalBlueGamutGetSet.custom: 'custom'
 };
 
-enum InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody {
+enum InputPortsDviDviPortNumberDynacalGreenGamutGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('rec-2020')
   rec2020,
-  @JsonValue(' dci-p3')
+  @JsonValue('dci-p3')
   dciP3,
-  @JsonValue(' rec-709')
+  @JsonValue('rec-709')
   rec709,
-  @JsonValue(' aces-cg')
+  @JsonValue('aces-cg')
   acesCg,
-  @JsonValue(' custom Access Specifier: ReadWrite')
-  customAccessSpecifierReadwrite
+  @JsonValue('custom')
+  custom
 }
 
-const $InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBodyMap = {
-  InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody.rec2020:
-      'rec-2020',
-  InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody.dciP3: ' dci-p3',
-  InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody.rec709: ' rec-709',
-  InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody.acesCg: ' aces-cg',
-  InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody
-      .customAccessSpecifierReadwrite: ' custom Access Specifier: ReadWrite'
+const $InputPortsDviDviPortNumberDynacalGreenGamutGetSetMap = {
+  InputPortsDviDviPortNumberDynacalGreenGamutGetSet.rec2020: 'rec-2020',
+  InputPortsDviDviPortNumberDynacalGreenGamutGetSet.dciP3: 'dci-p3',
+  InputPortsDviDviPortNumberDynacalGreenGamutGetSet.rec709: 'rec-709',
+  InputPortsDviDviPortNumberDynacalGreenGamutGetSet.acesCg: 'aces-cg',
+  InputPortsDviDviPortNumberDynacalGreenGamutGetSet.custom: 'custom'
 };
 
-enum InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody {
+enum InputPortsDviDviPortNumberDynacalRedGamutGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('rec-2020')
   rec2020,
-  @JsonValue(' dci-p3')
+  @JsonValue('dci-p3')
   dciP3,
-  @JsonValue(' rec-709')
+  @JsonValue('rec-709')
   rec709,
-  @JsonValue(' aces-cg')
+  @JsonValue('aces-cg')
   acesCg,
-  @JsonValue(' custom Access Specifier: ReadWrite')
-  customAccessSpecifierReadwrite
+  @JsonValue('custom')
+  custom
 }
 
-const $InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBodyMap = {
-  InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody.rec2020: 'rec-2020',
-  InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody.dciP3: ' dci-p3',
-  InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody.rec709: ' rec-709',
-  InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody.acesCg: ' aces-cg',
-  InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody
-      .customAccessSpecifierReadwrite: ' custom Access Specifier: ReadWrite'
+const $InputPortsDviDviPortNumberDynacalRedGamutGetSetMap = {
+  InputPortsDviDviPortNumberDynacalRedGamutGetSet.rec2020: 'rec-2020',
+  InputPortsDviDviPortNumberDynacalRedGamutGetSet.dciP3: 'dci-p3',
+  InputPortsDviDviPortNumberDynacalRedGamutGetSet.rec709: 'rec-709',
+  InputPortsDviDviPortNumberDynacalRedGamutGetSet.acesCg: 'aces-cg',
+  InputPortsDviDviPortNumberDynacalRedGamutGetSet.custom: 'custom'
 };
 
-enum InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody {
+enum InputPortsDviDviPortNumberDynacalWhiteGamutGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('d65')
   d65,
-  @JsonValue(' aces')
+  @JsonValue('aces')
   aces,
-  @JsonValue(' colour-temperature')
+  @JsonValue('colour-temperature')
   colourTemperature,
-  @JsonValue(' custom')
+  @JsonValue('custom')
   custom
 }
 
-const $InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBodyMap = {
-  InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody.d65: 'd65',
-  InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody.aces: ' aces',
-  InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody.colourTemperature:
-      ' colour-temperature',
-  InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody.custom: ' custom'
+const $InputPortsDviDviPortNumberDynacalWhiteGamutGetSetMap = {
+  InputPortsDviDviPortNumberDynacalWhiteGamutGetSet.d65: 'd65',
+  InputPortsDviDviPortNumberDynacalWhiteGamutGetSet.aces: 'aces',
+  InputPortsDviDviPortNumberDynacalWhiteGamutGetSet.colourTemperature:
+      'colour-temperature',
+  InputPortsDviDviPortNumberDynacalWhiteGamutGetSet.custom: 'custom'
 };
 
-enum InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody {
+enum InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('rec-2020')
   rec2020,
-  @JsonValue(' dci-p3')
+  @JsonValue('dci-p3')
   dciP3,
-  @JsonValue(' rec-709')
+  @JsonValue('rec-709')
   rec709,
-  @JsonValue(' aces-cg')
+  @JsonValue('aces-cg')
   acesCg,
-  @JsonValue(' custom Access Specifier: ReadWrite')
-  customAccessSpecifierReadwrite
+  @JsonValue('custom')
+  custom
 }
 
-const $InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBodyMap =
-    {
-  InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody.rec2020:
+const $InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSetMap = {
+  InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet.rec2020:
       'rec-2020',
-  InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody.dciP3:
-      ' dci-p3',
-  InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody.rec709:
-      ' rec-709',
-  InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody.acesCg:
-      ' aces-cg',
-  InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody
-      .customAccessSpecifierReadwrite: ' custom Access Specifier: ReadWrite'
+  InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet.dciP3: 'dci-p3',
+  InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet.rec709: 'rec-709',
+  InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet.acesCg: 'aces-cg',
+  InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet.custom: 'custom'
 };
 
-enum InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody {
+enum InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('from-input')
   fromInput,
-  @JsonValue(' rgb')
+  @JsonValue('rgb')
   rgb,
-  @JsonValue(' ycbcr')
+  @JsonValue('ycbcr')
   ycbcr
 }
 
-const $InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBodyMap =
-    {
-  InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody.fromInput:
+const $InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSetMap = {
+  InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet.fromInput:
       'from-input',
-  InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody.rgb:
-      ' rgb',
-  InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody.ycbcr:
-      ' ycbcr'
+  InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet.rgb: 'rgb',
+  InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet.ycbcr: 'ycbcr'
 };
 
-enum InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody {
+enum InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('from-input')
   fromInput,
-  @JsonValue(' standard-dynamic-range')
+  @JsonValue('standard-dynamic-range')
   standardDynamicRange,
-  @JsonValue(' perceptual-quantiser')
+  @JsonValue('perceptual-quantiser')
   perceptualQuantiser,
-  @JsonValue(' hybrid-log-gamma Access Specifier: ReadWrite')
-  hybridLogGammaAccessSpecifierReadwrite
+  @JsonValue('hybrid-log-gamma')
+  hybridLogGamma
 }
 
-const $InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBodyMap = {
-  InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody.fromInput:
-      'from-input',
-  InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody
-      .standardDynamicRange: ' standard-dynamic-range',
-  InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody
-      .perceptualQuantiser: ' perceptual-quantiser',
-  InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody
-          .hybridLogGammaAccessSpecifierReadwrite:
-      ' hybrid-log-gamma Access Specifier: ReadWrite'
+const $InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSetMap = {
+  InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet.fromInput: 'from-input',
+  InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet.standardDynamicRange:
+      'standard-dynamic-range',
+  InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet.perceptualQuantiser:
+      'perceptual-quantiser',
+  InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet.hybridLogGamma:
+      'hybrid-log-gamma'
 };
 
-enum InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody {
+enum InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('from-input')
   fromInput,
-  @JsonValue(' full')
+  @JsonValue('full')
   full,
-  @JsonValue(' limited')
+  @JsonValue('limited')
   limited
 }
 
-const $InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBodyMap =
-    {
-  InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody
-      .fromInput: 'from-input',
-  InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody.full:
-      ' full',
-  InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody.limited:
-      ' limited'
+const $InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSetMap = {
+  InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet.fromInput:
+      'from-input',
+  InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet.full: 'full',
+  InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet.limited: 'limited'
 };
 
-enum InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody {
+enum InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('rec-2020')
   rec2020,
-  @JsonValue(' dci-p3')
+  @JsonValue('dci-p3')
   dciP3,
-  @JsonValue(' rec-709')
+  @JsonValue('rec-709')
   rec709,
-  @JsonValue(' aces-cg')
+  @JsonValue('aces-cg')
   acesCg,
-  @JsonValue(' custom Access Specifier: ReadWrite')
-  customAccessSpecifierReadwrite
+  @JsonValue('custom')
+  custom
 }
 
-const $InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBodyMap = {
-  InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody.rec2020:
-      'rec-2020',
-  InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody.dciP3: ' dci-p3',
-  InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody.rec709:
-      ' rec-709',
-  InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody.acesCg:
-      ' aces-cg',
-  InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody
-      .customAccessSpecifierReadwrite: ' custom Access Specifier: ReadWrite'
+const $InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSetMap = {
+  InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet.rec2020: 'rec-2020',
+  InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet.dciP3: 'dci-p3',
+  InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet.rec709: 'rec-709',
+  InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet.acesCg: 'aces-cg',
+  InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet.custom: 'custom'
 };
 
-enum InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody {
+enum InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('rec-2020')
   rec2020,
-  @JsonValue(' dci-p3')
+  @JsonValue('dci-p3')
   dciP3,
-  @JsonValue(' rec-709')
+  @JsonValue('rec-709')
   rec709,
-  @JsonValue(' aces-cg')
+  @JsonValue('aces-cg')
   acesCg,
-  @JsonValue(' custom Access Specifier: ReadWrite')
-  customAccessSpecifierReadwrite
+  @JsonValue('custom')
+  custom
 }
 
-const $InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBodyMap = {
-  InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody.rec2020:
-      'rec-2020',
-  InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody.dciP3: ' dci-p3',
-  InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody.rec709:
-      ' rec-709',
-  InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody.acesCg:
-      ' aces-cg',
-  InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody
-      .customAccessSpecifierReadwrite: ' custom Access Specifier: ReadWrite'
+const $InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSetMap = {
+  InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet.rec2020: 'rec-2020',
+  InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet.dciP3: 'dci-p3',
+  InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet.rec709: 'rec-709',
+  InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet.acesCg: 'aces-cg',
+  InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet.custom: 'custom'
 };
 
-enum InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody {
+enum InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('rec-2020')
   rec2020,
-  @JsonValue(' dci-p3')
+  @JsonValue('dci-p3')
   dciP3,
-  @JsonValue(' rec-709')
+  @JsonValue('rec-709')
   rec709,
-  @JsonValue(' aces-cg')
+  @JsonValue('aces-cg')
   acesCg,
-  @JsonValue(' custom Access Specifier: ReadWrite')
-  customAccessSpecifierReadwrite
+  @JsonValue('custom')
+  custom
 }
 
-const $InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBodyMap = {
-  InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody.rec2020:
-      'rec-2020',
-  InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody.dciP3: ' dci-p3',
-  InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody.rec709: ' rec-709',
-  InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody.acesCg: ' aces-cg',
-  InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody
-      .customAccessSpecifierReadwrite: ' custom Access Specifier: ReadWrite'
+const $InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSetMap = {
+  InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet.rec2020: 'rec-2020',
+  InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet.dciP3: 'dci-p3',
+  InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet.rec709: 'rec-709',
+  InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet.acesCg: 'aces-cg',
+  InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet.custom: 'custom'
 };
 
-enum InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody {
+enum InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('d65')
   d65,
-  @JsonValue(' aces')
+  @JsonValue('aces')
   aces,
-  @JsonValue(' colour-temperature')
+  @JsonValue('colour-temperature')
   colourTemperature,
-  @JsonValue(' custom')
+  @JsonValue('custom')
   custom
 }
 
-const $InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBodyMap = {
-  InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody.d65: 'd65',
-  InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody.aces: ' aces',
-  InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody
-      .colourTemperature: ' colour-temperature',
-  InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody.custom: ' custom'
+const $InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSetMap = {
+  InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet.d65: 'd65',
+  InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet.aces: 'aces',
+  InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet.colourTemperature:
+      'colour-temperature',
+  InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet.custom: 'custom'
 };
 
-enum InputPortsHdmiHdmiPortNumberMetaDataHdrFormatPut$RequestBody {
+enum InputPortsHdmiHdmiPortNumberMetaDataHdrFormatGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('standard-dynamic-range')
   standardDynamicRange,
-  @JsonValue(' perceptual-quantiser')
+  @JsonValue('perceptual-quantiser')
   perceptualQuantiser,
-  @JsonValue(' hybrid-log-gamma Access Specifier: ReadOnly')
-  hybridLogGammaAccessSpecifierReadonly
+  @JsonValue('hybrid-log-gamma')
+  hybridLogGamma
 }
 
-const $InputPortsHdmiHdmiPortNumberMetaDataHdrFormatPut$RequestBodyMap = {
-  InputPortsHdmiHdmiPortNumberMetaDataHdrFormatPut$RequestBody
-      .standardDynamicRange: 'standard-dynamic-range',
-  InputPortsHdmiHdmiPortNumberMetaDataHdrFormatPut$RequestBody
-      .perceptualQuantiser: ' perceptual-quantiser',
-  InputPortsHdmiHdmiPortNumberMetaDataHdrFormatPut$RequestBody
-          .hybridLogGammaAccessSpecifierReadonly:
-      ' hybrid-log-gamma Access Specifier: ReadOnly'
+const $InputPortsHdmiHdmiPortNumberMetaDataHdrFormatGetSetMap = {
+  InputPortsHdmiHdmiPortNumberMetaDataHdrFormatGetSet.standardDynamicRange:
+      'standard-dynamic-range',
+  InputPortsHdmiHdmiPortNumberMetaDataHdrFormatGetSet.perceptualQuantiser:
+      'perceptual-quantiser',
+  InputPortsHdmiHdmiPortNumberMetaDataHdrFormatGetSet.hybridLogGamma:
+      'hybrid-log-gamma'
 };
 
-enum InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody {
+enum InputPortsHdmiHdmiPortNumberMetaDataSamplingGetSet {
+  @JsonValue('swaggerGeneratedUnknown')
+  swaggerGeneratedUnknown,
+  @JsonValue('rgb')
+  rgb,
+  @JsonValue('ycbcr422')
+  ycbcr422,
+  @JsonValue('ycbcr444')
+  ycbcr444,
+  @JsonValue('ycbcr420')
+  ycbcr420
+}
+
+const $InputPortsHdmiHdmiPortNumberMetaDataSamplingGetSetMap = {
+  InputPortsHdmiHdmiPortNumberMetaDataSamplingGetSet.rgb: 'rgb',
+  InputPortsHdmiHdmiPortNumberMetaDataSamplingGetSet.ycbcr422: 'ycbcr422',
+  InputPortsHdmiHdmiPortNumberMetaDataSamplingGetSet.ycbcr444: 'ycbcr444',
+  InputPortsHdmiHdmiPortNumberMetaDataSamplingGetSet.ycbcr420: 'ycbcr420'
+};
+
+enum InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('rec-2020')
   rec2020,
-  @JsonValue(' dci-p3')
+  @JsonValue('dci-p3')
   dciP3,
-  @JsonValue(' rec-709')
+  @JsonValue('rec-709')
   rec709,
-  @JsonValue(' aces-cg')
+  @JsonValue('aces-cg')
   acesCg,
-  @JsonValue(' custom')
+  @JsonValue('custom')
   custom
 }
 
-const $InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBodyMap = {
-  InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody.rec2020:
-      'rec-2020',
-  InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody.dciP3:
-      ' dci-p3',
-  InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody.rec709:
-      ' rec-709',
-  InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody.acesCg:
-      ' aces-cg',
-  InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody.custom:
-      ' custom'
+const $InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSetMap = {
+  InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet.rec2020: 'rec-2020',
+  InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet.dciP3: 'dci-p3',
+  InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet.rec709: 'rec-709',
+  InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet.acesCg: 'aces-cg',
+  InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet.custom: 'custom'
 };
 
-enum InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody {
+enum InputPortsSdiSdiPortNumberControlsHdrFormatGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('from-input')
   fromInput,
-  @JsonValue(' standard-dynamic-range')
+  @JsonValue('standard-dynamic-range')
   standardDynamicRange,
-  @JsonValue(' perceptual-quantiser')
+  @JsonValue('perceptual-quantiser')
   perceptualQuantiser,
-  @JsonValue(' hybrid-log-gamma Access Specifier: ReadWrite')
-  hybridLogGammaAccessSpecifierReadwrite
+  @JsonValue('hybrid-log-gamma')
+  hybridLogGamma
 }
 
-const $InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBodyMap = {
-  InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody.fromInput:
-      'from-input',
-  InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody
-      .standardDynamicRange: ' standard-dynamic-range',
-  InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody
-      .perceptualQuantiser: ' perceptual-quantiser',
-  InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody
-          .hybridLogGammaAccessSpecifierReadwrite:
-      ' hybrid-log-gamma Access Specifier: ReadWrite'
+const $InputPortsSdiSdiPortNumberControlsHdrFormatGetSetMap = {
+  InputPortsSdiSdiPortNumberControlsHdrFormatGetSet.fromInput: 'from-input',
+  InputPortsSdiSdiPortNumberControlsHdrFormatGetSet.standardDynamicRange:
+      'standard-dynamic-range',
+  InputPortsSdiSdiPortNumberControlsHdrFormatGetSet.perceptualQuantiser:
+      'perceptual-quantiser',
+  InputPortsSdiSdiPortNumberControlsHdrFormatGetSet.hybridLogGamma:
+      'hybrid-log-gamma'
 };
 
-enum InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody {
+enum InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('rec-2020')
   rec2020,
-  @JsonValue(' dci-p3')
+  @JsonValue('dci-p3')
   dciP3,
-  @JsonValue(' rec-709')
+  @JsonValue('rec-709')
   rec709,
-  @JsonValue(' aces-cg')
+  @JsonValue('aces-cg')
   acesCg,
-  @JsonValue(' custom Access Specifier: ReadWrite')
-  customAccessSpecifierReadwrite
+  @JsonValue('custom')
+  custom
 }
 
-const $InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBodyMap = {
-  InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody.rec2020: 'rec-2020',
-  InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody.dciP3: ' dci-p3',
-  InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody.rec709: ' rec-709',
-  InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody.acesCg: ' aces-cg',
-  InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody
-      .customAccessSpecifierReadwrite: ' custom Access Specifier: ReadWrite'
+const $InputPortsSdiSdiPortNumberDynacalBlueGamutGetSetMap = {
+  InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet.rec2020: 'rec-2020',
+  InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet.dciP3: 'dci-p3',
+  InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet.rec709: 'rec-709',
+  InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet.acesCg: 'aces-cg',
+  InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet.custom: 'custom'
 };
 
-enum InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody {
+enum InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('rec-2020')
   rec2020,
-  @JsonValue(' dci-p3')
+  @JsonValue('dci-p3')
   dciP3,
-  @JsonValue(' rec-709')
+  @JsonValue('rec-709')
   rec709,
-  @JsonValue(' aces-cg')
+  @JsonValue('aces-cg')
   acesCg,
-  @JsonValue(' custom Access Specifier: ReadWrite')
-  customAccessSpecifierReadwrite
+  @JsonValue('custom')
+  custom
 }
 
-const $InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBodyMap = {
-  InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody.rec2020:
-      'rec-2020',
-  InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody.dciP3: ' dci-p3',
-  InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody.rec709: ' rec-709',
-  InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody.acesCg: ' aces-cg',
-  InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody
-      .customAccessSpecifierReadwrite: ' custom Access Specifier: ReadWrite'
+const $InputPortsSdiSdiPortNumberDynacalGreenGamutGetSetMap = {
+  InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet.rec2020: 'rec-2020',
+  InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet.dciP3: 'dci-p3',
+  InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet.rec709: 'rec-709',
+  InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet.acesCg: 'aces-cg',
+  InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet.custom: 'custom'
 };
 
-enum InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody {
+enum InputPortsSdiSdiPortNumberDynacalRedGamutGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('rec-2020')
   rec2020,
-  @JsonValue(' dci-p3')
+  @JsonValue('dci-p3')
   dciP3,
-  @JsonValue(' rec-709')
+  @JsonValue('rec-709')
   rec709,
-  @JsonValue(' aces-cg')
+  @JsonValue('aces-cg')
   acesCg,
-  @JsonValue(' custom Access Specifier: ReadWrite')
-  customAccessSpecifierReadwrite
+  @JsonValue('custom')
+  custom
 }
 
-const $InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBodyMap = {
-  InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody.rec2020: 'rec-2020',
-  InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody.dciP3: ' dci-p3',
-  InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody.rec709: ' rec-709',
-  InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody.acesCg: ' aces-cg',
-  InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody
-      .customAccessSpecifierReadwrite: ' custom Access Specifier: ReadWrite'
+const $InputPortsSdiSdiPortNumberDynacalRedGamutGetSetMap = {
+  InputPortsSdiSdiPortNumberDynacalRedGamutGetSet.rec2020: 'rec-2020',
+  InputPortsSdiSdiPortNumberDynacalRedGamutGetSet.dciP3: 'dci-p3',
+  InputPortsSdiSdiPortNumberDynacalRedGamutGetSet.rec709: 'rec-709',
+  InputPortsSdiSdiPortNumberDynacalRedGamutGetSet.acesCg: 'aces-cg',
+  InputPortsSdiSdiPortNumberDynacalRedGamutGetSet.custom: 'custom'
 };
 
-enum InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody {
+enum InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('d65')
   d65,
-  @JsonValue(' aces')
+  @JsonValue('aces')
   aces,
-  @JsonValue(' colour-temperature')
+  @JsonValue('colour-temperature')
   colourTemperature,
-  @JsonValue(' custom')
+  @JsonValue('custom')
   custom
 }
 
-const $InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBodyMap = {
-  InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody.d65: 'd65',
-  InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody.aces: ' aces',
-  InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody.colourTemperature:
-      ' colour-temperature',
-  InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody.custom: ' custom'
+const $InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSetMap = {
+  InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet.d65: 'd65',
+  InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet.aces: 'aces',
+  InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet.colourTemperature:
+      'colour-temperature',
+  InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet.custom: 'custom'
 };
 
-enum OutputDynacalPanelTypeBlueModePut$RequestBody {
+enum OutputDynacalPanelTypeBlueModeGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('achievable')
   achievable,
-  @JsonValue(' custom')
+  @JsonValue('custom')
   custom
 }
 
-const $OutputDynacalPanelTypeBlueModePut$RequestBodyMap = {
-  OutputDynacalPanelTypeBlueModePut$RequestBody.achievable: 'achievable',
-  OutputDynacalPanelTypeBlueModePut$RequestBody.custom: ' custom'
+const $OutputDynacalPanelTypeBlueModeGetSetMap = {
+  OutputDynacalPanelTypeBlueModeGetSet.achievable: 'achievable',
+  OutputDynacalPanelTypeBlueModeGetSet.custom: 'custom'
 };
 
-enum OutputDynacalPanelTypeGreenModePut$RequestBody {
+enum OutputDynacalPanelTypeGreenModeGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('achievable')
   achievable,
-  @JsonValue(' custom')
+  @JsonValue('custom')
   custom
 }
 
-const $OutputDynacalPanelTypeGreenModePut$RequestBodyMap = {
-  OutputDynacalPanelTypeGreenModePut$RequestBody.achievable: 'achievable',
-  OutputDynacalPanelTypeGreenModePut$RequestBody.custom: ' custom'
+const $OutputDynacalPanelTypeGreenModeGetSetMap = {
+  OutputDynacalPanelTypeGreenModeGetSet.achievable: 'achievable',
+  OutputDynacalPanelTypeGreenModeGetSet.custom: 'custom'
 };
 
-enum OutputDynacalPanelTypeModePut$RequestBody {
+enum OutputDynacalPanelTypeModeGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('match-input')
   matchInput,
-  @JsonValue(' achievable')
+  @JsonValue('achievable')
   achievable,
-  @JsonValue(' custom Access Specifier: ReadWrite')
-  customAccessSpecifierReadwrite
+  @JsonValue('custom')
+  custom
 }
 
-const $OutputDynacalPanelTypeModePut$RequestBodyMap = {
-  OutputDynacalPanelTypeModePut$RequestBody.matchInput: 'match-input',
-  OutputDynacalPanelTypeModePut$RequestBody.achievable: ' achievable',
-  OutputDynacalPanelTypeModePut$RequestBody.customAccessSpecifierReadwrite:
-      ' custom Access Specifier: ReadWrite'
+const $OutputDynacalPanelTypeModeGetSetMap = {
+  OutputDynacalPanelTypeModeGetSet.matchInput: 'match-input',
+  OutputDynacalPanelTypeModeGetSet.achievable: 'achievable',
+  OutputDynacalPanelTypeModeGetSet.custom: 'custom'
 };
 
-enum OutputDynacalPanelTypeRedModePut$RequestBody {
+enum OutputDynacalPanelTypeRedModeGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('achievable')
   achievable,
-  @JsonValue(' custom')
+  @JsonValue('custom')
   custom
 }
 
-const $OutputDynacalPanelTypeRedModePut$RequestBodyMap = {
-  OutputDynacalPanelTypeRedModePut$RequestBody.achievable: 'achievable',
-  OutputDynacalPanelTypeRedModePut$RequestBody.custom: ' custom'
+const $OutputDynacalPanelTypeRedModeGetSetMap = {
+  OutputDynacalPanelTypeRedModeGetSet.achievable: 'achievable',
+  OutputDynacalPanelTypeRedModeGetSet.custom: 'custom'
 };
 
-enum OutputNetworkCableRedundancyLoopsLoopNumberStatePut$RequestBody {
+enum OutputNetworkCableRedundancyLoopsLoopNumberStateGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('loop-found')
   loopFound,
-  @JsonValue(' no-loop-found')
+  @JsonValue('no-loop-found')
   noLoopFound,
-  @JsonValue(' incorrect-loop-found')
+  @JsonValue('incorrect-loop-found')
   incorrectLoopFound,
-  @JsonValue(' one-to-many-error Access Specifier: ReadOnly')
-  oneToManyErrorAccessSpecifierReadonly
+  @JsonValue('one-to-many-error')
+  oneToManyError
 }
 
-const $OutputNetworkCableRedundancyLoopsLoopNumberStatePut$RequestBodyMap = {
-  OutputNetworkCableRedundancyLoopsLoopNumberStatePut$RequestBody.loopFound:
+const $OutputNetworkCableRedundancyLoopsLoopNumberStateGetSetMap = {
+  OutputNetworkCableRedundancyLoopsLoopNumberStateGetSet.loopFound:
       'loop-found',
-  OutputNetworkCableRedundancyLoopsLoopNumberStatePut$RequestBody.noLoopFound:
-      ' no-loop-found',
-  OutputNetworkCableRedundancyLoopsLoopNumberStatePut$RequestBody
-      .incorrectLoopFound: ' incorrect-loop-found',
-  OutputNetworkCableRedundancyLoopsLoopNumberStatePut$RequestBody
-          .oneToManyErrorAccessSpecifierReadonly:
-      ' one-to-many-error Access Specifier: ReadOnly'
+  OutputNetworkCableRedundancyLoopsLoopNumberStateGetSet.noLoopFound:
+      'no-loop-found',
+  OutputNetworkCableRedundancyLoopsLoopNumberStateGetSet.incorrectLoopFound:
+      'incorrect-loop-found',
+  OutputNetworkCableRedundancyLoopsLoopNumberStateGetSet.oneToManyError:
+      'one-to-many-error'
 };
 
-enum OutputNetworkFrameRemappingFramesFrameModePut$RequestBody {
+enum OutputNetworkFailoverSettingsRoleGetSet {
+  @JsonValue('swaggerGeneratedUnknown')
+  swaggerGeneratedUnknown,
+  @JsonValue('primary')
+  primary,
+  @JsonValue('backup')
+  backup
+}
+
+const $OutputNetworkFailoverSettingsRoleGetSetMap = {
+  OutputNetworkFailoverSettingsRoleGetSet.primary: 'primary',
+  OutputNetworkFailoverSettingsRoleGetSet.backup: 'backup'
+};
+
+enum OutputNetworkFrameRemappingFramesFrameModeGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('colour')
   colour,
-  @JsonValue(' video')
+  @JsonValue('video')
   video
 }
 
-const $OutputNetworkFrameRemappingFramesFrameModePut$RequestBodyMap = {
-  OutputNetworkFrameRemappingFramesFrameModePut$RequestBody.colour: 'colour',
-  OutputNetworkFrameRemappingFramesFrameModePut$RequestBody.video: ' video'
+const $OutputNetworkFrameRemappingFramesFrameModeGetSetMap = {
+  OutputNetworkFrameRemappingFramesFrameModeGetSet.colour: 'colour',
+  OutputNetworkFrameRemappingFramesFrameModeGetSet.video: 'video'
 };
 
-enum OutputNetworkGenlockPhaseOffsetModePut$RequestBody {
+enum OutputNetworkGenlockPhaseOffsetModeGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('none')
   none,
-  @JsonValue(' angle')
+  @JsonValue('angle')
   angle,
-  @JsonValue(' fraction')
+  @JsonValue('fraction')
   fraction,
-  @JsonValue(' absolute Access Specifier: ReadWrite')
-  absoluteAccessSpecifierReadwrite
+  @JsonValue('absolute')
+  absolute
 }
 
-const $OutputNetworkGenlockPhaseOffsetModePut$RequestBodyMap = {
-  OutputNetworkGenlockPhaseOffsetModePut$RequestBody.none: 'none',
-  OutputNetworkGenlockPhaseOffsetModePut$RequestBody.angle: ' angle',
-  OutputNetworkGenlockPhaseOffsetModePut$RequestBody.fraction: ' fraction',
-  OutputNetworkGenlockPhaseOffsetModePut$RequestBody
-      .absoluteAccessSpecifierReadwrite: ' absolute Access Specifier: ReadWrite'
+const $OutputNetworkGenlockPhaseOffsetModeGetSetMap = {
+  OutputNetworkGenlockPhaseOffsetModeGetSet.none: 'none',
+  OutputNetworkGenlockPhaseOffsetModeGetSet.angle: 'angle',
+  OutputNetworkGenlockPhaseOffsetModeGetSet.fraction: 'fraction',
+  OutputNetworkGenlockPhaseOffsetModeGetSet.absolute: 'absolute'
 };
 
-enum OutputNetworkGenlockSourcePut$RequestBody {
+enum OutputNetworkGenlockSourceGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('internal')
   internal,
-  @JsonValue(' sdi')
+  @JsonValue('sdi')
   sdi,
-  @JsonValue(' sdi-a')
+  @JsonValue('sdi-a')
   sdiA,
-  @JsonValue(' sdi-b')
+  @JsonValue('sdi-b')
   sdiB,
-  @JsonValue(' hdmi')
+  @JsonValue('hdmi')
   hdmi,
-  @JsonValue(' dvi')
+  @JsonValue('dvi')
   dvi,
-  @JsonValue(' ref-in')
+  @JsonValue('ref-in')
   refIn,
-  @JsonValue(' active-input Access Specifier: ReadWrite')
-  activeInputAccessSpecifierReadwrite
+  @JsonValue('active-input')
+  activeInput
 }
 
-const $OutputNetworkGenlockSourcePut$RequestBodyMap = {
-  OutputNetworkGenlockSourcePut$RequestBody.internal: 'internal',
-  OutputNetworkGenlockSourcePut$RequestBody.sdi: ' sdi',
-  OutputNetworkGenlockSourcePut$RequestBody.sdiA: ' sdi-a',
-  OutputNetworkGenlockSourcePut$RequestBody.sdiB: ' sdi-b',
-  OutputNetworkGenlockSourcePut$RequestBody.hdmi: ' hdmi',
-  OutputNetworkGenlockSourcePut$RequestBody.dvi: ' dvi',
-  OutputNetworkGenlockSourcePut$RequestBody.refIn: ' ref-in',
-  OutputNetworkGenlockSourcePut$RequestBody.activeInputAccessSpecifierReadwrite:
-      ' active-input Access Specifier: ReadWrite'
+const $OutputNetworkGenlockSourceGetSetMap = {
+  OutputNetworkGenlockSourceGetSet.internal: 'internal',
+  OutputNetworkGenlockSourceGetSet.sdi: 'sdi',
+  OutputNetworkGenlockSourceGetSet.sdiA: 'sdi-a',
+  OutputNetworkGenlockSourceGetSet.sdiB: 'sdi-b',
+  OutputNetworkGenlockSourceGetSet.hdmi: 'hdmi',
+  OutputNetworkGenlockSourceGetSet.dvi: 'dvi',
+  OutputNetworkGenlockSourceGetSet.refIn: 'ref-in',
+  OutputNetworkGenlockSourceGetSet.activeInput: 'active-input'
 };
 
-enum OutputNetworkShuttersyncModePut$RequestBody {
+enum OutputNetworkShuttersyncModeGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('none')
   none,
-  @JsonValue(' speed')
+  @JsonValue('speed')
   speed,
-  @JsonValue(' angle')
+  @JsonValue('angle')
   angle
 }
 
-const $OutputNetworkShuttersyncModePut$RequestBodyMap = {
-  OutputNetworkShuttersyncModePut$RequestBody.none: 'none',
-  OutputNetworkShuttersyncModePut$RequestBody.speed: ' speed',
-  OutputNetworkShuttersyncModePut$RequestBody.angle: ' angle'
+const $OutputNetworkShuttersyncModeGetSetMap = {
+  OutputNetworkShuttersyncModeGetSet.none: 'none',
+  OutputNetworkShuttersyncModeGetSet.speed: 'speed',
+  OutputNetworkShuttersyncModeGetSet.angle: 'angle'
 };
 
-enum OutputNetworkShuttersyncSensorTypePut$RequestBody {
+enum OutputNetworkShuttersyncSensorTypeGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('any')
   any,
-  @JsonValue(' global-shutter')
+  @JsonValue('global-shutter')
   globalShutter,
-  @JsonValue(' rolling-shutter Access Specifier: ReadWrite')
-  rollingShutterAccessSpecifierReadwrite
+  @JsonValue('rolling-shutter')
+  rollingShutter
 }
 
-const $OutputNetworkShuttersyncSensorTypePut$RequestBodyMap = {
-  OutputNetworkShuttersyncSensorTypePut$RequestBody.any: 'any',
-  OutputNetworkShuttersyncSensorTypePut$RequestBody.globalShutter:
-      ' global-shutter',
-  OutputNetworkShuttersyncSensorTypePut$RequestBody
-          .rollingShutterAccessSpecifierReadwrite:
-      ' rolling-shutter Access Specifier: ReadWrite'
+const $OutputNetworkShuttersyncSensorTypeGetSetMap = {
+  OutputNetworkShuttersyncSensorTypeGetSet.any: 'any',
+  OutputNetworkShuttersyncSensorTypeGetSet.globalShutter: 'global-shutter',
+  OutputNetworkShuttersyncSensorTypeGetSet.rollingShutter: 'rolling-shutter'
 };
 
-enum OverrideTestPatternCustomGradientOrientationPut$RequestBody {
+enum OverrideTestPatternCustomGradientOrientationGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('horizontal')
   horizontal,
-  @JsonValue(' vertical')
+  @JsonValue('vertical')
   vertical
 }
 
-const $OverrideTestPatternCustomGradientOrientationPut$RequestBodyMap = {
-  OverrideTestPatternCustomGradientOrientationPut$RequestBody.horizontal:
-      'horizontal',
-  OverrideTestPatternCustomGradientOrientationPut$RequestBody.vertical:
-      ' vertical'
+const $OverrideTestPatternCustomGradientOrientationGetSetMap = {
+  OverrideTestPatternCustomGradientOrientationGetSet.horizontal: 'horizontal',
+  OverrideTestPatternCustomGradientOrientationGetSet.vertical: 'vertical'
 };
 
-enum OverrideTestPatternFormatPut$RequestBody {
+enum OverrideTestPatternFormatGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('from-input')
   fromInput,
-  @JsonValue(' standard-dynamic-range')
+  @JsonValue('standard-dynamic-range')
   standardDynamicRange,
-  @JsonValue(' perceptual-quantiser')
+  @JsonValue('perceptual-quantiser')
   perceptualQuantiser,
-  @JsonValue(' hybrid-log-gamma Access Specifier: ReadWrite')
-  hybridLogGammaAccessSpecifierReadwrite
+  @JsonValue('hybrid-log-gamma')
+  hybridLogGamma
 }
 
-const $OverrideTestPatternFormatPut$RequestBodyMap = {
-  OverrideTestPatternFormatPut$RequestBody.fromInput: 'from-input',
-  OverrideTestPatternFormatPut$RequestBody.standardDynamicRange:
-      ' standard-dynamic-range',
-  OverrideTestPatternFormatPut$RequestBody.perceptualQuantiser:
-      ' perceptual-quantiser',
-  OverrideTestPatternFormatPut$RequestBody
-          .hybridLogGammaAccessSpecifierReadwrite:
-      ' hybrid-log-gamma Access Specifier: ReadWrite'
+const $OverrideTestPatternFormatGetSetMap = {
+  OverrideTestPatternFormatGetSet.fromInput: 'from-input',
+  OverrideTestPatternFormatGetSet.standardDynamicRange:
+      'standard-dynamic-range',
+  OverrideTestPatternFormatGetSet.perceptualQuantiser: 'perceptual-quantiser',
+  OverrideTestPatternFormatGetSet.hybridLogGamma: 'hybrid-log-gamma'
 };
 
-enum OverrideTestPatternTypePut$RequestBody {
+enum OverrideTestPatternTypeGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('brompton')
   brompton,
-  @JsonValue(' brompton-overlay')
+  @JsonValue('brompton-overlay')
   bromptonOverlay,
-  @JsonValue(' red')
+  @JsonValue('red')
   red,
-  @JsonValue(' green')
+  @JsonValue('green')
   green,
-  @JsonValue(' blue')
+  @JsonValue('blue')
   blue,
-  @JsonValue(' cyan')
+  @JsonValue('cyan')
   cyan,
-  @JsonValue(' magenta')
+  @JsonValue('magenta')
   magenta,
-  @JsonValue(' yellow')
+  @JsonValue('yellow')
   yellow,
-  @JsonValue(' white')
+  @JsonValue('white')
   white,
-  @JsonValue(' black')
+  @JsonValue('black')
   black,
-  @JsonValue(' grid')
+  @JsonValue('grid')
   grid,
-  @JsonValue(' scrolling-grid')
+  @JsonValue('scrolling-grid')
   scrollingGrid,
-  @JsonValue(' checkerboard')
+  @JsonValue('checkerboard')
   checkerboard,
-  @JsonValue(' scrolling-checkerboard')
+  @JsonValue('scrolling-checkerboard')
   scrollingCheckerboard,
-  @JsonValue(' colour-bars')
+  @JsonValue('colour-bars')
   colourBars,
-  @JsonValue(' gamma')
+  @JsonValue('gamma')
   gamma,
-  @JsonValue(' gradient')
+  @JsonValue('gradient')
   gradient,
-  @JsonValue(' scrolling- gradient')
+  @JsonValue('scrolling-gradient')
   scrollingGradient,
-  @JsonValue(' strobe')
+  @JsonValue('strobe')
   strobe,
-  @JsonValue(' smpte-bars')
+  @JsonValue('smpte-bars')
   smpteBars,
-  @JsonValue(' scrolling-smpte-bars')
+  @JsonValue('scrolling-smpte-bars')
   scrollingSmpteBars,
-  @JsonValue(' custom-colour')
+  @JsonValue('custom-colour')
   customColour,
-  @JsonValue(' custom')
+  @JsonValue('custom')
   custom,
-  @JsonValue(' forty-five-degree-grid')
+  @JsonValue('forty-five-degree-grid')
   fortyFiveDegreeGrid,
-  @JsonValue(' scrolling-forty-five-degree-grid')
+  @JsonValue('scrolling-forty-five-degree-grid')
   scrollingFortyFiveDegreeGrid,
-  @JsonValue(' custom-gradient')
+  @JsonValue('custom-gradient')
   customGradient,
-  @JsonValue(' scrolling-custom-gradient')
+  @JsonValue('scrolling-custom-gradient')
   scrollingCustomGradient
 }
 
-const $OverrideTestPatternTypePut$RequestBodyMap = {
-  OverrideTestPatternTypePut$RequestBody.brompton: 'brompton',
-  OverrideTestPatternTypePut$RequestBody.bromptonOverlay: ' brompton-overlay',
-  OverrideTestPatternTypePut$RequestBody.red: ' red',
-  OverrideTestPatternTypePut$RequestBody.green: ' green',
-  OverrideTestPatternTypePut$RequestBody.blue: ' blue',
-  OverrideTestPatternTypePut$RequestBody.cyan: ' cyan',
-  OverrideTestPatternTypePut$RequestBody.magenta: ' magenta',
-  OverrideTestPatternTypePut$RequestBody.yellow: ' yellow',
-  OverrideTestPatternTypePut$RequestBody.white: ' white',
-  OverrideTestPatternTypePut$RequestBody.black: ' black',
-  OverrideTestPatternTypePut$RequestBody.grid: ' grid',
-  OverrideTestPatternTypePut$RequestBody.scrollingGrid: ' scrolling-grid',
-  OverrideTestPatternTypePut$RequestBody.checkerboard: ' checkerboard',
-  OverrideTestPatternTypePut$RequestBody.scrollingCheckerboard:
-      ' scrolling-checkerboard',
-  OverrideTestPatternTypePut$RequestBody.colourBars: ' colour-bars',
-  OverrideTestPatternTypePut$RequestBody.gamma: ' gamma',
-  OverrideTestPatternTypePut$RequestBody.gradient: ' gradient',
-  OverrideTestPatternTypePut$RequestBody.scrollingGradient:
-      ' scrolling- gradient',
-  OverrideTestPatternTypePut$RequestBody.strobe: ' strobe',
-  OverrideTestPatternTypePut$RequestBody.smpteBars: ' smpte-bars',
-  OverrideTestPatternTypePut$RequestBody.scrollingSmpteBars:
-      ' scrolling-smpte-bars',
-  OverrideTestPatternTypePut$RequestBody.customColour: ' custom-colour',
-  OverrideTestPatternTypePut$RequestBody.custom: ' custom',
-  OverrideTestPatternTypePut$RequestBody.fortyFiveDegreeGrid:
-      ' forty-five-degree-grid',
-  OverrideTestPatternTypePut$RequestBody.scrollingFortyFiveDegreeGrid:
-      ' scrolling-forty-five-degree-grid',
-  OverrideTestPatternTypePut$RequestBody.customGradient: ' custom-gradient',
-  OverrideTestPatternTypePut$RequestBody.scrollingCustomGradient:
-      ' scrolling-custom-gradient'
+const $OverrideTestPatternTypeGetSetMap = {
+  OverrideTestPatternTypeGetSet.brompton: 'brompton',
+  OverrideTestPatternTypeGetSet.bromptonOverlay: 'brompton-overlay',
+  OverrideTestPatternTypeGetSet.red: 'red',
+  OverrideTestPatternTypeGetSet.green: 'green',
+  OverrideTestPatternTypeGetSet.blue: 'blue',
+  OverrideTestPatternTypeGetSet.cyan: 'cyan',
+  OverrideTestPatternTypeGetSet.magenta: 'magenta',
+  OverrideTestPatternTypeGetSet.yellow: 'yellow',
+  OverrideTestPatternTypeGetSet.white: 'white',
+  OverrideTestPatternTypeGetSet.black: 'black',
+  OverrideTestPatternTypeGetSet.grid: 'grid',
+  OverrideTestPatternTypeGetSet.scrollingGrid: 'scrolling-grid',
+  OverrideTestPatternTypeGetSet.checkerboard: 'checkerboard',
+  OverrideTestPatternTypeGetSet.scrollingCheckerboard: 'scrolling-checkerboard',
+  OverrideTestPatternTypeGetSet.colourBars: 'colour-bars',
+  OverrideTestPatternTypeGetSet.gamma: 'gamma',
+  OverrideTestPatternTypeGetSet.gradient: 'gradient',
+  OverrideTestPatternTypeGetSet.scrollingGradient: 'scrolling-gradient',
+  OverrideTestPatternTypeGetSet.strobe: 'strobe',
+  OverrideTestPatternTypeGetSet.smpteBars: 'smpte-bars',
+  OverrideTestPatternTypeGetSet.scrollingSmpteBars: 'scrolling-smpte-bars',
+  OverrideTestPatternTypeGetSet.customColour: 'custom-colour',
+  OverrideTestPatternTypeGetSet.custom: 'custom',
+  OverrideTestPatternTypeGetSet.fortyFiveDegreeGrid: 'forty-five-degree-grid',
+  OverrideTestPatternTypeGetSet.scrollingFortyFiveDegreeGrid:
+      'scrolling-forty-five-degree-grid',
+  OverrideTestPatternTypeGetSet.customGradient: 'custom-gradient',
+  OverrideTestPatternTypeGetSet.scrollingCustomGradient:
+      'scrolling-custom-gradient'
 };
 
-enum ProcessingColourReplaceMethodPut$RequestBody {
+enum ProcessingColourReplaceMethodGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('set-to-colour')
   setToColour,
-  @JsonValue(' transform-to-colour')
+  @JsonValue('transform-to-colour')
   transformToColour
 }
 
-const $ProcessingColourReplaceMethodPut$RequestBodyMap = {
-  ProcessingColourReplaceMethodPut$RequestBody.setToColour: 'set-to-colour',
-  ProcessingColourReplaceMethodPut$RequestBody.transformToColour:
-      ' transform-to-colour'
+const $ProcessingColourReplaceMethodGetSetMap = {
+  ProcessingColourReplaceMethodGetSet.setToColour: 'set-to-colour',
+  ProcessingColourReplaceMethodGetSet.transformToColour: 'transform-to-colour'
 };
 
-enum SystemProcessorTypePut$RequestBody {
+enum SystemProcessorTypeGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
   @JsonValue('m2')
   m2,
-  @JsonValue(' s4')
+  @JsonValue('s4')
   s4,
-  @JsonValue(' s8')
+  @JsonValue('s8')
   s8,
-  @JsonValue(' t1')
+  @JsonValue('t1')
   t1,
-  @JsonValue(' t8')
+  @JsonValue('t8')
   t8,
-  @JsonValue(' sx40 Access Specifier: ReadOnly')
-  sx40AccessSpecifierReadonly
+  @JsonValue('sx40')
+  sx40
 }
 
-const $SystemProcessorTypePut$RequestBodyMap = {
-  SystemProcessorTypePut$RequestBody.m2: 'm2',
-  SystemProcessorTypePut$RequestBody.s4: ' s4',
-  SystemProcessorTypePut$RequestBody.s8: ' s8',
-  SystemProcessorTypePut$RequestBody.t1: ' t1',
-  SystemProcessorTypePut$RequestBody.t8: ' t8',
-  SystemProcessorTypePut$RequestBody.sx40AccessSpecifierReadonly:
-      ' sx40 Access Specifier: ReadOnly'
+const $SystemProcessorTypeGetSetMap = {
+  SystemProcessorTypeGetSet.m2: 'm2',
+  SystemProcessorTypeGetSet.s4: 's4',
+  SystemProcessorTypeGetSet.s8: 's8',
+  SystemProcessorTypeGetSet.t1: 't1',
+  SystemProcessorTypeGetSet.t8: 't8',
+  SystemProcessorTypeGetSet.sx40: 'sx40'
 };
