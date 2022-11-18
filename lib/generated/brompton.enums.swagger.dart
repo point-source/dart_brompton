@@ -320,46 +320,6 @@ const $InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSetMap = {
   InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet.custom: 'custom'
 };
 
-enum InputPortsHdmiHdmiPortNumberMetaDataHdrFormatGetSet {
-  @JsonValue('swaggerGeneratedUnknown')
-  swaggerGeneratedUnknown,
-  @JsonValue('standard-dynamic-range')
-  standardDynamicRange,
-  @JsonValue('perceptual-quantiser')
-  perceptualQuantiser,
-  @JsonValue('hybrid-log-gamma')
-  hybridLogGamma
-}
-
-const $InputPortsHdmiHdmiPortNumberMetaDataHdrFormatGetSetMap = {
-  InputPortsHdmiHdmiPortNumberMetaDataHdrFormatGetSet.standardDynamicRange:
-      'standard-dynamic-range',
-  InputPortsHdmiHdmiPortNumberMetaDataHdrFormatGetSet.perceptualQuantiser:
-      'perceptual-quantiser',
-  InputPortsHdmiHdmiPortNumberMetaDataHdrFormatGetSet.hybridLogGamma:
-      'hybrid-log-gamma'
-};
-
-enum InputPortsHdmiHdmiPortNumberMetaDataSamplingGetSet {
-  @JsonValue('swaggerGeneratedUnknown')
-  swaggerGeneratedUnknown,
-  @JsonValue('rgb')
-  rgb,
-  @JsonValue('ycbcr422')
-  ycbcr422,
-  @JsonValue('ycbcr444')
-  ycbcr444,
-  @JsonValue('ycbcr420')
-  ycbcr420
-}
-
-const $InputPortsHdmiHdmiPortNumberMetaDataSamplingGetSetMap = {
-  InputPortsHdmiHdmiPortNumberMetaDataSamplingGetSet.rgb: 'rgb',
-  InputPortsHdmiHdmiPortNumberMetaDataSamplingGetSet.ycbcr422: 'ycbcr422',
-  InputPortsHdmiHdmiPortNumberMetaDataSamplingGetSet.ycbcr444: 'ycbcr444',
-  InputPortsHdmiHdmiPortNumberMetaDataSamplingGetSet.ycbcr420: 'ycbcr420'
-};
-
 enum InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet {
   @JsonValue('swaggerGeneratedUnknown')
   swaggerGeneratedUnknown,
@@ -553,44 +513,6 @@ enum OutputDynacalPanelTypeRedModeGetSet {
 const $OutputDynacalPanelTypeRedModeGetSetMap = {
   OutputDynacalPanelTypeRedModeGetSet.achievable: 'achievable',
   OutputDynacalPanelTypeRedModeGetSet.custom: 'custom'
-};
-
-enum OutputNetworkCableRedundancyLoopsLoopNumberStateGetSet {
-  @JsonValue('swaggerGeneratedUnknown')
-  swaggerGeneratedUnknown,
-  @JsonValue('loop-found')
-  loopFound,
-  @JsonValue('no-loop-found')
-  noLoopFound,
-  @JsonValue('incorrect-loop-found')
-  incorrectLoopFound,
-  @JsonValue('one-to-many-error')
-  oneToManyError
-}
-
-const $OutputNetworkCableRedundancyLoopsLoopNumberStateGetSetMap = {
-  OutputNetworkCableRedundancyLoopsLoopNumberStateGetSet.loopFound:
-      'loop-found',
-  OutputNetworkCableRedundancyLoopsLoopNumberStateGetSet.noLoopFound:
-      'no-loop-found',
-  OutputNetworkCableRedundancyLoopsLoopNumberStateGetSet.incorrectLoopFound:
-      'incorrect-loop-found',
-  OutputNetworkCableRedundancyLoopsLoopNumberStateGetSet.oneToManyError:
-      'one-to-many-error'
-};
-
-enum OutputNetworkFailoverSettingsRoleGetSet {
-  @JsonValue('swaggerGeneratedUnknown')
-  swaggerGeneratedUnknown,
-  @JsonValue('primary')
-  primary,
-  @JsonValue('backup')
-  backup
-}
-
-const $OutputNetworkFailoverSettingsRoleGetSetMap = {
-  OutputNetworkFailoverSettingsRoleGetSet.primary: 'primary',
-  OutputNetworkFailoverSettingsRoleGetSet.backup: 'backup'
 };
 
 enum OutputNetworkFrameRemappingFramesFrameModeGetSet {
@@ -831,30 +753,4 @@ enum ProcessingColourReplaceMethodGetSet {
 const $ProcessingColourReplaceMethodGetSetMap = {
   ProcessingColourReplaceMethodGetSet.setToColour: 'set-to-colour',
   ProcessingColourReplaceMethodGetSet.transformToColour: 'transform-to-colour'
-};
-
-enum SystemProcessorTypeGetSet {
-  @JsonValue('swaggerGeneratedUnknown')
-  swaggerGeneratedUnknown,
-  @JsonValue('m2')
-  m2,
-  @JsonValue('s4')
-  s4,
-  @JsonValue('s8')
-  s8,
-  @JsonValue('t1')
-  t1,
-  @JsonValue('t8')
-  t8,
-  @JsonValue('sx40')
-  sx40
-}
-
-const $SystemProcessorTypeGetSetMap = {
-  SystemProcessorTypeGetSet.m2: 'm2',
-  SystemProcessorTypeGetSet.s4: 's4',
-  SystemProcessorTypeGetSet.s8: 's8',
-  SystemProcessorTypeGetSet.t1: 't1',
-  SystemProcessorTypeGetSet.t8: 't8',
-  SystemProcessorTypeGetSet.sx40: 'sx40'
 };

@@ -32,12 +32,6 @@ paths:
     get:
       description: Get - Device type name
       operationId: getDevice-Type
-      parameters:
-        - description: Sets the type
-          in: query
-          name: set
-          schema:
-            type: string
       responses:
         "200":
           $ref: "#/components/responses/type"
@@ -55,12 +49,6 @@ paths:
     get:
       description: Get - The number of devices currently being controlled by the processor
       operationId: getAssociated-Devices-Count
-      parameters:
-        - description: Sets the associated-count
-          in: query
-          name: set
-          schema:
-            type: integer
       responses:
         "200":
           $ref: "#/components/responses/associated-count"
@@ -71,12 +59,6 @@ paths:
     get:
       description: Get - The number of online devices currently reporting an error state
       operationId: getError-Devices-Count
-      parameters:
-        - description: Sets the error-count
-          in: query
-          name: set
-          schema:
-            type: integer
       responses:
         "200":
           $ref: "#/components/responses/error-count"
@@ -87,12 +69,6 @@ paths:
     get:
       description: Get - The number of online devices currently detected by the processor
       operationId: getOnline-Device-Count
-      parameters:
-        - description: Sets the online-count
-          in: query
-          name: set
-          schema:
-            type: integer
       responses:
         "200":
           $ref: "#/components/responses/online-count"
@@ -1703,12 +1679,6 @@ paths:
     get:
       description: Get - DVI input refresh rate
       operationId: getDvi-Input-Refresh-RateDVI
-      parameters:
-        - description: Sets the refresh-rate
-          in: query
-          name: set
-          schema:
-            type: number
       responses:
         "200":
           $ref: "#/components/responses/refresh-rate"
@@ -1726,12 +1696,6 @@ paths:
     get:
       description: Get - DVI input height
       operationId: getDvi-Input-Resolution-HeightDVI
-      parameters:
-        - description: Sets the height
-          in: query
-          name: set
-          schema:
-            type: integer
       responses:
         "200":
           $ref: "#/components/responses/height"
@@ -1749,12 +1713,6 @@ paths:
     get:
       description: Get - DVI input width
       operationId: getDvi-Input-Resolution-WidthDVI
-      parameters:
-        - description: Sets the width
-          in: query
-          name: set
-          schema:
-            type: integer
       responses:
         "200":
           $ref: "#/components/responses/width"
@@ -3354,12 +3312,6 @@ paths:
         Get - Gets bit depth of HDMI video input. Valid values are 8, 10,
         and 12
       operationId: getHdmi-Input-Bit-DepthHDMI
-      parameters:
-        - description: Sets the bit-depth
-          in: query
-          name: set
-          schema:
-            type: integer
       responses:
         "200":
           $ref: "#/components/responses/bit-depth"
@@ -3377,16 +3329,6 @@ paths:
     get:
       description: Get - HDR format reported by the HDMI input
       operationId: getHdmi-Input-Hdr-FormatHDMI
-      parameters:
-        - description: Sets the format
-          in: query
-          name: set
-          schema:
-            enum:
-              - standard-dynamic-range
-              - perceptual-quantiser
-              - hybrid-log-gamma
-            type: string
       responses:
         "200":
           $ref: "#/components/responses/format"
@@ -3404,12 +3346,6 @@ paths:
     get:
       description: Get - Hdmi input refresh rate
       operationId: getHdmi-Input-Refresh-RateHDMI
-      parameters:
-        - description: Sets the refresh-rate
-          in: query
-          name: set
-          schema:
-            type: number
       responses:
         "200":
           $ref: "#/components/responses/refresh-rate"
@@ -3427,12 +3363,6 @@ paths:
     get:
       description: Get - HDMI input height
       operationId: getHdmi-Input-Resolution-HeightHDMI
-      parameters:
-        - description: Sets the height
-          in: query
-          name: set
-          schema:
-            type: integer
       responses:
         "200":
           $ref: "#/components/responses/height"
@@ -3450,12 +3380,6 @@ paths:
     get:
       description: Get - HDMI input width
       operationId: getHdmi-Input-Resolution-WidthHDMI
-      parameters:
-        - description: Sets the width
-          in: query
-          name: set
-          schema:
-            type: integer
       responses:
         "200":
           $ref: "#/components/responses/width"
@@ -3473,17 +3397,6 @@ paths:
     get:
       description: Get - Gets current HDMI sampling scheme
       operationId: getHdmi-Input-SamplingHDMI
-      parameters:
-        - description: Sets the sampling
-          in: query
-          name: set
-          schema:
-            enum:
-              - rgb
-              - ycbcr422
-              - ycbcr444
-              - ycbcr420
-            type: string
       responses:
         "200":
           $ref: "#/components/responses/sampling"
@@ -4925,12 +4838,6 @@ paths:
     get:
       description: Get - SDI input refresh rate
       operationId: getSdi-Input-Refresh-RateSDI
-      parameters:
-        - description: Sets the refresh-rate
-          in: query
-          name: set
-          schema:
-            type: number
       responses:
         "200":
           $ref: "#/components/responses/refresh-rate"
@@ -4948,12 +4855,6 @@ paths:
     get:
       description: Get - SDI input height
       operationId: getSdi-Input-Resolution-HeightSDI
-      parameters:
-        - description: Sets the height
-          in: query
-          name: set
-          schema:
-            type: integer
       responses:
         "200":
           $ref: "#/components/responses/height"
@@ -4971,12 +4872,6 @@ paths:
     get:
       description: Get - SDI input width
       operationId: getSdi-Input-Resolution-WidthSDI
-      parameters:
-        - description: Sets the width
-          in: query
-          name: set
-          schema:
-            type: integer
       responses:
         "200":
           $ref: "#/components/responses/width"
@@ -6577,17 +6472,6 @@ paths:
     get:
       description: Get - Current state of cable loop redundancy on the processor
       operationId: getRedundant-Cable-Loop-State
-      parameters:
-        - description: Sets the state
-          in: query
-          name: set
-          schema:
-            enum:
-              - loop-found
-              - no-loop-found
-              - incorrect-loop-found
-              - one-to-many-error
-            type: string
       responses:
         "200":
           $ref: "#/components/responses/state"
@@ -6857,15 +6741,6 @@ paths:
     get:
       description: Get - Is processor's failover role Primary or Backup
       operationId: getFailover-Role
-      parameters:
-        - description: Sets the role
-          in: query
-          name: set
-          schema:
-            enum:
-              - primary
-              - backup
-            type: string
       responses:
         "200":
           $ref: "#/components/responses/role"
@@ -6876,12 +6751,6 @@ paths:
     get:
       description: Get - Whether failover is active on the processor
       operationId: getFailover-Is-Active
-      parameters:
-        - description: Sets the is-active
-          in: query
-          name: set
-          schema:
-            type: bool
       responses:
         "200":
           $ref: "#/components/responses/is-active"
@@ -6892,12 +6761,6 @@ paths:
     get:
       description: Get - Whether the backup processor is currently online and detected
       operationId: getFailover-Partner-Is-Online
-      parameters:
-        - description: Sets the is-partner-present
-          in: query
-          name: set
-          schema:
-            type: bool
       responses:
         "200":
           $ref: "#/components/responses/is-partner-present"
@@ -6908,12 +6771,6 @@ paths:
     get:
       description: Get - How long the backup processor has been absent for
       operationId: getFailover-Partner-Absence-Duration
-      parameters:
-        - description: Sets the partner-absence-duration
-          in: query
-          name: set
-          schema:
-            type: string
       responses:
         "200":
           $ref: "#/components/responses/partner-absence-duration"
@@ -6924,12 +6781,6 @@ paths:
     get:
       description: Get - Name of the backup processor
       operationId: getFailover-Partner-Name
-      parameters:
-        - description: Sets the partner-name
-          in: query
-          name: set
-          schema:
-            type: string
       responses:
         "200":
           $ref: "#/components/responses/partner-name"
@@ -6940,12 +6791,6 @@ paths:
     get:
       description: Get - Serial number of the backup processor
       operationId: getFailover-Partner-Serial
-      parameters:
-        - description: Sets the partner-serial
-          in: query
-          name: set
-          schema:
-            type: string
       responses:
         "200":
           $ref: "#/components/responses/partner-serial"
@@ -6956,12 +6801,6 @@ paths:
     get:
       description: Get - Time since backup processor video source was last detected
       operationId: getFailover-Partner-Video-Absence-Duration
-      parameters:
-        - description: Sets the partner-video-absence-duration
-          in: query
-          name: set
-          schema:
-            type: string
       responses:
         "200":
           $ref: "#/components/responses/partner-video-absence-duration"
@@ -9553,12 +9392,6 @@ paths:
     get:
       description: Get - Name of the currently active preset
       operationId: getActive-Preset-Name
-      parameters:
-        - description: Sets the name
-          in: query
-          name: set
-          schema:
-            type: string
       responses:
         "200":
           $ref: "#/components/responses/name"
@@ -9656,12 +9489,6 @@ paths:
     get:
       description: Get - Preset activation status
       operationId: getPreset-Status
-      parameters:
-        - description: Sets the status
-          in: query
-          name: set
-          schema:
-            type: bool
       responses:
         "200":
           $ref: "#/components/responses/status"
@@ -9757,12 +9584,6 @@ paths:
     get:
       description: Get - The name of the stored 3D LUT file
       operationId: get3D-Lut-Filename
-      parameters:
-        - description: Sets the filename
-          in: query
-          name: set
-          schema:
-            type: string
       responses:
         "200":
           $ref: "#/components/responses/filename"
@@ -12647,12 +12468,6 @@ paths:
         Get - Current date/time of processor in yyyy-MM-dd hh:mm:ss 24 hour
         format
       operationId: getCurrent-Date-And-Time
-      parameters:
-        - description: Sets the current-date-time
-          in: query
-          name: set
-          schema:
-            type: string
       responses:
         "200":
           $ref: "#/components/responses/current-date-time"
@@ -12663,19 +12478,6 @@ paths:
     get:
       description: Get - Processor hardware model
       operationId: getProcessor-Type
-      parameters:
-        - description: Sets the processor-type
-          in: query
-          name: set
-          schema:
-            enum:
-              - m2
-              - s4
-              - s8
-              - t1
-              - t8
-              - sx40
-            type: string
       responses:
         "200":
           $ref: "#/components/responses/processor-type"
@@ -12686,12 +12488,6 @@ paths:
     get:
       description: Get - Current version of software in format x.y.z
       operationId: getSoftware-Version
-      parameters:
-        - description: Sets the software-version
-          in: query
-          name: set
-          schema:
-            type: string
       responses:
         "200":
           $ref: "#/components/responses/software-version"

@@ -4,8 +4,6 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:collection/collection.dart';
 import 'dart:convert';
 
-import 'brompton.enums.swagger.dart' as enums;
-
 part 'brompton.models.swagger.g.dart';
 
 @JsonSerializable(explicitToJson: true)

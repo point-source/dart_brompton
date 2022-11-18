@@ -1,6 +1,6 @@
 name: dart_brompton
 description: A library for controlling Brompton systems over a network
-version: 2.0.0
+version: 2.1.0
 repository: https://github.com/point-source/dart_brompton
 
 environment:

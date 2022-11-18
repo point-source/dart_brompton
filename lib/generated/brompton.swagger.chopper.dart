@@ -17,57 +17,46 @@ class _$Brompton extends Brompton {
   final definitionType = Brompton;
 
   @override
-  Future<Response<Type$>> _devicesItemsSerialTypeGet({
-    String? $set,
-    required String? serial,
-  }) {
+  Future<Response<Type$>> _devicesItemsSerialTypeGet(
+      {required String? serial}) {
     final String $url = '/devices/items/${serial}/type';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<Type$, Type$>($request);
   }
 
   @override
-  Future<Response<AssociatedCount>> _devicesStatisticsAssociatedCountGet(
-      {int? $set}) {
+  Future<Response<AssociatedCount>> _devicesStatisticsAssociatedCountGet() {
     final String $url = '/devices/statistics/associated-count';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<AssociatedCount, AssociatedCount>($request);
   }
 
   @override
-  Future<Response<ErrorCount>> _devicesStatisticsErrorCountGet({int? $set}) {
+  Future<Response<ErrorCount>> _devicesStatisticsErrorCountGet() {
     final String $url = '/devices/statistics/error-count';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<ErrorCount, ErrorCount>($request);
   }
 
   @override
-  Future<Response<OnlineCount>> _devicesStatisticsOnlineCountGet({int? $set}) {
+  Future<Response<OnlineCount>> _devicesStatisticsOnlineCountGet() {
     final String $url = '/devices/statistics/online-count';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<OnlineCount, OnlineCount>($request);
   }
@@ -1143,54 +1132,41 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<RefreshRate>>
-      _inputPortsDviDviPortNumberMetaDataRefreshRateGet({
-    num? $set,
-    required int? dviPortNumber,
-  }) {
+      _inputPortsDviDviPortNumberMetaDataRefreshRateGet(
+          {required int? dviPortNumber}) {
     final String $url =
         '/input/ports/dvi/${dviPortNumber}/meta-data/refresh-rate';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<RefreshRate, RefreshRate>($request);
   }
 
   @override
   Future<Response<Height>>
-      _inputPortsDviDviPortNumberMetaDataResolutionHeightGet({
-    int? $set,
-    required int? dviPortNumber,
-  }) {
+      _inputPortsDviDviPortNumberMetaDataResolutionHeightGet(
+          {required int? dviPortNumber}) {
     final String $url =
         '/input/ports/dvi/${dviPortNumber}/meta-data/resolution/height';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<Height, Height>($request);
   }
 
   @override
-  Future<Response<Width>>
-      _inputPortsDviDviPortNumberMetaDataResolutionWidthGet({
-    int? $set,
-    required int? dviPortNumber,
-  }) {
+  Future<Response<Width>> _inputPortsDviDviPortNumberMetaDataResolutionWidthGet(
+      {required int? dviPortNumber}) {
     final String $url =
         '/input/ports/dvi/${dviPortNumber}/meta-data/resolution/width';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<Width, Width>($request);
   }
@@ -2286,106 +2262,82 @@ class _$Brompton extends Brompton {
   }
 
   @override
-  Future<Response<BitDepth>> _inputPortsHdmiHdmiPortNumberMetaDataBitDepthGet({
-    int? $set,
-    required int? hdmiPortNumber,
-  }) {
+  Future<Response<BitDepth>> _inputPortsHdmiHdmiPortNumberMetaDataBitDepthGet(
+      {required int? hdmiPortNumber}) {
     final String $url =
         '/input/ports/hdmi/${hdmiPortNumber}/meta-data/bit-depth';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<BitDepth, BitDepth>($request);
   }
 
   @override
-  Future<Response<Format>> _inputPortsHdmiHdmiPortNumberMetaDataHdrFormatGet({
-    String? $set,
-    required int? hdmiPortNumber,
-  }) {
+  Future<Response<Format>> _inputPortsHdmiHdmiPortNumberMetaDataHdrFormatGet(
+      {required int? hdmiPortNumber}) {
     final String $url =
         '/input/ports/hdmi/${hdmiPortNumber}/meta-data/hdr/format';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<Format, Format>($request);
   }
 
   @override
   Future<Response<RefreshRate>>
-      _inputPortsHdmiHdmiPortNumberMetaDataRefreshRateGet({
-    num? $set,
-    required int? hdmiPortNumber,
-  }) {
+      _inputPortsHdmiHdmiPortNumberMetaDataRefreshRateGet(
+          {required int? hdmiPortNumber}) {
     final String $url =
         '/input/ports/hdmi/${hdmiPortNumber}/meta-data/refresh-rate';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<RefreshRate, RefreshRate>($request);
   }
 
   @override
   Future<Response<Height>>
-      _inputPortsHdmiHdmiPortNumberMetaDataResolutionHeightGet({
-    int? $set,
-    required int? hdmiPortNumber,
-  }) {
+      _inputPortsHdmiHdmiPortNumberMetaDataResolutionHeightGet(
+          {required int? hdmiPortNumber}) {
     final String $url =
         '/input/ports/hdmi/${hdmiPortNumber}/meta-data/resolution/height';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<Height, Height>($request);
   }
 
   @override
   Future<Response<Width>>
-      _inputPortsHdmiHdmiPortNumberMetaDataResolutionWidthGet({
-    int? $set,
-    required int? hdmiPortNumber,
-  }) {
+      _inputPortsHdmiHdmiPortNumberMetaDataResolutionWidthGet(
+          {required int? hdmiPortNumber}) {
     final String $url =
         '/input/ports/hdmi/${hdmiPortNumber}/meta-data/resolution/width';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<Width, Width>($request);
   }
 
   @override
-  Future<Response<Sampling>> _inputPortsHdmiHdmiPortNumberMetaDataSamplingGet({
-    String? $set,
-    required int? hdmiPortNumber,
-  }) {
+  Future<Response<Sampling>> _inputPortsHdmiHdmiPortNumberMetaDataSamplingGet(
+      {required int? hdmiPortNumber}) {
     final String $url =
         '/input/ports/hdmi/${hdmiPortNumber}/meta-data/sampling';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<Sampling, Sampling>($request);
   }
@@ -3373,54 +3325,41 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<RefreshRate>>
-      _inputPortsSdiSdiPortNumberMetaDataRefreshRateGet({
-    num? $set,
-    required int? sdiPortNumber,
-  }) {
+      _inputPortsSdiSdiPortNumberMetaDataRefreshRateGet(
+          {required int? sdiPortNumber}) {
     final String $url =
         '/input/ports/sdi/${sdiPortNumber}/meta-data/refresh-rate';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<RefreshRate, RefreshRate>($request);
   }
 
   @override
   Future<Response<Height>>
-      _inputPortsSdiSdiPortNumberMetaDataResolutionHeightGet({
-    int? $set,
-    required int? sdiPortNumber,
-  }) {
+      _inputPortsSdiSdiPortNumberMetaDataResolutionHeightGet(
+          {required int? sdiPortNumber}) {
     final String $url =
         '/input/ports/sdi/${sdiPortNumber}/meta-data/resolution/height';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<Height, Height>($request);
   }
 
   @override
-  Future<Response<Width>>
-      _inputPortsSdiSdiPortNumberMetaDataResolutionWidthGet({
-    int? $set,
-    required int? sdiPortNumber,
-  }) {
+  Future<Response<Width>> _inputPortsSdiSdiPortNumberMetaDataResolutionWidthGet(
+      {required int? sdiPortNumber}) {
     final String $url =
         '/input/ports/sdi/${sdiPortNumber}/meta-data/resolution/width';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<Width, Width>($request);
   }
@@ -4515,18 +4454,14 @@ class _$Brompton extends Brompton {
   }
 
   @override
-  Future<Response<State>> _outputNetworkCableRedundancyLoopsLoopNumberStateGet({
-    String? $set,
-    required int? loopNumber,
-  }) {
+  Future<Response<State>> _outputNetworkCableRedundancyLoopsLoopNumberStateGet(
+      {required int? loopNumber}) {
     final String $url =
         '/output/network/cable-redundancy/loops/${loopNumber}/state';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<State, State>($request);
   }
@@ -4721,102 +4656,85 @@ class _$Brompton extends Brompton {
   }
 
   @override
-  Future<Response<Role>> _outputNetworkFailoverSettingsRoleGet({String? $set}) {
+  Future<Response<Role>> _outputNetworkFailoverSettingsRoleGet() {
     final String $url = '/output/network/failover/settings/role';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<Role, Role>($request);
   }
 
   @override
-  Future<Response<IsActive>> _outputNetworkFailoverStateIsActiveGet(
-      {bool? $set}) {
+  Future<Response<IsActive>> _outputNetworkFailoverStateIsActiveGet() {
     final String $url = '/output/network/failover/state/is-active';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<IsActive, IsActive>($request);
   }
 
   @override
   Future<Response<IsPartnerPresent>>
-      _outputNetworkFailoverStateIsPartnerPresentGet({bool? $set}) {
+      _outputNetworkFailoverStateIsPartnerPresentGet() {
     final String $url = '/output/network/failover/state/is-partner-present';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<IsPartnerPresent, IsPartnerPresent>($request);
   }
 
   @override
   Future<Response<PartnerAbsenceDuration>>
-      _outputNetworkFailoverStatePartnerAbsenceDurationGet({String? $set}) {
+      _outputNetworkFailoverStatePartnerAbsenceDurationGet() {
     final String $url =
         '/output/network/failover/state/partner-absence-duration';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client
         .send<PartnerAbsenceDuration, PartnerAbsenceDuration>($request);
   }
 
   @override
-  Future<Response<PartnerName>> _outputNetworkFailoverStatePartnerNameGet(
-      {String? $set}) {
+  Future<Response<PartnerName>> _outputNetworkFailoverStatePartnerNameGet() {
     final String $url = '/output/network/failover/state/partner-name';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<PartnerName, PartnerName>($request);
   }
 
   @override
-  Future<Response<PartnerSerial>> _outputNetworkFailoverStatePartnerSerialGet(
-      {String? $set}) {
+  Future<Response<PartnerSerial>>
+      _outputNetworkFailoverStatePartnerSerialGet() {
     final String $url = '/output/network/failover/state/partner-serial';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<PartnerSerial, PartnerSerial>($request);
   }
 
   @override
   Future<Response<PartnerVideoAbsenceDuration>>
-      _outputNetworkFailoverStatePartnerVideoAbsenceDurationGet(
-          {String? $set}) {
+      _outputNetworkFailoverStatePartnerVideoAbsenceDurationGet() {
     final String $url =
         '/output/network/failover/state/partner-video-absence-duration';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<PartnerVideoAbsenceDuration,
         PartnerVideoAbsenceDuration>($request);
@@ -6588,14 +6506,12 @@ class _$Brompton extends Brompton {
   }
 
   @override
-  Future<Response<Name>> _presetsActiveNameGet({String? $set}) {
+  Future<Response<Name>> _presetsActiveNameGet() {
     final String $url = '/presets/active/name';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<Name, Name>($request);
   }
@@ -6660,17 +6576,13 @@ class _$Brompton extends Brompton {
   }
 
   @override
-  Future<Response<Status>> _presetsItemsNumberStatusGet({
-    bool? $set,
-    required int? number,
-  }) {
+  Future<Response<Status>> _presetsItemsNumberStatusGet(
+      {required int? number}) {
     final String $url = '/presets/items/${number}/status';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<Status, Status>($request);
   }
@@ -6730,14 +6642,12 @@ class _$Brompton extends Brompton {
   }
 
   @override
-  Future<Response<Filename>> _processing3dLutFilenameGet({String? $set}) {
+  Future<Response<Filename>> _processing3dLutFilenameGet() {
     final String $url = '/processing/3d-lut/filename';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<Filename, Filename>($request);
   }
@@ -8689,40 +8599,34 @@ class _$Brompton extends Brompton {
   }
 
   @override
-  Future<Response<CurrentDateTime>> _systemCurrentDateTimeGet({String? $set}) {
+  Future<Response<CurrentDateTime>> _systemCurrentDateTimeGet() {
     final String $url = '/system/current-date-time';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<CurrentDateTime, CurrentDateTime>($request);
   }
 
   @override
-  Future<Response<ProcessorType>> _systemProcessorTypeGet({String? $set}) {
+  Future<Response<ProcessorType>> _systemProcessorTypeGet() {
     final String $url = '/system/processor-type';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<ProcessorType, ProcessorType>($request);
   }
 
   @override
-  Future<Response<SoftwareVersion>> _systemSoftwareVersionGet({String? $set}) {
+  Future<Response<SoftwareVersion>> _systemSoftwareVersionGet() {
     final String $url = '/system/software-version';
-    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
-      parameters: $params,
     );
     return client.send<SoftwareVersion, SoftwareVersion>($request);
   }

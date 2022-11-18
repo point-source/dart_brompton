@@ -36,70 +36,54 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Get Device Type
-  ///@param set Sets the type
-  Future<chopper.Response<Type$>> devicesItemsSerialTypeGet({
-    String? $set,
-    required String? serial,
-  }) {
+  Future<chopper.Response<Type$>> devicesItemsSerialTypeGet(
+      {required String? serial}) {
     generatedMapping.putIfAbsent(Type$, () => Type$.fromJsonFactory);
 
-    return _devicesItemsSerialTypeGet($set: $set, serial: serial);
+    return _devicesItemsSerialTypeGet(serial: serial);
   }
 
   ///Get Device Type
-  ///@param set Sets the type
   @Get(path: '/devices/items/{serial}/type')
-  Future<chopper.Response<Type$>> _devicesItemsSerialTypeGet({
-    @Query('set') String? $set,
-    @Path('serial') required String? serial,
-  });
+  Future<chopper.Response<Type$>> _devicesItemsSerialTypeGet(
+      {@Path('serial') required String? serial});
 
   ///Get Associated Devices Count
-  ///@param set Sets the associated-count
-  Future<chopper.Response<AssociatedCount>> devicesStatisticsAssociatedCountGet(
-      {int? $set}) {
+  Future<chopper.Response<AssociatedCount>>
+      devicesStatisticsAssociatedCountGet() {
     generatedMapping.putIfAbsent(
         AssociatedCount, () => AssociatedCount.fromJsonFactory);
 
-    return _devicesStatisticsAssociatedCountGet($set: $set);
+    return _devicesStatisticsAssociatedCountGet();
   }
 
   ///Get Associated Devices Count
-  ///@param set Sets the associated-count
   @Get(path: '/devices/statistics/associated-count')
   Future<chopper.Response<AssociatedCount>>
-      _devicesStatisticsAssociatedCountGet({@Query('set') int? $set});
+      _devicesStatisticsAssociatedCountGet();
 
   ///Get Error Devices Count
-  ///@param set Sets the error-count
-  Future<chopper.Response<ErrorCount>> devicesStatisticsErrorCountGet(
-      {int? $set}) {
+  Future<chopper.Response<ErrorCount>> devicesStatisticsErrorCountGet() {
     generatedMapping.putIfAbsent(ErrorCount, () => ErrorCount.fromJsonFactory);
 
-    return _devicesStatisticsErrorCountGet($set: $set);
+    return _devicesStatisticsErrorCountGet();
   }
 
   ///Get Error Devices Count
-  ///@param set Sets the error-count
   @Get(path: '/devices/statistics/error-count')
-  Future<chopper.Response<ErrorCount>> _devicesStatisticsErrorCountGet(
-      {@Query('set') int? $set});
+  Future<chopper.Response<ErrorCount>> _devicesStatisticsErrorCountGet();
 
   ///Get Online Device Count
-  ///@param set Sets the online-count
-  Future<chopper.Response<OnlineCount>> devicesStatisticsOnlineCountGet(
-      {int? $set}) {
+  Future<chopper.Response<OnlineCount>> devicesStatisticsOnlineCountGet() {
     generatedMapping.putIfAbsent(
         OnlineCount, () => OnlineCount.fromJsonFactory);
 
-    return _devicesStatisticsOnlineCountGet($set: $set);
+    return _devicesStatisticsOnlineCountGet();
   }
 
   ///Get Online Device Count
-  ///@param set Sets the online-count
   @Get(path: '/devices/statistics/online-count')
-  Future<chopper.Response<OnlineCount>> _devicesStatisticsOnlineCountGet(
-      {@Query('set') int? $set});
+  Future<chopper.Response<OnlineCount>> _devicesStatisticsOnlineCountGet();
 
   ///Get Group Brightness
   ///@param set Sets the brightness
@@ -1412,71 +1396,53 @@ abstract class Brompton extends ChopperService {
   });
 
   ///Get Dvi Input Refresh Rate
-  ///@param set Sets the refresh-rate
   Future<chopper.Response<RefreshRate>>
-      inputPortsDviDviPortNumberMetaDataRefreshRateGet({
-    num? $set,
-    required int? dviPortNumber,
-  }) {
+      inputPortsDviDviPortNumberMetaDataRefreshRateGet(
+          {required int? dviPortNumber}) {
     generatedMapping.putIfAbsent(
         RefreshRate, () => RefreshRate.fromJsonFactory);
 
     return _inputPortsDviDviPortNumberMetaDataRefreshRateGet(
-        $set: $set, dviPortNumber: dviPortNumber);
+        dviPortNumber: dviPortNumber);
   }
 
   ///Get Dvi Input Refresh Rate
-  ///@param set Sets the refresh-rate
   @Get(path: '/input/ports/dvi/{dvi-port-number}/meta-data/refresh-rate')
   Future<chopper.Response<RefreshRate>>
-      _inputPortsDviDviPortNumberMetaDataRefreshRateGet({
-    @Query('set') num? $set,
-    @Path('dvi-port-number') required int? dviPortNumber,
-  });
+      _inputPortsDviDviPortNumberMetaDataRefreshRateGet(
+          {@Path('dvi-port-number') required int? dviPortNumber});
 
   ///Get Dvi Input Resolution Height
-  ///@param set Sets the height
   Future<chopper.Response<Height>>
-      inputPortsDviDviPortNumberMetaDataResolutionHeightGet({
-    int? $set,
-    required int? dviPortNumber,
-  }) {
+      inputPortsDviDviPortNumberMetaDataResolutionHeightGet(
+          {required int? dviPortNumber}) {
     generatedMapping.putIfAbsent(Height, () => Height.fromJsonFactory);
 
     return _inputPortsDviDviPortNumberMetaDataResolutionHeightGet(
-        $set: $set, dviPortNumber: dviPortNumber);
+        dviPortNumber: dviPortNumber);
   }
 
   ///Get Dvi Input Resolution Height
-  ///@param set Sets the height
   @Get(path: '/input/ports/dvi/{dvi-port-number}/meta-data/resolution/height')
   Future<chopper.Response<Height>>
-      _inputPortsDviDviPortNumberMetaDataResolutionHeightGet({
-    @Query('set') int? $set,
-    @Path('dvi-port-number') required int? dviPortNumber,
-  });
+      _inputPortsDviDviPortNumberMetaDataResolutionHeightGet(
+          {@Path('dvi-port-number') required int? dviPortNumber});
 
   ///Get Dvi Input Resolution Width
-  ///@param set Sets the width
   Future<chopper.Response<Width>>
-      inputPortsDviDviPortNumberMetaDataResolutionWidthGet({
-    int? $set,
-    required int? dviPortNumber,
-  }) {
+      inputPortsDviDviPortNumberMetaDataResolutionWidthGet(
+          {required int? dviPortNumber}) {
     generatedMapping.putIfAbsent(Width, () => Width.fromJsonFactory);
 
     return _inputPortsDviDviPortNumberMetaDataResolutionWidthGet(
-        $set: $set, dviPortNumber: dviPortNumber);
+        dviPortNumber: dviPortNumber);
   }
 
   ///Get Dvi Input Resolution Width
-  ///@param set Sets the width
   @Get(path: '/input/ports/dvi/{dvi-port-number}/meta-data/resolution/width')
   Future<chopper.Response<Width>>
-      _inputPortsDviDviPortNumberMetaDataResolutionWidthGet({
-    @Query('set') int? $set,
-    @Path('dvi-port-number') required int? dviPortNumber,
-  });
+      _inputPortsDviDviPortNumberMetaDataResolutionWidthGet(
+          {@Path('dvi-port-number') required int? dviPortNumber});
 
   ///Get Input Black Level
   ///@param set Sets the black-level
@@ -2903,142 +2869,101 @@ abstract class Brompton extends ChopperService {
   });
 
   ///Get Hdmi Input Bit Depth
-  ///@param set Sets the bit-depth
   Future<chopper.Response<BitDepth>>
-      inputPortsHdmiHdmiPortNumberMetaDataBitDepthGet({
-    int? $set,
-    required int? hdmiPortNumber,
-  }) {
+      inputPortsHdmiHdmiPortNumberMetaDataBitDepthGet(
+          {required int? hdmiPortNumber}) {
     generatedMapping.putIfAbsent(BitDepth, () => BitDepth.fromJsonFactory);
 
     return _inputPortsHdmiHdmiPortNumberMetaDataBitDepthGet(
-        $set: $set, hdmiPortNumber: hdmiPortNumber);
+        hdmiPortNumber: hdmiPortNumber);
   }
 
   ///Get Hdmi Input Bit Depth
-  ///@param set Sets the bit-depth
   @Get(path: '/input/ports/hdmi/{hdmi-port-number}/meta-data/bit-depth')
   Future<chopper.Response<BitDepth>>
-      _inputPortsHdmiHdmiPortNumberMetaDataBitDepthGet({
-    @Query('set') int? $set,
-    @Path('hdmi-port-number') required int? hdmiPortNumber,
-  });
+      _inputPortsHdmiHdmiPortNumberMetaDataBitDepthGet(
+          {@Path('hdmi-port-number') required int? hdmiPortNumber});
 
   ///Get Hdmi Input Hdr Format
-  ///@param set Sets the format
   Future<chopper.Response<Format>>
-      inputPortsHdmiHdmiPortNumberMetaDataHdrFormatGet({
-    enums.InputPortsHdmiHdmiPortNumberMetaDataHdrFormatGetSet? $set,
-    required int? hdmiPortNumber,
-  }) {
+      inputPortsHdmiHdmiPortNumberMetaDataHdrFormatGet(
+          {required int? hdmiPortNumber}) {
     generatedMapping.putIfAbsent(Format, () => Format.fromJsonFactory);
 
     return _inputPortsHdmiHdmiPortNumberMetaDataHdrFormatGet(
-        $set: enums
-            .$InputPortsHdmiHdmiPortNumberMetaDataHdrFormatGetSetMap[$set]
-            ?.toString(),
         hdmiPortNumber: hdmiPortNumber);
   }
 
   ///Get Hdmi Input Hdr Format
-  ///@param set Sets the format
   @Get(path: '/input/ports/hdmi/{hdmi-port-number}/meta-data/hdr/format')
   Future<chopper.Response<Format>>
-      _inputPortsHdmiHdmiPortNumberMetaDataHdrFormatGet({
-    @Query('set') String? $set,
-    @Path('hdmi-port-number') required int? hdmiPortNumber,
-  });
+      _inputPortsHdmiHdmiPortNumberMetaDataHdrFormatGet(
+          {@Path('hdmi-port-number') required int? hdmiPortNumber});
 
   ///Get Hdmi Input Refresh Rate
-  ///@param set Sets the refresh-rate
   Future<chopper.Response<RefreshRate>>
-      inputPortsHdmiHdmiPortNumberMetaDataRefreshRateGet({
-    num? $set,
-    required int? hdmiPortNumber,
-  }) {
+      inputPortsHdmiHdmiPortNumberMetaDataRefreshRateGet(
+          {required int? hdmiPortNumber}) {
     generatedMapping.putIfAbsent(
         RefreshRate, () => RefreshRate.fromJsonFactory);
 
     return _inputPortsHdmiHdmiPortNumberMetaDataRefreshRateGet(
-        $set: $set, hdmiPortNumber: hdmiPortNumber);
+        hdmiPortNumber: hdmiPortNumber);
   }
 
   ///Get Hdmi Input Refresh Rate
-  ///@param set Sets the refresh-rate
   @Get(path: '/input/ports/hdmi/{hdmi-port-number}/meta-data/refresh-rate')
   Future<chopper.Response<RefreshRate>>
-      _inputPortsHdmiHdmiPortNumberMetaDataRefreshRateGet({
-    @Query('set') num? $set,
-    @Path('hdmi-port-number') required int? hdmiPortNumber,
-  });
+      _inputPortsHdmiHdmiPortNumberMetaDataRefreshRateGet(
+          {@Path('hdmi-port-number') required int? hdmiPortNumber});
 
   ///Get Hdmi Input Resolution Height
-  ///@param set Sets the height
   Future<chopper.Response<Height>>
-      inputPortsHdmiHdmiPortNumberMetaDataResolutionHeightGet({
-    int? $set,
-    required int? hdmiPortNumber,
-  }) {
+      inputPortsHdmiHdmiPortNumberMetaDataResolutionHeightGet(
+          {required int? hdmiPortNumber}) {
     generatedMapping.putIfAbsent(Height, () => Height.fromJsonFactory);
 
     return _inputPortsHdmiHdmiPortNumberMetaDataResolutionHeightGet(
-        $set: $set, hdmiPortNumber: hdmiPortNumber);
+        hdmiPortNumber: hdmiPortNumber);
   }
 
   ///Get Hdmi Input Resolution Height
-  ///@param set Sets the height
   @Get(path: '/input/ports/hdmi/{hdmi-port-number}/meta-data/resolution/height')
   Future<chopper.Response<Height>>
-      _inputPortsHdmiHdmiPortNumberMetaDataResolutionHeightGet({
-    @Query('set') int? $set,
-    @Path('hdmi-port-number') required int? hdmiPortNumber,
-  });
+      _inputPortsHdmiHdmiPortNumberMetaDataResolutionHeightGet(
+          {@Path('hdmi-port-number') required int? hdmiPortNumber});
 
   ///Get Hdmi Input Resolution Width
-  ///@param set Sets the width
   Future<chopper.Response<Width>>
-      inputPortsHdmiHdmiPortNumberMetaDataResolutionWidthGet({
-    int? $set,
-    required int? hdmiPortNumber,
-  }) {
+      inputPortsHdmiHdmiPortNumberMetaDataResolutionWidthGet(
+          {required int? hdmiPortNumber}) {
     generatedMapping.putIfAbsent(Width, () => Width.fromJsonFactory);
 
     return _inputPortsHdmiHdmiPortNumberMetaDataResolutionWidthGet(
-        $set: $set, hdmiPortNumber: hdmiPortNumber);
+        hdmiPortNumber: hdmiPortNumber);
   }
 
   ///Get Hdmi Input Resolution Width
-  ///@param set Sets the width
   @Get(path: '/input/ports/hdmi/{hdmi-port-number}/meta-data/resolution/width')
   Future<chopper.Response<Width>>
-      _inputPortsHdmiHdmiPortNumberMetaDataResolutionWidthGet({
-    @Query('set') int? $set,
-    @Path('hdmi-port-number') required int? hdmiPortNumber,
-  });
+      _inputPortsHdmiHdmiPortNumberMetaDataResolutionWidthGet(
+          {@Path('hdmi-port-number') required int? hdmiPortNumber});
 
   ///Get Hdmi Input Sampling
-  ///@param set Sets the sampling
   Future<chopper.Response<Sampling>>
-      inputPortsHdmiHdmiPortNumberMetaDataSamplingGet({
-    enums.InputPortsHdmiHdmiPortNumberMetaDataSamplingGetSet? $set,
-    required int? hdmiPortNumber,
-  }) {
+      inputPortsHdmiHdmiPortNumberMetaDataSamplingGet(
+          {required int? hdmiPortNumber}) {
     generatedMapping.putIfAbsent(Sampling, () => Sampling.fromJsonFactory);
 
     return _inputPortsHdmiHdmiPortNumberMetaDataSamplingGet(
-        $set: enums.$InputPortsHdmiHdmiPortNumberMetaDataSamplingGetSetMap[$set]
-            ?.toString(),
         hdmiPortNumber: hdmiPortNumber);
   }
 
   ///Get Hdmi Input Sampling
-  ///@param set Sets the sampling
   @Get(path: '/input/ports/hdmi/{hdmi-port-number}/meta-data/sampling')
   Future<chopper.Response<Sampling>>
-      _inputPortsHdmiHdmiPortNumberMetaDataSamplingGet({
-    @Query('set') String? $set,
-    @Path('hdmi-port-number') required int? hdmiPortNumber,
-  });
+      _inputPortsHdmiHdmiPortNumberMetaDataSamplingGet(
+          {@Path('hdmi-port-number') required int? hdmiPortNumber});
 
   ///Get Input Black Level
   ///@param set Sets the black-level
@@ -4305,71 +4230,53 @@ abstract class Brompton extends ChopperService {
   });
 
   ///Get Sdi Input Refresh Rate
-  ///@param set Sets the refresh-rate
   Future<chopper.Response<RefreshRate>>
-      inputPortsSdiSdiPortNumberMetaDataRefreshRateGet({
-    num? $set,
-    required int? sdiPortNumber,
-  }) {
+      inputPortsSdiSdiPortNumberMetaDataRefreshRateGet(
+          {required int? sdiPortNumber}) {
     generatedMapping.putIfAbsent(
         RefreshRate, () => RefreshRate.fromJsonFactory);
 
     return _inputPortsSdiSdiPortNumberMetaDataRefreshRateGet(
-        $set: $set, sdiPortNumber: sdiPortNumber);
+        sdiPortNumber: sdiPortNumber);
   }
 
   ///Get Sdi Input Refresh Rate
-  ///@param set Sets the refresh-rate
   @Get(path: '/input/ports/sdi/{sdi-port-number}/meta-data/refresh-rate')
   Future<chopper.Response<RefreshRate>>
-      _inputPortsSdiSdiPortNumberMetaDataRefreshRateGet({
-    @Query('set') num? $set,
-    @Path('sdi-port-number') required int? sdiPortNumber,
-  });
+      _inputPortsSdiSdiPortNumberMetaDataRefreshRateGet(
+          {@Path('sdi-port-number') required int? sdiPortNumber});
 
   ///Get Sdi Input Resolution Height
-  ///@param set Sets the height
   Future<chopper.Response<Height>>
-      inputPortsSdiSdiPortNumberMetaDataResolutionHeightGet({
-    int? $set,
-    required int? sdiPortNumber,
-  }) {
+      inputPortsSdiSdiPortNumberMetaDataResolutionHeightGet(
+          {required int? sdiPortNumber}) {
     generatedMapping.putIfAbsent(Height, () => Height.fromJsonFactory);
 
     return _inputPortsSdiSdiPortNumberMetaDataResolutionHeightGet(
-        $set: $set, sdiPortNumber: sdiPortNumber);
+        sdiPortNumber: sdiPortNumber);
   }
 
   ///Get Sdi Input Resolution Height
-  ///@param set Sets the height
   @Get(path: '/input/ports/sdi/{sdi-port-number}/meta-data/resolution/height')
   Future<chopper.Response<Height>>
-      _inputPortsSdiSdiPortNumberMetaDataResolutionHeightGet({
-    @Query('set') int? $set,
-    @Path('sdi-port-number') required int? sdiPortNumber,
-  });
+      _inputPortsSdiSdiPortNumberMetaDataResolutionHeightGet(
+          {@Path('sdi-port-number') required int? sdiPortNumber});
 
   ///Get Sdi Input Resolution Width
-  ///@param set Sets the width
   Future<chopper.Response<Width>>
-      inputPortsSdiSdiPortNumberMetaDataResolutionWidthGet({
-    int? $set,
-    required int? sdiPortNumber,
-  }) {
+      inputPortsSdiSdiPortNumberMetaDataResolutionWidthGet(
+          {required int? sdiPortNumber}) {
     generatedMapping.putIfAbsent(Width, () => Width.fromJsonFactory);
 
     return _inputPortsSdiSdiPortNumberMetaDataResolutionWidthGet(
-        $set: $set, sdiPortNumber: sdiPortNumber);
+        sdiPortNumber: sdiPortNumber);
   }
 
   ///Get Sdi Input Resolution Width
-  ///@param set Sets the width
   @Get(path: '/input/ports/sdi/{sdi-port-number}/meta-data/resolution/width')
   Future<chopper.Response<Width>>
-      _inputPortsSdiSdiPortNumberMetaDataResolutionWidthGet({
-    @Query('set') int? $set,
-    @Path('sdi-port-number') required int? sdiPortNumber,
-  });
+      _inputPortsSdiSdiPortNumberMetaDataResolutionWidthGet(
+          {@Path('sdi-port-number') required int? sdiPortNumber});
 
   ///Get Input Black Level
   ///@param set Sets the black-level
@@ -5647,29 +5554,20 @@ abstract class Brompton extends ChopperService {
       {@Body() required OutputNetworkBitDepthPut$RequestBody? body});
 
   ///Get Redundant Cable Loop State
-  ///@param set Sets the state
   Future<chopper.Response<State>>
-      outputNetworkCableRedundancyLoopsLoopNumberStateGet({
-    enums.OutputNetworkCableRedundancyLoopsLoopNumberStateGetSet? $set,
-    required int? loopNumber,
-  }) {
+      outputNetworkCableRedundancyLoopsLoopNumberStateGet(
+          {required int? loopNumber}) {
     generatedMapping.putIfAbsent(State, () => State.fromJsonFactory);
 
     return _outputNetworkCableRedundancyLoopsLoopNumberStateGet(
-        $set: enums
-            .$OutputNetworkCableRedundancyLoopsLoopNumberStateGetSetMap[$set]
-            ?.toString(),
         loopNumber: loopNumber);
   }
 
   ///Get Redundant Cable Loop State
-  ///@param set Sets the state
   @Get(path: '/output/network/cable-redundancy/loops/{loop-number}/state')
   Future<chopper.Response<State>>
-      _outputNetworkCableRedundancyLoopsLoopNumberStateGet({
-    @Query('set') String? $set,
-    @Path('loop-number') required int? loopNumber,
-  });
+      _outputNetworkCableRedundancyLoopsLoopNumberStateGet(
+          {@Path('loop-number') required int? loopNumber});
 
   ///Get Request Failover
   ///@param set Sets the request-failover
@@ -5888,120 +5786,96 @@ abstract class Brompton extends ChopperService {
               body});
 
   ///Get Failover Role
-  ///@param set Sets the role
-  Future<chopper.Response<Role>> outputNetworkFailoverSettingsRoleGet(
-      {enums.OutputNetworkFailoverSettingsRoleGetSet? $set}) {
+  Future<chopper.Response<Role>> outputNetworkFailoverSettingsRoleGet() {
     generatedMapping.putIfAbsent(Role, () => Role.fromJsonFactory);
 
-    return _outputNetworkFailoverSettingsRoleGet(
-        $set: enums.$OutputNetworkFailoverSettingsRoleGetSetMap[$set]
-            ?.toString());
+    return _outputNetworkFailoverSettingsRoleGet();
   }
 
   ///Get Failover Role
-  ///@param set Sets the role
   @Get(path: '/output/network/failover/settings/role')
-  Future<chopper.Response<Role>> _outputNetworkFailoverSettingsRoleGet(
-      {@Query('set') String? $set});
+  Future<chopper.Response<Role>> _outputNetworkFailoverSettingsRoleGet();
 
   ///Get Failover Is Active
-  ///@param set Sets the is-active
-  Future<chopper.Response<IsActive>> outputNetworkFailoverStateIsActiveGet(
-      {bool? $set}) {
+  Future<chopper.Response<IsActive>> outputNetworkFailoverStateIsActiveGet() {
     generatedMapping.putIfAbsent(IsActive, () => IsActive.fromJsonFactory);
 
-    return _outputNetworkFailoverStateIsActiveGet($set: $set);
+    return _outputNetworkFailoverStateIsActiveGet();
   }
 
   ///Get Failover Is Active
-  ///@param set Sets the is-active
   @Get(path: '/output/network/failover/state/is-active')
-  Future<chopper.Response<IsActive>> _outputNetworkFailoverStateIsActiveGet(
-      {@Query('set') bool? $set});
+  Future<chopper.Response<IsActive>> _outputNetworkFailoverStateIsActiveGet();
 
   ///Get Failover Partner Is Online
-  ///@param set Sets the is-partner-present
   Future<chopper.Response<IsPartnerPresent>>
-      outputNetworkFailoverStateIsPartnerPresentGet({bool? $set}) {
+      outputNetworkFailoverStateIsPartnerPresentGet() {
     generatedMapping.putIfAbsent(
         IsPartnerPresent, () => IsPartnerPresent.fromJsonFactory);
 
-    return _outputNetworkFailoverStateIsPartnerPresentGet($set: $set);
+    return _outputNetworkFailoverStateIsPartnerPresentGet();
   }
 
   ///Get Failover Partner Is Online
-  ///@param set Sets the is-partner-present
   @Get(path: '/output/network/failover/state/is-partner-present')
   Future<chopper.Response<IsPartnerPresent>>
-      _outputNetworkFailoverStateIsPartnerPresentGet(
-          {@Query('set') bool? $set});
+      _outputNetworkFailoverStateIsPartnerPresentGet();
 
   ///Get Failover Partner Absence Duration
-  ///@param set Sets the partner-absence-duration
   Future<chopper.Response<PartnerAbsenceDuration>>
-      outputNetworkFailoverStatePartnerAbsenceDurationGet({String? $set}) {
+      outputNetworkFailoverStatePartnerAbsenceDurationGet() {
     generatedMapping.putIfAbsent(
         PartnerAbsenceDuration, () => PartnerAbsenceDuration.fromJsonFactory);
 
-    return _outputNetworkFailoverStatePartnerAbsenceDurationGet($set: $set);
+    return _outputNetworkFailoverStatePartnerAbsenceDurationGet();
   }
 
   ///Get Failover Partner Absence Duration
-  ///@param set Sets the partner-absence-duration
   @Get(path: '/output/network/failover/state/partner-absence-duration')
   Future<chopper.Response<PartnerAbsenceDuration>>
-      _outputNetworkFailoverStatePartnerAbsenceDurationGet(
-          {@Query('set') String? $set});
+      _outputNetworkFailoverStatePartnerAbsenceDurationGet();
 
   ///Get Failover Partner Name
-  ///@param set Sets the partner-name
   Future<chopper.Response<PartnerName>>
-      outputNetworkFailoverStatePartnerNameGet({String? $set}) {
+      outputNetworkFailoverStatePartnerNameGet() {
     generatedMapping.putIfAbsent(
         PartnerName, () => PartnerName.fromJsonFactory);
 
-    return _outputNetworkFailoverStatePartnerNameGet($set: $set);
+    return _outputNetworkFailoverStatePartnerNameGet();
   }
 
   ///Get Failover Partner Name
-  ///@param set Sets the partner-name
   @Get(path: '/output/network/failover/state/partner-name')
   Future<chopper.Response<PartnerName>>
-      _outputNetworkFailoverStatePartnerNameGet({@Query('set') String? $set});
+      _outputNetworkFailoverStatePartnerNameGet();
 
   ///Get Failover Partner Serial
-  ///@param set Sets the partner-serial
   Future<chopper.Response<PartnerSerial>>
-      outputNetworkFailoverStatePartnerSerialGet({String? $set}) {
+      outputNetworkFailoverStatePartnerSerialGet() {
     generatedMapping.putIfAbsent(
         PartnerSerial, () => PartnerSerial.fromJsonFactory);
 
-    return _outputNetworkFailoverStatePartnerSerialGet($set: $set);
+    return _outputNetworkFailoverStatePartnerSerialGet();
   }
 
   ///Get Failover Partner Serial
-  ///@param set Sets the partner-serial
   @Get(path: '/output/network/failover/state/partner-serial')
   Future<chopper.Response<PartnerSerial>>
-      _outputNetworkFailoverStatePartnerSerialGet({@Query('set') String? $set});
+      _outputNetworkFailoverStatePartnerSerialGet();
 
   ///Get Failover Partner Video Absence Duration
-  ///@param set Sets the partner-video-absence-duration
   Future<chopper.Response<PartnerVideoAbsenceDuration>>
-      outputNetworkFailoverStatePartnerVideoAbsenceDurationGet({String? $set}) {
+      outputNetworkFailoverStatePartnerVideoAbsenceDurationGet() {
     generatedMapping.putIfAbsent(PartnerVideoAbsenceDuration,
         () => PartnerVideoAbsenceDuration.fromJsonFactory);
 
-    return _outputNetworkFailoverStatePartnerVideoAbsenceDurationGet(
-        $set: $set);
+    return _outputNetworkFailoverStatePartnerVideoAbsenceDurationGet();
   }
 
   ///Get Failover Partner Video Absence Duration
-  ///@param set Sets the partner-video-absence-duration
   @Get(path: '/output/network/failover/state/partner-video-absence-duration')
   Future<chopper.Response<PartnerVideoAbsenceDuration>>
-      _outputNetworkFailoverStatePartnerVideoAbsenceDurationGet(
-          {@Query('set') String? $set});
+      _outputNetworkFailoverStatePartnerVideoAbsenceDurationGet();
 
   ///Get Network Frame Rate Multiplier
   ///@param set Sets the frame-rate-multiplier
@@ -8050,18 +7924,15 @@ abstract class Brompton extends ChopperService {
       {@Body() required OverrideTestPatternTypePut$RequestBody? body});
 
   ///Get Active Preset Name
-  ///@param set Sets the name
-  Future<chopper.Response<Name>> presetsActiveNameGet({String? $set}) {
+  Future<chopper.Response<Name>> presetsActiveNameGet() {
     generatedMapping.putIfAbsent(Name, () => Name.fromJsonFactory);
 
-    return _presetsActiveNameGet($set: $set);
+    return _presetsActiveNameGet();
   }
 
   ///Get Active Preset Name
-  ///@param set Sets the name
   @Get(path: '/presets/active/name')
-  Future<chopper.Response<Name>> _presetsActiveNameGet(
-      {@Query('set') String? $set});
+  Future<chopper.Response<Name>> _presetsActiveNameGet();
 
   ///Get Active Preset Number
   ///@param set Sets the number
@@ -8127,23 +7998,17 @@ abstract class Brompton extends ChopperService {
   });
 
   ///Get Preset Status
-  ///@param set Sets the status
-  Future<chopper.Response<Status>> presetsItemsNumberStatusGet({
-    bool? $set,
-    required int? number,
-  }) {
+  Future<chopper.Response<Status>> presetsItemsNumberStatusGet(
+      {required int? number}) {
     generatedMapping.putIfAbsent(Status, () => Status.fromJsonFactory);
 
-    return _presetsItemsNumberStatusGet($set: $set, number: number);
+    return _presetsItemsNumberStatusGet(number: number);
   }
 
   ///Get Preset Status
-  ///@param set Sets the status
   @Get(path: '/presets/items/{number}/status')
-  Future<chopper.Response<Status>> _presetsItemsNumberStatusGet({
-    @Query('set') bool? $set,
-    @Path('number') required int? number,
-  });
+  Future<chopper.Response<Status>> _presetsItemsNumberStatusGet(
+      {@Path('number') required int? number});
 
   ///Get 3D Lut Data
   ///@param set Sets the data
@@ -8200,19 +8065,15 @@ abstract class Brompton extends ChopperService {
       {@Body() required Processing3dLutEnabledPut$RequestBody? body});
 
   ///Get 3D Lut Filename
-  ///@param set Sets the filename
-  Future<chopper.Response<Filename>> processing3dLutFilenameGet(
-      {String? $set}) {
+  Future<chopper.Response<Filename>> processing3dLutFilenameGet() {
     generatedMapping.putIfAbsent(Filename, () => Filename.fromJsonFactory);
 
-    return _processing3dLutFilenameGet($set: $set);
+    return _processing3dLutFilenameGet();
   }
 
   ///Get 3D Lut Filename
-  ///@param set Sets the filename
   @Get(path: '/processing/3d-lut/filename')
-  Future<chopper.Response<Filename>> _processing3dLutFilenameGet(
-      {@Query('set') String? $set});
+  Future<chopper.Response<Filename>> _processing3dLutFilenameGet();
 
   ///Get 3D Lut Strength
   ///@param set Sets the strength
@@ -10322,53 +10183,40 @@ abstract class Brompton extends ChopperService {
       {@Body() required SystemActionsShutdownPut$RequestBody? body});
 
   ///Get Current Date And Time
-  ///@param set Sets the current-date-time
-  Future<chopper.Response<CurrentDateTime>> systemCurrentDateTimeGet(
-      {String? $set}) {
+  Future<chopper.Response<CurrentDateTime>> systemCurrentDateTimeGet() {
     generatedMapping.putIfAbsent(
         CurrentDateTime, () => CurrentDateTime.fromJsonFactory);
 
-    return _systemCurrentDateTimeGet($set: $set);
+    return _systemCurrentDateTimeGet();
   }
 
   ///Get Current Date And Time
-  ///@param set Sets the current-date-time
   @Get(path: '/system/current-date-time')
-  Future<chopper.Response<CurrentDateTime>> _systemCurrentDateTimeGet(
-      {@Query('set') String? $set});
+  Future<chopper.Response<CurrentDateTime>> _systemCurrentDateTimeGet();
 
   ///Get Processor Type
-  ///@param set Sets the processor-type
-  Future<chopper.Response<ProcessorType>> systemProcessorTypeGet(
-      {enums.SystemProcessorTypeGetSet? $set}) {
+  Future<chopper.Response<ProcessorType>> systemProcessorTypeGet() {
     generatedMapping.putIfAbsent(
         ProcessorType, () => ProcessorType.fromJsonFactory);
 
-    return _systemProcessorTypeGet(
-        $set: enums.$SystemProcessorTypeGetSetMap[$set]?.toString());
+    return _systemProcessorTypeGet();
   }
 
   ///Get Processor Type
-  ///@param set Sets the processor-type
   @Get(path: '/system/processor-type')
-  Future<chopper.Response<ProcessorType>> _systemProcessorTypeGet(
-      {@Query('set') String? $set});
+  Future<chopper.Response<ProcessorType>> _systemProcessorTypeGet();
 
   ///Get Software Version
-  ///@param set Sets the software-version
-  Future<chopper.Response<SoftwareVersion>> systemSoftwareVersionGet(
-      {String? $set}) {
+  Future<chopper.Response<SoftwareVersion>> systemSoftwareVersionGet() {
     generatedMapping.putIfAbsent(
         SoftwareVersion, () => SoftwareVersion.fromJsonFactory);
 
-    return _systemSoftwareVersionGet($set: $set);
+    return _systemSoftwareVersionGet();
   }
 
   ///Get Software Version
-  ///@param set Sets the software-version
   @Get(path: '/system/software-version')
-  Future<chopper.Response<SoftwareVersion>> _systemSoftwareVersionGet(
-      {@Query('set') String? $set});
+  Future<chopper.Response<SoftwareVersion>> _systemSoftwareVersionGet();
 }
 
 typedef $JsonFactory<T> = T Function(Map<String, dynamic> json);
