@@ -1,5 +1,5 @@
 name: dart_brompton
-description: A library for controlling Brompton systems over a network
+description: A library for controlling Brompton Tessera systems over a network
 version: 2.2.0
 repository: https://github.com/point-source/dart_brompton
 
