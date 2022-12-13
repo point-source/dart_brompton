@@ -19,7 +19,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Type$>> _devicesItemsSerialTypeGet(
       {required String? serial}) {
-    final String $url = '/devices/items/${serial}/type';
+    final Uri $url = Uri.parse('/devices/items/${serial}/type');
     final Request $request = Request(
       'GET',
       $url,
@@ -30,7 +30,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<AssociatedCount>> _devicesStatisticsAssociatedCountGet() {
-    final String $url = '/devices/statistics/associated-count';
+    final Uri $url = Uri.parse('/devices/statistics/associated-count');
     final Request $request = Request(
       'GET',
       $url,
@@ -41,7 +41,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<ErrorCount>> _devicesStatisticsErrorCountGet() {
-    final String $url = '/devices/statistics/error-count';
+    final Uri $url = Uri.parse('/devices/statistics/error-count');
     final Request $request = Request(
       'GET',
       $url,
@@ -52,7 +52,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<OnlineCount>> _devicesStatisticsOnlineCountGet() {
-    final String $url = '/devices/statistics/online-count';
+    final Uri $url = Uri.parse('/devices/statistics/online-count');
     final Request $request = Request(
       'GET',
       $url,
@@ -66,7 +66,7 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? number,
   }) {
-    final String $url = '/groups/items/${number}/brightness';
+    final Uri $url = Uri.parse('/groups/items/${number}/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -82,7 +82,7 @@ class _$Brompton extends Brompton {
     required int? number,
     required GroupsItemsNumberBrightnessPut$RequestBody? body,
   }) {
-    final String $url = '/groups/items/${number}/brightness';
+    final Uri $url = Uri.parse('/groups/items/${number}/brightness');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -98,7 +98,7 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? number,
   }) {
-    final String $url = '/groups/items/${number}/colour-temperature';
+    final Uri $url = Uri.parse('/groups/items/${number}/colour-temperature');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -114,7 +114,7 @@ class _$Brompton extends Brompton {
     required int? number,
     required GroupsItemsNumberColourTemperaturePut$RequestBody? body,
   }) {
-    final String $url = '/groups/items/${number}/colour-temperature';
+    final Uri $url = Uri.parse('/groups/items/${number}/colour-temperature');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -130,7 +130,7 @@ class _$Brompton extends Brompton {
     bool? $set,
     required int? number,
   }) {
-    final String $url = '/groups/items/${number}/dark-magic/enabled';
+    final Uri $url = Uri.parse('/groups/items/${number}/dark-magic/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -146,7 +146,7 @@ class _$Brompton extends Brompton {
     required int? number,
     required GroupsItemsNumberDarkMagicEnabledPut$RequestBody? body,
   }) {
-    final String $url = '/groups/items/${number}/dark-magic/enabled';
+    final Uri $url = Uri.parse('/groups/items/${number}/dark-magic/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -162,7 +162,8 @@ class _$Brompton extends Brompton {
     bool? $set,
     required int? number,
   }) {
-    final String $url = '/groups/items/${number}/extended-bit-depth/enabled';
+    final Uri $url =
+        Uri.parse('/groups/items/${number}/extended-bit-depth/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -178,7 +179,8 @@ class _$Brompton extends Brompton {
     required int? number,
     required GroupsItemsNumberExtendedBitDepthEnabledPut$RequestBody? body,
   }) {
-    final String $url = '/groups/items/${number}/extended-bit-depth/enabled';
+    final Uri $url =
+        Uri.parse('/groups/items/${number}/extended-bit-depth/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -194,7 +196,7 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? number,
   }) {
-    final String $url = '/groups/items/${number}/gains/blue';
+    final Uri $url = Uri.parse('/groups/items/${number}/gains/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -210,7 +212,7 @@ class _$Brompton extends Brompton {
     required int? number,
     required GroupsItemsNumberGainsBluePut$RequestBody? body,
   }) {
-    final String $url = '/groups/items/${number}/gains/blue';
+    final Uri $url = Uri.parse('/groups/items/${number}/gains/blue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -226,7 +228,7 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? number,
   }) {
-    final String $url = '/groups/items/${number}/gains/green';
+    final Uri $url = Uri.parse('/groups/items/${number}/gains/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -242,7 +244,7 @@ class _$Brompton extends Brompton {
     required int? number,
     required GroupsItemsNumberGainsGreenPut$RequestBody? body,
   }) {
-    final String $url = '/groups/items/${number}/gains/green';
+    final Uri $url = Uri.parse('/groups/items/${number}/gains/green');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -258,7 +260,7 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? number,
   }) {
-    final String $url = '/groups/items/${number}/gains/intensity';
+    final Uri $url = Uri.parse('/groups/items/${number}/gains/intensity');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -274,7 +276,7 @@ class _$Brompton extends Brompton {
     required int? number,
     required GroupsItemsNumberGainsIntensityPut$RequestBody? body,
   }) {
-    final String $url = '/groups/items/${number}/gains/intensity';
+    final Uri $url = Uri.parse('/groups/items/${number}/gains/intensity');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -290,7 +292,7 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? number,
   }) {
-    final String $url = '/groups/items/${number}/gains/red';
+    final Uri $url = Uri.parse('/groups/items/${number}/gains/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -306,7 +308,7 @@ class _$Brompton extends Brompton {
     required int? number,
     required GroupsItemsNumberGainsRedPut$RequestBody? body,
   }) {
-    final String $url = '/groups/items/${number}/gains/red';
+    final Uri $url = Uri.parse('/groups/items/${number}/gains/red');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -322,7 +324,7 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? number,
   }) {
-    final String $url = '/groups/items/${number}/gamma';
+    final Uri $url = Uri.parse('/groups/items/${number}/gamma');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -338,7 +340,7 @@ class _$Brompton extends Brompton {
     required int? number,
     required GroupsItemsNumberGammaPut$RequestBody? body,
   }) {
-    final String $url = '/groups/items/${number}/gamma';
+    final Uri $url = Uri.parse('/groups/items/${number}/gamma');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -355,7 +357,8 @@ class _$Brompton extends Brompton {
     bool? $set,
     required int? number,
   }) {
-    final String $url = '/groups/items/${number}/global-colour-override';
+    final Uri $url =
+        Uri.parse('/groups/items/${number}/global-colour-override');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -372,7 +375,8 @@ class _$Brompton extends Brompton {
     required int? number,
     required GroupsItemsNumberGlobalColourOverridePut$RequestBody? body,
   }) {
-    final String $url = '/groups/items/${number}/global-colour-override';
+    final Uri $url =
+        Uri.parse('/groups/items/${number}/global-colour-override');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -389,7 +393,7 @@ class _$Brompton extends Brompton {
     bool? $set,
     required int? number,
   }) {
-    final String $url = '/groups/items/${number}/global-gains-override';
+    final Uri $url = Uri.parse('/groups/items/${number}/global-gains-override');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -406,7 +410,7 @@ class _$Brompton extends Brompton {
     required int? number,
     required GroupsItemsNumberGlobalGainsOverridePut$RequestBody? body,
   }) {
-    final String $url = '/groups/items/${number}/global-gains-override';
+    final Uri $url = Uri.parse('/groups/items/${number}/global-gains-override');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -423,7 +427,8 @@ class _$Brompton extends Brompton {
     bool? $set,
     required int? number,
   }) {
-    final String $url = '/groups/items/${number}/global-startracker-override';
+    final Uri $url =
+        Uri.parse('/groups/items/${number}/global-startracker-override');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -441,7 +446,8 @@ class _$Brompton extends Brompton {
     required int? number,
     required GroupsItemsNumberGlobalStartrackerOverridePut$RequestBody? body,
   }) {
-    final String $url = '/groups/items/${number}/global-startracker-override';
+    final Uri $url =
+        Uri.parse('/groups/items/${number}/global-startracker-override');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -458,7 +464,7 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? number,
   }) {
-    final String $url = '/groups/items/${number}/name';
+    final Uri $url = Uri.parse('/groups/items/${number}/name');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -474,7 +480,7 @@ class _$Brompton extends Brompton {
     required int? number,
     required GroupsItemsNumberNamePut$RequestBody? body,
   }) {
-    final String $url = '/groups/items/${number}/name';
+    final Uri $url = Uri.parse('/groups/items/${number}/name');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -490,7 +496,7 @@ class _$Brompton extends Brompton {
     bool? $set,
     required int? number,
   }) {
-    final String $url = '/groups/items/${number}/overdrive/enabled';
+    final Uri $url = Uri.parse('/groups/items/${number}/overdrive/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -506,7 +512,7 @@ class _$Brompton extends Brompton {
     required int? number,
     required GroupsItemsNumberOverdriveEnabledPut$RequestBody? body,
   }) {
-    final String $url = '/groups/items/${number}/overdrive/enabled';
+    final Uri $url = Uri.parse('/groups/items/${number}/overdrive/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -522,7 +528,7 @@ class _$Brompton extends Brompton {
     bool? $set,
     required int? number,
   }) {
-    final String $url = '/groups/items/${number}/puretone/enabled';
+    final Uri $url = Uri.parse('/groups/items/${number}/puretone/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -538,7 +544,7 @@ class _$Brompton extends Brompton {
     required int? number,
     required GroupsItemsNumberPuretoneEnabledPut$RequestBody? body,
   }) {
-    final String $url = '/groups/items/${number}/puretone/enabled';
+    final Uri $url = Uri.parse('/groups/items/${number}/puretone/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -554,7 +560,7 @@ class _$Brompton extends Brompton {
     bool? $set,
     required int? number,
   }) {
-    final String $url = '/groups/items/${number}/startracker/enabled';
+    final Uri $url = Uri.parse('/groups/items/${number}/startracker/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -570,7 +576,7 @@ class _$Brompton extends Brompton {
     required int? number,
     required GroupsItemsNumberStartrackerEnabledPut$RequestBody? body,
   }) {
-    final String $url = '/groups/items/${number}/startracker/enabled';
+    final Uri $url = Uri.parse('/groups/items/${number}/startracker/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -583,7 +589,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<PortNumber>> _inputActiveSourcePortNumberGet({int? $set}) {
-    final String $url = '/input/active/source/port-number';
+    final Uri $url = Uri.parse('/input/active/source/port-number');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -597,7 +603,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<PortNumber>> _inputActiveSourcePortNumberPut(
       {required InputActiveSourcePortNumberPut$RequestBody? body}) {
-    final String $url = '/input/active/source/port-number';
+    final Uri $url = Uri.parse('/input/active/source/port-number');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -610,7 +616,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<PortType>> _inputActiveSourcePortTypeGet({String? $set}) {
-    final String $url = '/input/active/source/port-type';
+    final Uri $url = Uri.parse('/input/active/source/port-type');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -624,7 +630,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<PortType>> _inputActiveSourcePortTypePut(
       {required InputActiveSourcePortTypePut$RequestBody? body}) {
-    final String $url = '/input/active/source/port-type';
+    final Uri $url = Uri.parse('/input/active/source/port-type');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -641,8 +647,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? dviPortNumber,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/controls/colour-space/colour';
+    final Uri $url = Uri.parse(
+        '/input/ports/dvi/${dviPortNumber}/controls/colour-space/colour');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -660,8 +666,8 @@ class _$Brompton extends Brompton {
     required InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/controls/colour-space/colour';
+    final Uri $url = Uri.parse(
+        '/input/ports/dvi/${dviPortNumber}/controls/colour-space/colour');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -678,8 +684,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? dviPortNumber,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/controls/dvi-colour-format';
+    final Uri $url = Uri.parse(
+        '/input/ports/dvi/${dviPortNumber}/controls/dvi-colour-format');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -697,8 +703,8 @@ class _$Brompton extends Brompton {
     required InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/controls/dvi-colour-format';
+    final Uri $url = Uri.parse(
+        '/input/ports/dvi/${dviPortNumber}/controls/dvi-colour-format');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -714,7 +720,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? dviPortNumber,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/blue/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/blue/gamut');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -730,7 +737,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/blue/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/blue/gamut');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -746,7 +754,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? dviPortNumber,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/blue/x';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/blue/x');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -762,7 +771,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalBlueXPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/blue/x';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/blue/x');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -778,7 +788,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? dviPortNumber,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/blue/y';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/blue/y');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -794,7 +805,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalBlueYPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/blue/y';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/blue/y');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -810,7 +822,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? dviPortNumber,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/green/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/green/gamut');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -826,7 +839,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/green/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/green/gamut');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -842,7 +856,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? dviPortNumber,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/green/x';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/green/x');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -858,7 +873,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalGreenXPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/green/x';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/green/x');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -874,7 +890,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? dviPortNumber,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/green/y';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/green/y');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -890,7 +907,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalGreenYPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/green/y';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/green/y');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -906,7 +924,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? dviPortNumber,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/red/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/red/gamut');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -922,7 +941,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/red/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/red/gamut');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -938,7 +958,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? dviPortNumber,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/red/x';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/red/x');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -954,7 +975,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalRedXPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/red/x';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/red/x');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -970,7 +992,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? dviPortNumber,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/red/y';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/red/y');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -986,7 +1009,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalRedYPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/red/y';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/red/y');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1003,8 +1027,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? dviPortNumber,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/dynacal/white/colour-temperature';
+    final Uri $url = Uri.parse(
+        '/input/ports/dvi/${dviPortNumber}/dynacal/white/colour-temperature');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1022,8 +1046,8 @@ class _$Brompton extends Brompton {
     required InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/dynacal/white/colour-temperature';
+    final Uri $url = Uri.parse(
+        '/input/ports/dvi/${dviPortNumber}/dynacal/white/colour-temperature');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1039,7 +1063,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? dviPortNumber,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/white/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/white/gamut');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1055,7 +1080,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/white/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/white/gamut');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1071,7 +1097,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? dviPortNumber,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/white/x';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/white/x');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1087,7 +1114,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/white/x';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/white/x');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1103,7 +1131,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? dviPortNumber,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/white/y';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/white/y');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1119,7 +1148,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalWhiteYPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/dynacal/white/y';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/dynacal/white/y');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1134,8 +1164,8 @@ class _$Brompton extends Brompton {
   Future<Response<RefreshRate>>
       _inputPortsDviDviPortNumberMetaDataRefreshRateGet(
           {required int? dviPortNumber}) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/meta-data/refresh-rate';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/meta-data/refresh-rate');
     final Request $request = Request(
       'GET',
       $url,
@@ -1148,8 +1178,8 @@ class _$Brompton extends Brompton {
   Future<Response<Height>>
       _inputPortsDviDviPortNumberMetaDataResolutionHeightGet(
           {required int? dviPortNumber}) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/meta-data/resolution/height';
+    final Uri $url = Uri.parse(
+        '/input/ports/dvi/${dviPortNumber}/meta-data/resolution/height');
     final Request $request = Request(
       'GET',
       $url,
@@ -1161,8 +1191,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Width>> _inputPortsDviDviPortNumberMetaDataResolutionWidthGet(
       {required int? dviPortNumber}) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/meta-data/resolution/width';
+    final Uri $url = Uri.parse(
+        '/input/ports/dvi/${dviPortNumber}/meta-data/resolution/width');
     final Request $request = Request(
       'GET',
       $url,
@@ -1176,8 +1206,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? dviPortNumber,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/proc-amp/black-level';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/black-level');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1193,8 +1223,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/proc-amp/black-level';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/black-level');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1210,7 +1240,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? dviPortNumber,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/proc-amp/contrast';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/contrast');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1226,7 +1257,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpContrastPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/proc-amp/contrast';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/contrast');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1242,8 +1274,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? dviPortNumber,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/proc-amp/highlight/blue';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/highlight/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1260,8 +1292,8 @@ class _$Brompton extends Brompton {
     required InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/proc-amp/highlight/blue';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/highlight/blue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1277,8 +1309,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? dviPortNumber,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/proc-amp/highlight/green';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/highlight/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1295,8 +1327,8 @@ class _$Brompton extends Brompton {
     required InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/proc-amp/highlight/green';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/highlight/green');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1312,8 +1344,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? dviPortNumber,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/proc-amp/highlight/red';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/highlight/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1329,8 +1361,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/proc-amp/highlight/red';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/highlight/red');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1346,7 +1378,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? dviPortNumber,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/proc-amp/hue';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1362,7 +1395,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpHuePut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/proc-amp/hue';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/hue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1378,7 +1412,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? dviPortNumber,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/proc-amp/saturation';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1394,7 +1429,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/proc-amp/saturation';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/saturation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1410,8 +1446,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? dviPortNumber,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/proc-amp/shadow/blue';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/shadow/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1427,8 +1463,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/proc-amp/shadow/blue';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/shadow/blue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1444,8 +1480,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? dviPortNumber,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/proc-amp/shadow/green';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/shadow/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1461,8 +1497,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/dvi/${dviPortNumber}/proc-amp/shadow/green';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/shadow/green');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1478,7 +1514,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? dviPortNumber,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/proc-amp/shadow/red';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/shadow/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1494,7 +1531,8 @@ class _$Brompton extends Brompton {
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/dvi/${dviPortNumber}/proc-amp/shadow/red';
+    final Uri $url =
+        Uri.parse('/input/ports/dvi/${dviPortNumber}/proc-amp/shadow/red');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1511,8 +1549,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/colour-space/colour';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/controls/colour-space/colour');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1530,8 +1568,8 @@ class _$Brompton extends Brompton {
     required InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/colour-space/colour';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/controls/colour-space/colour');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1548,8 +1586,8 @@ class _$Brompton extends Brompton {
     bool? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/colour-space/info-frame-override-enabled';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/controls/colour-space/info-frame-override-enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1568,8 +1606,8 @@ class _$Brompton extends Brompton {
     required InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/colour-space/info-frame-override-enabled';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/controls/colour-space/info-frame-override-enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1587,8 +1625,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdmi-colour-format';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdmi-colour-format');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1606,8 +1644,8 @@ class _$Brompton extends Brompton {
     required InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdmi-colour-format';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdmi-colour-format');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1623,8 +1661,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/format';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/format');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1640,8 +1678,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/format';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/format');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1658,8 +1696,8 @@ class _$Brompton extends Brompton {
     bool? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/pq/auto-brighten';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/pq/auto-brighten');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1677,8 +1715,8 @@ class _$Brompton extends Brompton {
     required InputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/pq/auto-brighten';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/pq/auto-brighten');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1694,8 +1732,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/pq/gain';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/pq/gain');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1711,8 +1749,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberControlsHdrPqGainPut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/pq/gain';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/pq/gain');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1729,8 +1767,8 @@ class _$Brompton extends Brompton {
     bool? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/pq/max-cll-override/enabled';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/pq/max-cll-override/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1748,8 +1786,8 @@ class _$Brompton extends Brompton {
     required InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/pq/max-cll-override/enabled';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/pq/max-cll-override/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1766,8 +1804,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/pq/max-cll-override/luminance';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/pq/max-cll-override/luminance');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1785,8 +1823,8 @@ class _$Brompton extends Brompton {
     required InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/pq/max-cll-override/luminance';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/controls/hdr/pq/max-cll-override/luminance');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1803,8 +1841,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/quantisation-range';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/controls/quantisation-range');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1822,8 +1860,8 @@ class _$Brompton extends Brompton {
     required InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/controls/quantisation-range';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/controls/quantisation-range');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1839,8 +1877,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/dynacal/blue/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/blue/gamut');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1856,8 +1894,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/dynacal/blue/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/blue/gamut');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1873,7 +1911,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/blue/x';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/blue/x');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1889,7 +1928,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/blue/x';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/blue/x');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1905,7 +1945,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/blue/y';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/blue/y');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1921,7 +1962,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalBlueYPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/blue/y';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/blue/y');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1937,8 +1979,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/dynacal/green/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/green/gamut');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1954,8 +1996,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/dynacal/green/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/green/gamut');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -1971,7 +2013,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/green/x';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/green/x');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -1987,7 +2030,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/green/x';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/green/x');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2003,7 +2047,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/green/y';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/green/y');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2019,7 +2064,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/green/y';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/green/y');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2035,7 +2081,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/red/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/red/gamut');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2051,7 +2098,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/red/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/red/gamut');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2067,7 +2115,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/red/x';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/red/x');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2083,7 +2132,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalRedXPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/red/x';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/red/x');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2099,7 +2149,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/red/y';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/red/y');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2115,7 +2166,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalRedYPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/red/y';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/red/y');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2132,8 +2184,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/colour-temperature';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/colour-temperature');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2151,8 +2203,8 @@ class _$Brompton extends Brompton {
     required InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/colour-temperature';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/colour-temperature');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2168,8 +2220,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/gamut');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2185,8 +2237,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/gamut');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2202,7 +2254,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/x';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/x');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2218,7 +2271,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalWhiteXPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/x';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/x');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2234,7 +2288,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/y';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/y');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2250,7 +2305,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalWhiteYPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/y';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/dynacal/white/y');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2264,8 +2320,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<BitDepth>> _inputPortsHdmiHdmiPortNumberMetaDataBitDepthGet(
       {required int? hdmiPortNumber}) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/meta-data/bit-depth';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/meta-data/bit-depth');
     final Request $request = Request(
       'GET',
       $url,
@@ -2277,8 +2333,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Format>> _inputPortsHdmiHdmiPortNumberMetaDataHdrFormatGet(
       {required int? hdmiPortNumber}) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/meta-data/hdr/format';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/meta-data/hdr/format');
     final Request $request = Request(
       'GET',
       $url,
@@ -2291,8 +2347,8 @@ class _$Brompton extends Brompton {
   Future<Response<RefreshRate>>
       _inputPortsHdmiHdmiPortNumberMetaDataRefreshRateGet(
           {required int? hdmiPortNumber}) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/meta-data/refresh-rate';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/meta-data/refresh-rate');
     final Request $request = Request(
       'GET',
       $url,
@@ -2305,8 +2361,8 @@ class _$Brompton extends Brompton {
   Future<Response<Height>>
       _inputPortsHdmiHdmiPortNumberMetaDataResolutionHeightGet(
           {required int? hdmiPortNumber}) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/meta-data/resolution/height';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/meta-data/resolution/height');
     final Request $request = Request(
       'GET',
       $url,
@@ -2319,8 +2375,8 @@ class _$Brompton extends Brompton {
   Future<Response<Width>>
       _inputPortsHdmiHdmiPortNumberMetaDataResolutionWidthGet(
           {required int? hdmiPortNumber}) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/meta-data/resolution/width';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/meta-data/resolution/width');
     final Request $request = Request(
       'GET',
       $url,
@@ -2332,8 +2388,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Sampling>> _inputPortsHdmiHdmiPortNumberMetaDataSamplingGet(
       {required int? hdmiPortNumber}) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/meta-data/sampling';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/meta-data/sampling');
     final Request $request = Request(
       'GET',
       $url,
@@ -2348,8 +2404,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/black-level';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/proc-amp/black-level');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2366,8 +2422,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/black-level';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/proc-amp/black-level');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2383,7 +2439,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/contrast';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/proc-amp/contrast');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2399,7 +2456,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/contrast';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/proc-amp/contrast');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2415,8 +2473,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/highlight/blue';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/highlight/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2433,8 +2491,8 @@ class _$Brompton extends Brompton {
     required InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/highlight/blue';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/highlight/blue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2451,8 +2509,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/highlight/green';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/highlight/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2470,8 +2528,8 @@ class _$Brompton extends Brompton {
     required InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/highlight/green';
+    final Uri $url = Uri.parse(
+        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/highlight/green');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2487,8 +2545,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/highlight/red';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/proc-amp/highlight/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2505,8 +2563,8 @@ class _$Brompton extends Brompton {
     required InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/highlight/red';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/proc-amp/highlight/red');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2522,7 +2580,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/hue';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/proc-amp/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2538,7 +2597,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/hue';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/proc-amp/hue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2555,8 +2615,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/saturation';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/proc-amp/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2573,8 +2633,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/saturation';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/proc-amp/saturation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2590,8 +2650,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/shadow/blue';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/proc-amp/shadow/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2607,8 +2667,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/shadow/blue';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/proc-amp/shadow/blue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2624,8 +2684,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/shadow/green';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/proc-amp/shadow/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2642,8 +2702,8 @@ class _$Brompton extends Brompton {
     required InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/shadow/green';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/proc-amp/shadow/green');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2659,8 +2719,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? hdmiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/shadow/red';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/proc-amp/shadow/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2676,8 +2736,8 @@ class _$Brompton extends Brompton {
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/hdmi/${hdmiPortNumber}/proc-amp/shadow/red';
+    final Uri $url =
+        Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/proc-amp/shadow/red');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2694,8 +2754,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/controls/colour-space/colour';
+    final Uri $url = Uri.parse(
+        '/input/ports/sdi/${sdiPortNumber}/controls/colour-space/colour');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2713,8 +2773,8 @@ class _$Brompton extends Brompton {
     required InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/controls/colour-space/colour';
+    final Uri $url = Uri.parse(
+        '/input/ports/sdi/${sdiPortNumber}/controls/colour-space/colour');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2730,7 +2790,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/controls/hdr/format';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/controls/hdr/format');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2746,7 +2807,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/controls/hdr/format';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/controls/hdr/format');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2763,8 +2825,8 @@ class _$Brompton extends Brompton {
     bool? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/controls/hdr/pq/auto-brighten';
+    final Uri $url = Uri.parse(
+        '/input/ports/sdi/${sdiPortNumber}/controls/hdr/pq/auto-brighten');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2782,8 +2844,8 @@ class _$Brompton extends Brompton {
     required InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/controls/hdr/pq/auto-brighten';
+    final Uri $url = Uri.parse(
+        '/input/ports/sdi/${sdiPortNumber}/controls/hdr/pq/auto-brighten');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2799,8 +2861,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/controls/hdr/pq/gain';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/controls/hdr/pq/gain');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2816,8 +2878,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberControlsHdrPqGainPut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/controls/hdr/pq/gain';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/controls/hdr/pq/gain');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2834,8 +2896,8 @@ class _$Brompton extends Brompton {
     bool? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/controls/hdr/pq/max-cll-override/enabled';
+    final Uri $url = Uri.parse(
+        '/input/ports/sdi/${sdiPortNumber}/controls/hdr/pq/max-cll-override/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2853,8 +2915,8 @@ class _$Brompton extends Brompton {
     required InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/controls/hdr/pq/max-cll-override/enabled';
+    final Uri $url = Uri.parse(
+        '/input/ports/sdi/${sdiPortNumber}/controls/hdr/pq/max-cll-override/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2871,8 +2933,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/controls/hdr/pq/max-cll-override/luminance';
+    final Uri $url = Uri.parse(
+        '/input/ports/sdi/${sdiPortNumber}/controls/hdr/pq/max-cll-override/luminance');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2890,8 +2952,8 @@ class _$Brompton extends Brompton {
     required InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/controls/hdr/pq/max-cll-override/luminance';
+    final Uri $url = Uri.parse(
+        '/input/ports/sdi/${sdiPortNumber}/controls/hdr/pq/max-cll-override/luminance');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2907,7 +2969,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/blue/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/blue/gamut');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2923,7 +2986,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/blue/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/blue/gamut');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2939,7 +3003,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/blue/x';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/blue/x');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2955,7 +3020,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/blue/x';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/blue/x');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -2971,7 +3037,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/blue/y';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/blue/y');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -2987,7 +3054,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalBlueYPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/blue/y';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/blue/y');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3003,7 +3071,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/green/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/green/gamut');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3019,7 +3088,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/green/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/green/gamut');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3035,7 +3105,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/green/x';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/green/x');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3051,7 +3122,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/green/x';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/green/x');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3067,7 +3139,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/green/y';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/green/y');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3083,7 +3156,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/green/y';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/green/y');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3099,7 +3173,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/red/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/red/gamut');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3115,7 +3190,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/red/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/red/gamut');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3131,7 +3207,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/red/x';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/red/x');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3147,7 +3224,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/red/x';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/red/x');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3163,7 +3241,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/red/y';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/red/y');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3179,7 +3258,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalRedYPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/red/y';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/red/y');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3196,8 +3276,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/dynacal/white/colour-temperature';
+    final Uri $url = Uri.parse(
+        '/input/ports/sdi/${sdiPortNumber}/dynacal/white/colour-temperature');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3215,8 +3295,8 @@ class _$Brompton extends Brompton {
     required InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/dynacal/white/colour-temperature';
+    final Uri $url = Uri.parse(
+        '/input/ports/sdi/${sdiPortNumber}/dynacal/white/colour-temperature');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3232,7 +3312,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/white/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/white/gamut');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3248,7 +3329,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/white/gamut';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/white/gamut');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3264,7 +3346,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/white/x';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/white/x');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3280,7 +3363,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/white/x';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/white/x');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3296,7 +3380,8 @@ class _$Brompton extends Brompton {
     num? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/white/y';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/white/y');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3312,7 +3397,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalWhiteYPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/dynacal/white/y';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/dynacal/white/y');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3327,8 +3413,8 @@ class _$Brompton extends Brompton {
   Future<Response<RefreshRate>>
       _inputPortsSdiSdiPortNumberMetaDataRefreshRateGet(
           {required int? sdiPortNumber}) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/meta-data/refresh-rate';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/meta-data/refresh-rate');
     final Request $request = Request(
       'GET',
       $url,
@@ -3341,8 +3427,8 @@ class _$Brompton extends Brompton {
   Future<Response<Height>>
       _inputPortsSdiSdiPortNumberMetaDataResolutionHeightGet(
           {required int? sdiPortNumber}) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/meta-data/resolution/height';
+    final Uri $url = Uri.parse(
+        '/input/ports/sdi/${sdiPortNumber}/meta-data/resolution/height');
     final Request $request = Request(
       'GET',
       $url,
@@ -3354,8 +3440,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Width>> _inputPortsSdiSdiPortNumberMetaDataResolutionWidthGet(
       {required int? sdiPortNumber}) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/meta-data/resolution/width';
+    final Uri $url = Uri.parse(
+        '/input/ports/sdi/${sdiPortNumber}/meta-data/resolution/width');
     final Request $request = Request(
       'GET',
       $url,
@@ -3369,8 +3455,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/proc-amp/black-level';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/black-level');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3386,8 +3472,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/proc-amp/black-level';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/black-level');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3403,7 +3489,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/proc-amp/contrast';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/contrast');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3419,7 +3506,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/proc-amp/contrast';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/contrast');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3435,8 +3523,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/proc-amp/highlight/blue';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/highlight/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3453,8 +3541,8 @@ class _$Brompton extends Brompton {
     required InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/proc-amp/highlight/blue';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/highlight/blue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3470,8 +3558,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/proc-amp/highlight/green';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/highlight/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3488,8 +3576,8 @@ class _$Brompton extends Brompton {
     required InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBody?
         body,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/proc-amp/highlight/green';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/highlight/green');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3505,8 +3593,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/proc-amp/highlight/red';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/highlight/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3522,8 +3610,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/proc-amp/highlight/red';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/highlight/red');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3539,7 +3627,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/proc-amp/hue';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3555,7 +3644,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/proc-amp/hue';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/hue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3571,7 +3661,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/proc-amp/saturation';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3587,7 +3678,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/proc-amp/saturation';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/saturation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3603,8 +3695,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/proc-amp/shadow/blue';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/shadow/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3620,8 +3712,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/proc-amp/shadow/blue';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/shadow/blue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3637,8 +3729,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/proc-amp/shadow/green';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/shadow/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3654,8 +3746,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBody? body,
   }) {
-    final String $url =
-        '/input/ports/sdi/${sdiPortNumber}/proc-amp/shadow/green';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/shadow/green');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3671,7 +3763,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? sdiPortNumber,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/proc-amp/shadow/red';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/shadow/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3687,7 +3780,8 @@ class _$Brompton extends Brompton {
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBody? body,
   }) {
-    final String $url = '/input/ports/sdi/${sdiPortNumber}/proc-amp/shadow/red';
+    final Uri $url =
+        Uri.parse('/input/ports/sdi/${sdiPortNumber}/proc-amp/shadow/red');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3703,7 +3797,7 @@ class _$Brompton extends Brompton {
     String? $set,
     required String? panelType,
   }) {
-    final String $url = '/output/dynacal/${panelType}/blue/mode';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/blue/mode');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3719,7 +3813,7 @@ class _$Brompton extends Brompton {
     required String? panelType,
     required OutputDynacalPanelTypeBlueModePut$RequestBody? body,
   }) {
-    final String $url = '/output/dynacal/${panelType}/blue/mode';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/blue/mode');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3735,7 +3829,7 @@ class _$Brompton extends Brompton {
     num? $set,
     required String? panelType,
   }) {
-    final String $url = '/output/dynacal/${panelType}/blue/x';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/blue/x');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3751,7 +3845,7 @@ class _$Brompton extends Brompton {
     required String? panelType,
     required OutputDynacalPanelTypeBlueXPut$RequestBody? body,
   }) {
-    final String $url = '/output/dynacal/${panelType}/blue/x';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/blue/x');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3767,7 +3861,7 @@ class _$Brompton extends Brompton {
     num? $set,
     required String? panelType,
   }) {
-    final String $url = '/output/dynacal/${panelType}/blue/y';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/blue/y');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3783,7 +3877,7 @@ class _$Brompton extends Brompton {
     required String? panelType,
     required OutputDynacalPanelTypeBlueYPut$RequestBody? body,
   }) {
-    final String $url = '/output/dynacal/${panelType}/blue/y';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/blue/y');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3799,7 +3893,7 @@ class _$Brompton extends Brompton {
     String? $set,
     required String? panelType,
   }) {
-    final String $url = '/output/dynacal/${panelType}/green/mode';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/green/mode');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3815,7 +3909,7 @@ class _$Brompton extends Brompton {
     required String? panelType,
     required OutputDynacalPanelTypeGreenModePut$RequestBody? body,
   }) {
-    final String $url = '/output/dynacal/${panelType}/green/mode';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/green/mode');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3831,7 +3925,7 @@ class _$Brompton extends Brompton {
     num? $set,
     required String? panelType,
   }) {
-    final String $url = '/output/dynacal/${panelType}/green/x';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/green/x');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3847,7 +3941,7 @@ class _$Brompton extends Brompton {
     required String? panelType,
     required OutputDynacalPanelTypeGreenXPut$RequestBody? body,
   }) {
-    final String $url = '/output/dynacal/${panelType}/green/x';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/green/x');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3863,7 +3957,7 @@ class _$Brompton extends Brompton {
     num? $set,
     required String? panelType,
   }) {
-    final String $url = '/output/dynacal/${panelType}/green/y';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/green/y');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3879,7 +3973,7 @@ class _$Brompton extends Brompton {
     required String? panelType,
     required OutputDynacalPanelTypeGreenYPut$RequestBody? body,
   }) {
-    final String $url = '/output/dynacal/${panelType}/green/y';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/green/y');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3896,7 +3990,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required String? panelType,
   }) {
-    final String $url = '/output/dynacal/${panelType}/luminance-only-fraction';
+    final Uri $url =
+        Uri.parse('/output/dynacal/${panelType}/luminance-only-fraction');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3913,7 +4008,8 @@ class _$Brompton extends Brompton {
     required String? panelType,
     required OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBody? body,
   }) {
-    final String $url = '/output/dynacal/${panelType}/luminance-only-fraction';
+    final Uri $url =
+        Uri.parse('/output/dynacal/${panelType}/luminance-only-fraction');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3929,7 +4025,7 @@ class _$Brompton extends Brompton {
     String? $set,
     required String? panelType,
   }) {
-    final String $url = '/output/dynacal/${panelType}/mode';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/mode');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3945,7 +4041,7 @@ class _$Brompton extends Brompton {
     required String? panelType,
     required OutputDynacalPanelTypeModePut$RequestBody? body,
   }) {
-    final String $url = '/output/dynacal/${panelType}/mode';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/mode');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3961,7 +4057,7 @@ class _$Brompton extends Brompton {
     String? $set,
     required String? panelType,
   }) {
-    final String $url = '/output/dynacal/${panelType}/red/mode';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/red/mode');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -3977,7 +4073,7 @@ class _$Brompton extends Brompton {
     required String? panelType,
     required OutputDynacalPanelTypeRedModePut$RequestBody? body,
   }) {
-    final String $url = '/output/dynacal/${panelType}/red/mode';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/red/mode');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -3993,7 +4089,7 @@ class _$Brompton extends Brompton {
     num? $set,
     required String? panelType,
   }) {
-    final String $url = '/output/dynacal/${panelType}/red/x';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/red/x');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4009,7 +4105,7 @@ class _$Brompton extends Brompton {
     required String? panelType,
     required OutputDynacalPanelTypeRedXPut$RequestBody? body,
   }) {
-    final String $url = '/output/dynacal/${panelType}/red/x';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/red/x');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4025,7 +4121,7 @@ class _$Brompton extends Brompton {
     num? $set,
     required String? panelType,
   }) {
-    final String $url = '/output/dynacal/${panelType}/red/y';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/red/y');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4041,7 +4137,7 @@ class _$Brompton extends Brompton {
     required String? panelType,
     required OutputDynacalPanelTypeRedYPut$RequestBody? body,
   }) {
-    final String $url = '/output/dynacal/${panelType}/red/y';
+    final Uri $url = Uri.parse('/output/dynacal/${panelType}/red/y');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4054,7 +4150,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Brightness>> _outputGlobalColourBrightnessGet({int? $set}) {
-    final String $url = '/output/global-colour/brightness';
+    final Uri $url = Uri.parse('/output/global-colour/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4068,7 +4164,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _outputGlobalColourBrightnessPut(
       {required OutputGlobalColourBrightnessPut$RequestBody? body}) {
-    final String $url = '/output/global-colour/brightness';
+    final Uri $url = Uri.parse('/output/global-colour/brightness');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4082,7 +4178,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<ColourTemperature>> _outputGlobalColourColourTemperatureGet(
       {int? $set}) {
-    final String $url = '/output/global-colour/colour-temperature';
+    final Uri $url = Uri.parse('/output/global-colour/colour-temperature');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4096,7 +4192,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<ColourTemperature>> _outputGlobalColourColourTemperaturePut(
       {required OutputGlobalColourColourTemperaturePut$RequestBody? body}) {
-    final String $url = '/output/global-colour/colour-temperature';
+    final Uri $url = Uri.parse('/output/global-colour/colour-temperature');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4110,7 +4206,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputGlobalColourDarkMagicEnabledGet(
       {bool? $set}) {
-    final String $url = '/output/global-colour/dark-magic/enabled';
+    final Uri $url = Uri.parse('/output/global-colour/dark-magic/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4124,7 +4220,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputGlobalColourDarkMagicEnabledPut(
       {required OutputGlobalColourDarkMagicEnabledPut$RequestBody? body}) {
-    final String $url = '/output/global-colour/dark-magic/enabled';
+    final Uri $url = Uri.parse('/output/global-colour/dark-magic/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4139,8 +4235,8 @@ class _$Brompton extends Brompton {
   Future<Response<HighlightOverbrightPixelsEnabled>>
       _outputGlobalColourDynacalHighlightOverbrightPixelsEnabledGet(
           {bool? $set}) {
-    final String $url =
-        '/output/global-colour/dynacal/highlight-overbright-pixels-enabled';
+    final Uri $url = Uri.parse(
+        '/output/global-colour/dynacal/highlight-overbright-pixels-enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4157,8 +4253,8 @@ class _$Brompton extends Brompton {
       _outputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut(
           {required OutputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut$RequestBody?
               body}) {
-    final String $url =
-        '/output/global-colour/dynacal/highlight-overbright-pixels-enabled';
+    final Uri $url = Uri.parse(
+        '/output/global-colour/dynacal/highlight-overbright-pixels-enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4174,8 +4270,8 @@ class _$Brompton extends Brompton {
   Future<Response<HightlightOutOfGamutPixelsEnabled>>
       _outputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledGet(
           {bool? $set}) {
-    final String $url =
-        '/output/global-colour/dynacal/hightlight-out-of-gamut-pixels-enabled';
+    final Uri $url = Uri.parse(
+        '/output/global-colour/dynacal/hightlight-out-of-gamut-pixels-enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4192,8 +4288,8 @@ class _$Brompton extends Brompton {
       _outputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut(
           {required OutputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut$RequestBody?
               body}) {
-    final String $url =
-        '/output/global-colour/dynacal/hightlight-out-of-gamut-pixels-enabled';
+    final Uri $url = Uri.parse(
+        '/output/global-colour/dynacal/hightlight-out-of-gamut-pixels-enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4208,7 +4304,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputGlobalColourExtendedBitDepthEnabledGet(
       {bool? $set}) {
-    final String $url = '/output/global-colour/extended-bit-depth/enabled';
+    final Uri $url =
+        Uri.parse('/output/global-colour/extended-bit-depth/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4223,7 +4320,8 @@ class _$Brompton extends Brompton {
   Future<Response<Enabled>> _outputGlobalColourExtendedBitDepthEnabledPut(
       {required OutputGlobalColourExtendedBitDepthEnabledPut$RequestBody?
           body}) {
-    final String $url = '/output/global-colour/extended-bit-depth/enabled';
+    final Uri $url =
+        Uri.parse('/output/global-colour/extended-bit-depth/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4236,7 +4334,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Blue>> _outputGlobalColourGainsBlueGet({num? $set}) {
-    final String $url = '/output/global-colour/gains/blue';
+    final Uri $url = Uri.parse('/output/global-colour/gains/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4250,7 +4348,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Blue>> _outputGlobalColourGainsBluePut(
       {required OutputGlobalColourGainsBluePut$RequestBody? body}) {
-    final String $url = '/output/global-colour/gains/blue';
+    final Uri $url = Uri.parse('/output/global-colour/gains/blue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4263,7 +4361,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Green>> _outputGlobalColourGainsGreenGet({num? $set}) {
-    final String $url = '/output/global-colour/gains/green';
+    final Uri $url = Uri.parse('/output/global-colour/gains/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4277,7 +4375,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Green>> _outputGlobalColourGainsGreenPut(
       {required OutputGlobalColourGainsGreenPut$RequestBody? body}) {
-    final String $url = '/output/global-colour/gains/green';
+    final Uri $url = Uri.parse('/output/global-colour/gains/green');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4291,7 +4389,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Intensity>> _outputGlobalColourGainsIntensityGet(
       {num? $set}) {
-    final String $url = '/output/global-colour/gains/intensity';
+    final Uri $url = Uri.parse('/output/global-colour/gains/intensity');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4305,7 +4403,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Intensity>> _outputGlobalColourGainsIntensityPut(
       {required OutputGlobalColourGainsIntensityPut$RequestBody? body}) {
-    final String $url = '/output/global-colour/gains/intensity';
+    final Uri $url = Uri.parse('/output/global-colour/gains/intensity');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4318,7 +4416,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Red>> _outputGlobalColourGainsRedGet({num? $set}) {
-    final String $url = '/output/global-colour/gains/red';
+    final Uri $url = Uri.parse('/output/global-colour/gains/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4332,7 +4430,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Red>> _outputGlobalColourGainsRedPut(
       {required OutputGlobalColourGainsRedPut$RequestBody? body}) {
-    final String $url = '/output/global-colour/gains/red';
+    final Uri $url = Uri.parse('/output/global-colour/gains/red');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4345,7 +4443,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Gamma>> _outputGlobalColourGammaGet({num? $set}) {
-    final String $url = '/output/global-colour/gamma';
+    final Uri $url = Uri.parse('/output/global-colour/gamma');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4359,7 +4457,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Gamma>> _outputGlobalColourGammaPut(
       {required OutputGlobalColourGammaPut$RequestBody? body}) {
-    final String $url = '/output/global-colour/gamma';
+    final Uri $url = Uri.parse('/output/global-colour/gamma');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4373,7 +4471,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputGlobalColourOverdriveEnabledGet(
       {bool? $set}) {
-    final String $url = '/output/global-colour/overdrive/enabled';
+    final Uri $url = Uri.parse('/output/global-colour/overdrive/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4387,7 +4485,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputGlobalColourOverdriveEnabledPut(
       {required OutputGlobalColourOverdriveEnabledPut$RequestBody? body}) {
-    final String $url = '/output/global-colour/overdrive/enabled';
+    final Uri $url = Uri.parse('/output/global-colour/overdrive/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4401,7 +4499,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputGlobalColourPuretoneEnabledGet(
       {bool? $set}) {
-    final String $url = '/output/global-colour/puretone/enabled';
+    final Uri $url = Uri.parse('/output/global-colour/puretone/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4415,7 +4513,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputGlobalColourPuretoneEnabledPut(
       {required OutputGlobalColourPuretoneEnabledPut$RequestBody? body}) {
-    final String $url = '/output/global-colour/puretone/enabled';
+    final Uri $url = Uri.parse('/output/global-colour/puretone/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4428,7 +4526,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<BitDepth>> _outputNetworkBitDepthGet({int? $set}) {
-    final String $url = '/output/network/bit-depth';
+    final Uri $url = Uri.parse('/output/network/bit-depth');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4442,7 +4540,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<BitDepth>> _outputNetworkBitDepthPut(
       {required OutputNetworkBitDepthPut$RequestBody? body}) {
-    final String $url = '/output/network/bit-depth';
+    final Uri $url = Uri.parse('/output/network/bit-depth');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4456,8 +4554,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<State>> _outputNetworkCableRedundancyLoopsLoopNumberStateGet(
       {required int? loopNumber}) {
-    final String $url =
-        '/output/network/cable-redundancy/loops/${loopNumber}/state';
+    final Uri $url =
+        Uri.parse('/output/network/cable-redundancy/loops/${loopNumber}/state');
     final Request $request = Request(
       'GET',
       $url,
@@ -4469,7 +4567,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<RequestFailover>>
       _outputNetworkFailoverActionsRequestFailoverGet({String? $set}) {
-    final String $url = '/output/network/failover/actions/request-failover';
+    final Uri $url =
+        Uri.parse('/output/network/failover/actions/request-failover');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4485,7 +4584,8 @@ class _$Brompton extends Brompton {
       _outputNetworkFailoverActionsRequestFailoverPut(
           {required OutputNetworkFailoverActionsRequestFailoverPut$RequestBody?
               body}) {
-    final String $url = '/output/network/failover/actions/request-failover';
+    final Uri $url =
+        Uri.parse('/output/network/failover/actions/request-failover');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4499,7 +4599,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputNetworkFailoverSettingsEnabledGet(
       {bool? $set}) {
-    final String $url = '/output/network/failover/settings/enabled';
+    final Uri $url = Uri.parse('/output/network/failover/settings/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4513,7 +4613,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputNetworkFailoverSettingsEnabledPut(
       {required OutputNetworkFailoverSettingsEnabledPut$RequestBody? body}) {
-    final String $url = '/output/network/failover/settings/enabled';
+    final Uri $url = Uri.parse('/output/network/failover/settings/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4527,8 +4627,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<OnButtonPress>>
       _outputNetworkFailoverSettingsModesOnButtonPressGet({bool? $set}) {
-    final String $url =
-        '/output/network/failover/settings/modes/on-button-press';
+    final Uri $url =
+        Uri.parse('/output/network/failover/settings/modes/on-button-press');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4545,8 +4645,8 @@ class _$Brompton extends Brompton {
           OnButtonPress>> _outputNetworkFailoverSettingsModesOnButtonPressPut(
       {required OutputNetworkFailoverSettingsModesOnButtonPressPut$RequestBody?
           body}) {
-    final String $url =
-        '/output/network/failover/settings/modes/on-button-press';
+    final Uri $url =
+        Uri.parse('/output/network/failover/settings/modes/on-button-press');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4560,8 +4660,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<OnPartnerFail>>
       _outputNetworkFailoverSettingsModesOnPartnerFailGet({bool? $set}) {
-    final String $url =
-        '/output/network/failover/settings/modes/on-partner-fail';
+    final Uri $url =
+        Uri.parse('/output/network/failover/settings/modes/on-partner-fail');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4578,8 +4678,8 @@ class _$Brompton extends Brompton {
           OnPartnerFail>> _outputNetworkFailoverSettingsModesOnPartnerFailPut(
       {required OutputNetworkFailoverSettingsModesOnPartnerFailPut$RequestBody?
           body}) {
-    final String $url =
-        '/output/network/failover/settings/modes/on-partner-fail';
+    final Uri $url =
+        Uri.parse('/output/network/failover/settings/modes/on-partner-fail');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4593,8 +4693,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<OnPartnerVideoFail>>
       _outputNetworkFailoverSettingsModesOnPartnerVideoFailGet({bool? $set}) {
-    final String $url =
-        '/output/network/failover/settings/modes/on-partner-video-fail';
+    final Uri $url = Uri.parse(
+        '/output/network/failover/settings/modes/on-partner-video-fail');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4610,8 +4710,8 @@ class _$Brompton extends Brompton {
       _outputNetworkFailoverSettingsModesOnPartnerVideoFailPut(
           {required OutputNetworkFailoverSettingsModesOnPartnerVideoFailPut$RequestBody?
               body}) {
-    final String $url =
-        '/output/network/failover/settings/modes/on-partner-video-fail';
+    final Uri $url = Uri.parse(
+        '/output/network/failover/settings/modes/on-partner-video-fail');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4625,8 +4725,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<PreferPrimary>>
       _outputNetworkFailoverSettingsModesPreferPrimaryGet({bool? $set}) {
-    final String $url =
-        '/output/network/failover/settings/modes/prefer-primary';
+    final Uri $url =
+        Uri.parse('/output/network/failover/settings/modes/prefer-primary');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4643,8 +4743,8 @@ class _$Brompton extends Brompton {
           PreferPrimary>> _outputNetworkFailoverSettingsModesPreferPrimaryPut(
       {required OutputNetworkFailoverSettingsModesPreferPrimaryPut$RequestBody?
           body}) {
-    final String $url =
-        '/output/network/failover/settings/modes/prefer-primary';
+    final Uri $url =
+        Uri.parse('/output/network/failover/settings/modes/prefer-primary');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4657,7 +4757,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Role>> _outputNetworkFailoverSettingsRoleGet() {
-    final String $url = '/output/network/failover/settings/role';
+    final Uri $url = Uri.parse('/output/network/failover/settings/role');
     final Request $request = Request(
       'GET',
       $url,
@@ -4668,7 +4768,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<IsActive>> _outputNetworkFailoverStateIsActiveGet() {
-    final String $url = '/output/network/failover/state/is-active';
+    final Uri $url = Uri.parse('/output/network/failover/state/is-active');
     final Request $request = Request(
       'GET',
       $url,
@@ -4680,7 +4780,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<IsPartnerPresent>>
       _outputNetworkFailoverStateIsPartnerPresentGet() {
-    final String $url = '/output/network/failover/state/is-partner-present';
+    final Uri $url =
+        Uri.parse('/output/network/failover/state/is-partner-present');
     final Request $request = Request(
       'GET',
       $url,
@@ -4692,8 +4793,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<PartnerAbsenceDuration>>
       _outputNetworkFailoverStatePartnerAbsenceDurationGet() {
-    final String $url =
-        '/output/network/failover/state/partner-absence-duration';
+    final Uri $url =
+        Uri.parse('/output/network/failover/state/partner-absence-duration');
     final Request $request = Request(
       'GET',
       $url,
@@ -4705,7 +4806,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<PartnerName>> _outputNetworkFailoverStatePartnerNameGet() {
-    final String $url = '/output/network/failover/state/partner-name';
+    final Uri $url = Uri.parse('/output/network/failover/state/partner-name');
     final Request $request = Request(
       'GET',
       $url,
@@ -4717,7 +4818,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<PartnerSerial>>
       _outputNetworkFailoverStatePartnerSerialGet() {
-    final String $url = '/output/network/failover/state/partner-serial';
+    final Uri $url = Uri.parse('/output/network/failover/state/partner-serial');
     final Request $request = Request(
       'GET',
       $url,
@@ -4729,8 +4830,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<PartnerVideoAbsenceDuration>>
       _outputNetworkFailoverStatePartnerVideoAbsenceDurationGet() {
-    final String $url =
-        '/output/network/failover/state/partner-video-absence-duration';
+    final Uri $url = Uri.parse(
+        '/output/network/failover/state/partner-video-absence-duration');
     final Request $request = Request(
       'GET',
       $url,
@@ -4743,7 +4844,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<FrameRateMultiplier>> _outputNetworkFrameRateMultiplierGet(
       {int? $set}) {
-    final String $url = '/output/network/frame-rate-multiplier';
+    final Uri $url = Uri.parse('/output/network/frame-rate-multiplier');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4757,7 +4858,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<FrameRateMultiplier>> _outputNetworkFrameRateMultiplierPut(
       {required OutputNetworkFrameRateMultiplierPut$RequestBody? body}) {
-    final String $url = '/output/network/frame-rate-multiplier';
+    final Uri $url = Uri.parse('/output/network/frame-rate-multiplier');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4771,7 +4872,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputNetworkFrameRemappingEnabledGet(
       {bool? $set}) {
-    final String $url = '/output/network/frame-remapping/enabled';
+    final Uri $url = Uri.parse('/output/network/frame-remapping/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4785,7 +4886,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputNetworkFrameRemappingEnabledPut(
       {required OutputNetworkFrameRemappingEnabledPut$RequestBody? body}) {
-    final String $url = '/output/network/frame-remapping/enabled';
+    final Uri $url = Uri.parse('/output/network/frame-remapping/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4801,7 +4902,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? frame,
   }) {
-    final String $url = '/output/network/frame-remapping/frames/${frame}/blue';
+    final Uri $url =
+        Uri.parse('/output/network/frame-remapping/frames/${frame}/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4817,7 +4919,8 @@ class _$Brompton extends Brompton {
     required int? frame,
     required OutputNetworkFrameRemappingFramesFrameBluePut$RequestBody? body,
   }) {
-    final String $url = '/output/network/frame-remapping/frames/${frame}/blue';
+    final Uri $url =
+        Uri.parse('/output/network/frame-remapping/frames/${frame}/blue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4833,7 +4936,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? frame,
   }) {
-    final String $url = '/output/network/frame-remapping/frames/${frame}/green';
+    final Uri $url =
+        Uri.parse('/output/network/frame-remapping/frames/${frame}/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4849,7 +4953,8 @@ class _$Brompton extends Brompton {
     required int? frame,
     required OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBody? body,
   }) {
-    final String $url = '/output/network/frame-remapping/frames/${frame}/green';
+    final Uri $url =
+        Uri.parse('/output/network/frame-remapping/frames/${frame}/green');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4865,7 +4970,8 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? frame,
   }) {
-    final String $url = '/output/network/frame-remapping/frames/${frame}/mode';
+    final Uri $url =
+        Uri.parse('/output/network/frame-remapping/frames/${frame}/mode');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4881,7 +4987,8 @@ class _$Brompton extends Brompton {
     required int? frame,
     required OutputNetworkFrameRemappingFramesFrameModePut$RequestBody? body,
   }) {
-    final String $url = '/output/network/frame-remapping/frames/${frame}/mode';
+    final Uri $url =
+        Uri.parse('/output/network/frame-remapping/frames/${frame}/mode');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4897,7 +5004,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? frame,
   }) {
-    final String $url = '/output/network/frame-remapping/frames/${frame}/red';
+    final Uri $url =
+        Uri.parse('/output/network/frame-remapping/frames/${frame}/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4913,7 +5021,8 @@ class _$Brompton extends Brompton {
     required int? frame,
     required OutputNetworkFrameRemappingFramesFrameRedPut$RequestBody? body,
   }) {
-    final String $url = '/output/network/frame-remapping/frames/${frame}/red';
+    final Uri $url =
+        Uri.parse('/output/network/frame-remapping/frames/${frame}/red');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4929,8 +5038,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? frame,
   }) {
-    final String $url =
-        '/output/network/frame-remapping/frames/${frame}/x-offset';
+    final Uri $url =
+        Uri.parse('/output/network/frame-remapping/frames/${frame}/x-offset');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4946,8 +5055,8 @@ class _$Brompton extends Brompton {
     required int? frame,
     required OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBody? body,
   }) {
-    final String $url =
-        '/output/network/frame-remapping/frames/${frame}/x-offset';
+    final Uri $url =
+        Uri.parse('/output/network/frame-remapping/frames/${frame}/x-offset');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4963,8 +5072,8 @@ class _$Brompton extends Brompton {
     int? $set,
     required int? frame,
   }) {
-    final String $url =
-        '/output/network/frame-remapping/frames/${frame}/y-offset';
+    final Uri $url =
+        Uri.parse('/output/network/frame-remapping/frames/${frame}/y-offset');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -4980,8 +5089,8 @@ class _$Brompton extends Brompton {
     required int? frame,
     required OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBody? body,
   }) {
-    final String $url =
-        '/output/network/frame-remapping/frames/${frame}/y-offset';
+    final Uri $url =
+        Uri.parse('/output/network/frame-remapping/frames/${frame}/y-offset');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -4995,7 +5104,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<InternalRate>> _outputNetworkGenlockInternalRateGet(
       {num? $set}) {
-    final String $url = '/output/network/genlock/internal-rate';
+    final Uri $url = Uri.parse('/output/network/genlock/internal-rate');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5009,7 +5118,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<InternalRate>> _outputNetworkGenlockInternalRatePut(
       {required OutputNetworkGenlockInternalRatePut$RequestBody? body}) {
-    final String $url = '/output/network/genlock/internal-rate';
+    final Uri $url = Uri.parse('/output/network/genlock/internal-rate');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5023,7 +5132,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Lines>> _outputNetworkGenlockPhaseOffsetAbsoluteLinesGet(
       {int? $set}) {
-    final String $url = '/output/network/genlock/phase-offset/absolute/lines';
+    final Uri $url =
+        Uri.parse('/output/network/genlock/phase-offset/absolute/lines');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5038,7 +5148,8 @@ class _$Brompton extends Brompton {
   Future<Response<Lines>> _outputNetworkGenlockPhaseOffsetAbsoluteLinesPut(
       {required OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBody?
           body}) {
-    final String $url = '/output/network/genlock/phase-offset/absolute/lines';
+    final Uri $url =
+        Uri.parse('/output/network/genlock/phase-offset/absolute/lines');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5052,7 +5163,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Pixels>> _outputNetworkGenlockPhaseOffsetAbsolutePixelsGet(
       {int? $set}) {
-    final String $url = '/output/network/genlock/phase-offset/absolute/pixels';
+    final Uri $url =
+        Uri.parse('/output/network/genlock/phase-offset/absolute/pixels');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5067,7 +5179,8 @@ class _$Brompton extends Brompton {
   Future<Response<Pixels>> _outputNetworkGenlockPhaseOffsetAbsolutePixelsPut(
       {required OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBody?
           body}) {
-    final String $url = '/output/network/genlock/phase-offset/absolute/pixels';
+    final Uri $url =
+        Uri.parse('/output/network/genlock/phase-offset/absolute/pixels');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5081,7 +5194,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Angle>> _outputNetworkGenlockPhaseOffsetAngleGet(
       {num? $set}) {
-    final String $url = '/output/network/genlock/phase-offset/angle';
+    final Uri $url = Uri.parse('/output/network/genlock/phase-offset/angle');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5095,7 +5208,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Angle>> _outputNetworkGenlockPhaseOffsetAnglePut(
       {required OutputNetworkGenlockPhaseOffsetAnglePut$RequestBody? body}) {
-    final String $url = '/output/network/genlock/phase-offset/angle';
+    final Uri $url = Uri.parse('/output/network/genlock/phase-offset/angle');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5109,7 +5222,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Fraction>> _outputNetworkGenlockPhaseOffsetFractionGet(
       {num? $set}) {
-    final String $url = '/output/network/genlock/phase-offset/fraction';
+    final Uri $url = Uri.parse('/output/network/genlock/phase-offset/fraction');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5123,7 +5236,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Fraction>> _outputNetworkGenlockPhaseOffsetFractionPut(
       {required OutputNetworkGenlockPhaseOffsetFractionPut$RequestBody? body}) {
-    final String $url = '/output/network/genlock/phase-offset/fraction';
+    final Uri $url = Uri.parse('/output/network/genlock/phase-offset/fraction');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5137,7 +5250,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Mode>> _outputNetworkGenlockPhaseOffsetModeGet(
       {String? $set}) {
-    final String $url = '/output/network/genlock/phase-offset/mode';
+    final Uri $url = Uri.parse('/output/network/genlock/phase-offset/mode');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5151,7 +5264,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Mode>> _outputNetworkGenlockPhaseOffsetModePut(
       {required OutputNetworkGenlockPhaseOffsetModePut$RequestBody? body}) {
-    final String $url = '/output/network/genlock/phase-offset/mode';
+    final Uri $url = Uri.parse('/output/network/genlock/phase-offset/mode');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5164,7 +5277,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Source>> _outputNetworkGenlockSourceGet({String? $set}) {
-    final String $url = '/output/network/genlock/source';
+    final Uri $url = Uri.parse('/output/network/genlock/source');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5178,7 +5291,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Source>> _outputNetworkGenlockSourcePut(
       {required OutputNetworkGenlockSourcePut$RequestBody? body}) {
-    final String $url = '/output/network/genlock/source';
+    final Uri $url = Uri.parse('/output/network/genlock/source');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5192,8 +5305,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<CustomFrameRate>>
       _outputNetworkShuttersyncAngleSettingsCustomFrameRateGet({num? $set}) {
-    final String $url =
-        '/output/network/shuttersync/angle-settings/custom-frame-rate';
+    final Uri $url = Uri.parse(
+        '/output/network/shuttersync/angle-settings/custom-frame-rate');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5209,8 +5322,8 @@ class _$Brompton extends Brompton {
       _outputNetworkShuttersyncAngleSettingsCustomFrameRatePut(
           {required OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBody?
               body}) {
-    final String $url =
-        '/output/network/shuttersync/angle-settings/custom-frame-rate';
+    final Uri $url = Uri.parse(
+        '/output/network/shuttersync/angle-settings/custom-frame-rate');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5224,8 +5337,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<ShutterAngle>>
       _outputNetworkShuttersyncAngleSettingsShutterAngleGet({num? $set}) {
-    final String $url =
-        '/output/network/shuttersync/angle-settings/shutter-angle';
+    final Uri $url =
+        Uri.parse('/output/network/shuttersync/angle-settings/shutter-angle');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5242,8 +5355,8 @@ class _$Brompton extends Brompton {
           ShutterAngle>> _outputNetworkShuttersyncAngleSettingsShutterAnglePut(
       {required OutputNetworkShuttersyncAngleSettingsShutterAnglePut$RequestBody?
           body}) {
-    final String $url =
-        '/output/network/shuttersync/angle-settings/shutter-angle';
+    final Uri $url =
+        Uri.parse('/output/network/shuttersync/angle-settings/shutter-angle');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5258,8 +5371,8 @@ class _$Brompton extends Brompton {
   Future<Response<UseCustomFrameRate>>
       _outputNetworkShuttersyncAngleSettingsUseCustomFrameRateGet(
           {bool? $set}) {
-    final String $url =
-        '/output/network/shuttersync/angle-settings/use-custom-frame-rate';
+    final Uri $url = Uri.parse(
+        '/output/network/shuttersync/angle-settings/use-custom-frame-rate');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5275,8 +5388,8 @@ class _$Brompton extends Brompton {
       _outputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut(
           {required OutputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut$RequestBody?
               body}) {
-    final String $url =
-        '/output/network/shuttersync/angle-settings/use-custom-frame-rate';
+    final Uri $url = Uri.parse(
+        '/output/network/shuttersync/angle-settings/use-custom-frame-rate');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5289,7 +5402,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Mode>> _outputNetworkShuttersyncModeGet({String? $set}) {
-    final String $url = '/output/network/shuttersync/mode';
+    final Uri $url = Uri.parse('/output/network/shuttersync/mode');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5303,7 +5416,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Mode>> _outputNetworkShuttersyncModePut(
       {required OutputNetworkShuttersyncModePut$RequestBody? body}) {
-    final String $url = '/output/network/shuttersync/mode';
+    final Uri $url = Uri.parse('/output/network/shuttersync/mode');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5317,7 +5430,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<PrioritiseRefreshRate>>
       _outputNetworkShuttersyncPrioritiseRefreshRateGet({bool? $set}) {
-    final String $url = '/output/network/shuttersync/prioritise-refresh-rate';
+    final Uri $url =
+        Uri.parse('/output/network/shuttersync/prioritise-refresh-rate');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5333,7 +5447,8 @@ class _$Brompton extends Brompton {
       _outputNetworkShuttersyncPrioritiseRefreshRatePut(
           {required OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBody?
               body}) {
-    final String $url = '/output/network/shuttersync/prioritise-refresh-rate';
+    final Uri $url =
+        Uri.parse('/output/network/shuttersync/prioritise-refresh-rate');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5347,7 +5462,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<SensorReadoutTime>>
       _outputNetworkShuttersyncSensorReadoutTimeGet({num? $set}) {
-    final String $url = '/output/network/shuttersync/sensor-readout-time';
+    final Uri $url =
+        Uri.parse('/output/network/shuttersync/sensor-readout-time');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5363,7 +5479,8 @@ class _$Brompton extends Brompton {
       _outputNetworkShuttersyncSensorReadoutTimePut(
           {required OutputNetworkShuttersyncSensorReadoutTimePut$RequestBody?
               body}) {
-    final String $url = '/output/network/shuttersync/sensor-readout-time';
+    final Uri $url =
+        Uri.parse('/output/network/shuttersync/sensor-readout-time');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5377,7 +5494,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<SensorType>> _outputNetworkShuttersyncSensorTypeGet(
       {String? $set}) {
-    final String $url = '/output/network/shuttersync/sensor-type';
+    final Uri $url = Uri.parse('/output/network/shuttersync/sensor-type');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5391,7 +5508,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<SensorType>> _outputNetworkShuttersyncSensorTypePut(
       {required OutputNetworkShuttersyncSensorTypePut$RequestBody? body}) {
-    final String $url = '/output/network/shuttersync/sensor-type';
+    final Uri $url = Uri.parse('/output/network/shuttersync/sensor-type');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5405,8 +5522,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<ShutterSpeed>>
       _outputNetworkShuttersyncSpeedSettingsShutterSpeedGet({num? $set}) {
-    final String $url =
-        '/output/network/shuttersync/speed-settings/shutter-speed';
+    final Uri $url =
+        Uri.parse('/output/network/shuttersync/speed-settings/shutter-speed');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5423,8 +5540,8 @@ class _$Brompton extends Brompton {
           ShutterSpeed>> _outputNetworkShuttersyncSpeedSettingsShutterSpeedPut(
       {required OutputNetworkShuttersyncSpeedSettingsShutterSpeedPut$RequestBody?
           body}) {
-    final String $url =
-        '/output/network/shuttersync/speed-settings/shutter-speed';
+    final Uri $url =
+        Uri.parse('/output/network/shuttersync/speed-settings/shutter-speed');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5438,7 +5555,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Time>> _outputNetworkShuttersyncSpeedSettingsTimeGet(
       {num? $set}) {
-    final String $url = '/output/network/shuttersync/speed-settings/time';
+    final Uri $url =
+        Uri.parse('/output/network/shuttersync/speed-settings/time');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5453,7 +5571,8 @@ class _$Brompton extends Brompton {
   Future<Response<Time>> _outputNetworkShuttersyncSpeedSettingsTimePut(
       {required OutputNetworkShuttersyncSpeedSettingsTimePut$RequestBody?
           body}) {
-    final String $url = '/output/network/shuttersync/speed-settings/time';
+    final Uri $url =
+        Uri.parse('/output/network/shuttersync/speed-settings/time');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5467,7 +5586,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<BackgroundGain>> _outputNetworkStartrackerBackgroundGainGet(
       {int? $set}) {
-    final String $url = '/output/network/startracker/background-gain';
+    final Uri $url = Uri.parse('/output/network/startracker/background-gain');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5481,7 +5600,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<BackgroundGain>> _outputNetworkStartrackerBackgroundGainPut(
       {required OutputNetworkStartrackerBackgroundGainPut$RequestBody? body}) {
-    final String $url = '/output/network/startracker/background-gain';
+    final Uri $url = Uri.parse('/output/network/startracker/background-gain');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5495,7 +5614,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<BlackoutAffectsMarkers>>
       _outputNetworkStartrackerBlackoutAffectsMarkersGet({bool? $set}) {
-    final String $url = '/output/network/startracker/blackout-affects-markers';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/blackout-affects-markers');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5512,7 +5632,8 @@ class _$Brompton extends Brompton {
       _outputNetworkStartrackerBlackoutAffectsMarkersPut(
           {required OutputNetworkStartrackerBlackoutAffectsMarkersPut$RequestBody?
               body}) {
-    final String $url = '/output/network/startracker/blackout-affects-markers';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/blackout-affects-markers');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5527,7 +5648,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<DistanceToTracker>>
       _outputNetworkStartrackerBlueDistanceToTrackerGet({num? $set}) {
-    final String $url = '/output/network/startracker/blue/distance-to-tracker';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/blue/distance-to-tracker');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5544,7 +5666,8 @@ class _$Brompton extends Brompton {
           DistanceToTracker>> _outputNetworkStartrackerBlueDistanceToTrackerPut(
       {required OutputNetworkStartrackerBlueDistanceToTrackerPut$RequestBody?
           body}) {
-    final String $url = '/output/network/startracker/blue/distance-to-tracker';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/blue/distance-to-tracker');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5558,7 +5681,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputNetworkStartrackerBlueEnabledGet(
       {bool? $set}) {
-    final String $url = '/output/network/startracker/blue/enabled';
+    final Uri $url = Uri.parse('/output/network/startracker/blue/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5572,7 +5695,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputNetworkStartrackerBlueEnabledPut(
       {required OutputNetworkStartrackerBlueEnabledPut$RequestBody? body}) {
-    final String $url = '/output/network/startracker/blue/enabled';
+    final Uri $url = Uri.parse('/output/network/startracker/blue/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5586,7 +5709,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<MarkerGain>> _outputNetworkStartrackerBlueMarkerGainGet(
       {int? $set}) {
-    final String $url = '/output/network/startracker/blue/marker-gain';
+    final Uri $url = Uri.parse('/output/network/startracker/blue/marker-gain');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5600,7 +5723,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<MarkerGain>> _outputNetworkStartrackerBlueMarkerGainPut(
       {required OutputNetworkStartrackerBlueMarkerGainPut$RequestBody? body}) {
-    final String $url = '/output/network/startracker/blue/marker-gain';
+    final Uri $url = Uri.parse('/output/network/startracker/blue/marker-gain');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5614,7 +5737,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<MarkerSizeScaler>>
       _outputNetworkStartrackerBlueMarkerSizeScalerGet({int? $set}) {
-    final String $url = '/output/network/startracker/blue/marker-size-scaler';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/blue/marker-size-scaler');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5630,7 +5754,8 @@ class _$Brompton extends Brompton {
       _outputNetworkStartrackerBlueMarkerSizeScalerPut(
           {required OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBody?
               body}) {
-    final String $url = '/output/network/startracker/blue/marker-size-scaler';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/blue/marker-size-scaler');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5644,7 +5769,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<StarMapSeed>> _outputNetworkStartrackerBlueStarMapSeedGet(
       {int? $set}) {
-    final String $url = '/output/network/startracker/blue/star-map-seed';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/blue/star-map-seed');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5658,7 +5784,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<StarMapSeed>> _outputNetworkStartrackerBlueStarMapSeedPut(
       {required OutputNetworkStartrackerBlueStarMapSeedPut$RequestBody? body}) {
-    final String $url = '/output/network/startracker/blue/star-map-seed';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/blue/star-map-seed');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5671,7 +5798,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Enabled>> _outputNetworkStartrackerEnabledGet({bool? $set}) {
-    final String $url = '/output/network/startracker/enabled';
+    final Uri $url = Uri.parse('/output/network/startracker/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5685,7 +5812,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputNetworkStartrackerEnabledPut(
       {required OutputNetworkStartrackerEnabledPut$RequestBody? body}) {
-    final String $url = '/output/network/startracker/enabled';
+    final Uri $url = Uri.parse('/output/network/startracker/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5699,7 +5826,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<FramesEnabledOn>> _outputNetworkStartrackerFramesEnabledOnGet(
       {List<dynamic>? $set}) {
-    final String $url = '/output/network/startracker/frames-enabled-on';
+    final Uri $url = Uri.parse('/output/network/startracker/frames-enabled-on');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5713,7 +5840,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<FramesEnabledOn>> _outputNetworkStartrackerFramesEnabledOnPut(
       {required OutputNetworkStartrackerFramesEnabledOnPut$RequestBody? body}) {
-    final String $url = '/output/network/startracker/frames-enabled-on';
+    final Uri $url = Uri.parse('/output/network/startracker/frames-enabled-on');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5727,7 +5854,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<DistanceToTracker>>
       _outputNetworkStartrackerGreenDistanceToTrackerGet({num? $set}) {
-    final String $url = '/output/network/startracker/green/distance-to-tracker';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/green/distance-to-tracker');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5744,7 +5872,8 @@ class _$Brompton extends Brompton {
           DistanceToTracker>> _outputNetworkStartrackerGreenDistanceToTrackerPut(
       {required OutputNetworkStartrackerGreenDistanceToTrackerPut$RequestBody?
           body}) {
-    final String $url = '/output/network/startracker/green/distance-to-tracker';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/green/distance-to-tracker');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5758,7 +5887,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputNetworkStartrackerGreenEnabledGet(
       {bool? $set}) {
-    final String $url = '/output/network/startracker/green/enabled';
+    final Uri $url = Uri.parse('/output/network/startracker/green/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5772,7 +5901,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputNetworkStartrackerGreenEnabledPut(
       {required OutputNetworkStartrackerGreenEnabledPut$RequestBody? body}) {
-    final String $url = '/output/network/startracker/green/enabled';
+    final Uri $url = Uri.parse('/output/network/startracker/green/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5786,7 +5915,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<MarkerGain>> _outputNetworkStartrackerGreenMarkerGainGet(
       {int? $set}) {
-    final String $url = '/output/network/startracker/green/marker-gain';
+    final Uri $url = Uri.parse('/output/network/startracker/green/marker-gain');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5800,7 +5929,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<MarkerGain>> _outputNetworkStartrackerGreenMarkerGainPut(
       {required OutputNetworkStartrackerGreenMarkerGainPut$RequestBody? body}) {
-    final String $url = '/output/network/startracker/green/marker-gain';
+    final Uri $url = Uri.parse('/output/network/startracker/green/marker-gain');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5814,7 +5943,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<MarkerSizeScaler>>
       _outputNetworkStartrackerGreenMarkerSizeScalerGet({int? $set}) {
-    final String $url = '/output/network/startracker/green/marker-size-scaler';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/green/marker-size-scaler');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5831,7 +5961,8 @@ class _$Brompton extends Brompton {
           MarkerSizeScaler>> _outputNetworkStartrackerGreenMarkerSizeScalerPut(
       {required OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBody?
           body}) {
-    final String $url = '/output/network/startracker/green/marker-size-scaler';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/green/marker-size-scaler');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5845,7 +5976,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<StarMapSeed>> _outputNetworkStartrackerGreenStarMapSeedGet(
       {int? $set}) {
-    final String $url = '/output/network/startracker/green/star-map-seed';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/green/star-map-seed');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5860,7 +5992,8 @@ class _$Brompton extends Brompton {
   Future<Response<StarMapSeed>> _outputNetworkStartrackerGreenStarMapSeedPut(
       {required OutputNetworkStartrackerGreenStarMapSeedPut$RequestBody?
           body}) {
-    final String $url = '/output/network/startracker/green/star-map-seed';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/green/star-map-seed');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5874,7 +6007,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<DistanceToTracker>>
       _outputNetworkStartrackerRedDistanceToTrackerGet({num? $set}) {
-    final String $url = '/output/network/startracker/red/distance-to-tracker';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/red/distance-to-tracker');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5890,7 +6024,8 @@ class _$Brompton extends Brompton {
       _outputNetworkStartrackerRedDistanceToTrackerPut(
           {required OutputNetworkStartrackerRedDistanceToTrackerPut$RequestBody?
               body}) {
-    final String $url = '/output/network/startracker/red/distance-to-tracker';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/red/distance-to-tracker');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5904,7 +6039,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputNetworkStartrackerRedEnabledGet(
       {bool? $set}) {
-    final String $url = '/output/network/startracker/red/enabled';
+    final Uri $url = Uri.parse('/output/network/startracker/red/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5918,7 +6053,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _outputNetworkStartrackerRedEnabledPut(
       {required OutputNetworkStartrackerRedEnabledPut$RequestBody? body}) {
-    final String $url = '/output/network/startracker/red/enabled';
+    final Uri $url = Uri.parse('/output/network/startracker/red/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5932,7 +6067,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<MarkerGain>> _outputNetworkStartrackerRedMarkerGainGet(
       {int? $set}) {
-    final String $url = '/output/network/startracker/red/marker-gain';
+    final Uri $url = Uri.parse('/output/network/startracker/red/marker-gain');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5946,7 +6081,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<MarkerGain>> _outputNetworkStartrackerRedMarkerGainPut(
       {required OutputNetworkStartrackerRedMarkerGainPut$RequestBody? body}) {
-    final String $url = '/output/network/startracker/red/marker-gain';
+    final Uri $url = Uri.parse('/output/network/startracker/red/marker-gain');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5960,7 +6095,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<MarkerSizeScaler>>
       _outputNetworkStartrackerRedMarkerSizeScalerGet({int? $set}) {
-    final String $url = '/output/network/startracker/red/marker-size-scaler';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/red/marker-size-scaler');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -5976,7 +6112,8 @@ class _$Brompton extends Brompton {
       _outputNetworkStartrackerRedMarkerSizeScalerPut(
           {required OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBody?
               body}) {
-    final String $url = '/output/network/startracker/red/marker-size-scaler';
+    final Uri $url =
+        Uri.parse('/output/network/startracker/red/marker-size-scaler');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -5990,7 +6127,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<StarMapSeed>> _outputNetworkStartrackerRedStarMapSeedGet(
       {int? $set}) {
-    final String $url = '/output/network/startracker/red/star-map-seed';
+    final Uri $url = Uri.parse('/output/network/startracker/red/star-map-seed');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6004,7 +6141,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<StarMapSeed>> _outputNetworkStartrackerRedStarMapSeedPut(
       {required OutputNetworkStartrackerRedStarMapSeedPut$RequestBody? body}) {
-    final String $url = '/output/network/startracker/red/star-map-seed';
+    final Uri $url = Uri.parse('/output/network/startracker/red/star-map-seed');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6017,7 +6154,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Enabled>> _overrideBlackoutEnabledGet({bool? $set}) {
-    final String $url = '/override/blackout/enabled';
+    final Uri $url = Uri.parse('/override/blackout/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6031,7 +6168,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _overrideBlackoutEnabledPut(
       {required OverrideBlackoutEnabledPut$RequestBody? body}) {
-    final String $url = '/override/blackout/enabled';
+    final Uri $url = Uri.parse('/override/blackout/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6044,7 +6181,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<FadeTime>> _overrideBlackoutFadeTimeGet({num? $set}) {
-    final String $url = '/override/blackout/fade-time';
+    final Uri $url = Uri.parse('/override/blackout/fade-time');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6058,7 +6195,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<FadeTime>> _overrideBlackoutFadeTimePut(
       {required OverrideBlackoutFadeTimePut$RequestBody? body}) {
-    final String $url = '/override/blackout/fade-time';
+    final Uri $url = Uri.parse('/override/blackout/fade-time');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6071,7 +6208,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Enabled>> _overrideFreezeEnabledGet({bool? $set}) {
-    final String $url = '/override/freeze/enabled';
+    final Uri $url = Uri.parse('/override/freeze/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6085,7 +6222,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _overrideFreezeEnabledPut(
       {required OverrideFreezeEnabledPut$RequestBody? body}) {
-    final String $url = '/override/freeze/enabled';
+    final Uri $url = Uri.parse('/override/freeze/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6098,7 +6235,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Blue>> _overrideTestPatternCustomColourBlueGet({int? $set}) {
-    final String $url = '/override/test-pattern/custom-colour/blue';
+    final Uri $url = Uri.parse('/override/test-pattern/custom-colour/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6112,7 +6249,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Blue>> _overrideTestPatternCustomColourBluePut(
       {required OverrideTestPatternCustomColourBluePut$RequestBody? body}) {
-    final String $url = '/override/test-pattern/custom-colour/blue';
+    final Uri $url = Uri.parse('/override/test-pattern/custom-colour/blue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6126,7 +6263,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Green>> _overrideTestPatternCustomColourGreenGet(
       {int? $set}) {
-    final String $url = '/override/test-pattern/custom-colour/green';
+    final Uri $url = Uri.parse('/override/test-pattern/custom-colour/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6140,7 +6277,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Green>> _overrideTestPatternCustomColourGreenPut(
       {required OverrideTestPatternCustomColourGreenPut$RequestBody? body}) {
-    final String $url = '/override/test-pattern/custom-colour/green';
+    final Uri $url = Uri.parse('/override/test-pattern/custom-colour/green');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6153,7 +6290,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Red>> _overrideTestPatternCustomColourRedGet({int? $set}) {
-    final String $url = '/override/test-pattern/custom-colour/red';
+    final Uri $url = Uri.parse('/override/test-pattern/custom-colour/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6167,7 +6304,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Red>> _overrideTestPatternCustomColourRedPut(
       {required OverrideTestPatternCustomColourRedPut$RequestBody? body}) {
-    final String $url = '/override/test-pattern/custom-colour/red';
+    final Uri $url = Uri.parse('/override/test-pattern/custom-colour/red');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6181,8 +6318,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Blue>> _overrideTestPatternCustomGradientEndColourBlueGet(
       {int? $set}) {
-    final String $url =
-        '/override/test-pattern/custom-gradient/end-colour/blue';
+    final Uri $url =
+        Uri.parse('/override/test-pattern/custom-gradient/end-colour/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6197,8 +6334,8 @@ class _$Brompton extends Brompton {
   Future<Response<Blue>> _overrideTestPatternCustomGradientEndColourBluePut(
       {required OverrideTestPatternCustomGradientEndColourBluePut$RequestBody?
           body}) {
-    final String $url =
-        '/override/test-pattern/custom-gradient/end-colour/blue';
+    final Uri $url =
+        Uri.parse('/override/test-pattern/custom-gradient/end-colour/blue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6212,8 +6349,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Green>> _overrideTestPatternCustomGradientEndColourGreenGet(
       {int? $set}) {
-    final String $url =
-        '/override/test-pattern/custom-gradient/end-colour/green';
+    final Uri $url =
+        Uri.parse('/override/test-pattern/custom-gradient/end-colour/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6228,8 +6365,8 @@ class _$Brompton extends Brompton {
   Future<Response<Green>> _overrideTestPatternCustomGradientEndColourGreenPut(
       {required OverrideTestPatternCustomGradientEndColourGreenPut$RequestBody?
           body}) {
-    final String $url =
-        '/override/test-pattern/custom-gradient/end-colour/green';
+    final Uri $url =
+        Uri.parse('/override/test-pattern/custom-gradient/end-colour/green');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6243,7 +6380,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Red>> _overrideTestPatternCustomGradientEndColourRedGet(
       {int? $set}) {
-    final String $url = '/override/test-pattern/custom-gradient/end-colour/red';
+    final Uri $url =
+        Uri.parse('/override/test-pattern/custom-gradient/end-colour/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6258,7 +6396,8 @@ class _$Brompton extends Brompton {
   Future<Response<Red>> _overrideTestPatternCustomGradientEndColourRedPut(
       {required OverrideTestPatternCustomGradientEndColourRedPut$RequestBody?
           body}) {
-    final String $url = '/override/test-pattern/custom-gradient/end-colour/red';
+    final Uri $url =
+        Uri.parse('/override/test-pattern/custom-gradient/end-colour/red');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6272,7 +6411,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Orientation>>
       _overrideTestPatternCustomGradientOrientationGet({String? $set}) {
-    final String $url = '/override/test-pattern/custom-gradient/orientation';
+    final Uri $url =
+        Uri.parse('/override/test-pattern/custom-gradient/orientation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6288,7 +6428,8 @@ class _$Brompton extends Brompton {
       _overrideTestPatternCustomGradientOrientationPut(
           {required OverrideTestPatternCustomGradientOrientationPut$RequestBody?
               body}) {
-    final String $url = '/override/test-pattern/custom-gradient/orientation';
+    final Uri $url =
+        Uri.parse('/override/test-pattern/custom-gradient/orientation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6302,8 +6443,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Blue>> _overrideTestPatternCustomGradientStartColourBlueGet(
       {int? $set}) {
-    final String $url =
-        '/override/test-pattern/custom-gradient/start-colour/blue';
+    final Uri $url =
+        Uri.parse('/override/test-pattern/custom-gradient/start-colour/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6318,8 +6459,8 @@ class _$Brompton extends Brompton {
   Future<Response<Blue>> _overrideTestPatternCustomGradientStartColourBluePut(
       {required OverrideTestPatternCustomGradientStartColourBluePut$RequestBody?
           body}) {
-    final String $url =
-        '/override/test-pattern/custom-gradient/start-colour/blue';
+    final Uri $url =
+        Uri.parse('/override/test-pattern/custom-gradient/start-colour/blue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6333,8 +6474,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Green>> _overrideTestPatternCustomGradientStartColourGreenGet(
       {int? $set}) {
-    final String $url =
-        '/override/test-pattern/custom-gradient/start-colour/green';
+    final Uri $url =
+        Uri.parse('/override/test-pattern/custom-gradient/start-colour/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6349,8 +6490,8 @@ class _$Brompton extends Brompton {
   Future<Response<Green>> _overrideTestPatternCustomGradientStartColourGreenPut(
       {required OverrideTestPatternCustomGradientStartColourGreenPut$RequestBody?
           body}) {
-    final String $url =
-        '/override/test-pattern/custom-gradient/start-colour/green';
+    final Uri $url =
+        Uri.parse('/override/test-pattern/custom-gradient/start-colour/green');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6364,8 +6505,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Red>> _overrideTestPatternCustomGradientStartColourRedGet(
       {int? $set}) {
-    final String $url =
-        '/override/test-pattern/custom-gradient/start-colour/red';
+    final Uri $url =
+        Uri.parse('/override/test-pattern/custom-gradient/start-colour/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6380,8 +6521,8 @@ class _$Brompton extends Brompton {
   Future<Response<Red>> _overrideTestPatternCustomGradientStartColourRedPut(
       {required OverrideTestPatternCustomGradientStartColourRedPut$RequestBody?
           body}) {
-    final String $url =
-        '/override/test-pattern/custom-gradient/start-colour/red';
+    final Uri $url =
+        Uri.parse('/override/test-pattern/custom-gradient/start-colour/red');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6394,7 +6535,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Enabled>> _overrideTestPatternEnabledGet({bool? $set}) {
-    final String $url = '/override/test-pattern/enabled';
+    final Uri $url = Uri.parse('/override/test-pattern/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6408,7 +6549,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _overrideTestPatternEnabledPut(
       {required OverrideTestPatternEnabledPut$RequestBody? body}) {
-    final String $url = '/override/test-pattern/enabled';
+    final Uri $url = Uri.parse('/override/test-pattern/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6421,7 +6562,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Format>> _overrideTestPatternFormatGet({String? $set}) {
-    final String $url = '/override/test-pattern/format';
+    final Uri $url = Uri.parse('/override/test-pattern/format');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6435,7 +6576,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Format>> _overrideTestPatternFormatPut(
       {required OverrideTestPatternFormatPut$RequestBody? body}) {
-    final String $url = '/override/test-pattern/format';
+    final Uri $url = Uri.parse('/override/test-pattern/format');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6449,7 +6590,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<RestrictToAchievableColours>>
       _overrideTestPatternRestrictToAchievableColoursGet({bool? $set}) {
-    final String $url = '/override/test-pattern/restrict-to-achievable-colours';
+    final Uri $url =
+        Uri.parse('/override/test-pattern/restrict-to-achievable-colours');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6466,7 +6608,8 @@ class _$Brompton extends Brompton {
       _overrideTestPatternRestrictToAchievableColoursPut(
           {required OverrideTestPatternRestrictToAchievableColoursPut$RequestBody?
               body}) {
-    final String $url = '/override/test-pattern/restrict-to-achievable-colours';
+    final Uri $url =
+        Uri.parse('/override/test-pattern/restrict-to-achievable-colours');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6480,7 +6623,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Type$>> _overrideTestPatternTypeGet({String? $set}) {
-    final String $url = '/override/test-pattern/type';
+    final Uri $url = Uri.parse('/override/test-pattern/type');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6494,7 +6637,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Type$>> _overrideTestPatternTypePut(
       {required OverrideTestPatternTypePut$RequestBody? body}) {
-    final String $url = '/override/test-pattern/type';
+    final Uri $url = Uri.parse('/override/test-pattern/type');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6507,7 +6650,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Name>> _presetsActiveNameGet() {
-    final String $url = '/presets/active/name';
+    final Uri $url = Uri.parse('/presets/active/name');
     final Request $request = Request(
       'GET',
       $url,
@@ -6518,7 +6661,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Number>> _presetsActiveNumberGet({int? $set}) {
-    final String $url = '/presets/active/number';
+    final Uri $url = Uri.parse('/presets/active/number');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6532,7 +6675,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Number>> _presetsActiveNumberPut(
       {required PresetsActiveNumberPut$RequestBody? body}) {
-    final String $url = '/presets/active/number';
+    final Uri $url = Uri.parse('/presets/active/number');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6548,7 +6691,7 @@ class _$Brompton extends Brompton {
     String? $set,
     required int? number,
   }) {
-    final String $url = '/presets/items/${number}/name';
+    final Uri $url = Uri.parse('/presets/items/${number}/name');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6564,7 +6707,7 @@ class _$Brompton extends Brompton {
     required int? number,
     required PresetsItemsNumberNamePut$RequestBody? body,
   }) {
-    final String $url = '/presets/items/${number}/name';
+    final Uri $url = Uri.parse('/presets/items/${number}/name');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6578,7 +6721,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Status>> _presetsItemsNumberStatusGet(
       {required int? number}) {
-    final String $url = '/presets/items/${number}/status';
+    final Uri $url = Uri.parse('/presets/items/${number}/status');
     final Request $request = Request(
       'GET',
       $url,
@@ -6589,7 +6732,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Data>> _processing3dLutDataGet({List<dynamic>? $set}) {
-    final String $url = '/processing/3d-lut/data';
+    final Uri $url = Uri.parse('/processing/3d-lut/data');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6603,7 +6746,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Data>> _processing3dLutDataPut(
       {required Processing3dLutDataPut$RequestBody? body}) {
-    final String $url = '/processing/3d-lut/data';
+    final Uri $url = Uri.parse('/processing/3d-lut/data');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6616,7 +6759,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Enabled>> _processing3dLutEnabledGet({bool? $set}) {
-    final String $url = '/processing/3d-lut/enabled';
+    final Uri $url = Uri.parse('/processing/3d-lut/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6630,7 +6773,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _processing3dLutEnabledPut(
       {required Processing3dLutEnabledPut$RequestBody? body}) {
-    final String $url = '/processing/3d-lut/enabled';
+    final Uri $url = Uri.parse('/processing/3d-lut/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6643,7 +6786,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Filename>> _processing3dLutFilenameGet() {
-    final String $url = '/processing/3d-lut/filename';
+    final Uri $url = Uri.parse('/processing/3d-lut/filename');
     final Request $request = Request(
       'GET',
       $url,
@@ -6654,7 +6797,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Strength>> _processing3dLutStrengthGet({num? $set}) {
-    final String $url = '/processing/3d-lut/strength';
+    final Uri $url = Uri.parse('/processing/3d-lut/strength');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6668,7 +6811,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Strength>> _processing3dLutStrengthPut(
       {required Processing3dLutStrengthPut$RequestBody? body}) {
-    final String $url = '/processing/3d-lut/strength';
+    final Uri $url = Uri.parse('/processing/3d-lut/strength');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6681,7 +6824,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Blue>> _processingColourCorrectBlackBlueGet({num? $set}) {
-    final String $url = '/processing/colour-correct/black/blue';
+    final Uri $url = Uri.parse('/processing/colour-correct/black/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6695,7 +6838,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Blue>> _processingColourCorrectBlackBluePut(
       {required ProcessingColourCorrectBlackBluePut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/black/blue';
+    final Uri $url = Uri.parse('/processing/colour-correct/black/blue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6708,7 +6851,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Green>> _processingColourCorrectBlackGreenGet({num? $set}) {
-    final String $url = '/processing/colour-correct/black/green';
+    final Uri $url = Uri.parse('/processing/colour-correct/black/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6722,7 +6865,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Green>> _processingColourCorrectBlackGreenPut(
       {required ProcessingColourCorrectBlackGreenPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/black/green';
+    final Uri $url = Uri.parse('/processing/colour-correct/black/green');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6735,7 +6878,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Red>> _processingColourCorrectBlackRedGet({num? $set}) {
-    final String $url = '/processing/colour-correct/black/red';
+    final Uri $url = Uri.parse('/processing/colour-correct/black/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6749,7 +6892,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Red>> _processingColourCorrectBlackRedPut(
       {required ProcessingColourCorrectBlackRedPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/black/red';
+    final Uri $url = Uri.parse('/processing/colour-correct/black/red');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6763,7 +6906,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectBlueBrightnessGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/blue/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/blue/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6777,7 +6920,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectBlueBrightnessPut(
       {required ProcessingColourCorrectBlueBrightnessPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/blue/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/blue/brightness');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6790,7 +6933,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Hue>> _processingColourCorrectBlueHueGet({num? $set}) {
-    final String $url = '/processing/colour-correct/blue/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/blue/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6804,7 +6947,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Hue>> _processingColourCorrectBlueHuePut(
       {required ProcessingColourCorrectBlueHuePut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/blue/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/blue/hue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6818,7 +6961,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectBlueSaturationGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/blue/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/blue/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6832,7 +6975,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectBlueSaturationPut(
       {required ProcessingColourCorrectBlueSaturationPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/blue/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/blue/saturation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6846,7 +6989,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectCobaltBrightnessGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/cobalt/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/cobalt/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6860,7 +7003,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectCobaltBrightnessPut(
       {required ProcessingColourCorrectCobaltBrightnessPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/cobalt/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/cobalt/brightness');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6873,7 +7016,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Hue>> _processingColourCorrectCobaltHueGet({num? $set}) {
-    final String $url = '/processing/colour-correct/cobalt/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/cobalt/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6887,7 +7030,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Hue>> _processingColourCorrectCobaltHuePut(
       {required ProcessingColourCorrectCobaltHuePut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/cobalt/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/cobalt/hue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6901,7 +7044,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectCobaltSaturationGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/cobalt/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/cobalt/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6915,7 +7058,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectCobaltSaturationPut(
       {required ProcessingColourCorrectCobaltSaturationPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/cobalt/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/cobalt/saturation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6929,7 +7072,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectCrimsonBrightnessGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/crimson/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/crimson/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6944,7 +7087,7 @@ class _$Brompton extends Brompton {
   Future<Response<Brightness>> _processingColourCorrectCrimsonBrightnessPut(
       {required ProcessingColourCorrectCrimsonBrightnessPut$RequestBody?
           body}) {
-    final String $url = '/processing/colour-correct/crimson/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/crimson/brightness');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6957,7 +7100,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Hue>> _processingColourCorrectCrimsonHueGet({num? $set}) {
-    final String $url = '/processing/colour-correct/crimson/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/crimson/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -6971,7 +7114,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Hue>> _processingColourCorrectCrimsonHuePut(
       {required ProcessingColourCorrectCrimsonHuePut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/crimson/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/crimson/hue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -6985,7 +7128,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectCrimsonSaturationGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/crimson/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/crimson/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7000,7 +7143,7 @@ class _$Brompton extends Brompton {
   Future<Response<Saturation>> _processingColourCorrectCrimsonSaturationPut(
       {required ProcessingColourCorrectCrimsonSaturationPut$RequestBody?
           body}) {
-    final String $url = '/processing/colour-correct/crimson/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/crimson/saturation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7014,7 +7157,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectCyanBrightnessGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/cyan/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/cyan/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7028,7 +7171,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectCyanBrightnessPut(
       {required ProcessingColourCorrectCyanBrightnessPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/cyan/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/cyan/brightness');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7041,7 +7184,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Hue>> _processingColourCorrectCyanHueGet({num? $set}) {
-    final String $url = '/processing/colour-correct/cyan/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/cyan/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7055,7 +7198,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Hue>> _processingColourCorrectCyanHuePut(
       {required ProcessingColourCorrectCyanHuePut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/cyan/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/cyan/hue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7069,7 +7212,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectCyanSaturationGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/cyan/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/cyan/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7083,7 +7226,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectCyanSaturationPut(
       {required ProcessingColourCorrectCyanSaturationPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/cyan/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/cyan/saturation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7096,7 +7239,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Enabled>> _processingColourCorrectEnabledGet({bool? $set}) {
-    final String $url = '/processing/colour-correct/enabled';
+    final Uri $url = Uri.parse('/processing/colour-correct/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7110,7 +7253,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _processingColourCorrectEnabledPut(
       {required ProcessingColourCorrectEnabledPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/enabled';
+    final Uri $url = Uri.parse('/processing/colour-correct/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7124,7 +7267,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectGreenBrightnessGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/green/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/green/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7138,7 +7281,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectGreenBrightnessPut(
       {required ProcessingColourCorrectGreenBrightnessPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/green/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/green/brightness');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7151,7 +7294,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Hue>> _processingColourCorrectGreenHueGet({num? $set}) {
-    final String $url = '/processing/colour-correct/green/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/green/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7165,7 +7308,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Hue>> _processingColourCorrectGreenHuePut(
       {required ProcessingColourCorrectGreenHuePut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/green/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/green/hue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7179,7 +7322,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectGreenSaturationGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/green/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/green/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7193,7 +7336,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectGreenSaturationPut(
       {required ProcessingColourCorrectGreenSaturationPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/green/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/green/saturation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7207,7 +7350,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectLimeBrightnessGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/lime/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/lime/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7221,7 +7364,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectLimeBrightnessPut(
       {required ProcessingColourCorrectLimeBrightnessPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/lime/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/lime/brightness');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7234,7 +7377,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Hue>> _processingColourCorrectLimeHueGet({num? $set}) {
-    final String $url = '/processing/colour-correct/lime/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/lime/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7248,7 +7391,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Hue>> _processingColourCorrectLimeHuePut(
       {required ProcessingColourCorrectLimeHuePut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/lime/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/lime/hue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7262,7 +7405,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectLimeSaturationGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/lime/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/lime/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7276,7 +7419,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectLimeSaturationPut(
       {required ProcessingColourCorrectLimeSaturationPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/lime/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/lime/saturation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7290,7 +7433,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectMagentaBrightnessGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/magenta/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/magenta/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7305,7 +7448,7 @@ class _$Brompton extends Brompton {
   Future<Response<Brightness>> _processingColourCorrectMagentaBrightnessPut(
       {required ProcessingColourCorrectMagentaBrightnessPut$RequestBody?
           body}) {
-    final String $url = '/processing/colour-correct/magenta/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/magenta/brightness');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7318,7 +7461,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Hue>> _processingColourCorrectMagentaHueGet({num? $set}) {
-    final String $url = '/processing/colour-correct/magenta/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/magenta/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7332,7 +7475,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Hue>> _processingColourCorrectMagentaHuePut(
       {required ProcessingColourCorrectMagentaHuePut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/magenta/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/magenta/hue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7346,7 +7489,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectMagentaSaturationGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/magenta/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/magenta/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7361,7 +7504,7 @@ class _$Brompton extends Brompton {
   Future<Response<Saturation>> _processingColourCorrectMagentaSaturationPut(
       {required ProcessingColourCorrectMagentaSaturationPut$RequestBody?
           body}) {
-    final String $url = '/processing/colour-correct/magenta/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/magenta/saturation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7375,7 +7518,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectOrangeBrightnessGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/orange/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/orange/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7389,7 +7532,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectOrangeBrightnessPut(
       {required ProcessingColourCorrectOrangeBrightnessPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/orange/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/orange/brightness');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7402,7 +7545,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Hue>> _processingColourCorrectOrangeHueGet({num? $set}) {
-    final String $url = '/processing/colour-correct/orange/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/orange/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7416,7 +7559,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Hue>> _processingColourCorrectOrangeHuePut(
       {required ProcessingColourCorrectOrangeHuePut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/orange/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/orange/hue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7430,7 +7573,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectOrangeSaturationGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/orange/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/orange/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7444,7 +7587,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectOrangeSaturationPut(
       {required ProcessingColourCorrectOrangeSaturationPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/orange/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/orange/saturation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7458,7 +7601,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectRedBrightnessGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/red/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/red/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7472,7 +7615,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectRedBrightnessPut(
       {required ProcessingColourCorrectRedBrightnessPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/red/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/red/brightness');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7485,7 +7628,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Hue>> _processingColourCorrectRedHueGet({num? $set}) {
-    final String $url = '/processing/colour-correct/red/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/red/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7499,7 +7642,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Hue>> _processingColourCorrectRedHuePut(
       {required ProcessingColourCorrectRedHuePut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/red/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/red/hue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7513,7 +7656,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectRedSaturationGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/red/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/red/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7527,7 +7670,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectRedSaturationPut(
       {required ProcessingColourCorrectRedSaturationPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/red/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/red/saturation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7541,7 +7684,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectTurquoiseBrightnessGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/turquoise/brightness';
+    final Uri $url =
+        Uri.parse('/processing/colour-correct/turquoise/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7556,7 +7700,8 @@ class _$Brompton extends Brompton {
   Future<Response<Brightness>> _processingColourCorrectTurquoiseBrightnessPut(
       {required ProcessingColourCorrectTurquoiseBrightnessPut$RequestBody?
           body}) {
-    final String $url = '/processing/colour-correct/turquoise/brightness';
+    final Uri $url =
+        Uri.parse('/processing/colour-correct/turquoise/brightness');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7569,7 +7714,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Hue>> _processingColourCorrectTurquoiseHueGet({num? $set}) {
-    final String $url = '/processing/colour-correct/turquoise/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/turquoise/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7583,7 +7728,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Hue>> _processingColourCorrectTurquoiseHuePut(
       {required ProcessingColourCorrectTurquoiseHuePut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/turquoise/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/turquoise/hue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7597,7 +7742,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectTurquoiseSaturationGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/turquoise/saturation';
+    final Uri $url =
+        Uri.parse('/processing/colour-correct/turquoise/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7612,7 +7758,8 @@ class _$Brompton extends Brompton {
   Future<Response<Saturation>> _processingColourCorrectTurquoiseSaturationPut(
       {required ProcessingColourCorrectTurquoiseSaturationPut$RequestBody?
           body}) {
-    final String $url = '/processing/colour-correct/turquoise/saturation';
+    final Uri $url =
+        Uri.parse('/processing/colour-correct/turquoise/saturation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7626,7 +7773,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectVioletBrightnessGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/violet/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/violet/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7640,7 +7787,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectVioletBrightnessPut(
       {required ProcessingColourCorrectVioletBrightnessPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/violet/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/violet/brightness');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7653,7 +7800,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Hue>> _processingColourCorrectVioletHueGet({num? $set}) {
-    final String $url = '/processing/colour-correct/violet/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/violet/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7667,7 +7814,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Hue>> _processingColourCorrectVioletHuePut(
       {required ProcessingColourCorrectVioletHuePut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/violet/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/violet/hue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7681,7 +7828,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectVioletSaturationGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/violet/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/violet/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7695,7 +7842,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectVioletSaturationPut(
       {required ProcessingColourCorrectVioletSaturationPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/violet/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/violet/saturation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7708,7 +7855,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Blue>> _processingColourCorrectWhiteBlueGet({num? $set}) {
-    final String $url = '/processing/colour-correct/white/blue';
+    final Uri $url = Uri.parse('/processing/colour-correct/white/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7722,7 +7869,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Blue>> _processingColourCorrectWhiteBluePut(
       {required ProcessingColourCorrectWhiteBluePut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/white/blue';
+    final Uri $url = Uri.parse('/processing/colour-correct/white/blue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7735,7 +7882,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Green>> _processingColourCorrectWhiteGreenGet({num? $set}) {
-    final String $url = '/processing/colour-correct/white/green';
+    final Uri $url = Uri.parse('/processing/colour-correct/white/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7749,7 +7896,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Green>> _processingColourCorrectWhiteGreenPut(
       {required ProcessingColourCorrectWhiteGreenPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/white/green';
+    final Uri $url = Uri.parse('/processing/colour-correct/white/green');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7762,7 +7909,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Red>> _processingColourCorrectWhiteRedGet({num? $set}) {
-    final String $url = '/processing/colour-correct/white/red';
+    final Uri $url = Uri.parse('/processing/colour-correct/white/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7776,7 +7923,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Red>> _processingColourCorrectWhiteRedPut(
       {required ProcessingColourCorrectWhiteRedPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/white/red';
+    final Uri $url = Uri.parse('/processing/colour-correct/white/red');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7790,7 +7937,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectYellowBrightnessGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/yellow/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/yellow/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7804,7 +7951,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Brightness>> _processingColourCorrectYellowBrightnessPut(
       {required ProcessingColourCorrectYellowBrightnessPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/yellow/brightness';
+    final Uri $url = Uri.parse('/processing/colour-correct/yellow/brightness');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7817,7 +7964,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Hue>> _processingColourCorrectYellowHueGet({num? $set}) {
-    final String $url = '/processing/colour-correct/yellow/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/yellow/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7831,7 +7978,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Hue>> _processingColourCorrectYellowHuePut(
       {required ProcessingColourCorrectYellowHuePut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/yellow/hue';
+    final Uri $url = Uri.parse('/processing/colour-correct/yellow/hue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7845,7 +7992,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectYellowSaturationGet(
       {num? $set}) {
-    final String $url = '/processing/colour-correct/yellow/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/yellow/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7859,7 +8006,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Saturation>> _processingColourCorrectYellowSaturationPut(
       {required ProcessingColourCorrectYellowSaturationPut$RequestBody? body}) {
-    final String $url = '/processing/colour-correct/yellow/saturation';
+    final Uri $url = Uri.parse('/processing/colour-correct/yellow/saturation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7873,7 +8020,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<ApplyToBrightness>>
       _processingColourReplaceApplyToBrightnessGet({bool? $set}) {
-    final String $url = '/processing/colour-replace/apply-to-brightness';
+    final Uri $url =
+        Uri.parse('/processing/colour-replace/apply-to-brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7889,7 +8037,8 @@ class _$Brompton extends Brompton {
       _processingColourReplaceApplyToBrightnessPut(
           {required ProcessingColourReplaceApplyToBrightnessPut$RequestBody?
               body}) {
-    final String $url = '/processing/colour-replace/apply-to-brightness';
+    final Uri $url =
+        Uri.parse('/processing/colour-replace/apply-to-brightness');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7903,7 +8052,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<ApplyToHue>> _processingColourReplaceApplyToHueGet(
       {bool? $set}) {
-    final String $url = '/processing/colour-replace/apply-to-hue';
+    final Uri $url = Uri.parse('/processing/colour-replace/apply-to-hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7917,7 +8066,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<ApplyToHue>> _processingColourReplaceApplyToHuePut(
       {required ProcessingColourReplaceApplyToHuePut$RequestBody? body}) {
-    final String $url = '/processing/colour-replace/apply-to-hue';
+    final Uri $url = Uri.parse('/processing/colour-replace/apply-to-hue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7931,7 +8080,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<ApplyToSaturation>>
       _processingColourReplaceApplyToSaturationGet({bool? $set}) {
-    final String $url = '/processing/colour-replace/apply-to-saturation';
+    final Uri $url =
+        Uri.parse('/processing/colour-replace/apply-to-saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7947,7 +8097,8 @@ class _$Brompton extends Brompton {
       _processingColourReplaceApplyToSaturationPut(
           {required ProcessingColourReplaceApplyToSaturationPut$RequestBody?
               body}) {
-    final String $url = '/processing/colour-replace/apply-to-saturation';
+    final Uri $url =
+        Uri.parse('/processing/colour-replace/apply-to-saturation');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7961,7 +8112,8 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<BrightnessTolerance>>
       _processingColourReplaceBrightnessToleranceGet({num? $set}) {
-    final String $url = '/processing/colour-replace/brightness-tolerance';
+    final Uri $url =
+        Uri.parse('/processing/colour-replace/brightness-tolerance');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -7977,7 +8129,8 @@ class _$Brompton extends Brompton {
       _processingColourReplaceBrightnessTolerancePut(
           {required ProcessingColourReplaceBrightnessTolerancePut$RequestBody?
               body}) {
-    final String $url = '/processing/colour-replace/brightness-tolerance';
+    final Uri $url =
+        Uri.parse('/processing/colour-replace/brightness-tolerance');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -7991,7 +8144,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Blue>> _processingColourReplaceColourFromBlueGet(
       {int? $set}) {
-    final String $url = '/processing/colour-replace/colour-from/blue';
+    final Uri $url = Uri.parse('/processing/colour-replace/colour-from/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8005,7 +8158,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Blue>> _processingColourReplaceColourFromBluePut(
       {required ProcessingColourReplaceColourFromBluePut$RequestBody? body}) {
-    final String $url = '/processing/colour-replace/colour-from/blue';
+    final Uri $url = Uri.parse('/processing/colour-replace/colour-from/blue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8019,7 +8172,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Green>> _processingColourReplaceColourFromGreenGet(
       {int? $set}) {
-    final String $url = '/processing/colour-replace/colour-from/green';
+    final Uri $url = Uri.parse('/processing/colour-replace/colour-from/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8033,7 +8186,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Green>> _processingColourReplaceColourFromGreenPut(
       {required ProcessingColourReplaceColourFromGreenPut$RequestBody? body}) {
-    final String $url = '/processing/colour-replace/colour-from/green';
+    final Uri $url = Uri.parse('/processing/colour-replace/colour-from/green');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8046,7 +8199,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Red>> _processingColourReplaceColourFromRedGet({int? $set}) {
-    final String $url = '/processing/colour-replace/colour-from/red';
+    final Uri $url = Uri.parse('/processing/colour-replace/colour-from/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8060,7 +8213,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Red>> _processingColourReplaceColourFromRedPut(
       {required ProcessingColourReplaceColourFromRedPut$RequestBody? body}) {
-    final String $url = '/processing/colour-replace/colour-from/red';
+    final Uri $url = Uri.parse('/processing/colour-replace/colour-from/red');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8073,7 +8226,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Blue>> _processingColourReplaceColourToBlueGet({int? $set}) {
-    final String $url = '/processing/colour-replace/colour-to/blue';
+    final Uri $url = Uri.parse('/processing/colour-replace/colour-to/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8087,7 +8240,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Blue>> _processingColourReplaceColourToBluePut(
       {required ProcessingColourReplaceColourToBluePut$RequestBody? body}) {
-    final String $url = '/processing/colour-replace/colour-to/blue';
+    final Uri $url = Uri.parse('/processing/colour-replace/colour-to/blue');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8101,7 +8254,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Green>> _processingColourReplaceColourToGreenGet(
       {int? $set}) {
-    final String $url = '/processing/colour-replace/colour-to/green';
+    final Uri $url = Uri.parse('/processing/colour-replace/colour-to/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8115,7 +8268,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Green>> _processingColourReplaceColourToGreenPut(
       {required ProcessingColourReplaceColourToGreenPut$RequestBody? body}) {
-    final String $url = '/processing/colour-replace/colour-to/green';
+    final Uri $url = Uri.parse('/processing/colour-replace/colour-to/green');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8128,7 +8281,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Red>> _processingColourReplaceColourToRedGet({int? $set}) {
-    final String $url = '/processing/colour-replace/colour-to/red';
+    final Uri $url = Uri.parse('/processing/colour-replace/colour-to/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8142,7 +8295,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Red>> _processingColourReplaceColourToRedPut(
       {required ProcessingColourReplaceColourToRedPut$RequestBody? body}) {
-    final String $url = '/processing/colour-replace/colour-to/red';
+    final Uri $url = Uri.parse('/processing/colour-replace/colour-to/red');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8156,7 +8309,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<ColourTolerance>> _processingColourReplaceColourToleranceGet(
       {num? $set}) {
-    final String $url = '/processing/colour-replace/colour-tolerance';
+    final Uri $url = Uri.parse('/processing/colour-replace/colour-tolerance');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8170,7 +8323,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<ColourTolerance>> _processingColourReplaceColourTolerancePut(
       {required ProcessingColourReplaceColourTolerancePut$RequestBody? body}) {
-    final String $url = '/processing/colour-replace/colour-tolerance';
+    final Uri $url = Uri.parse('/processing/colour-replace/colour-tolerance');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8183,7 +8336,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Enabled>> _processingColourReplaceEnabledGet({bool? $set}) {
-    final String $url = '/processing/colour-replace/enabled';
+    final Uri $url = Uri.parse('/processing/colour-replace/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8197,7 +8350,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _processingColourReplaceEnabledPut(
       {required ProcessingColourReplaceEnabledPut$RequestBody? body}) {
-    final String $url = '/processing/colour-replace/enabled';
+    final Uri $url = Uri.parse('/processing/colour-replace/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8210,7 +8363,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Method$>> _processingColourReplaceMethodGet({String? $set}) {
-    final String $url = '/processing/colour-replace/method';
+    final Uri $url = Uri.parse('/processing/colour-replace/method');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8224,7 +8377,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Method$>> _processingColourReplaceMethodPut(
       {required ProcessingColourReplaceMethodPut$RequestBody? body}) {
-    final String $url = '/processing/colour-replace/method';
+    final Uri $url = Uri.parse('/processing/colour-replace/method');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8237,7 +8390,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Softness>> _processingColourReplaceSoftnessGet({num? $set}) {
-    final String $url = '/processing/colour-replace/softness';
+    final Uri $url = Uri.parse('/processing/colour-replace/softness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8251,7 +8404,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Softness>> _processingColourReplaceSoftnessPut(
       {required ProcessingColourReplaceSoftnessPut$RequestBody? body}) {
-    final String $url = '/processing/colour-replace/softness';
+    final Uri $url = Uri.parse('/processing/colour-replace/softness');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8264,7 +8417,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Strength>> _processingColourReplaceStrengthGet({num? $set}) {
-    final String $url = '/processing/colour-replace/strength';
+    final Uri $url = Uri.parse('/processing/colour-replace/strength');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8278,7 +8431,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Strength>> _processingColourReplaceStrengthPut(
       {required ProcessingColourReplaceStrengthPut$RequestBody? body}) {
-    final String $url = '/processing/colour-replace/strength';
+    final Uri $url = Uri.parse('/processing/colour-replace/strength');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8292,7 +8445,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<ViewMatte>> _processingColourReplaceViewMatteGet(
       {bool? $set}) {
-    final String $url = '/processing/colour-replace/view-matte';
+    final Uri $url = Uri.parse('/processing/colour-replace/view-matte');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8306,7 +8459,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<ViewMatte>> _processingColourReplaceViewMattePut(
       {required ProcessingColourReplaceViewMattePut$RequestBody? body}) {
-    final String $url = '/processing/colour-replace/view-matte';
+    final Uri $url = Uri.parse('/processing/colour-replace/view-matte');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8320,7 +8473,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Points>> _processingCurvesBluePointsGet(
       {List<dynamic>? $set}) {
-    final String $url = '/processing/curves/blue/points';
+    final Uri $url = Uri.parse('/processing/curves/blue/points');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8334,7 +8487,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Points>> _processingCurvesBluePointsPut(
       {required ProcessingCurvesBluePointsPut$RequestBody? body}) {
-    final String $url = '/processing/curves/blue/points';
+    final Uri $url = Uri.parse('/processing/curves/blue/points');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8347,7 +8500,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Enabled>> _processingCurvesEnabledGet({bool? $set}) {
-    final String $url = '/processing/curves/enabled';
+    final Uri $url = Uri.parse('/processing/curves/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8361,7 +8514,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _processingCurvesEnabledPut(
       {required ProcessingCurvesEnabledPut$RequestBody? body}) {
-    final String $url = '/processing/curves/enabled';
+    final Uri $url = Uri.parse('/processing/curves/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8375,7 +8528,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Points>> _processingCurvesGreenPointsGet(
       {List<dynamic>? $set}) {
-    final String $url = '/processing/curves/green/points';
+    final Uri $url = Uri.parse('/processing/curves/green/points');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8389,7 +8542,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Points>> _processingCurvesGreenPointsPut(
       {required ProcessingCurvesGreenPointsPut$RequestBody? body}) {
-    final String $url = '/processing/curves/green/points';
+    final Uri $url = Uri.parse('/processing/curves/green/points');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8403,7 +8556,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Points>> _processingCurvesRedPointsGet(
       {List<dynamic>? $set}) {
-    final String $url = '/processing/curves/red/points';
+    final Uri $url = Uri.parse('/processing/curves/red/points');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8417,7 +8570,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Points>> _processingCurvesRedPointsPut(
       {required ProcessingCurvesRedPointsPut$RequestBody? body}) {
-    final String $url = '/processing/curves/red/points';
+    final Uri $url = Uri.parse('/processing/curves/red/points');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8431,7 +8584,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Points>> _processingCurvesWhitePointsGet(
       {List<dynamic>? $set}) {
-    final String $url = '/processing/curves/white/points';
+    final Uri $url = Uri.parse('/processing/curves/white/points');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8445,7 +8598,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Points>> _processingCurvesWhitePointsPut(
       {required ProcessingCurvesWhitePointsPut$RequestBody? body}) {
-    final String $url = '/processing/curves/white/points';
+    final Uri $url = Uri.parse('/processing/curves/white/points');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8459,7 +8612,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<ModuleCorrectionEnabled>>
       _processingOscaModuleCorrectionEnabledGet({bool? $set}) {
-    final String $url = '/processing/osca/module-correction-enabled';
+    final Uri $url = Uri.parse('/processing/osca/module-correction-enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8476,7 +8629,7 @@ class _$Brompton extends Brompton {
       _processingOscaModuleCorrectionEnabledPut(
           {required ProcessingOscaModuleCorrectionEnabledPut$RequestBody?
               body}) {
-    final String $url = '/processing/osca/module-correction-enabled';
+    final Uri $url = Uri.parse('/processing/osca/module-correction-enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8491,7 +8644,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<SeamCorrectionEnabled>>
       _processingOscaSeamCorrectionEnabledGet({bool? $set}) {
-    final String $url = '/processing/osca/seam-correction-enabled';
+    final Uri $url = Uri.parse('/processing/osca/seam-correction-enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8506,7 +8659,7 @@ class _$Brompton extends Brompton {
   Future<Response<SeamCorrectionEnabled>>
       _processingOscaSeamCorrectionEnabledPut(
           {required ProcessingOscaSeamCorrectionEnabledPut$RequestBody? body}) {
-    final String $url = '/processing/osca/seam-correction-enabled';
+    final Uri $url = Uri.parse('/processing/osca/seam-correction-enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8519,7 +8672,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Enabled>> _processingScalerEnabledGet({bool? $set}) {
-    final String $url = '/processing/scaler/enabled';
+    final Uri $url = Uri.parse('/processing/scaler/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8533,7 +8686,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Enabled>> _processingScalerEnabledPut(
       {required ProcessingScalerEnabledPut$RequestBody? body}) {
-    final String $url = '/processing/scaler/enabled';
+    final Uri $url = Uri.parse('/processing/scaler/enabled');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8546,7 +8699,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Reboot>> _systemActionsRebootGet({String? $set}) {
-    final String $url = '/system/actions/reboot';
+    final Uri $url = Uri.parse('/system/actions/reboot');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8560,7 +8713,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Reboot>> _systemActionsRebootPut(
       {required SystemActionsRebootPut$RequestBody? body}) {
-    final String $url = '/system/actions/reboot';
+    final Uri $url = Uri.parse('/system/actions/reboot');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8573,7 +8726,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<Shutdown>> _systemActionsShutdownGet({String? $set}) {
-    final String $url = '/system/actions/shutdown';
+    final Uri $url = Uri.parse('/system/actions/shutdown');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
       'GET',
@@ -8587,7 +8740,7 @@ class _$Brompton extends Brompton {
   @override
   Future<Response<Shutdown>> _systemActionsShutdownPut(
       {required SystemActionsShutdownPut$RequestBody? body}) {
-    final String $url = '/system/actions/shutdown';
+    final Uri $url = Uri.parse('/system/actions/shutdown');
     final $body = body;
     final Request $request = Request(
       'PUT',
@@ -8600,7 +8753,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<CurrentDateTime>> _systemCurrentDateTimeGet() {
-    final String $url = '/system/current-date-time';
+    final Uri $url = Uri.parse('/system/current-date-time');
     final Request $request = Request(
       'GET',
       $url,
@@ -8611,7 +8764,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<ProcessorType>> _systemProcessorTypeGet() {
-    final String $url = '/system/processor-type';
+    final Uri $url = Uri.parse('/system/processor-type');
     final Request $request = Request(
       'GET',
       $url,
@@ -8622,7 +8775,7 @@ class _$Brompton extends Brompton {
 
   @override
   Future<Response<SoftwareVersion>> _systemSoftwareVersionGet() {
-    final String $url = '/system/software-version';
+    final Uri $url = Uri.parse('/system/software-version');
     final Request $request = Request(
       'GET',
       $url,
