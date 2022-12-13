@@ -19,7 +19,7 @@ abstract class Brompton extends ChopperService {
   static Brompton create({
     ChopperClient? client,
     Authenticator? authenticator,
-    String? baseUrl,
+    Uri? baseUrl,
     Iterable<dynamic>? interceptors,
   }) {
     if (client != null) {
@@ -31,7 +31,7 @@ abstract class Brompton extends ChopperService {
         converter: $JsonSerializableConverter(),
         interceptors: interceptors ?? [],
         authenticator: authenticator,
-        baseUrl: baseUrl ?? 'http://');
+        baseUrl: baseUrl ?? Uri.parse('http://'));
     return _$Brompton(newClient);
   }
 
