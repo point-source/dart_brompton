@@ -115,7 +115,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Group Brightness
-  @Put(path: '/groups/items/{number}/brightness')
+  @Put(
+    path: '/groups/items/{number}/brightness',
+    optionalBody: true,
+  )
   Future<chopper.Response<Brightness>> _groupsItemsNumberBrightnessPut({
     @Path('number') required int? number,
     @Body() required GroupsItemsNumberBrightnessPut$RequestBody? body,
@@ -156,7 +159,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Group Colour Temperature
-  @Put(path: '/groups/items/{number}/colour-temperature')
+  @Put(
+    path: '/groups/items/{number}/colour-temperature',
+    optionalBody: true,
+  )
   Future<chopper.Response<ColourTemperature>>
       _groupsItemsNumberColourTemperaturePut({
     @Path('number') required int? number,
@@ -193,7 +199,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Group Dark Magic Enabled
-  @Put(path: '/groups/items/{number}/dark-magic/enabled')
+  @Put(
+    path: '/groups/items/{number}/dark-magic/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _groupsItemsNumberDarkMagicEnabledPut({
     @Path('number') required int? number,
     @Body() required GroupsItemsNumberDarkMagicEnabledPut$RequestBody? body,
@@ -234,7 +243,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Group Extended Bit Depth
-  @Put(path: '/groups/items/{number}/extended-bit-depth/enabled')
+  @Put(
+    path: '/groups/items/{number}/extended-bit-depth/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>>
       _groupsItemsNumberExtendedBitDepthEnabledPut({
     @Path('number') required int? number,
@@ -272,7 +284,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Group Blue Gain
-  @Put(path: '/groups/items/{number}/gains/blue')
+  @Put(
+    path: '/groups/items/{number}/gains/blue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Blue>> _groupsItemsNumberGainsBluePut({
     @Path('number') required int? number,
     @Body() required GroupsItemsNumberGainsBluePut$RequestBody? body,
@@ -308,7 +323,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Group Green Gain
-  @Put(path: '/groups/items/{number}/gains/green')
+  @Put(
+    path: '/groups/items/{number}/gains/green',
+    optionalBody: true,
+  )
   Future<chopper.Response<Green>> _groupsItemsNumberGainsGreenPut({
     @Path('number') required int? number,
     @Body() required GroupsItemsNumberGainsGreenPut$RequestBody? body,
@@ -344,7 +362,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Group Intensity Gain
-  @Put(path: '/groups/items/{number}/gains/intensity')
+  @Put(
+    path: '/groups/items/{number}/gains/intensity',
+    optionalBody: true,
+  )
   Future<chopper.Response<Intensity>> _groupsItemsNumberGainsIntensityPut({
     @Path('number') required int? number,
     @Body() required GroupsItemsNumberGainsIntensityPut$RequestBody? body,
@@ -380,7 +401,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Group Red Gain
-  @Put(path: '/groups/items/{number}/gains/red')
+  @Put(
+    path: '/groups/items/{number}/gains/red',
+    optionalBody: true,
+  )
   Future<chopper.Response<Red>> _groupsItemsNumberGainsRedPut({
     @Path('number') required int? number,
     @Body() required GroupsItemsNumberGainsRedPut$RequestBody? body,
@@ -416,7 +440,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Group Output Gamma
-  @Put(path: '/groups/items/{number}/gamma')
+  @Put(
+    path: '/groups/items/{number}/gamma',
+    optionalBody: true,
+  )
   Future<chopper.Response<Gamma>> _groupsItemsNumberGammaPut({
     @Path('number') required int? number,
     @Body() required GroupsItemsNumberGammaPut$RequestBody? body,
@@ -459,7 +486,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Group Global Colour Override
-  @Put(path: '/groups/items/{number}/global-colour-override')
+  @Put(
+    path: '/groups/items/{number}/global-colour-override',
+    optionalBody: true,
+  )
   Future<chopper.Response<GlobalColourOverride>>
       _groupsItemsNumberGlobalColourOverridePut({
     @Path('number') required int? number,
@@ -501,7 +531,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Group Global Gains Override
-  @Put(path: '/groups/items/{number}/global-gains-override')
+  @Put(
+    path: '/groups/items/{number}/global-gains-override',
+    optionalBody: true,
+  )
   Future<chopper.Response<GlobalGainsOverride>>
       _groupsItemsNumberGlobalGainsOverridePut({
     @Path('number') required int? number,
@@ -545,7 +578,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Group Global Startracker Override
-  @Put(path: '/groups/items/{number}/global-startracker-override')
+  @Put(
+    path: '/groups/items/{number}/global-startracker-override',
+    optionalBody: true,
+  )
   Future<chopper.Response<GlobalStartrackerOverride>>
       _groupsItemsNumberGlobalStartrackerOverridePut({
     @Path('number') required int? number,
@@ -584,7 +620,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Group Name
-  @Put(path: '/groups/items/{number}/name')
+  @Put(
+    path: '/groups/items/{number}/name',
+    optionalBody: true,
+  )
   Future<chopper.Response<Name>> _groupsItemsNumberNamePut({
     @Path('number') required int? number,
     @Body() required GroupsItemsNumberNamePut$RequestBody? body,
@@ -620,7 +659,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Group Overdrive Enabled
-  @Put(path: '/groups/items/{number}/overdrive/enabled')
+  @Put(
+    path: '/groups/items/{number}/overdrive/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _groupsItemsNumberOverdriveEnabledPut({
     @Path('number') required int? number,
     @Body() required GroupsItemsNumberOverdriveEnabledPut$RequestBody? body,
@@ -656,7 +698,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Group Pure Tone Enabled
-  @Put(path: '/groups/items/{number}/puretone/enabled')
+  @Put(
+    path: '/groups/items/{number}/puretone/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _groupsItemsNumberPuretoneEnabledPut({
     @Path('number') required int? number,
     @Body() required GroupsItemsNumberPuretoneEnabledPut$RequestBody? body,
@@ -692,7 +737,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Group Startracker Enabled
-  @Put(path: '/groups/items/{number}/startracker/enabled')
+  @Put(
+    path: '/groups/items/{number}/startracker/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _groupsItemsNumberStartrackerEnabledPut({
     @Path('number') required int? number,
     @Body() required GroupsItemsNumberStartrackerEnabledPut$RequestBody? body,
@@ -722,7 +770,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Input Port Number
-  @Put(path: '/input/active/source/port-number')
+  @Put(
+    path: '/input/active/source/port-number',
+    optionalBody: true,
+  )
   Future<chopper.Response<PortNumber>> _inputActiveSourcePortNumberPut(
       {@Body() required InputActiveSourcePortNumberPut$RequestBody? body});
 
@@ -732,8 +783,7 @@ abstract class Brompton extends ChopperService {
       {enums.InputActiveSourcePortTypeGetSet? $set}) {
     generatedMapping.putIfAbsent(PortType, () => PortType.fromJsonFactory);
 
-    return _inputActiveSourcePortTypeGet(
-        $set: enums.$InputActiveSourcePortTypeGetSetMap[$set]?.toString());
+    return _inputActiveSourcePortTypeGet($set: $set?.value?.toString());
   }
 
   ///Get Input Port Type
@@ -751,7 +801,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Input Port Type
-  @Put(path: '/input/active/source/port-type')
+  @Put(
+    path: '/input/active/source/port-type',
+    optionalBody: true,
+  )
   Future<chopper.Response<PortType>> _inputActiveSourcePortTypePut(
       {@Body() required InputActiveSourcePortTypePut$RequestBody? body});
 
@@ -765,10 +818,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Colour, () => Colour.fromJsonFactory);
 
     return _inputPortsDviDviPortNumberControlsColourSpaceColourGet(
-        $set: enums
-            .$InputPortsDviDviPortNumberControlsColourSpaceColourGetSetMap[$set]
-            ?.toString(),
-        dviPortNumber: dviPortNumber);
+        $set: $set?.value?.toString(), dviPortNumber: dviPortNumber);
   }
 
   ///Get Dvi Input Colour Space
@@ -794,7 +844,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dvi Input Colour Space
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/controls/colour-space/colour')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/controls/colour-space/colour',
+    optionalBody: true,
+  )
   Future<chopper.Response<Colour>>
       _inputPortsDviDviPortNumberControlsColourSpaceColourPut({
     @Path('dvi-port-number') required int? dviPortNumber,
@@ -814,10 +867,7 @@ abstract class Brompton extends ChopperService {
         DviColourFormat, () => DviColourFormat.fromJsonFactory);
 
     return _inputPortsDviDviPortNumberControlsDviColourFormatGet(
-        $set: enums
-            .$InputPortsDviDviPortNumberControlsDviColourFormatGetSetMap[$set]
-            ?.toString(),
-        dviPortNumber: dviPortNumber);
+        $set: $set?.value?.toString(), dviPortNumber: dviPortNumber);
   }
 
   ///Get Input Dvi Colour Format
@@ -844,7 +894,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Input Dvi Colour Format
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/controls/dvi-colour-format')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/controls/dvi-colour-format',
+    optionalBody: true,
+  )
   Future<chopper.Response<DviColourFormat>>
       _inputPortsDviDviPortNumberControlsDviColourFormatPut({
     @Path('dvi-port-number') required int? dviPortNumber,
@@ -863,9 +916,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Gamut, () => Gamut.fromJsonFactory);
 
     return _inputPortsDviDviPortNumberDynacalBlueGamutGet(
-        $set: enums.$InputPortsDviDviPortNumberDynacalBlueGamutGetSetMap[$set]
-            ?.toString(),
-        dviPortNumber: dviPortNumber);
+        $set: $set?.value?.toString(), dviPortNumber: dviPortNumber);
   }
 
   ///Get Dynacal Blue Gamut
@@ -890,7 +941,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Blue Gamut
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/dynacal/blue/gamut')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/dynacal/blue/gamut',
+    optionalBody: true,
+  )
   Future<chopper.Response<Gamut>>
       _inputPortsDviDviPortNumberDynacalBlueGamutPut({
     @Path('dvi-port-number') required int? dviPortNumber,
@@ -931,7 +985,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Blue X
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/dynacal/blue/x')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/dynacal/blue/x',
+    optionalBody: true,
+  )
   Future<chopper.Response<X>> _inputPortsDviDviPortNumberDynacalBlueXPut({
     @Path('dvi-port-number') required int? dviPortNumber,
     @Body()
@@ -970,7 +1027,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Blue Y
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/dynacal/blue/y')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/dynacal/blue/y',
+    optionalBody: true,
+  )
   Future<chopper.Response<Y>> _inputPortsDviDviPortNumberDynacalBlueYPut({
     @Path('dvi-port-number') required int? dviPortNumber,
     @Body()
@@ -987,9 +1047,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Gamut, () => Gamut.fromJsonFactory);
 
     return _inputPortsDviDviPortNumberDynacalGreenGamutGet(
-        $set: enums.$InputPortsDviDviPortNumberDynacalGreenGamutGetSetMap[$set]
-            ?.toString(),
-        dviPortNumber: dviPortNumber);
+        $set: $set?.value?.toString(), dviPortNumber: dviPortNumber);
   }
 
   ///Get Dynacal Green Gamut
@@ -1014,7 +1072,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Green Gamut
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/dynacal/green/gamut')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/dynacal/green/gamut',
+    optionalBody: true,
+  )
   Future<chopper.Response<Gamut>>
       _inputPortsDviDviPortNumberDynacalGreenGamutPut({
     @Path('dvi-port-number') required int? dviPortNumber,
@@ -1055,7 +1116,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Green X
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/dynacal/green/x')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/dynacal/green/x',
+    optionalBody: true,
+  )
   Future<chopper.Response<X>> _inputPortsDviDviPortNumberDynacalGreenXPut({
     @Path('dvi-port-number') required int? dviPortNumber,
     @Body()
@@ -1094,7 +1158,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Green Y
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/dynacal/green/y')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/dynacal/green/y',
+    optionalBody: true,
+  )
   Future<chopper.Response<Y>> _inputPortsDviDviPortNumberDynacalGreenYPut({
     @Path('dvi-port-number') required int? dviPortNumber,
     @Body()
@@ -1110,9 +1177,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Gamut, () => Gamut.fromJsonFactory);
 
     return _inputPortsDviDviPortNumberDynacalRedGamutGet(
-        $set: enums.$InputPortsDviDviPortNumberDynacalRedGamutGetSetMap[$set]
-            ?.toString(),
-        dviPortNumber: dviPortNumber);
+        $set: $set?.value?.toString(), dviPortNumber: dviPortNumber);
   }
 
   ///Get Dynacal Red Gamut
@@ -1136,7 +1201,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Red Gamut
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/dynacal/red/gamut')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/dynacal/red/gamut',
+    optionalBody: true,
+  )
   Future<chopper.Response<Gamut>>
       _inputPortsDviDviPortNumberDynacalRedGamutPut({
     @Path('dvi-port-number') required int? dviPortNumber,
@@ -1176,7 +1244,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Red X
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/dynacal/red/x')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/dynacal/red/x',
+    optionalBody: true,
+  )
   Future<chopper.Response<X>> _inputPortsDviDviPortNumberDynacalRedXPut({
     @Path('dvi-port-number') required int? dviPortNumber,
     @Body() required InputPortsDviDviPortNumberDynacalRedXPut$RequestBody? body,
@@ -1214,7 +1285,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Red Y
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/dynacal/red/y')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/dynacal/red/y',
+    optionalBody: true,
+  )
   Future<chopper.Response<Y>> _inputPortsDviDviPortNumberDynacalRedYPut({
     @Path('dvi-port-number') required int? dviPortNumber,
     @Body() required InputPortsDviDviPortNumberDynacalRedYPut$RequestBody? body,
@@ -1261,8 +1335,9 @@ abstract class Brompton extends ChopperService {
 
   ///Set Dynacal White Colour Temperature
   @Put(
-      path:
-          '/input/ports/dvi/{dvi-port-number}/dynacal/white/colour-temperature')
+    path: '/input/ports/dvi/{dvi-port-number}/dynacal/white/colour-temperature',
+    optionalBody: true,
+  )
   Future<chopper.Response<ColourTemperature>>
       _inputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut({
     @Path('dvi-port-number') required int? dviPortNumber,
@@ -1281,9 +1356,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Gamut, () => Gamut.fromJsonFactory);
 
     return _inputPortsDviDviPortNumberDynacalWhiteGamutGet(
-        $set: enums.$InputPortsDviDviPortNumberDynacalWhiteGamutGetSetMap[$set]
-            ?.toString(),
-        dviPortNumber: dviPortNumber);
+        $set: $set?.value?.toString(), dviPortNumber: dviPortNumber);
   }
 
   ///Get Dynacal White Gamut
@@ -1308,7 +1381,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal White Gamut
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/dynacal/white/gamut')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/dynacal/white/gamut',
+    optionalBody: true,
+  )
   Future<chopper.Response<Gamut>>
       _inputPortsDviDviPortNumberDynacalWhiteGamutPut({
     @Path('dvi-port-number') required int? dviPortNumber,
@@ -1349,7 +1425,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal White X
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/dynacal/white/x')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/dynacal/white/x',
+    optionalBody: true,
+  )
   Future<chopper.Response<X>> _inputPortsDviDviPortNumberDynacalWhiteXPut({
     @Path('dvi-port-number') required int? dviPortNumber,
     @Body()
@@ -1388,7 +1467,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal White Y
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/dynacal/white/y')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/dynacal/white/y',
+    optionalBody: true,
+  )
   Future<chopper.Response<Y>> _inputPortsDviDviPortNumberDynacalWhiteYPut({
     @Path('dvi-port-number') required int? dviPortNumber,
     @Body()
@@ -1479,7 +1561,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Input Black Level
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/proc-amp/black-level')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/proc-amp/black-level',
+    optionalBody: true,
+  )
   Future<chopper.Response<BlackLevel>>
       _inputPortsDviDviPortNumberProcAmpBlackLevelPut({
     @Path('dvi-port-number') required int? dviPortNumber,
@@ -1523,7 +1608,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Input Contrast
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/proc-amp/contrast')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/proc-amp/contrast',
+    optionalBody: true,
+  )
   Future<chopper.Response<Contrast>>
       _inputPortsDviDviPortNumberProcAmpContrastPut({
     @Path('dvi-port-number') required int? dviPortNumber,
@@ -1567,7 +1655,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Blue Highlight
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/proc-amp/highlight/blue')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/proc-amp/highlight/blue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Blue>>
       _inputPortsDviDviPortNumberProcAmpHighlightBluePut({
     @Path('dvi-port-number') required int? dviPortNumber,
@@ -1612,7 +1703,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Green Highlight
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/proc-amp/highlight/green')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/proc-amp/highlight/green',
+    optionalBody: true,
+  )
   Future<chopper.Response<Green>>
       _inputPortsDviDviPortNumberProcAmpHighlightGreenPut({
     @Path('dvi-port-number') required int? dviPortNumber,
@@ -1656,7 +1750,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Red Highlight
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/proc-amp/highlight/red')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/proc-amp/highlight/red',
+    optionalBody: true,
+  )
   Future<chopper.Response<Red>>
       _inputPortsDviDviPortNumberProcAmpHighlightRedPut({
     @Path('dvi-port-number') required int? dviPortNumber,
@@ -1697,7 +1794,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Input Hue
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/proc-amp/hue')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/proc-amp/hue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Hue>> _inputPortsDviDviPortNumberProcAmpHuePut({
     @Path('dvi-port-number') required int? dviPortNumber,
     @Body() required InputPortsDviDviPortNumberProcAmpHuePut$RequestBody? body,
@@ -1738,7 +1838,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Input Saturation
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/proc-amp/saturation')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/proc-amp/saturation',
+    optionalBody: true,
+  )
   Future<chopper.Response<Saturation>>
       _inputPortsDviDviPortNumberProcAmpSaturationPut({
     @Path('dvi-port-number') required int? dviPortNumber,
@@ -1782,7 +1885,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Blue Shadow
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/proc-amp/shadow/blue')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/proc-amp/shadow/blue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Blue>>
       _inputPortsDviDviPortNumberProcAmpShadowBluePut({
     @Path('dvi-port-number') required int? dviPortNumber,
@@ -1826,7 +1932,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Green Shadow
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/proc-amp/shadow/green')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/proc-amp/shadow/green',
+    optionalBody: true,
+  )
   Future<chopper.Response<Green>>
       _inputPortsDviDviPortNumberProcAmpShadowGreenPut({
     @Path('dvi-port-number') required int? dviPortNumber,
@@ -1867,7 +1976,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Red Shadow
-  @Put(path: '/input/ports/dvi/{dvi-port-number}/proc-amp/shadow/red')
+  @Put(
+    path: '/input/ports/dvi/{dvi-port-number}/proc-amp/shadow/red',
+    optionalBody: true,
+  )
   Future<chopper.Response<Red>> _inputPortsDviDviPortNumberProcAmpShadowRedPut({
     @Path('dvi-port-number') required int? dviPortNumber,
     @Body()
@@ -1885,11 +1997,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Colour, () => Colour.fromJsonFactory);
 
     return _inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGet(
-        $set: enums
-            .$InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSetMap[
-                $set]
-            ?.toString(),
-        hdmiPortNumber: hdmiPortNumber);
+        $set: $set?.value?.toString(), hdmiPortNumber: hdmiPortNumber);
   }
 
   ///Get Hdmi Input Colour Space
@@ -1917,7 +2025,9 @@ abstract class Brompton extends ChopperService {
 
   ///Set Hdmi Input Colour Space
   @Put(
-      path: '/input/ports/hdmi/{hdmi-port-number}/controls/colour-space/colour')
+    path: '/input/ports/hdmi/{hdmi-port-number}/controls/colour-space/colour',
+    optionalBody: true,
+  )
   Future<chopper.Response<Colour>>
       _inputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -1967,8 +2077,10 @@ abstract class Brompton extends ChopperService {
 
   ///Set Infoframe Override Enabled
   @Put(
-      path:
-          '/input/ports/hdmi/{hdmi-port-number}/controls/colour-space/info-frame-override-enabled')
+    path:
+        '/input/ports/hdmi/{hdmi-port-number}/controls/colour-space/info-frame-override-enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<InfoFrameOverrideEnabled>>
       _inputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -1988,11 +2100,7 @@ abstract class Brompton extends ChopperService {
         HdmiColourFormat, () => HdmiColourFormat.fromJsonFactory);
 
     return _inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGet(
-        $set: enums
-            .$InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSetMap[
-                $set]
-            ?.toString(),
-        hdmiPortNumber: hdmiPortNumber);
+        $set: $set?.value?.toString(), hdmiPortNumber: hdmiPortNumber);
   }
 
   ///Get Hdmi Input Colour Format
@@ -2019,7 +2127,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Hdmi Input Colour Format
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/controls/hdmi-colour-format')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/controls/hdmi-colour-format',
+    optionalBody: true,
+  )
   Future<chopper.Response<HdmiColourFormat>>
       _inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -2038,10 +2149,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Format, () => Format.fromJsonFactory);
 
     return _inputPortsHdmiHdmiPortNumberControlsHdrFormatGet(
-        $set: enums
-            .$InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSetMap[$set]
-            ?.toString(),
-        hdmiPortNumber: hdmiPortNumber);
+        $set: $set?.value?.toString(), hdmiPortNumber: hdmiPortNumber);
   }
 
   ///Get Hdmi Input Hdr Format Override
@@ -2066,7 +2174,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Hdmi Input Hdr Format Override
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/controls/hdr/format')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/controls/hdr/format',
+    optionalBody: true,
+  )
   Future<chopper.Response<Format>>
       _inputPortsHdmiHdmiPortNumberControlsHdrFormatPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -2116,8 +2227,9 @@ abstract class Brompton extends ChopperService {
 
   ///Set Hdmi Pq Auto Brighten
   @Put(
-      path:
-          '/input/ports/hdmi/{hdmi-port-number}/controls/hdr/pq/auto-brighten')
+    path: '/input/ports/hdmi/{hdmi-port-number}/controls/hdr/pq/auto-brighten',
+    optionalBody: true,
+  )
   Future<chopper.Response<AutoBrighten>>
       _inputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -2161,7 +2273,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Hdmi Pq Gain
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/controls/hdr/pq/gain')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/controls/hdr/pq/gain',
+    optionalBody: true,
+  )
   Future<chopper.Response<Gain>>
       _inputPortsHdmiHdmiPortNumberControlsHdrPqGainPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -2209,8 +2324,10 @@ abstract class Brompton extends ChopperService {
 
   ///Set Hdmi Pq Maxcll Override Enabled
   @Put(
-      path:
-          '/input/ports/hdmi/{hdmi-port-number}/controls/hdr/pq/max-cll-override/enabled')
+    path:
+        '/input/ports/hdmi/{hdmi-port-number}/controls/hdr/pq/max-cll-override/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>>
       _inputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -2258,8 +2375,10 @@ abstract class Brompton extends ChopperService {
 
   ///Set Hdmi Pq Maxcll Override Luminance
   @Put(
-      path:
-          '/input/ports/hdmi/{hdmi-port-number}/controls/hdr/pq/max-cll-override/luminance')
+    path:
+        '/input/ports/hdmi/{hdmi-port-number}/controls/hdr/pq/max-cll-override/luminance',
+    optionalBody: true,
+  )
   Future<chopper.Response<Luminance>>
       _inputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -2279,11 +2398,7 @@ abstract class Brompton extends ChopperService {
         QuantisationRange, () => QuantisationRange.fromJsonFactory);
 
     return _inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGet(
-        $set: enums
-            .$InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSetMap[
-                $set]
-            ?.toString(),
-        hdmiPortNumber: hdmiPortNumber);
+        $set: $set?.value?.toString(), hdmiPortNumber: hdmiPortNumber);
   }
 
   ///Get Hdmi Input Quantisation Range
@@ -2310,7 +2425,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Hdmi Input Quantisation Range
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/controls/quantisation-range')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/controls/quantisation-range',
+    optionalBody: true,
+  )
   Future<chopper.Response<QuantisationRange>>
       _inputPortsHdmiHdmiPortNumberControlsQuantisationRangePut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -2329,9 +2447,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Gamut, () => Gamut.fromJsonFactory);
 
     return _inputPortsHdmiHdmiPortNumberDynacalBlueGamutGet(
-        $set: enums.$InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSetMap[$set]
-            ?.toString(),
-        hdmiPortNumber: hdmiPortNumber);
+        $set: $set?.value?.toString(), hdmiPortNumber: hdmiPortNumber);
   }
 
   ///Get Dynacal Blue Gamut
@@ -2356,7 +2472,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Blue Gamut
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/blue/gamut')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/blue/gamut',
+    optionalBody: true,
+  )
   Future<chopper.Response<Gamut>>
       _inputPortsHdmiHdmiPortNumberDynacalBlueGamutPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -2397,7 +2516,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Blue X
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/blue/x')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/blue/x',
+    optionalBody: true,
+  )
   Future<chopper.Response<X>> _inputPortsHdmiHdmiPortNumberDynacalBlueXPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
     @Body()
@@ -2436,7 +2558,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Blue Y
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/blue/y')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/blue/y',
+    optionalBody: true,
+  )
   Future<chopper.Response<Y>> _inputPortsHdmiHdmiPortNumberDynacalBlueYPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
     @Body()
@@ -2453,10 +2578,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Gamut, () => Gamut.fromJsonFactory);
 
     return _inputPortsHdmiHdmiPortNumberDynacalGreenGamutGet(
-        $set: enums
-            .$InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSetMap[$set]
-            ?.toString(),
-        hdmiPortNumber: hdmiPortNumber);
+        $set: $set?.value?.toString(), hdmiPortNumber: hdmiPortNumber);
   }
 
   ///Get Dynacal Green Gamut
@@ -2481,7 +2603,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Green Gamut
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/green/gamut')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/green/gamut',
+    optionalBody: true,
+  )
   Future<chopper.Response<Gamut>>
       _inputPortsHdmiHdmiPortNumberDynacalGreenGamutPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -2522,7 +2647,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Green X
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/green/x')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/green/x',
+    optionalBody: true,
+  )
   Future<chopper.Response<X>> _inputPortsHdmiHdmiPortNumberDynacalGreenXPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
     @Body()
@@ -2561,7 +2689,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Green Y
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/green/y')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/green/y',
+    optionalBody: true,
+  )
   Future<chopper.Response<Y>> _inputPortsHdmiHdmiPortNumberDynacalGreenYPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
     @Body()
@@ -2578,9 +2709,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Gamut, () => Gamut.fromJsonFactory);
 
     return _inputPortsHdmiHdmiPortNumberDynacalRedGamutGet(
-        $set: enums.$InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSetMap[$set]
-            ?.toString(),
-        hdmiPortNumber: hdmiPortNumber);
+        $set: $set?.value?.toString(), hdmiPortNumber: hdmiPortNumber);
   }
 
   ///Get Dynacal Red Gamut
@@ -2605,7 +2734,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Red Gamut
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/red/gamut')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/red/gamut',
+    optionalBody: true,
+  )
   Future<chopper.Response<Gamut>>
       _inputPortsHdmiHdmiPortNumberDynacalRedGamutPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -2646,7 +2778,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Red X
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/red/x')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/red/x',
+    optionalBody: true,
+  )
   Future<chopper.Response<X>> _inputPortsHdmiHdmiPortNumberDynacalRedXPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
     @Body()
@@ -2685,7 +2820,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Red Y
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/red/y')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/red/y',
+    optionalBody: true,
+  )
   Future<chopper.Response<Y>> _inputPortsHdmiHdmiPortNumberDynacalRedYPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
     @Body()
@@ -2733,8 +2871,10 @@ abstract class Brompton extends ChopperService {
 
   ///Set Dynacal White Colour Temperature
   @Put(
-      path:
-          '/input/ports/hdmi/{hdmi-port-number}/dynacal/white/colour-temperature')
+    path:
+        '/input/ports/hdmi/{hdmi-port-number}/dynacal/white/colour-temperature',
+    optionalBody: true,
+  )
   Future<chopper.Response<ColourTemperature>>
       _inputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -2753,10 +2893,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Gamut, () => Gamut.fromJsonFactory);
 
     return _inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGet(
-        $set: enums
-            .$InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSetMap[$set]
-            ?.toString(),
-        hdmiPortNumber: hdmiPortNumber);
+        $set: $set?.value?.toString(), hdmiPortNumber: hdmiPortNumber);
   }
 
   ///Get Dynacal White Gamut
@@ -2781,7 +2918,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal White Gamut
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/white/gamut')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/white/gamut',
+    optionalBody: true,
+  )
   Future<chopper.Response<Gamut>>
       _inputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -2822,7 +2962,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal White X
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/white/x')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/white/x',
+    optionalBody: true,
+  )
   Future<chopper.Response<X>> _inputPortsHdmiHdmiPortNumberDynacalWhiteXPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
     @Body()
@@ -2861,7 +3004,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal White Y
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/white/y')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/dynacal/white/y',
+    optionalBody: true,
+  )
   Future<chopper.Response<Y>> _inputPortsHdmiHdmiPortNumberDynacalWhiteYPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
     @Body()
@@ -3000,7 +3146,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Input Black Level
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/black-level')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/black-level',
+    optionalBody: true,
+  )
   Future<chopper.Response<BlackLevel>>
       _inputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -3044,7 +3193,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Input Contrast
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/contrast')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/contrast',
+    optionalBody: true,
+  )
   Future<chopper.Response<Contrast>>
       _inputPortsHdmiHdmiPortNumberProcAmpContrastPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -3089,7 +3241,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Blue Highlight
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/highlight/blue')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/highlight/blue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Blue>>
       _inputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -3134,7 +3289,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Green Highlight
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/highlight/green')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/highlight/green',
+    optionalBody: true,
+  )
   Future<chopper.Response<Green>>
       _inputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -3179,7 +3337,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Red Highlight
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/highlight/red')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/highlight/red',
+    optionalBody: true,
+  )
   Future<chopper.Response<Red>>
       _inputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -3220,7 +3381,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Input Hue
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/hue')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/hue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Hue>> _inputPortsHdmiHdmiPortNumberProcAmpHuePut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
     @Body()
@@ -3262,7 +3426,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Input Saturation
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/saturation')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/saturation',
+    optionalBody: true,
+  )
   Future<chopper.Response<Saturation>>
       _inputPortsHdmiHdmiPortNumberProcAmpSaturationPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -3306,7 +3473,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Blue Shadow
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/shadow/blue')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/shadow/blue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Blue>>
       _inputPortsHdmiHdmiPortNumberProcAmpShadowBluePut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -3351,7 +3521,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Green Shadow
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/shadow/green')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/shadow/green',
+    optionalBody: true,
+  )
   Future<chopper.Response<Green>>
       _inputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -3395,7 +3568,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Red Shadow
-  @Put(path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/shadow/red')
+  @Put(
+    path: '/input/ports/hdmi/{hdmi-port-number}/proc-amp/shadow/red',
+    optionalBody: true,
+  )
   Future<chopper.Response<Red>>
       _inputPortsHdmiHdmiPortNumberProcAmpShadowRedPut({
     @Path('hdmi-port-number') required int? hdmiPortNumber,
@@ -3414,10 +3590,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Colour, () => Colour.fromJsonFactory);
 
     return _inputPortsSdiSdiPortNumberControlsColourSpaceColourGet(
-        $set: enums
-            .$InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSetMap[$set]
-            ?.toString(),
-        sdiPortNumber: sdiPortNumber);
+        $set: $set?.value?.toString(), sdiPortNumber: sdiPortNumber);
   }
 
   ///Get Sdi Input Colour Space
@@ -3443,7 +3616,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Sdi Input Colour Space
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/controls/colour-space/colour')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/controls/colour-space/colour',
+    optionalBody: true,
+  )
   Future<chopper.Response<Colour>>
       _inputPortsSdiSdiPortNumberControlsColourSpaceColourPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -3462,9 +3638,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Format, () => Format.fromJsonFactory);
 
     return _inputPortsSdiSdiPortNumberControlsHdrFormatGet(
-        $set: enums.$InputPortsSdiSdiPortNumberControlsHdrFormatGetSetMap[$set]
-            ?.toString(),
-        sdiPortNumber: sdiPortNumber);
+        $set: $set?.value?.toString(), sdiPortNumber: sdiPortNumber);
   }
 
   ///Get Sdi Input Hdr Format Override
@@ -3489,7 +3663,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Sdi Input Hdr Format Override
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/controls/hdr/format')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/controls/hdr/format',
+    optionalBody: true,
+  )
   Future<chopper.Response<Format>>
       _inputPortsSdiSdiPortNumberControlsHdrFormatPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -3536,7 +3713,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Sdi Pq Auto Brighten
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/controls/hdr/pq/auto-brighten')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/controls/hdr/pq/auto-brighten',
+    optionalBody: true,
+  )
   Future<chopper.Response<AutoBrighten>>
       _inputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -3580,7 +3760,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Sdi Pq Gain
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/controls/hdr/pq/gain')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/controls/hdr/pq/gain',
+    optionalBody: true,
+  )
   Future<chopper.Response<Gain>>
       _inputPortsSdiSdiPortNumberControlsHdrPqGainPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -3628,8 +3811,10 @@ abstract class Brompton extends ChopperService {
 
   ///Set Sdi Pq Maxcll Override Enabled
   @Put(
-      path:
-          '/input/ports/sdi/{sdi-port-number}/controls/hdr/pq/max-cll-override/enabled')
+    path:
+        '/input/ports/sdi/{sdi-port-number}/controls/hdr/pq/max-cll-override/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>>
       _inputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -3677,8 +3862,10 @@ abstract class Brompton extends ChopperService {
 
   ///Set Sdi Pq Maxcll Override Luminance
   @Put(
-      path:
-          '/input/ports/sdi/{sdi-port-number}/controls/hdr/pq/max-cll-override/luminance')
+    path:
+        '/input/ports/sdi/{sdi-port-number}/controls/hdr/pq/max-cll-override/luminance',
+    optionalBody: true,
+  )
   Future<chopper.Response<Luminance>>
       _inputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -3697,9 +3884,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Gamut, () => Gamut.fromJsonFactory);
 
     return _inputPortsSdiSdiPortNumberDynacalBlueGamutGet(
-        $set: enums.$InputPortsSdiSdiPortNumberDynacalBlueGamutGetSetMap[$set]
-            ?.toString(),
-        sdiPortNumber: sdiPortNumber);
+        $set: $set?.value?.toString(), sdiPortNumber: sdiPortNumber);
   }
 
   ///Get Dynacal Blue Gamut
@@ -3724,7 +3909,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Blue Gamut
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/dynacal/blue/gamut')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/dynacal/blue/gamut',
+    optionalBody: true,
+  )
   Future<chopper.Response<Gamut>>
       _inputPortsSdiSdiPortNumberDynacalBlueGamutPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -3765,7 +3953,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Blue X
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/dynacal/blue/x')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/dynacal/blue/x',
+    optionalBody: true,
+  )
   Future<chopper.Response<X>> _inputPortsSdiSdiPortNumberDynacalBlueXPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
     @Body()
@@ -3804,7 +3995,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Blue Y
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/dynacal/blue/y')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/dynacal/blue/y',
+    optionalBody: true,
+  )
   Future<chopper.Response<Y>> _inputPortsSdiSdiPortNumberDynacalBlueYPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
     @Body()
@@ -3821,9 +4015,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Gamut, () => Gamut.fromJsonFactory);
 
     return _inputPortsSdiSdiPortNumberDynacalGreenGamutGet(
-        $set: enums.$InputPortsSdiSdiPortNumberDynacalGreenGamutGetSetMap[$set]
-            ?.toString(),
-        sdiPortNumber: sdiPortNumber);
+        $set: $set?.value?.toString(), sdiPortNumber: sdiPortNumber);
   }
 
   ///Get Dynacal Green Gamut
@@ -3848,7 +4040,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Green Gamut
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/dynacal/green/gamut')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/dynacal/green/gamut',
+    optionalBody: true,
+  )
   Future<chopper.Response<Gamut>>
       _inputPortsSdiSdiPortNumberDynacalGreenGamutPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -3889,7 +4084,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Green X
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/dynacal/green/x')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/dynacal/green/x',
+    optionalBody: true,
+  )
   Future<chopper.Response<X>> _inputPortsSdiSdiPortNumberDynacalGreenXPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
     @Body()
@@ -3928,7 +4126,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Green Y
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/dynacal/green/y')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/dynacal/green/y',
+    optionalBody: true,
+  )
   Future<chopper.Response<Y>> _inputPortsSdiSdiPortNumberDynacalGreenYPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
     @Body()
@@ -3944,9 +4145,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Gamut, () => Gamut.fromJsonFactory);
 
     return _inputPortsSdiSdiPortNumberDynacalRedGamutGet(
-        $set: enums.$InputPortsSdiSdiPortNumberDynacalRedGamutGetSetMap[$set]
-            ?.toString(),
-        sdiPortNumber: sdiPortNumber);
+        $set: $set?.value?.toString(), sdiPortNumber: sdiPortNumber);
   }
 
   ///Get Dynacal Red Gamut
@@ -3970,7 +4169,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Red Gamut
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/dynacal/red/gamut')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/dynacal/red/gamut',
+    optionalBody: true,
+  )
   Future<chopper.Response<Gamut>>
       _inputPortsSdiSdiPortNumberDynacalRedGamutPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -4010,7 +4212,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Red X
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/dynacal/red/x')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/dynacal/red/x',
+    optionalBody: true,
+  )
   Future<chopper.Response<X>> _inputPortsSdiSdiPortNumberDynacalRedXPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
     @Body() required InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBody? body,
@@ -4048,7 +4253,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal Red Y
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/dynacal/red/y')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/dynacal/red/y',
+    optionalBody: true,
+  )
   Future<chopper.Response<Y>> _inputPortsSdiSdiPortNumberDynacalRedYPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
     @Body() required InputPortsSdiSdiPortNumberDynacalRedYPut$RequestBody? body,
@@ -4095,8 +4303,9 @@ abstract class Brompton extends ChopperService {
 
   ///Set Dynacal White Colour Temperature
   @Put(
-      path:
-          '/input/ports/sdi/{sdi-port-number}/dynacal/white/colour-temperature')
+    path: '/input/ports/sdi/{sdi-port-number}/dynacal/white/colour-temperature',
+    optionalBody: true,
+  )
   Future<chopper.Response<ColourTemperature>>
       _inputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -4115,9 +4324,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Gamut, () => Gamut.fromJsonFactory);
 
     return _inputPortsSdiSdiPortNumberDynacalWhiteGamutGet(
-        $set: enums.$InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSetMap[$set]
-            ?.toString(),
-        sdiPortNumber: sdiPortNumber);
+        $set: $set?.value?.toString(), sdiPortNumber: sdiPortNumber);
   }
 
   ///Get Dynacal White Gamut
@@ -4142,7 +4349,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal White Gamut
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/dynacal/white/gamut')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/dynacal/white/gamut',
+    optionalBody: true,
+  )
   Future<chopper.Response<Gamut>>
       _inputPortsSdiSdiPortNumberDynacalWhiteGamutPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -4183,7 +4393,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal White X
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/dynacal/white/x')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/dynacal/white/x',
+    optionalBody: true,
+  )
   Future<chopper.Response<X>> _inputPortsSdiSdiPortNumberDynacalWhiteXPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
     @Body()
@@ -4222,7 +4435,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dynacal White Y
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/dynacal/white/y')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/dynacal/white/y',
+    optionalBody: true,
+  )
   Future<chopper.Response<Y>> _inputPortsSdiSdiPortNumberDynacalWhiteYPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
     @Body()
@@ -4313,7 +4529,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Input Black Level
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/proc-amp/black-level')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/proc-amp/black-level',
+    optionalBody: true,
+  )
   Future<chopper.Response<BlackLevel>>
       _inputPortsSdiSdiPortNumberProcAmpBlackLevelPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -4357,7 +4576,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Input Contrast
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/proc-amp/contrast')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/proc-amp/contrast',
+    optionalBody: true,
+  )
   Future<chopper.Response<Contrast>>
       _inputPortsSdiSdiPortNumberProcAmpContrastPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -4401,7 +4623,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Blue Highlight
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/proc-amp/highlight/blue')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/proc-amp/highlight/blue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Blue>>
       _inputPortsSdiSdiPortNumberProcAmpHighlightBluePut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -4446,7 +4671,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Green Highlight
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/proc-amp/highlight/green')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/proc-amp/highlight/green',
+    optionalBody: true,
+  )
   Future<chopper.Response<Green>>
       _inputPortsSdiSdiPortNumberProcAmpHighlightGreenPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -4490,7 +4718,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Red Highlight
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/proc-amp/highlight/red')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/proc-amp/highlight/red',
+    optionalBody: true,
+  )
   Future<chopper.Response<Red>>
       _inputPortsSdiSdiPortNumberProcAmpHighlightRedPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -4531,7 +4762,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Input Hue
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/proc-amp/hue')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/proc-amp/hue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Hue>> _inputPortsSdiSdiPortNumberProcAmpHuePut({
     @Path('sdi-port-number') required int? sdiPortNumber,
     @Body() required InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBody? body,
@@ -4572,7 +4806,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Input Saturation
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/proc-amp/saturation')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/proc-amp/saturation',
+    optionalBody: true,
+  )
   Future<chopper.Response<Saturation>>
       _inputPortsSdiSdiPortNumberProcAmpSaturationPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -4616,7 +4853,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Blue Shadow
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/proc-amp/shadow/blue')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/proc-amp/shadow/blue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Blue>>
       _inputPortsSdiSdiPortNumberProcAmpShadowBluePut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -4660,7 +4900,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Green Shadow
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/proc-amp/shadow/green')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/proc-amp/shadow/green',
+    optionalBody: true,
+  )
   Future<chopper.Response<Green>>
       _inputPortsSdiSdiPortNumberProcAmpShadowGreenPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
@@ -4701,7 +4944,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Red Shadow
-  @Put(path: '/input/ports/sdi/{sdi-port-number}/proc-amp/shadow/red')
+  @Put(
+    path: '/input/ports/sdi/{sdi-port-number}/proc-amp/shadow/red',
+    optionalBody: true,
+  )
   Future<chopper.Response<Red>> _inputPortsSdiSdiPortNumberProcAmpShadowRedPut({
     @Path('sdi-port-number') required int? sdiPortNumber,
     @Body()
@@ -4718,8 +4964,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Mode, () => Mode.fromJsonFactory);
 
     return _outputDynacalPanelTypeBlueModeGet(
-        $set: enums.$OutputDynacalPanelTypeBlueModeGetSetMap[$set]?.toString(),
-        panelType: panelType);
+        $set: $set?.value?.toString(), panelType: panelType);
   }
 
   ///Get Output Dynacal Blue Mode
@@ -4741,7 +4986,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Output Dynacal Blue Mode
-  @Put(path: '/output/dynacal/{panel-type}/blue/mode')
+  @Put(
+    path: '/output/dynacal/{panel-type}/blue/mode',
+    optionalBody: true,
+  )
   Future<chopper.Response<Mode>> _outputDynacalPanelTypeBlueModePut({
     @Path('panel-type') required String? panelType,
     @Body() required OutputDynacalPanelTypeBlueModePut$RequestBody? body,
@@ -4777,7 +5025,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Output Dynacal Blue X
-  @Put(path: '/output/dynacal/{panel-type}/blue/x')
+  @Put(
+    path: '/output/dynacal/{panel-type}/blue/x',
+    optionalBody: true,
+  )
   Future<chopper.Response<X>> _outputDynacalPanelTypeBlueXPut({
     @Path('panel-type') required String? panelType,
     @Body() required OutputDynacalPanelTypeBlueXPut$RequestBody? body,
@@ -4813,7 +5064,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Output Dynacal Blue Y
-  @Put(path: '/output/dynacal/{panel-type}/blue/y')
+  @Put(
+    path: '/output/dynacal/{panel-type}/blue/y',
+    optionalBody: true,
+  )
   Future<chopper.Response<Y>> _outputDynacalPanelTypeBlueYPut({
     @Path('panel-type') required String? panelType,
     @Body() required OutputDynacalPanelTypeBlueYPut$RequestBody? body,
@@ -4828,8 +5082,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Mode, () => Mode.fromJsonFactory);
 
     return _outputDynacalPanelTypeGreenModeGet(
-        $set: enums.$OutputDynacalPanelTypeGreenModeGetSetMap[$set]?.toString(),
-        panelType: panelType);
+        $set: $set?.value?.toString(), panelType: panelType);
   }
 
   ///Get Output Dynacal Green Mode
@@ -4852,7 +5105,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Output Dynacal Green Mode
-  @Put(path: '/output/dynacal/{panel-type}/green/mode')
+  @Put(
+    path: '/output/dynacal/{panel-type}/green/mode',
+    optionalBody: true,
+  )
   Future<chopper.Response<Mode>> _outputDynacalPanelTypeGreenModePut({
     @Path('panel-type') required String? panelType,
     @Body() required OutputDynacalPanelTypeGreenModePut$RequestBody? body,
@@ -4888,7 +5144,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Output Dynacal Green X
-  @Put(path: '/output/dynacal/{panel-type}/green/x')
+  @Put(
+    path: '/output/dynacal/{panel-type}/green/x',
+    optionalBody: true,
+  )
   Future<chopper.Response<X>> _outputDynacalPanelTypeGreenXPut({
     @Path('panel-type') required String? panelType,
     @Body() required OutputDynacalPanelTypeGreenXPut$RequestBody? body,
@@ -4924,7 +5183,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Output Dynacal Green Y
-  @Put(path: '/output/dynacal/{panel-type}/green/y')
+  @Put(
+    path: '/output/dynacal/{panel-type}/green/y',
+    optionalBody: true,
+  )
   Future<chopper.Response<Y>> _outputDynacalPanelTypeGreenYPut({
     @Path('panel-type') required String? panelType,
     @Body() required OutputDynacalPanelTypeGreenYPut$RequestBody? body,
@@ -4967,7 +5229,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Output Dynacal Luminance Only Fraction
-  @Put(path: '/output/dynacal/{panel-type}/luminance-only-fraction')
+  @Put(
+    path: '/output/dynacal/{panel-type}/luminance-only-fraction',
+    optionalBody: true,
+  )
   Future<chopper.Response<LuminanceOnlyFraction>>
       _outputDynacalPanelTypeLuminanceOnlyFractionPut({
     @Path('panel-type') required String? panelType,
@@ -4985,8 +5250,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Mode, () => Mode.fromJsonFactory);
 
     return _outputDynacalPanelTypeModeGet(
-        $set: enums.$OutputDynacalPanelTypeModeGetSetMap[$set]?.toString(),
-        panelType: panelType);
+        $set: $set?.value?.toString(), panelType: panelType);
   }
 
   ///Get Output Dynacal Mode
@@ -5008,7 +5272,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Output Dynacal Mode
-  @Put(path: '/output/dynacal/{panel-type}/mode')
+  @Put(
+    path: '/output/dynacal/{panel-type}/mode',
+    optionalBody: true,
+  )
   Future<chopper.Response<Mode>> _outputDynacalPanelTypeModePut({
     @Path('panel-type') required String? panelType,
     @Body() required OutputDynacalPanelTypeModePut$RequestBody? body,
@@ -5023,8 +5290,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Mode, () => Mode.fromJsonFactory);
 
     return _outputDynacalPanelTypeRedModeGet(
-        $set: enums.$OutputDynacalPanelTypeRedModeGetSetMap[$set]?.toString(),
-        panelType: panelType);
+        $set: $set?.value?.toString(), panelType: panelType);
   }
 
   ///Get Output Dynacal Red Mode
@@ -5046,7 +5312,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Output Dynacal Red Mode
-  @Put(path: '/output/dynacal/{panel-type}/red/mode')
+  @Put(
+    path: '/output/dynacal/{panel-type}/red/mode',
+    optionalBody: true,
+  )
   Future<chopper.Response<Mode>> _outputDynacalPanelTypeRedModePut({
     @Path('panel-type') required String? panelType,
     @Body() required OutputDynacalPanelTypeRedModePut$RequestBody? body,
@@ -5082,7 +5351,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Output Dynacal Red X
-  @Put(path: '/output/dynacal/{panel-type}/red/x')
+  @Put(
+    path: '/output/dynacal/{panel-type}/red/x',
+    optionalBody: true,
+  )
   Future<chopper.Response<X>> _outputDynacalPanelTypeRedXPut({
     @Path('panel-type') required String? panelType,
     @Body() required OutputDynacalPanelTypeRedXPut$RequestBody? body,
@@ -5118,7 +5390,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Output Dynacal Red Y
-  @Put(path: '/output/dynacal/{panel-type}/red/y')
+  @Put(
+    path: '/output/dynacal/{panel-type}/red/y',
+    optionalBody: true,
+  )
   Future<chopper.Response<Y>> _outputDynacalPanelTypeRedYPut({
     @Path('panel-type') required String? panelType,
     @Body() required OutputDynacalPanelTypeRedYPut$RequestBody? body,
@@ -5148,7 +5423,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Output Brightness
-  @Put(path: '/output/global-colour/brightness')
+  @Put(
+    path: '/output/global-colour/brightness',
+    optionalBody: true,
+  )
   Future<chopper.Response<Brightness>> _outputGlobalColourBrightnessPut(
       {@Body() required OutputGlobalColourBrightnessPut$RequestBody? body});
 
@@ -5179,7 +5457,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Output Colour Temperature
-  @Put(path: '/output/global-colour/colour-temperature')
+  @Put(
+    path: '/output/global-colour/colour-temperature',
+    optionalBody: true,
+  )
   Future<chopper.Response<ColourTemperature>>
       _outputGlobalColourColourTemperaturePut(
           {@Body()
@@ -5210,7 +5491,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Dark Magic Enabled
-  @Put(path: '/output/global-colour/dark-magic/enabled')
+  @Put(
+    path: '/output/global-colour/dark-magic/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _outputGlobalColourDarkMagicEnabledPut(
       {@Body()
           required OutputGlobalColourDarkMagicEnabledPut$RequestBody? body});
@@ -5249,7 +5533,9 @@ abstract class Brompton extends ChopperService {
 
   ///Set Highlight Overbright Pixels Enabled
   @Put(
-      path: '/output/global-colour/dynacal/highlight-overbright-pixels-enabled')
+    path: '/output/global-colour/dynacal/highlight-overbright-pixels-enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<HighlightOverbrightPixelsEnabled>>
       _outputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut(
           {@Body()
@@ -5291,8 +5577,10 @@ abstract class Brompton extends ChopperService {
 
   ///Set Highlight Out Of Gamut Pixels Enabled
   @Put(
-      path:
-          '/output/global-colour/dynacal/hightlight-out-of-gamut-pixels-enabled')
+    path:
+        '/output/global-colour/dynacal/hightlight-out-of-gamut-pixels-enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<HightlightOutOfGamutPixelsEnabled>>
       _outputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut(
           {@Body()
@@ -5325,7 +5613,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Extended Bit Depth Enabled
-  @Put(path: '/output/global-colour/extended-bit-depth/enabled')
+  @Put(
+    path: '/output/global-colour/extended-bit-depth/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>>
       _outputGlobalColourExtendedBitDepthEnabledPut(
           {@Body()
@@ -5355,7 +5646,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Blue Gain
-  @Put(path: '/output/global-colour/gains/blue')
+  @Put(
+    path: '/output/global-colour/gains/blue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Blue>> _outputGlobalColourGainsBluePut(
       {@Body() required OutputGlobalColourGainsBluePut$RequestBody? body});
 
@@ -5382,7 +5676,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Green Gain
-  @Put(path: '/output/global-colour/gains/green')
+  @Put(
+    path: '/output/global-colour/gains/green',
+    optionalBody: true,
+  )
   Future<chopper.Response<Green>> _outputGlobalColourGainsGreenPut(
       {@Body() required OutputGlobalColourGainsGreenPut$RequestBody? body});
 
@@ -5410,7 +5707,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Intensity Gain
-  @Put(path: '/output/global-colour/gains/intensity')
+  @Put(
+    path: '/output/global-colour/gains/intensity',
+    optionalBody: true,
+  )
   Future<chopper.Response<Intensity>> _outputGlobalColourGainsIntensityPut(
       {@Body() required OutputGlobalColourGainsIntensityPut$RequestBody? body});
 
@@ -5437,7 +5737,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Red Gain
-  @Put(path: '/output/global-colour/gains/red')
+  @Put(
+    path: '/output/global-colour/gains/red',
+    optionalBody: true,
+  )
   Future<chopper.Response<Red>> _outputGlobalColourGainsRedPut(
       {@Body() required OutputGlobalColourGainsRedPut$RequestBody? body});
 
@@ -5464,7 +5767,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Output Gamma
-  @Put(path: '/output/global-colour/gamma')
+  @Put(
+    path: '/output/global-colour/gamma',
+    optionalBody: true,
+  )
   Future<chopper.Response<Gamma>> _outputGlobalColourGammaPut(
       {@Body() required OutputGlobalColourGammaPut$RequestBody? body});
 
@@ -5492,7 +5798,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Overdrive Enabled
-  @Put(path: '/output/global-colour/overdrive/enabled')
+  @Put(
+    path: '/output/global-colour/overdrive/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _outputGlobalColourOverdriveEnabledPut(
       {@Body()
           required OutputGlobalColourOverdriveEnabledPut$RequestBody? body});
@@ -5521,7 +5830,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Pure Tone Enabled
-  @Put(path: '/output/global-colour/puretone/enabled')
+  @Put(
+    path: '/output/global-colour/puretone/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _outputGlobalColourPuretoneEnabledPut(
       {@Body()
           required OutputGlobalColourPuretoneEnabledPut$RequestBody? body});
@@ -5549,7 +5861,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Network Bit Depth
-  @Put(path: '/output/network/bit-depth')
+  @Put(
+    path: '/output/network/bit-depth',
+    optionalBody: true,
+  )
   Future<chopper.Response<BitDepth>> _outputNetworkBitDepthPut(
       {@Body() required OutputNetworkBitDepthPut$RequestBody? body});
 
@@ -5598,7 +5913,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Request Failover
-  @Put(path: '/output/network/failover/actions/request-failover')
+  @Put(
+    path: '/output/network/failover/actions/request-failover',
+    optionalBody: true,
+  )
   Future<
       chopper.Response<
           RequestFailover>> _outputNetworkFailoverActionsRequestFailoverPut(
@@ -5630,7 +5948,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Failover Enabled
-  @Put(path: '/output/network/failover/settings/enabled')
+  @Put(
+    path: '/output/network/failover/settings/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _outputNetworkFailoverSettingsEnabledPut(
       {@Body()
           required OutputNetworkFailoverSettingsEnabledPut$RequestBody? body});
@@ -5665,7 +5986,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Button Press Failover Mode Enabled
-  @Put(path: '/output/network/failover/settings/modes/on-button-press')
+  @Put(
+    path: '/output/network/failover/settings/modes/on-button-press',
+    optionalBody: true,
+  )
   Future<
       chopper.Response<
           OnButtonPress>> _outputNetworkFailoverSettingsModesOnButtonPressPut(
@@ -5703,7 +6027,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Partner Failover Mode Enabled
-  @Put(path: '/output/network/failover/settings/modes/on-partner-fail')
+  @Put(
+    path: '/output/network/failover/settings/modes/on-partner-fail',
+    optionalBody: true,
+  )
   Future<
       chopper.Response<
           OnPartnerFail>> _outputNetworkFailoverSettingsModesOnPartnerFailPut(
@@ -5740,7 +6067,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Partner Video Failover Mode Enabled
-  @Put(path: '/output/network/failover/settings/modes/on-partner-video-fail')
+  @Put(
+    path: '/output/network/failover/settings/modes/on-partner-video-fail',
+    optionalBody: true,
+  )
   Future<chopper.Response<OnPartnerVideoFail>>
       _outputNetworkFailoverSettingsModesOnPartnerVideoFailPut(
           {@Body()
@@ -5777,7 +6107,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Prefer Primary Failover Mode Enabled
-  @Put(path: '/output/network/failover/settings/modes/prefer-primary')
+  @Put(
+    path: '/output/network/failover/settings/modes/prefer-primary',
+    optionalBody: true,
+  )
   Future<
       chopper.Response<
           PreferPrimary>> _outputNetworkFailoverSettingsModesPreferPrimaryPut(
@@ -5904,7 +6237,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Network Frame Rate Multiplier
-  @Put(path: '/output/network/frame-rate-multiplier')
+  @Put(
+    path: '/output/network/frame-rate-multiplier',
+    optionalBody: true,
+  )
   Future<chopper.Response<FrameRateMultiplier>>
       _outputNetworkFrameRateMultiplierPut(
           {@Body()
@@ -5934,7 +6270,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Frame Remapping Enabled
-  @Put(path: '/output/network/frame-remapping/enabled')
+  @Put(
+    path: '/output/network/frame-remapping/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _outputNetworkFrameRemappingEnabledPut(
       {@Body()
           required OutputNetworkFrameRemappingEnabledPut$RequestBody? body});
@@ -5972,7 +6311,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Frame Remapping Blue
-  @Put(path: '/output/network/frame-remapping/frames/{frame}/blue')
+  @Put(
+    path: '/output/network/frame-remapping/frames/{frame}/blue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Blue>>
       _outputNetworkFrameRemappingFramesFrameBluePut({
     @Path('frame') required int? frame,
@@ -6016,7 +6358,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Frame Remapping Green
-  @Put(path: '/output/network/frame-remapping/frames/{frame}/green')
+  @Put(
+    path: '/output/network/frame-remapping/frames/{frame}/green',
+    optionalBody: true,
+  )
   Future<chopper.Response<Green>>
       _outputNetworkFrameRemappingFramesFrameGreenPut({
     @Path('frame') required int? frame,
@@ -6034,9 +6379,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Mode, () => Mode.fromJsonFactory);
 
     return _outputNetworkFrameRemappingFramesFrameModeGet(
-        $set: enums.$OutputNetworkFrameRemappingFramesFrameModeGetSetMap[$set]
-            ?.toString(),
-        frame: frame);
+        $set: $set?.value?.toString(), frame: frame);
   }
 
   ///Get Frame Remapping Mode
@@ -6060,7 +6403,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Frame Remapping Mode
-  @Put(path: '/output/network/frame-remapping/frames/{frame}/mode')
+  @Put(
+    path: '/output/network/frame-remapping/frames/{frame}/mode',
+    optionalBody: true,
+  )
   Future<chopper.Response<Mode>>
       _outputNetworkFrameRemappingFramesFrameModePut({
     @Path('frame') required int? frame,
@@ -6101,7 +6447,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Frame Remapping Red
-  @Put(path: '/output/network/frame-remapping/frames/{frame}/red')
+  @Put(
+    path: '/output/network/frame-remapping/frames/{frame}/red',
+    optionalBody: true,
+  )
   Future<chopper.Response<Red>> _outputNetworkFrameRemappingFramesFrameRedPut({
     @Path('frame') required int? frame,
     @Body()
@@ -6143,7 +6492,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Frame Remapping X Offset
-  @Put(path: '/output/network/frame-remapping/frames/{frame}/x-offset')
+  @Put(
+    path: '/output/network/frame-remapping/frames/{frame}/x-offset',
+    optionalBody: true,
+  )
   Future<chopper.Response<XOffset>>
       _outputNetworkFrameRemappingFramesFrameXOffsetPut({
     @Path('frame') required int? frame,
@@ -6187,7 +6539,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Frame Remapping Y Offset
-  @Put(path: '/output/network/frame-remapping/frames/{frame}/y-offset')
+  @Put(
+    path: '/output/network/frame-remapping/frames/{frame}/y-offset',
+    optionalBody: true,
+  )
   Future<chopper.Response<YOffset>>
       _outputNetworkFrameRemappingFramesFrameYOffsetPut({
     @Path('frame') required int? frame,
@@ -6222,7 +6577,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Genlockinternalsourcerate
-  @Put(path: '/output/network/genlock/internal-rate')
+  @Put(
+    path: '/output/network/genlock/internal-rate',
+    optionalBody: true,
+  )
   Future<chopper.Response<InternalRate>> _outputNetworkGenlockInternalRatePut(
       {@Body() required OutputNetworkGenlockInternalRatePut$RequestBody? body});
 
@@ -6253,7 +6611,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Genlock Phase Offset Lines
-  @Put(path: '/output/network/genlock/phase-offset/absolute/lines')
+  @Put(
+    path: '/output/network/genlock/phase-offset/absolute/lines',
+    optionalBody: true,
+  )
   Future<
       chopper
           .Response<Lines>> _outputNetworkGenlockPhaseOffsetAbsoluteLinesPut(
@@ -6289,7 +6650,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Genlock Phase Offset Pixels
-  @Put(path: '/output/network/genlock/phase-offset/absolute/pixels')
+  @Put(
+    path: '/output/network/genlock/phase-offset/absolute/pixels',
+    optionalBody: true,
+  )
   Future<
       chopper
           .Response<Pixels>> _outputNetworkGenlockPhaseOffsetAbsolutePixelsPut(
@@ -6321,7 +6685,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Genlock Phase Offset Angle
-  @Put(path: '/output/network/genlock/phase-offset/angle')
+  @Put(
+    path: '/output/network/genlock/phase-offset/angle',
+    optionalBody: true,
+  )
   Future<chopper.Response<Angle>> _outputNetworkGenlockPhaseOffsetAnglePut(
       {@Body()
           required OutputNetworkGenlockPhaseOffsetAnglePut$RequestBody? body});
@@ -6350,7 +6717,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Genlock Phase Offset Fraction
-  @Put(path: '/output/network/genlock/phase-offset/fraction')
+  @Put(
+    path: '/output/network/genlock/phase-offset/fraction',
+    optionalBody: true,
+  )
   Future<chopper.Response<Fraction>>
       _outputNetworkGenlockPhaseOffsetFractionPut(
           {@Body()
@@ -6364,8 +6734,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(Mode, () => Mode.fromJsonFactory);
 
     return _outputNetworkGenlockPhaseOffsetModeGet(
-        $set: enums.$OutputNetworkGenlockPhaseOffsetModeGetSetMap[$set]
-            ?.toString());
+        $set: $set?.value?.toString());
   }
 
   ///Get Genlock Phase Offset Mode
@@ -6383,7 +6752,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Genlock Phase Offset Mode
-  @Put(path: '/output/network/genlock/phase-offset/mode')
+  @Put(
+    path: '/output/network/genlock/phase-offset/mode',
+    optionalBody: true,
+  )
   Future<chopper.Response<Mode>> _outputNetworkGenlockPhaseOffsetModePut(
       {@Body()
           required OutputNetworkGenlockPhaseOffsetModePut$RequestBody? body});
@@ -6394,8 +6766,7 @@ abstract class Brompton extends ChopperService {
       {enums.OutputNetworkGenlockSourceGetSet? $set}) {
     generatedMapping.putIfAbsent(Source, () => Source.fromJsonFactory);
 
-    return _outputNetworkGenlockSourceGet(
-        $set: enums.$OutputNetworkGenlockSourceGetSetMap[$set]?.toString());
+    return _outputNetworkGenlockSourceGet($set: $set?.value?.toString());
   }
 
   ///Get Genlock Source
@@ -6413,7 +6784,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Genlock Source
-  @Put(path: '/output/network/genlock/source')
+  @Put(
+    path: '/output/network/genlock/source',
+    optionalBody: true,
+  )
   Future<chopper.Response<Source>> _outputNetworkGenlockSourcePut(
       {@Body() required OutputNetworkGenlockSourcePut$RequestBody? body});
 
@@ -6446,7 +6820,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Shuttersync Custom Frame Rate
-  @Put(path: '/output/network/shuttersync/angle-settings/custom-frame-rate')
+  @Put(
+    path: '/output/network/shuttersync/angle-settings/custom-frame-rate',
+    optionalBody: true,
+  )
   Future<chopper.Response<CustomFrameRate>>
       _outputNetworkShuttersyncAngleSettingsCustomFrameRatePut(
           {@Body()
@@ -6483,7 +6860,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Shuttersync Angle
-  @Put(path: '/output/network/shuttersync/angle-settings/shutter-angle')
+  @Put(
+    path: '/output/network/shuttersync/angle-settings/shutter-angle',
+    optionalBody: true,
+  )
   Future<
       chopper.Response<
           ShutterAngle>> _outputNetworkShuttersyncAngleSettingsShutterAnglePut(
@@ -6522,7 +6902,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Shuttersync Use Custom Frame Rate
-  @Put(path: '/output/network/shuttersync/angle-settings/use-custom-frame-rate')
+  @Put(
+    path: '/output/network/shuttersync/angle-settings/use-custom-frame-rate',
+    optionalBody: true,
+  )
   Future<chopper.Response<UseCustomFrameRate>>
       _outputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut(
           {@Body()
@@ -6535,8 +6918,7 @@ abstract class Brompton extends ChopperService {
       {enums.OutputNetworkShuttersyncModeGetSet? $set}) {
     generatedMapping.putIfAbsent(Mode, () => Mode.fromJsonFactory);
 
-    return _outputNetworkShuttersyncModeGet(
-        $set: enums.$OutputNetworkShuttersyncModeGetSetMap[$set]?.toString());
+    return _outputNetworkShuttersyncModeGet($set: $set?.value?.toString());
   }
 
   ///Get Shuttersync Mode
@@ -6554,7 +6936,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Shuttersync Mode
-  @Put(path: '/output/network/shuttersync/mode')
+  @Put(
+    path: '/output/network/shuttersync/mode',
+    optionalBody: true,
+  )
   Future<chopper.Response<Mode>> _outputNetworkShuttersyncModePut(
       {@Body() required OutputNetworkShuttersyncModePut$RequestBody? body});
 
@@ -6587,7 +6972,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Shuttersync Prioritise Refresh Rate
-  @Put(path: '/output/network/shuttersync/prioritise-refresh-rate')
+  @Put(
+    path: '/output/network/shuttersync/prioritise-refresh-rate',
+    optionalBody: true,
+  )
   Future<chopper.Response<PrioritiseRefreshRate>>
       _outputNetworkShuttersyncPrioritiseRefreshRatePut(
           {@Body()
@@ -6622,7 +7010,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Shuttersync Sensor Readout Time
-  @Put(path: '/output/network/shuttersync/sensor-readout-time')
+  @Put(
+    path: '/output/network/shuttersync/sensor-readout-time',
+    optionalBody: true,
+  )
   Future<chopper.Response<SensorReadoutTime>>
       _outputNetworkShuttersyncSensorReadoutTimePut(
           {@Body()
@@ -6636,8 +7027,7 @@ abstract class Brompton extends ChopperService {
     generatedMapping.putIfAbsent(SensorType, () => SensorType.fromJsonFactory);
 
     return _outputNetworkShuttersyncSensorTypeGet(
-        $set: enums.$OutputNetworkShuttersyncSensorTypeGetSetMap[$set]
-            ?.toString());
+        $set: $set?.value?.toString());
   }
 
   ///Get Shuttersync Sensor Type
@@ -6655,7 +7045,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Shuttersync Sensor Type
-  @Put(path: '/output/network/shuttersync/sensor-type')
+  @Put(
+    path: '/output/network/shuttersync/sensor-type',
+    optionalBody: true,
+  )
   Future<chopper.Response<SensorType>> _outputNetworkShuttersyncSensorTypePut(
       {@Body()
           required OutputNetworkShuttersyncSensorTypePut$RequestBody? body});
@@ -6690,7 +7083,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Shuttersync Speed
-  @Put(path: '/output/network/shuttersync/speed-settings/shutter-speed')
+  @Put(
+    path: '/output/network/shuttersync/speed-settings/shutter-speed',
+    optionalBody: true,
+  )
   Future<
       chopper.Response<
           ShutterSpeed>> _outputNetworkShuttersyncSpeedSettingsShutterSpeedPut(
@@ -6723,7 +7119,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Shuttersync Time
-  @Put(path: '/output/network/shuttersync/speed-settings/time')
+  @Put(
+    path: '/output/network/shuttersync/speed-settings/time',
+    optionalBody: true,
+  )
   Future<chopper.Response<Time>> _outputNetworkShuttersyncSpeedSettingsTimePut(
       {@Body()
           required OutputNetworkShuttersyncSpeedSettingsTimePut$RequestBody?
@@ -6757,7 +7156,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Background Gain
-  @Put(path: '/output/network/startracker/background-gain')
+  @Put(
+    path: '/output/network/startracker/background-gain',
+    optionalBody: true,
+  )
   Future<chopper.Response<BackgroundGain>>
       _outputNetworkStartrackerBackgroundGainPut(
           {@Body()
@@ -6793,7 +7195,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Blackout Affects Markers
-  @Put(path: '/output/network/startracker/blackout-affects-markers')
+  @Put(
+    path: '/output/network/startracker/blackout-affects-markers',
+    optionalBody: true,
+  )
   Future<chopper.Response<BlackoutAffectsMarkers>>
       _outputNetworkStartrackerBlackoutAffectsMarkersPut(
           {@Body()
@@ -6830,7 +7235,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Blue Distance To Tracker
-  @Put(path: '/output/network/startracker/blue/distance-to-tracker')
+  @Put(
+    path: '/output/network/startracker/blue/distance-to-tracker',
+    optionalBody: true,
+  )
   Future<
       chopper.Response<
           DistanceToTracker>> _outputNetworkStartrackerBlueDistanceToTrackerPut(
@@ -6862,7 +7270,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Blue Enabled
-  @Put(path: '/output/network/startracker/blue/enabled')
+  @Put(
+    path: '/output/network/startracker/blue/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _outputNetworkStartrackerBlueEnabledPut(
       {@Body()
           required OutputNetworkStartrackerBlueEnabledPut$RequestBody? body});
@@ -6893,7 +7304,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Blue Marker Gain
-  @Put(path: '/output/network/startracker/blue/marker-gain')
+  @Put(
+    path: '/output/network/startracker/blue/marker-gain',
+    optionalBody: true,
+  )
   Future<chopper.Response<MarkerGain>>
       _outputNetworkStartrackerBlueMarkerGainPut(
           {@Body()
@@ -6929,7 +7343,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Blue Marker Size Scaler
-  @Put(path: '/output/network/startracker/blue/marker-size-scaler')
+  @Put(
+    path: '/output/network/startracker/blue/marker-size-scaler',
+    optionalBody: true,
+  )
   Future<
       chopper.Response<
           MarkerSizeScaler>> _outputNetworkStartrackerBlueMarkerSizeScalerPut(
@@ -6965,7 +7382,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Blue Star Map Seed
-  @Put(path: '/output/network/startracker/blue/star-map-seed')
+  @Put(
+    path: '/output/network/startracker/blue/star-map-seed',
+    optionalBody: true,
+  )
   Future<chopper.Response<StarMapSeed>>
       _outputNetworkStartrackerBlueStarMapSeedPut(
           {@Body()
@@ -6996,7 +7416,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Enabled
-  @Put(path: '/output/network/startracker/enabled')
+  @Put(
+    path: '/output/network/startracker/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _outputNetworkStartrackerEnabledPut(
       {@Body() required OutputNetworkStartrackerEnabledPut$RequestBody? body});
 
@@ -7028,7 +7451,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Frames Enabled On
-  @Put(path: '/output/network/startracker/frames-enabled-on')
+  @Put(
+    path: '/output/network/startracker/frames-enabled-on',
+    optionalBody: true,
+  )
   Future<chopper.Response<FramesEnabledOn>>
       _outputNetworkStartrackerFramesEnabledOnPut(
           {@Body()
@@ -7065,7 +7491,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Green Distance To Tracker
-  @Put(path: '/output/network/startracker/green/distance-to-tracker')
+  @Put(
+    path: '/output/network/startracker/green/distance-to-tracker',
+    optionalBody: true,
+  )
   Future<
       chopper.Response<
           DistanceToTracker>> _outputNetworkStartrackerGreenDistanceToTrackerPut(
@@ -7097,7 +7526,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Green Enabled
-  @Put(path: '/output/network/startracker/green/enabled')
+  @Put(
+    path: '/output/network/startracker/green/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _outputNetworkStartrackerGreenEnabledPut(
       {@Body()
           required OutputNetworkStartrackerGreenEnabledPut$RequestBody? body});
@@ -7128,7 +7560,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Green Marker Gain
-  @Put(path: '/output/network/startracker/green/marker-gain')
+  @Put(
+    path: '/output/network/startracker/green/marker-gain',
+    optionalBody: true,
+  )
   Future<chopper.Response<MarkerGain>>
       _outputNetworkStartrackerGreenMarkerGainPut(
           {@Body()
@@ -7165,7 +7600,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Green Marker Size Scaler
-  @Put(path: '/output/network/startracker/green/marker-size-scaler')
+  @Put(
+    path: '/output/network/startracker/green/marker-size-scaler',
+    optionalBody: true,
+  )
   Future<
       chopper.Response<
           MarkerSizeScaler>> _outputNetworkStartrackerGreenMarkerSizeScalerPut(
@@ -7201,7 +7639,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Green Star Map Seed
-  @Put(path: '/output/network/startracker/green/star-map-seed')
+  @Put(
+    path: '/output/network/startracker/green/star-map-seed',
+    optionalBody: true,
+  )
   Future<chopper.Response<StarMapSeed>>
       _outputNetworkStartrackerGreenStarMapSeedPut(
           {@Body()
@@ -7237,7 +7678,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Red Distance To Tracker
-  @Put(path: '/output/network/startracker/red/distance-to-tracker')
+  @Put(
+    path: '/output/network/startracker/red/distance-to-tracker',
+    optionalBody: true,
+  )
   Future<
       chopper.Response<
           DistanceToTracker>> _outputNetworkStartrackerRedDistanceToTrackerPut(
@@ -7269,7 +7713,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Red Enabled
-  @Put(path: '/output/network/startracker/red/enabled')
+  @Put(
+    path: '/output/network/startracker/red/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _outputNetworkStartrackerRedEnabledPut(
       {@Body()
           required OutputNetworkStartrackerRedEnabledPut$RequestBody? body});
@@ -7298,7 +7745,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Red Marker Gain
-  @Put(path: '/output/network/startracker/red/marker-gain')
+  @Put(
+    path: '/output/network/startracker/red/marker-gain',
+    optionalBody: true,
+  )
   Future<chopper.Response<MarkerGain>>
       _outputNetworkStartrackerRedMarkerGainPut(
           {@Body()
@@ -7334,7 +7784,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Red Marker Size Scaler
-  @Put(path: '/output/network/startracker/red/marker-size-scaler')
+  @Put(
+    path: '/output/network/startracker/red/marker-size-scaler',
+    optionalBody: true,
+  )
   Future<
       chopper.Response<
           MarkerSizeScaler>> _outputNetworkStartrackerRedMarkerSizeScalerPut(
@@ -7370,7 +7823,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Startracker Red Star Map Seed
-  @Put(path: '/output/network/startracker/red/star-map-seed')
+  @Put(
+    path: '/output/network/startracker/red/star-map-seed',
+    optionalBody: true,
+  )
   Future<chopper.Response<StarMapSeed>>
       _outputNetworkStartrackerRedStarMapSeedPut(
           {@Body()
@@ -7400,7 +7856,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Override Blackout Enabled
-  @Put(path: '/override/blackout/enabled')
+  @Put(
+    path: '/override/blackout/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _overrideBlackoutEnabledPut(
       {@Body() required OverrideBlackoutEnabledPut$RequestBody? body});
 
@@ -7427,7 +7886,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Blackout Fade Time
-  @Put(path: '/override/blackout/fade-time')
+  @Put(
+    path: '/override/blackout/fade-time',
+    optionalBody: true,
+  )
   Future<chopper.Response<FadeTime>> _overrideBlackoutFadeTimePut(
       {@Body() required OverrideBlackoutFadeTimePut$RequestBody? body});
 
@@ -7454,7 +7916,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Freeze Enabled
-  @Put(path: '/override/freeze/enabled')
+  @Put(
+    path: '/override/freeze/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _overrideFreezeEnabledPut(
       {@Body() required OverrideFreezeEnabledPut$RequestBody? body});
 
@@ -7482,7 +7947,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Test Pattern Custom Colour Blue
-  @Put(path: '/override/test-pattern/custom-colour/blue')
+  @Put(
+    path: '/override/test-pattern/custom-colour/blue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Blue>> _overrideTestPatternCustomColourBluePut(
       {@Body()
           required OverrideTestPatternCustomColourBluePut$RequestBody? body});
@@ -7511,7 +7979,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Test Pattern Custom Colour Green
-  @Put(path: '/override/test-pattern/custom-colour/green')
+  @Put(
+    path: '/override/test-pattern/custom-colour/green',
+    optionalBody: true,
+  )
   Future<chopper.Response<Green>> _overrideTestPatternCustomColourGreenPut(
       {@Body()
           required OverrideTestPatternCustomColourGreenPut$RequestBody? body});
@@ -7540,7 +8011,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Test Pattern Custom Colour Red
-  @Put(path: '/override/test-pattern/custom-colour/red')
+  @Put(
+    path: '/override/test-pattern/custom-colour/red',
+    optionalBody: true,
+  )
   Future<chopper.Response<Red>> _overrideTestPatternCustomColourRedPut(
       {@Body()
           required OverrideTestPatternCustomColourRedPut$RequestBody? body});
@@ -7573,7 +8047,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Test Pattern Custom Gradient End Blue
-  @Put(path: '/override/test-pattern/custom-gradient/end-colour/blue')
+  @Put(
+    path: '/override/test-pattern/custom-gradient/end-colour/blue',
+    optionalBody: true,
+  )
   Future<
       chopper
           .Response<Blue>> _overrideTestPatternCustomGradientEndColourBluePut(
@@ -7609,7 +8086,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Test Pattern Custom Gradient End Green
-  @Put(path: '/override/test-pattern/custom-gradient/end-colour/green')
+  @Put(
+    path: '/override/test-pattern/custom-gradient/end-colour/green',
+    optionalBody: true,
+  )
   Future<
       chopper
           .Response<Green>> _overrideTestPatternCustomGradientEndColourGreenPut(
@@ -7645,7 +8125,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Test Pattern Custom Gradient End Red
-  @Put(path: '/override/test-pattern/custom-gradient/end-colour/red')
+  @Put(
+    path: '/override/test-pattern/custom-gradient/end-colour/red',
+    optionalBody: true,
+  )
   Future<
       chopper
           .Response<Red>> _overrideTestPatternCustomGradientEndColourRedPut(
@@ -7662,8 +8145,7 @@ abstract class Brompton extends ChopperService {
         Orientation, () => Orientation.fromJsonFactory);
 
     return _overrideTestPatternCustomGradientOrientationGet(
-        $set: enums.$OverrideTestPatternCustomGradientOrientationGetSetMap[$set]
-            ?.toString());
+        $set: $set?.value?.toString());
   }
 
   ///Get Test Pattern Custom Gradient Orientation
@@ -7685,7 +8167,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Test Pattern Custom Gradient Orientation
-  @Put(path: '/override/test-pattern/custom-gradient/orientation')
+  @Put(
+    path: '/override/test-pattern/custom-gradient/orientation',
+    optionalBody: true,
+  )
   Future<
       chopper.Response<
           Orientation>> _overrideTestPatternCustomGradientOrientationPut(
@@ -7721,7 +8206,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Test Pattern Custom Gradient Start Green
-  @Put(path: '/override/test-pattern/custom-gradient/start-colour/blue')
+  @Put(
+    path: '/override/test-pattern/custom-gradient/start-colour/blue',
+    optionalBody: true,
+  )
   Future<
       chopper
           .Response<Blue>> _overrideTestPatternCustomGradientStartColourBluePut(
@@ -7757,7 +8245,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Test Pattern Custom Gradient Start Blue
-  @Put(path: '/override/test-pattern/custom-gradient/start-colour/green')
+  @Put(
+    path: '/override/test-pattern/custom-gradient/start-colour/green',
+    optionalBody: true,
+  )
   Future<
       chopper.Response<
           Green>> _overrideTestPatternCustomGradientStartColourGreenPut(
@@ -7793,7 +8284,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Test Pattern Custom Gradient Start Red
-  @Put(path: '/override/test-pattern/custom-gradient/start-colour/red')
+  @Put(
+    path: '/override/test-pattern/custom-gradient/start-colour/red',
+    optionalBody: true,
+  )
   Future<
       chopper
           .Response<Red>> _overrideTestPatternCustomGradientStartColourRedPut(
@@ -7825,7 +8319,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Test Pattern Enabled
-  @Put(path: '/override/test-pattern/enabled')
+  @Put(
+    path: '/override/test-pattern/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _overrideTestPatternEnabledPut(
       {@Body() required OverrideTestPatternEnabledPut$RequestBody? body});
 
@@ -7835,8 +8332,7 @@ abstract class Brompton extends ChopperService {
       {enums.OverrideTestPatternFormatGetSet? $set}) {
     generatedMapping.putIfAbsent(Format, () => Format.fromJsonFactory);
 
-    return _overrideTestPatternFormatGet(
-        $set: enums.$OverrideTestPatternFormatGetSetMap[$set]?.toString());
+    return _overrideTestPatternFormatGet($set: $set?.value?.toString());
   }
 
   ///Get Test Pattern Format
@@ -7854,7 +8350,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Test Pattern Format
-  @Put(path: '/override/test-pattern/format')
+  @Put(
+    path: '/override/test-pattern/format',
+    optionalBody: true,
+  )
   Future<chopper.Response<Format>> _overrideTestPatternFormatPut(
       {@Body() required OverrideTestPatternFormatPut$RequestBody? body});
 
@@ -7887,7 +8386,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Test Pattern Restrict To Achievable Colours
-  @Put(path: '/override/test-pattern/restrict-to-achievable-colours')
+  @Put(
+    path: '/override/test-pattern/restrict-to-achievable-colours',
+    optionalBody: true,
+  )
   Future<chopper.Response<RestrictToAchievableColours>>
       _overrideTestPatternRestrictToAchievableColoursPut(
           {@Body()
@@ -7900,8 +8402,7 @@ abstract class Brompton extends ChopperService {
       {enums.OverrideTestPatternTypeGetSet? $set}) {
     generatedMapping.putIfAbsent(Type$, () => Type$.fromJsonFactory);
 
-    return _overrideTestPatternTypeGet(
-        $set: enums.$OverrideTestPatternTypeGetSetMap[$set]?.toString());
+    return _overrideTestPatternTypeGet($set: $set?.value?.toString());
   }
 
   ///Get Test Pattern Type
@@ -7919,7 +8420,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Test Pattern Type
-  @Put(path: '/override/test-pattern/type')
+  @Put(
+    path: '/override/test-pattern/type',
+    optionalBody: true,
+  )
   Future<chopper.Response<Type$>> _overrideTestPatternTypePut(
       {@Body() required OverrideTestPatternTypePut$RequestBody? body});
 
@@ -7957,7 +8461,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Active Preset Number
-  @Put(path: '/presets/active/number')
+  @Put(
+    path: '/presets/active/number',
+    optionalBody: true,
+  )
   Future<chopper.Response<Number>> _presetsActiveNumberPut(
       {@Body() required PresetsActiveNumberPut$RequestBody? body});
 
@@ -7991,7 +8498,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Preset Name
-  @Put(path: '/presets/items/{number}/name')
+  @Put(
+    path: '/presets/items/{number}/name',
+    optionalBody: true,
+  )
   Future<chopper.Response<Name>> _presetsItemsNumberNamePut({
     @Path('number') required int? number,
     @Body() required PresetsItemsNumberNamePut$RequestBody? body,
@@ -8033,7 +8543,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 3D Lut Data
-  @Put(path: '/processing/3d-lut/data')
+  @Put(
+    path: '/processing/3d-lut/data',
+    optionalBody: true,
+  )
   Future<chopper.Response<Data>> _processing3dLutDataPut(
       {@Body() required Processing3dLutDataPut$RequestBody? body});
 
@@ -8060,7 +8573,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 3D Lut Enabled
-  @Put(path: '/processing/3d-lut/enabled')
+  @Put(
+    path: '/processing/3d-lut/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _processing3dLutEnabledPut(
       {@Body() required Processing3dLutEnabledPut$RequestBody? body});
 
@@ -8098,7 +8614,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 3D Lut Strength
-  @Put(path: '/processing/3d-lut/strength')
+  @Put(
+    path: '/processing/3d-lut/strength',
+    optionalBody: true,
+  )
   Future<chopper.Response<Strength>> _processing3dLutStrengthPut(
       {@Body() required Processing3dLutStrengthPut$RequestBody? body});
 
@@ -8126,7 +8645,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Black Blue
-  @Put(path: '/processing/colour-correct/black/blue')
+  @Put(
+    path: '/processing/colour-correct/black/blue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Blue>> _processingColourCorrectBlackBluePut(
       {@Body() required ProcessingColourCorrectBlackBluePut$RequestBody? body});
 
@@ -8154,7 +8676,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Black Green
-  @Put(path: '/processing/colour-correct/black/green')
+  @Put(
+    path: '/processing/colour-correct/black/green',
+    optionalBody: true,
+  )
   Future<chopper.Response<Green>> _processingColourCorrectBlackGreenPut(
       {@Body()
           required ProcessingColourCorrectBlackGreenPut$RequestBody? body});
@@ -8183,7 +8708,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Black Red
-  @Put(path: '/processing/colour-correct/black/red')
+  @Put(
+    path: '/processing/colour-correct/black/red',
+    optionalBody: true,
+  )
   Future<chopper.Response<Red>> _processingColourCorrectBlackRedPut(
       {@Body() required ProcessingColourCorrectBlackRedPut$RequestBody? body});
 
@@ -8211,7 +8739,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Blue Brightness
-  @Put(path: '/processing/colour-correct/blue/brightness')
+  @Put(
+    path: '/processing/colour-correct/blue/brightness',
+    optionalBody: true,
+  )
   Future<chopper.Response<Brightness>>
       _processingColourCorrectBlueBrightnessPut(
           {@Body()
@@ -8241,7 +8772,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Blue Hue
-  @Put(path: '/processing/colour-correct/blue/hue')
+  @Put(
+    path: '/processing/colour-correct/blue/hue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Hue>> _processingColourCorrectBlueHuePut(
       {@Body() required ProcessingColourCorrectBlueHuePut$RequestBody? body});
 
@@ -8269,7 +8803,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Blue Saturation
-  @Put(path: '/processing/colour-correct/blue/saturation')
+  @Put(
+    path: '/processing/colour-correct/blue/saturation',
+    optionalBody: true,
+  )
   Future<chopper.Response<Saturation>>
       _processingColourCorrectBlueSaturationPut(
           {@Body()
@@ -8302,7 +8839,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Cobalt Brightness
-  @Put(path: '/processing/colour-correct/cobalt/brightness')
+  @Put(
+    path: '/processing/colour-correct/cobalt/brightness',
+    optionalBody: true,
+  )
   Future<chopper.Response<Brightness>>
       _processingColourCorrectCobaltBrightnessPut(
           {@Body()
@@ -8333,7 +8873,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Cobalt Hue
-  @Put(path: '/processing/colour-correct/cobalt/hue')
+  @Put(
+    path: '/processing/colour-correct/cobalt/hue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Hue>> _processingColourCorrectCobaltHuePut(
       {@Body() required ProcessingColourCorrectCobaltHuePut$RequestBody? body});
 
@@ -8363,7 +8906,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Cobalt Saturation
-  @Put(path: '/processing/colour-correct/cobalt/saturation')
+  @Put(
+    path: '/processing/colour-correct/cobalt/saturation',
+    optionalBody: true,
+  )
   Future<chopper.Response<Saturation>>
       _processingColourCorrectCobaltSaturationPut(
           {@Body()
@@ -8396,7 +8942,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Crimson Brightness
-  @Put(path: '/processing/colour-correct/crimson/brightness')
+  @Put(
+    path: '/processing/colour-correct/crimson/brightness',
+    optionalBody: true,
+  )
   Future<chopper.Response<Brightness>>
       _processingColourCorrectCrimsonBrightnessPut(
           {@Body()
@@ -8427,7 +8976,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Crimson Hue
-  @Put(path: '/processing/colour-correct/crimson/hue')
+  @Put(
+    path: '/processing/colour-correct/crimson/hue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Hue>> _processingColourCorrectCrimsonHuePut(
       {@Body()
           required ProcessingColourCorrectCrimsonHuePut$RequestBody? body});
@@ -8458,7 +9010,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Crimson Saturation
-  @Put(path: '/processing/colour-correct/crimson/saturation')
+  @Put(
+    path: '/processing/colour-correct/crimson/saturation',
+    optionalBody: true,
+  )
   Future<chopper.Response<Saturation>>
       _processingColourCorrectCrimsonSaturationPut(
           {@Body()
@@ -8489,7 +9044,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Cyan Brightness
-  @Put(path: '/processing/colour-correct/cyan/brightness')
+  @Put(
+    path: '/processing/colour-correct/cyan/brightness',
+    optionalBody: true,
+  )
   Future<chopper.Response<Brightness>>
       _processingColourCorrectCyanBrightnessPut(
           {@Body()
@@ -8519,7 +9077,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Cyan Hue
-  @Put(path: '/processing/colour-correct/cyan/hue')
+  @Put(
+    path: '/processing/colour-correct/cyan/hue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Hue>> _processingColourCorrectCyanHuePut(
       {@Body() required ProcessingColourCorrectCyanHuePut$RequestBody? body});
 
@@ -8547,7 +9108,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Cyan Saturation
-  @Put(path: '/processing/colour-correct/cyan/saturation')
+  @Put(
+    path: '/processing/colour-correct/cyan/saturation',
+    optionalBody: true,
+  )
   Future<chopper.Response<Saturation>>
       _processingColourCorrectCyanSaturationPut(
           {@Body()
@@ -8578,7 +9142,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Enabled
-  @Put(path: '/processing/colour-correct/enabled')
+  @Put(
+    path: '/processing/colour-correct/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _processingColourCorrectEnabledPut(
       {@Body() required ProcessingColourCorrectEnabledPut$RequestBody? body});
 
@@ -8608,7 +9175,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Green Brightness
-  @Put(path: '/processing/colour-correct/green/brightness')
+  @Put(
+    path: '/processing/colour-correct/green/brightness',
+    optionalBody: true,
+  )
   Future<chopper.Response<Brightness>>
       _processingColourCorrectGreenBrightnessPut(
           {@Body()
@@ -8639,7 +9209,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Green Hue
-  @Put(path: '/processing/colour-correct/green/hue')
+  @Put(
+    path: '/processing/colour-correct/green/hue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Hue>> _processingColourCorrectGreenHuePut(
       {@Body() required ProcessingColourCorrectGreenHuePut$RequestBody? body});
 
@@ -8669,7 +9242,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Green Saturation
-  @Put(path: '/processing/colour-correct/green/saturation')
+  @Put(
+    path: '/processing/colour-correct/green/saturation',
+    optionalBody: true,
+  )
   Future<chopper.Response<Saturation>>
       _processingColourCorrectGreenSaturationPut(
           {@Body()
@@ -8700,7 +9276,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Lime Brightness
-  @Put(path: '/processing/colour-correct/lime/brightness')
+  @Put(
+    path: '/processing/colour-correct/lime/brightness',
+    optionalBody: true,
+  )
   Future<chopper.Response<Brightness>>
       _processingColourCorrectLimeBrightnessPut(
           {@Body()
@@ -8730,7 +9309,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Lime Hue
-  @Put(path: '/processing/colour-correct/lime/hue')
+  @Put(
+    path: '/processing/colour-correct/lime/hue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Hue>> _processingColourCorrectLimeHuePut(
       {@Body() required ProcessingColourCorrectLimeHuePut$RequestBody? body});
 
@@ -8758,7 +9340,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Lime Saturation
-  @Put(path: '/processing/colour-correct/lime/saturation')
+  @Put(
+    path: '/processing/colour-correct/lime/saturation',
+    optionalBody: true,
+  )
   Future<chopper.Response<Saturation>>
       _processingColourCorrectLimeSaturationPut(
           {@Body()
@@ -8791,7 +9376,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Magenta Brightness
-  @Put(path: '/processing/colour-correct/magenta/brightness')
+  @Put(
+    path: '/processing/colour-correct/magenta/brightness',
+    optionalBody: true,
+  )
   Future<chopper.Response<Brightness>>
       _processingColourCorrectMagentaBrightnessPut(
           {@Body()
@@ -8822,7 +9410,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Magenta Hue
-  @Put(path: '/processing/colour-correct/magenta/hue')
+  @Put(
+    path: '/processing/colour-correct/magenta/hue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Hue>> _processingColourCorrectMagentaHuePut(
       {@Body()
           required ProcessingColourCorrectMagentaHuePut$RequestBody? body});
@@ -8853,7 +9444,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Magenta Saturation
-  @Put(path: '/processing/colour-correct/magenta/saturation')
+  @Put(
+    path: '/processing/colour-correct/magenta/saturation',
+    optionalBody: true,
+  )
   Future<chopper.Response<Saturation>>
       _processingColourCorrectMagentaSaturationPut(
           {@Body()
@@ -8886,7 +9480,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Orange Brightness
-  @Put(path: '/processing/colour-correct/orange/brightness')
+  @Put(
+    path: '/processing/colour-correct/orange/brightness',
+    optionalBody: true,
+  )
   Future<chopper.Response<Brightness>>
       _processingColourCorrectOrangeBrightnessPut(
           {@Body()
@@ -8917,7 +9514,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Orange Hue
-  @Put(path: '/processing/colour-correct/orange/hue')
+  @Put(
+    path: '/processing/colour-correct/orange/hue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Hue>> _processingColourCorrectOrangeHuePut(
       {@Body() required ProcessingColourCorrectOrangeHuePut$RequestBody? body});
 
@@ -8947,7 +9547,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Orange Saturation
-  @Put(path: '/processing/colour-correct/orange/saturation')
+  @Put(
+    path: '/processing/colour-correct/orange/saturation',
+    optionalBody: true,
+  )
   Future<chopper.Response<Saturation>>
       _processingColourCorrectOrangeSaturationPut(
           {@Body()
@@ -8978,7 +9581,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Red Brightness
-  @Put(path: '/processing/colour-correct/red/brightness')
+  @Put(
+    path: '/processing/colour-correct/red/brightness',
+    optionalBody: true,
+  )
   Future<chopper.Response<Brightness>> _processingColourCorrectRedBrightnessPut(
       {@Body()
           required ProcessingColourCorrectRedBrightnessPut$RequestBody? body});
@@ -9006,7 +9612,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Red Hue
-  @Put(path: '/processing/colour-correct/red/hue')
+  @Put(
+    path: '/processing/colour-correct/red/hue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Hue>> _processingColourCorrectRedHuePut(
       {@Body() required ProcessingColourCorrectRedHuePut$RequestBody? body});
 
@@ -9034,7 +9643,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Red Saturation
-  @Put(path: '/processing/colour-correct/red/saturation')
+  @Put(
+    path: '/processing/colour-correct/red/saturation',
+    optionalBody: true,
+  )
   Future<chopper.Response<Saturation>> _processingColourCorrectRedSaturationPut(
       {@Body()
           required ProcessingColourCorrectRedSaturationPut$RequestBody? body});
@@ -9065,7 +9677,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Turquoise Brightness
-  @Put(path: '/processing/colour-correct/turquoise/brightness')
+  @Put(
+    path: '/processing/colour-correct/turquoise/brightness',
+    optionalBody: true,
+  )
   Future<
       chopper
           .Response<Brightness>> _processingColourCorrectTurquoiseBrightnessPut(
@@ -9097,7 +9712,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Turquoise Hue
-  @Put(path: '/processing/colour-correct/turquoise/hue')
+  @Put(
+    path: '/processing/colour-correct/turquoise/hue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Hue>> _processingColourCorrectTurquoiseHuePut(
       {@Body()
           required ProcessingColourCorrectTurquoiseHuePut$RequestBody? body});
@@ -9128,7 +9746,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Turquoise Saturation
-  @Put(path: '/processing/colour-correct/turquoise/saturation')
+  @Put(
+    path: '/processing/colour-correct/turquoise/saturation',
+    optionalBody: true,
+  )
   Future<
       chopper
           .Response<Saturation>> _processingColourCorrectTurquoiseSaturationPut(
@@ -9162,7 +9783,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Violet Brightness
-  @Put(path: '/processing/colour-correct/violet/brightness')
+  @Put(
+    path: '/processing/colour-correct/violet/brightness',
+    optionalBody: true,
+  )
   Future<chopper.Response<Brightness>>
       _processingColourCorrectVioletBrightnessPut(
           {@Body()
@@ -9193,7 +9817,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Violet Hue
-  @Put(path: '/processing/colour-correct/violet/hue')
+  @Put(
+    path: '/processing/colour-correct/violet/hue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Hue>> _processingColourCorrectVioletHuePut(
       {@Body() required ProcessingColourCorrectVioletHuePut$RequestBody? body});
 
@@ -9223,7 +9850,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Violet Saturation
-  @Put(path: '/processing/colour-correct/violet/saturation')
+  @Put(
+    path: '/processing/colour-correct/violet/saturation',
+    optionalBody: true,
+  )
   Future<chopper.Response<Saturation>>
       _processingColourCorrectVioletSaturationPut(
           {@Body()
@@ -9254,7 +9884,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct White Blue
-  @Put(path: '/processing/colour-correct/white/blue')
+  @Put(
+    path: '/processing/colour-correct/white/blue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Blue>> _processingColourCorrectWhiteBluePut(
       {@Body() required ProcessingColourCorrectWhiteBluePut$RequestBody? body});
 
@@ -9282,7 +9915,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct White Green
-  @Put(path: '/processing/colour-correct/white/green')
+  @Put(
+    path: '/processing/colour-correct/white/green',
+    optionalBody: true,
+  )
   Future<chopper.Response<Green>> _processingColourCorrectWhiteGreenPut(
       {@Body()
           required ProcessingColourCorrectWhiteGreenPut$RequestBody? body});
@@ -9311,7 +9947,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct White Red
-  @Put(path: '/processing/colour-correct/white/red')
+  @Put(
+    path: '/processing/colour-correct/white/red',
+    optionalBody: true,
+  )
   Future<chopper.Response<Red>> _processingColourCorrectWhiteRedPut(
       {@Body() required ProcessingColourCorrectWhiteRedPut$RequestBody? body});
 
@@ -9341,7 +9980,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Yellow Brightness
-  @Put(path: '/processing/colour-correct/yellow/brightness')
+  @Put(
+    path: '/processing/colour-correct/yellow/brightness',
+    optionalBody: true,
+  )
   Future<chopper.Response<Brightness>>
       _processingColourCorrectYellowBrightnessPut(
           {@Body()
@@ -9372,7 +10014,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Yellow Hue
-  @Put(path: '/processing/colour-correct/yellow/hue')
+  @Put(
+    path: '/processing/colour-correct/yellow/hue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Hue>> _processingColourCorrectYellowHuePut(
       {@Body() required ProcessingColourCorrectYellowHuePut$RequestBody? body});
 
@@ -9402,7 +10047,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set 14-Way Colour Correct Yellow Saturation
-  @Put(path: '/processing/colour-correct/yellow/saturation')
+  @Put(
+    path: '/processing/colour-correct/yellow/saturation',
+    optionalBody: true,
+  )
   Future<chopper.Response<Saturation>>
       _processingColourCorrectYellowSaturationPut(
           {@Body()
@@ -9437,7 +10085,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Colour Replace Apply To Brightness
-  @Put(path: '/processing/colour-replace/apply-to-brightness')
+  @Put(
+    path: '/processing/colour-replace/apply-to-brightness',
+    optionalBody: true,
+  )
   Future<chopper.Response<ApplyToBrightness>>
       _processingColourReplaceApplyToBrightnessPut(
           {@Body()
@@ -9468,7 +10119,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Colour Replace Apply To Hue
-  @Put(path: '/processing/colour-replace/apply-to-hue')
+  @Put(
+    path: '/processing/colour-replace/apply-to-hue',
+    optionalBody: true,
+  )
   Future<chopper.Response<ApplyToHue>> _processingColourReplaceApplyToHuePut(
       {@Body()
           required ProcessingColourReplaceApplyToHuePut$RequestBody? body});
@@ -9501,7 +10155,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Colour Replace Apply To Saturation
-  @Put(path: '/processing/colour-replace/apply-to-saturation')
+  @Put(
+    path: '/processing/colour-replace/apply-to-saturation',
+    optionalBody: true,
+  )
   Future<chopper.Response<ApplyToSaturation>>
       _processingColourReplaceApplyToSaturationPut(
           {@Body()
@@ -9536,7 +10193,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Colour Replace Brightness Tolerance
-  @Put(path: '/processing/colour-replace/brightness-tolerance')
+  @Put(
+    path: '/processing/colour-replace/brightness-tolerance',
+    optionalBody: true,
+  )
   Future<
       chopper.Response<
           BrightnessTolerance>> _processingColourReplaceBrightnessTolerancePut(
@@ -9568,7 +10228,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Colour Replace From Blue
-  @Put(path: '/processing/colour-replace/colour-from/blue')
+  @Put(
+    path: '/processing/colour-replace/colour-from/blue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Blue>> _processingColourReplaceColourFromBluePut(
       {@Body()
           required ProcessingColourReplaceColourFromBluePut$RequestBody? body});
@@ -9597,7 +10260,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Colour Replace From Green
-  @Put(path: '/processing/colour-replace/colour-from/green')
+  @Put(
+    path: '/processing/colour-replace/colour-from/green',
+    optionalBody: true,
+  )
   Future<chopper.Response<Green>> _processingColourReplaceColourFromGreenPut(
       {@Body()
           required ProcessingColourReplaceColourFromGreenPut$RequestBody?
@@ -9627,7 +10293,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Colour Replace From Red
-  @Put(path: '/processing/colour-replace/colour-from/red')
+  @Put(
+    path: '/processing/colour-replace/colour-from/red',
+    optionalBody: true,
+  )
   Future<chopper.Response<Red>> _processingColourReplaceColourFromRedPut(
       {@Body()
           required ProcessingColourReplaceColourFromRedPut$RequestBody? body});
@@ -9656,7 +10325,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Colour Replace To Blue
-  @Put(path: '/processing/colour-replace/colour-to/blue')
+  @Put(
+    path: '/processing/colour-replace/colour-to/blue',
+    optionalBody: true,
+  )
   Future<chopper.Response<Blue>> _processingColourReplaceColourToBluePut(
       {@Body()
           required ProcessingColourReplaceColourToBluePut$RequestBody? body});
@@ -9685,7 +10357,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Colour Replace To Green
-  @Put(path: '/processing/colour-replace/colour-to/green')
+  @Put(
+    path: '/processing/colour-replace/colour-to/green',
+    optionalBody: true,
+  )
   Future<chopper.Response<Green>> _processingColourReplaceColourToGreenPut(
       {@Body()
           required ProcessingColourReplaceColourToGreenPut$RequestBody? body});
@@ -9714,7 +10389,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Colour Replace To Red
-  @Put(path: '/processing/colour-replace/colour-to/red')
+  @Put(
+    path: '/processing/colour-replace/colour-to/red',
+    optionalBody: true,
+  )
   Future<chopper.Response<Red>> _processingColourReplaceColourToRedPut(
       {@Body()
           required ProcessingColourReplaceColourToRedPut$RequestBody? body});
@@ -9747,7 +10425,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Colour Replace Colour Tolerance
-  @Put(path: '/processing/colour-replace/colour-tolerance')
+  @Put(
+    path: '/processing/colour-replace/colour-tolerance',
+    optionalBody: true,
+  )
   Future<chopper.Response<ColourTolerance>>
       _processingColourReplaceColourTolerancePut(
           {@Body()
@@ -9778,7 +10459,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Colour Replace Enabled
-  @Put(path: '/processing/colour-replace/enabled')
+  @Put(
+    path: '/processing/colour-replace/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _processingColourReplaceEnabledPut(
       {@Body() required ProcessingColourReplaceEnabledPut$RequestBody? body});
 
@@ -9788,8 +10472,7 @@ abstract class Brompton extends ChopperService {
       {enums.ProcessingColourReplaceMethodGetSet? $set}) {
     generatedMapping.putIfAbsent(Method$, () => Method$.fromJsonFactory);
 
-    return _processingColourReplaceMethodGet(
-        $set: enums.$ProcessingColourReplaceMethodGetSetMap[$set]?.toString());
+    return _processingColourReplaceMethodGet($set: $set?.value?.toString());
   }
 
   ///Get Colour Replace Method
@@ -9807,7 +10490,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Colour Replace Method
-  @Put(path: '/processing/colour-replace/method')
+  @Put(
+    path: '/processing/colour-replace/method',
+    optionalBody: true,
+  )
   Future<chopper.Response<Method$>> _processingColourReplaceMethodPut(
       {@Body() required ProcessingColourReplaceMethodPut$RequestBody? body});
 
@@ -9835,7 +10521,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Colour Replace Softness
-  @Put(path: '/processing/colour-replace/softness')
+  @Put(
+    path: '/processing/colour-replace/softness',
+    optionalBody: true,
+  )
   Future<chopper.Response<Softness>> _processingColourReplaceSoftnessPut(
       {@Body() required ProcessingColourReplaceSoftnessPut$RequestBody? body});
 
@@ -9863,7 +10552,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Colour Replace Strength
-  @Put(path: '/processing/colour-replace/strength')
+  @Put(
+    path: '/processing/colour-replace/strength',
+    optionalBody: true,
+  )
   Future<chopper.Response<Strength>> _processingColourReplaceStrengthPut(
       {@Body() required ProcessingColourReplaceStrengthPut$RequestBody? body});
 
@@ -9891,7 +10583,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Colour Replace View Matte
-  @Put(path: '/processing/colour-replace/view-matte')
+  @Put(
+    path: '/processing/colour-replace/view-matte',
+    optionalBody: true,
+  )
   Future<chopper.Response<ViewMatte>> _processingColourReplaceViewMattePut(
       {@Body() required ProcessingColourReplaceViewMattePut$RequestBody? body});
 
@@ -9918,7 +10613,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Curves Blue Points
-  @Put(path: '/processing/curves/blue/points')
+  @Put(
+    path: '/processing/curves/blue/points',
+    optionalBody: true,
+  )
   Future<chopper.Response<Points>> _processingCurvesBluePointsPut(
       {@Body() required ProcessingCurvesBluePointsPut$RequestBody? body});
 
@@ -9945,7 +10643,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Curves Enabled
-  @Put(path: '/processing/curves/enabled')
+  @Put(
+    path: '/processing/curves/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _processingCurvesEnabledPut(
       {@Body() required ProcessingCurvesEnabledPut$RequestBody? body});
 
@@ -9973,7 +10674,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Curves Green Points
-  @Put(path: '/processing/curves/green/points')
+  @Put(
+    path: '/processing/curves/green/points',
+    optionalBody: true,
+  )
   Future<chopper.Response<Points>> _processingCurvesGreenPointsPut(
       {@Body() required ProcessingCurvesGreenPointsPut$RequestBody? body});
 
@@ -10000,7 +10704,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Curves Red Points
-  @Put(path: '/processing/curves/red/points')
+  @Put(
+    path: '/processing/curves/red/points',
+    optionalBody: true,
+  )
   Future<chopper.Response<Points>> _processingCurvesRedPointsPut(
       {@Body() required ProcessingCurvesRedPointsPut$RequestBody? body});
 
@@ -10028,7 +10735,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Curves White Points
-  @Put(path: '/processing/curves/white/points')
+  @Put(
+    path: '/processing/curves/white/points',
+    optionalBody: true,
+  )
   Future<chopper.Response<Points>> _processingCurvesWhitePointsPut(
       {@Body() required ProcessingCurvesWhitePointsPut$RequestBody? body});
 
@@ -10060,7 +10770,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Osca Module Correction Enabled
-  @Put(path: '/processing/osca/module-correction-enabled')
+  @Put(
+    path: '/processing/osca/module-correction-enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<ModuleCorrectionEnabled>>
       _processingOscaModuleCorrectionEnabledPut(
           {@Body()
@@ -10094,7 +10807,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Osca Seam Correction Enabled
-  @Put(path: '/processing/osca/seam-correction-enabled')
+  @Put(
+    path: '/processing/osca/seam-correction-enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<SeamCorrectionEnabled>>
       _processingOscaSeamCorrectionEnabledPut(
           {@Body()
@@ -10124,7 +10840,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set Scaler
-  @Put(path: '/processing/scaler/enabled')
+  @Put(
+    path: '/processing/scaler/enabled',
+    optionalBody: true,
+  )
   Future<chopper.Response<Enabled>> _processingScalerEnabledPut(
       {@Body() required ProcessingScalerEnabledPut$RequestBody? body});
 
@@ -10151,7 +10870,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set System Reboot
-  @Put(path: '/system/actions/reboot')
+  @Put(
+    path: '/system/actions/reboot',
+    optionalBody: true,
+  )
   Future<chopper.Response<Reboot>> _systemActionsRebootPut(
       {@Body() required SystemActionsRebootPut$RequestBody? body});
 
@@ -10178,7 +10900,10 @@ abstract class Brompton extends ChopperService {
   }
 
   ///Set System Shutdown
-  @Put(path: '/system/actions/shutdown')
+  @Put(
+    path: '/system/actions/shutdown',
+    optionalBody: true,
+  )
   Future<chopper.Response<Shutdown>> _systemActionsShutdownPut(
       {@Body() required SystemActionsShutdownPut$RequestBody? body});
 
