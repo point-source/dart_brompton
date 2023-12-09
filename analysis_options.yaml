@@ -5,8 +5,7 @@ analyzer:
     - "**/*.g.dart"
     - "**/*.freezed.dart"
     - "**/*.swagger.dart"
-  plugins:
-    - dart_code_metrics
+
   errors:
     invalid_annotation_target: ignore
 

@@ -1,3 +1,8 @@
+## 4.0.0
+
+- Upgrade Dart SDK requirement to ">=3.0.0 <4.0.0"
+- Upgrade dependencies
+
 ## 3.0.0
 
 - Upgrade chopper to 6.0.0

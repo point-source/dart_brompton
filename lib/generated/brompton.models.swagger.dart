@@ -4,30 +4,33 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:collection/collection.dart';
 import 'dart:convert';
 
+import 'brompton.enums.swagger.dart' as enums;
+
 part 'brompton.models.swagger.g.dart';
 
 @JsonSerializable(explicitToJson: true)
-class BadRequest {
-  BadRequest({
+class BadRequest$Response {
+  const BadRequest$Response({
     this.errorMessages,
     this.responseCode,
   });
 
-  factory BadRequest.fromJson(Map<String, dynamic> json) =>
-      _$BadRequestFromJson(json);
+  factory BadRequest$Response.fromJson(Map<String, dynamic> json) =>
+      _$BadRequest$ResponseFromJson(json);
+
+  static const toJsonFactory = _$BadRequest$ResponseToJson;
+  Map<String, dynamic> toJson() => _$BadRequest$ResponseToJson(this);
 
   @JsonKey(name: 'error-messages', defaultValue: <String>[])
   final List<String>? errorMessages;
   @JsonKey(name: 'response-code')
   final String? responseCode;
-  static const fromJsonFactory = _$BadRequestFromJson;
-  static const toJsonFactory = _$BadRequestToJson;
-  Map<String, dynamic> toJson() => _$BadRequestToJson(this);
+  static const fromJsonFactory = _$BadRequest$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is BadRequest &&
+        (other is BadRequest$Response &&
             (identical(other.errorMessages, errorMessages) ||
                 const DeepCollectionEquality()
                     .equals(other.errorMessages, errorMessages)) &&
@@ -46,16 +49,17 @@ class BadRequest {
       runtimeType.hashCode;
 }
 
-extension $BadRequestExtension on BadRequest {
-  BadRequest copyWith({List<String>? errorMessages, String? responseCode}) {
-    return BadRequest(
+extension $BadRequest$ResponseExtension on BadRequest$Response {
+  BadRequest$Response copyWith(
+      {List<String>? errorMessages, String? responseCode}) {
+    return BadRequest$Response(
         errorMessages: errorMessages ?? this.errorMessages,
         responseCode: responseCode ?? this.responseCode);
   }
 
-  BadRequest copyWithWrapped(
+  BadRequest$Response copyWithWrapped(
       {Wrapped<List<String>?>? errorMessages, Wrapped<String?>? responseCode}) {
-    return BadRequest(
+    return BadRequest$Response(
         errorMessages:
             (errorMessages != null ? errorMessages.value : this.errorMessages),
         responseCode:
@@ -64,23 +68,25 @@ extension $BadRequestExtension on BadRequest {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Angle {
-  Angle({
+class Angle$Response {
+  const Angle$Response({
     this.angle,
   });
 
-  factory Angle.fromJson(Map<String, dynamic> json) => _$AngleFromJson(json);
+  factory Angle$Response.fromJson(Map<String, dynamic> json) =>
+      _$Angle$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Angle$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Angle$ResponseToJson(this);
 
   @JsonKey(name: 'angle')
   final double? angle;
-  static const fromJsonFactory = _$AngleFromJson;
-  static const toJsonFactory = _$AngleToJson;
-  Map<String, dynamic> toJson() => _$AngleToJson(this);
+  static const fromJsonFactory = _$Angle$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Angle &&
+        (other is Angle$Response &&
             (identical(other.angle, angle) ||
                 const DeepCollectionEquality().equals(other.angle, angle)));
   }
@@ -93,35 +99,36 @@ class Angle {
       const DeepCollectionEquality().hash(angle) ^ runtimeType.hashCode;
 }
 
-extension $AngleExtension on Angle {
-  Angle copyWith({double? angle}) {
-    return Angle(angle: angle ?? this.angle);
+extension $Angle$ResponseExtension on Angle$Response {
+  Angle$Response copyWith({double? angle}) {
+    return Angle$Response(angle: angle ?? this.angle);
   }
 
-  Angle copyWithWrapped({Wrapped<double?>? angle}) {
-    return Angle(angle: (angle != null ? angle.value : this.angle));
+  Angle$Response copyWithWrapped({Wrapped<double?>? angle}) {
+    return Angle$Response(angle: (angle != null ? angle.value : this.angle));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class ApplyToBrightness {
-  ApplyToBrightness({
+class ApplyToBrightness$Response {
+  const ApplyToBrightness$Response({
     this.applyToBrightness,
   });
 
-  factory ApplyToBrightness.fromJson(Map<String, dynamic> json) =>
-      _$ApplyToBrightnessFromJson(json);
+  factory ApplyToBrightness$Response.fromJson(Map<String, dynamic> json) =>
+      _$ApplyToBrightness$ResponseFromJson(json);
+
+  static const toJsonFactory = _$ApplyToBrightness$ResponseToJson;
+  Map<String, dynamic> toJson() => _$ApplyToBrightness$ResponseToJson(this);
 
   @JsonKey(name: 'apply-to-brightness')
   final Object? applyToBrightness;
-  static const fromJsonFactory = _$ApplyToBrightnessFromJson;
-  static const toJsonFactory = _$ApplyToBrightnessToJson;
-  Map<String, dynamic> toJson() => _$ApplyToBrightnessToJson(this);
+  static const fromJsonFactory = _$ApplyToBrightness$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ApplyToBrightness &&
+        (other is ApplyToBrightness$Response &&
             (identical(other.applyToBrightness, applyToBrightness) ||
                 const DeepCollectionEquality()
                     .equals(other.applyToBrightness, applyToBrightness)));
@@ -136,14 +143,15 @@ class ApplyToBrightness {
       runtimeType.hashCode;
 }
 
-extension $ApplyToBrightnessExtension on ApplyToBrightness {
-  ApplyToBrightness copyWith({Object? applyToBrightness}) {
-    return ApplyToBrightness(
+extension $ApplyToBrightness$ResponseExtension on ApplyToBrightness$Response {
+  ApplyToBrightness$Response copyWith({Object? applyToBrightness}) {
+    return ApplyToBrightness$Response(
         applyToBrightness: applyToBrightness ?? this.applyToBrightness);
   }
 
-  ApplyToBrightness copyWithWrapped({Wrapped<Object?>? applyToBrightness}) {
-    return ApplyToBrightness(
+  ApplyToBrightness$Response copyWithWrapped(
+      {Wrapped<Object?>? applyToBrightness}) {
+    return ApplyToBrightness$Response(
         applyToBrightness: (applyToBrightness != null
             ? applyToBrightness.value
             : this.applyToBrightness));
@@ -151,24 +159,25 @@ extension $ApplyToBrightnessExtension on ApplyToBrightness {
 }
 
 @JsonSerializable(explicitToJson: true)
-class ApplyToHue {
-  ApplyToHue({
+class ApplyToHue$Response {
+  const ApplyToHue$Response({
     this.applyToHue,
   });
 
-  factory ApplyToHue.fromJson(Map<String, dynamic> json) =>
-      _$ApplyToHueFromJson(json);
+  factory ApplyToHue$Response.fromJson(Map<String, dynamic> json) =>
+      _$ApplyToHue$ResponseFromJson(json);
+
+  static const toJsonFactory = _$ApplyToHue$ResponseToJson;
+  Map<String, dynamic> toJson() => _$ApplyToHue$ResponseToJson(this);
 
   @JsonKey(name: 'apply-to-hue')
   final Object? applyToHue;
-  static const fromJsonFactory = _$ApplyToHueFromJson;
-  static const toJsonFactory = _$ApplyToHueToJson;
-  Map<String, dynamic> toJson() => _$ApplyToHueToJson(this);
+  static const fromJsonFactory = _$ApplyToHue$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ApplyToHue &&
+        (other is ApplyToHue$Response &&
             (identical(other.applyToHue, applyToHue) ||
                 const DeepCollectionEquality()
                     .equals(other.applyToHue, applyToHue)));
@@ -182,36 +191,37 @@ class ApplyToHue {
       const DeepCollectionEquality().hash(applyToHue) ^ runtimeType.hashCode;
 }
 
-extension $ApplyToHueExtension on ApplyToHue {
-  ApplyToHue copyWith({Object? applyToHue}) {
-    return ApplyToHue(applyToHue: applyToHue ?? this.applyToHue);
+extension $ApplyToHue$ResponseExtension on ApplyToHue$Response {
+  ApplyToHue$Response copyWith({Object? applyToHue}) {
+    return ApplyToHue$Response(applyToHue: applyToHue ?? this.applyToHue);
   }
 
-  ApplyToHue copyWithWrapped({Wrapped<Object?>? applyToHue}) {
-    return ApplyToHue(
+  ApplyToHue$Response copyWithWrapped({Wrapped<Object?>? applyToHue}) {
+    return ApplyToHue$Response(
         applyToHue: (applyToHue != null ? applyToHue.value : this.applyToHue));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class ApplyToSaturation {
-  ApplyToSaturation({
+class ApplyToSaturation$Response {
+  const ApplyToSaturation$Response({
     this.applyToSaturation,
   });
 
-  factory ApplyToSaturation.fromJson(Map<String, dynamic> json) =>
-      _$ApplyToSaturationFromJson(json);
+  factory ApplyToSaturation$Response.fromJson(Map<String, dynamic> json) =>
+      _$ApplyToSaturation$ResponseFromJson(json);
+
+  static const toJsonFactory = _$ApplyToSaturation$ResponseToJson;
+  Map<String, dynamic> toJson() => _$ApplyToSaturation$ResponseToJson(this);
 
   @JsonKey(name: 'apply-to-saturation')
   final Object? applyToSaturation;
-  static const fromJsonFactory = _$ApplyToSaturationFromJson;
-  static const toJsonFactory = _$ApplyToSaturationToJson;
-  Map<String, dynamic> toJson() => _$ApplyToSaturationToJson(this);
+  static const fromJsonFactory = _$ApplyToSaturation$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ApplyToSaturation &&
+        (other is ApplyToSaturation$Response &&
             (identical(other.applyToSaturation, applyToSaturation) ||
                 const DeepCollectionEquality()
                     .equals(other.applyToSaturation, applyToSaturation)));
@@ -226,14 +236,15 @@ class ApplyToSaturation {
       runtimeType.hashCode;
 }
 
-extension $ApplyToSaturationExtension on ApplyToSaturation {
-  ApplyToSaturation copyWith({Object? applyToSaturation}) {
-    return ApplyToSaturation(
+extension $ApplyToSaturation$ResponseExtension on ApplyToSaturation$Response {
+  ApplyToSaturation$Response copyWith({Object? applyToSaturation}) {
+    return ApplyToSaturation$Response(
         applyToSaturation: applyToSaturation ?? this.applyToSaturation);
   }
 
-  ApplyToSaturation copyWithWrapped({Wrapped<Object?>? applyToSaturation}) {
-    return ApplyToSaturation(
+  ApplyToSaturation$Response copyWithWrapped(
+      {Wrapped<Object?>? applyToSaturation}) {
+    return ApplyToSaturation$Response(
         applyToSaturation: (applyToSaturation != null
             ? applyToSaturation.value
             : this.applyToSaturation));
@@ -241,24 +252,25 @@ extension $ApplyToSaturationExtension on ApplyToSaturation {
 }
 
 @JsonSerializable(explicitToJson: true)
-class AssociatedCount {
-  AssociatedCount({
+class AssociatedCount$Response {
+  const AssociatedCount$Response({
     this.associatedCount,
   });
 
-  factory AssociatedCount.fromJson(Map<String, dynamic> json) =>
-      _$AssociatedCountFromJson(json);
+  factory AssociatedCount$Response.fromJson(Map<String, dynamic> json) =>
+      _$AssociatedCount$ResponseFromJson(json);
+
+  static const toJsonFactory = _$AssociatedCount$ResponseToJson;
+  Map<String, dynamic> toJson() => _$AssociatedCount$ResponseToJson(this);
 
   @JsonKey(name: 'associated-count')
   final int? associatedCount;
-  static const fromJsonFactory = _$AssociatedCountFromJson;
-  static const toJsonFactory = _$AssociatedCountToJson;
-  Map<String, dynamic> toJson() => _$AssociatedCountToJson(this);
+  static const fromJsonFactory = _$AssociatedCount$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is AssociatedCount &&
+        (other is AssociatedCount$Response &&
             (identical(other.associatedCount, associatedCount) ||
                 const DeepCollectionEquality()
                     .equals(other.associatedCount, associatedCount)));
@@ -273,14 +285,14 @@ class AssociatedCount {
       runtimeType.hashCode;
 }
 
-extension $AssociatedCountExtension on AssociatedCount {
-  AssociatedCount copyWith({int? associatedCount}) {
-    return AssociatedCount(
+extension $AssociatedCount$ResponseExtension on AssociatedCount$Response {
+  AssociatedCount$Response copyWith({int? associatedCount}) {
+    return AssociatedCount$Response(
         associatedCount: associatedCount ?? this.associatedCount);
   }
 
-  AssociatedCount copyWithWrapped({Wrapped<int?>? associatedCount}) {
-    return AssociatedCount(
+  AssociatedCount$Response copyWithWrapped({Wrapped<int?>? associatedCount}) {
+    return AssociatedCount$Response(
         associatedCount: (associatedCount != null
             ? associatedCount.value
             : this.associatedCount));
@@ -288,24 +300,25 @@ extension $AssociatedCountExtension on AssociatedCount {
 }
 
 @JsonSerializable(explicitToJson: true)
-class AutoBrighten {
-  AutoBrighten({
+class AutoBrighten$Response {
+  const AutoBrighten$Response({
     this.autoBrighten,
   });
 
-  factory AutoBrighten.fromJson(Map<String, dynamic> json) =>
-      _$AutoBrightenFromJson(json);
+  factory AutoBrighten$Response.fromJson(Map<String, dynamic> json) =>
+      _$AutoBrighten$ResponseFromJson(json);
+
+  static const toJsonFactory = _$AutoBrighten$ResponseToJson;
+  Map<String, dynamic> toJson() => _$AutoBrighten$ResponseToJson(this);
 
   @JsonKey(name: 'auto-brighten')
   final Object? autoBrighten;
-  static const fromJsonFactory = _$AutoBrightenFromJson;
-  static const toJsonFactory = _$AutoBrightenToJson;
-  Map<String, dynamic> toJson() => _$AutoBrightenToJson(this);
+  static const fromJsonFactory = _$AutoBrighten$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is AutoBrighten &&
+        (other is AutoBrighten$Response &&
             (identical(other.autoBrighten, autoBrighten) ||
                 const DeepCollectionEquality()
                     .equals(other.autoBrighten, autoBrighten)));
@@ -319,37 +332,39 @@ class AutoBrighten {
       const DeepCollectionEquality().hash(autoBrighten) ^ runtimeType.hashCode;
 }
 
-extension $AutoBrightenExtension on AutoBrighten {
-  AutoBrighten copyWith({Object? autoBrighten}) {
-    return AutoBrighten(autoBrighten: autoBrighten ?? this.autoBrighten);
+extension $AutoBrighten$ResponseExtension on AutoBrighten$Response {
+  AutoBrighten$Response copyWith({Object? autoBrighten}) {
+    return AutoBrighten$Response(
+        autoBrighten: autoBrighten ?? this.autoBrighten);
   }
 
-  AutoBrighten copyWithWrapped({Wrapped<Object?>? autoBrighten}) {
-    return AutoBrighten(
+  AutoBrighten$Response copyWithWrapped({Wrapped<Object?>? autoBrighten}) {
+    return AutoBrighten$Response(
         autoBrighten:
             (autoBrighten != null ? autoBrighten.value : this.autoBrighten));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class BackgroundGain {
-  BackgroundGain({
+class BackgroundGain$Response {
+  const BackgroundGain$Response({
     this.backgroundGain,
   });
 
-  factory BackgroundGain.fromJson(Map<String, dynamic> json) =>
-      _$BackgroundGainFromJson(json);
+  factory BackgroundGain$Response.fromJson(Map<String, dynamic> json) =>
+      _$BackgroundGain$ResponseFromJson(json);
+
+  static const toJsonFactory = _$BackgroundGain$ResponseToJson;
+  Map<String, dynamic> toJson() => _$BackgroundGain$ResponseToJson(this);
 
   @JsonKey(name: 'background-gain')
   final int? backgroundGain;
-  static const fromJsonFactory = _$BackgroundGainFromJson;
-  static const toJsonFactory = _$BackgroundGainToJson;
-  Map<String, dynamic> toJson() => _$BackgroundGainToJson(this);
+  static const fromJsonFactory = _$BackgroundGain$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is BackgroundGain &&
+        (other is BackgroundGain$Response &&
             (identical(other.backgroundGain, backgroundGain) ||
                 const DeepCollectionEquality()
                     .equals(other.backgroundGain, backgroundGain)));
@@ -364,14 +379,14 @@ class BackgroundGain {
       runtimeType.hashCode;
 }
 
-extension $BackgroundGainExtension on BackgroundGain {
-  BackgroundGain copyWith({int? backgroundGain}) {
-    return BackgroundGain(
+extension $BackgroundGain$ResponseExtension on BackgroundGain$Response {
+  BackgroundGain$Response copyWith({int? backgroundGain}) {
+    return BackgroundGain$Response(
         backgroundGain: backgroundGain ?? this.backgroundGain);
   }
 
-  BackgroundGain copyWithWrapped({Wrapped<int?>? backgroundGain}) {
-    return BackgroundGain(
+  BackgroundGain$Response copyWithWrapped({Wrapped<int?>? backgroundGain}) {
+    return BackgroundGain$Response(
         backgroundGain: (backgroundGain != null
             ? backgroundGain.value
             : this.backgroundGain));
@@ -379,24 +394,25 @@ extension $BackgroundGainExtension on BackgroundGain {
 }
 
 @JsonSerializable(explicitToJson: true)
-class BitDepth {
-  BitDepth({
+class BitDepth$Response {
+  const BitDepth$Response({
     this.bitDepth,
   });
 
-  factory BitDepth.fromJson(Map<String, dynamic> json) =>
-      _$BitDepthFromJson(json);
+  factory BitDepth$Response.fromJson(Map<String, dynamic> json) =>
+      _$BitDepth$ResponseFromJson(json);
+
+  static const toJsonFactory = _$BitDepth$ResponseToJson;
+  Map<String, dynamic> toJson() => _$BitDepth$ResponseToJson(this);
 
   @JsonKey(name: 'bit-depth')
   final int? bitDepth;
-  static const fromJsonFactory = _$BitDepthFromJson;
-  static const toJsonFactory = _$BitDepthToJson;
-  Map<String, dynamic> toJson() => _$BitDepthToJson(this);
+  static const fromJsonFactory = _$BitDepth$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is BitDepth &&
+        (other is BitDepth$Response &&
             (identical(other.bitDepth, bitDepth) ||
                 const DeepCollectionEquality()
                     .equals(other.bitDepth, bitDepth)));
@@ -410,36 +426,37 @@ class BitDepth {
       const DeepCollectionEquality().hash(bitDepth) ^ runtimeType.hashCode;
 }
 
-extension $BitDepthExtension on BitDepth {
-  BitDepth copyWith({int? bitDepth}) {
-    return BitDepth(bitDepth: bitDepth ?? this.bitDepth);
+extension $BitDepth$ResponseExtension on BitDepth$Response {
+  BitDepth$Response copyWith({int? bitDepth}) {
+    return BitDepth$Response(bitDepth: bitDepth ?? this.bitDepth);
   }
 
-  BitDepth copyWithWrapped({Wrapped<int?>? bitDepth}) {
-    return BitDepth(
+  BitDepth$Response copyWithWrapped({Wrapped<int?>? bitDepth}) {
+    return BitDepth$Response(
         bitDepth: (bitDepth != null ? bitDepth.value : this.bitDepth));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class BlackLevel {
-  BlackLevel({
+class BlackLevel$Response {
+  const BlackLevel$Response({
     this.blackLevel,
   });
 
-  factory BlackLevel.fromJson(Map<String, dynamic> json) =>
-      _$BlackLevelFromJson(json);
+  factory BlackLevel$Response.fromJson(Map<String, dynamic> json) =>
+      _$BlackLevel$ResponseFromJson(json);
+
+  static const toJsonFactory = _$BlackLevel$ResponseToJson;
+  Map<String, dynamic> toJson() => _$BlackLevel$ResponseToJson(this);
 
   @JsonKey(name: 'black-level')
   final int? blackLevel;
-  static const fromJsonFactory = _$BlackLevelFromJson;
-  static const toJsonFactory = _$BlackLevelToJson;
-  Map<String, dynamic> toJson() => _$BlackLevelToJson(this);
+  static const fromJsonFactory = _$BlackLevel$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is BlackLevel &&
+        (other is BlackLevel$Response &&
             (identical(other.blackLevel, blackLevel) ||
                 const DeepCollectionEquality()
                     .equals(other.blackLevel, blackLevel)));
@@ -453,36 +470,38 @@ class BlackLevel {
       const DeepCollectionEquality().hash(blackLevel) ^ runtimeType.hashCode;
 }
 
-extension $BlackLevelExtension on BlackLevel {
-  BlackLevel copyWith({int? blackLevel}) {
-    return BlackLevel(blackLevel: blackLevel ?? this.blackLevel);
+extension $BlackLevel$ResponseExtension on BlackLevel$Response {
+  BlackLevel$Response copyWith({int? blackLevel}) {
+    return BlackLevel$Response(blackLevel: blackLevel ?? this.blackLevel);
   }
 
-  BlackLevel copyWithWrapped({Wrapped<int?>? blackLevel}) {
-    return BlackLevel(
+  BlackLevel$Response copyWithWrapped({Wrapped<int?>? blackLevel}) {
+    return BlackLevel$Response(
         blackLevel: (blackLevel != null ? blackLevel.value : this.blackLevel));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class BlackoutAffectsMarkers {
-  BlackoutAffectsMarkers({
+class BlackoutAffectsMarkers$Response {
+  const BlackoutAffectsMarkers$Response({
     this.blackoutAffectsMarkers,
   });
 
-  factory BlackoutAffectsMarkers.fromJson(Map<String, dynamic> json) =>
-      _$BlackoutAffectsMarkersFromJson(json);
+  factory BlackoutAffectsMarkers$Response.fromJson(Map<String, dynamic> json) =>
+      _$BlackoutAffectsMarkers$ResponseFromJson(json);
+
+  static const toJsonFactory = _$BlackoutAffectsMarkers$ResponseToJson;
+  Map<String, dynamic> toJson() =>
+      _$BlackoutAffectsMarkers$ResponseToJson(this);
 
   @JsonKey(name: 'blackout-affects-markers')
   final Object? blackoutAffectsMarkers;
-  static const fromJsonFactory = _$BlackoutAffectsMarkersFromJson;
-  static const toJsonFactory = _$BlackoutAffectsMarkersToJson;
-  Map<String, dynamic> toJson() => _$BlackoutAffectsMarkersToJson(this);
+  static const fromJsonFactory = _$BlackoutAffectsMarkers$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is BlackoutAffectsMarkers &&
+        (other is BlackoutAffectsMarkers$Response &&
             (identical(other.blackoutAffectsMarkers, blackoutAffectsMarkers) ||
                 const DeepCollectionEquality().equals(
                     other.blackoutAffectsMarkers, blackoutAffectsMarkers)));
@@ -497,16 +516,17 @@ class BlackoutAffectsMarkers {
       runtimeType.hashCode;
 }
 
-extension $BlackoutAffectsMarkersExtension on BlackoutAffectsMarkers {
-  BlackoutAffectsMarkers copyWith({Object? blackoutAffectsMarkers}) {
-    return BlackoutAffectsMarkers(
+extension $BlackoutAffectsMarkers$ResponseExtension
+    on BlackoutAffectsMarkers$Response {
+  BlackoutAffectsMarkers$Response copyWith({Object? blackoutAffectsMarkers}) {
+    return BlackoutAffectsMarkers$Response(
         blackoutAffectsMarkers:
             blackoutAffectsMarkers ?? this.blackoutAffectsMarkers);
   }
 
-  BlackoutAffectsMarkers copyWithWrapped(
+  BlackoutAffectsMarkers$Response copyWithWrapped(
       {Wrapped<Object?>? blackoutAffectsMarkers}) {
-    return BlackoutAffectsMarkers(
+    return BlackoutAffectsMarkers$Response(
         blackoutAffectsMarkers: (blackoutAffectsMarkers != null
             ? blackoutAffectsMarkers.value
             : this.blackoutAffectsMarkers));
@@ -514,23 +534,25 @@ extension $BlackoutAffectsMarkersExtension on BlackoutAffectsMarkers {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Blue {
-  Blue({
+class Blue$Response {
+  const Blue$Response({
     this.blue,
   });
 
-  factory Blue.fromJson(Map<String, dynamic> json) => _$BlueFromJson(json);
+  factory Blue$Response.fromJson(Map<String, dynamic> json) =>
+      _$Blue$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Blue$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Blue$ResponseToJson(this);
 
   @JsonKey(name: 'blue')
   final int? blue;
-  static const fromJsonFactory = _$BlueFromJson;
-  static const toJsonFactory = _$BlueToJson;
-  Map<String, dynamic> toJson() => _$BlueToJson(this);
+  static const fromJsonFactory = _$Blue$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Blue &&
+        (other is Blue$Response &&
             (identical(other.blue, blue) ||
                 const DeepCollectionEquality().equals(other.blue, blue)));
   }
@@ -543,35 +565,36 @@ class Blue {
       const DeepCollectionEquality().hash(blue) ^ runtimeType.hashCode;
 }
 
-extension $BlueExtension on Blue {
-  Blue copyWith({int? blue}) {
-    return Blue(blue: blue ?? this.blue);
+extension $Blue$ResponseExtension on Blue$Response {
+  Blue$Response copyWith({int? blue}) {
+    return Blue$Response(blue: blue ?? this.blue);
   }
 
-  Blue copyWithWrapped({Wrapped<int?>? blue}) {
-    return Blue(blue: (blue != null ? blue.value : this.blue));
+  Blue$Response copyWithWrapped({Wrapped<int?>? blue}) {
+    return Blue$Response(blue: (blue != null ? blue.value : this.blue));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Brightness {
-  Brightness({
+class Brightness$Response {
+  const Brightness$Response({
     this.brightness,
   });
 
-  factory Brightness.fromJson(Map<String, dynamic> json) =>
-      _$BrightnessFromJson(json);
+  factory Brightness$Response.fromJson(Map<String, dynamic> json) =>
+      _$Brightness$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Brightness$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Brightness$ResponseToJson(this);
 
   @JsonKey(name: 'brightness')
   final double? brightness;
-  static const fromJsonFactory = _$BrightnessFromJson;
-  static const toJsonFactory = _$BrightnessToJson;
-  Map<String, dynamic> toJson() => _$BrightnessToJson(this);
+  static const fromJsonFactory = _$Brightness$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Brightness &&
+        (other is Brightness$Response &&
             (identical(other.brightness, brightness) ||
                 const DeepCollectionEquality()
                     .equals(other.brightness, brightness)));
@@ -585,36 +608,37 @@ class Brightness {
       const DeepCollectionEquality().hash(brightness) ^ runtimeType.hashCode;
 }
 
-extension $BrightnessExtension on Brightness {
-  Brightness copyWith({double? brightness}) {
-    return Brightness(brightness: brightness ?? this.brightness);
+extension $Brightness$ResponseExtension on Brightness$Response {
+  Brightness$Response copyWith({double? brightness}) {
+    return Brightness$Response(brightness: brightness ?? this.brightness);
   }
 
-  Brightness copyWithWrapped({Wrapped<double?>? brightness}) {
-    return Brightness(
+  Brightness$Response copyWithWrapped({Wrapped<double?>? brightness}) {
+    return Brightness$Response(
         brightness: (brightness != null ? brightness.value : this.brightness));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class BrightnessTolerance {
-  BrightnessTolerance({
+class BrightnessTolerance$Response {
+  const BrightnessTolerance$Response({
     this.brightnessTolerance,
   });
 
-  factory BrightnessTolerance.fromJson(Map<String, dynamic> json) =>
-      _$BrightnessToleranceFromJson(json);
+  factory BrightnessTolerance$Response.fromJson(Map<String, dynamic> json) =>
+      _$BrightnessTolerance$ResponseFromJson(json);
+
+  static const toJsonFactory = _$BrightnessTolerance$ResponseToJson;
+  Map<String, dynamic> toJson() => _$BrightnessTolerance$ResponseToJson(this);
 
   @JsonKey(name: 'brightness-tolerance')
   final double? brightnessTolerance;
-  static const fromJsonFactory = _$BrightnessToleranceFromJson;
-  static const toJsonFactory = _$BrightnessToleranceToJson;
-  Map<String, dynamic> toJson() => _$BrightnessToleranceToJson(this);
+  static const fromJsonFactory = _$BrightnessTolerance$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is BrightnessTolerance &&
+        (other is BrightnessTolerance$Response &&
             (identical(other.brightnessTolerance, brightnessTolerance) ||
                 const DeepCollectionEquality()
                     .equals(other.brightnessTolerance, brightnessTolerance)));
@@ -629,14 +653,16 @@ class BrightnessTolerance {
       runtimeType.hashCode;
 }
 
-extension $BrightnessToleranceExtension on BrightnessTolerance {
-  BrightnessTolerance copyWith({double? brightnessTolerance}) {
-    return BrightnessTolerance(
+extension $BrightnessTolerance$ResponseExtension
+    on BrightnessTolerance$Response {
+  BrightnessTolerance$Response copyWith({double? brightnessTolerance}) {
+    return BrightnessTolerance$Response(
         brightnessTolerance: brightnessTolerance ?? this.brightnessTolerance);
   }
 
-  BrightnessTolerance copyWithWrapped({Wrapped<double?>? brightnessTolerance}) {
-    return BrightnessTolerance(
+  BrightnessTolerance$Response copyWithWrapped(
+      {Wrapped<double?>? brightnessTolerance}) {
+    return BrightnessTolerance$Response(
         brightnessTolerance: (brightnessTolerance != null
             ? brightnessTolerance.value
             : this.brightnessTolerance));
@@ -644,23 +670,25 @@ extension $BrightnessToleranceExtension on BrightnessTolerance {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Colour {
-  Colour({
+class Colour$Response {
+  const Colour$Response({
     this.colour,
   });
 
-  factory Colour.fromJson(Map<String, dynamic> json) => _$ColourFromJson(json);
+  factory Colour$Response.fromJson(Map<String, dynamic> json) =>
+      _$Colour$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Colour$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Colour$ResponseToJson(this);
 
   @JsonKey(name: 'colour')
   final String? colour;
-  static const fromJsonFactory = _$ColourFromJson;
-  static const toJsonFactory = _$ColourToJson;
-  Map<String, dynamic> toJson() => _$ColourToJson(this);
+  static const fromJsonFactory = _$Colour$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Colour &&
+        (other is Colour$Response &&
             (identical(other.colour, colour) ||
                 const DeepCollectionEquality().equals(other.colour, colour)));
   }
@@ -673,35 +701,37 @@ class Colour {
       const DeepCollectionEquality().hash(colour) ^ runtimeType.hashCode;
 }
 
-extension $ColourExtension on Colour {
-  Colour copyWith({String? colour}) {
-    return Colour(colour: colour ?? this.colour);
+extension $Colour$ResponseExtension on Colour$Response {
+  Colour$Response copyWith({String? colour}) {
+    return Colour$Response(colour: colour ?? this.colour);
   }
 
-  Colour copyWithWrapped({Wrapped<String?>? colour}) {
-    return Colour(colour: (colour != null ? colour.value : this.colour));
+  Colour$Response copyWithWrapped({Wrapped<String?>? colour}) {
+    return Colour$Response(
+        colour: (colour != null ? colour.value : this.colour));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class ColourTemperature {
-  ColourTemperature({
+class ColourTemperature$Response {
+  const ColourTemperature$Response({
     this.colourTemperature,
   });
 
-  factory ColourTemperature.fromJson(Map<String, dynamic> json) =>
-      _$ColourTemperatureFromJson(json);
+  factory ColourTemperature$Response.fromJson(Map<String, dynamic> json) =>
+      _$ColourTemperature$ResponseFromJson(json);
+
+  static const toJsonFactory = _$ColourTemperature$ResponseToJson;
+  Map<String, dynamic> toJson() => _$ColourTemperature$ResponseToJson(this);
 
   @JsonKey(name: 'colour-temperature')
   final int? colourTemperature;
-  static const fromJsonFactory = _$ColourTemperatureFromJson;
-  static const toJsonFactory = _$ColourTemperatureToJson;
-  Map<String, dynamic> toJson() => _$ColourTemperatureToJson(this);
+  static const fromJsonFactory = _$ColourTemperature$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ColourTemperature &&
+        (other is ColourTemperature$Response &&
             (identical(other.colourTemperature, colourTemperature) ||
                 const DeepCollectionEquality()
                     .equals(other.colourTemperature, colourTemperature)));
@@ -716,14 +746,15 @@ class ColourTemperature {
       runtimeType.hashCode;
 }
 
-extension $ColourTemperatureExtension on ColourTemperature {
-  ColourTemperature copyWith({int? colourTemperature}) {
-    return ColourTemperature(
+extension $ColourTemperature$ResponseExtension on ColourTemperature$Response {
+  ColourTemperature$Response copyWith({int? colourTemperature}) {
+    return ColourTemperature$Response(
         colourTemperature: colourTemperature ?? this.colourTemperature);
   }
 
-  ColourTemperature copyWithWrapped({Wrapped<int?>? colourTemperature}) {
-    return ColourTemperature(
+  ColourTemperature$Response copyWithWrapped(
+      {Wrapped<int?>? colourTemperature}) {
+    return ColourTemperature$Response(
         colourTemperature: (colourTemperature != null
             ? colourTemperature.value
             : this.colourTemperature));
@@ -731,24 +762,25 @@ extension $ColourTemperatureExtension on ColourTemperature {
 }
 
 @JsonSerializable(explicitToJson: true)
-class ColourTolerance {
-  ColourTolerance({
+class ColourTolerance$Response {
+  const ColourTolerance$Response({
     this.colourTolerance,
   });
 
-  factory ColourTolerance.fromJson(Map<String, dynamic> json) =>
-      _$ColourToleranceFromJson(json);
+  factory ColourTolerance$Response.fromJson(Map<String, dynamic> json) =>
+      _$ColourTolerance$ResponseFromJson(json);
+
+  static const toJsonFactory = _$ColourTolerance$ResponseToJson;
+  Map<String, dynamic> toJson() => _$ColourTolerance$ResponseToJson(this);
 
   @JsonKey(name: 'colour-tolerance')
   final double? colourTolerance;
-  static const fromJsonFactory = _$ColourToleranceFromJson;
-  static const toJsonFactory = _$ColourToleranceToJson;
-  Map<String, dynamic> toJson() => _$ColourToleranceToJson(this);
+  static const fromJsonFactory = _$ColourTolerance$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ColourTolerance &&
+        (other is ColourTolerance$Response &&
             (identical(other.colourTolerance, colourTolerance) ||
                 const DeepCollectionEquality()
                     .equals(other.colourTolerance, colourTolerance)));
@@ -763,14 +795,15 @@ class ColourTolerance {
       runtimeType.hashCode;
 }
 
-extension $ColourToleranceExtension on ColourTolerance {
-  ColourTolerance copyWith({double? colourTolerance}) {
-    return ColourTolerance(
+extension $ColourTolerance$ResponseExtension on ColourTolerance$Response {
+  ColourTolerance$Response copyWith({double? colourTolerance}) {
+    return ColourTolerance$Response(
         colourTolerance: colourTolerance ?? this.colourTolerance);
   }
 
-  ColourTolerance copyWithWrapped({Wrapped<double?>? colourTolerance}) {
-    return ColourTolerance(
+  ColourTolerance$Response copyWithWrapped(
+      {Wrapped<double?>? colourTolerance}) {
+    return ColourTolerance$Response(
         colourTolerance: (colourTolerance != null
             ? colourTolerance.value
             : this.colourTolerance));
@@ -778,24 +811,25 @@ extension $ColourToleranceExtension on ColourTolerance {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Contrast {
-  Contrast({
+class Contrast$Response {
+  const Contrast$Response({
     this.contrast,
   });
 
-  factory Contrast.fromJson(Map<String, dynamic> json) =>
-      _$ContrastFromJson(json);
+  factory Contrast$Response.fromJson(Map<String, dynamic> json) =>
+      _$Contrast$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Contrast$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Contrast$ResponseToJson(this);
 
   @JsonKey(name: 'contrast')
   final int? contrast;
-  static const fromJsonFactory = _$ContrastFromJson;
-  static const toJsonFactory = _$ContrastToJson;
-  Map<String, dynamic> toJson() => _$ContrastToJson(this);
+  static const fromJsonFactory = _$Contrast$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Contrast &&
+        (other is Contrast$Response &&
             (identical(other.contrast, contrast) ||
                 const DeepCollectionEquality()
                     .equals(other.contrast, contrast)));
@@ -809,36 +843,37 @@ class Contrast {
       const DeepCollectionEquality().hash(contrast) ^ runtimeType.hashCode;
 }
 
-extension $ContrastExtension on Contrast {
-  Contrast copyWith({int? contrast}) {
-    return Contrast(contrast: contrast ?? this.contrast);
+extension $Contrast$ResponseExtension on Contrast$Response {
+  Contrast$Response copyWith({int? contrast}) {
+    return Contrast$Response(contrast: contrast ?? this.contrast);
   }
 
-  Contrast copyWithWrapped({Wrapped<int?>? contrast}) {
-    return Contrast(
+  Contrast$Response copyWithWrapped({Wrapped<int?>? contrast}) {
+    return Contrast$Response(
         contrast: (contrast != null ? contrast.value : this.contrast));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class CurrentDateTime {
-  CurrentDateTime({
+class CurrentDateTime$Response {
+  const CurrentDateTime$Response({
     this.currentDateTime,
   });
 
-  factory CurrentDateTime.fromJson(Map<String, dynamic> json) =>
-      _$CurrentDateTimeFromJson(json);
+  factory CurrentDateTime$Response.fromJson(Map<String, dynamic> json) =>
+      _$CurrentDateTime$ResponseFromJson(json);
+
+  static const toJsonFactory = _$CurrentDateTime$ResponseToJson;
+  Map<String, dynamic> toJson() => _$CurrentDateTime$ResponseToJson(this);
 
   @JsonKey(name: 'current-date-time')
   final String? currentDateTime;
-  static const fromJsonFactory = _$CurrentDateTimeFromJson;
-  static const toJsonFactory = _$CurrentDateTimeToJson;
-  Map<String, dynamic> toJson() => _$CurrentDateTimeToJson(this);
+  static const fromJsonFactory = _$CurrentDateTime$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is CurrentDateTime &&
+        (other is CurrentDateTime$Response &&
             (identical(other.currentDateTime, currentDateTime) ||
                 const DeepCollectionEquality()
                     .equals(other.currentDateTime, currentDateTime)));
@@ -853,14 +888,15 @@ class CurrentDateTime {
       runtimeType.hashCode;
 }
 
-extension $CurrentDateTimeExtension on CurrentDateTime {
-  CurrentDateTime copyWith({String? currentDateTime}) {
-    return CurrentDateTime(
+extension $CurrentDateTime$ResponseExtension on CurrentDateTime$Response {
+  CurrentDateTime$Response copyWith({String? currentDateTime}) {
+    return CurrentDateTime$Response(
         currentDateTime: currentDateTime ?? this.currentDateTime);
   }
 
-  CurrentDateTime copyWithWrapped({Wrapped<String?>? currentDateTime}) {
-    return CurrentDateTime(
+  CurrentDateTime$Response copyWithWrapped(
+      {Wrapped<String?>? currentDateTime}) {
+    return CurrentDateTime$Response(
         currentDateTime: (currentDateTime != null
             ? currentDateTime.value
             : this.currentDateTime));
@@ -868,24 +904,25 @@ extension $CurrentDateTimeExtension on CurrentDateTime {
 }
 
 @JsonSerializable(explicitToJson: true)
-class CustomFrameRate {
-  CustomFrameRate({
+class CustomFrameRate$Response {
+  const CustomFrameRate$Response({
     this.customFrameRate,
   });
 
-  factory CustomFrameRate.fromJson(Map<String, dynamic> json) =>
-      _$CustomFrameRateFromJson(json);
+  factory CustomFrameRate$Response.fromJson(Map<String, dynamic> json) =>
+      _$CustomFrameRate$ResponseFromJson(json);
+
+  static const toJsonFactory = _$CustomFrameRate$ResponseToJson;
+  Map<String, dynamic> toJson() => _$CustomFrameRate$ResponseToJson(this);
 
   @JsonKey(name: 'custom-frame-rate')
   final double? customFrameRate;
-  static const fromJsonFactory = _$CustomFrameRateFromJson;
-  static const toJsonFactory = _$CustomFrameRateToJson;
-  Map<String, dynamic> toJson() => _$CustomFrameRateToJson(this);
+  static const fromJsonFactory = _$CustomFrameRate$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is CustomFrameRate &&
+        (other is CustomFrameRate$Response &&
             (identical(other.customFrameRate, customFrameRate) ||
                 const DeepCollectionEquality()
                     .equals(other.customFrameRate, customFrameRate)));
@@ -900,14 +937,15 @@ class CustomFrameRate {
       runtimeType.hashCode;
 }
 
-extension $CustomFrameRateExtension on CustomFrameRate {
-  CustomFrameRate copyWith({double? customFrameRate}) {
-    return CustomFrameRate(
+extension $CustomFrameRate$ResponseExtension on CustomFrameRate$Response {
+  CustomFrameRate$Response copyWith({double? customFrameRate}) {
+    return CustomFrameRate$Response(
         customFrameRate: customFrameRate ?? this.customFrameRate);
   }
 
-  CustomFrameRate copyWithWrapped({Wrapped<double?>? customFrameRate}) {
-    return CustomFrameRate(
+  CustomFrameRate$Response copyWithWrapped(
+      {Wrapped<double?>? customFrameRate}) {
+    return CustomFrameRate$Response(
         customFrameRate: (customFrameRate != null
             ? customFrameRate.value
             : this.customFrameRate));
@@ -915,23 +953,25 @@ extension $CustomFrameRateExtension on CustomFrameRate {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Data {
-  Data({
+class Data$Response {
+  const Data$Response({
     this.data,
   });
 
-  factory Data.fromJson(Map<String, dynamic> json) => _$DataFromJson(json);
+  factory Data$Response.fromJson(Map<String, dynamic> json) =>
+      _$Data$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Data$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Data$ResponseToJson(this);
 
   @JsonKey(name: 'data', defaultValue: <Object>[])
   final List<Object>? data;
-  static const fromJsonFactory = _$DataFromJson;
-  static const toJsonFactory = _$DataToJson;
-  Map<String, dynamic> toJson() => _$DataToJson(this);
+  static const fromJsonFactory = _$Data$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Data &&
+        (other is Data$Response &&
             (identical(other.data, data) ||
                 const DeepCollectionEquality().equals(other.data, data)));
   }
@@ -944,35 +984,36 @@ class Data {
       const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
 }
 
-extension $DataExtension on Data {
-  Data copyWith({List<Object>? data}) {
-    return Data(data: data ?? this.data);
+extension $Data$ResponseExtension on Data$Response {
+  Data$Response copyWith({List<Object>? data}) {
+    return Data$Response(data: data ?? this.data);
   }
 
-  Data copyWithWrapped({Wrapped<List<Object>?>? data}) {
-    return Data(data: (data != null ? data.value : this.data));
+  Data$Response copyWithWrapped({Wrapped<List<Object>?>? data}) {
+    return Data$Response(data: (data != null ? data.value : this.data));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class DistanceToTracker {
-  DistanceToTracker({
+class DistanceToTracker$Response {
+  const DistanceToTracker$Response({
     this.distanceToTracker,
   });
 
-  factory DistanceToTracker.fromJson(Map<String, dynamic> json) =>
-      _$DistanceToTrackerFromJson(json);
+  factory DistanceToTracker$Response.fromJson(Map<String, dynamic> json) =>
+      _$DistanceToTracker$ResponseFromJson(json);
+
+  static const toJsonFactory = _$DistanceToTracker$ResponseToJson;
+  Map<String, dynamic> toJson() => _$DistanceToTracker$ResponseToJson(this);
 
   @JsonKey(name: 'distance-to-tracker')
   final double? distanceToTracker;
-  static const fromJsonFactory = _$DistanceToTrackerFromJson;
-  static const toJsonFactory = _$DistanceToTrackerToJson;
-  Map<String, dynamic> toJson() => _$DistanceToTrackerToJson(this);
+  static const fromJsonFactory = _$DistanceToTracker$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is DistanceToTracker &&
+        (other is DistanceToTracker$Response &&
             (identical(other.distanceToTracker, distanceToTracker) ||
                 const DeepCollectionEquality()
                     .equals(other.distanceToTracker, distanceToTracker)));
@@ -987,14 +1028,15 @@ class DistanceToTracker {
       runtimeType.hashCode;
 }
 
-extension $DistanceToTrackerExtension on DistanceToTracker {
-  DistanceToTracker copyWith({double? distanceToTracker}) {
-    return DistanceToTracker(
+extension $DistanceToTracker$ResponseExtension on DistanceToTracker$Response {
+  DistanceToTracker$Response copyWith({double? distanceToTracker}) {
+    return DistanceToTracker$Response(
         distanceToTracker: distanceToTracker ?? this.distanceToTracker);
   }
 
-  DistanceToTracker copyWithWrapped({Wrapped<double?>? distanceToTracker}) {
-    return DistanceToTracker(
+  DistanceToTracker$Response copyWithWrapped(
+      {Wrapped<double?>? distanceToTracker}) {
+    return DistanceToTracker$Response(
         distanceToTracker: (distanceToTracker != null
             ? distanceToTracker.value
             : this.distanceToTracker));
@@ -1002,24 +1044,25 @@ extension $DistanceToTrackerExtension on DistanceToTracker {
 }
 
 @JsonSerializable(explicitToJson: true)
-class DviColourFormat {
-  DviColourFormat({
+class DviColourFormat$Response {
+  const DviColourFormat$Response({
     this.dviColourFormat,
   });
 
-  factory DviColourFormat.fromJson(Map<String, dynamic> json) =>
-      _$DviColourFormatFromJson(json);
+  factory DviColourFormat$Response.fromJson(Map<String, dynamic> json) =>
+      _$DviColourFormat$ResponseFromJson(json);
+
+  static const toJsonFactory = _$DviColourFormat$ResponseToJson;
+  Map<String, dynamic> toJson() => _$DviColourFormat$ResponseToJson(this);
 
   @JsonKey(name: 'dvi-colour-format')
   final String? dviColourFormat;
-  static const fromJsonFactory = _$DviColourFormatFromJson;
-  static const toJsonFactory = _$DviColourFormatToJson;
-  Map<String, dynamic> toJson() => _$DviColourFormatToJson(this);
+  static const fromJsonFactory = _$DviColourFormat$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is DviColourFormat &&
+        (other is DviColourFormat$Response &&
             (identical(other.dviColourFormat, dviColourFormat) ||
                 const DeepCollectionEquality()
                     .equals(other.dviColourFormat, dviColourFormat)));
@@ -1034,14 +1077,15 @@ class DviColourFormat {
       runtimeType.hashCode;
 }
 
-extension $DviColourFormatExtension on DviColourFormat {
-  DviColourFormat copyWith({String? dviColourFormat}) {
-    return DviColourFormat(
+extension $DviColourFormat$ResponseExtension on DviColourFormat$Response {
+  DviColourFormat$Response copyWith({String? dviColourFormat}) {
+    return DviColourFormat$Response(
         dviColourFormat: dviColourFormat ?? this.dviColourFormat);
   }
 
-  DviColourFormat copyWithWrapped({Wrapped<String?>? dviColourFormat}) {
-    return DviColourFormat(
+  DviColourFormat$Response copyWithWrapped(
+      {Wrapped<String?>? dviColourFormat}) {
+    return DviColourFormat$Response(
         dviColourFormat: (dviColourFormat != null
             ? dviColourFormat.value
             : this.dviColourFormat));
@@ -1049,24 +1093,25 @@ extension $DviColourFormatExtension on DviColourFormat {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Enabled {
-  Enabled({
+class Enabled$Response {
+  const Enabled$Response({
     this.enabled,
   });
 
-  factory Enabled.fromJson(Map<String, dynamic> json) =>
-      _$EnabledFromJson(json);
+  factory Enabled$Response.fromJson(Map<String, dynamic> json) =>
+      _$Enabled$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Enabled$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Enabled$ResponseToJson(this);
 
   @JsonKey(name: 'enabled')
   final Object? enabled;
-  static const fromJsonFactory = _$EnabledFromJson;
-  static const toJsonFactory = _$EnabledToJson;
-  Map<String, dynamic> toJson() => _$EnabledToJson(this);
+  static const fromJsonFactory = _$Enabled$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Enabled &&
+        (other is Enabled$Response &&
             (identical(other.enabled, enabled) ||
                 const DeepCollectionEquality().equals(other.enabled, enabled)));
   }
@@ -1079,35 +1124,37 @@ class Enabled {
       const DeepCollectionEquality().hash(enabled) ^ runtimeType.hashCode;
 }
 
-extension $EnabledExtension on Enabled {
-  Enabled copyWith({Object? enabled}) {
-    return Enabled(enabled: enabled ?? this.enabled);
+extension $Enabled$ResponseExtension on Enabled$Response {
+  Enabled$Response copyWith({Object? enabled}) {
+    return Enabled$Response(enabled: enabled ?? this.enabled);
   }
 
-  Enabled copyWithWrapped({Wrapped<Object?>? enabled}) {
-    return Enabled(enabled: (enabled != null ? enabled.value : this.enabled));
+  Enabled$Response copyWithWrapped({Wrapped<Object?>? enabled}) {
+    return Enabled$Response(
+        enabled: (enabled != null ? enabled.value : this.enabled));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class ErrorCount {
-  ErrorCount({
+class ErrorCount$Response {
+  const ErrorCount$Response({
     this.errorCount,
   });
 
-  factory ErrorCount.fromJson(Map<String, dynamic> json) =>
-      _$ErrorCountFromJson(json);
+  factory ErrorCount$Response.fromJson(Map<String, dynamic> json) =>
+      _$ErrorCount$ResponseFromJson(json);
+
+  static const toJsonFactory = _$ErrorCount$ResponseToJson;
+  Map<String, dynamic> toJson() => _$ErrorCount$ResponseToJson(this);
 
   @JsonKey(name: 'error-count')
   final int? errorCount;
-  static const fromJsonFactory = _$ErrorCountFromJson;
-  static const toJsonFactory = _$ErrorCountToJson;
-  Map<String, dynamic> toJson() => _$ErrorCountToJson(this);
+  static const fromJsonFactory = _$ErrorCount$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ErrorCount &&
+        (other is ErrorCount$Response &&
             (identical(other.errorCount, errorCount) ||
                 const DeepCollectionEquality()
                     .equals(other.errorCount, errorCount)));
@@ -1121,36 +1168,37 @@ class ErrorCount {
       const DeepCollectionEquality().hash(errorCount) ^ runtimeType.hashCode;
 }
 
-extension $ErrorCountExtension on ErrorCount {
-  ErrorCount copyWith({int? errorCount}) {
-    return ErrorCount(errorCount: errorCount ?? this.errorCount);
+extension $ErrorCount$ResponseExtension on ErrorCount$Response {
+  ErrorCount$Response copyWith({int? errorCount}) {
+    return ErrorCount$Response(errorCount: errorCount ?? this.errorCount);
   }
 
-  ErrorCount copyWithWrapped({Wrapped<int?>? errorCount}) {
-    return ErrorCount(
+  ErrorCount$Response copyWithWrapped({Wrapped<int?>? errorCount}) {
+    return ErrorCount$Response(
         errorCount: (errorCount != null ? errorCount.value : this.errorCount));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class FadeTime {
-  FadeTime({
+class FadeTime$Response {
+  const FadeTime$Response({
     this.fadeTime,
   });
 
-  factory FadeTime.fromJson(Map<String, dynamic> json) =>
-      _$FadeTimeFromJson(json);
+  factory FadeTime$Response.fromJson(Map<String, dynamic> json) =>
+      _$FadeTime$ResponseFromJson(json);
+
+  static const toJsonFactory = _$FadeTime$ResponseToJson;
+  Map<String, dynamic> toJson() => _$FadeTime$ResponseToJson(this);
 
   @JsonKey(name: 'fade-time')
   final double? fadeTime;
-  static const fromJsonFactory = _$FadeTimeFromJson;
-  static const toJsonFactory = _$FadeTimeToJson;
-  Map<String, dynamic> toJson() => _$FadeTimeToJson(this);
+  static const fromJsonFactory = _$FadeTime$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is FadeTime &&
+        (other is FadeTime$Response &&
             (identical(other.fadeTime, fadeTime) ||
                 const DeepCollectionEquality()
                     .equals(other.fadeTime, fadeTime)));
@@ -1164,36 +1212,37 @@ class FadeTime {
       const DeepCollectionEquality().hash(fadeTime) ^ runtimeType.hashCode;
 }
 
-extension $FadeTimeExtension on FadeTime {
-  FadeTime copyWith({double? fadeTime}) {
-    return FadeTime(fadeTime: fadeTime ?? this.fadeTime);
+extension $FadeTime$ResponseExtension on FadeTime$Response {
+  FadeTime$Response copyWith({double? fadeTime}) {
+    return FadeTime$Response(fadeTime: fadeTime ?? this.fadeTime);
   }
 
-  FadeTime copyWithWrapped({Wrapped<double?>? fadeTime}) {
-    return FadeTime(
+  FadeTime$Response copyWithWrapped({Wrapped<double?>? fadeTime}) {
+    return FadeTime$Response(
         fadeTime: (fadeTime != null ? fadeTime.value : this.fadeTime));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Filename {
-  Filename({
+class Filename$Response {
+  const Filename$Response({
     this.filename,
   });
 
-  factory Filename.fromJson(Map<String, dynamic> json) =>
-      _$FilenameFromJson(json);
+  factory Filename$Response.fromJson(Map<String, dynamic> json) =>
+      _$Filename$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Filename$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Filename$ResponseToJson(this);
 
   @JsonKey(name: 'filename')
   final String? filename;
-  static const fromJsonFactory = _$FilenameFromJson;
-  static const toJsonFactory = _$FilenameToJson;
-  Map<String, dynamic> toJson() => _$FilenameToJson(this);
+  static const fromJsonFactory = _$Filename$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Filename &&
+        (other is Filename$Response &&
             (identical(other.filename, filename) ||
                 const DeepCollectionEquality()
                     .equals(other.filename, filename)));
@@ -1207,35 +1256,37 @@ class Filename {
       const DeepCollectionEquality().hash(filename) ^ runtimeType.hashCode;
 }
 
-extension $FilenameExtension on Filename {
-  Filename copyWith({String? filename}) {
-    return Filename(filename: filename ?? this.filename);
+extension $Filename$ResponseExtension on Filename$Response {
+  Filename$Response copyWith({String? filename}) {
+    return Filename$Response(filename: filename ?? this.filename);
   }
 
-  Filename copyWithWrapped({Wrapped<String?>? filename}) {
-    return Filename(
+  Filename$Response copyWithWrapped({Wrapped<String?>? filename}) {
+    return Filename$Response(
         filename: (filename != null ? filename.value : this.filename));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Format {
-  Format({
+class Format$Response {
+  const Format$Response({
     this.format,
   });
 
-  factory Format.fromJson(Map<String, dynamic> json) => _$FormatFromJson(json);
+  factory Format$Response.fromJson(Map<String, dynamic> json) =>
+      _$Format$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Format$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Format$ResponseToJson(this);
 
   @JsonKey(name: 'format')
   final String? format;
-  static const fromJsonFactory = _$FormatFromJson;
-  static const toJsonFactory = _$FormatToJson;
-  Map<String, dynamic> toJson() => _$FormatToJson(this);
+  static const fromJsonFactory = _$Format$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Format &&
+        (other is Format$Response &&
             (identical(other.format, format) ||
                 const DeepCollectionEquality().equals(other.format, format)));
   }
@@ -1248,35 +1299,37 @@ class Format {
       const DeepCollectionEquality().hash(format) ^ runtimeType.hashCode;
 }
 
-extension $FormatExtension on Format {
-  Format copyWith({String? format}) {
-    return Format(format: format ?? this.format);
+extension $Format$ResponseExtension on Format$Response {
+  Format$Response copyWith({String? format}) {
+    return Format$Response(format: format ?? this.format);
   }
 
-  Format copyWithWrapped({Wrapped<String?>? format}) {
-    return Format(format: (format != null ? format.value : this.format));
+  Format$Response copyWithWrapped({Wrapped<String?>? format}) {
+    return Format$Response(
+        format: (format != null ? format.value : this.format));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Fraction {
-  Fraction({
+class Fraction$Response {
+  const Fraction$Response({
     this.fraction,
   });
 
-  factory Fraction.fromJson(Map<String, dynamic> json) =>
-      _$FractionFromJson(json);
+  factory Fraction$Response.fromJson(Map<String, dynamic> json) =>
+      _$Fraction$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Fraction$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Fraction$ResponseToJson(this);
 
   @JsonKey(name: 'fraction')
   final double? fraction;
-  static const fromJsonFactory = _$FractionFromJson;
-  static const toJsonFactory = _$FractionToJson;
-  Map<String, dynamic> toJson() => _$FractionToJson(this);
+  static const fromJsonFactory = _$Fraction$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Fraction &&
+        (other is Fraction$Response &&
             (identical(other.fraction, fraction) ||
                 const DeepCollectionEquality()
                     .equals(other.fraction, fraction)));
@@ -1290,36 +1343,37 @@ class Fraction {
       const DeepCollectionEquality().hash(fraction) ^ runtimeType.hashCode;
 }
 
-extension $FractionExtension on Fraction {
-  Fraction copyWith({double? fraction}) {
-    return Fraction(fraction: fraction ?? this.fraction);
+extension $Fraction$ResponseExtension on Fraction$Response {
+  Fraction$Response copyWith({double? fraction}) {
+    return Fraction$Response(fraction: fraction ?? this.fraction);
   }
 
-  Fraction copyWithWrapped({Wrapped<double?>? fraction}) {
-    return Fraction(
+  Fraction$Response copyWithWrapped({Wrapped<double?>? fraction}) {
+    return Fraction$Response(
         fraction: (fraction != null ? fraction.value : this.fraction));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class FrameRateMultiplier {
-  FrameRateMultiplier({
+class FrameRateMultiplier$Response {
+  const FrameRateMultiplier$Response({
     this.frameRateMultiplier,
   });
 
-  factory FrameRateMultiplier.fromJson(Map<String, dynamic> json) =>
-      _$FrameRateMultiplierFromJson(json);
+  factory FrameRateMultiplier$Response.fromJson(Map<String, dynamic> json) =>
+      _$FrameRateMultiplier$ResponseFromJson(json);
+
+  static const toJsonFactory = _$FrameRateMultiplier$ResponseToJson;
+  Map<String, dynamic> toJson() => _$FrameRateMultiplier$ResponseToJson(this);
 
   @JsonKey(name: 'frame-rate-multiplier')
   final int? frameRateMultiplier;
-  static const fromJsonFactory = _$FrameRateMultiplierFromJson;
-  static const toJsonFactory = _$FrameRateMultiplierToJson;
-  Map<String, dynamic> toJson() => _$FrameRateMultiplierToJson(this);
+  static const fromJsonFactory = _$FrameRateMultiplier$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is FrameRateMultiplier &&
+        (other is FrameRateMultiplier$Response &&
             (identical(other.frameRateMultiplier, frameRateMultiplier) ||
                 const DeepCollectionEquality()
                     .equals(other.frameRateMultiplier, frameRateMultiplier)));
@@ -1334,14 +1388,16 @@ class FrameRateMultiplier {
       runtimeType.hashCode;
 }
 
-extension $FrameRateMultiplierExtension on FrameRateMultiplier {
-  FrameRateMultiplier copyWith({int? frameRateMultiplier}) {
-    return FrameRateMultiplier(
+extension $FrameRateMultiplier$ResponseExtension
+    on FrameRateMultiplier$Response {
+  FrameRateMultiplier$Response copyWith({int? frameRateMultiplier}) {
+    return FrameRateMultiplier$Response(
         frameRateMultiplier: frameRateMultiplier ?? this.frameRateMultiplier);
   }
 
-  FrameRateMultiplier copyWithWrapped({Wrapped<int?>? frameRateMultiplier}) {
-    return FrameRateMultiplier(
+  FrameRateMultiplier$Response copyWithWrapped(
+      {Wrapped<int?>? frameRateMultiplier}) {
+    return FrameRateMultiplier$Response(
         frameRateMultiplier: (frameRateMultiplier != null
             ? frameRateMultiplier.value
             : this.frameRateMultiplier));
@@ -1349,24 +1405,25 @@ extension $FrameRateMultiplierExtension on FrameRateMultiplier {
 }
 
 @JsonSerializable(explicitToJson: true)
-class FramesEnabledOn {
-  FramesEnabledOn({
+class FramesEnabledOn$Response {
+  const FramesEnabledOn$Response({
     this.framesEnabledOn,
   });
 
-  factory FramesEnabledOn.fromJson(Map<String, dynamic> json) =>
-      _$FramesEnabledOnFromJson(json);
+  factory FramesEnabledOn$Response.fromJson(Map<String, dynamic> json) =>
+      _$FramesEnabledOn$ResponseFromJson(json);
+
+  static const toJsonFactory = _$FramesEnabledOn$ResponseToJson;
+  Map<String, dynamic> toJson() => _$FramesEnabledOn$ResponseToJson(this);
 
   @JsonKey(name: 'frames-enabled-on', defaultValue: <Object>[])
   final List<Object>? framesEnabledOn;
-  static const fromJsonFactory = _$FramesEnabledOnFromJson;
-  static const toJsonFactory = _$FramesEnabledOnToJson;
-  Map<String, dynamic> toJson() => _$FramesEnabledOnToJson(this);
+  static const fromJsonFactory = _$FramesEnabledOn$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is FramesEnabledOn &&
+        (other is FramesEnabledOn$Response &&
             (identical(other.framesEnabledOn, framesEnabledOn) ||
                 const DeepCollectionEquality()
                     .equals(other.framesEnabledOn, framesEnabledOn)));
@@ -1381,14 +1438,15 @@ class FramesEnabledOn {
       runtimeType.hashCode;
 }
 
-extension $FramesEnabledOnExtension on FramesEnabledOn {
-  FramesEnabledOn copyWith({List<Object>? framesEnabledOn}) {
-    return FramesEnabledOn(
+extension $FramesEnabledOn$ResponseExtension on FramesEnabledOn$Response {
+  FramesEnabledOn$Response copyWith({List<Object>? framesEnabledOn}) {
+    return FramesEnabledOn$Response(
         framesEnabledOn: framesEnabledOn ?? this.framesEnabledOn);
   }
 
-  FramesEnabledOn copyWithWrapped({Wrapped<List<Object>?>? framesEnabledOn}) {
-    return FramesEnabledOn(
+  FramesEnabledOn$Response copyWithWrapped(
+      {Wrapped<List<Object>?>? framesEnabledOn}) {
+    return FramesEnabledOn$Response(
         framesEnabledOn: (framesEnabledOn != null
             ? framesEnabledOn.value
             : this.framesEnabledOn));
@@ -1396,23 +1454,25 @@ extension $FramesEnabledOnExtension on FramesEnabledOn {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Gain {
-  Gain({
+class Gain$Response {
+  const Gain$Response({
     this.gain,
   });
 
-  factory Gain.fromJson(Map<String, dynamic> json) => _$GainFromJson(json);
+  factory Gain$Response.fromJson(Map<String, dynamic> json) =>
+      _$Gain$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Gain$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Gain$ResponseToJson(this);
 
   @JsonKey(name: 'gain')
   final double? gain;
-  static const fromJsonFactory = _$GainFromJson;
-  static const toJsonFactory = _$GainToJson;
-  Map<String, dynamic> toJson() => _$GainToJson(this);
+  static const fromJsonFactory = _$Gain$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Gain &&
+        (other is Gain$Response &&
             (identical(other.gain, gain) ||
                 const DeepCollectionEquality().equals(other.gain, gain)));
   }
@@ -1425,34 +1485,36 @@ class Gain {
       const DeepCollectionEquality().hash(gain) ^ runtimeType.hashCode;
 }
 
-extension $GainExtension on Gain {
-  Gain copyWith({double? gain}) {
-    return Gain(gain: gain ?? this.gain);
+extension $Gain$ResponseExtension on Gain$Response {
+  Gain$Response copyWith({double? gain}) {
+    return Gain$Response(gain: gain ?? this.gain);
   }
 
-  Gain copyWithWrapped({Wrapped<double?>? gain}) {
-    return Gain(gain: (gain != null ? gain.value : this.gain));
+  Gain$Response copyWithWrapped({Wrapped<double?>? gain}) {
+    return Gain$Response(gain: (gain != null ? gain.value : this.gain));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Gamma {
-  Gamma({
+class Gamma$Response {
+  const Gamma$Response({
     this.gamma,
   });
 
-  factory Gamma.fromJson(Map<String, dynamic> json) => _$GammaFromJson(json);
+  factory Gamma$Response.fromJson(Map<String, dynamic> json) =>
+      _$Gamma$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Gamma$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Gamma$ResponseToJson(this);
 
   @JsonKey(name: 'gamma')
   final double? gamma;
-  static const fromJsonFactory = _$GammaFromJson;
-  static const toJsonFactory = _$GammaToJson;
-  Map<String, dynamic> toJson() => _$GammaToJson(this);
+  static const fromJsonFactory = _$Gamma$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Gamma &&
+        (other is Gamma$Response &&
             (identical(other.gamma, gamma) ||
                 const DeepCollectionEquality().equals(other.gamma, gamma)));
   }
@@ -1465,34 +1527,36 @@ class Gamma {
       const DeepCollectionEquality().hash(gamma) ^ runtimeType.hashCode;
 }
 
-extension $GammaExtension on Gamma {
-  Gamma copyWith({double? gamma}) {
-    return Gamma(gamma: gamma ?? this.gamma);
+extension $Gamma$ResponseExtension on Gamma$Response {
+  Gamma$Response copyWith({double? gamma}) {
+    return Gamma$Response(gamma: gamma ?? this.gamma);
   }
 
-  Gamma copyWithWrapped({Wrapped<double?>? gamma}) {
-    return Gamma(gamma: (gamma != null ? gamma.value : this.gamma));
+  Gamma$Response copyWithWrapped({Wrapped<double?>? gamma}) {
+    return Gamma$Response(gamma: (gamma != null ? gamma.value : this.gamma));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Gamut {
-  Gamut({
+class Gamut$Response {
+  const Gamut$Response({
     this.gamut,
   });
 
-  factory Gamut.fromJson(Map<String, dynamic> json) => _$GamutFromJson(json);
+  factory Gamut$Response.fromJson(Map<String, dynamic> json) =>
+      _$Gamut$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Gamut$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Gamut$ResponseToJson(this);
 
   @JsonKey(name: 'gamut')
   final String? gamut;
-  static const fromJsonFactory = _$GamutFromJson;
-  static const toJsonFactory = _$GamutToJson;
-  Map<String, dynamic> toJson() => _$GamutToJson(this);
+  static const fromJsonFactory = _$Gamut$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Gamut &&
+        (other is Gamut$Response &&
             (identical(other.gamut, gamut) ||
                 const DeepCollectionEquality().equals(other.gamut, gamut)));
   }
@@ -1505,35 +1569,36 @@ class Gamut {
       const DeepCollectionEquality().hash(gamut) ^ runtimeType.hashCode;
 }
 
-extension $GamutExtension on Gamut {
-  Gamut copyWith({String? gamut}) {
-    return Gamut(gamut: gamut ?? this.gamut);
+extension $Gamut$ResponseExtension on Gamut$Response {
+  Gamut$Response copyWith({String? gamut}) {
+    return Gamut$Response(gamut: gamut ?? this.gamut);
   }
 
-  Gamut copyWithWrapped({Wrapped<String?>? gamut}) {
-    return Gamut(gamut: (gamut != null ? gamut.value : this.gamut));
+  Gamut$Response copyWithWrapped({Wrapped<String?>? gamut}) {
+    return Gamut$Response(gamut: (gamut != null ? gamut.value : this.gamut));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class GlobalColourOverride {
-  GlobalColourOverride({
+class GlobalColourOverride$Response {
+  const GlobalColourOverride$Response({
     this.globalColourOverride,
   });
 
-  factory GlobalColourOverride.fromJson(Map<String, dynamic> json) =>
-      _$GlobalColourOverrideFromJson(json);
+  factory GlobalColourOverride$Response.fromJson(Map<String, dynamic> json) =>
+      _$GlobalColourOverride$ResponseFromJson(json);
+
+  static const toJsonFactory = _$GlobalColourOverride$ResponseToJson;
+  Map<String, dynamic> toJson() => _$GlobalColourOverride$ResponseToJson(this);
 
   @JsonKey(name: 'global-colour-override')
   final Object? globalColourOverride;
-  static const fromJsonFactory = _$GlobalColourOverrideFromJson;
-  static const toJsonFactory = _$GlobalColourOverrideToJson;
-  Map<String, dynamic> toJson() => _$GlobalColourOverrideToJson(this);
+  static const fromJsonFactory = _$GlobalColourOverride$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is GlobalColourOverride &&
+        (other is GlobalColourOverride$Response &&
             (identical(other.globalColourOverride, globalColourOverride) ||
                 const DeepCollectionEquality()
                     .equals(other.globalColourOverride, globalColourOverride)));
@@ -1548,16 +1613,17 @@ class GlobalColourOverride {
       runtimeType.hashCode;
 }
 
-extension $GlobalColourOverrideExtension on GlobalColourOverride {
-  GlobalColourOverride copyWith({Object? globalColourOverride}) {
-    return GlobalColourOverride(
+extension $GlobalColourOverride$ResponseExtension
+    on GlobalColourOverride$Response {
+  GlobalColourOverride$Response copyWith({Object? globalColourOverride}) {
+    return GlobalColourOverride$Response(
         globalColourOverride:
             globalColourOverride ?? this.globalColourOverride);
   }
 
-  GlobalColourOverride copyWithWrapped(
+  GlobalColourOverride$Response copyWithWrapped(
       {Wrapped<Object?>? globalColourOverride}) {
-    return GlobalColourOverride(
+    return GlobalColourOverride$Response(
         globalColourOverride: (globalColourOverride != null
             ? globalColourOverride.value
             : this.globalColourOverride));
@@ -1565,24 +1631,25 @@ extension $GlobalColourOverrideExtension on GlobalColourOverride {
 }
 
 @JsonSerializable(explicitToJson: true)
-class GlobalGainsOverride {
-  GlobalGainsOverride({
+class GlobalGainsOverride$Response {
+  const GlobalGainsOverride$Response({
     this.globalGainsOverride,
   });
 
-  factory GlobalGainsOverride.fromJson(Map<String, dynamic> json) =>
-      _$GlobalGainsOverrideFromJson(json);
+  factory GlobalGainsOverride$Response.fromJson(Map<String, dynamic> json) =>
+      _$GlobalGainsOverride$ResponseFromJson(json);
+
+  static const toJsonFactory = _$GlobalGainsOverride$ResponseToJson;
+  Map<String, dynamic> toJson() => _$GlobalGainsOverride$ResponseToJson(this);
 
   @JsonKey(name: 'global-gains-override')
   final Object? globalGainsOverride;
-  static const fromJsonFactory = _$GlobalGainsOverrideFromJson;
-  static const toJsonFactory = _$GlobalGainsOverrideToJson;
-  Map<String, dynamic> toJson() => _$GlobalGainsOverrideToJson(this);
+  static const fromJsonFactory = _$GlobalGainsOverride$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is GlobalGainsOverride &&
+        (other is GlobalGainsOverride$Response &&
             (identical(other.globalGainsOverride, globalGainsOverride) ||
                 const DeepCollectionEquality()
                     .equals(other.globalGainsOverride, globalGainsOverride)));
@@ -1597,14 +1664,16 @@ class GlobalGainsOverride {
       runtimeType.hashCode;
 }
 
-extension $GlobalGainsOverrideExtension on GlobalGainsOverride {
-  GlobalGainsOverride copyWith({Object? globalGainsOverride}) {
-    return GlobalGainsOverride(
+extension $GlobalGainsOverride$ResponseExtension
+    on GlobalGainsOverride$Response {
+  GlobalGainsOverride$Response copyWith({Object? globalGainsOverride}) {
+    return GlobalGainsOverride$Response(
         globalGainsOverride: globalGainsOverride ?? this.globalGainsOverride);
   }
 
-  GlobalGainsOverride copyWithWrapped({Wrapped<Object?>? globalGainsOverride}) {
-    return GlobalGainsOverride(
+  GlobalGainsOverride$Response copyWithWrapped(
+      {Wrapped<Object?>? globalGainsOverride}) {
+    return GlobalGainsOverride$Response(
         globalGainsOverride: (globalGainsOverride != null
             ? globalGainsOverride.value
             : this.globalGainsOverride));
@@ -1612,24 +1681,27 @@ extension $GlobalGainsOverrideExtension on GlobalGainsOverride {
 }
 
 @JsonSerializable(explicitToJson: true)
-class GlobalStartrackerOverride {
-  GlobalStartrackerOverride({
+class GlobalStartrackerOverride$Response {
+  const GlobalStartrackerOverride$Response({
     this.globalStartrackerOverride,
   });
 
-  factory GlobalStartrackerOverride.fromJson(Map<String, dynamic> json) =>
-      _$GlobalStartrackerOverrideFromJson(json);
+  factory GlobalStartrackerOverride$Response.fromJson(
+          Map<String, dynamic> json) =>
+      _$GlobalStartrackerOverride$ResponseFromJson(json);
+
+  static const toJsonFactory = _$GlobalStartrackerOverride$ResponseToJson;
+  Map<String, dynamic> toJson() =>
+      _$GlobalStartrackerOverride$ResponseToJson(this);
 
   @JsonKey(name: 'global-startracker-override')
   final Object? globalStartrackerOverride;
-  static const fromJsonFactory = _$GlobalStartrackerOverrideFromJson;
-  static const toJsonFactory = _$GlobalStartrackerOverrideToJson;
-  Map<String, dynamic> toJson() => _$GlobalStartrackerOverrideToJson(this);
+  static const fromJsonFactory = _$GlobalStartrackerOverride$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is GlobalStartrackerOverride &&
+        (other is GlobalStartrackerOverride$Response &&
             (identical(other.globalStartrackerOverride,
                     globalStartrackerOverride) ||
                 const DeepCollectionEquality().equals(
@@ -1646,16 +1718,18 @@ class GlobalStartrackerOverride {
       runtimeType.hashCode;
 }
 
-extension $GlobalStartrackerOverrideExtension on GlobalStartrackerOverride {
-  GlobalStartrackerOverride copyWith({Object? globalStartrackerOverride}) {
-    return GlobalStartrackerOverride(
+extension $GlobalStartrackerOverride$ResponseExtension
+    on GlobalStartrackerOverride$Response {
+  GlobalStartrackerOverride$Response copyWith(
+      {Object? globalStartrackerOverride}) {
+    return GlobalStartrackerOverride$Response(
         globalStartrackerOverride:
             globalStartrackerOverride ?? this.globalStartrackerOverride);
   }
 
-  GlobalStartrackerOverride copyWithWrapped(
+  GlobalStartrackerOverride$Response copyWithWrapped(
       {Wrapped<Object?>? globalStartrackerOverride}) {
-    return GlobalStartrackerOverride(
+    return GlobalStartrackerOverride$Response(
         globalStartrackerOverride: (globalStartrackerOverride != null
             ? globalStartrackerOverride.value
             : this.globalStartrackerOverride));
@@ -1663,23 +1737,25 @@ extension $GlobalStartrackerOverrideExtension on GlobalStartrackerOverride {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Green {
-  Green({
+class Green$Response {
+  const Green$Response({
     this.green,
   });
 
-  factory Green.fromJson(Map<String, dynamic> json) => _$GreenFromJson(json);
+  factory Green$Response.fromJson(Map<String, dynamic> json) =>
+      _$Green$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Green$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Green$ResponseToJson(this);
 
   @JsonKey(name: 'green')
   final int? green;
-  static const fromJsonFactory = _$GreenFromJson;
-  static const toJsonFactory = _$GreenToJson;
-  Map<String, dynamic> toJson() => _$GreenToJson(this);
+  static const fromJsonFactory = _$Green$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Green &&
+        (other is Green$Response &&
             (identical(other.green, green) ||
                 const DeepCollectionEquality().equals(other.green, green)));
   }
@@ -1692,35 +1768,36 @@ class Green {
       const DeepCollectionEquality().hash(green) ^ runtimeType.hashCode;
 }
 
-extension $GreenExtension on Green {
-  Green copyWith({int? green}) {
-    return Green(green: green ?? this.green);
+extension $Green$ResponseExtension on Green$Response {
+  Green$Response copyWith({int? green}) {
+    return Green$Response(green: green ?? this.green);
   }
 
-  Green copyWithWrapped({Wrapped<int?>? green}) {
-    return Green(green: (green != null ? green.value : this.green));
+  Green$Response copyWithWrapped({Wrapped<int?>? green}) {
+    return Green$Response(green: (green != null ? green.value : this.green));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class HdmiColourFormat {
-  HdmiColourFormat({
+class HdmiColourFormat$Response {
+  const HdmiColourFormat$Response({
     this.hdmiColourFormat,
   });
 
-  factory HdmiColourFormat.fromJson(Map<String, dynamic> json) =>
-      _$HdmiColourFormatFromJson(json);
+  factory HdmiColourFormat$Response.fromJson(Map<String, dynamic> json) =>
+      _$HdmiColourFormat$ResponseFromJson(json);
+
+  static const toJsonFactory = _$HdmiColourFormat$ResponseToJson;
+  Map<String, dynamic> toJson() => _$HdmiColourFormat$ResponseToJson(this);
 
   @JsonKey(name: 'hdmi-colour-format')
   final String? hdmiColourFormat;
-  static const fromJsonFactory = _$HdmiColourFormatFromJson;
-  static const toJsonFactory = _$HdmiColourFormatToJson;
-  Map<String, dynamic> toJson() => _$HdmiColourFormatToJson(this);
+  static const fromJsonFactory = _$HdmiColourFormat$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is HdmiColourFormat &&
+        (other is HdmiColourFormat$Response &&
             (identical(other.hdmiColourFormat, hdmiColourFormat) ||
                 const DeepCollectionEquality()
                     .equals(other.hdmiColourFormat, hdmiColourFormat)));
@@ -1735,14 +1812,15 @@ class HdmiColourFormat {
       runtimeType.hashCode;
 }
 
-extension $HdmiColourFormatExtension on HdmiColourFormat {
-  HdmiColourFormat copyWith({String? hdmiColourFormat}) {
-    return HdmiColourFormat(
+extension $HdmiColourFormat$ResponseExtension on HdmiColourFormat$Response {
+  HdmiColourFormat$Response copyWith({String? hdmiColourFormat}) {
+    return HdmiColourFormat$Response(
         hdmiColourFormat: hdmiColourFormat ?? this.hdmiColourFormat);
   }
 
-  HdmiColourFormat copyWithWrapped({Wrapped<String?>? hdmiColourFormat}) {
-    return HdmiColourFormat(
+  HdmiColourFormat$Response copyWithWrapped(
+      {Wrapped<String?>? hdmiColourFormat}) {
+    return HdmiColourFormat$Response(
         hdmiColourFormat: (hdmiColourFormat != null
             ? hdmiColourFormat.value
             : this.hdmiColourFormat));
@@ -1750,23 +1828,25 @@ extension $HdmiColourFormatExtension on HdmiColourFormat {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Height {
-  Height({
+class Height$Response {
+  const Height$Response({
     this.height,
   });
 
-  factory Height.fromJson(Map<String, dynamic> json) => _$HeightFromJson(json);
+  factory Height$Response.fromJson(Map<String, dynamic> json) =>
+      _$Height$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Height$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Height$ResponseToJson(this);
 
   @JsonKey(name: 'height')
   final int? height;
-  static const fromJsonFactory = _$HeightFromJson;
-  static const toJsonFactory = _$HeightToJson;
-  Map<String, dynamic> toJson() => _$HeightToJson(this);
+  static const fromJsonFactory = _$Height$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Height &&
+        (other is Height$Response &&
             (identical(other.height, height) ||
                 const DeepCollectionEquality().equals(other.height, height)));
   }
@@ -1779,37 +1859,41 @@ class Height {
       const DeepCollectionEquality().hash(height) ^ runtimeType.hashCode;
 }
 
-extension $HeightExtension on Height {
-  Height copyWith({int? height}) {
-    return Height(height: height ?? this.height);
+extension $Height$ResponseExtension on Height$Response {
+  Height$Response copyWith({int? height}) {
+    return Height$Response(height: height ?? this.height);
   }
 
-  Height copyWithWrapped({Wrapped<int?>? height}) {
-    return Height(height: (height != null ? height.value : this.height));
+  Height$Response copyWithWrapped({Wrapped<int?>? height}) {
+    return Height$Response(
+        height: (height != null ? height.value : this.height));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class HighlightOverbrightPixelsEnabled {
-  HighlightOverbrightPixelsEnabled({
+class HighlightOverbrightPixelsEnabled$Response {
+  const HighlightOverbrightPixelsEnabled$Response({
     this.highlightOverbrightPixelsEnabled,
   });
 
-  factory HighlightOverbrightPixelsEnabled.fromJson(
+  factory HighlightOverbrightPixelsEnabled$Response.fromJson(
           Map<String, dynamic> json) =>
-      _$HighlightOverbrightPixelsEnabledFromJson(json);
+      _$HighlightOverbrightPixelsEnabled$ResponseFromJson(json);
+
+  static const toJsonFactory =
+      _$HighlightOverbrightPixelsEnabled$ResponseToJson;
+  Map<String, dynamic> toJson() =>
+      _$HighlightOverbrightPixelsEnabled$ResponseToJson(this);
 
   @JsonKey(name: 'highlight-overbright-pixels-enabled')
   final Object? highlightOverbrightPixelsEnabled;
-  static const fromJsonFactory = _$HighlightOverbrightPixelsEnabledFromJson;
-  static const toJsonFactory = _$HighlightOverbrightPixelsEnabledToJson;
-  Map<String, dynamic> toJson() =>
-      _$HighlightOverbrightPixelsEnabledToJson(this);
+  static const fromJsonFactory =
+      _$HighlightOverbrightPixelsEnabled$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is HighlightOverbrightPixelsEnabled &&
+        (other is HighlightOverbrightPixelsEnabled$Response &&
             (identical(other.highlightOverbrightPixelsEnabled,
                     highlightOverbrightPixelsEnabled) ||
                 const DeepCollectionEquality().equals(
@@ -1826,18 +1910,18 @@ class HighlightOverbrightPixelsEnabled {
       runtimeType.hashCode;
 }
 
-extension $HighlightOverbrightPixelsEnabledExtension
-    on HighlightOverbrightPixelsEnabled {
-  HighlightOverbrightPixelsEnabled copyWith(
+extension $HighlightOverbrightPixelsEnabled$ResponseExtension
+    on HighlightOverbrightPixelsEnabled$Response {
+  HighlightOverbrightPixelsEnabled$Response copyWith(
       {Object? highlightOverbrightPixelsEnabled}) {
-    return HighlightOverbrightPixelsEnabled(
+    return HighlightOverbrightPixelsEnabled$Response(
         highlightOverbrightPixelsEnabled: highlightOverbrightPixelsEnabled ??
             this.highlightOverbrightPixelsEnabled);
   }
 
-  HighlightOverbrightPixelsEnabled copyWithWrapped(
+  HighlightOverbrightPixelsEnabled$Response copyWithWrapped(
       {Wrapped<Object?>? highlightOverbrightPixelsEnabled}) {
-    return HighlightOverbrightPixelsEnabled(
+    return HighlightOverbrightPixelsEnabled$Response(
         highlightOverbrightPixelsEnabled:
             (highlightOverbrightPixelsEnabled != null
                 ? highlightOverbrightPixelsEnabled.value
@@ -1846,26 +1930,29 @@ extension $HighlightOverbrightPixelsEnabledExtension
 }
 
 @JsonSerializable(explicitToJson: true)
-class HightlightOutOfGamutPixelsEnabled {
-  HightlightOutOfGamutPixelsEnabled({
+class HightlightOutOfGamutPixelsEnabled$Response {
+  const HightlightOutOfGamutPixelsEnabled$Response({
     this.hightlightOutOfGamutPixelsEnabled,
   });
 
-  factory HightlightOutOfGamutPixelsEnabled.fromJson(
+  factory HightlightOutOfGamutPixelsEnabled$Response.fromJson(
           Map<String, dynamic> json) =>
-      _$HightlightOutOfGamutPixelsEnabledFromJson(json);
+      _$HightlightOutOfGamutPixelsEnabled$ResponseFromJson(json);
+
+  static const toJsonFactory =
+      _$HightlightOutOfGamutPixelsEnabled$ResponseToJson;
+  Map<String, dynamic> toJson() =>
+      _$HightlightOutOfGamutPixelsEnabled$ResponseToJson(this);
 
   @JsonKey(name: 'hightlight-out-of-gamut-pixels-enabled')
   final Object? hightlightOutOfGamutPixelsEnabled;
-  static const fromJsonFactory = _$HightlightOutOfGamutPixelsEnabledFromJson;
-  static const toJsonFactory = _$HightlightOutOfGamutPixelsEnabledToJson;
-  Map<String, dynamic> toJson() =>
-      _$HightlightOutOfGamutPixelsEnabledToJson(this);
+  static const fromJsonFactory =
+      _$HightlightOutOfGamutPixelsEnabled$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is HightlightOutOfGamutPixelsEnabled &&
+        (other is HightlightOutOfGamutPixelsEnabled$Response &&
             (identical(other.hightlightOutOfGamutPixelsEnabled,
                     hightlightOutOfGamutPixelsEnabled) ||
                 const DeepCollectionEquality().equals(
@@ -1882,18 +1969,18 @@ class HightlightOutOfGamutPixelsEnabled {
       runtimeType.hashCode;
 }
 
-extension $HightlightOutOfGamutPixelsEnabledExtension
-    on HightlightOutOfGamutPixelsEnabled {
-  HightlightOutOfGamutPixelsEnabled copyWith(
+extension $HightlightOutOfGamutPixelsEnabled$ResponseExtension
+    on HightlightOutOfGamutPixelsEnabled$Response {
+  HightlightOutOfGamutPixelsEnabled$Response copyWith(
       {Object? hightlightOutOfGamutPixelsEnabled}) {
-    return HightlightOutOfGamutPixelsEnabled(
+    return HightlightOutOfGamutPixelsEnabled$Response(
         hightlightOutOfGamutPixelsEnabled: hightlightOutOfGamutPixelsEnabled ??
             this.hightlightOutOfGamutPixelsEnabled);
   }
 
-  HightlightOutOfGamutPixelsEnabled copyWithWrapped(
+  HightlightOutOfGamutPixelsEnabled$Response copyWithWrapped(
       {Wrapped<Object?>? hightlightOutOfGamutPixelsEnabled}) {
-    return HightlightOutOfGamutPixelsEnabled(
+    return HightlightOutOfGamutPixelsEnabled$Response(
         hightlightOutOfGamutPixelsEnabled:
             (hightlightOutOfGamutPixelsEnabled != null
                 ? hightlightOutOfGamutPixelsEnabled.value
@@ -1902,23 +1989,25 @@ extension $HightlightOutOfGamutPixelsEnabledExtension
 }
 
 @JsonSerializable(explicitToJson: true)
-class Hue {
-  Hue({
+class Hue$Response {
+  const Hue$Response({
     this.hue,
   });
 
-  factory Hue.fromJson(Map<String, dynamic> json) => _$HueFromJson(json);
+  factory Hue$Response.fromJson(Map<String, dynamic> json) =>
+      _$Hue$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Hue$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Hue$ResponseToJson(this);
 
   @JsonKey(name: 'hue')
   final double? hue;
-  static const fromJsonFactory = _$HueFromJson;
-  static const toJsonFactory = _$HueToJson;
-  Map<String, dynamic> toJson() => _$HueToJson(this);
+  static const fromJsonFactory = _$Hue$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Hue &&
+        (other is Hue$Response &&
             (identical(other.hue, hue) ||
                 const DeepCollectionEquality().equals(other.hue, hue)));
   }
@@ -1931,35 +2020,38 @@ class Hue {
       const DeepCollectionEquality().hash(hue) ^ runtimeType.hashCode;
 }
 
-extension $HueExtension on Hue {
-  Hue copyWith({double? hue}) {
-    return Hue(hue: hue ?? this.hue);
+extension $Hue$ResponseExtension on Hue$Response {
+  Hue$Response copyWith({double? hue}) {
+    return Hue$Response(hue: hue ?? this.hue);
   }
 
-  Hue copyWithWrapped({Wrapped<double?>? hue}) {
-    return Hue(hue: (hue != null ? hue.value : this.hue));
+  Hue$Response copyWithWrapped({Wrapped<double?>? hue}) {
+    return Hue$Response(hue: (hue != null ? hue.value : this.hue));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class InfoFrameOverrideEnabled {
-  InfoFrameOverrideEnabled({
+class InfoFrameOverrideEnabled$Response {
+  const InfoFrameOverrideEnabled$Response({
     this.infoFrameOverrideEnabled,
   });
 
-  factory InfoFrameOverrideEnabled.fromJson(Map<String, dynamic> json) =>
-      _$InfoFrameOverrideEnabledFromJson(json);
+  factory InfoFrameOverrideEnabled$Response.fromJson(
+          Map<String, dynamic> json) =>
+      _$InfoFrameOverrideEnabled$ResponseFromJson(json);
+
+  static const toJsonFactory = _$InfoFrameOverrideEnabled$ResponseToJson;
+  Map<String, dynamic> toJson() =>
+      _$InfoFrameOverrideEnabled$ResponseToJson(this);
 
   @JsonKey(name: 'info-frame-override-enabled')
   final Object? infoFrameOverrideEnabled;
-  static const fromJsonFactory = _$InfoFrameOverrideEnabledFromJson;
-  static const toJsonFactory = _$InfoFrameOverrideEnabledToJson;
-  Map<String, dynamic> toJson() => _$InfoFrameOverrideEnabledToJson(this);
+  static const fromJsonFactory = _$InfoFrameOverrideEnabled$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is InfoFrameOverrideEnabled &&
+        (other is InfoFrameOverrideEnabled$Response &&
             (identical(
                     other.infoFrameOverrideEnabled, infoFrameOverrideEnabled) ||
                 const DeepCollectionEquality().equals(
@@ -1975,16 +2067,18 @@ class InfoFrameOverrideEnabled {
       runtimeType.hashCode;
 }
 
-extension $InfoFrameOverrideEnabledExtension on InfoFrameOverrideEnabled {
-  InfoFrameOverrideEnabled copyWith({Object? infoFrameOverrideEnabled}) {
-    return InfoFrameOverrideEnabled(
+extension $InfoFrameOverrideEnabled$ResponseExtension
+    on InfoFrameOverrideEnabled$Response {
+  InfoFrameOverrideEnabled$Response copyWith(
+      {Object? infoFrameOverrideEnabled}) {
+    return InfoFrameOverrideEnabled$Response(
         infoFrameOverrideEnabled:
             infoFrameOverrideEnabled ?? this.infoFrameOverrideEnabled);
   }
 
-  InfoFrameOverrideEnabled copyWithWrapped(
+  InfoFrameOverrideEnabled$Response copyWithWrapped(
       {Wrapped<Object?>? infoFrameOverrideEnabled}) {
-    return InfoFrameOverrideEnabled(
+    return InfoFrameOverrideEnabled$Response(
         infoFrameOverrideEnabled: (infoFrameOverrideEnabled != null
             ? infoFrameOverrideEnabled.value
             : this.infoFrameOverrideEnabled));
@@ -1992,24 +2086,25 @@ extension $InfoFrameOverrideEnabledExtension on InfoFrameOverrideEnabled {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Intensity {
-  Intensity({
+class Intensity$Response {
+  const Intensity$Response({
     this.intensity,
   });
 
-  factory Intensity.fromJson(Map<String, dynamic> json) =>
-      _$IntensityFromJson(json);
+  factory Intensity$Response.fromJson(Map<String, dynamic> json) =>
+      _$Intensity$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Intensity$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Intensity$ResponseToJson(this);
 
   @JsonKey(name: 'intensity')
   final double? intensity;
-  static const fromJsonFactory = _$IntensityFromJson;
-  static const toJsonFactory = _$IntensityToJson;
-  Map<String, dynamic> toJson() => _$IntensityToJson(this);
+  static const fromJsonFactory = _$Intensity$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Intensity &&
+        (other is Intensity$Response &&
             (identical(other.intensity, intensity) ||
                 const DeepCollectionEquality()
                     .equals(other.intensity, intensity)));
@@ -2023,36 +2118,37 @@ class Intensity {
       const DeepCollectionEquality().hash(intensity) ^ runtimeType.hashCode;
 }
 
-extension $IntensityExtension on Intensity {
-  Intensity copyWith({double? intensity}) {
-    return Intensity(intensity: intensity ?? this.intensity);
+extension $Intensity$ResponseExtension on Intensity$Response {
+  Intensity$Response copyWith({double? intensity}) {
+    return Intensity$Response(intensity: intensity ?? this.intensity);
   }
 
-  Intensity copyWithWrapped({Wrapped<double?>? intensity}) {
-    return Intensity(
+  Intensity$Response copyWithWrapped({Wrapped<double?>? intensity}) {
+    return Intensity$Response(
         intensity: (intensity != null ? intensity.value : this.intensity));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class InternalRate {
-  InternalRate({
+class InternalRate$Response {
+  const InternalRate$Response({
     this.internalRate,
   });
 
-  factory InternalRate.fromJson(Map<String, dynamic> json) =>
-      _$InternalRateFromJson(json);
+  factory InternalRate$Response.fromJson(Map<String, dynamic> json) =>
+      _$InternalRate$ResponseFromJson(json);
+
+  static const toJsonFactory = _$InternalRate$ResponseToJson;
+  Map<String, dynamic> toJson() => _$InternalRate$ResponseToJson(this);
 
   @JsonKey(name: 'internal-rate')
   final double? internalRate;
-  static const fromJsonFactory = _$InternalRateFromJson;
-  static const toJsonFactory = _$InternalRateToJson;
-  Map<String, dynamic> toJson() => _$InternalRateToJson(this);
+  static const fromJsonFactory = _$InternalRate$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is InternalRate &&
+        (other is InternalRate$Response &&
             (identical(other.internalRate, internalRate) ||
                 const DeepCollectionEquality()
                     .equals(other.internalRate, internalRate)));
@@ -2066,37 +2162,39 @@ class InternalRate {
       const DeepCollectionEquality().hash(internalRate) ^ runtimeType.hashCode;
 }
 
-extension $InternalRateExtension on InternalRate {
-  InternalRate copyWith({double? internalRate}) {
-    return InternalRate(internalRate: internalRate ?? this.internalRate);
+extension $InternalRate$ResponseExtension on InternalRate$Response {
+  InternalRate$Response copyWith({double? internalRate}) {
+    return InternalRate$Response(
+        internalRate: internalRate ?? this.internalRate);
   }
 
-  InternalRate copyWithWrapped({Wrapped<double?>? internalRate}) {
-    return InternalRate(
+  InternalRate$Response copyWithWrapped({Wrapped<double?>? internalRate}) {
+    return InternalRate$Response(
         internalRate:
             (internalRate != null ? internalRate.value : this.internalRate));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class IsActive {
-  IsActive({
+class IsActive$Response {
+  const IsActive$Response({
     this.isActive,
   });
 
-  factory IsActive.fromJson(Map<String, dynamic> json) =>
-      _$IsActiveFromJson(json);
+  factory IsActive$Response.fromJson(Map<String, dynamic> json) =>
+      _$IsActive$ResponseFromJson(json);
+
+  static const toJsonFactory = _$IsActive$ResponseToJson;
+  Map<String, dynamic> toJson() => _$IsActive$ResponseToJson(this);
 
   @JsonKey(name: 'is-active')
   final Object? isActive;
-  static const fromJsonFactory = _$IsActiveFromJson;
-  static const toJsonFactory = _$IsActiveToJson;
-  Map<String, dynamic> toJson() => _$IsActiveToJson(this);
+  static const fromJsonFactory = _$IsActive$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is IsActive &&
+        (other is IsActive$Response &&
             (identical(other.isActive, isActive) ||
                 const DeepCollectionEquality()
                     .equals(other.isActive, isActive)));
@@ -2110,36 +2208,37 @@ class IsActive {
       const DeepCollectionEquality().hash(isActive) ^ runtimeType.hashCode;
 }
 
-extension $IsActiveExtension on IsActive {
-  IsActive copyWith({Object? isActive}) {
-    return IsActive(isActive: isActive ?? this.isActive);
+extension $IsActive$ResponseExtension on IsActive$Response {
+  IsActive$Response copyWith({Object? isActive}) {
+    return IsActive$Response(isActive: isActive ?? this.isActive);
   }
 
-  IsActive copyWithWrapped({Wrapped<Object?>? isActive}) {
-    return IsActive(
+  IsActive$Response copyWithWrapped({Wrapped<Object?>? isActive}) {
+    return IsActive$Response(
         isActive: (isActive != null ? isActive.value : this.isActive));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class IsPartnerPresent {
-  IsPartnerPresent({
+class IsPartnerPresent$Response {
+  const IsPartnerPresent$Response({
     this.isPartnerPresent,
   });
 
-  factory IsPartnerPresent.fromJson(Map<String, dynamic> json) =>
-      _$IsPartnerPresentFromJson(json);
+  factory IsPartnerPresent$Response.fromJson(Map<String, dynamic> json) =>
+      _$IsPartnerPresent$ResponseFromJson(json);
+
+  static const toJsonFactory = _$IsPartnerPresent$ResponseToJson;
+  Map<String, dynamic> toJson() => _$IsPartnerPresent$ResponseToJson(this);
 
   @JsonKey(name: 'is-partner-present')
   final Object? isPartnerPresent;
-  static const fromJsonFactory = _$IsPartnerPresentFromJson;
-  static const toJsonFactory = _$IsPartnerPresentToJson;
-  Map<String, dynamic> toJson() => _$IsPartnerPresentToJson(this);
+  static const fromJsonFactory = _$IsPartnerPresent$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is IsPartnerPresent &&
+        (other is IsPartnerPresent$Response &&
             (identical(other.isPartnerPresent, isPartnerPresent) ||
                 const DeepCollectionEquality()
                     .equals(other.isPartnerPresent, isPartnerPresent)));
@@ -2154,14 +2253,15 @@ class IsPartnerPresent {
       runtimeType.hashCode;
 }
 
-extension $IsPartnerPresentExtension on IsPartnerPresent {
-  IsPartnerPresent copyWith({Object? isPartnerPresent}) {
-    return IsPartnerPresent(
+extension $IsPartnerPresent$ResponseExtension on IsPartnerPresent$Response {
+  IsPartnerPresent$Response copyWith({Object? isPartnerPresent}) {
+    return IsPartnerPresent$Response(
         isPartnerPresent: isPartnerPresent ?? this.isPartnerPresent);
   }
 
-  IsPartnerPresent copyWithWrapped({Wrapped<Object?>? isPartnerPresent}) {
-    return IsPartnerPresent(
+  IsPartnerPresent$Response copyWithWrapped(
+      {Wrapped<Object?>? isPartnerPresent}) {
+    return IsPartnerPresent$Response(
         isPartnerPresent: (isPartnerPresent != null
             ? isPartnerPresent.value
             : this.isPartnerPresent));
@@ -2169,23 +2269,25 @@ extension $IsPartnerPresentExtension on IsPartnerPresent {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Lines {
-  Lines({
+class Lines$Response {
+  const Lines$Response({
     this.lines,
   });
 
-  factory Lines.fromJson(Map<String, dynamic> json) => _$LinesFromJson(json);
+  factory Lines$Response.fromJson(Map<String, dynamic> json) =>
+      _$Lines$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Lines$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Lines$ResponseToJson(this);
 
   @JsonKey(name: 'lines')
   final int? lines;
-  static const fromJsonFactory = _$LinesFromJson;
-  static const toJsonFactory = _$LinesToJson;
-  Map<String, dynamic> toJson() => _$LinesToJson(this);
+  static const fromJsonFactory = _$Lines$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Lines &&
+        (other is Lines$Response &&
             (identical(other.lines, lines) ||
                 const DeepCollectionEquality().equals(other.lines, lines)));
   }
@@ -2198,35 +2300,36 @@ class Lines {
       const DeepCollectionEquality().hash(lines) ^ runtimeType.hashCode;
 }
 
-extension $LinesExtension on Lines {
-  Lines copyWith({int? lines}) {
-    return Lines(lines: lines ?? this.lines);
+extension $Lines$ResponseExtension on Lines$Response {
+  Lines$Response copyWith({int? lines}) {
+    return Lines$Response(lines: lines ?? this.lines);
   }
 
-  Lines copyWithWrapped({Wrapped<int?>? lines}) {
-    return Lines(lines: (lines != null ? lines.value : this.lines));
+  Lines$Response copyWithWrapped({Wrapped<int?>? lines}) {
+    return Lines$Response(lines: (lines != null ? lines.value : this.lines));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Luminance {
-  Luminance({
+class Luminance$Response {
+  const Luminance$Response({
     this.luminance,
   });
 
-  factory Luminance.fromJson(Map<String, dynamic> json) =>
-      _$LuminanceFromJson(json);
+  factory Luminance$Response.fromJson(Map<String, dynamic> json) =>
+      _$Luminance$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Luminance$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Luminance$ResponseToJson(this);
 
   @JsonKey(name: 'luminance')
   final int? luminance;
-  static const fromJsonFactory = _$LuminanceFromJson;
-  static const toJsonFactory = _$LuminanceToJson;
-  Map<String, dynamic> toJson() => _$LuminanceToJson(this);
+  static const fromJsonFactory = _$Luminance$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Luminance &&
+        (other is Luminance$Response &&
             (identical(other.luminance, luminance) ||
                 const DeepCollectionEquality()
                     .equals(other.luminance, luminance)));
@@ -2240,36 +2343,37 @@ class Luminance {
       const DeepCollectionEquality().hash(luminance) ^ runtimeType.hashCode;
 }
 
-extension $LuminanceExtension on Luminance {
-  Luminance copyWith({int? luminance}) {
-    return Luminance(luminance: luminance ?? this.luminance);
+extension $Luminance$ResponseExtension on Luminance$Response {
+  Luminance$Response copyWith({int? luminance}) {
+    return Luminance$Response(luminance: luminance ?? this.luminance);
   }
 
-  Luminance copyWithWrapped({Wrapped<int?>? luminance}) {
-    return Luminance(
+  Luminance$Response copyWithWrapped({Wrapped<int?>? luminance}) {
+    return Luminance$Response(
         luminance: (luminance != null ? luminance.value : this.luminance));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class LuminanceOnlyFraction {
-  LuminanceOnlyFraction({
+class LuminanceOnlyFraction$Response {
+  const LuminanceOnlyFraction$Response({
     this.luminanceOnlyFraction,
   });
 
-  factory LuminanceOnlyFraction.fromJson(Map<String, dynamic> json) =>
-      _$LuminanceOnlyFractionFromJson(json);
+  factory LuminanceOnlyFraction$Response.fromJson(Map<String, dynamic> json) =>
+      _$LuminanceOnlyFraction$ResponseFromJson(json);
+
+  static const toJsonFactory = _$LuminanceOnlyFraction$ResponseToJson;
+  Map<String, dynamic> toJson() => _$LuminanceOnlyFraction$ResponseToJson(this);
 
   @JsonKey(name: 'luminance-only-fraction')
   final int? luminanceOnlyFraction;
-  static const fromJsonFactory = _$LuminanceOnlyFractionFromJson;
-  static const toJsonFactory = _$LuminanceOnlyFractionToJson;
-  Map<String, dynamic> toJson() => _$LuminanceOnlyFractionToJson(this);
+  static const fromJsonFactory = _$LuminanceOnlyFraction$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is LuminanceOnlyFraction &&
+        (other is LuminanceOnlyFraction$Response &&
             (identical(other.luminanceOnlyFraction, luminanceOnlyFraction) ||
                 const DeepCollectionEquality().equals(
                     other.luminanceOnlyFraction, luminanceOnlyFraction)));
@@ -2284,16 +2388,17 @@ class LuminanceOnlyFraction {
       runtimeType.hashCode;
 }
 
-extension $LuminanceOnlyFractionExtension on LuminanceOnlyFraction {
-  LuminanceOnlyFraction copyWith({int? luminanceOnlyFraction}) {
-    return LuminanceOnlyFraction(
+extension $LuminanceOnlyFraction$ResponseExtension
+    on LuminanceOnlyFraction$Response {
+  LuminanceOnlyFraction$Response copyWith({int? luminanceOnlyFraction}) {
+    return LuminanceOnlyFraction$Response(
         luminanceOnlyFraction:
             luminanceOnlyFraction ?? this.luminanceOnlyFraction);
   }
 
-  LuminanceOnlyFraction copyWithWrapped(
+  LuminanceOnlyFraction$Response copyWithWrapped(
       {Wrapped<int?>? luminanceOnlyFraction}) {
-    return LuminanceOnlyFraction(
+    return LuminanceOnlyFraction$Response(
         luminanceOnlyFraction: (luminanceOnlyFraction != null
             ? luminanceOnlyFraction.value
             : this.luminanceOnlyFraction));
@@ -2301,24 +2406,25 @@ extension $LuminanceOnlyFractionExtension on LuminanceOnlyFraction {
 }
 
 @JsonSerializable(explicitToJson: true)
-class MarkerGain {
-  MarkerGain({
+class MarkerGain$Response {
+  const MarkerGain$Response({
     this.markerGain,
   });
 
-  factory MarkerGain.fromJson(Map<String, dynamic> json) =>
-      _$MarkerGainFromJson(json);
+  factory MarkerGain$Response.fromJson(Map<String, dynamic> json) =>
+      _$MarkerGain$ResponseFromJson(json);
+
+  static const toJsonFactory = _$MarkerGain$ResponseToJson;
+  Map<String, dynamic> toJson() => _$MarkerGain$ResponseToJson(this);
 
   @JsonKey(name: 'marker-gain')
   final int? markerGain;
-  static const fromJsonFactory = _$MarkerGainFromJson;
-  static const toJsonFactory = _$MarkerGainToJson;
-  Map<String, dynamic> toJson() => _$MarkerGainToJson(this);
+  static const fromJsonFactory = _$MarkerGain$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is MarkerGain &&
+        (other is MarkerGain$Response &&
             (identical(other.markerGain, markerGain) ||
                 const DeepCollectionEquality()
                     .equals(other.markerGain, markerGain)));
@@ -2332,36 +2438,37 @@ class MarkerGain {
       const DeepCollectionEquality().hash(markerGain) ^ runtimeType.hashCode;
 }
 
-extension $MarkerGainExtension on MarkerGain {
-  MarkerGain copyWith({int? markerGain}) {
-    return MarkerGain(markerGain: markerGain ?? this.markerGain);
+extension $MarkerGain$ResponseExtension on MarkerGain$Response {
+  MarkerGain$Response copyWith({int? markerGain}) {
+    return MarkerGain$Response(markerGain: markerGain ?? this.markerGain);
   }
 
-  MarkerGain copyWithWrapped({Wrapped<int?>? markerGain}) {
-    return MarkerGain(
+  MarkerGain$Response copyWithWrapped({Wrapped<int?>? markerGain}) {
+    return MarkerGain$Response(
         markerGain: (markerGain != null ? markerGain.value : this.markerGain));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class MarkerSizeScaler {
-  MarkerSizeScaler({
+class MarkerSizeScaler$Response {
+  const MarkerSizeScaler$Response({
     this.markerSizeScaler,
   });
 
-  factory MarkerSizeScaler.fromJson(Map<String, dynamic> json) =>
-      _$MarkerSizeScalerFromJson(json);
+  factory MarkerSizeScaler$Response.fromJson(Map<String, dynamic> json) =>
+      _$MarkerSizeScaler$ResponseFromJson(json);
+
+  static const toJsonFactory = _$MarkerSizeScaler$ResponseToJson;
+  Map<String, dynamic> toJson() => _$MarkerSizeScaler$ResponseToJson(this);
 
   @JsonKey(name: 'marker-size-scaler')
   final int? markerSizeScaler;
-  static const fromJsonFactory = _$MarkerSizeScalerFromJson;
-  static const toJsonFactory = _$MarkerSizeScalerToJson;
-  Map<String, dynamic> toJson() => _$MarkerSizeScalerToJson(this);
+  static const fromJsonFactory = _$MarkerSizeScaler$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is MarkerSizeScaler &&
+        (other is MarkerSizeScaler$Response &&
             (identical(other.markerSizeScaler, markerSizeScaler) ||
                 const DeepCollectionEquality()
                     .equals(other.markerSizeScaler, markerSizeScaler)));
@@ -2376,14 +2483,14 @@ class MarkerSizeScaler {
       runtimeType.hashCode;
 }
 
-extension $MarkerSizeScalerExtension on MarkerSizeScaler {
-  MarkerSizeScaler copyWith({int? markerSizeScaler}) {
-    return MarkerSizeScaler(
+extension $MarkerSizeScaler$ResponseExtension on MarkerSizeScaler$Response {
+  MarkerSizeScaler$Response copyWith({int? markerSizeScaler}) {
+    return MarkerSizeScaler$Response(
         markerSizeScaler: markerSizeScaler ?? this.markerSizeScaler);
   }
 
-  MarkerSizeScaler copyWithWrapped({Wrapped<int?>? markerSizeScaler}) {
-    return MarkerSizeScaler(
+  MarkerSizeScaler$Response copyWithWrapped({Wrapped<int?>? markerSizeScaler}) {
+    return MarkerSizeScaler$Response(
         markerSizeScaler: (markerSizeScaler != null
             ? markerSizeScaler.value
             : this.markerSizeScaler));
@@ -2391,24 +2498,25 @@ extension $MarkerSizeScalerExtension on MarkerSizeScaler {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Method$ {
-  Method$({
+class Method$Response {
+  const Method$Response({
     this.method,
   });
 
-  factory Method$.fromJson(Map<String, dynamic> json) =>
-      _$Method$FromJson(json);
+  factory Method$Response.fromJson(Map<String, dynamic> json) =>
+      _$Method$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Method$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Method$ResponseToJson(this);
 
   @JsonKey(name: 'method')
   final String? method;
-  static const fromJsonFactory = _$Method$FromJson;
-  static const toJsonFactory = _$Method$ToJson;
-  Map<String, dynamic> toJson() => _$Method$ToJson(this);
+  static const fromJsonFactory = _$Method$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Method$ &&
+        (other is Method$Response &&
             (identical(other.method, method) ||
                 const DeepCollectionEquality().equals(other.method, method)));
   }
@@ -2421,34 +2529,37 @@ class Method$ {
       const DeepCollectionEquality().hash(method) ^ runtimeType.hashCode;
 }
 
-extension $Method$Extension on Method$ {
-  Method$ copyWith({String? method}) {
-    return Method$(method: method ?? this.method);
+extension $Method$ResponseExtension on Method$Response {
+  Method$Response copyWith({String? method}) {
+    return Method$Response(method: method ?? this.method);
   }
 
-  Method$ copyWithWrapped({Wrapped<String?>? method}) {
-    return Method$(method: (method != null ? method.value : this.method));
+  Method$Response copyWithWrapped({Wrapped<String?>? method}) {
+    return Method$Response(
+        method: (method != null ? method.value : this.method));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Mode {
-  Mode({
+class Mode$Response {
+  const Mode$Response({
     this.mode,
   });
 
-  factory Mode.fromJson(Map<String, dynamic> json) => _$ModeFromJson(json);
+  factory Mode$Response.fromJson(Map<String, dynamic> json) =>
+      _$Mode$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Mode$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Mode$ResponseToJson(this);
 
   @JsonKey(name: 'mode')
   final String? mode;
-  static const fromJsonFactory = _$ModeFromJson;
-  static const toJsonFactory = _$ModeToJson;
-  Map<String, dynamic> toJson() => _$ModeToJson(this);
+  static const fromJsonFactory = _$Mode$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Mode &&
+        (other is Mode$Response &&
             (identical(other.mode, mode) ||
                 const DeepCollectionEquality().equals(other.mode, mode)));
   }
@@ -2461,35 +2572,38 @@ class Mode {
       const DeepCollectionEquality().hash(mode) ^ runtimeType.hashCode;
 }
 
-extension $ModeExtension on Mode {
-  Mode copyWith({String? mode}) {
-    return Mode(mode: mode ?? this.mode);
+extension $Mode$ResponseExtension on Mode$Response {
+  Mode$Response copyWith({String? mode}) {
+    return Mode$Response(mode: mode ?? this.mode);
   }
 
-  Mode copyWithWrapped({Wrapped<String?>? mode}) {
-    return Mode(mode: (mode != null ? mode.value : this.mode));
+  Mode$Response copyWithWrapped({Wrapped<String?>? mode}) {
+    return Mode$Response(mode: (mode != null ? mode.value : this.mode));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class ModuleCorrectionEnabled {
-  ModuleCorrectionEnabled({
+class ModuleCorrectionEnabled$Response {
+  const ModuleCorrectionEnabled$Response({
     this.moduleCorrectionEnabled,
   });
 
-  factory ModuleCorrectionEnabled.fromJson(Map<String, dynamic> json) =>
-      _$ModuleCorrectionEnabledFromJson(json);
+  factory ModuleCorrectionEnabled$Response.fromJson(
+          Map<String, dynamic> json) =>
+      _$ModuleCorrectionEnabled$ResponseFromJson(json);
+
+  static const toJsonFactory = _$ModuleCorrectionEnabled$ResponseToJson;
+  Map<String, dynamic> toJson() =>
+      _$ModuleCorrectionEnabled$ResponseToJson(this);
 
   @JsonKey(name: 'module-correction-enabled')
   final Object? moduleCorrectionEnabled;
-  static const fromJsonFactory = _$ModuleCorrectionEnabledFromJson;
-  static const toJsonFactory = _$ModuleCorrectionEnabledToJson;
-  Map<String, dynamic> toJson() => _$ModuleCorrectionEnabledToJson(this);
+  static const fromJsonFactory = _$ModuleCorrectionEnabled$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ModuleCorrectionEnabled &&
+        (other is ModuleCorrectionEnabled$Response &&
             (identical(
                     other.moduleCorrectionEnabled, moduleCorrectionEnabled) ||
                 const DeepCollectionEquality().equals(
@@ -2505,16 +2619,17 @@ class ModuleCorrectionEnabled {
       runtimeType.hashCode;
 }
 
-extension $ModuleCorrectionEnabledExtension on ModuleCorrectionEnabled {
-  ModuleCorrectionEnabled copyWith({Object? moduleCorrectionEnabled}) {
-    return ModuleCorrectionEnabled(
+extension $ModuleCorrectionEnabled$ResponseExtension
+    on ModuleCorrectionEnabled$Response {
+  ModuleCorrectionEnabled$Response copyWith({Object? moduleCorrectionEnabled}) {
+    return ModuleCorrectionEnabled$Response(
         moduleCorrectionEnabled:
             moduleCorrectionEnabled ?? this.moduleCorrectionEnabled);
   }
 
-  ModuleCorrectionEnabled copyWithWrapped(
+  ModuleCorrectionEnabled$Response copyWithWrapped(
       {Wrapped<Object?>? moduleCorrectionEnabled}) {
-    return ModuleCorrectionEnabled(
+    return ModuleCorrectionEnabled$Response(
         moduleCorrectionEnabled: (moduleCorrectionEnabled != null
             ? moduleCorrectionEnabled.value
             : this.moduleCorrectionEnabled));
@@ -2522,23 +2637,25 @@ extension $ModuleCorrectionEnabledExtension on ModuleCorrectionEnabled {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Name {
-  Name({
+class Name$Response {
+  const Name$Response({
     this.name,
   });
 
-  factory Name.fromJson(Map<String, dynamic> json) => _$NameFromJson(json);
+  factory Name$Response.fromJson(Map<String, dynamic> json) =>
+      _$Name$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Name$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Name$ResponseToJson(this);
 
   @JsonKey(name: 'name')
   final String? name;
-  static const fromJsonFactory = _$NameFromJson;
-  static const toJsonFactory = _$NameToJson;
-  Map<String, dynamic> toJson() => _$NameToJson(this);
+  static const fromJsonFactory = _$Name$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Name &&
+        (other is Name$Response &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)));
   }
@@ -2551,34 +2668,36 @@ class Name {
       const DeepCollectionEquality().hash(name) ^ runtimeType.hashCode;
 }
 
-extension $NameExtension on Name {
-  Name copyWith({String? name}) {
-    return Name(name: name ?? this.name);
+extension $Name$ResponseExtension on Name$Response {
+  Name$Response copyWith({String? name}) {
+    return Name$Response(name: name ?? this.name);
   }
 
-  Name copyWithWrapped({Wrapped<String?>? name}) {
-    return Name(name: (name != null ? name.value : this.name));
+  Name$Response copyWithWrapped({Wrapped<String?>? name}) {
+    return Name$Response(name: (name != null ? name.value : this.name));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Number {
-  Number({
+class Number$Response {
+  const Number$Response({
     this.number,
   });
 
-  factory Number.fromJson(Map<String, dynamic> json) => _$NumberFromJson(json);
+  factory Number$Response.fromJson(Map<String, dynamic> json) =>
+      _$Number$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Number$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Number$ResponseToJson(this);
 
   @JsonKey(name: 'number')
   final int? number;
-  static const fromJsonFactory = _$NumberFromJson;
-  static const toJsonFactory = _$NumberToJson;
-  Map<String, dynamic> toJson() => _$NumberToJson(this);
+  static const fromJsonFactory = _$Number$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Number &&
+        (other is Number$Response &&
             (identical(other.number, number) ||
                 const DeepCollectionEquality().equals(other.number, number)));
   }
@@ -2591,35 +2710,37 @@ class Number {
       const DeepCollectionEquality().hash(number) ^ runtimeType.hashCode;
 }
 
-extension $NumberExtension on Number {
-  Number copyWith({int? number}) {
-    return Number(number: number ?? this.number);
+extension $Number$ResponseExtension on Number$Response {
+  Number$Response copyWith({int? number}) {
+    return Number$Response(number: number ?? this.number);
   }
 
-  Number copyWithWrapped({Wrapped<int?>? number}) {
-    return Number(number: (number != null ? number.value : this.number));
+  Number$Response copyWithWrapped({Wrapped<int?>? number}) {
+    return Number$Response(
+        number: (number != null ? number.value : this.number));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class OnButtonPress {
-  OnButtonPress({
+class OnButtonPress$Response {
+  const OnButtonPress$Response({
     this.onButtonPress,
   });
 
-  factory OnButtonPress.fromJson(Map<String, dynamic> json) =>
-      _$OnButtonPressFromJson(json);
+  factory OnButtonPress$Response.fromJson(Map<String, dynamic> json) =>
+      _$OnButtonPress$ResponseFromJson(json);
+
+  static const toJsonFactory = _$OnButtonPress$ResponseToJson;
+  Map<String, dynamic> toJson() => _$OnButtonPress$ResponseToJson(this);
 
   @JsonKey(name: 'on-button-press')
   final Object? onButtonPress;
-  static const fromJsonFactory = _$OnButtonPressFromJson;
-  static const toJsonFactory = _$OnButtonPressToJson;
-  Map<String, dynamic> toJson() => _$OnButtonPressToJson(this);
+  static const fromJsonFactory = _$OnButtonPress$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is OnButtonPress &&
+        (other is OnButtonPress$Response &&
             (identical(other.onButtonPress, onButtonPress) ||
                 const DeepCollectionEquality()
                     .equals(other.onButtonPress, onButtonPress)));
@@ -2633,37 +2754,39 @@ class OnButtonPress {
       const DeepCollectionEquality().hash(onButtonPress) ^ runtimeType.hashCode;
 }
 
-extension $OnButtonPressExtension on OnButtonPress {
-  OnButtonPress copyWith({Object? onButtonPress}) {
-    return OnButtonPress(onButtonPress: onButtonPress ?? this.onButtonPress);
+extension $OnButtonPress$ResponseExtension on OnButtonPress$Response {
+  OnButtonPress$Response copyWith({Object? onButtonPress}) {
+    return OnButtonPress$Response(
+        onButtonPress: onButtonPress ?? this.onButtonPress);
   }
 
-  OnButtonPress copyWithWrapped({Wrapped<Object?>? onButtonPress}) {
-    return OnButtonPress(
+  OnButtonPress$Response copyWithWrapped({Wrapped<Object?>? onButtonPress}) {
+    return OnButtonPress$Response(
         onButtonPress:
             (onButtonPress != null ? onButtonPress.value : this.onButtonPress));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class OnPartnerFail {
-  OnPartnerFail({
+class OnPartnerFail$Response {
+  const OnPartnerFail$Response({
     this.onPartnerFail,
   });
 
-  factory OnPartnerFail.fromJson(Map<String, dynamic> json) =>
-      _$OnPartnerFailFromJson(json);
+  factory OnPartnerFail$Response.fromJson(Map<String, dynamic> json) =>
+      _$OnPartnerFail$ResponseFromJson(json);
+
+  static const toJsonFactory = _$OnPartnerFail$ResponseToJson;
+  Map<String, dynamic> toJson() => _$OnPartnerFail$ResponseToJson(this);
 
   @JsonKey(name: 'on-partner-fail')
   final Object? onPartnerFail;
-  static const fromJsonFactory = _$OnPartnerFailFromJson;
-  static const toJsonFactory = _$OnPartnerFailToJson;
-  Map<String, dynamic> toJson() => _$OnPartnerFailToJson(this);
+  static const fromJsonFactory = _$OnPartnerFail$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is OnPartnerFail &&
+        (other is OnPartnerFail$Response &&
             (identical(other.onPartnerFail, onPartnerFail) ||
                 const DeepCollectionEquality()
                     .equals(other.onPartnerFail, onPartnerFail)));
@@ -2677,37 +2800,39 @@ class OnPartnerFail {
       const DeepCollectionEquality().hash(onPartnerFail) ^ runtimeType.hashCode;
 }
 
-extension $OnPartnerFailExtension on OnPartnerFail {
-  OnPartnerFail copyWith({Object? onPartnerFail}) {
-    return OnPartnerFail(onPartnerFail: onPartnerFail ?? this.onPartnerFail);
+extension $OnPartnerFail$ResponseExtension on OnPartnerFail$Response {
+  OnPartnerFail$Response copyWith({Object? onPartnerFail}) {
+    return OnPartnerFail$Response(
+        onPartnerFail: onPartnerFail ?? this.onPartnerFail);
   }
 
-  OnPartnerFail copyWithWrapped({Wrapped<Object?>? onPartnerFail}) {
-    return OnPartnerFail(
+  OnPartnerFail$Response copyWithWrapped({Wrapped<Object?>? onPartnerFail}) {
+    return OnPartnerFail$Response(
         onPartnerFail:
             (onPartnerFail != null ? onPartnerFail.value : this.onPartnerFail));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class OnPartnerVideoFail {
-  OnPartnerVideoFail({
+class OnPartnerVideoFail$Response {
+  const OnPartnerVideoFail$Response({
     this.onPartnerVideoFail,
   });
 
-  factory OnPartnerVideoFail.fromJson(Map<String, dynamic> json) =>
-      _$OnPartnerVideoFailFromJson(json);
+  factory OnPartnerVideoFail$Response.fromJson(Map<String, dynamic> json) =>
+      _$OnPartnerVideoFail$ResponseFromJson(json);
+
+  static const toJsonFactory = _$OnPartnerVideoFail$ResponseToJson;
+  Map<String, dynamic> toJson() => _$OnPartnerVideoFail$ResponseToJson(this);
 
   @JsonKey(name: 'on-partner-video-fail')
   final Object? onPartnerVideoFail;
-  static const fromJsonFactory = _$OnPartnerVideoFailFromJson;
-  static const toJsonFactory = _$OnPartnerVideoFailToJson;
-  Map<String, dynamic> toJson() => _$OnPartnerVideoFailToJson(this);
+  static const fromJsonFactory = _$OnPartnerVideoFail$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is OnPartnerVideoFail &&
+        (other is OnPartnerVideoFail$Response &&
             (identical(other.onPartnerVideoFail, onPartnerVideoFail) ||
                 const DeepCollectionEquality()
                     .equals(other.onPartnerVideoFail, onPartnerVideoFail)));
@@ -2722,14 +2847,15 @@ class OnPartnerVideoFail {
       runtimeType.hashCode;
 }
 
-extension $OnPartnerVideoFailExtension on OnPartnerVideoFail {
-  OnPartnerVideoFail copyWith({Object? onPartnerVideoFail}) {
-    return OnPartnerVideoFail(
+extension $OnPartnerVideoFail$ResponseExtension on OnPartnerVideoFail$Response {
+  OnPartnerVideoFail$Response copyWith({Object? onPartnerVideoFail}) {
+    return OnPartnerVideoFail$Response(
         onPartnerVideoFail: onPartnerVideoFail ?? this.onPartnerVideoFail);
   }
 
-  OnPartnerVideoFail copyWithWrapped({Wrapped<Object?>? onPartnerVideoFail}) {
-    return OnPartnerVideoFail(
+  OnPartnerVideoFail$Response copyWithWrapped(
+      {Wrapped<Object?>? onPartnerVideoFail}) {
+    return OnPartnerVideoFail$Response(
         onPartnerVideoFail: (onPartnerVideoFail != null
             ? onPartnerVideoFail.value
             : this.onPartnerVideoFail));
@@ -2737,24 +2863,25 @@ extension $OnPartnerVideoFailExtension on OnPartnerVideoFail {
 }
 
 @JsonSerializable(explicitToJson: true)
-class OnlineCount {
-  OnlineCount({
+class OnlineCount$Response {
+  const OnlineCount$Response({
     this.onlineCount,
   });
 
-  factory OnlineCount.fromJson(Map<String, dynamic> json) =>
-      _$OnlineCountFromJson(json);
+  factory OnlineCount$Response.fromJson(Map<String, dynamic> json) =>
+      _$OnlineCount$ResponseFromJson(json);
+
+  static const toJsonFactory = _$OnlineCount$ResponseToJson;
+  Map<String, dynamic> toJson() => _$OnlineCount$ResponseToJson(this);
 
   @JsonKey(name: 'online-count')
   final int? onlineCount;
-  static const fromJsonFactory = _$OnlineCountFromJson;
-  static const toJsonFactory = _$OnlineCountToJson;
-  Map<String, dynamic> toJson() => _$OnlineCountToJson(this);
+  static const fromJsonFactory = _$OnlineCount$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is OnlineCount &&
+        (other is OnlineCount$Response &&
             (identical(other.onlineCount, onlineCount) ||
                 const DeepCollectionEquality()
                     .equals(other.onlineCount, onlineCount)));
@@ -2768,37 +2895,38 @@ class OnlineCount {
       const DeepCollectionEquality().hash(onlineCount) ^ runtimeType.hashCode;
 }
 
-extension $OnlineCountExtension on OnlineCount {
-  OnlineCount copyWith({int? onlineCount}) {
-    return OnlineCount(onlineCount: onlineCount ?? this.onlineCount);
+extension $OnlineCount$ResponseExtension on OnlineCount$Response {
+  OnlineCount$Response copyWith({int? onlineCount}) {
+    return OnlineCount$Response(onlineCount: onlineCount ?? this.onlineCount);
   }
 
-  OnlineCount copyWithWrapped({Wrapped<int?>? onlineCount}) {
-    return OnlineCount(
+  OnlineCount$Response copyWithWrapped({Wrapped<int?>? onlineCount}) {
+    return OnlineCount$Response(
         onlineCount:
             (onlineCount != null ? onlineCount.value : this.onlineCount));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Orientation {
-  Orientation({
+class Orientation$Response {
+  const Orientation$Response({
     this.orientation,
   });
 
-  factory Orientation.fromJson(Map<String, dynamic> json) =>
-      _$OrientationFromJson(json);
+  factory Orientation$Response.fromJson(Map<String, dynamic> json) =>
+      _$Orientation$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Orientation$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Orientation$ResponseToJson(this);
 
   @JsonKey(name: 'orientation')
   final String? orientation;
-  static const fromJsonFactory = _$OrientationFromJson;
-  static const toJsonFactory = _$OrientationToJson;
-  Map<String, dynamic> toJson() => _$OrientationToJson(this);
+  static const fromJsonFactory = _$Orientation$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Orientation &&
+        (other is Orientation$Response &&
             (identical(other.orientation, orientation) ||
                 const DeepCollectionEquality()
                     .equals(other.orientation, orientation)));
@@ -2812,37 +2940,39 @@ class Orientation {
       const DeepCollectionEquality().hash(orientation) ^ runtimeType.hashCode;
 }
 
-extension $OrientationExtension on Orientation {
-  Orientation copyWith({String? orientation}) {
-    return Orientation(orientation: orientation ?? this.orientation);
+extension $Orientation$ResponseExtension on Orientation$Response {
+  Orientation$Response copyWith({String? orientation}) {
+    return Orientation$Response(orientation: orientation ?? this.orientation);
   }
 
-  Orientation copyWithWrapped({Wrapped<String?>? orientation}) {
-    return Orientation(
+  Orientation$Response copyWithWrapped({Wrapped<String?>? orientation}) {
+    return Orientation$Response(
         orientation:
             (orientation != null ? orientation.value : this.orientation));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class PartnerAbsenceDuration {
-  PartnerAbsenceDuration({
+class PartnerAbsenceDuration$Response {
+  const PartnerAbsenceDuration$Response({
     this.partnerAbsenceDuration,
   });
 
-  factory PartnerAbsenceDuration.fromJson(Map<String, dynamic> json) =>
-      _$PartnerAbsenceDurationFromJson(json);
+  factory PartnerAbsenceDuration$Response.fromJson(Map<String, dynamic> json) =>
+      _$PartnerAbsenceDuration$ResponseFromJson(json);
+
+  static const toJsonFactory = _$PartnerAbsenceDuration$ResponseToJson;
+  Map<String, dynamic> toJson() =>
+      _$PartnerAbsenceDuration$ResponseToJson(this);
 
   @JsonKey(name: 'partner-absence-duration')
   final String? partnerAbsenceDuration;
-  static const fromJsonFactory = _$PartnerAbsenceDurationFromJson;
-  static const toJsonFactory = _$PartnerAbsenceDurationToJson;
-  Map<String, dynamic> toJson() => _$PartnerAbsenceDurationToJson(this);
+  static const fromJsonFactory = _$PartnerAbsenceDuration$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is PartnerAbsenceDuration &&
+        (other is PartnerAbsenceDuration$Response &&
             (identical(other.partnerAbsenceDuration, partnerAbsenceDuration) ||
                 const DeepCollectionEquality().equals(
                     other.partnerAbsenceDuration, partnerAbsenceDuration)));
@@ -2857,16 +2987,17 @@ class PartnerAbsenceDuration {
       runtimeType.hashCode;
 }
 
-extension $PartnerAbsenceDurationExtension on PartnerAbsenceDuration {
-  PartnerAbsenceDuration copyWith({String? partnerAbsenceDuration}) {
-    return PartnerAbsenceDuration(
+extension $PartnerAbsenceDuration$ResponseExtension
+    on PartnerAbsenceDuration$Response {
+  PartnerAbsenceDuration$Response copyWith({String? partnerAbsenceDuration}) {
+    return PartnerAbsenceDuration$Response(
         partnerAbsenceDuration:
             partnerAbsenceDuration ?? this.partnerAbsenceDuration);
   }
 
-  PartnerAbsenceDuration copyWithWrapped(
+  PartnerAbsenceDuration$Response copyWithWrapped(
       {Wrapped<String?>? partnerAbsenceDuration}) {
-    return PartnerAbsenceDuration(
+    return PartnerAbsenceDuration$Response(
         partnerAbsenceDuration: (partnerAbsenceDuration != null
             ? partnerAbsenceDuration.value
             : this.partnerAbsenceDuration));
@@ -2874,24 +3005,25 @@ extension $PartnerAbsenceDurationExtension on PartnerAbsenceDuration {
 }
 
 @JsonSerializable(explicitToJson: true)
-class PartnerName {
-  PartnerName({
+class PartnerName$Response {
+  const PartnerName$Response({
     this.partnerName,
   });
 
-  factory PartnerName.fromJson(Map<String, dynamic> json) =>
-      _$PartnerNameFromJson(json);
+  factory PartnerName$Response.fromJson(Map<String, dynamic> json) =>
+      _$PartnerName$ResponseFromJson(json);
+
+  static const toJsonFactory = _$PartnerName$ResponseToJson;
+  Map<String, dynamic> toJson() => _$PartnerName$ResponseToJson(this);
 
   @JsonKey(name: 'partner-name')
   final String? partnerName;
-  static const fromJsonFactory = _$PartnerNameFromJson;
-  static const toJsonFactory = _$PartnerNameToJson;
-  Map<String, dynamic> toJson() => _$PartnerNameToJson(this);
+  static const fromJsonFactory = _$PartnerName$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is PartnerName &&
+        (other is PartnerName$Response &&
             (identical(other.partnerName, partnerName) ||
                 const DeepCollectionEquality()
                     .equals(other.partnerName, partnerName)));
@@ -2905,37 +3037,38 @@ class PartnerName {
       const DeepCollectionEquality().hash(partnerName) ^ runtimeType.hashCode;
 }
 
-extension $PartnerNameExtension on PartnerName {
-  PartnerName copyWith({String? partnerName}) {
-    return PartnerName(partnerName: partnerName ?? this.partnerName);
+extension $PartnerName$ResponseExtension on PartnerName$Response {
+  PartnerName$Response copyWith({String? partnerName}) {
+    return PartnerName$Response(partnerName: partnerName ?? this.partnerName);
   }
 
-  PartnerName copyWithWrapped({Wrapped<String?>? partnerName}) {
-    return PartnerName(
+  PartnerName$Response copyWithWrapped({Wrapped<String?>? partnerName}) {
+    return PartnerName$Response(
         partnerName:
             (partnerName != null ? partnerName.value : this.partnerName));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class PartnerSerial {
-  PartnerSerial({
+class PartnerSerial$Response {
+  const PartnerSerial$Response({
     this.partnerSerial,
   });
 
-  factory PartnerSerial.fromJson(Map<String, dynamic> json) =>
-      _$PartnerSerialFromJson(json);
+  factory PartnerSerial$Response.fromJson(Map<String, dynamic> json) =>
+      _$PartnerSerial$ResponseFromJson(json);
+
+  static const toJsonFactory = _$PartnerSerial$ResponseToJson;
+  Map<String, dynamic> toJson() => _$PartnerSerial$ResponseToJson(this);
 
   @JsonKey(name: 'partner-serial')
   final String? partnerSerial;
-  static const fromJsonFactory = _$PartnerSerialFromJson;
-  static const toJsonFactory = _$PartnerSerialToJson;
-  Map<String, dynamic> toJson() => _$PartnerSerialToJson(this);
+  static const fromJsonFactory = _$PartnerSerial$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is PartnerSerial &&
+        (other is PartnerSerial$Response &&
             (identical(other.partnerSerial, partnerSerial) ||
                 const DeepCollectionEquality()
                     .equals(other.partnerSerial, partnerSerial)));
@@ -2949,37 +3082,41 @@ class PartnerSerial {
       const DeepCollectionEquality().hash(partnerSerial) ^ runtimeType.hashCode;
 }
 
-extension $PartnerSerialExtension on PartnerSerial {
-  PartnerSerial copyWith({String? partnerSerial}) {
-    return PartnerSerial(partnerSerial: partnerSerial ?? this.partnerSerial);
+extension $PartnerSerial$ResponseExtension on PartnerSerial$Response {
+  PartnerSerial$Response copyWith({String? partnerSerial}) {
+    return PartnerSerial$Response(
+        partnerSerial: partnerSerial ?? this.partnerSerial);
   }
 
-  PartnerSerial copyWithWrapped({Wrapped<String?>? partnerSerial}) {
-    return PartnerSerial(
+  PartnerSerial$Response copyWithWrapped({Wrapped<String?>? partnerSerial}) {
+    return PartnerSerial$Response(
         partnerSerial:
             (partnerSerial != null ? partnerSerial.value : this.partnerSerial));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class PartnerVideoAbsenceDuration {
-  PartnerVideoAbsenceDuration({
+class PartnerVideoAbsenceDuration$Response {
+  const PartnerVideoAbsenceDuration$Response({
     this.partnerVideoAbsenceDuration,
   });
 
-  factory PartnerVideoAbsenceDuration.fromJson(Map<String, dynamic> json) =>
-      _$PartnerVideoAbsenceDurationFromJson(json);
+  factory PartnerVideoAbsenceDuration$Response.fromJson(
+          Map<String, dynamic> json) =>
+      _$PartnerVideoAbsenceDuration$ResponseFromJson(json);
+
+  static const toJsonFactory = _$PartnerVideoAbsenceDuration$ResponseToJson;
+  Map<String, dynamic> toJson() =>
+      _$PartnerVideoAbsenceDuration$ResponseToJson(this);
 
   @JsonKey(name: 'partner-video-absence-duration')
   final String? partnerVideoAbsenceDuration;
-  static const fromJsonFactory = _$PartnerVideoAbsenceDurationFromJson;
-  static const toJsonFactory = _$PartnerVideoAbsenceDurationToJson;
-  Map<String, dynamic> toJson() => _$PartnerVideoAbsenceDurationToJson(this);
+  static const fromJsonFactory = _$PartnerVideoAbsenceDuration$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is PartnerVideoAbsenceDuration &&
+        (other is PartnerVideoAbsenceDuration$Response &&
             (identical(other.partnerVideoAbsenceDuration,
                     partnerVideoAbsenceDuration) ||
                 const DeepCollectionEquality().equals(
@@ -2996,16 +3133,18 @@ class PartnerVideoAbsenceDuration {
       runtimeType.hashCode;
 }
 
-extension $PartnerVideoAbsenceDurationExtension on PartnerVideoAbsenceDuration {
-  PartnerVideoAbsenceDuration copyWith({String? partnerVideoAbsenceDuration}) {
-    return PartnerVideoAbsenceDuration(
+extension $PartnerVideoAbsenceDuration$ResponseExtension
+    on PartnerVideoAbsenceDuration$Response {
+  PartnerVideoAbsenceDuration$Response copyWith(
+      {String? partnerVideoAbsenceDuration}) {
+    return PartnerVideoAbsenceDuration$Response(
         partnerVideoAbsenceDuration:
             partnerVideoAbsenceDuration ?? this.partnerVideoAbsenceDuration);
   }
 
-  PartnerVideoAbsenceDuration copyWithWrapped(
+  PartnerVideoAbsenceDuration$Response copyWithWrapped(
       {Wrapped<String?>? partnerVideoAbsenceDuration}) {
-    return PartnerVideoAbsenceDuration(
+    return PartnerVideoAbsenceDuration$Response(
         partnerVideoAbsenceDuration: (partnerVideoAbsenceDuration != null
             ? partnerVideoAbsenceDuration.value
             : this.partnerVideoAbsenceDuration));
@@ -3013,23 +3152,25 @@ extension $PartnerVideoAbsenceDurationExtension on PartnerVideoAbsenceDuration {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Pixels {
-  Pixels({
+class Pixels$Response {
+  const Pixels$Response({
     this.pixels,
   });
 
-  factory Pixels.fromJson(Map<String, dynamic> json) => _$PixelsFromJson(json);
+  factory Pixels$Response.fromJson(Map<String, dynamic> json) =>
+      _$Pixels$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Pixels$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Pixels$ResponseToJson(this);
 
   @JsonKey(name: 'pixels')
   final int? pixels;
-  static const fromJsonFactory = _$PixelsFromJson;
-  static const toJsonFactory = _$PixelsToJson;
-  Map<String, dynamic> toJson() => _$PixelsToJson(this);
+  static const fromJsonFactory = _$Pixels$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Pixels &&
+        (other is Pixels$Response &&
             (identical(other.pixels, pixels) ||
                 const DeepCollectionEquality().equals(other.pixels, pixels)));
   }
@@ -3042,34 +3183,37 @@ class Pixels {
       const DeepCollectionEquality().hash(pixels) ^ runtimeType.hashCode;
 }
 
-extension $PixelsExtension on Pixels {
-  Pixels copyWith({int? pixels}) {
-    return Pixels(pixels: pixels ?? this.pixels);
+extension $Pixels$ResponseExtension on Pixels$Response {
+  Pixels$Response copyWith({int? pixels}) {
+    return Pixels$Response(pixels: pixels ?? this.pixels);
   }
 
-  Pixels copyWithWrapped({Wrapped<int?>? pixels}) {
-    return Pixels(pixels: (pixels != null ? pixels.value : this.pixels));
+  Pixels$Response copyWithWrapped({Wrapped<int?>? pixels}) {
+    return Pixels$Response(
+        pixels: (pixels != null ? pixels.value : this.pixels));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Points {
-  Points({
+class Points$Response {
+  const Points$Response({
     this.points,
   });
 
-  factory Points.fromJson(Map<String, dynamic> json) => _$PointsFromJson(json);
+  factory Points$Response.fromJson(Map<String, dynamic> json) =>
+      _$Points$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Points$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Points$ResponseToJson(this);
 
   @JsonKey(name: 'points', defaultValue: <Object>[])
   final List<Object>? points;
-  static const fromJsonFactory = _$PointsFromJson;
-  static const toJsonFactory = _$PointsToJson;
-  Map<String, dynamic> toJson() => _$PointsToJson(this);
+  static const fromJsonFactory = _$Points$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Points &&
+        (other is Points$Response &&
             (identical(other.points, points) ||
                 const DeepCollectionEquality().equals(other.points, points)));
   }
@@ -3082,35 +3226,37 @@ class Points {
       const DeepCollectionEquality().hash(points) ^ runtimeType.hashCode;
 }
 
-extension $PointsExtension on Points {
-  Points copyWith({List<Object>? points}) {
-    return Points(points: points ?? this.points);
+extension $Points$ResponseExtension on Points$Response {
+  Points$Response copyWith({List<Object>? points}) {
+    return Points$Response(points: points ?? this.points);
   }
 
-  Points copyWithWrapped({Wrapped<List<Object>?>? points}) {
-    return Points(points: (points != null ? points.value : this.points));
+  Points$Response copyWithWrapped({Wrapped<List<Object>?>? points}) {
+    return Points$Response(
+        points: (points != null ? points.value : this.points));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class PortNumber {
-  PortNumber({
+class PortNumber$Response {
+  const PortNumber$Response({
     this.portNumber,
   });
 
-  factory PortNumber.fromJson(Map<String, dynamic> json) =>
-      _$PortNumberFromJson(json);
+  factory PortNumber$Response.fromJson(Map<String, dynamic> json) =>
+      _$PortNumber$ResponseFromJson(json);
+
+  static const toJsonFactory = _$PortNumber$ResponseToJson;
+  Map<String, dynamic> toJson() => _$PortNumber$ResponseToJson(this);
 
   @JsonKey(name: 'port-number')
   final int? portNumber;
-  static const fromJsonFactory = _$PortNumberFromJson;
-  static const toJsonFactory = _$PortNumberToJson;
-  Map<String, dynamic> toJson() => _$PortNumberToJson(this);
+  static const fromJsonFactory = _$PortNumber$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is PortNumber &&
+        (other is PortNumber$Response &&
             (identical(other.portNumber, portNumber) ||
                 const DeepCollectionEquality()
                     .equals(other.portNumber, portNumber)));
@@ -3124,36 +3270,37 @@ class PortNumber {
       const DeepCollectionEquality().hash(portNumber) ^ runtimeType.hashCode;
 }
 
-extension $PortNumberExtension on PortNumber {
-  PortNumber copyWith({int? portNumber}) {
-    return PortNumber(portNumber: portNumber ?? this.portNumber);
+extension $PortNumber$ResponseExtension on PortNumber$Response {
+  PortNumber$Response copyWith({int? portNumber}) {
+    return PortNumber$Response(portNumber: portNumber ?? this.portNumber);
   }
 
-  PortNumber copyWithWrapped({Wrapped<int?>? portNumber}) {
-    return PortNumber(
+  PortNumber$Response copyWithWrapped({Wrapped<int?>? portNumber}) {
+    return PortNumber$Response(
         portNumber: (portNumber != null ? portNumber.value : this.portNumber));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class PortType {
-  PortType({
+class PortType$Response {
+  const PortType$Response({
     this.portType,
   });
 
-  factory PortType.fromJson(Map<String, dynamic> json) =>
-      _$PortTypeFromJson(json);
+  factory PortType$Response.fromJson(Map<String, dynamic> json) =>
+      _$PortType$ResponseFromJson(json);
+
+  static const toJsonFactory = _$PortType$ResponseToJson;
+  Map<String, dynamic> toJson() => _$PortType$ResponseToJson(this);
 
   @JsonKey(name: 'port-type')
   final String? portType;
-  static const fromJsonFactory = _$PortTypeFromJson;
-  static const toJsonFactory = _$PortTypeToJson;
-  Map<String, dynamic> toJson() => _$PortTypeToJson(this);
+  static const fromJsonFactory = _$PortType$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is PortType &&
+        (other is PortType$Response &&
             (identical(other.portType, portType) ||
                 const DeepCollectionEquality()
                     .equals(other.portType, portType)));
@@ -3167,36 +3314,37 @@ class PortType {
       const DeepCollectionEquality().hash(portType) ^ runtimeType.hashCode;
 }
 
-extension $PortTypeExtension on PortType {
-  PortType copyWith({String? portType}) {
-    return PortType(portType: portType ?? this.portType);
+extension $PortType$ResponseExtension on PortType$Response {
+  PortType$Response copyWith({String? portType}) {
+    return PortType$Response(portType: portType ?? this.portType);
   }
 
-  PortType copyWithWrapped({Wrapped<String?>? portType}) {
-    return PortType(
+  PortType$Response copyWithWrapped({Wrapped<String?>? portType}) {
+    return PortType$Response(
         portType: (portType != null ? portType.value : this.portType));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class PreferPrimary {
-  PreferPrimary({
+class PreferPrimary$Response {
+  const PreferPrimary$Response({
     this.preferPrimary,
   });
 
-  factory PreferPrimary.fromJson(Map<String, dynamic> json) =>
-      _$PreferPrimaryFromJson(json);
+  factory PreferPrimary$Response.fromJson(Map<String, dynamic> json) =>
+      _$PreferPrimary$ResponseFromJson(json);
+
+  static const toJsonFactory = _$PreferPrimary$ResponseToJson;
+  Map<String, dynamic> toJson() => _$PreferPrimary$ResponseToJson(this);
 
   @JsonKey(name: 'prefer-primary')
   final Object? preferPrimary;
-  static const fromJsonFactory = _$PreferPrimaryFromJson;
-  static const toJsonFactory = _$PreferPrimaryToJson;
-  Map<String, dynamic> toJson() => _$PreferPrimaryToJson(this);
+  static const fromJsonFactory = _$PreferPrimary$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is PreferPrimary &&
+        (other is PreferPrimary$Response &&
             (identical(other.preferPrimary, preferPrimary) ||
                 const DeepCollectionEquality()
                     .equals(other.preferPrimary, preferPrimary)));
@@ -3210,37 +3358,39 @@ class PreferPrimary {
       const DeepCollectionEquality().hash(preferPrimary) ^ runtimeType.hashCode;
 }
 
-extension $PreferPrimaryExtension on PreferPrimary {
-  PreferPrimary copyWith({Object? preferPrimary}) {
-    return PreferPrimary(preferPrimary: preferPrimary ?? this.preferPrimary);
+extension $PreferPrimary$ResponseExtension on PreferPrimary$Response {
+  PreferPrimary$Response copyWith({Object? preferPrimary}) {
+    return PreferPrimary$Response(
+        preferPrimary: preferPrimary ?? this.preferPrimary);
   }
 
-  PreferPrimary copyWithWrapped({Wrapped<Object?>? preferPrimary}) {
-    return PreferPrimary(
+  PreferPrimary$Response copyWithWrapped({Wrapped<Object?>? preferPrimary}) {
+    return PreferPrimary$Response(
         preferPrimary:
             (preferPrimary != null ? preferPrimary.value : this.preferPrimary));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class PrioritiseRefreshRate {
-  PrioritiseRefreshRate({
+class PrioritiseRefreshRate$Response {
+  const PrioritiseRefreshRate$Response({
     this.prioritiseRefreshRate,
   });
 
-  factory PrioritiseRefreshRate.fromJson(Map<String, dynamic> json) =>
-      _$PrioritiseRefreshRateFromJson(json);
+  factory PrioritiseRefreshRate$Response.fromJson(Map<String, dynamic> json) =>
+      _$PrioritiseRefreshRate$ResponseFromJson(json);
+
+  static const toJsonFactory = _$PrioritiseRefreshRate$ResponseToJson;
+  Map<String, dynamic> toJson() => _$PrioritiseRefreshRate$ResponseToJson(this);
 
   @JsonKey(name: 'prioritise-refresh-rate')
   final Object? prioritiseRefreshRate;
-  static const fromJsonFactory = _$PrioritiseRefreshRateFromJson;
-  static const toJsonFactory = _$PrioritiseRefreshRateToJson;
-  Map<String, dynamic> toJson() => _$PrioritiseRefreshRateToJson(this);
+  static const fromJsonFactory = _$PrioritiseRefreshRate$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is PrioritiseRefreshRate &&
+        (other is PrioritiseRefreshRate$Response &&
             (identical(other.prioritiseRefreshRate, prioritiseRefreshRate) ||
                 const DeepCollectionEquality().equals(
                     other.prioritiseRefreshRate, prioritiseRefreshRate)));
@@ -3255,16 +3405,17 @@ class PrioritiseRefreshRate {
       runtimeType.hashCode;
 }
 
-extension $PrioritiseRefreshRateExtension on PrioritiseRefreshRate {
-  PrioritiseRefreshRate copyWith({Object? prioritiseRefreshRate}) {
-    return PrioritiseRefreshRate(
+extension $PrioritiseRefreshRate$ResponseExtension
+    on PrioritiseRefreshRate$Response {
+  PrioritiseRefreshRate$Response copyWith({Object? prioritiseRefreshRate}) {
+    return PrioritiseRefreshRate$Response(
         prioritiseRefreshRate:
             prioritiseRefreshRate ?? this.prioritiseRefreshRate);
   }
 
-  PrioritiseRefreshRate copyWithWrapped(
+  PrioritiseRefreshRate$Response copyWithWrapped(
       {Wrapped<Object?>? prioritiseRefreshRate}) {
-    return PrioritiseRefreshRate(
+    return PrioritiseRefreshRate$Response(
         prioritiseRefreshRate: (prioritiseRefreshRate != null
             ? prioritiseRefreshRate.value
             : this.prioritiseRefreshRate));
@@ -3272,24 +3423,25 @@ extension $PrioritiseRefreshRateExtension on PrioritiseRefreshRate {
 }
 
 @JsonSerializable(explicitToJson: true)
-class ProcessorType {
-  ProcessorType({
+class ProcessorType$Response {
+  const ProcessorType$Response({
     this.processorType,
   });
 
-  factory ProcessorType.fromJson(Map<String, dynamic> json) =>
-      _$ProcessorTypeFromJson(json);
+  factory ProcessorType$Response.fromJson(Map<String, dynamic> json) =>
+      _$ProcessorType$ResponseFromJson(json);
+
+  static const toJsonFactory = _$ProcessorType$ResponseToJson;
+  Map<String, dynamic> toJson() => _$ProcessorType$ResponseToJson(this);
 
   @JsonKey(name: 'processor-type')
   final String? processorType;
-  static const fromJsonFactory = _$ProcessorTypeFromJson;
-  static const toJsonFactory = _$ProcessorTypeToJson;
-  Map<String, dynamic> toJson() => _$ProcessorTypeToJson(this);
+  static const fromJsonFactory = _$ProcessorType$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ProcessorType &&
+        (other is ProcessorType$Response &&
             (identical(other.processorType, processorType) ||
                 const DeepCollectionEquality()
                     .equals(other.processorType, processorType)));
@@ -3303,37 +3455,39 @@ class ProcessorType {
       const DeepCollectionEquality().hash(processorType) ^ runtimeType.hashCode;
 }
 
-extension $ProcessorTypeExtension on ProcessorType {
-  ProcessorType copyWith({String? processorType}) {
-    return ProcessorType(processorType: processorType ?? this.processorType);
+extension $ProcessorType$ResponseExtension on ProcessorType$Response {
+  ProcessorType$Response copyWith({String? processorType}) {
+    return ProcessorType$Response(
+        processorType: processorType ?? this.processorType);
   }
 
-  ProcessorType copyWithWrapped({Wrapped<String?>? processorType}) {
-    return ProcessorType(
+  ProcessorType$Response copyWithWrapped({Wrapped<String?>? processorType}) {
+    return ProcessorType$Response(
         processorType:
             (processorType != null ? processorType.value : this.processorType));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class QuantisationRange {
-  QuantisationRange({
+class QuantisationRange$Response {
+  const QuantisationRange$Response({
     this.quantisationRange,
   });
 
-  factory QuantisationRange.fromJson(Map<String, dynamic> json) =>
-      _$QuantisationRangeFromJson(json);
+  factory QuantisationRange$Response.fromJson(Map<String, dynamic> json) =>
+      _$QuantisationRange$ResponseFromJson(json);
+
+  static const toJsonFactory = _$QuantisationRange$ResponseToJson;
+  Map<String, dynamic> toJson() => _$QuantisationRange$ResponseToJson(this);
 
   @JsonKey(name: 'quantisation-range')
   final String? quantisationRange;
-  static const fromJsonFactory = _$QuantisationRangeFromJson;
-  static const toJsonFactory = _$QuantisationRangeToJson;
-  Map<String, dynamic> toJson() => _$QuantisationRangeToJson(this);
+  static const fromJsonFactory = _$QuantisationRange$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is QuantisationRange &&
+        (other is QuantisationRange$Response &&
             (identical(other.quantisationRange, quantisationRange) ||
                 const DeepCollectionEquality()
                     .equals(other.quantisationRange, quantisationRange)));
@@ -3348,14 +3502,15 @@ class QuantisationRange {
       runtimeType.hashCode;
 }
 
-extension $QuantisationRangeExtension on QuantisationRange {
-  QuantisationRange copyWith({String? quantisationRange}) {
-    return QuantisationRange(
+extension $QuantisationRange$ResponseExtension on QuantisationRange$Response {
+  QuantisationRange$Response copyWith({String? quantisationRange}) {
+    return QuantisationRange$Response(
         quantisationRange: quantisationRange ?? this.quantisationRange);
   }
 
-  QuantisationRange copyWithWrapped({Wrapped<String?>? quantisationRange}) {
-    return QuantisationRange(
+  QuantisationRange$Response copyWithWrapped(
+      {Wrapped<String?>? quantisationRange}) {
+    return QuantisationRange$Response(
         quantisationRange: (quantisationRange != null
             ? quantisationRange.value
             : this.quantisationRange));
@@ -3363,23 +3518,25 @@ extension $QuantisationRangeExtension on QuantisationRange {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Reboot {
-  Reboot({
+class Reboot$Response {
+  const Reboot$Response({
     this.reboot,
   });
 
-  factory Reboot.fromJson(Map<String, dynamic> json) => _$RebootFromJson(json);
+  factory Reboot$Response.fromJson(Map<String, dynamic> json) =>
+      _$Reboot$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Reboot$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Reboot$ResponseToJson(this);
 
   @JsonKey(name: 'reboot')
   final String? reboot;
-  static const fromJsonFactory = _$RebootFromJson;
-  static const toJsonFactory = _$RebootToJson;
-  Map<String, dynamic> toJson() => _$RebootToJson(this);
+  static const fromJsonFactory = _$Reboot$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Reboot &&
+        (other is Reboot$Response &&
             (identical(other.reboot, reboot) ||
                 const DeepCollectionEquality().equals(other.reboot, reboot)));
   }
@@ -3392,34 +3549,37 @@ class Reboot {
       const DeepCollectionEquality().hash(reboot) ^ runtimeType.hashCode;
 }
 
-extension $RebootExtension on Reboot {
-  Reboot copyWith({String? reboot}) {
-    return Reboot(reboot: reboot ?? this.reboot);
+extension $Reboot$ResponseExtension on Reboot$Response {
+  Reboot$Response copyWith({String? reboot}) {
+    return Reboot$Response(reboot: reboot ?? this.reboot);
   }
 
-  Reboot copyWithWrapped({Wrapped<String?>? reboot}) {
-    return Reboot(reboot: (reboot != null ? reboot.value : this.reboot));
+  Reboot$Response copyWithWrapped({Wrapped<String?>? reboot}) {
+    return Reboot$Response(
+        reboot: (reboot != null ? reboot.value : this.reboot));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Red {
-  Red({
+class Red$Response {
+  const Red$Response({
     this.red,
   });
 
-  factory Red.fromJson(Map<String, dynamic> json) => _$RedFromJson(json);
+  factory Red$Response.fromJson(Map<String, dynamic> json) =>
+      _$Red$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Red$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Red$ResponseToJson(this);
 
   @JsonKey(name: 'red')
   final int? red;
-  static const fromJsonFactory = _$RedFromJson;
-  static const toJsonFactory = _$RedToJson;
-  Map<String, dynamic> toJson() => _$RedToJson(this);
+  static const fromJsonFactory = _$Red$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Red &&
+        (other is Red$Response &&
             (identical(other.red, red) ||
                 const DeepCollectionEquality().equals(other.red, red)));
   }
@@ -3432,35 +3592,36 @@ class Red {
       const DeepCollectionEquality().hash(red) ^ runtimeType.hashCode;
 }
 
-extension $RedExtension on Red {
-  Red copyWith({int? red}) {
-    return Red(red: red ?? this.red);
+extension $Red$ResponseExtension on Red$Response {
+  Red$Response copyWith({int? red}) {
+    return Red$Response(red: red ?? this.red);
   }
 
-  Red copyWithWrapped({Wrapped<int?>? red}) {
-    return Red(red: (red != null ? red.value : this.red));
+  Red$Response copyWithWrapped({Wrapped<int?>? red}) {
+    return Red$Response(red: (red != null ? red.value : this.red));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class RefreshRate {
-  RefreshRate({
+class RefreshRate$Response {
+  const RefreshRate$Response({
     this.refreshRate,
   });
 
-  factory RefreshRate.fromJson(Map<String, dynamic> json) =>
-      _$RefreshRateFromJson(json);
+  factory RefreshRate$Response.fromJson(Map<String, dynamic> json) =>
+      _$RefreshRate$ResponseFromJson(json);
+
+  static const toJsonFactory = _$RefreshRate$ResponseToJson;
+  Map<String, dynamic> toJson() => _$RefreshRate$ResponseToJson(this);
 
   @JsonKey(name: 'refresh-rate')
   final double? refreshRate;
-  static const fromJsonFactory = _$RefreshRateFromJson;
-  static const toJsonFactory = _$RefreshRateToJson;
-  Map<String, dynamic> toJson() => _$RefreshRateToJson(this);
+  static const fromJsonFactory = _$RefreshRate$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is RefreshRate &&
+        (other is RefreshRate$Response &&
             (identical(other.refreshRate, refreshRate) ||
                 const DeepCollectionEquality()
                     .equals(other.refreshRate, refreshRate)));
@@ -3474,37 +3635,38 @@ class RefreshRate {
       const DeepCollectionEquality().hash(refreshRate) ^ runtimeType.hashCode;
 }
 
-extension $RefreshRateExtension on RefreshRate {
-  RefreshRate copyWith({double? refreshRate}) {
-    return RefreshRate(refreshRate: refreshRate ?? this.refreshRate);
+extension $RefreshRate$ResponseExtension on RefreshRate$Response {
+  RefreshRate$Response copyWith({double? refreshRate}) {
+    return RefreshRate$Response(refreshRate: refreshRate ?? this.refreshRate);
   }
 
-  RefreshRate copyWithWrapped({Wrapped<double?>? refreshRate}) {
-    return RefreshRate(
+  RefreshRate$Response copyWithWrapped({Wrapped<double?>? refreshRate}) {
+    return RefreshRate$Response(
         refreshRate:
             (refreshRate != null ? refreshRate.value : this.refreshRate));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class RequestFailover {
-  RequestFailover({
+class RequestFailover$Response {
+  const RequestFailover$Response({
     this.requestFailover,
   });
 
-  factory RequestFailover.fromJson(Map<String, dynamic> json) =>
-      _$RequestFailoverFromJson(json);
+  factory RequestFailover$Response.fromJson(Map<String, dynamic> json) =>
+      _$RequestFailover$ResponseFromJson(json);
+
+  static const toJsonFactory = _$RequestFailover$ResponseToJson;
+  Map<String, dynamic> toJson() => _$RequestFailover$ResponseToJson(this);
 
   @JsonKey(name: 'request-failover')
   final String? requestFailover;
-  static const fromJsonFactory = _$RequestFailoverFromJson;
-  static const toJsonFactory = _$RequestFailoverToJson;
-  Map<String, dynamic> toJson() => _$RequestFailoverToJson(this);
+  static const fromJsonFactory = _$RequestFailover$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is RequestFailover &&
+        (other is RequestFailover$Response &&
             (identical(other.requestFailover, requestFailover) ||
                 const DeepCollectionEquality()
                     .equals(other.requestFailover, requestFailover)));
@@ -3519,14 +3681,15 @@ class RequestFailover {
       runtimeType.hashCode;
 }
 
-extension $RequestFailoverExtension on RequestFailover {
-  RequestFailover copyWith({String? requestFailover}) {
-    return RequestFailover(
+extension $RequestFailover$ResponseExtension on RequestFailover$Response {
+  RequestFailover$Response copyWith({String? requestFailover}) {
+    return RequestFailover$Response(
         requestFailover: requestFailover ?? this.requestFailover);
   }
 
-  RequestFailover copyWithWrapped({Wrapped<String?>? requestFailover}) {
-    return RequestFailover(
+  RequestFailover$Response copyWithWrapped(
+      {Wrapped<String?>? requestFailover}) {
+    return RequestFailover$Response(
         requestFailover: (requestFailover != null
             ? requestFailover.value
             : this.requestFailover));
@@ -3534,24 +3697,27 @@ extension $RequestFailoverExtension on RequestFailover {
 }
 
 @JsonSerializable(explicitToJson: true)
-class RestrictToAchievableColours {
-  RestrictToAchievableColours({
+class RestrictToAchievableColours$Response {
+  const RestrictToAchievableColours$Response({
     this.restrictToAchievableColours,
   });
 
-  factory RestrictToAchievableColours.fromJson(Map<String, dynamic> json) =>
-      _$RestrictToAchievableColoursFromJson(json);
+  factory RestrictToAchievableColours$Response.fromJson(
+          Map<String, dynamic> json) =>
+      _$RestrictToAchievableColours$ResponseFromJson(json);
+
+  static const toJsonFactory = _$RestrictToAchievableColours$ResponseToJson;
+  Map<String, dynamic> toJson() =>
+      _$RestrictToAchievableColours$ResponseToJson(this);
 
   @JsonKey(name: 'restrict-to-achievable-colours')
   final Object? restrictToAchievableColours;
-  static const fromJsonFactory = _$RestrictToAchievableColoursFromJson;
-  static const toJsonFactory = _$RestrictToAchievableColoursToJson;
-  Map<String, dynamic> toJson() => _$RestrictToAchievableColoursToJson(this);
+  static const fromJsonFactory = _$RestrictToAchievableColours$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is RestrictToAchievableColours &&
+        (other is RestrictToAchievableColours$Response &&
             (identical(other.restrictToAchievableColours,
                     restrictToAchievableColours) ||
                 const DeepCollectionEquality().equals(
@@ -3568,16 +3734,18 @@ class RestrictToAchievableColours {
       runtimeType.hashCode;
 }
 
-extension $RestrictToAchievableColoursExtension on RestrictToAchievableColours {
-  RestrictToAchievableColours copyWith({Object? restrictToAchievableColours}) {
-    return RestrictToAchievableColours(
+extension $RestrictToAchievableColours$ResponseExtension
+    on RestrictToAchievableColours$Response {
+  RestrictToAchievableColours$Response copyWith(
+      {Object? restrictToAchievableColours}) {
+    return RestrictToAchievableColours$Response(
         restrictToAchievableColours:
             restrictToAchievableColours ?? this.restrictToAchievableColours);
   }
 
-  RestrictToAchievableColours copyWithWrapped(
+  RestrictToAchievableColours$Response copyWithWrapped(
       {Wrapped<Object?>? restrictToAchievableColours}) {
-    return RestrictToAchievableColours(
+    return RestrictToAchievableColours$Response(
         restrictToAchievableColours: (restrictToAchievableColours != null
             ? restrictToAchievableColours.value
             : this.restrictToAchievableColours));
@@ -3585,23 +3753,25 @@ extension $RestrictToAchievableColoursExtension on RestrictToAchievableColours {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Role {
-  Role({
+class Role$Response {
+  const Role$Response({
     this.role,
   });
 
-  factory Role.fromJson(Map<String, dynamic> json) => _$RoleFromJson(json);
+  factory Role$Response.fromJson(Map<String, dynamic> json) =>
+      _$Role$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Role$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Role$ResponseToJson(this);
 
   @JsonKey(name: 'role')
   final String? role;
-  static const fromJsonFactory = _$RoleFromJson;
-  static const toJsonFactory = _$RoleToJson;
-  Map<String, dynamic> toJson() => _$RoleToJson(this);
+  static const fromJsonFactory = _$Role$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Role &&
+        (other is Role$Response &&
             (identical(other.role, role) ||
                 const DeepCollectionEquality().equals(other.role, role)));
   }
@@ -3614,35 +3784,36 @@ class Role {
       const DeepCollectionEquality().hash(role) ^ runtimeType.hashCode;
 }
 
-extension $RoleExtension on Role {
-  Role copyWith({String? role}) {
-    return Role(role: role ?? this.role);
+extension $Role$ResponseExtension on Role$Response {
+  Role$Response copyWith({String? role}) {
+    return Role$Response(role: role ?? this.role);
   }
 
-  Role copyWithWrapped({Wrapped<String?>? role}) {
-    return Role(role: (role != null ? role.value : this.role));
+  Role$Response copyWithWrapped({Wrapped<String?>? role}) {
+    return Role$Response(role: (role != null ? role.value : this.role));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Sampling {
-  Sampling({
+class Sampling$Response {
+  const Sampling$Response({
     this.sampling,
   });
 
-  factory Sampling.fromJson(Map<String, dynamic> json) =>
-      _$SamplingFromJson(json);
+  factory Sampling$Response.fromJson(Map<String, dynamic> json) =>
+      _$Sampling$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Sampling$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Sampling$ResponseToJson(this);
 
   @JsonKey(name: 'sampling')
   final String? sampling;
-  static const fromJsonFactory = _$SamplingFromJson;
-  static const toJsonFactory = _$SamplingToJson;
-  Map<String, dynamic> toJson() => _$SamplingToJson(this);
+  static const fromJsonFactory = _$Sampling$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Sampling &&
+        (other is Sampling$Response &&
             (identical(other.sampling, sampling) ||
                 const DeepCollectionEquality()
                     .equals(other.sampling, sampling)));
@@ -3656,36 +3827,37 @@ class Sampling {
       const DeepCollectionEquality().hash(sampling) ^ runtimeType.hashCode;
 }
 
-extension $SamplingExtension on Sampling {
-  Sampling copyWith({String? sampling}) {
-    return Sampling(sampling: sampling ?? this.sampling);
+extension $Sampling$ResponseExtension on Sampling$Response {
+  Sampling$Response copyWith({String? sampling}) {
+    return Sampling$Response(sampling: sampling ?? this.sampling);
   }
 
-  Sampling copyWithWrapped({Wrapped<String?>? sampling}) {
-    return Sampling(
+  Sampling$Response copyWithWrapped({Wrapped<String?>? sampling}) {
+    return Sampling$Response(
         sampling: (sampling != null ? sampling.value : this.sampling));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Saturation {
-  Saturation({
+class Saturation$Response {
+  const Saturation$Response({
     this.saturation,
   });
 
-  factory Saturation.fromJson(Map<String, dynamic> json) =>
-      _$SaturationFromJson(json);
+  factory Saturation$Response.fromJson(Map<String, dynamic> json) =>
+      _$Saturation$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Saturation$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Saturation$ResponseToJson(this);
 
   @JsonKey(name: 'saturation')
   final double? saturation;
-  static const fromJsonFactory = _$SaturationFromJson;
-  static const toJsonFactory = _$SaturationToJson;
-  Map<String, dynamic> toJson() => _$SaturationToJson(this);
+  static const fromJsonFactory = _$Saturation$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Saturation &&
+        (other is Saturation$Response &&
             (identical(other.saturation, saturation) ||
                 const DeepCollectionEquality()
                     .equals(other.saturation, saturation)));
@@ -3699,36 +3871,37 @@ class Saturation {
       const DeepCollectionEquality().hash(saturation) ^ runtimeType.hashCode;
 }
 
-extension $SaturationExtension on Saturation {
-  Saturation copyWith({double? saturation}) {
-    return Saturation(saturation: saturation ?? this.saturation);
+extension $Saturation$ResponseExtension on Saturation$Response {
+  Saturation$Response copyWith({double? saturation}) {
+    return Saturation$Response(saturation: saturation ?? this.saturation);
   }
 
-  Saturation copyWithWrapped({Wrapped<double?>? saturation}) {
-    return Saturation(
+  Saturation$Response copyWithWrapped({Wrapped<double?>? saturation}) {
+    return Saturation$Response(
         saturation: (saturation != null ? saturation.value : this.saturation));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class SeamCorrectionEnabled {
-  SeamCorrectionEnabled({
+class SeamCorrectionEnabled$Response {
+  const SeamCorrectionEnabled$Response({
     this.seamCorrectionEnabled,
   });
 
-  factory SeamCorrectionEnabled.fromJson(Map<String, dynamic> json) =>
-      _$SeamCorrectionEnabledFromJson(json);
+  factory SeamCorrectionEnabled$Response.fromJson(Map<String, dynamic> json) =>
+      _$SeamCorrectionEnabled$ResponseFromJson(json);
+
+  static const toJsonFactory = _$SeamCorrectionEnabled$ResponseToJson;
+  Map<String, dynamic> toJson() => _$SeamCorrectionEnabled$ResponseToJson(this);
 
   @JsonKey(name: 'seam-correction-enabled')
   final Object? seamCorrectionEnabled;
-  static const fromJsonFactory = _$SeamCorrectionEnabledFromJson;
-  static const toJsonFactory = _$SeamCorrectionEnabledToJson;
-  Map<String, dynamic> toJson() => _$SeamCorrectionEnabledToJson(this);
+  static const fromJsonFactory = _$SeamCorrectionEnabled$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is SeamCorrectionEnabled &&
+        (other is SeamCorrectionEnabled$Response &&
             (identical(other.seamCorrectionEnabled, seamCorrectionEnabled) ||
                 const DeepCollectionEquality().equals(
                     other.seamCorrectionEnabled, seamCorrectionEnabled)));
@@ -3743,16 +3916,17 @@ class SeamCorrectionEnabled {
       runtimeType.hashCode;
 }
 
-extension $SeamCorrectionEnabledExtension on SeamCorrectionEnabled {
-  SeamCorrectionEnabled copyWith({Object? seamCorrectionEnabled}) {
-    return SeamCorrectionEnabled(
+extension $SeamCorrectionEnabled$ResponseExtension
+    on SeamCorrectionEnabled$Response {
+  SeamCorrectionEnabled$Response copyWith({Object? seamCorrectionEnabled}) {
+    return SeamCorrectionEnabled$Response(
         seamCorrectionEnabled:
             seamCorrectionEnabled ?? this.seamCorrectionEnabled);
   }
 
-  SeamCorrectionEnabled copyWithWrapped(
+  SeamCorrectionEnabled$Response copyWithWrapped(
       {Wrapped<Object?>? seamCorrectionEnabled}) {
-    return SeamCorrectionEnabled(
+    return SeamCorrectionEnabled$Response(
         seamCorrectionEnabled: (seamCorrectionEnabled != null
             ? seamCorrectionEnabled.value
             : this.seamCorrectionEnabled));
@@ -3760,24 +3934,25 @@ extension $SeamCorrectionEnabledExtension on SeamCorrectionEnabled {
 }
 
 @JsonSerializable(explicitToJson: true)
-class SensorReadoutTime {
-  SensorReadoutTime({
+class SensorReadoutTime$Response {
+  const SensorReadoutTime$Response({
     this.sensorReadoutTime,
   });
 
-  factory SensorReadoutTime.fromJson(Map<String, dynamic> json) =>
-      _$SensorReadoutTimeFromJson(json);
+  factory SensorReadoutTime$Response.fromJson(Map<String, dynamic> json) =>
+      _$SensorReadoutTime$ResponseFromJson(json);
+
+  static const toJsonFactory = _$SensorReadoutTime$ResponseToJson;
+  Map<String, dynamic> toJson() => _$SensorReadoutTime$ResponseToJson(this);
 
   @JsonKey(name: 'sensor-readout-time')
   final double? sensorReadoutTime;
-  static const fromJsonFactory = _$SensorReadoutTimeFromJson;
-  static const toJsonFactory = _$SensorReadoutTimeToJson;
-  Map<String, dynamic> toJson() => _$SensorReadoutTimeToJson(this);
+  static const fromJsonFactory = _$SensorReadoutTime$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is SensorReadoutTime &&
+        (other is SensorReadoutTime$Response &&
             (identical(other.sensorReadoutTime, sensorReadoutTime) ||
                 const DeepCollectionEquality()
                     .equals(other.sensorReadoutTime, sensorReadoutTime)));
@@ -3792,14 +3967,15 @@ class SensorReadoutTime {
       runtimeType.hashCode;
 }
 
-extension $SensorReadoutTimeExtension on SensorReadoutTime {
-  SensorReadoutTime copyWith({double? sensorReadoutTime}) {
-    return SensorReadoutTime(
+extension $SensorReadoutTime$ResponseExtension on SensorReadoutTime$Response {
+  SensorReadoutTime$Response copyWith({double? sensorReadoutTime}) {
+    return SensorReadoutTime$Response(
         sensorReadoutTime: sensorReadoutTime ?? this.sensorReadoutTime);
   }
 
-  SensorReadoutTime copyWithWrapped({Wrapped<double?>? sensorReadoutTime}) {
-    return SensorReadoutTime(
+  SensorReadoutTime$Response copyWithWrapped(
+      {Wrapped<double?>? sensorReadoutTime}) {
+    return SensorReadoutTime$Response(
         sensorReadoutTime: (sensorReadoutTime != null
             ? sensorReadoutTime.value
             : this.sensorReadoutTime));
@@ -3807,24 +3983,25 @@ extension $SensorReadoutTimeExtension on SensorReadoutTime {
 }
 
 @JsonSerializable(explicitToJson: true)
-class SensorType {
-  SensorType({
+class SensorType$Response {
+  const SensorType$Response({
     this.sensorType,
   });
 
-  factory SensorType.fromJson(Map<String, dynamic> json) =>
-      _$SensorTypeFromJson(json);
+  factory SensorType$Response.fromJson(Map<String, dynamic> json) =>
+      _$SensorType$ResponseFromJson(json);
+
+  static const toJsonFactory = _$SensorType$ResponseToJson;
+  Map<String, dynamic> toJson() => _$SensorType$ResponseToJson(this);
 
   @JsonKey(name: 'sensor-type')
   final String? sensorType;
-  static const fromJsonFactory = _$SensorTypeFromJson;
-  static const toJsonFactory = _$SensorTypeToJson;
-  Map<String, dynamic> toJson() => _$SensorTypeToJson(this);
+  static const fromJsonFactory = _$SensorType$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is SensorType &&
+        (other is SensorType$Response &&
             (identical(other.sensorType, sensorType) ||
                 const DeepCollectionEquality()
                     .equals(other.sensorType, sensorType)));
@@ -3838,36 +4015,37 @@ class SensorType {
       const DeepCollectionEquality().hash(sensorType) ^ runtimeType.hashCode;
 }
 
-extension $SensorTypeExtension on SensorType {
-  SensorType copyWith({String? sensorType}) {
-    return SensorType(sensorType: sensorType ?? this.sensorType);
+extension $SensorType$ResponseExtension on SensorType$Response {
+  SensorType$Response copyWith({String? sensorType}) {
+    return SensorType$Response(sensorType: sensorType ?? this.sensorType);
   }
 
-  SensorType copyWithWrapped({Wrapped<String?>? sensorType}) {
-    return SensorType(
+  SensorType$Response copyWithWrapped({Wrapped<String?>? sensorType}) {
+    return SensorType$Response(
         sensorType: (sensorType != null ? sensorType.value : this.sensorType));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Shutdown {
-  Shutdown({
+class Shutdown$Response {
+  const Shutdown$Response({
     this.shutdown,
   });
 
-  factory Shutdown.fromJson(Map<String, dynamic> json) =>
-      _$ShutdownFromJson(json);
+  factory Shutdown$Response.fromJson(Map<String, dynamic> json) =>
+      _$Shutdown$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Shutdown$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Shutdown$ResponseToJson(this);
 
   @JsonKey(name: 'shutdown')
   final String? shutdown;
-  static const fromJsonFactory = _$ShutdownFromJson;
-  static const toJsonFactory = _$ShutdownToJson;
-  Map<String, dynamic> toJson() => _$ShutdownToJson(this);
+  static const fromJsonFactory = _$Shutdown$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Shutdown &&
+        (other is Shutdown$Response &&
             (identical(other.shutdown, shutdown) ||
                 const DeepCollectionEquality()
                     .equals(other.shutdown, shutdown)));
@@ -3881,36 +4059,37 @@ class Shutdown {
       const DeepCollectionEquality().hash(shutdown) ^ runtimeType.hashCode;
 }
 
-extension $ShutdownExtension on Shutdown {
-  Shutdown copyWith({String? shutdown}) {
-    return Shutdown(shutdown: shutdown ?? this.shutdown);
+extension $Shutdown$ResponseExtension on Shutdown$Response {
+  Shutdown$Response copyWith({String? shutdown}) {
+    return Shutdown$Response(shutdown: shutdown ?? this.shutdown);
   }
 
-  Shutdown copyWithWrapped({Wrapped<String?>? shutdown}) {
-    return Shutdown(
+  Shutdown$Response copyWithWrapped({Wrapped<String?>? shutdown}) {
+    return Shutdown$Response(
         shutdown: (shutdown != null ? shutdown.value : this.shutdown));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class ShutterAngle {
-  ShutterAngle({
+class ShutterAngle$Response {
+  const ShutterAngle$Response({
     this.shutterAngle,
   });
 
-  factory ShutterAngle.fromJson(Map<String, dynamic> json) =>
-      _$ShutterAngleFromJson(json);
+  factory ShutterAngle$Response.fromJson(Map<String, dynamic> json) =>
+      _$ShutterAngle$ResponseFromJson(json);
+
+  static const toJsonFactory = _$ShutterAngle$ResponseToJson;
+  Map<String, dynamic> toJson() => _$ShutterAngle$ResponseToJson(this);
 
   @JsonKey(name: 'shutter-angle')
   final double? shutterAngle;
-  static const fromJsonFactory = _$ShutterAngleFromJson;
-  static const toJsonFactory = _$ShutterAngleToJson;
-  Map<String, dynamic> toJson() => _$ShutterAngleToJson(this);
+  static const fromJsonFactory = _$ShutterAngle$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ShutterAngle &&
+        (other is ShutterAngle$Response &&
             (identical(other.shutterAngle, shutterAngle) ||
                 const DeepCollectionEquality()
                     .equals(other.shutterAngle, shutterAngle)));
@@ -3924,37 +4103,39 @@ class ShutterAngle {
       const DeepCollectionEquality().hash(shutterAngle) ^ runtimeType.hashCode;
 }
 
-extension $ShutterAngleExtension on ShutterAngle {
-  ShutterAngle copyWith({double? shutterAngle}) {
-    return ShutterAngle(shutterAngle: shutterAngle ?? this.shutterAngle);
+extension $ShutterAngle$ResponseExtension on ShutterAngle$Response {
+  ShutterAngle$Response copyWith({double? shutterAngle}) {
+    return ShutterAngle$Response(
+        shutterAngle: shutterAngle ?? this.shutterAngle);
   }
 
-  ShutterAngle copyWithWrapped({Wrapped<double?>? shutterAngle}) {
-    return ShutterAngle(
+  ShutterAngle$Response copyWithWrapped({Wrapped<double?>? shutterAngle}) {
+    return ShutterAngle$Response(
         shutterAngle:
             (shutterAngle != null ? shutterAngle.value : this.shutterAngle));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class ShutterSpeed {
-  ShutterSpeed({
+class ShutterSpeed$Response {
+  const ShutterSpeed$Response({
     this.shutterSpeed,
   });
 
-  factory ShutterSpeed.fromJson(Map<String, dynamic> json) =>
-      _$ShutterSpeedFromJson(json);
+  factory ShutterSpeed$Response.fromJson(Map<String, dynamic> json) =>
+      _$ShutterSpeed$ResponseFromJson(json);
+
+  static const toJsonFactory = _$ShutterSpeed$ResponseToJson;
+  Map<String, dynamic> toJson() => _$ShutterSpeed$ResponseToJson(this);
 
   @JsonKey(name: 'shutter-speed')
   final double? shutterSpeed;
-  static const fromJsonFactory = _$ShutterSpeedFromJson;
-  static const toJsonFactory = _$ShutterSpeedToJson;
-  Map<String, dynamic> toJson() => _$ShutterSpeedToJson(this);
+  static const fromJsonFactory = _$ShutterSpeed$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ShutterSpeed &&
+        (other is ShutterSpeed$Response &&
             (identical(other.shutterSpeed, shutterSpeed) ||
                 const DeepCollectionEquality()
                     .equals(other.shutterSpeed, shutterSpeed)));
@@ -3968,37 +4149,39 @@ class ShutterSpeed {
       const DeepCollectionEquality().hash(shutterSpeed) ^ runtimeType.hashCode;
 }
 
-extension $ShutterSpeedExtension on ShutterSpeed {
-  ShutterSpeed copyWith({double? shutterSpeed}) {
-    return ShutterSpeed(shutterSpeed: shutterSpeed ?? this.shutterSpeed);
+extension $ShutterSpeed$ResponseExtension on ShutterSpeed$Response {
+  ShutterSpeed$Response copyWith({double? shutterSpeed}) {
+    return ShutterSpeed$Response(
+        shutterSpeed: shutterSpeed ?? this.shutterSpeed);
   }
 
-  ShutterSpeed copyWithWrapped({Wrapped<double?>? shutterSpeed}) {
-    return ShutterSpeed(
+  ShutterSpeed$Response copyWithWrapped({Wrapped<double?>? shutterSpeed}) {
+    return ShutterSpeed$Response(
         shutterSpeed:
             (shutterSpeed != null ? shutterSpeed.value : this.shutterSpeed));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Softness {
-  Softness({
+class Softness$Response {
+  const Softness$Response({
     this.softness,
   });
 
-  factory Softness.fromJson(Map<String, dynamic> json) =>
-      _$SoftnessFromJson(json);
+  factory Softness$Response.fromJson(Map<String, dynamic> json) =>
+      _$Softness$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Softness$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Softness$ResponseToJson(this);
 
   @JsonKey(name: 'softness')
   final double? softness;
-  static const fromJsonFactory = _$SoftnessFromJson;
-  static const toJsonFactory = _$SoftnessToJson;
-  Map<String, dynamic> toJson() => _$SoftnessToJson(this);
+  static const fromJsonFactory = _$Softness$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Softness &&
+        (other is Softness$Response &&
             (identical(other.softness, softness) ||
                 const DeepCollectionEquality()
                     .equals(other.softness, softness)));
@@ -4012,36 +4195,37 @@ class Softness {
       const DeepCollectionEquality().hash(softness) ^ runtimeType.hashCode;
 }
 
-extension $SoftnessExtension on Softness {
-  Softness copyWith({double? softness}) {
-    return Softness(softness: softness ?? this.softness);
+extension $Softness$ResponseExtension on Softness$Response {
+  Softness$Response copyWith({double? softness}) {
+    return Softness$Response(softness: softness ?? this.softness);
   }
 
-  Softness copyWithWrapped({Wrapped<double?>? softness}) {
-    return Softness(
+  Softness$Response copyWithWrapped({Wrapped<double?>? softness}) {
+    return Softness$Response(
         softness: (softness != null ? softness.value : this.softness));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class SoftwareVersion {
-  SoftwareVersion({
+class SoftwareVersion$Response {
+  const SoftwareVersion$Response({
     this.softwareVersion,
   });
 
-  factory SoftwareVersion.fromJson(Map<String, dynamic> json) =>
-      _$SoftwareVersionFromJson(json);
+  factory SoftwareVersion$Response.fromJson(Map<String, dynamic> json) =>
+      _$SoftwareVersion$ResponseFromJson(json);
+
+  static const toJsonFactory = _$SoftwareVersion$ResponseToJson;
+  Map<String, dynamic> toJson() => _$SoftwareVersion$ResponseToJson(this);
 
   @JsonKey(name: 'software-version')
   final String? softwareVersion;
-  static const fromJsonFactory = _$SoftwareVersionFromJson;
-  static const toJsonFactory = _$SoftwareVersionToJson;
-  Map<String, dynamic> toJson() => _$SoftwareVersionToJson(this);
+  static const fromJsonFactory = _$SoftwareVersion$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is SoftwareVersion &&
+        (other is SoftwareVersion$Response &&
             (identical(other.softwareVersion, softwareVersion) ||
                 const DeepCollectionEquality()
                     .equals(other.softwareVersion, softwareVersion)));
@@ -4056,14 +4240,15 @@ class SoftwareVersion {
       runtimeType.hashCode;
 }
 
-extension $SoftwareVersionExtension on SoftwareVersion {
-  SoftwareVersion copyWith({String? softwareVersion}) {
-    return SoftwareVersion(
+extension $SoftwareVersion$ResponseExtension on SoftwareVersion$Response {
+  SoftwareVersion$Response copyWith({String? softwareVersion}) {
+    return SoftwareVersion$Response(
         softwareVersion: softwareVersion ?? this.softwareVersion);
   }
 
-  SoftwareVersion copyWithWrapped({Wrapped<String?>? softwareVersion}) {
-    return SoftwareVersion(
+  SoftwareVersion$Response copyWithWrapped(
+      {Wrapped<String?>? softwareVersion}) {
+    return SoftwareVersion$Response(
         softwareVersion: (softwareVersion != null
             ? softwareVersion.value
             : this.softwareVersion));
@@ -4071,23 +4256,25 @@ extension $SoftwareVersionExtension on SoftwareVersion {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Source {
-  Source({
+class Source$Response {
+  const Source$Response({
     this.source,
   });
 
-  factory Source.fromJson(Map<String, dynamic> json) => _$SourceFromJson(json);
+  factory Source$Response.fromJson(Map<String, dynamic> json) =>
+      _$Source$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Source$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Source$ResponseToJson(this);
 
   @JsonKey(name: 'source')
   final String? source;
-  static const fromJsonFactory = _$SourceFromJson;
-  static const toJsonFactory = _$SourceToJson;
-  Map<String, dynamic> toJson() => _$SourceToJson(this);
+  static const fromJsonFactory = _$Source$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Source &&
+        (other is Source$Response &&
             (identical(other.source, source) ||
                 const DeepCollectionEquality().equals(other.source, source)));
   }
@@ -4100,35 +4287,37 @@ class Source {
       const DeepCollectionEquality().hash(source) ^ runtimeType.hashCode;
 }
 
-extension $SourceExtension on Source {
-  Source copyWith({String? source}) {
-    return Source(source: source ?? this.source);
+extension $Source$ResponseExtension on Source$Response {
+  Source$Response copyWith({String? source}) {
+    return Source$Response(source: source ?? this.source);
   }
 
-  Source copyWithWrapped({Wrapped<String?>? source}) {
-    return Source(source: (source != null ? source.value : this.source));
+  Source$Response copyWithWrapped({Wrapped<String?>? source}) {
+    return Source$Response(
+        source: (source != null ? source.value : this.source));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class StarMapSeed {
-  StarMapSeed({
+class StarMapSeed$Response {
+  const StarMapSeed$Response({
     this.starMapSeed,
   });
 
-  factory StarMapSeed.fromJson(Map<String, dynamic> json) =>
-      _$StarMapSeedFromJson(json);
+  factory StarMapSeed$Response.fromJson(Map<String, dynamic> json) =>
+      _$StarMapSeed$ResponseFromJson(json);
+
+  static const toJsonFactory = _$StarMapSeed$ResponseToJson;
+  Map<String, dynamic> toJson() => _$StarMapSeed$ResponseToJson(this);
 
   @JsonKey(name: 'star-map-seed')
   final int? starMapSeed;
-  static const fromJsonFactory = _$StarMapSeedFromJson;
-  static const toJsonFactory = _$StarMapSeedToJson;
-  Map<String, dynamic> toJson() => _$StarMapSeedToJson(this);
+  static const fromJsonFactory = _$StarMapSeed$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is StarMapSeed &&
+        (other is StarMapSeed$Response &&
             (identical(other.starMapSeed, starMapSeed) ||
                 const DeepCollectionEquality()
                     .equals(other.starMapSeed, starMapSeed)));
@@ -4142,36 +4331,38 @@ class StarMapSeed {
       const DeepCollectionEquality().hash(starMapSeed) ^ runtimeType.hashCode;
 }
 
-extension $StarMapSeedExtension on StarMapSeed {
-  StarMapSeed copyWith({int? starMapSeed}) {
-    return StarMapSeed(starMapSeed: starMapSeed ?? this.starMapSeed);
+extension $StarMapSeed$ResponseExtension on StarMapSeed$Response {
+  StarMapSeed$Response copyWith({int? starMapSeed}) {
+    return StarMapSeed$Response(starMapSeed: starMapSeed ?? this.starMapSeed);
   }
 
-  StarMapSeed copyWithWrapped({Wrapped<int?>? starMapSeed}) {
-    return StarMapSeed(
+  StarMapSeed$Response copyWithWrapped({Wrapped<int?>? starMapSeed}) {
+    return StarMapSeed$Response(
         starMapSeed:
             (starMapSeed != null ? starMapSeed.value : this.starMapSeed));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class State {
-  State({
+class State$Response {
+  const State$Response({
     this.state,
   });
 
-  factory State.fromJson(Map<String, dynamic> json) => _$StateFromJson(json);
+  factory State$Response.fromJson(Map<String, dynamic> json) =>
+      _$State$ResponseFromJson(json);
+
+  static const toJsonFactory = _$State$ResponseToJson;
+  Map<String, dynamic> toJson() => _$State$ResponseToJson(this);
 
   @JsonKey(name: 'state')
   final String? state;
-  static const fromJsonFactory = _$StateFromJson;
-  static const toJsonFactory = _$StateToJson;
-  Map<String, dynamic> toJson() => _$StateToJson(this);
+  static const fromJsonFactory = _$State$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is State &&
+        (other is State$Response &&
             (identical(other.state, state) ||
                 const DeepCollectionEquality().equals(other.state, state)));
   }
@@ -4184,34 +4375,36 @@ class State {
       const DeepCollectionEquality().hash(state) ^ runtimeType.hashCode;
 }
 
-extension $StateExtension on State {
-  State copyWith({String? state}) {
-    return State(state: state ?? this.state);
+extension $State$ResponseExtension on State$Response {
+  State$Response copyWith({String? state}) {
+    return State$Response(state: state ?? this.state);
   }
 
-  State copyWithWrapped({Wrapped<String?>? state}) {
-    return State(state: (state != null ? state.value : this.state));
+  State$Response copyWithWrapped({Wrapped<String?>? state}) {
+    return State$Response(state: (state != null ? state.value : this.state));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Status {
-  Status({
+class Status$Response {
+  const Status$Response({
     this.status,
   });
 
-  factory Status.fromJson(Map<String, dynamic> json) => _$StatusFromJson(json);
+  factory Status$Response.fromJson(Map<String, dynamic> json) =>
+      _$Status$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Status$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Status$ResponseToJson(this);
 
   @JsonKey(name: 'status')
   final Object? status;
-  static const fromJsonFactory = _$StatusFromJson;
-  static const toJsonFactory = _$StatusToJson;
-  Map<String, dynamic> toJson() => _$StatusToJson(this);
+  static const fromJsonFactory = _$Status$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Status &&
+        (other is Status$Response &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)));
   }
@@ -4224,35 +4417,37 @@ class Status {
       const DeepCollectionEquality().hash(status) ^ runtimeType.hashCode;
 }
 
-extension $StatusExtension on Status {
-  Status copyWith({Object? status}) {
-    return Status(status: status ?? this.status);
+extension $Status$ResponseExtension on Status$Response {
+  Status$Response copyWith({Object? status}) {
+    return Status$Response(status: status ?? this.status);
   }
 
-  Status copyWithWrapped({Wrapped<Object?>? status}) {
-    return Status(status: (status != null ? status.value : this.status));
+  Status$Response copyWithWrapped({Wrapped<Object?>? status}) {
+    return Status$Response(
+        status: (status != null ? status.value : this.status));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Strength {
-  Strength({
+class Strength$Response {
+  const Strength$Response({
     this.strength,
   });
 
-  factory Strength.fromJson(Map<String, dynamic> json) =>
-      _$StrengthFromJson(json);
+  factory Strength$Response.fromJson(Map<String, dynamic> json) =>
+      _$Strength$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Strength$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Strength$ResponseToJson(this);
 
   @JsonKey(name: 'strength')
   final double? strength;
-  static const fromJsonFactory = _$StrengthFromJson;
-  static const toJsonFactory = _$StrengthToJson;
-  Map<String, dynamic> toJson() => _$StrengthToJson(this);
+  static const fromJsonFactory = _$Strength$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Strength &&
+        (other is Strength$Response &&
             (identical(other.strength, strength) ||
                 const DeepCollectionEquality()
                     .equals(other.strength, strength)));
@@ -4266,35 +4461,37 @@ class Strength {
       const DeepCollectionEquality().hash(strength) ^ runtimeType.hashCode;
 }
 
-extension $StrengthExtension on Strength {
-  Strength copyWith({double? strength}) {
-    return Strength(strength: strength ?? this.strength);
+extension $Strength$ResponseExtension on Strength$Response {
+  Strength$Response copyWith({double? strength}) {
+    return Strength$Response(strength: strength ?? this.strength);
   }
 
-  Strength copyWithWrapped({Wrapped<double?>? strength}) {
-    return Strength(
+  Strength$Response copyWithWrapped({Wrapped<double?>? strength}) {
+    return Strength$Response(
         strength: (strength != null ? strength.value : this.strength));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Time {
-  Time({
+class Time$Response {
+  const Time$Response({
     this.time,
   });
 
-  factory Time.fromJson(Map<String, dynamic> json) => _$TimeFromJson(json);
+  factory Time$Response.fromJson(Map<String, dynamic> json) =>
+      _$Time$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Time$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Time$ResponseToJson(this);
 
   @JsonKey(name: 'time')
   final double? time;
-  static const fromJsonFactory = _$TimeFromJson;
-  static const toJsonFactory = _$TimeToJson;
-  Map<String, dynamic> toJson() => _$TimeToJson(this);
+  static const fromJsonFactory = _$Time$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Time &&
+        (other is Time$Response &&
             (identical(other.time, time) ||
                 const DeepCollectionEquality().equals(other.time, time)));
   }
@@ -4307,34 +4504,36 @@ class Time {
       const DeepCollectionEquality().hash(time) ^ runtimeType.hashCode;
 }
 
-extension $TimeExtension on Time {
-  Time copyWith({double? time}) {
-    return Time(time: time ?? this.time);
+extension $Time$ResponseExtension on Time$Response {
+  Time$Response copyWith({double? time}) {
+    return Time$Response(time: time ?? this.time);
   }
 
-  Time copyWithWrapped({Wrapped<double?>? time}) {
-    return Time(time: (time != null ? time.value : this.time));
+  Time$Response copyWithWrapped({Wrapped<double?>? time}) {
+    return Time$Response(time: (time != null ? time.value : this.time));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Type$ {
-  Type$({
+class Type$Response {
+  const Type$Response({
     this.type,
   });
 
-  factory Type$.fromJson(Map<String, dynamic> json) => _$Type$FromJson(json);
+  factory Type$Response.fromJson(Map<String, dynamic> json) =>
+      _$Type$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Type$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Type$ResponseToJson(this);
 
   @JsonKey(name: 'type')
   final String? type;
-  static const fromJsonFactory = _$Type$FromJson;
-  static const toJsonFactory = _$Type$ToJson;
-  Map<String, dynamic> toJson() => _$Type$ToJson(this);
+  static const fromJsonFactory = _$Type$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Type$ &&
+        (other is Type$Response &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)));
   }
@@ -4347,35 +4546,36 @@ class Type$ {
       const DeepCollectionEquality().hash(type) ^ runtimeType.hashCode;
 }
 
-extension $Type$Extension on Type$ {
-  Type$ copyWith({String? type}) {
-    return Type$(type: type ?? this.type);
+extension $Type$ResponseExtension on Type$Response {
+  Type$Response copyWith({String? type}) {
+    return Type$Response(type: type ?? this.type);
   }
 
-  Type$ copyWithWrapped({Wrapped<String?>? type}) {
-    return Type$(type: (type != null ? type.value : this.type));
+  Type$Response copyWithWrapped({Wrapped<String?>? type}) {
+    return Type$Response(type: (type != null ? type.value : this.type));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class UseCustomFrameRate {
-  UseCustomFrameRate({
+class UseCustomFrameRate$Response {
+  const UseCustomFrameRate$Response({
     this.useCustomFrameRate,
   });
 
-  factory UseCustomFrameRate.fromJson(Map<String, dynamic> json) =>
-      _$UseCustomFrameRateFromJson(json);
+  factory UseCustomFrameRate$Response.fromJson(Map<String, dynamic> json) =>
+      _$UseCustomFrameRate$ResponseFromJson(json);
+
+  static const toJsonFactory = _$UseCustomFrameRate$ResponseToJson;
+  Map<String, dynamic> toJson() => _$UseCustomFrameRate$ResponseToJson(this);
 
   @JsonKey(name: 'use-custom-frame-rate')
   final Object? useCustomFrameRate;
-  static const fromJsonFactory = _$UseCustomFrameRateFromJson;
-  static const toJsonFactory = _$UseCustomFrameRateToJson;
-  Map<String, dynamic> toJson() => _$UseCustomFrameRateToJson(this);
+  static const fromJsonFactory = _$UseCustomFrameRate$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is UseCustomFrameRate &&
+        (other is UseCustomFrameRate$Response &&
             (identical(other.useCustomFrameRate, useCustomFrameRate) ||
                 const DeepCollectionEquality()
                     .equals(other.useCustomFrameRate, useCustomFrameRate)));
@@ -4390,14 +4590,15 @@ class UseCustomFrameRate {
       runtimeType.hashCode;
 }
 
-extension $UseCustomFrameRateExtension on UseCustomFrameRate {
-  UseCustomFrameRate copyWith({Object? useCustomFrameRate}) {
-    return UseCustomFrameRate(
+extension $UseCustomFrameRate$ResponseExtension on UseCustomFrameRate$Response {
+  UseCustomFrameRate$Response copyWith({Object? useCustomFrameRate}) {
+    return UseCustomFrameRate$Response(
         useCustomFrameRate: useCustomFrameRate ?? this.useCustomFrameRate);
   }
 
-  UseCustomFrameRate copyWithWrapped({Wrapped<Object?>? useCustomFrameRate}) {
-    return UseCustomFrameRate(
+  UseCustomFrameRate$Response copyWithWrapped(
+      {Wrapped<Object?>? useCustomFrameRate}) {
+    return UseCustomFrameRate$Response(
         useCustomFrameRate: (useCustomFrameRate != null
             ? useCustomFrameRate.value
             : this.useCustomFrameRate));
@@ -4405,24 +4606,25 @@ extension $UseCustomFrameRateExtension on UseCustomFrameRate {
 }
 
 @JsonSerializable(explicitToJson: true)
-class ViewMatte {
-  ViewMatte({
+class ViewMatte$Response {
+  const ViewMatte$Response({
     this.viewMatte,
   });
 
-  factory ViewMatte.fromJson(Map<String, dynamic> json) =>
-      _$ViewMatteFromJson(json);
+  factory ViewMatte$Response.fromJson(Map<String, dynamic> json) =>
+      _$ViewMatte$ResponseFromJson(json);
+
+  static const toJsonFactory = _$ViewMatte$ResponseToJson;
+  Map<String, dynamic> toJson() => _$ViewMatte$ResponseToJson(this);
 
   @JsonKey(name: 'view-matte')
   final Object? viewMatte;
-  static const fromJsonFactory = _$ViewMatteFromJson;
-  static const toJsonFactory = _$ViewMatteToJson;
-  Map<String, dynamic> toJson() => _$ViewMatteToJson(this);
+  static const fromJsonFactory = _$ViewMatte$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ViewMatte &&
+        (other is ViewMatte$Response &&
             (identical(other.viewMatte, viewMatte) ||
                 const DeepCollectionEquality()
                     .equals(other.viewMatte, viewMatte)));
@@ -4436,35 +4638,37 @@ class ViewMatte {
       const DeepCollectionEquality().hash(viewMatte) ^ runtimeType.hashCode;
 }
 
-extension $ViewMatteExtension on ViewMatte {
-  ViewMatte copyWith({Object? viewMatte}) {
-    return ViewMatte(viewMatte: viewMatte ?? this.viewMatte);
+extension $ViewMatte$ResponseExtension on ViewMatte$Response {
+  ViewMatte$Response copyWith({Object? viewMatte}) {
+    return ViewMatte$Response(viewMatte: viewMatte ?? this.viewMatte);
   }
 
-  ViewMatte copyWithWrapped({Wrapped<Object?>? viewMatte}) {
-    return ViewMatte(
+  ViewMatte$Response copyWithWrapped({Wrapped<Object?>? viewMatte}) {
+    return ViewMatte$Response(
         viewMatte: (viewMatte != null ? viewMatte.value : this.viewMatte));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Width {
-  Width({
+class Width$Response {
+  const Width$Response({
     this.width,
   });
 
-  factory Width.fromJson(Map<String, dynamic> json) => _$WidthFromJson(json);
+  factory Width$Response.fromJson(Map<String, dynamic> json) =>
+      _$Width$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Width$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Width$ResponseToJson(this);
 
   @JsonKey(name: 'width')
   final int? width;
-  static const fromJsonFactory = _$WidthFromJson;
-  static const toJsonFactory = _$WidthToJson;
-  Map<String, dynamic> toJson() => _$WidthToJson(this);
+  static const fromJsonFactory = _$Width$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Width &&
+        (other is Width$Response &&
             (identical(other.width, width) ||
                 const DeepCollectionEquality().equals(other.width, width)));
   }
@@ -4477,34 +4681,36 @@ class Width {
       const DeepCollectionEquality().hash(width) ^ runtimeType.hashCode;
 }
 
-extension $WidthExtension on Width {
-  Width copyWith({int? width}) {
-    return Width(width: width ?? this.width);
+extension $Width$ResponseExtension on Width$Response {
+  Width$Response copyWith({int? width}) {
+    return Width$Response(width: width ?? this.width);
   }
 
-  Width copyWithWrapped({Wrapped<int?>? width}) {
-    return Width(width: (width != null ? width.value : this.width));
+  Width$Response copyWithWrapped({Wrapped<int?>? width}) {
+    return Width$Response(width: (width != null ? width.value : this.width));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class X {
-  X({
+class X$Response {
+  const X$Response({
     this.x,
   });
 
-  factory X.fromJson(Map<String, dynamic> json) => _$XFromJson(json);
+  factory X$Response.fromJson(Map<String, dynamic> json) =>
+      _$X$ResponseFromJson(json);
+
+  static const toJsonFactory = _$X$ResponseToJson;
+  Map<String, dynamic> toJson() => _$X$ResponseToJson(this);
 
   @JsonKey(name: 'x')
   final double? x;
-  static const fromJsonFactory = _$XFromJson;
-  static const toJsonFactory = _$XToJson;
-  Map<String, dynamic> toJson() => _$XToJson(this);
+  static const fromJsonFactory = _$X$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is X &&
+        (other is X$Response &&
             (identical(other.x, x) ||
                 const DeepCollectionEquality().equals(other.x, x)));
   }
@@ -4517,35 +4723,36 @@ class X {
       const DeepCollectionEquality().hash(x) ^ runtimeType.hashCode;
 }
 
-extension $XExtension on X {
-  X copyWith({double? x}) {
-    return X(x: x ?? this.x);
+extension $X$ResponseExtension on X$Response {
+  X$Response copyWith({double? x}) {
+    return X$Response(x: x ?? this.x);
   }
 
-  X copyWithWrapped({Wrapped<double?>? x}) {
-    return X(x: (x != null ? x.value : this.x));
+  X$Response copyWithWrapped({Wrapped<double?>? x}) {
+    return X$Response(x: (x != null ? x.value : this.x));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class XOffset {
-  XOffset({
+class XOffset$Response {
+  const XOffset$Response({
     this.xOffset,
   });
 
-  factory XOffset.fromJson(Map<String, dynamic> json) =>
-      _$XOffsetFromJson(json);
+  factory XOffset$Response.fromJson(Map<String, dynamic> json) =>
+      _$XOffset$ResponseFromJson(json);
+
+  static const toJsonFactory = _$XOffset$ResponseToJson;
+  Map<String, dynamic> toJson() => _$XOffset$ResponseToJson(this);
 
   @JsonKey(name: 'x-offset')
   final int? xOffset;
-  static const fromJsonFactory = _$XOffsetFromJson;
-  static const toJsonFactory = _$XOffsetToJson;
-  Map<String, dynamic> toJson() => _$XOffsetToJson(this);
+  static const fromJsonFactory = _$XOffset$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is XOffset &&
+        (other is XOffset$Response &&
             (identical(other.xOffset, xOffset) ||
                 const DeepCollectionEquality().equals(other.xOffset, xOffset)));
   }
@@ -4558,34 +4765,37 @@ class XOffset {
       const DeepCollectionEquality().hash(xOffset) ^ runtimeType.hashCode;
 }
 
-extension $XOffsetExtension on XOffset {
-  XOffset copyWith({int? xOffset}) {
-    return XOffset(xOffset: xOffset ?? this.xOffset);
+extension $XOffset$ResponseExtension on XOffset$Response {
+  XOffset$Response copyWith({int? xOffset}) {
+    return XOffset$Response(xOffset: xOffset ?? this.xOffset);
   }
 
-  XOffset copyWithWrapped({Wrapped<int?>? xOffset}) {
-    return XOffset(xOffset: (xOffset != null ? xOffset.value : this.xOffset));
+  XOffset$Response copyWithWrapped({Wrapped<int?>? xOffset}) {
+    return XOffset$Response(
+        xOffset: (xOffset != null ? xOffset.value : this.xOffset));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class Y {
-  Y({
+class Y$Response {
+  const Y$Response({
     this.y,
   });
 
-  factory Y.fromJson(Map<String, dynamic> json) => _$YFromJson(json);
+  factory Y$Response.fromJson(Map<String, dynamic> json) =>
+      _$Y$ResponseFromJson(json);
+
+  static const toJsonFactory = _$Y$ResponseToJson;
+  Map<String, dynamic> toJson() => _$Y$ResponseToJson(this);
 
   @JsonKey(name: 'y')
   final double? y;
-  static const fromJsonFactory = _$YFromJson;
-  static const toJsonFactory = _$YToJson;
-  Map<String, dynamic> toJson() => _$YToJson(this);
+  static const fromJsonFactory = _$Y$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Y &&
+        (other is Y$Response &&
             (identical(other.y, y) ||
                 const DeepCollectionEquality().equals(other.y, y)));
   }
@@ -4598,35 +4808,36 @@ class Y {
       const DeepCollectionEquality().hash(y) ^ runtimeType.hashCode;
 }
 
-extension $YExtension on Y {
-  Y copyWith({double? y}) {
-    return Y(y: y ?? this.y);
+extension $Y$ResponseExtension on Y$Response {
+  Y$Response copyWith({double? y}) {
+    return Y$Response(y: y ?? this.y);
   }
 
-  Y copyWithWrapped({Wrapped<double?>? y}) {
-    return Y(y: (y != null ? y.value : this.y));
+  Y$Response copyWithWrapped({Wrapped<double?>? y}) {
+    return Y$Response(y: (y != null ? y.value : this.y));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class YOffset {
-  YOffset({
+class YOffset$Response {
+  const YOffset$Response({
     this.yOffset,
   });
 
-  factory YOffset.fromJson(Map<String, dynamic> json) =>
-      _$YOffsetFromJson(json);
+  factory YOffset$Response.fromJson(Map<String, dynamic> json) =>
+      _$YOffset$ResponseFromJson(json);
+
+  static const toJsonFactory = _$YOffset$ResponseToJson;
+  Map<String, dynamic> toJson() => _$YOffset$ResponseToJson(this);
 
   @JsonKey(name: 'y-offset')
   final int? yOffset;
-  static const fromJsonFactory = _$YOffsetFromJson;
-  static const toJsonFactory = _$YOffsetToJson;
-  Map<String, dynamic> toJson() => _$YOffsetToJson(this);
+  static const fromJsonFactory = _$YOffset$ResponseFromJson;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is YOffset &&
+        (other is YOffset$Response &&
             (identical(other.yOffset, yOffset) ||
                 const DeepCollectionEquality().equals(other.yOffset, yOffset)));
   }
@@ -4639,19 +4850,20 @@ class YOffset {
       const DeepCollectionEquality().hash(yOffset) ^ runtimeType.hashCode;
 }
 
-extension $YOffsetExtension on YOffset {
-  YOffset copyWith({int? yOffset}) {
-    return YOffset(yOffset: yOffset ?? this.yOffset);
+extension $YOffset$ResponseExtension on YOffset$Response {
+  YOffset$Response copyWith({int? yOffset}) {
+    return YOffset$Response(yOffset: yOffset ?? this.yOffset);
   }
 
-  YOffset copyWithWrapped({Wrapped<int?>? yOffset}) {
-    return YOffset(yOffset: (yOffset != null ? yOffset.value : this.yOffset));
+  YOffset$Response copyWithWrapped({Wrapped<int?>? yOffset}) {
+    return YOffset$Response(
+        yOffset: (yOffset != null ? yOffset.value : this.yOffset));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
 class GroupsItemsNumberBrightnessPut$RequestBody {
-  GroupsItemsNumberBrightnessPut$RequestBody({
+  const GroupsItemsNumberBrightnessPut$RequestBody({
     required this.data,
   });
 
@@ -4659,14 +4871,15 @@ class GroupsItemsNumberBrightnessPut$RequestBody {
           Map<String, dynamic> json) =>
       _$GroupsItemsNumberBrightnessPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$GroupsItemsNumberBrightnessPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$GroupsItemsNumberBrightnessPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$GroupsItemsNumberBrightnessPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$GroupsItemsNumberBrightnessPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -4699,7 +4912,7 @@ extension $GroupsItemsNumberBrightnessPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class GroupsItemsNumberColourTemperaturePut$RequestBody {
-  GroupsItemsNumberColourTemperaturePut$RequestBody({
+  const GroupsItemsNumberColourTemperaturePut$RequestBody({
     required this.data,
   });
 
@@ -4707,14 +4920,15 @@ class GroupsItemsNumberColourTemperaturePut$RequestBody {
           Map<String, dynamic> json) =>
       _$GroupsItemsNumberColourTemperaturePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$GroupsItemsNumberColourTemperaturePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$GroupsItemsNumberColourTemperaturePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$GroupsItemsNumberColourTemperaturePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$GroupsItemsNumberColourTemperaturePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -4748,7 +4962,7 @@ extension $GroupsItemsNumberColourTemperaturePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class GroupsItemsNumberDarkMagicEnabledPut$RequestBody {
-  GroupsItemsNumberDarkMagicEnabledPut$RequestBody({
+  const GroupsItemsNumberDarkMagicEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -4756,14 +4970,15 @@ class GroupsItemsNumberDarkMagicEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$GroupsItemsNumberDarkMagicEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$GroupsItemsNumberDarkMagicEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$GroupsItemsNumberDarkMagicEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$GroupsItemsNumberDarkMagicEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$GroupsItemsNumberDarkMagicEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -4797,7 +5012,7 @@ extension $GroupsItemsNumberDarkMagicEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class GroupsItemsNumberExtendedBitDepthEnabledPut$RequestBody {
-  GroupsItemsNumberExtendedBitDepthEnabledPut$RequestBody({
+  const GroupsItemsNumberExtendedBitDepthEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -4805,14 +5020,15 @@ class GroupsItemsNumberExtendedBitDepthEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$GroupsItemsNumberExtendedBitDepthEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$GroupsItemsNumberExtendedBitDepthEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$GroupsItemsNumberExtendedBitDepthEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$GroupsItemsNumberExtendedBitDepthEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$GroupsItemsNumberExtendedBitDepthEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -4847,7 +5063,7 @@ extension $GroupsItemsNumberExtendedBitDepthEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class GroupsItemsNumberGainsBluePut$RequestBody {
-  GroupsItemsNumberGainsBluePut$RequestBody({
+  const GroupsItemsNumberGainsBluePut$RequestBody({
     required this.data,
   });
 
@@ -4855,14 +5071,15 @@ class GroupsItemsNumberGainsBluePut$RequestBody {
           Map<String, dynamic> json) =>
       _$GroupsItemsNumberGainsBluePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$GroupsItemsNumberGainsBluePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$GroupsItemsNumberGainsBluePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$GroupsItemsNumberGainsBluePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$GroupsItemsNumberGainsBluePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -4895,7 +5112,7 @@ extension $GroupsItemsNumberGainsBluePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class GroupsItemsNumberGainsGreenPut$RequestBody {
-  GroupsItemsNumberGainsGreenPut$RequestBody({
+  const GroupsItemsNumberGainsGreenPut$RequestBody({
     required this.data,
   });
 
@@ -4903,14 +5120,15 @@ class GroupsItemsNumberGainsGreenPut$RequestBody {
           Map<String, dynamic> json) =>
       _$GroupsItemsNumberGainsGreenPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$GroupsItemsNumberGainsGreenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$GroupsItemsNumberGainsGreenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$GroupsItemsNumberGainsGreenPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$GroupsItemsNumberGainsGreenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -4943,7 +5161,7 @@ extension $GroupsItemsNumberGainsGreenPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class GroupsItemsNumberGainsIntensityPut$RequestBody {
-  GroupsItemsNumberGainsIntensityPut$RequestBody({
+  const GroupsItemsNumberGainsIntensityPut$RequestBody({
     required this.data,
   });
 
@@ -4951,14 +5169,15 @@ class GroupsItemsNumberGainsIntensityPut$RequestBody {
           Map<String, dynamic> json) =>
       _$GroupsItemsNumberGainsIntensityPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$GroupsItemsNumberGainsIntensityPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$GroupsItemsNumberGainsIntensityPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$GroupsItemsNumberGainsIntensityPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$GroupsItemsNumberGainsIntensityPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -4992,7 +5211,7 @@ extension $GroupsItemsNumberGainsIntensityPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class GroupsItemsNumberGainsRedPut$RequestBody {
-  GroupsItemsNumberGainsRedPut$RequestBody({
+  const GroupsItemsNumberGainsRedPut$RequestBody({
     required this.data,
   });
 
@@ -5000,13 +5219,14 @@ class GroupsItemsNumberGainsRedPut$RequestBody {
           Map<String, dynamic> json) =>
       _$GroupsItemsNumberGainsRedPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$GroupsItemsNumberGainsRedPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$GroupsItemsNumberGainsRedPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'data')
   final double data;
   static const fromJsonFactory =
       _$GroupsItemsNumberGainsRedPut$RequestBodyFromJson;
-  static const toJsonFactory = _$GroupsItemsNumberGainsRedPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$GroupsItemsNumberGainsRedPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -5039,7 +5259,7 @@ extension $GroupsItemsNumberGainsRedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class GroupsItemsNumberGammaPut$RequestBody {
-  GroupsItemsNumberGammaPut$RequestBody({
+  const GroupsItemsNumberGammaPut$RequestBody({
     required this.data,
   });
 
@@ -5047,13 +5267,14 @@ class GroupsItemsNumberGammaPut$RequestBody {
           Map<String, dynamic> json) =>
       _$GroupsItemsNumberGammaPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$GroupsItemsNumberGammaPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$GroupsItemsNumberGammaPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'data')
   final double data;
   static const fromJsonFactory =
       _$GroupsItemsNumberGammaPut$RequestBodyFromJson;
-  static const toJsonFactory = _$GroupsItemsNumberGammaPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$GroupsItemsNumberGammaPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -5086,7 +5307,7 @@ extension $GroupsItemsNumberGammaPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class GroupsItemsNumberGlobalColourOverridePut$RequestBody {
-  GroupsItemsNumberGlobalColourOverridePut$RequestBody({
+  const GroupsItemsNumberGlobalColourOverridePut$RequestBody({
     required this.data,
   });
 
@@ -5094,14 +5315,15 @@ class GroupsItemsNumberGlobalColourOverridePut$RequestBody {
           Map<String, dynamic> json) =>
       _$GroupsItemsNumberGlobalColourOverridePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$GroupsItemsNumberGlobalColourOverridePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$GroupsItemsNumberGlobalColourOverridePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$GroupsItemsNumberGlobalColourOverridePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$GroupsItemsNumberGlobalColourOverridePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5136,7 +5358,7 @@ extension $GroupsItemsNumberGlobalColourOverridePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class GroupsItemsNumberGlobalGainsOverridePut$RequestBody {
-  GroupsItemsNumberGlobalGainsOverridePut$RequestBody({
+  const GroupsItemsNumberGlobalGainsOverridePut$RequestBody({
     required this.data,
   });
 
@@ -5144,14 +5366,15 @@ class GroupsItemsNumberGlobalGainsOverridePut$RequestBody {
           Map<String, dynamic> json) =>
       _$GroupsItemsNumberGlobalGainsOverridePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$GroupsItemsNumberGlobalGainsOverridePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$GroupsItemsNumberGlobalGainsOverridePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$GroupsItemsNumberGlobalGainsOverridePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$GroupsItemsNumberGlobalGainsOverridePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5185,7 +5408,7 @@ extension $GroupsItemsNumberGlobalGainsOverridePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class GroupsItemsNumberGlobalStartrackerOverridePut$RequestBody {
-  GroupsItemsNumberGlobalStartrackerOverridePut$RequestBody({
+  const GroupsItemsNumberGlobalStartrackerOverridePut$RequestBody({
     required this.data,
   });
 
@@ -5193,14 +5416,15 @@ class GroupsItemsNumberGlobalStartrackerOverridePut$RequestBody {
           Map<String, dynamic> json) =>
       _$GroupsItemsNumberGlobalStartrackerOverridePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$GroupsItemsNumberGlobalStartrackerOverridePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$GroupsItemsNumberGlobalStartrackerOverridePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$GroupsItemsNumberGlobalStartrackerOverridePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$GroupsItemsNumberGlobalStartrackerOverridePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5235,7 +5459,7 @@ extension $GroupsItemsNumberGlobalStartrackerOverridePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class GroupsItemsNumberNamePut$RequestBody {
-  GroupsItemsNumberNamePut$RequestBody({
+  const GroupsItemsNumberNamePut$RequestBody({
     required this.data,
   });
 
@@ -5243,12 +5467,13 @@ class GroupsItemsNumberNamePut$RequestBody {
           Map<String, dynamic> json) =>
       _$GroupsItemsNumberNamePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory = _$GroupsItemsNumberNamePut$RequestBodyFromJson;
   static const toJsonFactory = _$GroupsItemsNumberNamePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$GroupsItemsNumberNamePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory = _$GroupsItemsNumberNamePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5281,7 +5506,7 @@ extension $GroupsItemsNumberNamePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class GroupsItemsNumberOverdriveEnabledPut$RequestBody {
-  GroupsItemsNumberOverdriveEnabledPut$RequestBody({
+  const GroupsItemsNumberOverdriveEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -5289,14 +5514,15 @@ class GroupsItemsNumberOverdriveEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$GroupsItemsNumberOverdriveEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$GroupsItemsNumberOverdriveEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$GroupsItemsNumberOverdriveEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$GroupsItemsNumberOverdriveEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$GroupsItemsNumberOverdriveEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5330,7 +5556,7 @@ extension $GroupsItemsNumberOverdriveEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class GroupsItemsNumberPuretoneEnabledPut$RequestBody {
-  GroupsItemsNumberPuretoneEnabledPut$RequestBody({
+  const GroupsItemsNumberPuretoneEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -5338,14 +5564,15 @@ class GroupsItemsNumberPuretoneEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$GroupsItemsNumberPuretoneEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$GroupsItemsNumberPuretoneEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$GroupsItemsNumberPuretoneEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$GroupsItemsNumberPuretoneEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$GroupsItemsNumberPuretoneEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5379,7 +5606,7 @@ extension $GroupsItemsNumberPuretoneEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class GroupsItemsNumberStartrackerEnabledPut$RequestBody {
-  GroupsItemsNumberStartrackerEnabledPut$RequestBody({
+  const GroupsItemsNumberStartrackerEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -5387,14 +5614,15 @@ class GroupsItemsNumberStartrackerEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$GroupsItemsNumberStartrackerEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$GroupsItemsNumberStartrackerEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$GroupsItemsNumberStartrackerEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$GroupsItemsNumberStartrackerEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$GroupsItemsNumberStartrackerEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5428,7 +5656,7 @@ extension $GroupsItemsNumberStartrackerEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputActiveSourcePortNumberPut$RequestBody {
-  InputActiveSourcePortNumberPut$RequestBody({
+  const InputActiveSourcePortNumberPut$RequestBody({
     required this.data,
   });
 
@@ -5436,14 +5664,15 @@ class InputActiveSourcePortNumberPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputActiveSourcePortNumberPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputActiveSourcePortNumberPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputActiveSourcePortNumberPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputActiveSourcePortNumberPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputActiveSourcePortNumberPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5476,7 +5705,7 @@ extension $InputActiveSourcePortNumberPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputActiveSourcePortTypePut$RequestBody {
-  InputActiveSourcePortTypePut$RequestBody({
+  const InputActiveSourcePortTypePut$RequestBody({
     required this.data,
   });
 
@@ -5484,13 +5713,14 @@ class InputActiveSourcePortTypePut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputActiveSourcePortTypePut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$InputActiveSourcePortTypePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$InputActiveSourcePortTypePut$RequestBodyToJson(this);
+
   @JsonKey(name: 'data')
   final String data;
   static const fromJsonFactory =
       _$InputActiveSourcePortTypePut$RequestBodyFromJson;
-  static const toJsonFactory = _$InputActiveSourcePortTypePut$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$InputActiveSourcePortTypePut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -5523,7 +5753,7 @@ extension $InputActiveSourcePortTypePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody {
-  InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody({
+  const InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody({
     required this.data,
   });
 
@@ -5532,15 +5762,16 @@ class InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody {
       _$InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5575,7 +5806,7 @@ extension $InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBodyExt
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody {
-  InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody({
+  const InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody({
     required this.data,
   });
 
@@ -5584,15 +5815,16 @@ class InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody {
       _$InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5627,7 +5859,7 @@ extension $InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBodyExten
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody {
-  InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody({
+  const InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody({
     required this.data,
   });
 
@@ -5635,14 +5867,15 @@ class InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5677,7 +5910,7 @@ extension $InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberDynacalBlueXPut$RequestBody {
-  InputPortsDviDviPortNumberDynacalBlueXPut$RequestBody({
+  const InputPortsDviDviPortNumberDynacalBlueXPut$RequestBody({
     required this.data,
   });
 
@@ -5685,14 +5918,15 @@ class InputPortsDviDviPortNumberDynacalBlueXPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsDviDviPortNumberDynacalBlueXPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberDynacalBlueXPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberDynacalBlueXPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberDynacalBlueXPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalBlueXPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5727,7 +5961,7 @@ extension $InputPortsDviDviPortNumberDynacalBlueXPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberDynacalBlueYPut$RequestBody {
-  InputPortsDviDviPortNumberDynacalBlueYPut$RequestBody({
+  const InputPortsDviDviPortNumberDynacalBlueYPut$RequestBody({
     required this.data,
   });
 
@@ -5735,14 +5969,15 @@ class InputPortsDviDviPortNumberDynacalBlueYPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsDviDviPortNumberDynacalBlueYPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberDynacalBlueYPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberDynacalBlueYPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberDynacalBlueYPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalBlueYPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5777,7 +6012,7 @@ extension $InputPortsDviDviPortNumberDynacalBlueYPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody {
-  InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody({
+  const InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody({
     required this.data,
   });
 
@@ -5786,14 +6021,15 @@ class InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody {
       _$InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5828,7 +6064,7 @@ extension $InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberDynacalGreenXPut$RequestBody {
-  InputPortsDviDviPortNumberDynacalGreenXPut$RequestBody({
+  const InputPortsDviDviPortNumberDynacalGreenXPut$RequestBody({
     required this.data,
   });
 
@@ -5836,14 +6072,15 @@ class InputPortsDviDviPortNumberDynacalGreenXPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsDviDviPortNumberDynacalGreenXPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberDynacalGreenXPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberDynacalGreenXPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberDynacalGreenXPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalGreenXPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5878,7 +6115,7 @@ extension $InputPortsDviDviPortNumberDynacalGreenXPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberDynacalGreenYPut$RequestBody {
-  InputPortsDviDviPortNumberDynacalGreenYPut$RequestBody({
+  const InputPortsDviDviPortNumberDynacalGreenYPut$RequestBody({
     required this.data,
   });
 
@@ -5886,14 +6123,15 @@ class InputPortsDviDviPortNumberDynacalGreenYPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsDviDviPortNumberDynacalGreenYPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberDynacalGreenYPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberDynacalGreenYPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberDynacalGreenYPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalGreenYPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5928,7 +6166,7 @@ extension $InputPortsDviDviPortNumberDynacalGreenYPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody {
-  InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody({
+  const InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody({
     required this.data,
   });
 
@@ -5936,14 +6174,15 @@ class InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -5978,7 +6217,7 @@ extension $InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberDynacalRedXPut$RequestBody {
-  InputPortsDviDviPortNumberDynacalRedXPut$RequestBody({
+  const InputPortsDviDviPortNumberDynacalRedXPut$RequestBody({
     required this.data,
   });
 
@@ -5986,14 +6225,15 @@ class InputPortsDviDviPortNumberDynacalRedXPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsDviDviPortNumberDynacalRedXPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberDynacalRedXPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberDynacalRedXPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberDynacalRedXPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalRedXPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6028,7 +6268,7 @@ extension $InputPortsDviDviPortNumberDynacalRedXPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberDynacalRedYPut$RequestBody {
-  InputPortsDviDviPortNumberDynacalRedYPut$RequestBody({
+  const InputPortsDviDviPortNumberDynacalRedYPut$RequestBody({
     required this.data,
   });
 
@@ -6036,14 +6276,15 @@ class InputPortsDviDviPortNumberDynacalRedYPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsDviDviPortNumberDynacalRedYPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberDynacalRedYPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberDynacalRedYPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberDynacalRedYPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalRedYPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6078,7 +6319,7 @@ extension $InputPortsDviDviPortNumberDynacalRedYPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBody {
-  InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBody({
+  const InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBody({
     required this.data,
   });
 
@@ -6087,15 +6328,16 @@ class InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBody {
       _$InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6130,7 +6372,7 @@ extension $InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBod
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody {
-  InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody({
+  const InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody({
     required this.data,
   });
 
@@ -6139,14 +6381,15 @@ class InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody {
       _$InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6181,7 +6424,7 @@ extension $InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBody {
-  InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBody({
+  const InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBody({
     required this.data,
   });
 
@@ -6189,14 +6432,15 @@ class InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6231,7 +6475,7 @@ extension $InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberDynacalWhiteYPut$RequestBody {
-  InputPortsDviDviPortNumberDynacalWhiteYPut$RequestBody({
+  const InputPortsDviDviPortNumberDynacalWhiteYPut$RequestBody({
     required this.data,
   });
 
@@ -6239,14 +6483,15 @@ class InputPortsDviDviPortNumberDynacalWhiteYPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsDviDviPortNumberDynacalWhiteYPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberDynacalWhiteYPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberDynacalWhiteYPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberDynacalWhiteYPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberDynacalWhiteYPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6281,7 +6526,7 @@ extension $InputPortsDviDviPortNumberDynacalWhiteYPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBody {
-  InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBody({
+  const InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBody({
     required this.data,
   });
 
@@ -6290,14 +6535,15 @@ class InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6332,7 +6578,7 @@ extension $InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberProcAmpContrastPut$RequestBody {
-  InputPortsDviDviPortNumberProcAmpContrastPut$RequestBody({
+  const InputPortsDviDviPortNumberProcAmpContrastPut$RequestBody({
     required this.data,
   });
 
@@ -6340,14 +6586,15 @@ class InputPortsDviDviPortNumberProcAmpContrastPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsDviDviPortNumberProcAmpContrastPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberProcAmpContrastPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberProcAmpContrastPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberProcAmpContrastPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberProcAmpContrastPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6382,7 +6629,7 @@ extension $InputPortsDviDviPortNumberProcAmpContrastPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBody {
-  InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBody({
+  const InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBody({
     required this.data,
   });
 
@@ -6391,15 +6638,16 @@ class InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6434,7 +6682,7 @@ extension $InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBodyExtensio
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBody {
-  InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBody({
+  const InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBody({
     required this.data,
   });
 
@@ -6443,15 +6691,16 @@ class InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6486,7 +6735,7 @@ extension $InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBodyExtensi
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBody {
-  InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBody({
+  const InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBody({
     required this.data,
   });
 
@@ -6495,15 +6744,16 @@ class InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6538,7 +6788,7 @@ extension $InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberProcAmpHuePut$RequestBody {
-  InputPortsDviDviPortNumberProcAmpHuePut$RequestBody({
+  const InputPortsDviDviPortNumberProcAmpHuePut$RequestBody({
     required this.data,
   });
 
@@ -6546,14 +6796,15 @@ class InputPortsDviDviPortNumberProcAmpHuePut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsDviDviPortNumberProcAmpHuePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberProcAmpHuePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberProcAmpHuePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberProcAmpHuePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberProcAmpHuePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6587,7 +6838,7 @@ extension $InputPortsDviDviPortNumberProcAmpHuePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBody {
-  InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBody({
+  const InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBody({
     required this.data,
   });
 
@@ -6596,14 +6847,15 @@ class InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6638,7 +6890,7 @@ extension $InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBody {
-  InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBody({
+  const InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBody({
     required this.data,
   });
 
@@ -6647,14 +6899,15 @@ class InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6689,7 +6942,7 @@ extension $InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBody {
-  InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBody({
+  const InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBody({
     required this.data,
   });
 
@@ -6698,14 +6951,15 @@ class InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6740,7 +6994,7 @@ extension $InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBody {
-  InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBody({
+  const InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBody({
     required this.data,
   });
 
@@ -6748,14 +7002,15 @@ class InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6790,7 +7045,7 @@ extension $InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody({
     required this.data,
   });
 
@@ -6799,15 +7054,16 @@ class InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6842,7 +7098,7 @@ extension $InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBodyE
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -6851,15 +7107,16 @@ class InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut
       _$InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6894,7 +7151,7 @@ extension $InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabl
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody({
     required this.data,
   });
 
@@ -6903,15 +7160,16 @@ class InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6946,7 +7204,7 @@ extension $InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBodyEx
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody({
     required this.data,
   });
 
@@ -6955,15 +7213,16 @@ class InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -6998,7 +7257,7 @@ extension $InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut$RequestBody({
     required this.data,
   });
 
@@ -7007,15 +7266,16 @@ class InputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7050,7 +7310,7 @@ extension $InputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut$RequestBodyE
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberControlsHdrPqGainPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberControlsHdrPqGainPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberControlsHdrPqGainPut$RequestBody({
     required this.data,
   });
 
@@ -7059,15 +7319,16 @@ class InputPortsHdmiHdmiPortNumberControlsHdrPqGainPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberControlsHdrPqGainPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberControlsHdrPqGainPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberControlsHdrPqGainPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberControlsHdrPqGainPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsHdrPqGainPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7102,7 +7363,7 @@ extension $InputPortsHdmiHdmiPortNumberControlsHdrPqGainPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -7111,15 +7372,16 @@ class InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestB
       _$InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7154,7 +7416,7 @@ extension $InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$Req
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBody {
-  InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBody({
     required this.data,
   });
 
@@ -7163,15 +7425,16 @@ class InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$Reques
       _$InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7206,7 +7469,7 @@ extension $InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$R
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody {
-  InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody({
     required this.data,
   });
 
@@ -7215,15 +7478,16 @@ class InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7258,7 +7522,7 @@ extension $InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBodyE
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody({
     required this.data,
   });
 
@@ -7267,14 +7531,15 @@ class InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7309,7 +7574,7 @@ extension $InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBody({
     required this.data,
   });
 
@@ -7317,14 +7582,15 @@ class InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7359,7 +7625,7 @@ extension $InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberDynacalBlueYPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberDynacalBlueYPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberDynacalBlueYPut$RequestBody({
     required this.data,
   });
 
@@ -7367,14 +7633,15 @@ class InputPortsHdmiHdmiPortNumberDynacalBlueYPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsHdmiHdmiPortNumberDynacalBlueYPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberDynacalBlueYPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberDynacalBlueYPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberDynacalBlueYPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalBlueYPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7409,7 +7676,7 @@ extension $InputPortsHdmiHdmiPortNumberDynacalBlueYPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody({
     required this.data,
   });
 
@@ -7418,15 +7685,16 @@ class InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7461,7 +7729,7 @@ extension $InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBody({
     required this.data,
   });
 
@@ -7469,14 +7737,15 @@ class InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7511,7 +7780,7 @@ extension $InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBody({
     required this.data,
   });
 
@@ -7519,14 +7788,15 @@ class InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7561,7 +7831,7 @@ extension $InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody({
     required this.data,
   });
 
@@ -7570,14 +7840,15 @@ class InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7612,7 +7883,7 @@ extension $InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberDynacalRedXPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberDynacalRedXPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberDynacalRedXPut$RequestBody({
     required this.data,
   });
 
@@ -7620,14 +7891,15 @@ class InputPortsHdmiHdmiPortNumberDynacalRedXPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsHdmiHdmiPortNumberDynacalRedXPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberDynacalRedXPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberDynacalRedXPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberDynacalRedXPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalRedXPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7662,7 +7934,7 @@ extension $InputPortsHdmiHdmiPortNumberDynacalRedXPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberDynacalRedYPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberDynacalRedYPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberDynacalRedYPut$RequestBody({
     required this.data,
   });
 
@@ -7670,14 +7942,15 @@ class InputPortsHdmiHdmiPortNumberDynacalRedYPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsHdmiHdmiPortNumberDynacalRedYPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberDynacalRedYPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberDynacalRedYPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberDynacalRedYPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalRedYPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7712,7 +7985,7 @@ extension $InputPortsHdmiHdmiPortNumberDynacalRedYPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBody {
-  InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBody({
     required this.data,
   });
 
@@ -7721,15 +7994,16 @@ class InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7764,7 +8038,7 @@ extension $InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestB
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody({
     required this.data,
   });
 
@@ -7773,15 +8047,16 @@ class InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7816,7 +8091,7 @@ extension $InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberDynacalWhiteXPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberDynacalWhiteXPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberDynacalWhiteXPut$RequestBody({
     required this.data,
   });
 
@@ -7824,14 +8099,15 @@ class InputPortsHdmiHdmiPortNumberDynacalWhiteXPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsHdmiHdmiPortNumberDynacalWhiteXPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberDynacalWhiteXPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberDynacalWhiteXPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberDynacalWhiteXPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalWhiteXPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7866,7 +8142,7 @@ extension $InputPortsHdmiHdmiPortNumberDynacalWhiteXPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberDynacalWhiteYPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberDynacalWhiteYPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberDynacalWhiteYPut$RequestBody({
     required this.data,
   });
 
@@ -7874,14 +8150,15 @@ class InputPortsHdmiHdmiPortNumberDynacalWhiteYPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsHdmiHdmiPortNumberDynacalWhiteYPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberDynacalWhiteYPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberDynacalWhiteYPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberDynacalWhiteYPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberDynacalWhiteYPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7916,7 +8193,7 @@ extension $InputPortsHdmiHdmiPortNumberDynacalWhiteYPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBody({
     required this.data,
   });
 
@@ -7925,15 +8202,16 @@ class InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -7968,7 +8246,7 @@ extension $InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBody({
     required this.data,
   });
 
@@ -7977,14 +8255,15 @@ class InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8019,7 +8298,7 @@ extension $InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBody {
-  InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBody({
     required this.data,
   });
 
@@ -8028,15 +8307,16 @@ class InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8071,7 +8351,7 @@ extension $InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBodyExtens
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBody({
     required this.data,
   });
 
@@ -8080,15 +8360,16 @@ class InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8123,7 +8404,7 @@ extension $InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBodyExten
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBody({
     required this.data,
   });
 
@@ -8132,15 +8413,16 @@ class InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8175,7 +8457,7 @@ extension $InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBodyExtensi
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBody {
-  InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBody({
     required this.data,
   });
 
@@ -8183,14 +8465,15 @@ class InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8224,7 +8507,7 @@ extension $InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBody({
     required this.data,
   });
 
@@ -8233,15 +8516,16 @@ class InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8276,7 +8560,7 @@ extension $InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBody {
-  InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBody({
     required this.data,
   });
 
@@ -8285,15 +8569,16 @@ class InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8328,7 +8613,7 @@ extension $InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBody({
     required this.data,
   });
 
@@ -8337,15 +8622,16 @@ class InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8380,7 +8666,7 @@ extension $InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBodyExtensio
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBody {
-  InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBody({
+  const InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBody({
     required this.data,
   });
 
@@ -8389,14 +8675,15 @@ class InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8431,7 +8718,7 @@ extension $InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody {
-  InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody({
+  const InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody({
     required this.data,
   });
 
@@ -8440,15 +8727,16 @@ class InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody {
       _$InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8483,7 +8771,7 @@ extension $InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBodyExt
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody {
-  InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody({
+  const InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody({
     required this.data,
   });
 
@@ -8492,14 +8780,15 @@ class InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody {
       _$InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8534,7 +8823,7 @@ extension $InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBody {
-  InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBody({
+  const InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBody({
     required this.data,
   });
 
@@ -8543,15 +8832,16 @@ class InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBody {
       _$InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8586,7 +8876,7 @@ extension $InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBodyExt
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberControlsHdrPqGainPut$RequestBody {
-  InputPortsSdiSdiPortNumberControlsHdrPqGainPut$RequestBody({
+  const InputPortsSdiSdiPortNumberControlsHdrPqGainPut$RequestBody({
     required this.data,
   });
 
@@ -8595,14 +8885,15 @@ class InputPortsSdiSdiPortNumberControlsHdrPqGainPut$RequestBody {
       _$InputPortsSdiSdiPortNumberControlsHdrPqGainPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberControlsHdrPqGainPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberControlsHdrPqGainPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberControlsHdrPqGainPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberControlsHdrPqGainPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8637,7 +8928,7 @@ extension $InputPortsSdiSdiPortNumberControlsHdrPqGainPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBody {
-  InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBody({
+  const InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -8646,15 +8937,16 @@ class InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBod
       _$InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8689,7 +8981,7 @@ extension $InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$Reque
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBody {
-  InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBody({
+  const InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBody({
     required this.data,
   });
 
@@ -8698,15 +8990,16 @@ class InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestB
       _$InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8741,7 +9034,7 @@ extension $InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$Req
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody {
-  InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody({
+  const InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody({
     required this.data,
   });
 
@@ -8749,14 +9042,15 @@ class InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8791,7 +9085,7 @@ extension $InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBody {
-  InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBody({
+  const InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBody({
     required this.data,
   });
 
@@ -8799,14 +9093,15 @@ class InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8841,7 +9136,7 @@ extension $InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberDynacalBlueYPut$RequestBody {
-  InputPortsSdiSdiPortNumberDynacalBlueYPut$RequestBody({
+  const InputPortsSdiSdiPortNumberDynacalBlueYPut$RequestBody({
     required this.data,
   });
 
@@ -8849,14 +9144,15 @@ class InputPortsSdiSdiPortNumberDynacalBlueYPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsSdiSdiPortNumberDynacalBlueYPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberDynacalBlueYPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberDynacalBlueYPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberDynacalBlueYPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalBlueYPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8891,7 +9187,7 @@ extension $InputPortsSdiSdiPortNumberDynacalBlueYPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody {
-  InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody({
+  const InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody({
     required this.data,
   });
 
@@ -8900,14 +9196,15 @@ class InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody {
       _$InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8942,7 +9239,7 @@ extension $InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBody {
-  InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBody({
+  const InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBody({
     required this.data,
   });
 
@@ -8950,14 +9247,15 @@ class InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -8992,7 +9290,7 @@ extension $InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBody {
-  InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBody({
+  const InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBody({
     required this.data,
   });
 
@@ -9000,14 +9298,15 @@ class InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9042,7 +9341,7 @@ extension $InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody {
-  InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody({
+  const InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody({
     required this.data,
   });
 
@@ -9050,14 +9349,15 @@ class InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9092,7 +9392,7 @@ extension $InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBody {
-  InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBody({
+  const InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBody({
     required this.data,
   });
 
@@ -9100,14 +9400,15 @@ class InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9142,7 +9443,7 @@ extension $InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberDynacalRedYPut$RequestBody {
-  InputPortsSdiSdiPortNumberDynacalRedYPut$RequestBody({
+  const InputPortsSdiSdiPortNumberDynacalRedYPut$RequestBody({
     required this.data,
   });
 
@@ -9150,14 +9451,15 @@ class InputPortsSdiSdiPortNumberDynacalRedYPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsSdiSdiPortNumberDynacalRedYPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberDynacalRedYPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberDynacalRedYPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberDynacalRedYPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalRedYPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9192,7 +9494,7 @@ extension $InputPortsSdiSdiPortNumberDynacalRedYPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBody {
-  InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBody({
+  const InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBody({
     required this.data,
   });
 
@@ -9201,15 +9503,16 @@ class InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBody {
       _$InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9244,7 +9547,7 @@ extension $InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBod
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody {
-  InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody({
+  const InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody({
     required this.data,
   });
 
@@ -9253,14 +9556,15 @@ class InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody {
       _$InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9295,7 +9599,7 @@ extension $InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBody {
-  InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBody({
+  const InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBody({
     required this.data,
   });
 
@@ -9303,14 +9607,15 @@ class InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9345,7 +9650,7 @@ extension $InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberDynacalWhiteYPut$RequestBody {
-  InputPortsSdiSdiPortNumberDynacalWhiteYPut$RequestBody({
+  const InputPortsSdiSdiPortNumberDynacalWhiteYPut$RequestBody({
     required this.data,
   });
 
@@ -9353,14 +9658,15 @@ class InputPortsSdiSdiPortNumberDynacalWhiteYPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsSdiSdiPortNumberDynacalWhiteYPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberDynacalWhiteYPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberDynacalWhiteYPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberDynacalWhiteYPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberDynacalWhiteYPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9395,7 +9701,7 @@ extension $InputPortsSdiSdiPortNumberDynacalWhiteYPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBody {
-  InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBody({
+  const InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBody({
     required this.data,
   });
 
@@ -9404,14 +9710,15 @@ class InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9446,7 +9753,7 @@ extension $InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBody {
-  InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBody({
+  const InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBody({
     required this.data,
   });
 
@@ -9454,14 +9761,15 @@ class InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9496,7 +9804,7 @@ extension $InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBody {
-  InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBody({
+  const InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBody({
     required this.data,
   });
 
@@ -9505,15 +9813,16 @@ class InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9548,7 +9857,7 @@ extension $InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBodyExtensio
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBody {
-  InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBody({
+  const InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBody({
     required this.data,
   });
 
@@ -9557,15 +9866,16 @@ class InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9600,7 +9910,7 @@ extension $InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBodyExtensi
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBody {
-  InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBody({
+  const InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBody({
     required this.data,
   });
 
@@ -9609,15 +9919,16 @@ class InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9652,7 +9963,7 @@ extension $InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBody {
-  InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBody({
+  const InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBody({
     required this.data,
   });
 
@@ -9660,14 +9971,15 @@ class InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9701,7 +10013,7 @@ extension $InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBody {
-  InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBody({
+  const InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBody({
     required this.data,
   });
 
@@ -9710,14 +10022,15 @@ class InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9752,7 +10065,7 @@ extension $InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBody {
-  InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBody({
+  const InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBody({
     required this.data,
   });
 
@@ -9761,14 +10074,15 @@ class InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9803,7 +10117,7 @@ extension $InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBody {
-  InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBody({
+  const InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBody({
     required this.data,
   });
 
@@ -9812,14 +10126,15 @@ class InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9854,7 +10169,7 @@ extension $InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBody {
-  InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBody({
+  const InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBody({
     required this.data,
   });
 
@@ -9862,14 +10177,15 @@ class InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBody {
           Map<String, dynamic> json) =>
       _$InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9904,7 +10220,7 @@ extension $InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputDynacalPanelTypeBlueModePut$RequestBody {
-  OutputDynacalPanelTypeBlueModePut$RequestBody({
+  const OutputDynacalPanelTypeBlueModePut$RequestBody({
     required this.data,
   });
 
@@ -9912,14 +10228,15 @@ class OutputDynacalPanelTypeBlueModePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputDynacalPanelTypeBlueModePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$OutputDynacalPanelTypeBlueModePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputDynacalPanelTypeBlueModePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputDynacalPanelTypeBlueModePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputDynacalPanelTypeBlueModePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -9953,7 +10270,7 @@ extension $OutputDynacalPanelTypeBlueModePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputDynacalPanelTypeBlueXPut$RequestBody {
-  OutputDynacalPanelTypeBlueXPut$RequestBody({
+  const OutputDynacalPanelTypeBlueXPut$RequestBody({
     required this.data,
   });
 
@@ -9961,14 +10278,15 @@ class OutputDynacalPanelTypeBlueXPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputDynacalPanelTypeBlueXPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputDynacalPanelTypeBlueXPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputDynacalPanelTypeBlueXPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputDynacalPanelTypeBlueXPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputDynacalPanelTypeBlueXPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10001,7 +10319,7 @@ extension $OutputDynacalPanelTypeBlueXPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputDynacalPanelTypeBlueYPut$RequestBody {
-  OutputDynacalPanelTypeBlueYPut$RequestBody({
+  const OutputDynacalPanelTypeBlueYPut$RequestBody({
     required this.data,
   });
 
@@ -10009,14 +10327,15 @@ class OutputDynacalPanelTypeBlueYPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputDynacalPanelTypeBlueYPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputDynacalPanelTypeBlueYPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputDynacalPanelTypeBlueYPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputDynacalPanelTypeBlueYPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputDynacalPanelTypeBlueYPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10049,7 +10368,7 @@ extension $OutputDynacalPanelTypeBlueYPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputDynacalPanelTypeGreenModePut$RequestBody {
-  OutputDynacalPanelTypeGreenModePut$RequestBody({
+  const OutputDynacalPanelTypeGreenModePut$RequestBody({
     required this.data,
   });
 
@@ -10057,14 +10376,15 @@ class OutputDynacalPanelTypeGreenModePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputDynacalPanelTypeGreenModePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$OutputDynacalPanelTypeGreenModePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputDynacalPanelTypeGreenModePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputDynacalPanelTypeGreenModePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputDynacalPanelTypeGreenModePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10098,7 +10418,7 @@ extension $OutputDynacalPanelTypeGreenModePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputDynacalPanelTypeGreenXPut$RequestBody {
-  OutputDynacalPanelTypeGreenXPut$RequestBody({
+  const OutputDynacalPanelTypeGreenXPut$RequestBody({
     required this.data,
   });
 
@@ -10106,14 +10426,15 @@ class OutputDynacalPanelTypeGreenXPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputDynacalPanelTypeGreenXPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputDynacalPanelTypeGreenXPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputDynacalPanelTypeGreenXPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputDynacalPanelTypeGreenXPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputDynacalPanelTypeGreenXPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10146,7 +10467,7 @@ extension $OutputDynacalPanelTypeGreenXPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputDynacalPanelTypeGreenYPut$RequestBody {
-  OutputDynacalPanelTypeGreenYPut$RequestBody({
+  const OutputDynacalPanelTypeGreenYPut$RequestBody({
     required this.data,
   });
 
@@ -10154,14 +10475,15 @@ class OutputDynacalPanelTypeGreenYPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputDynacalPanelTypeGreenYPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputDynacalPanelTypeGreenYPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputDynacalPanelTypeGreenYPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputDynacalPanelTypeGreenYPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputDynacalPanelTypeGreenYPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10194,7 +10516,7 @@ extension $OutputDynacalPanelTypeGreenYPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBody {
-  OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBody({
+  const OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBody({
     required this.data,
   });
 
@@ -10203,14 +10525,15 @@ class OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBody {
       _$OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10245,7 +10568,7 @@ extension $OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputDynacalPanelTypeModePut$RequestBody {
-  OutputDynacalPanelTypeModePut$RequestBody({
+  const OutputDynacalPanelTypeModePut$RequestBody({
     required this.data,
   });
 
@@ -10253,14 +10576,15 @@ class OutputDynacalPanelTypeModePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputDynacalPanelTypeModePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$OutputDynacalPanelTypeModePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputDynacalPanelTypeModePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputDynacalPanelTypeModePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputDynacalPanelTypeModePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10293,7 +10617,7 @@ extension $OutputDynacalPanelTypeModePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputDynacalPanelTypeRedModePut$RequestBody {
-  OutputDynacalPanelTypeRedModePut$RequestBody({
+  const OutputDynacalPanelTypeRedModePut$RequestBody({
     required this.data,
   });
 
@@ -10301,14 +10625,15 @@ class OutputDynacalPanelTypeRedModePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputDynacalPanelTypeRedModePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$OutputDynacalPanelTypeRedModePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputDynacalPanelTypeRedModePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputDynacalPanelTypeRedModePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputDynacalPanelTypeRedModePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10342,7 +10667,7 @@ extension $OutputDynacalPanelTypeRedModePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputDynacalPanelTypeRedXPut$RequestBody {
-  OutputDynacalPanelTypeRedXPut$RequestBody({
+  const OutputDynacalPanelTypeRedXPut$RequestBody({
     required this.data,
   });
 
@@ -10350,14 +10675,15 @@ class OutputDynacalPanelTypeRedXPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputDynacalPanelTypeRedXPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputDynacalPanelTypeRedXPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputDynacalPanelTypeRedXPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputDynacalPanelTypeRedXPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputDynacalPanelTypeRedXPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10390,7 +10716,7 @@ extension $OutputDynacalPanelTypeRedXPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputDynacalPanelTypeRedYPut$RequestBody {
-  OutputDynacalPanelTypeRedYPut$RequestBody({
+  const OutputDynacalPanelTypeRedYPut$RequestBody({
     required this.data,
   });
 
@@ -10398,14 +10724,15 @@ class OutputDynacalPanelTypeRedYPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputDynacalPanelTypeRedYPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputDynacalPanelTypeRedYPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputDynacalPanelTypeRedYPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputDynacalPanelTypeRedYPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputDynacalPanelTypeRedYPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10438,7 +10765,7 @@ extension $OutputDynacalPanelTypeRedYPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputGlobalColourBrightnessPut$RequestBody {
-  OutputGlobalColourBrightnessPut$RequestBody({
+  const OutputGlobalColourBrightnessPut$RequestBody({
     required this.data,
   });
 
@@ -10446,14 +10773,15 @@ class OutputGlobalColourBrightnessPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputGlobalColourBrightnessPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputGlobalColourBrightnessPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputGlobalColourBrightnessPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputGlobalColourBrightnessPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputGlobalColourBrightnessPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10486,7 +10814,7 @@ extension $OutputGlobalColourBrightnessPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputGlobalColourColourTemperaturePut$RequestBody {
-  OutputGlobalColourColourTemperaturePut$RequestBody({
+  const OutputGlobalColourColourTemperaturePut$RequestBody({
     required this.data,
   });
 
@@ -10494,14 +10822,15 @@ class OutputGlobalColourColourTemperaturePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputGlobalColourColourTemperaturePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputGlobalColourColourTemperaturePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputGlobalColourColourTemperaturePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputGlobalColourColourTemperaturePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputGlobalColourColourTemperaturePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10535,7 +10864,7 @@ extension $OutputGlobalColourColourTemperaturePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputGlobalColourDarkMagicEnabledPut$RequestBody {
-  OutputGlobalColourDarkMagicEnabledPut$RequestBody({
+  const OutputGlobalColourDarkMagicEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -10543,14 +10872,15 @@ class OutputGlobalColourDarkMagicEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputGlobalColourDarkMagicEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputGlobalColourDarkMagicEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputGlobalColourDarkMagicEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputGlobalColourDarkMagicEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputGlobalColourDarkMagicEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10584,7 +10914,7 @@ extension $OutputGlobalColourDarkMagicEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut$RequestBody {
-  OutputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut$RequestBody({
+  const OutputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -10593,15 +10923,16 @@ class OutputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut$RequestBody {
       _$OutputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10636,7 +10967,7 @@ extension $OutputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut$RequestB
 
 @JsonSerializable(explicitToJson: true)
 class OutputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut$RequestBody {
-  OutputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut$RequestBody({
+  const OutputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -10645,15 +10976,16 @@ class OutputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut$RequestBody 
       _$OutputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10688,7 +11020,7 @@ extension $OutputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut$Request
 
 @JsonSerializable(explicitToJson: true)
 class OutputGlobalColourExtendedBitDepthEnabledPut$RequestBody {
-  OutputGlobalColourExtendedBitDepthEnabledPut$RequestBody({
+  const OutputGlobalColourExtendedBitDepthEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -10696,14 +11028,15 @@ class OutputGlobalColourExtendedBitDepthEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputGlobalColourExtendedBitDepthEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputGlobalColourExtendedBitDepthEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputGlobalColourExtendedBitDepthEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputGlobalColourExtendedBitDepthEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputGlobalColourExtendedBitDepthEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10738,7 +11071,7 @@ extension $OutputGlobalColourExtendedBitDepthEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputGlobalColourGainsBluePut$RequestBody {
-  OutputGlobalColourGainsBluePut$RequestBody({
+  const OutputGlobalColourGainsBluePut$RequestBody({
     required this.data,
   });
 
@@ -10746,14 +11079,15 @@ class OutputGlobalColourGainsBluePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputGlobalColourGainsBluePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputGlobalColourGainsBluePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputGlobalColourGainsBluePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputGlobalColourGainsBluePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputGlobalColourGainsBluePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10786,7 +11120,7 @@ extension $OutputGlobalColourGainsBluePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputGlobalColourGainsGreenPut$RequestBody {
-  OutputGlobalColourGainsGreenPut$RequestBody({
+  const OutputGlobalColourGainsGreenPut$RequestBody({
     required this.data,
   });
 
@@ -10794,14 +11128,15 @@ class OutputGlobalColourGainsGreenPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputGlobalColourGainsGreenPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputGlobalColourGainsGreenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputGlobalColourGainsGreenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputGlobalColourGainsGreenPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputGlobalColourGainsGreenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10834,7 +11169,7 @@ extension $OutputGlobalColourGainsGreenPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputGlobalColourGainsIntensityPut$RequestBody {
-  OutputGlobalColourGainsIntensityPut$RequestBody({
+  const OutputGlobalColourGainsIntensityPut$RequestBody({
     required this.data,
   });
 
@@ -10842,14 +11177,15 @@ class OutputGlobalColourGainsIntensityPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputGlobalColourGainsIntensityPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputGlobalColourGainsIntensityPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputGlobalColourGainsIntensityPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputGlobalColourGainsIntensityPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputGlobalColourGainsIntensityPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10883,7 +11219,7 @@ extension $OutputGlobalColourGainsIntensityPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputGlobalColourGainsRedPut$RequestBody {
-  OutputGlobalColourGainsRedPut$RequestBody({
+  const OutputGlobalColourGainsRedPut$RequestBody({
     required this.data,
   });
 
@@ -10891,14 +11227,15 @@ class OutputGlobalColourGainsRedPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputGlobalColourGainsRedPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputGlobalColourGainsRedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputGlobalColourGainsRedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputGlobalColourGainsRedPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputGlobalColourGainsRedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -10931,7 +11268,7 @@ extension $OutputGlobalColourGainsRedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputGlobalColourGammaPut$RequestBody {
-  OutputGlobalColourGammaPut$RequestBody({
+  const OutputGlobalColourGammaPut$RequestBody({
     required this.data,
   });
 
@@ -10939,13 +11276,14 @@ class OutputGlobalColourGammaPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputGlobalColourGammaPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$OutputGlobalColourGammaPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OutputGlobalColourGammaPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'data')
   final double data;
   static const fromJsonFactory =
       _$OutputGlobalColourGammaPut$RequestBodyFromJson;
-  static const toJsonFactory = _$OutputGlobalColourGammaPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$OutputGlobalColourGammaPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -10978,7 +11316,7 @@ extension $OutputGlobalColourGammaPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputGlobalColourOverdriveEnabledPut$RequestBody {
-  OutputGlobalColourOverdriveEnabledPut$RequestBody({
+  const OutputGlobalColourOverdriveEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -10986,14 +11324,15 @@ class OutputGlobalColourOverdriveEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputGlobalColourOverdriveEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputGlobalColourOverdriveEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputGlobalColourOverdriveEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputGlobalColourOverdriveEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputGlobalColourOverdriveEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11027,7 +11366,7 @@ extension $OutputGlobalColourOverdriveEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputGlobalColourPuretoneEnabledPut$RequestBody {
-  OutputGlobalColourPuretoneEnabledPut$RequestBody({
+  const OutputGlobalColourPuretoneEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -11035,14 +11374,15 @@ class OutputGlobalColourPuretoneEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputGlobalColourPuretoneEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputGlobalColourPuretoneEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputGlobalColourPuretoneEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputGlobalColourPuretoneEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputGlobalColourPuretoneEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11076,7 +11416,7 @@ extension $OutputGlobalColourPuretoneEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkBitDepthPut$RequestBody {
-  OutputNetworkBitDepthPut$RequestBody({
+  const OutputNetworkBitDepthPut$RequestBody({
     required this.data,
   });
 
@@ -11084,12 +11424,13 @@ class OutputNetworkBitDepthPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkBitDepthPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory = _$OutputNetworkBitDepthPut$RequestBodyFromJson;
   static const toJsonFactory = _$OutputNetworkBitDepthPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkBitDepthPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory = _$OutputNetworkBitDepthPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11121,7 +11462,7 @@ extension $OutputNetworkBitDepthPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkFailoverActionsRequestFailoverPut$RequestBody {
-  OutputNetworkFailoverActionsRequestFailoverPut$RequestBody({
+  const OutputNetworkFailoverActionsRequestFailoverPut$RequestBody({
     required this.data,
   });
 
@@ -11130,14 +11471,15 @@ class OutputNetworkFailoverActionsRequestFailoverPut$RequestBody {
       _$OutputNetworkFailoverActionsRequestFailoverPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$OutputNetworkFailoverActionsRequestFailoverPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkFailoverActionsRequestFailoverPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkFailoverActionsRequestFailoverPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputNetworkFailoverActionsRequestFailoverPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11172,7 +11514,7 @@ extension $OutputNetworkFailoverActionsRequestFailoverPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkFailoverSettingsEnabledPut$RequestBody {
-  OutputNetworkFailoverSettingsEnabledPut$RequestBody({
+  const OutputNetworkFailoverSettingsEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -11180,14 +11522,15 @@ class OutputNetworkFailoverSettingsEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkFailoverSettingsEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputNetworkFailoverSettingsEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkFailoverSettingsEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkFailoverSettingsEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputNetworkFailoverSettingsEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11221,7 +11564,7 @@ extension $OutputNetworkFailoverSettingsEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkFailoverSettingsModesOnButtonPressPut$RequestBody {
-  OutputNetworkFailoverSettingsModesOnButtonPressPut$RequestBody({
+  const OutputNetworkFailoverSettingsModesOnButtonPressPut$RequestBody({
     required this.data,
   });
 
@@ -11230,15 +11573,16 @@ class OutputNetworkFailoverSettingsModesOnButtonPressPut$RequestBody {
       _$OutputNetworkFailoverSettingsModesOnButtonPressPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputNetworkFailoverSettingsModesOnButtonPressPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkFailoverSettingsModesOnButtonPressPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkFailoverSettingsModesOnButtonPressPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputNetworkFailoverSettingsModesOnButtonPressPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11273,7 +11617,7 @@ extension $OutputNetworkFailoverSettingsModesOnButtonPressPut$RequestBodyExtensi
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkFailoverSettingsModesOnPartnerFailPut$RequestBody {
-  OutputNetworkFailoverSettingsModesOnPartnerFailPut$RequestBody({
+  const OutputNetworkFailoverSettingsModesOnPartnerFailPut$RequestBody({
     required this.data,
   });
 
@@ -11282,15 +11626,16 @@ class OutputNetworkFailoverSettingsModesOnPartnerFailPut$RequestBody {
       _$OutputNetworkFailoverSettingsModesOnPartnerFailPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputNetworkFailoverSettingsModesOnPartnerFailPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkFailoverSettingsModesOnPartnerFailPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkFailoverSettingsModesOnPartnerFailPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputNetworkFailoverSettingsModesOnPartnerFailPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11325,7 +11670,7 @@ extension $OutputNetworkFailoverSettingsModesOnPartnerFailPut$RequestBodyExtensi
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkFailoverSettingsModesOnPartnerVideoFailPut$RequestBody {
-  OutputNetworkFailoverSettingsModesOnPartnerVideoFailPut$RequestBody({
+  const OutputNetworkFailoverSettingsModesOnPartnerVideoFailPut$RequestBody({
     required this.data,
   });
 
@@ -11334,15 +11679,16 @@ class OutputNetworkFailoverSettingsModesOnPartnerVideoFailPut$RequestBody {
       _$OutputNetworkFailoverSettingsModesOnPartnerVideoFailPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputNetworkFailoverSettingsModesOnPartnerVideoFailPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkFailoverSettingsModesOnPartnerVideoFailPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkFailoverSettingsModesOnPartnerVideoFailPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputNetworkFailoverSettingsModesOnPartnerVideoFailPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11377,7 +11723,7 @@ extension $OutputNetworkFailoverSettingsModesOnPartnerVideoFailPut$RequestBodyEx
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkFailoverSettingsModesPreferPrimaryPut$RequestBody {
-  OutputNetworkFailoverSettingsModesPreferPrimaryPut$RequestBody({
+  const OutputNetworkFailoverSettingsModesPreferPrimaryPut$RequestBody({
     required this.data,
   });
 
@@ -11386,15 +11732,16 @@ class OutputNetworkFailoverSettingsModesPreferPrimaryPut$RequestBody {
       _$OutputNetworkFailoverSettingsModesPreferPrimaryPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputNetworkFailoverSettingsModesPreferPrimaryPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkFailoverSettingsModesPreferPrimaryPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkFailoverSettingsModesPreferPrimaryPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputNetworkFailoverSettingsModesPreferPrimaryPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11429,7 +11776,7 @@ extension $OutputNetworkFailoverSettingsModesPreferPrimaryPut$RequestBodyExtensi
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkFrameRateMultiplierPut$RequestBody {
-  OutputNetworkFrameRateMultiplierPut$RequestBody({
+  const OutputNetworkFrameRateMultiplierPut$RequestBody({
     required this.data,
   });
 
@@ -11437,14 +11784,15 @@ class OutputNetworkFrameRateMultiplierPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkFrameRateMultiplierPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkFrameRateMultiplierPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkFrameRateMultiplierPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkFrameRateMultiplierPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkFrameRateMultiplierPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11478,7 +11826,7 @@ extension $OutputNetworkFrameRateMultiplierPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkFrameRemappingEnabledPut$RequestBody {
-  OutputNetworkFrameRemappingEnabledPut$RequestBody({
+  const OutputNetworkFrameRemappingEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -11486,14 +11834,15 @@ class OutputNetworkFrameRemappingEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkFrameRemappingEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputNetworkFrameRemappingEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkFrameRemappingEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkFrameRemappingEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputNetworkFrameRemappingEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11527,7 +11876,7 @@ extension $OutputNetworkFrameRemappingEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkFrameRemappingFramesFrameBluePut$RequestBody {
-  OutputNetworkFrameRemappingFramesFrameBluePut$RequestBody({
+  const OutputNetworkFrameRemappingFramesFrameBluePut$RequestBody({
     required this.data,
   });
 
@@ -11535,14 +11884,15 @@ class OutputNetworkFrameRemappingFramesFrameBluePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkFrameRemappingFramesFrameBluePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkFrameRemappingFramesFrameBluePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkFrameRemappingFramesFrameBluePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkFrameRemappingFramesFrameBluePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkFrameRemappingFramesFrameBluePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11577,7 +11927,7 @@ extension $OutputNetworkFrameRemappingFramesFrameBluePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBody {
-  OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBody({
+  const OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBody({
     required this.data,
   });
 
@@ -11586,14 +11936,15 @@ class OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBody {
       _$OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11628,7 +11979,7 @@ extension $OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkFrameRemappingFramesFrameModePut$RequestBody {
-  OutputNetworkFrameRemappingFramesFrameModePut$RequestBody({
+  const OutputNetworkFrameRemappingFramesFrameModePut$RequestBody({
     required this.data,
   });
 
@@ -11636,14 +11987,15 @@ class OutputNetworkFrameRemappingFramesFrameModePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkFrameRemappingFramesFrameModePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$OutputNetworkFrameRemappingFramesFrameModePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkFrameRemappingFramesFrameModePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkFrameRemappingFramesFrameModePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputNetworkFrameRemappingFramesFrameModePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11678,7 +12030,7 @@ extension $OutputNetworkFrameRemappingFramesFrameModePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkFrameRemappingFramesFrameRedPut$RequestBody {
-  OutputNetworkFrameRemappingFramesFrameRedPut$RequestBody({
+  const OutputNetworkFrameRemappingFramesFrameRedPut$RequestBody({
     required this.data,
   });
 
@@ -11686,14 +12038,15 @@ class OutputNetworkFrameRemappingFramesFrameRedPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkFrameRemappingFramesFrameRedPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkFrameRemappingFramesFrameRedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkFrameRemappingFramesFrameRedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkFrameRemappingFramesFrameRedPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkFrameRemappingFramesFrameRedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11728,7 +12081,7 @@ extension $OutputNetworkFrameRemappingFramesFrameRedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBody {
-  OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBody({
+  const OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBody({
     required this.data,
   });
 
@@ -11737,15 +12090,16 @@ class OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBody {
       _$OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11780,7 +12134,7 @@ extension $OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBody {
-  OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBody({
+  const OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBody({
     required this.data,
   });
 
@@ -11789,15 +12143,16 @@ class OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBody {
       _$OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11832,7 +12187,7 @@ extension $OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkGenlockInternalRatePut$RequestBody {
-  OutputNetworkGenlockInternalRatePut$RequestBody({
+  const OutputNetworkGenlockInternalRatePut$RequestBody({
     required this.data,
   });
 
@@ -11840,14 +12195,15 @@ class OutputNetworkGenlockInternalRatePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkGenlockInternalRatePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputNetworkGenlockInternalRatePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkGenlockInternalRatePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkGenlockInternalRatePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputNetworkGenlockInternalRatePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11881,7 +12237,7 @@ extension $OutputNetworkGenlockInternalRatePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBody {
-  OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBody({
+  const OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBody({
     required this.data,
   });
 
@@ -11890,14 +12246,15 @@ class OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBody {
       _$OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11932,7 +12289,7 @@ extension $OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBody {
-  OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBody({
+  const OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBody({
     required this.data,
   });
 
@@ -11941,15 +12298,16 @@ class OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBody {
       _$OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -11984,7 +12342,7 @@ extension $OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkGenlockPhaseOffsetAnglePut$RequestBody {
-  OutputNetworkGenlockPhaseOffsetAnglePut$RequestBody({
+  const OutputNetworkGenlockPhaseOffsetAnglePut$RequestBody({
     required this.data,
   });
 
@@ -11992,14 +12350,15 @@ class OutputNetworkGenlockPhaseOffsetAnglePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkGenlockPhaseOffsetAnglePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputNetworkGenlockPhaseOffsetAnglePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkGenlockPhaseOffsetAnglePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkGenlockPhaseOffsetAnglePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputNetworkGenlockPhaseOffsetAnglePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12033,7 +12392,7 @@ extension $OutputNetworkGenlockPhaseOffsetAnglePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkGenlockPhaseOffsetFractionPut$RequestBody {
-  OutputNetworkGenlockPhaseOffsetFractionPut$RequestBody({
+  const OutputNetworkGenlockPhaseOffsetFractionPut$RequestBody({
     required this.data,
   });
 
@@ -12041,14 +12400,15 @@ class OutputNetworkGenlockPhaseOffsetFractionPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkGenlockPhaseOffsetFractionPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputNetworkGenlockPhaseOffsetFractionPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkGenlockPhaseOffsetFractionPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkGenlockPhaseOffsetFractionPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputNetworkGenlockPhaseOffsetFractionPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12083,7 +12443,7 @@ extension $OutputNetworkGenlockPhaseOffsetFractionPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkGenlockPhaseOffsetModePut$RequestBody {
-  OutputNetworkGenlockPhaseOffsetModePut$RequestBody({
+  const OutputNetworkGenlockPhaseOffsetModePut$RequestBody({
     required this.data,
   });
 
@@ -12091,14 +12451,15 @@ class OutputNetworkGenlockPhaseOffsetModePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkGenlockPhaseOffsetModePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$OutputNetworkGenlockPhaseOffsetModePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkGenlockPhaseOffsetModePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkGenlockPhaseOffsetModePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputNetworkGenlockPhaseOffsetModePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12132,7 +12493,7 @@ extension $OutputNetworkGenlockPhaseOffsetModePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkGenlockSourcePut$RequestBody {
-  OutputNetworkGenlockSourcePut$RequestBody({
+  const OutputNetworkGenlockSourcePut$RequestBody({
     required this.data,
   });
 
@@ -12140,14 +12501,15 @@ class OutputNetworkGenlockSourcePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkGenlockSourcePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$OutputNetworkGenlockSourcePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkGenlockSourcePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkGenlockSourcePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputNetworkGenlockSourcePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12180,7 +12542,7 @@ extension $OutputNetworkGenlockSourcePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBody {
-  OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBody({
+  const OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBody({
     required this.data,
   });
 
@@ -12189,15 +12551,16 @@ class OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBody {
       _$OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12232,7 +12595,7 @@ extension $OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBodyEx
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkShuttersyncAngleSettingsShutterAnglePut$RequestBody {
-  OutputNetworkShuttersyncAngleSettingsShutterAnglePut$RequestBody({
+  const OutputNetworkShuttersyncAngleSettingsShutterAnglePut$RequestBody({
     required this.data,
   });
 
@@ -12241,15 +12604,16 @@ class OutputNetworkShuttersyncAngleSettingsShutterAnglePut$RequestBody {
       _$OutputNetworkShuttersyncAngleSettingsShutterAnglePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputNetworkShuttersyncAngleSettingsShutterAnglePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkShuttersyncAngleSettingsShutterAnglePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkShuttersyncAngleSettingsShutterAnglePut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputNetworkShuttersyncAngleSettingsShutterAnglePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12284,7 +12648,7 @@ extension $OutputNetworkShuttersyncAngleSettingsShutterAnglePut$RequestBodyExten
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut$RequestBody {
-  OutputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut$RequestBody({
+  const OutputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut$RequestBody({
     required this.data,
   });
 
@@ -12293,15 +12657,16 @@ class OutputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut$RequestBody {
       _$OutputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12336,7 +12701,7 @@ extension $OutputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut$RequestBod
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkShuttersyncModePut$RequestBody {
-  OutputNetworkShuttersyncModePut$RequestBody({
+  const OutputNetworkShuttersyncModePut$RequestBody({
     required this.data,
   });
 
@@ -12344,14 +12709,15 @@ class OutputNetworkShuttersyncModePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkShuttersyncModePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$OutputNetworkShuttersyncModePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkShuttersyncModePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkShuttersyncModePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputNetworkShuttersyncModePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12384,7 +12750,7 @@ extension $OutputNetworkShuttersyncModePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBody {
-  OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBody({
+  const OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBody({
     required this.data,
   });
 
@@ -12393,15 +12759,16 @@ class OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBody {
       _$OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12436,7 +12803,7 @@ extension $OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkShuttersyncSensorReadoutTimePut$RequestBody {
-  OutputNetworkShuttersyncSensorReadoutTimePut$RequestBody({
+  const OutputNetworkShuttersyncSensorReadoutTimePut$RequestBody({
     required this.data,
   });
 
@@ -12444,14 +12811,15 @@ class OutputNetworkShuttersyncSensorReadoutTimePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkShuttersyncSensorReadoutTimePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputNetworkShuttersyncSensorReadoutTimePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkShuttersyncSensorReadoutTimePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkShuttersyncSensorReadoutTimePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputNetworkShuttersyncSensorReadoutTimePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12486,7 +12854,7 @@ extension $OutputNetworkShuttersyncSensorReadoutTimePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkShuttersyncSensorTypePut$RequestBody {
-  OutputNetworkShuttersyncSensorTypePut$RequestBody({
+  const OutputNetworkShuttersyncSensorTypePut$RequestBody({
     required this.data,
   });
 
@@ -12494,14 +12862,15 @@ class OutputNetworkShuttersyncSensorTypePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkShuttersyncSensorTypePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$OutputNetworkShuttersyncSensorTypePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkShuttersyncSensorTypePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkShuttersyncSensorTypePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OutputNetworkShuttersyncSensorTypePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12535,7 +12904,7 @@ extension $OutputNetworkShuttersyncSensorTypePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkShuttersyncSpeedSettingsShutterSpeedPut$RequestBody {
-  OutputNetworkShuttersyncSpeedSettingsShutterSpeedPut$RequestBody({
+  const OutputNetworkShuttersyncSpeedSettingsShutterSpeedPut$RequestBody({
     required this.data,
   });
 
@@ -12544,15 +12913,16 @@ class OutputNetworkShuttersyncSpeedSettingsShutterSpeedPut$RequestBody {
       _$OutputNetworkShuttersyncSpeedSettingsShutterSpeedPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputNetworkShuttersyncSpeedSettingsShutterSpeedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkShuttersyncSpeedSettingsShutterSpeedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkShuttersyncSpeedSettingsShutterSpeedPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputNetworkShuttersyncSpeedSettingsShutterSpeedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12587,7 +12957,7 @@ extension $OutputNetworkShuttersyncSpeedSettingsShutterSpeedPut$RequestBodyExten
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkShuttersyncSpeedSettingsTimePut$RequestBody {
-  OutputNetworkShuttersyncSpeedSettingsTimePut$RequestBody({
+  const OutputNetworkShuttersyncSpeedSettingsTimePut$RequestBody({
     required this.data,
   });
 
@@ -12595,14 +12965,15 @@ class OutputNetworkShuttersyncSpeedSettingsTimePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkShuttersyncSpeedSettingsTimePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputNetworkShuttersyncSpeedSettingsTimePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkShuttersyncSpeedSettingsTimePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkShuttersyncSpeedSettingsTimePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputNetworkShuttersyncSpeedSettingsTimePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12637,7 +13008,7 @@ extension $OutputNetworkShuttersyncSpeedSettingsTimePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerBackgroundGainPut$RequestBody {
-  OutputNetworkStartrackerBackgroundGainPut$RequestBody({
+  const OutputNetworkStartrackerBackgroundGainPut$RequestBody({
     required this.data,
   });
 
@@ -12645,14 +13016,15 @@ class OutputNetworkStartrackerBackgroundGainPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkStartrackerBackgroundGainPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerBackgroundGainPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerBackgroundGainPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerBackgroundGainPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerBackgroundGainPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12686,7 +13058,7 @@ extension $OutputNetworkStartrackerBackgroundGainPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerBlackoutAffectsMarkersPut$RequestBody {
-  OutputNetworkStartrackerBlackoutAffectsMarkersPut$RequestBody({
+  const OutputNetworkStartrackerBlackoutAffectsMarkersPut$RequestBody({
     required this.data,
   });
 
@@ -12695,15 +13067,16 @@ class OutputNetworkStartrackerBlackoutAffectsMarkersPut$RequestBody {
       _$OutputNetworkStartrackerBlackoutAffectsMarkersPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerBlackoutAffectsMarkersPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerBlackoutAffectsMarkersPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerBlackoutAffectsMarkersPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerBlackoutAffectsMarkersPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12738,7 +13111,7 @@ extension $OutputNetworkStartrackerBlackoutAffectsMarkersPut$RequestBodyExtensio
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerBlueDistanceToTrackerPut$RequestBody {
-  OutputNetworkStartrackerBlueDistanceToTrackerPut$RequestBody({
+  const OutputNetworkStartrackerBlueDistanceToTrackerPut$RequestBody({
     required this.data,
   });
 
@@ -12747,15 +13120,16 @@ class OutputNetworkStartrackerBlueDistanceToTrackerPut$RequestBody {
       _$OutputNetworkStartrackerBlueDistanceToTrackerPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerBlueDistanceToTrackerPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerBlueDistanceToTrackerPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerBlueDistanceToTrackerPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerBlueDistanceToTrackerPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12790,7 +13164,7 @@ extension $OutputNetworkStartrackerBlueDistanceToTrackerPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerBlueEnabledPut$RequestBody {
-  OutputNetworkStartrackerBlueEnabledPut$RequestBody({
+  const OutputNetworkStartrackerBlueEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -12798,14 +13172,15 @@ class OutputNetworkStartrackerBlueEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkStartrackerBlueEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerBlueEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerBlueEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerBlueEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerBlueEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12839,7 +13214,7 @@ extension $OutputNetworkStartrackerBlueEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerBlueMarkerGainPut$RequestBody {
-  OutputNetworkStartrackerBlueMarkerGainPut$RequestBody({
+  const OutputNetworkStartrackerBlueMarkerGainPut$RequestBody({
     required this.data,
   });
 
@@ -12847,14 +13222,15 @@ class OutputNetworkStartrackerBlueMarkerGainPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkStartrackerBlueMarkerGainPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerBlueMarkerGainPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerBlueMarkerGainPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerBlueMarkerGainPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerBlueMarkerGainPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12888,7 +13264,7 @@ extension $OutputNetworkStartrackerBlueMarkerGainPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBody {
-  OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBody({
+  const OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBody({
     required this.data,
   });
 
@@ -12897,14 +13273,15 @@ class OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBody {
       _$OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12939,7 +13316,7 @@ extension $OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerBlueStarMapSeedPut$RequestBody {
-  OutputNetworkStartrackerBlueStarMapSeedPut$RequestBody({
+  const OutputNetworkStartrackerBlueStarMapSeedPut$RequestBody({
     required this.data,
   });
 
@@ -12947,14 +13324,15 @@ class OutputNetworkStartrackerBlueStarMapSeedPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkStartrackerBlueStarMapSeedPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerBlueStarMapSeedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerBlueStarMapSeedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerBlueStarMapSeedPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerBlueStarMapSeedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -12988,7 +13366,7 @@ extension $OutputNetworkStartrackerBlueStarMapSeedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerEnabledPut$RequestBody {
-  OutputNetworkStartrackerEnabledPut$RequestBody({
+  const OutputNetworkStartrackerEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -12996,14 +13374,15 @@ class OutputNetworkStartrackerEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkStartrackerEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13037,7 +13416,7 @@ extension $OutputNetworkStartrackerEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerFramesEnabledOnPut$RequestBody {
-  OutputNetworkStartrackerFramesEnabledOnPut$RequestBody({
+  const OutputNetworkStartrackerFramesEnabledOnPut$RequestBody({
     required this.data,
   });
 
@@ -13045,14 +13424,15 @@ class OutputNetworkStartrackerFramesEnabledOnPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkStartrackerFramesEnabledOnPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data', defaultValue: <Object>[])
-  final List<Object> data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerFramesEnabledOnPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerFramesEnabledOnPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerFramesEnabledOnPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data', defaultValue: <Object>[])
+  final List<Object> data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerFramesEnabledOnPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13087,7 +13467,7 @@ extension $OutputNetworkStartrackerFramesEnabledOnPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerGreenDistanceToTrackerPut$RequestBody {
-  OutputNetworkStartrackerGreenDistanceToTrackerPut$RequestBody({
+  const OutputNetworkStartrackerGreenDistanceToTrackerPut$RequestBody({
     required this.data,
   });
 
@@ -13096,15 +13476,16 @@ class OutputNetworkStartrackerGreenDistanceToTrackerPut$RequestBody {
       _$OutputNetworkStartrackerGreenDistanceToTrackerPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerGreenDistanceToTrackerPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerGreenDistanceToTrackerPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerGreenDistanceToTrackerPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerGreenDistanceToTrackerPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13139,7 +13520,7 @@ extension $OutputNetworkStartrackerGreenDistanceToTrackerPut$RequestBodyExtensio
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerGreenEnabledPut$RequestBody {
-  OutputNetworkStartrackerGreenEnabledPut$RequestBody({
+  const OutputNetworkStartrackerGreenEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -13147,14 +13528,15 @@ class OutputNetworkStartrackerGreenEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkStartrackerGreenEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerGreenEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerGreenEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerGreenEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerGreenEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13188,7 +13570,7 @@ extension $OutputNetworkStartrackerGreenEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerGreenMarkerGainPut$RequestBody {
-  OutputNetworkStartrackerGreenMarkerGainPut$RequestBody({
+  const OutputNetworkStartrackerGreenMarkerGainPut$RequestBody({
     required this.data,
   });
 
@@ -13196,14 +13578,15 @@ class OutputNetworkStartrackerGreenMarkerGainPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkStartrackerGreenMarkerGainPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerGreenMarkerGainPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerGreenMarkerGainPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerGreenMarkerGainPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerGreenMarkerGainPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13237,7 +13620,7 @@ extension $OutputNetworkStartrackerGreenMarkerGainPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBody {
-  OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBody({
+  const OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBody({
     required this.data,
   });
 
@@ -13246,15 +13629,16 @@ class OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBody {
       _$OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13289,7 +13673,7 @@ extension $OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerGreenStarMapSeedPut$RequestBody {
-  OutputNetworkStartrackerGreenStarMapSeedPut$RequestBody({
+  const OutputNetworkStartrackerGreenStarMapSeedPut$RequestBody({
     required this.data,
   });
 
@@ -13297,14 +13681,15 @@ class OutputNetworkStartrackerGreenStarMapSeedPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkStartrackerGreenStarMapSeedPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerGreenStarMapSeedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerGreenStarMapSeedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerGreenStarMapSeedPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerGreenStarMapSeedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13339,7 +13724,7 @@ extension $OutputNetworkStartrackerGreenStarMapSeedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerRedDistanceToTrackerPut$RequestBody {
-  OutputNetworkStartrackerRedDistanceToTrackerPut$RequestBody({
+  const OutputNetworkStartrackerRedDistanceToTrackerPut$RequestBody({
     required this.data,
   });
 
@@ -13348,14 +13733,15 @@ class OutputNetworkStartrackerRedDistanceToTrackerPut$RequestBody {
       _$OutputNetworkStartrackerRedDistanceToTrackerPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerRedDistanceToTrackerPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerRedDistanceToTrackerPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerRedDistanceToTrackerPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerRedDistanceToTrackerPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13390,7 +13776,7 @@ extension $OutputNetworkStartrackerRedDistanceToTrackerPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerRedEnabledPut$RequestBody {
-  OutputNetworkStartrackerRedEnabledPut$RequestBody({
+  const OutputNetworkStartrackerRedEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -13398,14 +13784,15 @@ class OutputNetworkStartrackerRedEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkStartrackerRedEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerRedEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerRedEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerRedEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerRedEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13439,7 +13826,7 @@ extension $OutputNetworkStartrackerRedEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerRedMarkerGainPut$RequestBody {
-  OutputNetworkStartrackerRedMarkerGainPut$RequestBody({
+  const OutputNetworkStartrackerRedMarkerGainPut$RequestBody({
     required this.data,
   });
 
@@ -13447,14 +13834,15 @@ class OutputNetworkStartrackerRedMarkerGainPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkStartrackerRedMarkerGainPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerRedMarkerGainPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerRedMarkerGainPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerRedMarkerGainPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerRedMarkerGainPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13488,7 +13876,7 @@ extension $OutputNetworkStartrackerRedMarkerGainPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBody {
-  OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBody({
+  const OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBody({
     required this.data,
   });
 
@@ -13497,14 +13885,15 @@ class OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBody {
       _$OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13539,7 +13928,7 @@ extension $OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OutputNetworkStartrackerRedStarMapSeedPut$RequestBody {
-  OutputNetworkStartrackerRedStarMapSeedPut$RequestBody({
+  const OutputNetworkStartrackerRedStarMapSeedPut$RequestBody({
     required this.data,
   });
 
@@ -13547,14 +13936,15 @@ class OutputNetworkStartrackerRedStarMapSeedPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OutputNetworkStartrackerRedStarMapSeedPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OutputNetworkStartrackerRedStarMapSeedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OutputNetworkStartrackerRedStarMapSeedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OutputNetworkStartrackerRedStarMapSeedPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OutputNetworkStartrackerRedStarMapSeedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13588,7 +13978,7 @@ extension $OutputNetworkStartrackerRedStarMapSeedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OverrideBlackoutEnabledPut$RequestBody {
-  OverrideBlackoutEnabledPut$RequestBody({
+  const OverrideBlackoutEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -13596,13 +13986,14 @@ class OverrideBlackoutEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OverrideBlackoutEnabledPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$OverrideBlackoutEnabledPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OverrideBlackoutEnabledPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'data')
   final Object data;
   static const fromJsonFactory =
       _$OverrideBlackoutEnabledPut$RequestBodyFromJson;
-  static const toJsonFactory = _$OverrideBlackoutEnabledPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$OverrideBlackoutEnabledPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -13635,7 +14026,7 @@ extension $OverrideBlackoutEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OverrideBlackoutFadeTimePut$RequestBody {
-  OverrideBlackoutFadeTimePut$RequestBody({
+  const OverrideBlackoutFadeTimePut$RequestBody({
     required this.data,
   });
 
@@ -13643,13 +14034,14 @@ class OverrideBlackoutFadeTimePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OverrideBlackoutFadeTimePut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$OverrideBlackoutFadeTimePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OverrideBlackoutFadeTimePut$RequestBodyToJson(this);
+
   @JsonKey(name: 'data')
   final double data;
   static const fromJsonFactory =
       _$OverrideBlackoutFadeTimePut$RequestBodyFromJson;
-  static const toJsonFactory = _$OverrideBlackoutFadeTimePut$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$OverrideBlackoutFadeTimePut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -13682,7 +14074,7 @@ extension $OverrideBlackoutFadeTimePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OverrideFreezeEnabledPut$RequestBody {
-  OverrideFreezeEnabledPut$RequestBody({
+  const OverrideFreezeEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -13690,12 +14082,13 @@ class OverrideFreezeEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OverrideFreezeEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory = _$OverrideFreezeEnabledPut$RequestBodyFromJson;
   static const toJsonFactory = _$OverrideFreezeEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OverrideFreezeEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory = _$OverrideFreezeEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13728,7 +14121,7 @@ extension $OverrideFreezeEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OverrideTestPatternCustomColourBluePut$RequestBody {
-  OverrideTestPatternCustomColourBluePut$RequestBody({
+  const OverrideTestPatternCustomColourBluePut$RequestBody({
     required this.data,
   });
 
@@ -13736,14 +14129,15 @@ class OverrideTestPatternCustomColourBluePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OverrideTestPatternCustomColourBluePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OverrideTestPatternCustomColourBluePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OverrideTestPatternCustomColourBluePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OverrideTestPatternCustomColourBluePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OverrideTestPatternCustomColourBluePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13777,7 +14171,7 @@ extension $OverrideTestPatternCustomColourBluePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OverrideTestPatternCustomColourGreenPut$RequestBody {
-  OverrideTestPatternCustomColourGreenPut$RequestBody({
+  const OverrideTestPatternCustomColourGreenPut$RequestBody({
     required this.data,
   });
 
@@ -13785,14 +14179,15 @@ class OverrideTestPatternCustomColourGreenPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OverrideTestPatternCustomColourGreenPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OverrideTestPatternCustomColourGreenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OverrideTestPatternCustomColourGreenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OverrideTestPatternCustomColourGreenPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OverrideTestPatternCustomColourGreenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13826,7 +14221,7 @@ extension $OverrideTestPatternCustomColourGreenPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OverrideTestPatternCustomColourRedPut$RequestBody {
-  OverrideTestPatternCustomColourRedPut$RequestBody({
+  const OverrideTestPatternCustomColourRedPut$RequestBody({
     required this.data,
   });
 
@@ -13834,14 +14229,15 @@ class OverrideTestPatternCustomColourRedPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OverrideTestPatternCustomColourRedPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OverrideTestPatternCustomColourRedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OverrideTestPatternCustomColourRedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OverrideTestPatternCustomColourRedPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OverrideTestPatternCustomColourRedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13875,7 +14271,7 @@ extension $OverrideTestPatternCustomColourRedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OverrideTestPatternCustomGradientEndColourBluePut$RequestBody {
-  OverrideTestPatternCustomGradientEndColourBluePut$RequestBody({
+  const OverrideTestPatternCustomGradientEndColourBluePut$RequestBody({
     required this.data,
   });
 
@@ -13884,15 +14280,16 @@ class OverrideTestPatternCustomGradientEndColourBluePut$RequestBody {
       _$OverrideTestPatternCustomGradientEndColourBluePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OverrideTestPatternCustomGradientEndColourBluePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OverrideTestPatternCustomGradientEndColourBluePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OverrideTestPatternCustomGradientEndColourBluePut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OverrideTestPatternCustomGradientEndColourBluePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13927,7 +14324,7 @@ extension $OverrideTestPatternCustomGradientEndColourBluePut$RequestBodyExtensio
 
 @JsonSerializable(explicitToJson: true)
 class OverrideTestPatternCustomGradientEndColourGreenPut$RequestBody {
-  OverrideTestPatternCustomGradientEndColourGreenPut$RequestBody({
+  const OverrideTestPatternCustomGradientEndColourGreenPut$RequestBody({
     required this.data,
   });
 
@@ -13936,15 +14333,16 @@ class OverrideTestPatternCustomGradientEndColourGreenPut$RequestBody {
       _$OverrideTestPatternCustomGradientEndColourGreenPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OverrideTestPatternCustomGradientEndColourGreenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OverrideTestPatternCustomGradientEndColourGreenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OverrideTestPatternCustomGradientEndColourGreenPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OverrideTestPatternCustomGradientEndColourGreenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13979,7 +14377,7 @@ extension $OverrideTestPatternCustomGradientEndColourGreenPut$RequestBodyExtensi
 
 @JsonSerializable(explicitToJson: true)
 class OverrideTestPatternCustomGradientEndColourRedPut$RequestBody {
-  OverrideTestPatternCustomGradientEndColourRedPut$RequestBody({
+  const OverrideTestPatternCustomGradientEndColourRedPut$RequestBody({
     required this.data,
   });
 
@@ -13988,15 +14386,16 @@ class OverrideTestPatternCustomGradientEndColourRedPut$RequestBody {
       _$OverrideTestPatternCustomGradientEndColourRedPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OverrideTestPatternCustomGradientEndColourRedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OverrideTestPatternCustomGradientEndColourRedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OverrideTestPatternCustomGradientEndColourRedPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OverrideTestPatternCustomGradientEndColourRedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -14031,7 +14430,7 @@ extension $OverrideTestPatternCustomGradientEndColourRedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OverrideTestPatternCustomGradientOrientationPut$RequestBody {
-  OverrideTestPatternCustomGradientOrientationPut$RequestBody({
+  const OverrideTestPatternCustomGradientOrientationPut$RequestBody({
     required this.data,
   });
 
@@ -14040,14 +14439,15 @@ class OverrideTestPatternCustomGradientOrientationPut$RequestBody {
       _$OverrideTestPatternCustomGradientOrientationPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$OverrideTestPatternCustomGradientOrientationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OverrideTestPatternCustomGradientOrientationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OverrideTestPatternCustomGradientOrientationPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$OverrideTestPatternCustomGradientOrientationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -14082,7 +14482,7 @@ extension $OverrideTestPatternCustomGradientOrientationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OverrideTestPatternCustomGradientStartColourBluePut$RequestBody {
-  OverrideTestPatternCustomGradientStartColourBluePut$RequestBody({
+  const OverrideTestPatternCustomGradientStartColourBluePut$RequestBody({
     required this.data,
   });
 
@@ -14091,15 +14491,16 @@ class OverrideTestPatternCustomGradientStartColourBluePut$RequestBody {
       _$OverrideTestPatternCustomGradientStartColourBluePut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OverrideTestPatternCustomGradientStartColourBluePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OverrideTestPatternCustomGradientStartColourBluePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OverrideTestPatternCustomGradientStartColourBluePut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OverrideTestPatternCustomGradientStartColourBluePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -14134,7 +14535,7 @@ extension $OverrideTestPatternCustomGradientStartColourBluePut$RequestBodyExtens
 
 @JsonSerializable(explicitToJson: true)
 class OverrideTestPatternCustomGradientStartColourGreenPut$RequestBody {
-  OverrideTestPatternCustomGradientStartColourGreenPut$RequestBody({
+  const OverrideTestPatternCustomGradientStartColourGreenPut$RequestBody({
     required this.data,
   });
 
@@ -14143,15 +14544,16 @@ class OverrideTestPatternCustomGradientStartColourGreenPut$RequestBody {
       _$OverrideTestPatternCustomGradientStartColourGreenPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OverrideTestPatternCustomGradientStartColourGreenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OverrideTestPatternCustomGradientStartColourGreenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OverrideTestPatternCustomGradientStartColourGreenPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OverrideTestPatternCustomGradientStartColourGreenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -14186,7 +14588,7 @@ extension $OverrideTestPatternCustomGradientStartColourGreenPut$RequestBodyExten
 
 @JsonSerializable(explicitToJson: true)
 class OverrideTestPatternCustomGradientStartColourRedPut$RequestBody {
-  OverrideTestPatternCustomGradientStartColourRedPut$RequestBody({
+  const OverrideTestPatternCustomGradientStartColourRedPut$RequestBody({
     required this.data,
   });
 
@@ -14195,15 +14597,16 @@ class OverrideTestPatternCustomGradientStartColourRedPut$RequestBody {
       _$OverrideTestPatternCustomGradientStartColourRedPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$OverrideTestPatternCustomGradientStartColourRedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OverrideTestPatternCustomGradientStartColourRedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OverrideTestPatternCustomGradientStartColourRedPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$OverrideTestPatternCustomGradientStartColourRedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -14238,7 +14641,7 @@ extension $OverrideTestPatternCustomGradientStartColourRedPut$RequestBodyExtensi
 
 @JsonSerializable(explicitToJson: true)
 class OverrideTestPatternEnabledPut$RequestBody {
-  OverrideTestPatternEnabledPut$RequestBody({
+  const OverrideTestPatternEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -14246,14 +14649,15 @@ class OverrideTestPatternEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OverrideTestPatternEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OverrideTestPatternEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OverrideTestPatternEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OverrideTestPatternEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OverrideTestPatternEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -14286,7 +14690,7 @@ extension $OverrideTestPatternEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OverrideTestPatternFormatPut$RequestBody {
-  OverrideTestPatternFormatPut$RequestBody({
+  const OverrideTestPatternFormatPut$RequestBody({
     required this.data,
   });
 
@@ -14294,13 +14698,14 @@ class OverrideTestPatternFormatPut$RequestBody {
           Map<String, dynamic> json) =>
       _$OverrideTestPatternFormatPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$OverrideTestPatternFormatPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OverrideTestPatternFormatPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'data')
   final String data;
   static const fromJsonFactory =
       _$OverrideTestPatternFormatPut$RequestBodyFromJson;
-  static const toJsonFactory = _$OverrideTestPatternFormatPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$OverrideTestPatternFormatPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -14333,7 +14738,7 @@ extension $OverrideTestPatternFormatPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class OverrideTestPatternRestrictToAchievableColoursPut$RequestBody {
-  OverrideTestPatternRestrictToAchievableColoursPut$RequestBody({
+  const OverrideTestPatternRestrictToAchievableColoursPut$RequestBody({
     required this.data,
   });
 
@@ -14342,15 +14747,16 @@ class OverrideTestPatternRestrictToAchievableColoursPut$RequestBody {
       _$OverrideTestPatternRestrictToAchievableColoursPut$RequestBodyFromJson(
           json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$OverrideTestPatternRestrictToAchievableColoursPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$OverrideTestPatternRestrictToAchievableColoursPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$OverrideTestPatternRestrictToAchievableColoursPut$RequestBodyToJson(
           this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OverrideTestPatternRestrictToAchievableColoursPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -14385,7 +14791,7 @@ extension $OverrideTestPatternRestrictToAchievableColoursPut$RequestBodyExtensio
 
 @JsonSerializable(explicitToJson: true)
 class OverrideTestPatternTypePut$RequestBody {
-  OverrideTestPatternTypePut$RequestBody({
+  const OverrideTestPatternTypePut$RequestBody({
     required this.data,
   });
 
@@ -14393,13 +14799,14 @@ class OverrideTestPatternTypePut$RequestBody {
           Map<String, dynamic> json) =>
       _$OverrideTestPatternTypePut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$OverrideTestPatternTypePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OverrideTestPatternTypePut$RequestBodyToJson(this);
+
   @JsonKey(name: 'data')
   final String data;
   static const fromJsonFactory =
       _$OverrideTestPatternTypePut$RequestBodyFromJson;
-  static const toJsonFactory = _$OverrideTestPatternTypePut$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$OverrideTestPatternTypePut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -14432,7 +14839,7 @@ extension $OverrideTestPatternTypePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class PresetsActiveNumberPut$RequestBody {
-  PresetsActiveNumberPut$RequestBody({
+  const PresetsActiveNumberPut$RequestBody({
     required this.data,
   });
 
@@ -14440,12 +14847,13 @@ class PresetsActiveNumberPut$RequestBody {
           Map<String, dynamic> json) =>
       _$PresetsActiveNumberPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory = _$PresetsActiveNumberPut$RequestBodyFromJson;
   static const toJsonFactory = _$PresetsActiveNumberPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$PresetsActiveNumberPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory = _$PresetsActiveNumberPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -14477,7 +14885,7 @@ extension $PresetsActiveNumberPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class PresetsItemsNumberNamePut$RequestBody {
-  PresetsItemsNumberNamePut$RequestBody({
+  const PresetsItemsNumberNamePut$RequestBody({
     required this.data,
   });
 
@@ -14485,13 +14893,14 @@ class PresetsItemsNumberNamePut$RequestBody {
           Map<String, dynamic> json) =>
       _$PresetsItemsNumberNamePut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$PresetsItemsNumberNamePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$PresetsItemsNumberNamePut$RequestBodyToJson(this);
+
   @JsonKey(name: 'data')
   final String data;
   static const fromJsonFactory =
       _$PresetsItemsNumberNamePut$RequestBodyFromJson;
-  static const toJsonFactory = _$PresetsItemsNumberNamePut$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$PresetsItemsNumberNamePut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -14524,7 +14933,7 @@ extension $PresetsItemsNumberNamePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class Processing3dLutDataPut$RequestBody {
-  Processing3dLutDataPut$RequestBody({
+  const Processing3dLutDataPut$RequestBody({
     required this.data,
   });
 
@@ -14532,12 +14941,13 @@ class Processing3dLutDataPut$RequestBody {
           Map<String, dynamic> json) =>
       _$Processing3dLutDataPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data', defaultValue: <Object>[])
-  final List<Object> data;
-  static const fromJsonFactory = _$Processing3dLutDataPut$RequestBodyFromJson;
   static const toJsonFactory = _$Processing3dLutDataPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$Processing3dLutDataPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data', defaultValue: <Object>[])
+  final List<Object> data;
+  static const fromJsonFactory = _$Processing3dLutDataPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -14570,7 +14980,7 @@ extension $Processing3dLutDataPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class Processing3dLutEnabledPut$RequestBody {
-  Processing3dLutEnabledPut$RequestBody({
+  const Processing3dLutEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -14578,13 +14988,14 @@ class Processing3dLutEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$Processing3dLutEnabledPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$Processing3dLutEnabledPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$Processing3dLutEnabledPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'data')
   final Object data;
   static const fromJsonFactory =
       _$Processing3dLutEnabledPut$RequestBodyFromJson;
-  static const toJsonFactory = _$Processing3dLutEnabledPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$Processing3dLutEnabledPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -14617,7 +15028,7 @@ extension $Processing3dLutEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class Processing3dLutStrengthPut$RequestBody {
-  Processing3dLutStrengthPut$RequestBody({
+  const Processing3dLutStrengthPut$RequestBody({
     required this.data,
   });
 
@@ -14625,13 +15036,14 @@ class Processing3dLutStrengthPut$RequestBody {
           Map<String, dynamic> json) =>
       _$Processing3dLutStrengthPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$Processing3dLutStrengthPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$Processing3dLutStrengthPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'data')
   final double data;
   static const fromJsonFactory =
       _$Processing3dLutStrengthPut$RequestBodyFromJson;
-  static const toJsonFactory = _$Processing3dLutStrengthPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$Processing3dLutStrengthPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -14664,7 +15076,7 @@ extension $Processing3dLutStrengthPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectBlackBluePut$RequestBody {
-  ProcessingColourCorrectBlackBluePut$RequestBody({
+  const ProcessingColourCorrectBlackBluePut$RequestBody({
     required this.data,
   });
 
@@ -14672,14 +15084,15 @@ class ProcessingColourCorrectBlackBluePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectBlackBluePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectBlackBluePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectBlackBluePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectBlackBluePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectBlackBluePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -14713,7 +15126,7 @@ extension $ProcessingColourCorrectBlackBluePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectBlackGreenPut$RequestBody {
-  ProcessingColourCorrectBlackGreenPut$RequestBody({
+  const ProcessingColourCorrectBlackGreenPut$RequestBody({
     required this.data,
   });
 
@@ -14721,14 +15134,15 @@ class ProcessingColourCorrectBlackGreenPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectBlackGreenPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectBlackGreenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectBlackGreenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectBlackGreenPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectBlackGreenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -14762,7 +15176,7 @@ extension $ProcessingColourCorrectBlackGreenPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectBlackRedPut$RequestBody {
-  ProcessingColourCorrectBlackRedPut$RequestBody({
+  const ProcessingColourCorrectBlackRedPut$RequestBody({
     required this.data,
   });
 
@@ -14770,14 +15184,15 @@ class ProcessingColourCorrectBlackRedPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectBlackRedPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectBlackRedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectBlackRedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectBlackRedPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectBlackRedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -14811,7 +15226,7 @@ extension $ProcessingColourCorrectBlackRedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectBlueBrightnessPut$RequestBody {
-  ProcessingColourCorrectBlueBrightnessPut$RequestBody({
+  const ProcessingColourCorrectBlueBrightnessPut$RequestBody({
     required this.data,
   });
 
@@ -14819,14 +15234,15 @@ class ProcessingColourCorrectBlueBrightnessPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectBlueBrightnessPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectBlueBrightnessPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectBlueBrightnessPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectBlueBrightnessPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectBlueBrightnessPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -14861,7 +15277,7 @@ extension $ProcessingColourCorrectBlueBrightnessPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectBlueHuePut$RequestBody {
-  ProcessingColourCorrectBlueHuePut$RequestBody({
+  const ProcessingColourCorrectBlueHuePut$RequestBody({
     required this.data,
   });
 
@@ -14869,14 +15285,15 @@ class ProcessingColourCorrectBlueHuePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectBlueHuePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectBlueHuePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectBlueHuePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectBlueHuePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectBlueHuePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -14910,7 +15327,7 @@ extension $ProcessingColourCorrectBlueHuePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectBlueSaturationPut$RequestBody {
-  ProcessingColourCorrectBlueSaturationPut$RequestBody({
+  const ProcessingColourCorrectBlueSaturationPut$RequestBody({
     required this.data,
   });
 
@@ -14918,14 +15335,15 @@ class ProcessingColourCorrectBlueSaturationPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectBlueSaturationPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectBlueSaturationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectBlueSaturationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectBlueSaturationPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectBlueSaturationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -14960,7 +15378,7 @@ extension $ProcessingColourCorrectBlueSaturationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectCobaltBrightnessPut$RequestBody {
-  ProcessingColourCorrectCobaltBrightnessPut$RequestBody({
+  const ProcessingColourCorrectCobaltBrightnessPut$RequestBody({
     required this.data,
   });
 
@@ -14968,14 +15386,15 @@ class ProcessingColourCorrectCobaltBrightnessPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectCobaltBrightnessPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectCobaltBrightnessPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectCobaltBrightnessPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectCobaltBrightnessPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectCobaltBrightnessPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15010,7 +15429,7 @@ extension $ProcessingColourCorrectCobaltBrightnessPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectCobaltHuePut$RequestBody {
-  ProcessingColourCorrectCobaltHuePut$RequestBody({
+  const ProcessingColourCorrectCobaltHuePut$RequestBody({
     required this.data,
   });
 
@@ -15018,14 +15437,15 @@ class ProcessingColourCorrectCobaltHuePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectCobaltHuePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectCobaltHuePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectCobaltHuePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectCobaltHuePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectCobaltHuePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15059,7 +15479,7 @@ extension $ProcessingColourCorrectCobaltHuePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectCobaltSaturationPut$RequestBody {
-  ProcessingColourCorrectCobaltSaturationPut$RequestBody({
+  const ProcessingColourCorrectCobaltSaturationPut$RequestBody({
     required this.data,
   });
 
@@ -15067,14 +15487,15 @@ class ProcessingColourCorrectCobaltSaturationPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectCobaltSaturationPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectCobaltSaturationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectCobaltSaturationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectCobaltSaturationPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectCobaltSaturationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15109,7 +15530,7 @@ extension $ProcessingColourCorrectCobaltSaturationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectCrimsonBrightnessPut$RequestBody {
-  ProcessingColourCorrectCrimsonBrightnessPut$RequestBody({
+  const ProcessingColourCorrectCrimsonBrightnessPut$RequestBody({
     required this.data,
   });
 
@@ -15117,14 +15538,15 @@ class ProcessingColourCorrectCrimsonBrightnessPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectCrimsonBrightnessPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectCrimsonBrightnessPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectCrimsonBrightnessPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectCrimsonBrightnessPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectCrimsonBrightnessPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15159,7 +15581,7 @@ extension $ProcessingColourCorrectCrimsonBrightnessPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectCrimsonHuePut$RequestBody {
-  ProcessingColourCorrectCrimsonHuePut$RequestBody({
+  const ProcessingColourCorrectCrimsonHuePut$RequestBody({
     required this.data,
   });
 
@@ -15167,14 +15589,15 @@ class ProcessingColourCorrectCrimsonHuePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectCrimsonHuePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectCrimsonHuePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectCrimsonHuePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectCrimsonHuePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectCrimsonHuePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15208,7 +15631,7 @@ extension $ProcessingColourCorrectCrimsonHuePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectCrimsonSaturationPut$RequestBody {
-  ProcessingColourCorrectCrimsonSaturationPut$RequestBody({
+  const ProcessingColourCorrectCrimsonSaturationPut$RequestBody({
     required this.data,
   });
 
@@ -15216,14 +15639,15 @@ class ProcessingColourCorrectCrimsonSaturationPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectCrimsonSaturationPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectCrimsonSaturationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectCrimsonSaturationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectCrimsonSaturationPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectCrimsonSaturationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15258,7 +15682,7 @@ extension $ProcessingColourCorrectCrimsonSaturationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectCyanBrightnessPut$RequestBody {
-  ProcessingColourCorrectCyanBrightnessPut$RequestBody({
+  const ProcessingColourCorrectCyanBrightnessPut$RequestBody({
     required this.data,
   });
 
@@ -15266,14 +15690,15 @@ class ProcessingColourCorrectCyanBrightnessPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectCyanBrightnessPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectCyanBrightnessPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectCyanBrightnessPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectCyanBrightnessPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectCyanBrightnessPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15308,7 +15733,7 @@ extension $ProcessingColourCorrectCyanBrightnessPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectCyanHuePut$RequestBody {
-  ProcessingColourCorrectCyanHuePut$RequestBody({
+  const ProcessingColourCorrectCyanHuePut$RequestBody({
     required this.data,
   });
 
@@ -15316,14 +15741,15 @@ class ProcessingColourCorrectCyanHuePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectCyanHuePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectCyanHuePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectCyanHuePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectCyanHuePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectCyanHuePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15357,7 +15783,7 @@ extension $ProcessingColourCorrectCyanHuePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectCyanSaturationPut$RequestBody {
-  ProcessingColourCorrectCyanSaturationPut$RequestBody({
+  const ProcessingColourCorrectCyanSaturationPut$RequestBody({
     required this.data,
   });
 
@@ -15365,14 +15791,15 @@ class ProcessingColourCorrectCyanSaturationPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectCyanSaturationPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectCyanSaturationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectCyanSaturationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectCyanSaturationPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectCyanSaturationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15407,7 +15834,7 @@ extension $ProcessingColourCorrectCyanSaturationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectEnabledPut$RequestBody {
-  ProcessingColourCorrectEnabledPut$RequestBody({
+  const ProcessingColourCorrectEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -15415,14 +15842,15 @@ class ProcessingColourCorrectEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15456,7 +15884,7 @@ extension $ProcessingColourCorrectEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectGreenBrightnessPut$RequestBody {
-  ProcessingColourCorrectGreenBrightnessPut$RequestBody({
+  const ProcessingColourCorrectGreenBrightnessPut$RequestBody({
     required this.data,
   });
 
@@ -15464,14 +15892,15 @@ class ProcessingColourCorrectGreenBrightnessPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectGreenBrightnessPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectGreenBrightnessPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectGreenBrightnessPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectGreenBrightnessPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectGreenBrightnessPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15506,7 +15935,7 @@ extension $ProcessingColourCorrectGreenBrightnessPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectGreenHuePut$RequestBody {
-  ProcessingColourCorrectGreenHuePut$RequestBody({
+  const ProcessingColourCorrectGreenHuePut$RequestBody({
     required this.data,
   });
 
@@ -15514,14 +15943,15 @@ class ProcessingColourCorrectGreenHuePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectGreenHuePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectGreenHuePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectGreenHuePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectGreenHuePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectGreenHuePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15555,7 +15985,7 @@ extension $ProcessingColourCorrectGreenHuePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectGreenSaturationPut$RequestBody {
-  ProcessingColourCorrectGreenSaturationPut$RequestBody({
+  const ProcessingColourCorrectGreenSaturationPut$RequestBody({
     required this.data,
   });
 
@@ -15563,14 +15993,15 @@ class ProcessingColourCorrectGreenSaturationPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectGreenSaturationPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectGreenSaturationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectGreenSaturationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectGreenSaturationPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectGreenSaturationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15605,7 +16036,7 @@ extension $ProcessingColourCorrectGreenSaturationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectLimeBrightnessPut$RequestBody {
-  ProcessingColourCorrectLimeBrightnessPut$RequestBody({
+  const ProcessingColourCorrectLimeBrightnessPut$RequestBody({
     required this.data,
   });
 
@@ -15613,14 +16044,15 @@ class ProcessingColourCorrectLimeBrightnessPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectLimeBrightnessPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectLimeBrightnessPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectLimeBrightnessPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectLimeBrightnessPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectLimeBrightnessPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15655,7 +16087,7 @@ extension $ProcessingColourCorrectLimeBrightnessPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectLimeHuePut$RequestBody {
-  ProcessingColourCorrectLimeHuePut$RequestBody({
+  const ProcessingColourCorrectLimeHuePut$RequestBody({
     required this.data,
   });
 
@@ -15663,14 +16095,15 @@ class ProcessingColourCorrectLimeHuePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectLimeHuePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectLimeHuePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectLimeHuePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectLimeHuePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectLimeHuePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15704,7 +16137,7 @@ extension $ProcessingColourCorrectLimeHuePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectLimeSaturationPut$RequestBody {
-  ProcessingColourCorrectLimeSaturationPut$RequestBody({
+  const ProcessingColourCorrectLimeSaturationPut$RequestBody({
     required this.data,
   });
 
@@ -15712,14 +16145,15 @@ class ProcessingColourCorrectLimeSaturationPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectLimeSaturationPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectLimeSaturationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectLimeSaturationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectLimeSaturationPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectLimeSaturationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15754,7 +16188,7 @@ extension $ProcessingColourCorrectLimeSaturationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectMagentaBrightnessPut$RequestBody {
-  ProcessingColourCorrectMagentaBrightnessPut$RequestBody({
+  const ProcessingColourCorrectMagentaBrightnessPut$RequestBody({
     required this.data,
   });
 
@@ -15762,14 +16196,15 @@ class ProcessingColourCorrectMagentaBrightnessPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectMagentaBrightnessPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectMagentaBrightnessPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectMagentaBrightnessPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectMagentaBrightnessPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectMagentaBrightnessPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15804,7 +16239,7 @@ extension $ProcessingColourCorrectMagentaBrightnessPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectMagentaHuePut$RequestBody {
-  ProcessingColourCorrectMagentaHuePut$RequestBody({
+  const ProcessingColourCorrectMagentaHuePut$RequestBody({
     required this.data,
   });
 
@@ -15812,14 +16247,15 @@ class ProcessingColourCorrectMagentaHuePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectMagentaHuePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectMagentaHuePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectMagentaHuePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectMagentaHuePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectMagentaHuePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15853,7 +16289,7 @@ extension $ProcessingColourCorrectMagentaHuePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectMagentaSaturationPut$RequestBody {
-  ProcessingColourCorrectMagentaSaturationPut$RequestBody({
+  const ProcessingColourCorrectMagentaSaturationPut$RequestBody({
     required this.data,
   });
 
@@ -15861,14 +16297,15 @@ class ProcessingColourCorrectMagentaSaturationPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectMagentaSaturationPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectMagentaSaturationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectMagentaSaturationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectMagentaSaturationPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectMagentaSaturationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15903,7 +16340,7 @@ extension $ProcessingColourCorrectMagentaSaturationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectOrangeBrightnessPut$RequestBody {
-  ProcessingColourCorrectOrangeBrightnessPut$RequestBody({
+  const ProcessingColourCorrectOrangeBrightnessPut$RequestBody({
     required this.data,
   });
 
@@ -15911,14 +16348,15 @@ class ProcessingColourCorrectOrangeBrightnessPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectOrangeBrightnessPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectOrangeBrightnessPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectOrangeBrightnessPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectOrangeBrightnessPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectOrangeBrightnessPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -15953,7 +16391,7 @@ extension $ProcessingColourCorrectOrangeBrightnessPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectOrangeHuePut$RequestBody {
-  ProcessingColourCorrectOrangeHuePut$RequestBody({
+  const ProcessingColourCorrectOrangeHuePut$RequestBody({
     required this.data,
   });
 
@@ -15961,14 +16399,15 @@ class ProcessingColourCorrectOrangeHuePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectOrangeHuePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectOrangeHuePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectOrangeHuePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectOrangeHuePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectOrangeHuePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16002,7 +16441,7 @@ extension $ProcessingColourCorrectOrangeHuePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectOrangeSaturationPut$RequestBody {
-  ProcessingColourCorrectOrangeSaturationPut$RequestBody({
+  const ProcessingColourCorrectOrangeSaturationPut$RequestBody({
     required this.data,
   });
 
@@ -16010,14 +16449,15 @@ class ProcessingColourCorrectOrangeSaturationPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectOrangeSaturationPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectOrangeSaturationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectOrangeSaturationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectOrangeSaturationPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectOrangeSaturationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16052,7 +16492,7 @@ extension $ProcessingColourCorrectOrangeSaturationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectRedBrightnessPut$RequestBody {
-  ProcessingColourCorrectRedBrightnessPut$RequestBody({
+  const ProcessingColourCorrectRedBrightnessPut$RequestBody({
     required this.data,
   });
 
@@ -16060,14 +16500,15 @@ class ProcessingColourCorrectRedBrightnessPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectRedBrightnessPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectRedBrightnessPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectRedBrightnessPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectRedBrightnessPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectRedBrightnessPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16101,7 +16542,7 @@ extension $ProcessingColourCorrectRedBrightnessPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectRedHuePut$RequestBody {
-  ProcessingColourCorrectRedHuePut$RequestBody({
+  const ProcessingColourCorrectRedHuePut$RequestBody({
     required this.data,
   });
 
@@ -16109,14 +16550,15 @@ class ProcessingColourCorrectRedHuePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectRedHuePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectRedHuePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectRedHuePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectRedHuePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectRedHuePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16150,7 +16592,7 @@ extension $ProcessingColourCorrectRedHuePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectRedSaturationPut$RequestBody {
-  ProcessingColourCorrectRedSaturationPut$RequestBody({
+  const ProcessingColourCorrectRedSaturationPut$RequestBody({
     required this.data,
   });
 
@@ -16158,14 +16600,15 @@ class ProcessingColourCorrectRedSaturationPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectRedSaturationPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectRedSaturationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectRedSaturationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectRedSaturationPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectRedSaturationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16199,7 +16642,7 @@ extension $ProcessingColourCorrectRedSaturationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectTurquoiseBrightnessPut$RequestBody {
-  ProcessingColourCorrectTurquoiseBrightnessPut$RequestBody({
+  const ProcessingColourCorrectTurquoiseBrightnessPut$RequestBody({
     required this.data,
   });
 
@@ -16207,14 +16650,15 @@ class ProcessingColourCorrectTurquoiseBrightnessPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectTurquoiseBrightnessPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectTurquoiseBrightnessPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectTurquoiseBrightnessPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectTurquoiseBrightnessPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectTurquoiseBrightnessPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16249,7 +16693,7 @@ extension $ProcessingColourCorrectTurquoiseBrightnessPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectTurquoiseHuePut$RequestBody {
-  ProcessingColourCorrectTurquoiseHuePut$RequestBody({
+  const ProcessingColourCorrectTurquoiseHuePut$RequestBody({
     required this.data,
   });
 
@@ -16257,14 +16701,15 @@ class ProcessingColourCorrectTurquoiseHuePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectTurquoiseHuePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectTurquoiseHuePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectTurquoiseHuePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectTurquoiseHuePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectTurquoiseHuePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16298,7 +16743,7 @@ extension $ProcessingColourCorrectTurquoiseHuePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectTurquoiseSaturationPut$RequestBody {
-  ProcessingColourCorrectTurquoiseSaturationPut$RequestBody({
+  const ProcessingColourCorrectTurquoiseSaturationPut$RequestBody({
     required this.data,
   });
 
@@ -16306,14 +16751,15 @@ class ProcessingColourCorrectTurquoiseSaturationPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectTurquoiseSaturationPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectTurquoiseSaturationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectTurquoiseSaturationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectTurquoiseSaturationPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectTurquoiseSaturationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16348,7 +16794,7 @@ extension $ProcessingColourCorrectTurquoiseSaturationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectVioletBrightnessPut$RequestBody {
-  ProcessingColourCorrectVioletBrightnessPut$RequestBody({
+  const ProcessingColourCorrectVioletBrightnessPut$RequestBody({
     required this.data,
   });
 
@@ -16356,14 +16802,15 @@ class ProcessingColourCorrectVioletBrightnessPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectVioletBrightnessPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectVioletBrightnessPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectVioletBrightnessPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectVioletBrightnessPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectVioletBrightnessPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16398,7 +16845,7 @@ extension $ProcessingColourCorrectVioletBrightnessPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectVioletHuePut$RequestBody {
-  ProcessingColourCorrectVioletHuePut$RequestBody({
+  const ProcessingColourCorrectVioletHuePut$RequestBody({
     required this.data,
   });
 
@@ -16406,14 +16853,15 @@ class ProcessingColourCorrectVioletHuePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectVioletHuePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectVioletHuePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectVioletHuePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectVioletHuePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectVioletHuePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16447,7 +16895,7 @@ extension $ProcessingColourCorrectVioletHuePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectVioletSaturationPut$RequestBody {
-  ProcessingColourCorrectVioletSaturationPut$RequestBody({
+  const ProcessingColourCorrectVioletSaturationPut$RequestBody({
     required this.data,
   });
 
@@ -16455,14 +16903,15 @@ class ProcessingColourCorrectVioletSaturationPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectVioletSaturationPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectVioletSaturationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectVioletSaturationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectVioletSaturationPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectVioletSaturationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16497,7 +16946,7 @@ extension $ProcessingColourCorrectVioletSaturationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectWhiteBluePut$RequestBody {
-  ProcessingColourCorrectWhiteBluePut$RequestBody({
+  const ProcessingColourCorrectWhiteBluePut$RequestBody({
     required this.data,
   });
 
@@ -16505,14 +16954,15 @@ class ProcessingColourCorrectWhiteBluePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectWhiteBluePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectWhiteBluePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectWhiteBluePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectWhiteBluePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectWhiteBluePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16546,7 +16996,7 @@ extension $ProcessingColourCorrectWhiteBluePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectWhiteGreenPut$RequestBody {
-  ProcessingColourCorrectWhiteGreenPut$RequestBody({
+  const ProcessingColourCorrectWhiteGreenPut$RequestBody({
     required this.data,
   });
 
@@ -16554,14 +17004,15 @@ class ProcessingColourCorrectWhiteGreenPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectWhiteGreenPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectWhiteGreenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectWhiteGreenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectWhiteGreenPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectWhiteGreenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16595,7 +17046,7 @@ extension $ProcessingColourCorrectWhiteGreenPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectWhiteRedPut$RequestBody {
-  ProcessingColourCorrectWhiteRedPut$RequestBody({
+  const ProcessingColourCorrectWhiteRedPut$RequestBody({
     required this.data,
   });
 
@@ -16603,14 +17054,15 @@ class ProcessingColourCorrectWhiteRedPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectWhiteRedPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectWhiteRedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectWhiteRedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectWhiteRedPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectWhiteRedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16644,7 +17096,7 @@ extension $ProcessingColourCorrectWhiteRedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectYellowBrightnessPut$RequestBody {
-  ProcessingColourCorrectYellowBrightnessPut$RequestBody({
+  const ProcessingColourCorrectYellowBrightnessPut$RequestBody({
     required this.data,
   });
 
@@ -16652,14 +17104,15 @@ class ProcessingColourCorrectYellowBrightnessPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectYellowBrightnessPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectYellowBrightnessPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectYellowBrightnessPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectYellowBrightnessPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectYellowBrightnessPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16694,7 +17147,7 @@ extension $ProcessingColourCorrectYellowBrightnessPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectYellowHuePut$RequestBody {
-  ProcessingColourCorrectYellowHuePut$RequestBody({
+  const ProcessingColourCorrectYellowHuePut$RequestBody({
     required this.data,
   });
 
@@ -16702,14 +17155,15 @@ class ProcessingColourCorrectYellowHuePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectYellowHuePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectYellowHuePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectYellowHuePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectYellowHuePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectYellowHuePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16743,7 +17197,7 @@ extension $ProcessingColourCorrectYellowHuePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourCorrectYellowSaturationPut$RequestBody {
-  ProcessingColourCorrectYellowSaturationPut$RequestBody({
+  const ProcessingColourCorrectYellowSaturationPut$RequestBody({
     required this.data,
   });
 
@@ -16751,14 +17205,15 @@ class ProcessingColourCorrectYellowSaturationPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourCorrectYellowSaturationPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourCorrectYellowSaturationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourCorrectYellowSaturationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourCorrectYellowSaturationPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourCorrectYellowSaturationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16793,7 +17248,7 @@ extension $ProcessingColourCorrectYellowSaturationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourReplaceApplyToBrightnessPut$RequestBody {
-  ProcessingColourReplaceApplyToBrightnessPut$RequestBody({
+  const ProcessingColourReplaceApplyToBrightnessPut$RequestBody({
     required this.data,
   });
 
@@ -16801,14 +17256,15 @@ class ProcessingColourReplaceApplyToBrightnessPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourReplaceApplyToBrightnessPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$ProcessingColourReplaceApplyToBrightnessPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourReplaceApplyToBrightnessPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourReplaceApplyToBrightnessPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceApplyToBrightnessPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16843,7 +17299,7 @@ extension $ProcessingColourReplaceApplyToBrightnessPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourReplaceApplyToHuePut$RequestBody {
-  ProcessingColourReplaceApplyToHuePut$RequestBody({
+  const ProcessingColourReplaceApplyToHuePut$RequestBody({
     required this.data,
   });
 
@@ -16851,14 +17307,15 @@ class ProcessingColourReplaceApplyToHuePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourReplaceApplyToHuePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$ProcessingColourReplaceApplyToHuePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourReplaceApplyToHuePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourReplaceApplyToHuePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceApplyToHuePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16892,7 +17349,7 @@ extension $ProcessingColourReplaceApplyToHuePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourReplaceApplyToSaturationPut$RequestBody {
-  ProcessingColourReplaceApplyToSaturationPut$RequestBody({
+  const ProcessingColourReplaceApplyToSaturationPut$RequestBody({
     required this.data,
   });
 
@@ -16900,14 +17357,15 @@ class ProcessingColourReplaceApplyToSaturationPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourReplaceApplyToSaturationPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$ProcessingColourReplaceApplyToSaturationPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourReplaceApplyToSaturationPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourReplaceApplyToSaturationPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceApplyToSaturationPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16942,7 +17400,7 @@ extension $ProcessingColourReplaceApplyToSaturationPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourReplaceBrightnessTolerancePut$RequestBody {
-  ProcessingColourReplaceBrightnessTolerancePut$RequestBody({
+  const ProcessingColourReplaceBrightnessTolerancePut$RequestBody({
     required this.data,
   });
 
@@ -16950,14 +17408,15 @@ class ProcessingColourReplaceBrightnessTolerancePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourReplaceBrightnessTolerancePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourReplaceBrightnessTolerancePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourReplaceBrightnessTolerancePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourReplaceBrightnessTolerancePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceBrightnessTolerancePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16992,7 +17451,7 @@ extension $ProcessingColourReplaceBrightnessTolerancePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourReplaceColourFromBluePut$RequestBody {
-  ProcessingColourReplaceColourFromBluePut$RequestBody({
+  const ProcessingColourReplaceColourFromBluePut$RequestBody({
     required this.data,
   });
 
@@ -17000,14 +17459,15 @@ class ProcessingColourReplaceColourFromBluePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourReplaceColourFromBluePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$ProcessingColourReplaceColourFromBluePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourReplaceColourFromBluePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourReplaceColourFromBluePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceColourFromBluePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17041,7 +17501,7 @@ extension $ProcessingColourReplaceColourFromBluePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourReplaceColourFromGreenPut$RequestBody {
-  ProcessingColourReplaceColourFromGreenPut$RequestBody({
+  const ProcessingColourReplaceColourFromGreenPut$RequestBody({
     required this.data,
   });
 
@@ -17049,14 +17509,15 @@ class ProcessingColourReplaceColourFromGreenPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourReplaceColourFromGreenPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$ProcessingColourReplaceColourFromGreenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourReplaceColourFromGreenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourReplaceColourFromGreenPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceColourFromGreenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17090,7 +17551,7 @@ extension $ProcessingColourReplaceColourFromGreenPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourReplaceColourFromRedPut$RequestBody {
-  ProcessingColourReplaceColourFromRedPut$RequestBody({
+  const ProcessingColourReplaceColourFromRedPut$RequestBody({
     required this.data,
   });
 
@@ -17098,14 +17559,15 @@ class ProcessingColourReplaceColourFromRedPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourReplaceColourFromRedPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$ProcessingColourReplaceColourFromRedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourReplaceColourFromRedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourReplaceColourFromRedPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceColourFromRedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17139,7 +17601,7 @@ extension $ProcessingColourReplaceColourFromRedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourReplaceColourToBluePut$RequestBody {
-  ProcessingColourReplaceColourToBluePut$RequestBody({
+  const ProcessingColourReplaceColourToBluePut$RequestBody({
     required this.data,
   });
 
@@ -17147,14 +17609,15 @@ class ProcessingColourReplaceColourToBluePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourReplaceColourToBluePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$ProcessingColourReplaceColourToBluePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourReplaceColourToBluePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourReplaceColourToBluePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceColourToBluePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17188,7 +17651,7 @@ extension $ProcessingColourReplaceColourToBluePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourReplaceColourToGreenPut$RequestBody {
-  ProcessingColourReplaceColourToGreenPut$RequestBody({
+  const ProcessingColourReplaceColourToGreenPut$RequestBody({
     required this.data,
   });
 
@@ -17196,14 +17659,15 @@ class ProcessingColourReplaceColourToGreenPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourReplaceColourToGreenPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$ProcessingColourReplaceColourToGreenPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourReplaceColourToGreenPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourReplaceColourToGreenPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceColourToGreenPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17237,7 +17701,7 @@ extension $ProcessingColourReplaceColourToGreenPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourReplaceColourToRedPut$RequestBody {
-  ProcessingColourReplaceColourToRedPut$RequestBody({
+  const ProcessingColourReplaceColourToRedPut$RequestBody({
     required this.data,
   });
 
@@ -17245,14 +17709,15 @@ class ProcessingColourReplaceColourToRedPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourReplaceColourToRedPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final int data;
-  static const fromJsonFactory =
-      _$ProcessingColourReplaceColourToRedPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourReplaceColourToRedPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourReplaceColourToRedPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final int data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceColourToRedPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17286,7 +17751,7 @@ extension $ProcessingColourReplaceColourToRedPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourReplaceColourTolerancePut$RequestBody {
-  ProcessingColourReplaceColourTolerancePut$RequestBody({
+  const ProcessingColourReplaceColourTolerancePut$RequestBody({
     required this.data,
   });
 
@@ -17294,14 +17759,15 @@ class ProcessingColourReplaceColourTolerancePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourReplaceColourTolerancePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourReplaceColourTolerancePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourReplaceColourTolerancePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourReplaceColourTolerancePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceColourTolerancePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17336,7 +17802,7 @@ extension $ProcessingColourReplaceColourTolerancePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourReplaceEnabledPut$RequestBody {
-  ProcessingColourReplaceEnabledPut$RequestBody({
+  const ProcessingColourReplaceEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -17344,14 +17810,15 @@ class ProcessingColourReplaceEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourReplaceEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$ProcessingColourReplaceEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourReplaceEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourReplaceEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17385,7 +17852,7 @@ extension $ProcessingColourReplaceEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourReplaceMethodPut$RequestBody {
-  ProcessingColourReplaceMethodPut$RequestBody({
+  const ProcessingColourReplaceMethodPut$RequestBody({
     required this.data,
   });
 
@@ -17393,14 +17860,15 @@ class ProcessingColourReplaceMethodPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourReplaceMethodPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory =
-      _$ProcessingColourReplaceMethodPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourReplaceMethodPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourReplaceMethodPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceMethodPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17434,7 +17902,7 @@ extension $ProcessingColourReplaceMethodPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourReplaceSoftnessPut$RequestBody {
-  ProcessingColourReplaceSoftnessPut$RequestBody({
+  const ProcessingColourReplaceSoftnessPut$RequestBody({
     required this.data,
   });
 
@@ -17442,14 +17910,15 @@ class ProcessingColourReplaceSoftnessPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourReplaceSoftnessPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourReplaceSoftnessPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourReplaceSoftnessPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourReplaceSoftnessPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceSoftnessPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17483,7 +17952,7 @@ extension $ProcessingColourReplaceSoftnessPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourReplaceStrengthPut$RequestBody {
-  ProcessingColourReplaceStrengthPut$RequestBody({
+  const ProcessingColourReplaceStrengthPut$RequestBody({
     required this.data,
   });
 
@@ -17491,14 +17960,15 @@ class ProcessingColourReplaceStrengthPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourReplaceStrengthPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final double data;
-  static const fromJsonFactory =
-      _$ProcessingColourReplaceStrengthPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourReplaceStrengthPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourReplaceStrengthPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceStrengthPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17532,7 +18002,7 @@ extension $ProcessingColourReplaceStrengthPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingColourReplaceViewMattePut$RequestBody {
-  ProcessingColourReplaceViewMattePut$RequestBody({
+  const ProcessingColourReplaceViewMattePut$RequestBody({
     required this.data,
   });
 
@@ -17540,14 +18010,15 @@ class ProcessingColourReplaceViewMattePut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingColourReplaceViewMattePut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$ProcessingColourReplaceViewMattePut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingColourReplaceViewMattePut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingColourReplaceViewMattePut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$ProcessingColourReplaceViewMattePut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17581,7 +18052,7 @@ extension $ProcessingColourReplaceViewMattePut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingCurvesBluePointsPut$RequestBody {
-  ProcessingCurvesBluePointsPut$RequestBody({
+  const ProcessingCurvesBluePointsPut$RequestBody({
     required this.data,
   });
 
@@ -17589,14 +18060,15 @@ class ProcessingCurvesBluePointsPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingCurvesBluePointsPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data', defaultValue: <Object>[])
-  final List<Object> data;
-  static const fromJsonFactory =
-      _$ProcessingCurvesBluePointsPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingCurvesBluePointsPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingCurvesBluePointsPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data', defaultValue: <Object>[])
+  final List<Object> data;
+  static const fromJsonFactory =
+      _$ProcessingCurvesBluePointsPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17629,7 +18101,7 @@ extension $ProcessingCurvesBluePointsPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingCurvesEnabledPut$RequestBody {
-  ProcessingCurvesEnabledPut$RequestBody({
+  const ProcessingCurvesEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -17637,13 +18109,14 @@ class ProcessingCurvesEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingCurvesEnabledPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$ProcessingCurvesEnabledPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$ProcessingCurvesEnabledPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'data')
   final Object data;
   static const fromJsonFactory =
       _$ProcessingCurvesEnabledPut$RequestBodyFromJson;
-  static const toJsonFactory = _$ProcessingCurvesEnabledPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$ProcessingCurvesEnabledPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -17676,7 +18149,7 @@ extension $ProcessingCurvesEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingCurvesGreenPointsPut$RequestBody {
-  ProcessingCurvesGreenPointsPut$RequestBody({
+  const ProcessingCurvesGreenPointsPut$RequestBody({
     required this.data,
   });
 
@@ -17684,14 +18157,15 @@ class ProcessingCurvesGreenPointsPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingCurvesGreenPointsPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data', defaultValue: <Object>[])
-  final List<Object> data;
-  static const fromJsonFactory =
-      _$ProcessingCurvesGreenPointsPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingCurvesGreenPointsPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingCurvesGreenPointsPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data', defaultValue: <Object>[])
+  final List<Object> data;
+  static const fromJsonFactory =
+      _$ProcessingCurvesGreenPointsPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17724,7 +18198,7 @@ extension $ProcessingCurvesGreenPointsPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingCurvesRedPointsPut$RequestBody {
-  ProcessingCurvesRedPointsPut$RequestBody({
+  const ProcessingCurvesRedPointsPut$RequestBody({
     required this.data,
   });
 
@@ -17732,13 +18206,14 @@ class ProcessingCurvesRedPointsPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingCurvesRedPointsPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$ProcessingCurvesRedPointsPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$ProcessingCurvesRedPointsPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'data', defaultValue: <Object>[])
   final List<Object> data;
   static const fromJsonFactory =
       _$ProcessingCurvesRedPointsPut$RequestBodyFromJson;
-  static const toJsonFactory = _$ProcessingCurvesRedPointsPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$ProcessingCurvesRedPointsPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -17771,7 +18246,7 @@ extension $ProcessingCurvesRedPointsPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingCurvesWhitePointsPut$RequestBody {
-  ProcessingCurvesWhitePointsPut$RequestBody({
+  const ProcessingCurvesWhitePointsPut$RequestBody({
     required this.data,
   });
 
@@ -17779,14 +18254,15 @@ class ProcessingCurvesWhitePointsPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingCurvesWhitePointsPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data', defaultValue: <Object>[])
-  final List<Object> data;
-  static const fromJsonFactory =
-      _$ProcessingCurvesWhitePointsPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingCurvesWhitePointsPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingCurvesWhitePointsPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data', defaultValue: <Object>[])
+  final List<Object> data;
+  static const fromJsonFactory =
+      _$ProcessingCurvesWhitePointsPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17819,7 +18295,7 @@ extension $ProcessingCurvesWhitePointsPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingOscaModuleCorrectionEnabledPut$RequestBody {
-  ProcessingOscaModuleCorrectionEnabledPut$RequestBody({
+  const ProcessingOscaModuleCorrectionEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -17827,14 +18303,15 @@ class ProcessingOscaModuleCorrectionEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingOscaModuleCorrectionEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$ProcessingOscaModuleCorrectionEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingOscaModuleCorrectionEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingOscaModuleCorrectionEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$ProcessingOscaModuleCorrectionEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17869,7 +18346,7 @@ extension $ProcessingOscaModuleCorrectionEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingOscaSeamCorrectionEnabledPut$RequestBody {
-  ProcessingOscaSeamCorrectionEnabledPut$RequestBody({
+  const ProcessingOscaSeamCorrectionEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -17877,14 +18354,15 @@ class ProcessingOscaSeamCorrectionEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingOscaSeamCorrectionEnabledPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final Object data;
-  static const fromJsonFactory =
-      _$ProcessingOscaSeamCorrectionEnabledPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$ProcessingOscaSeamCorrectionEnabledPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$ProcessingOscaSeamCorrectionEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$ProcessingOscaSeamCorrectionEnabledPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17918,7 +18396,7 @@ extension $ProcessingOscaSeamCorrectionEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class ProcessingScalerEnabledPut$RequestBody {
-  ProcessingScalerEnabledPut$RequestBody({
+  const ProcessingScalerEnabledPut$RequestBody({
     required this.data,
   });
 
@@ -17926,13 +18404,14 @@ class ProcessingScalerEnabledPut$RequestBody {
           Map<String, dynamic> json) =>
       _$ProcessingScalerEnabledPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$ProcessingScalerEnabledPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$ProcessingScalerEnabledPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'data')
   final Object data;
   static const fromJsonFactory =
       _$ProcessingScalerEnabledPut$RequestBodyFromJson;
-  static const toJsonFactory = _$ProcessingScalerEnabledPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$ProcessingScalerEnabledPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -17965,7 +18444,7 @@ extension $ProcessingScalerEnabledPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class SystemActionsRebootPut$RequestBody {
-  SystemActionsRebootPut$RequestBody({
+  const SystemActionsRebootPut$RequestBody({
     required this.data,
   });
 
@@ -17973,12 +18452,13 @@ class SystemActionsRebootPut$RequestBody {
           Map<String, dynamic> json) =>
       _$SystemActionsRebootPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory = _$SystemActionsRebootPut$RequestBodyFromJson;
   static const toJsonFactory = _$SystemActionsRebootPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$SystemActionsRebootPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory = _$SystemActionsRebootPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -18010,7 +18490,7 @@ extension $SystemActionsRebootPut$RequestBodyExtension
 
 @JsonSerializable(explicitToJson: true)
 class SystemActionsShutdownPut$RequestBody {
-  SystemActionsShutdownPut$RequestBody({
+  const SystemActionsShutdownPut$RequestBody({
     required this.data,
   });
 
@@ -18018,12 +18498,13 @@ class SystemActionsShutdownPut$RequestBody {
           Map<String, dynamic> json) =>
       _$SystemActionsShutdownPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'data')
-  final String data;
-  static const fromJsonFactory = _$SystemActionsShutdownPut$RequestBodyFromJson;
   static const toJsonFactory = _$SystemActionsShutdownPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$SystemActionsShutdownPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final String data;
+  static const fromJsonFactory = _$SystemActionsShutdownPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -18052,6 +18533,3093 @@ extension $SystemActionsShutdownPut$RequestBodyExtension
     return SystemActionsShutdownPut$RequestBody(
         data: (data != null ? data.value : this.data));
   }
+}
+
+String? inputActiveSourcePortTypeGetSetNullableToJson(
+    enums.InputActiveSourcePortTypeGetSet? inputActiveSourcePortTypeGetSet) {
+  return inputActiveSourcePortTypeGetSet?.value;
+}
+
+String? inputActiveSourcePortTypeGetSetToJson(
+    enums.InputActiveSourcePortTypeGetSet inputActiveSourcePortTypeGetSet) {
+  return inputActiveSourcePortTypeGetSet.value;
+}
+
+enums.InputActiveSourcePortTypeGetSet inputActiveSourcePortTypeGetSetFromJson(
+  Object? inputActiveSourcePortTypeGetSet, [
+  enums.InputActiveSourcePortTypeGetSet? defaultValue,
+]) {
+  return enums.InputActiveSourcePortTypeGetSet.values.firstWhereOrNull((e) =>
+          e.value.toString().toLowerCase() ==
+          inputActiveSourcePortTypeGetSet?.toString().toLowerCase()) ??
+      defaultValue ??
+      enums.InputActiveSourcePortTypeGetSet.swaggerGeneratedUnknown;
+}
+
+enums.InputActiveSourcePortTypeGetSet?
+    inputActiveSourcePortTypeGetSetNullableFromJson(
+  Object? inputActiveSourcePortTypeGetSet, [
+  enums.InputActiveSourcePortTypeGetSet? defaultValue,
+]) {
+  if (inputActiveSourcePortTypeGetSet == null) {
+    return null;
+  }
+  return enums.InputActiveSourcePortTypeGetSet.values.firstWhereOrNull(
+          (e) => e.value == inputActiveSourcePortTypeGetSet) ??
+      defaultValue;
+}
+
+String inputActiveSourcePortTypeGetSetExplodedListToJson(
+    List<enums.InputActiveSourcePortTypeGetSet>?
+        inputActiveSourcePortTypeGetSet) {
+  return inputActiveSourcePortTypeGetSet?.map((e) => e.value!).join(',') ?? '';
+}
+
+List<String> inputActiveSourcePortTypeGetSetListToJson(
+    List<enums.InputActiveSourcePortTypeGetSet>?
+        inputActiveSourcePortTypeGetSet) {
+  if (inputActiveSourcePortTypeGetSet == null) {
+    return [];
+  }
+
+  return inputActiveSourcePortTypeGetSet.map((e) => e.value!).toList();
+}
+
+List<enums.InputActiveSourcePortTypeGetSet>
+    inputActiveSourcePortTypeGetSetListFromJson(
+  List? inputActiveSourcePortTypeGetSet, [
+  List<enums.InputActiveSourcePortTypeGetSet>? defaultValue,
+]) {
+  if (inputActiveSourcePortTypeGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputActiveSourcePortTypeGetSet
+      .map((e) => inputActiveSourcePortTypeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+List<enums.InputActiveSourcePortTypeGetSet>?
+    inputActiveSourcePortTypeGetSetNullableListFromJson(
+  List? inputActiveSourcePortTypeGetSet, [
+  List<enums.InputActiveSourcePortTypeGetSet>? defaultValue,
+]) {
+  if (inputActiveSourcePortTypeGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputActiveSourcePortTypeGetSet
+      .map((e) => inputActiveSourcePortTypeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+String? inputPortsDviDviPortNumberControlsColourSpaceColourGetSetNullableToJson(
+    enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet?
+        inputPortsDviDviPortNumberControlsColourSpaceColourGetSet) {
+  return inputPortsDviDviPortNumberControlsColourSpaceColourGetSet?.value;
+}
+
+String? inputPortsDviDviPortNumberControlsColourSpaceColourGetSetToJson(
+    enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet
+        inputPortsDviDviPortNumberControlsColourSpaceColourGetSet) {
+  return inputPortsDviDviPortNumberControlsColourSpaceColourGetSet.value;
+}
+
+enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet
+    inputPortsDviDviPortNumberControlsColourSpaceColourGetSetFromJson(
+  Object? inputPortsDviDviPortNumberControlsColourSpaceColourGetSet, [
+  enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet? defaultValue,
+]) {
+  return enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsDviDviPortNumberControlsColourSpaceColourGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet?
+    inputPortsDviDviPortNumberControlsColourSpaceColourGetSetNullableFromJson(
+  Object? inputPortsDviDviPortNumberControlsColourSpaceColourGetSet, [
+  enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet? defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberControlsColourSpaceColourGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value ==
+              inputPortsDviDviPortNumberControlsColourSpaceColourGetSet) ??
+      defaultValue;
+}
+
+String
+    inputPortsDviDviPortNumberControlsColourSpaceColourGetSetExplodedListToJson(
+        List<enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet>?
+            inputPortsDviDviPortNumberControlsColourSpaceColourGetSet) {
+  return inputPortsDviDviPortNumberControlsColourSpaceColourGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String>
+    inputPortsDviDviPortNumberControlsColourSpaceColourGetSetListToJson(
+        List<enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet>?
+            inputPortsDviDviPortNumberControlsColourSpaceColourGetSet) {
+  if (inputPortsDviDviPortNumberControlsColourSpaceColourGetSet == null) {
+    return [];
+  }
+
+  return inputPortsDviDviPortNumberControlsColourSpaceColourGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet>
+    inputPortsDviDviPortNumberControlsColourSpaceColourGetSetListFromJson(
+  List? inputPortsDviDviPortNumberControlsColourSpaceColourGetSet, [
+  List<enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet>?
+      defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberControlsColourSpaceColourGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsDviDviPortNumberControlsColourSpaceColourGetSet
+      .map((e) =>
+          inputPortsDviDviPortNumberControlsColourSpaceColourGetSetFromJson(
+              e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet>?
+    inputPortsDviDviPortNumberControlsColourSpaceColourGetSetNullableListFromJson(
+  List? inputPortsDviDviPortNumberControlsColourSpaceColourGetSet, [
+  List<enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet>?
+      defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberControlsColourSpaceColourGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsDviDviPortNumberControlsColourSpaceColourGetSet
+      .map((e) =>
+          inputPortsDviDviPortNumberControlsColourSpaceColourGetSetFromJson(
+              e.toString()))
+      .toList();
+}
+
+String? inputPortsDviDviPortNumberControlsDviColourFormatGetSetNullableToJson(
+    enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet?
+        inputPortsDviDviPortNumberControlsDviColourFormatGetSet) {
+  return inputPortsDviDviPortNumberControlsDviColourFormatGetSet?.value;
+}
+
+String? inputPortsDviDviPortNumberControlsDviColourFormatGetSetToJson(
+    enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet
+        inputPortsDviDviPortNumberControlsDviColourFormatGetSet) {
+  return inputPortsDviDviPortNumberControlsDviColourFormatGetSet.value;
+}
+
+enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet
+    inputPortsDviDviPortNumberControlsDviColourFormatGetSetFromJson(
+  Object? inputPortsDviDviPortNumberControlsDviColourFormatGetSet, [
+  enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet? defaultValue,
+]) {
+  return enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsDviDviPortNumberControlsDviColourFormatGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet?
+    inputPortsDviDviPortNumberControlsDviColourFormatGetSetNullableFromJson(
+  Object? inputPortsDviDviPortNumberControlsDviColourFormatGetSet, [
+  enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet? defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberControlsDviColourFormatGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value ==
+              inputPortsDviDviPortNumberControlsDviColourFormatGetSet) ??
+      defaultValue;
+}
+
+String
+    inputPortsDviDviPortNumberControlsDviColourFormatGetSetExplodedListToJson(
+        List<enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet>?
+            inputPortsDviDviPortNumberControlsDviColourFormatGetSet) {
+  return inputPortsDviDviPortNumberControlsDviColourFormatGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> inputPortsDviDviPortNumberControlsDviColourFormatGetSetListToJson(
+    List<enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet>?
+        inputPortsDviDviPortNumberControlsDviColourFormatGetSet) {
+  if (inputPortsDviDviPortNumberControlsDviColourFormatGetSet == null) {
+    return [];
+  }
+
+  return inputPortsDviDviPortNumberControlsDviColourFormatGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet>
+    inputPortsDviDviPortNumberControlsDviColourFormatGetSetListFromJson(
+  List? inputPortsDviDviPortNumberControlsDviColourFormatGetSet, [
+  List<enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet>?
+      defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberControlsDviColourFormatGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsDviDviPortNumberControlsDviColourFormatGetSet
+      .map((e) =>
+          inputPortsDviDviPortNumberControlsDviColourFormatGetSetFromJson(
+              e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet>?
+    inputPortsDviDviPortNumberControlsDviColourFormatGetSetNullableListFromJson(
+  List? inputPortsDviDviPortNumberControlsDviColourFormatGetSet, [
+  List<enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet>?
+      defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberControlsDviColourFormatGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsDviDviPortNumberControlsDviColourFormatGetSet
+      .map((e) =>
+          inputPortsDviDviPortNumberControlsDviColourFormatGetSetFromJson(
+              e.toString()))
+      .toList();
+}
+
+String? inputPortsDviDviPortNumberDynacalBlueGamutGetSetNullableToJson(
+    enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet?
+        inputPortsDviDviPortNumberDynacalBlueGamutGetSet) {
+  return inputPortsDviDviPortNumberDynacalBlueGamutGetSet?.value;
+}
+
+String? inputPortsDviDviPortNumberDynacalBlueGamutGetSetToJson(
+    enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet
+        inputPortsDviDviPortNumberDynacalBlueGamutGetSet) {
+  return inputPortsDviDviPortNumberDynacalBlueGamutGetSet.value;
+}
+
+enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet
+    inputPortsDviDviPortNumberDynacalBlueGamutGetSetFromJson(
+  Object? inputPortsDviDviPortNumberDynacalBlueGamutGetSet, [
+  enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet? defaultValue,
+]) {
+  return enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsDviDviPortNumberDynacalBlueGamutGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet?
+    inputPortsDviDviPortNumberDynacalBlueGamutGetSetNullableFromJson(
+  Object? inputPortsDviDviPortNumberDynacalBlueGamutGetSet, [
+  enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet? defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberDynacalBlueGamutGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value == inputPortsDviDviPortNumberDynacalBlueGamutGetSet) ??
+      defaultValue;
+}
+
+String inputPortsDviDviPortNumberDynacalBlueGamutGetSetExplodedListToJson(
+    List<enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet>?
+        inputPortsDviDviPortNumberDynacalBlueGamutGetSet) {
+  return inputPortsDviDviPortNumberDynacalBlueGamutGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> inputPortsDviDviPortNumberDynacalBlueGamutGetSetListToJson(
+    List<enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet>?
+        inputPortsDviDviPortNumberDynacalBlueGamutGetSet) {
+  if (inputPortsDviDviPortNumberDynacalBlueGamutGetSet == null) {
+    return [];
+  }
+
+  return inputPortsDviDviPortNumberDynacalBlueGamutGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet>
+    inputPortsDviDviPortNumberDynacalBlueGamutGetSetListFromJson(
+  List? inputPortsDviDviPortNumberDynacalBlueGamutGetSet, [
+  List<enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberDynacalBlueGamutGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsDviDviPortNumberDynacalBlueGamutGetSet
+      .map((e) => inputPortsDviDviPortNumberDynacalBlueGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet>?
+    inputPortsDviDviPortNumberDynacalBlueGamutGetSetNullableListFromJson(
+  List? inputPortsDviDviPortNumberDynacalBlueGamutGetSet, [
+  List<enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberDynacalBlueGamutGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsDviDviPortNumberDynacalBlueGamutGetSet
+      .map((e) => inputPortsDviDviPortNumberDynacalBlueGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+String? inputPortsDviDviPortNumberDynacalGreenGamutGetSetNullableToJson(
+    enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet?
+        inputPortsDviDviPortNumberDynacalGreenGamutGetSet) {
+  return inputPortsDviDviPortNumberDynacalGreenGamutGetSet?.value;
+}
+
+String? inputPortsDviDviPortNumberDynacalGreenGamutGetSetToJson(
+    enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet
+        inputPortsDviDviPortNumberDynacalGreenGamutGetSet) {
+  return inputPortsDviDviPortNumberDynacalGreenGamutGetSet.value;
+}
+
+enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet
+    inputPortsDviDviPortNumberDynacalGreenGamutGetSetFromJson(
+  Object? inputPortsDviDviPortNumberDynacalGreenGamutGetSet, [
+  enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet? defaultValue,
+]) {
+  return enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsDviDviPortNumberDynacalGreenGamutGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet?
+    inputPortsDviDviPortNumberDynacalGreenGamutGetSetNullableFromJson(
+  Object? inputPortsDviDviPortNumberDynacalGreenGamutGetSet, [
+  enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet? defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberDynacalGreenGamutGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value == inputPortsDviDviPortNumberDynacalGreenGamutGetSet) ??
+      defaultValue;
+}
+
+String inputPortsDviDviPortNumberDynacalGreenGamutGetSetExplodedListToJson(
+    List<enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet>?
+        inputPortsDviDviPortNumberDynacalGreenGamutGetSet) {
+  return inputPortsDviDviPortNumberDynacalGreenGamutGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> inputPortsDviDviPortNumberDynacalGreenGamutGetSetListToJson(
+    List<enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet>?
+        inputPortsDviDviPortNumberDynacalGreenGamutGetSet) {
+  if (inputPortsDviDviPortNumberDynacalGreenGamutGetSet == null) {
+    return [];
+  }
+
+  return inputPortsDviDviPortNumberDynacalGreenGamutGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet>
+    inputPortsDviDviPortNumberDynacalGreenGamutGetSetListFromJson(
+  List? inputPortsDviDviPortNumberDynacalGreenGamutGetSet, [
+  List<enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberDynacalGreenGamutGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsDviDviPortNumberDynacalGreenGamutGetSet
+      .map((e) => inputPortsDviDviPortNumberDynacalGreenGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet>?
+    inputPortsDviDviPortNumberDynacalGreenGamutGetSetNullableListFromJson(
+  List? inputPortsDviDviPortNumberDynacalGreenGamutGetSet, [
+  List<enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberDynacalGreenGamutGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsDviDviPortNumberDynacalGreenGamutGetSet
+      .map((e) => inputPortsDviDviPortNumberDynacalGreenGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+String? inputPortsDviDviPortNumberDynacalRedGamutGetSetNullableToJson(
+    enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet?
+        inputPortsDviDviPortNumberDynacalRedGamutGetSet) {
+  return inputPortsDviDviPortNumberDynacalRedGamutGetSet?.value;
+}
+
+String? inputPortsDviDviPortNumberDynacalRedGamutGetSetToJson(
+    enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet
+        inputPortsDviDviPortNumberDynacalRedGamutGetSet) {
+  return inputPortsDviDviPortNumberDynacalRedGamutGetSet.value;
+}
+
+enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet
+    inputPortsDviDviPortNumberDynacalRedGamutGetSetFromJson(
+  Object? inputPortsDviDviPortNumberDynacalRedGamutGetSet, [
+  enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet? defaultValue,
+]) {
+  return enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsDviDviPortNumberDynacalRedGamutGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet?
+    inputPortsDviDviPortNumberDynacalRedGamutGetSetNullableFromJson(
+  Object? inputPortsDviDviPortNumberDynacalRedGamutGetSet, [
+  enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet? defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberDynacalRedGamutGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value == inputPortsDviDviPortNumberDynacalRedGamutGetSet) ??
+      defaultValue;
+}
+
+String inputPortsDviDviPortNumberDynacalRedGamutGetSetExplodedListToJson(
+    List<enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet>?
+        inputPortsDviDviPortNumberDynacalRedGamutGetSet) {
+  return inputPortsDviDviPortNumberDynacalRedGamutGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> inputPortsDviDviPortNumberDynacalRedGamutGetSetListToJson(
+    List<enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet>?
+        inputPortsDviDviPortNumberDynacalRedGamutGetSet) {
+  if (inputPortsDviDviPortNumberDynacalRedGamutGetSet == null) {
+    return [];
+  }
+
+  return inputPortsDviDviPortNumberDynacalRedGamutGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet>
+    inputPortsDviDviPortNumberDynacalRedGamutGetSetListFromJson(
+  List? inputPortsDviDviPortNumberDynacalRedGamutGetSet, [
+  List<enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberDynacalRedGamutGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsDviDviPortNumberDynacalRedGamutGetSet
+      .map((e) =>
+          inputPortsDviDviPortNumberDynacalRedGamutGetSetFromJson(e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet>?
+    inputPortsDviDviPortNumberDynacalRedGamutGetSetNullableListFromJson(
+  List? inputPortsDviDviPortNumberDynacalRedGamutGetSet, [
+  List<enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberDynacalRedGamutGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsDviDviPortNumberDynacalRedGamutGetSet
+      .map((e) =>
+          inputPortsDviDviPortNumberDynacalRedGamutGetSetFromJson(e.toString()))
+      .toList();
+}
+
+String? inputPortsDviDviPortNumberDynacalWhiteGamutGetSetNullableToJson(
+    enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet?
+        inputPortsDviDviPortNumberDynacalWhiteGamutGetSet) {
+  return inputPortsDviDviPortNumberDynacalWhiteGamutGetSet?.value;
+}
+
+String? inputPortsDviDviPortNumberDynacalWhiteGamutGetSetToJson(
+    enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet
+        inputPortsDviDviPortNumberDynacalWhiteGamutGetSet) {
+  return inputPortsDviDviPortNumberDynacalWhiteGamutGetSet.value;
+}
+
+enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet
+    inputPortsDviDviPortNumberDynacalWhiteGamutGetSetFromJson(
+  Object? inputPortsDviDviPortNumberDynacalWhiteGamutGetSet, [
+  enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet? defaultValue,
+]) {
+  return enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsDviDviPortNumberDynacalWhiteGamutGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet?
+    inputPortsDviDviPortNumberDynacalWhiteGamutGetSetNullableFromJson(
+  Object? inputPortsDviDviPortNumberDynacalWhiteGamutGetSet, [
+  enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet? defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberDynacalWhiteGamutGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value == inputPortsDviDviPortNumberDynacalWhiteGamutGetSet) ??
+      defaultValue;
+}
+
+String inputPortsDviDviPortNumberDynacalWhiteGamutGetSetExplodedListToJson(
+    List<enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet>?
+        inputPortsDviDviPortNumberDynacalWhiteGamutGetSet) {
+  return inputPortsDviDviPortNumberDynacalWhiteGamutGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> inputPortsDviDviPortNumberDynacalWhiteGamutGetSetListToJson(
+    List<enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet>?
+        inputPortsDviDviPortNumberDynacalWhiteGamutGetSet) {
+  if (inputPortsDviDviPortNumberDynacalWhiteGamutGetSet == null) {
+    return [];
+  }
+
+  return inputPortsDviDviPortNumberDynacalWhiteGamutGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet>
+    inputPortsDviDviPortNumberDynacalWhiteGamutGetSetListFromJson(
+  List? inputPortsDviDviPortNumberDynacalWhiteGamutGetSet, [
+  List<enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberDynacalWhiteGamutGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsDviDviPortNumberDynacalWhiteGamutGetSet
+      .map((e) => inputPortsDviDviPortNumberDynacalWhiteGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet>?
+    inputPortsDviDviPortNumberDynacalWhiteGamutGetSetNullableListFromJson(
+  List? inputPortsDviDviPortNumberDynacalWhiteGamutGetSet, [
+  List<enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsDviDviPortNumberDynacalWhiteGamutGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsDviDviPortNumberDynacalWhiteGamutGetSet
+      .map((e) => inputPortsDviDviPortNumberDynacalWhiteGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+String?
+    inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSetNullableToJson(
+        enums.InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet?
+            inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet) {
+  return inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet?.value;
+}
+
+String? inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSetToJson(
+    enums.InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet
+        inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet) {
+  return inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet.value;
+}
+
+enums.InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet
+    inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSetFromJson(
+  Object? inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet, [
+  enums.InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet?
+      defaultValue,
+]) {
+  return enums
+          .InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet?
+    inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSetNullableFromJson(
+  Object? inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet, [
+  enums.InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet?
+      defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet == null) {
+    return null;
+  }
+  return enums
+          .InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value ==
+              inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet) ??
+      defaultValue;
+}
+
+String
+    inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSetExplodedListToJson(
+        List<enums.InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet>?
+            inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet) {
+  return inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String>
+    inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSetListToJson(
+        List<enums.InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet>?
+            inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet) {
+  if (inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet == null) {
+    return [];
+  }
+
+  return inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet>
+    inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSetListFromJson(
+  List? inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet, [
+  List<enums.InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet>?
+      defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet
+      .map((e) =>
+          inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSetFromJson(
+              e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet>?
+    inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSetNullableListFromJson(
+  List? inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet, [
+  List<enums.InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet>?
+      defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet
+      .map((e) =>
+          inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSetFromJson(
+              e.toString()))
+      .toList();
+}
+
+String?
+    inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSetNullableToJson(
+        enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet?
+            inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet) {
+  return inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet?.value;
+}
+
+String? inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSetToJson(
+    enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet
+        inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet) {
+  return inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet.value;
+}
+
+enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet
+    inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSetFromJson(
+  Object? inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet, [
+  enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet?
+      defaultValue,
+]) {
+  return enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet?
+    inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSetNullableFromJson(
+  Object? inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet, [
+  enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet?
+      defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value ==
+              inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet) ??
+      defaultValue;
+}
+
+String
+    inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSetExplodedListToJson(
+        List<enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet>?
+            inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet) {
+  return inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String>
+    inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSetListToJson(
+        List<enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet>?
+            inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet) {
+  if (inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet == null) {
+    return [];
+  }
+
+  return inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet>
+    inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSetListFromJson(
+  List? inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet, [
+  List<enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet>?
+      defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet
+      .map((e) =>
+          inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSetFromJson(
+              e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet>?
+    inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSetNullableListFromJson(
+  List? inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet, [
+  List<enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet>?
+      defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet
+      .map((e) =>
+          inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSetFromJson(
+              e.toString()))
+      .toList();
+}
+
+String? inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSetNullableToJson(
+    enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet?
+        inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet) {
+  return inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet?.value;
+}
+
+String? inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSetToJson(
+    enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet
+        inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet) {
+  return inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet.value;
+}
+
+enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet
+    inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSetFromJson(
+  Object? inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet, [
+  enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet? defaultValue,
+]) {
+  return enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet?
+    inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSetNullableFromJson(
+  Object? inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet, [
+  enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet? defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value == inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet) ??
+      defaultValue;
+}
+
+String inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSetExplodedListToJson(
+    List<enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet>?
+        inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet) {
+  return inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSetListToJson(
+    List<enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet>?
+        inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet) {
+  if (inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet == null) {
+    return [];
+  }
+
+  return inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet>
+    inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSetListFromJson(
+  List? inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet, [
+  List<enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet>? defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet
+      .map((e) => inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet>?
+    inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSetNullableListFromJson(
+  List? inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet, [
+  List<enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet>? defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet
+      .map((e) => inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+String?
+    inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSetNullableToJson(
+        enums.InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet?
+            inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet) {
+  return inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet?.value;
+}
+
+String? inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSetToJson(
+    enums.InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet
+        inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet) {
+  return inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet.value;
+}
+
+enums.InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet
+    inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSetFromJson(
+  Object? inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet, [
+  enums.InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet?
+      defaultValue,
+]) {
+  return enums
+          .InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet?
+    inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSetNullableFromJson(
+  Object? inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet, [
+  enums.InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet?
+      defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet == null) {
+    return null;
+  }
+  return enums
+          .InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value ==
+              inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet) ??
+      defaultValue;
+}
+
+String
+    inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSetExplodedListToJson(
+        List<enums.InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet>?
+            inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet) {
+  return inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String>
+    inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSetListToJson(
+        List<enums.InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet>?
+            inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet) {
+  if (inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet == null) {
+    return [];
+  }
+
+  return inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet>
+    inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSetListFromJson(
+  List? inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet, [
+  List<enums.InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet>?
+      defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet
+      .map((e) =>
+          inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSetFromJson(
+              e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet>?
+    inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSetNullableListFromJson(
+  List? inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet, [
+  List<enums.InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet>?
+      defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet
+      .map((e) =>
+          inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSetFromJson(
+              e.toString()))
+      .toList();
+}
+
+String? inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSetNullableToJson(
+    enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet?
+        inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet) {
+  return inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet?.value;
+}
+
+String? inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSetToJson(
+    enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet
+        inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet) {
+  return inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet.value;
+}
+
+enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet
+    inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSetFromJson(
+  Object? inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet, [
+  enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet? defaultValue,
+]) {
+  return enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet?
+    inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSetNullableFromJson(
+  Object? inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet, [
+  enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet? defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value == inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet) ??
+      defaultValue;
+}
+
+String inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSetExplodedListToJson(
+    List<enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet>?
+        inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet) {
+  return inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSetListToJson(
+    List<enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet>?
+        inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet) {
+  if (inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet == null) {
+    return [];
+  }
+
+  return inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet>
+    inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSetListFromJson(
+  List? inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet, [
+  List<enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet
+      .map((e) => inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet>?
+    inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSetNullableListFromJson(
+  List? inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet, [
+  List<enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet
+      .map((e) => inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+String? inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSetNullableToJson(
+    enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet?
+        inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet) {
+  return inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet?.value;
+}
+
+String? inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSetToJson(
+    enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet
+        inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet) {
+  return inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet.value;
+}
+
+enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet
+    inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSetFromJson(
+  Object? inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet, [
+  enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet? defaultValue,
+]) {
+  return enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet?
+    inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSetNullableFromJson(
+  Object? inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet, [
+  enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet? defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value == inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet) ??
+      defaultValue;
+}
+
+String inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSetExplodedListToJson(
+    List<enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet>?
+        inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet) {
+  return inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSetListToJson(
+    List<enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet>?
+        inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet) {
+  if (inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet == null) {
+    return [];
+  }
+
+  return inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet>
+    inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSetListFromJson(
+  List? inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet, [
+  List<enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet
+      .map((e) => inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet>?
+    inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSetNullableListFromJson(
+  List? inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet, [
+  List<enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet
+      .map((e) => inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+String? inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSetNullableToJson(
+    enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet?
+        inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet) {
+  return inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet?.value;
+}
+
+String? inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSetToJson(
+    enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet
+        inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet) {
+  return inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet.value;
+}
+
+enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet
+    inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSetFromJson(
+  Object? inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet, [
+  enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet? defaultValue,
+]) {
+  return enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet?
+    inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSetNullableFromJson(
+  Object? inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet, [
+  enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet? defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value == inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet) ??
+      defaultValue;
+}
+
+String inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSetExplodedListToJson(
+    List<enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet>?
+        inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet) {
+  return inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSetListToJson(
+    List<enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet>?
+        inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet) {
+  if (inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet == null) {
+    return [];
+  }
+
+  return inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet>
+    inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSetListFromJson(
+  List? inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet, [
+  List<enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet
+      .map((e) => inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet>?
+    inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSetNullableListFromJson(
+  List? inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet, [
+  List<enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet
+      .map((e) => inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+String? inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSetNullableToJson(
+    enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet?
+        inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet) {
+  return inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet?.value;
+}
+
+String? inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSetToJson(
+    enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet
+        inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet) {
+  return inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet.value;
+}
+
+enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet
+    inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSetFromJson(
+  Object? inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet, [
+  enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet? defaultValue,
+]) {
+  return enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet?
+    inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSetNullableFromJson(
+  Object? inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet, [
+  enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet? defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value == inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet) ??
+      defaultValue;
+}
+
+String inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSetExplodedListToJson(
+    List<enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet>?
+        inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet) {
+  return inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSetListToJson(
+    List<enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet>?
+        inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet) {
+  if (inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet == null) {
+    return [];
+  }
+
+  return inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet>
+    inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSetListFromJson(
+  List? inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet, [
+  List<enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet
+      .map((e) => inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet>?
+    inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSetNullableListFromJson(
+  List? inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet, [
+  List<enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet
+      .map((e) => inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+String? inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSetNullableToJson(
+    enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet?
+        inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet) {
+  return inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet?.value;
+}
+
+String? inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSetToJson(
+    enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet
+        inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet) {
+  return inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet.value;
+}
+
+enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet
+    inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSetFromJson(
+  Object? inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet, [
+  enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet? defaultValue,
+]) {
+  return enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet?
+    inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSetNullableFromJson(
+  Object? inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet, [
+  enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet? defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value ==
+              inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet) ??
+      defaultValue;
+}
+
+String
+    inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSetExplodedListToJson(
+        List<enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet>?
+            inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet) {
+  return inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String>
+    inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSetListToJson(
+        List<enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet>?
+            inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet) {
+  if (inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet == null) {
+    return [];
+  }
+
+  return inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet>
+    inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSetListFromJson(
+  List? inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet, [
+  List<enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet>?
+      defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet
+      .map((e) =>
+          inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSetFromJson(
+              e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet>?
+    inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSetNullableListFromJson(
+  List? inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet, [
+  List<enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet>?
+      defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet
+      .map((e) =>
+          inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSetFromJson(
+              e.toString()))
+      .toList();
+}
+
+String? inputPortsSdiSdiPortNumberControlsHdrFormatGetSetNullableToJson(
+    enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet?
+        inputPortsSdiSdiPortNumberControlsHdrFormatGetSet) {
+  return inputPortsSdiSdiPortNumberControlsHdrFormatGetSet?.value;
+}
+
+String? inputPortsSdiSdiPortNumberControlsHdrFormatGetSetToJson(
+    enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet
+        inputPortsSdiSdiPortNumberControlsHdrFormatGetSet) {
+  return inputPortsSdiSdiPortNumberControlsHdrFormatGetSet.value;
+}
+
+enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet
+    inputPortsSdiSdiPortNumberControlsHdrFormatGetSetFromJson(
+  Object? inputPortsSdiSdiPortNumberControlsHdrFormatGetSet, [
+  enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet? defaultValue,
+]) {
+  return enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsSdiSdiPortNumberControlsHdrFormatGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet?
+    inputPortsSdiSdiPortNumberControlsHdrFormatGetSetNullableFromJson(
+  Object? inputPortsSdiSdiPortNumberControlsHdrFormatGetSet, [
+  enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet? defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberControlsHdrFormatGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value == inputPortsSdiSdiPortNumberControlsHdrFormatGetSet) ??
+      defaultValue;
+}
+
+String inputPortsSdiSdiPortNumberControlsHdrFormatGetSetExplodedListToJson(
+    List<enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet>?
+        inputPortsSdiSdiPortNumberControlsHdrFormatGetSet) {
+  return inputPortsSdiSdiPortNumberControlsHdrFormatGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> inputPortsSdiSdiPortNumberControlsHdrFormatGetSetListToJson(
+    List<enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet>?
+        inputPortsSdiSdiPortNumberControlsHdrFormatGetSet) {
+  if (inputPortsSdiSdiPortNumberControlsHdrFormatGetSet == null) {
+    return [];
+  }
+
+  return inputPortsSdiSdiPortNumberControlsHdrFormatGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet>
+    inputPortsSdiSdiPortNumberControlsHdrFormatGetSetListFromJson(
+  List? inputPortsSdiSdiPortNumberControlsHdrFormatGetSet, [
+  List<enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet>? defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberControlsHdrFormatGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsSdiSdiPortNumberControlsHdrFormatGetSet
+      .map((e) => inputPortsSdiSdiPortNumberControlsHdrFormatGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet>?
+    inputPortsSdiSdiPortNumberControlsHdrFormatGetSetNullableListFromJson(
+  List? inputPortsSdiSdiPortNumberControlsHdrFormatGetSet, [
+  List<enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet>? defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberControlsHdrFormatGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsSdiSdiPortNumberControlsHdrFormatGetSet
+      .map((e) => inputPortsSdiSdiPortNumberControlsHdrFormatGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+String? inputPortsSdiSdiPortNumberDynacalBlueGamutGetSetNullableToJson(
+    enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet?
+        inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet) {
+  return inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet?.value;
+}
+
+String? inputPortsSdiSdiPortNumberDynacalBlueGamutGetSetToJson(
+    enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet
+        inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet) {
+  return inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet.value;
+}
+
+enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet
+    inputPortsSdiSdiPortNumberDynacalBlueGamutGetSetFromJson(
+  Object? inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet, [
+  enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet? defaultValue,
+]) {
+  return enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet?
+    inputPortsSdiSdiPortNumberDynacalBlueGamutGetSetNullableFromJson(
+  Object? inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet, [
+  enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet? defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value == inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet) ??
+      defaultValue;
+}
+
+String inputPortsSdiSdiPortNumberDynacalBlueGamutGetSetExplodedListToJson(
+    List<enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet>?
+        inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet) {
+  return inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> inputPortsSdiSdiPortNumberDynacalBlueGamutGetSetListToJson(
+    List<enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet>?
+        inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet) {
+  if (inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet == null) {
+    return [];
+  }
+
+  return inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet>
+    inputPortsSdiSdiPortNumberDynacalBlueGamutGetSetListFromJson(
+  List? inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet, [
+  List<enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet
+      .map((e) => inputPortsSdiSdiPortNumberDynacalBlueGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet>?
+    inputPortsSdiSdiPortNumberDynacalBlueGamutGetSetNullableListFromJson(
+  List? inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet, [
+  List<enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet
+      .map((e) => inputPortsSdiSdiPortNumberDynacalBlueGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+String? inputPortsSdiSdiPortNumberDynacalGreenGamutGetSetNullableToJson(
+    enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet?
+        inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet) {
+  return inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet?.value;
+}
+
+String? inputPortsSdiSdiPortNumberDynacalGreenGamutGetSetToJson(
+    enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet
+        inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet) {
+  return inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet.value;
+}
+
+enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet
+    inputPortsSdiSdiPortNumberDynacalGreenGamutGetSetFromJson(
+  Object? inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet, [
+  enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet? defaultValue,
+]) {
+  return enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet?
+    inputPortsSdiSdiPortNumberDynacalGreenGamutGetSetNullableFromJson(
+  Object? inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet, [
+  enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet? defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value == inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet) ??
+      defaultValue;
+}
+
+String inputPortsSdiSdiPortNumberDynacalGreenGamutGetSetExplodedListToJson(
+    List<enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet>?
+        inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet) {
+  return inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> inputPortsSdiSdiPortNumberDynacalGreenGamutGetSetListToJson(
+    List<enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet>?
+        inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet) {
+  if (inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet == null) {
+    return [];
+  }
+
+  return inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet>
+    inputPortsSdiSdiPortNumberDynacalGreenGamutGetSetListFromJson(
+  List? inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet, [
+  List<enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet
+      .map((e) => inputPortsSdiSdiPortNumberDynacalGreenGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet>?
+    inputPortsSdiSdiPortNumberDynacalGreenGamutGetSetNullableListFromJson(
+  List? inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet, [
+  List<enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet
+      .map((e) => inputPortsSdiSdiPortNumberDynacalGreenGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+String? inputPortsSdiSdiPortNumberDynacalRedGamutGetSetNullableToJson(
+    enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet?
+        inputPortsSdiSdiPortNumberDynacalRedGamutGetSet) {
+  return inputPortsSdiSdiPortNumberDynacalRedGamutGetSet?.value;
+}
+
+String? inputPortsSdiSdiPortNumberDynacalRedGamutGetSetToJson(
+    enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet
+        inputPortsSdiSdiPortNumberDynacalRedGamutGetSet) {
+  return inputPortsSdiSdiPortNumberDynacalRedGamutGetSet.value;
+}
+
+enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet
+    inputPortsSdiSdiPortNumberDynacalRedGamutGetSetFromJson(
+  Object? inputPortsSdiSdiPortNumberDynacalRedGamutGetSet, [
+  enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet? defaultValue,
+]) {
+  return enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsSdiSdiPortNumberDynacalRedGamutGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet?
+    inputPortsSdiSdiPortNumberDynacalRedGamutGetSetNullableFromJson(
+  Object? inputPortsSdiSdiPortNumberDynacalRedGamutGetSet, [
+  enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet? defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberDynacalRedGamutGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value == inputPortsSdiSdiPortNumberDynacalRedGamutGetSet) ??
+      defaultValue;
+}
+
+String inputPortsSdiSdiPortNumberDynacalRedGamutGetSetExplodedListToJson(
+    List<enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet>?
+        inputPortsSdiSdiPortNumberDynacalRedGamutGetSet) {
+  return inputPortsSdiSdiPortNumberDynacalRedGamutGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> inputPortsSdiSdiPortNumberDynacalRedGamutGetSetListToJson(
+    List<enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet>?
+        inputPortsSdiSdiPortNumberDynacalRedGamutGetSet) {
+  if (inputPortsSdiSdiPortNumberDynacalRedGamutGetSet == null) {
+    return [];
+  }
+
+  return inputPortsSdiSdiPortNumberDynacalRedGamutGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet>
+    inputPortsSdiSdiPortNumberDynacalRedGamutGetSetListFromJson(
+  List? inputPortsSdiSdiPortNumberDynacalRedGamutGetSet, [
+  List<enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberDynacalRedGamutGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsSdiSdiPortNumberDynacalRedGamutGetSet
+      .map((e) =>
+          inputPortsSdiSdiPortNumberDynacalRedGamutGetSetFromJson(e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet>?
+    inputPortsSdiSdiPortNumberDynacalRedGamutGetSetNullableListFromJson(
+  List? inputPortsSdiSdiPortNumberDynacalRedGamutGetSet, [
+  List<enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberDynacalRedGamutGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsSdiSdiPortNumberDynacalRedGamutGetSet
+      .map((e) =>
+          inputPortsSdiSdiPortNumberDynacalRedGamutGetSetFromJson(e.toString()))
+      .toList();
+}
+
+String? inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSetNullableToJson(
+    enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet?
+        inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet) {
+  return inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet?.value;
+}
+
+String? inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSetToJson(
+    enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet
+        inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet) {
+  return inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet.value;
+}
+
+enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet
+    inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSetFromJson(
+  Object? inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet, [
+  enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet? defaultValue,
+]) {
+  return enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet?
+    inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSetNullableFromJson(
+  Object? inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet, [
+  enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet? defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet == null) {
+    return null;
+  }
+  return enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value == inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet) ??
+      defaultValue;
+}
+
+String inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSetExplodedListToJson(
+    List<enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet>?
+        inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet) {
+  return inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSetListToJson(
+    List<enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet>?
+        inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet) {
+  if (inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet == null) {
+    return [];
+  }
+
+  return inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet>
+    inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSetListFromJson(
+  List? inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet, [
+  List<enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet
+      .map((e) => inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+List<enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet>?
+    inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSetNullableListFromJson(
+  List? inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet, [
+  List<enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet>? defaultValue,
+]) {
+  if (inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet == null) {
+    return defaultValue;
+  }
+
+  return inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet
+      .map((e) => inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+String? outputDynacalPanelTypeBlueModeGetSetNullableToJson(
+    enums.OutputDynacalPanelTypeBlueModeGetSet?
+        outputDynacalPanelTypeBlueModeGetSet) {
+  return outputDynacalPanelTypeBlueModeGetSet?.value;
+}
+
+String? outputDynacalPanelTypeBlueModeGetSetToJson(
+    enums.OutputDynacalPanelTypeBlueModeGetSet
+        outputDynacalPanelTypeBlueModeGetSet) {
+  return outputDynacalPanelTypeBlueModeGetSet.value;
+}
+
+enums.OutputDynacalPanelTypeBlueModeGetSet
+    outputDynacalPanelTypeBlueModeGetSetFromJson(
+  Object? outputDynacalPanelTypeBlueModeGetSet, [
+  enums.OutputDynacalPanelTypeBlueModeGetSet? defaultValue,
+]) {
+  return enums.OutputDynacalPanelTypeBlueModeGetSet.values.firstWhereOrNull(
+          (e) =>
+              e.value.toString().toLowerCase() ==
+              outputDynacalPanelTypeBlueModeGetSet?.toString().toLowerCase()) ??
+      defaultValue ??
+      enums.OutputDynacalPanelTypeBlueModeGetSet.swaggerGeneratedUnknown;
+}
+
+enums.OutputDynacalPanelTypeBlueModeGetSet?
+    outputDynacalPanelTypeBlueModeGetSetNullableFromJson(
+  Object? outputDynacalPanelTypeBlueModeGetSet, [
+  enums.OutputDynacalPanelTypeBlueModeGetSet? defaultValue,
+]) {
+  if (outputDynacalPanelTypeBlueModeGetSet == null) {
+    return null;
+  }
+  return enums.OutputDynacalPanelTypeBlueModeGetSet.values.firstWhereOrNull(
+          (e) => e.value == outputDynacalPanelTypeBlueModeGetSet) ??
+      defaultValue;
+}
+
+String outputDynacalPanelTypeBlueModeGetSetExplodedListToJson(
+    List<enums.OutputDynacalPanelTypeBlueModeGetSet>?
+        outputDynacalPanelTypeBlueModeGetSet) {
+  return outputDynacalPanelTypeBlueModeGetSet?.map((e) => e.value!).join(',') ??
+      '';
+}
+
+List<String> outputDynacalPanelTypeBlueModeGetSetListToJson(
+    List<enums.OutputDynacalPanelTypeBlueModeGetSet>?
+        outputDynacalPanelTypeBlueModeGetSet) {
+  if (outputDynacalPanelTypeBlueModeGetSet == null) {
+    return [];
+  }
+
+  return outputDynacalPanelTypeBlueModeGetSet.map((e) => e.value!).toList();
+}
+
+List<enums.OutputDynacalPanelTypeBlueModeGetSet>
+    outputDynacalPanelTypeBlueModeGetSetListFromJson(
+  List? outputDynacalPanelTypeBlueModeGetSet, [
+  List<enums.OutputDynacalPanelTypeBlueModeGetSet>? defaultValue,
+]) {
+  if (outputDynacalPanelTypeBlueModeGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return outputDynacalPanelTypeBlueModeGetSet
+      .map((e) => outputDynacalPanelTypeBlueModeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+List<enums.OutputDynacalPanelTypeBlueModeGetSet>?
+    outputDynacalPanelTypeBlueModeGetSetNullableListFromJson(
+  List? outputDynacalPanelTypeBlueModeGetSet, [
+  List<enums.OutputDynacalPanelTypeBlueModeGetSet>? defaultValue,
+]) {
+  if (outputDynacalPanelTypeBlueModeGetSet == null) {
+    return defaultValue;
+  }
+
+  return outputDynacalPanelTypeBlueModeGetSet
+      .map((e) => outputDynacalPanelTypeBlueModeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+String? outputDynacalPanelTypeGreenModeGetSetNullableToJson(
+    enums.OutputDynacalPanelTypeGreenModeGetSet?
+        outputDynacalPanelTypeGreenModeGetSet) {
+  return outputDynacalPanelTypeGreenModeGetSet?.value;
+}
+
+String? outputDynacalPanelTypeGreenModeGetSetToJson(
+    enums.OutputDynacalPanelTypeGreenModeGetSet
+        outputDynacalPanelTypeGreenModeGetSet) {
+  return outputDynacalPanelTypeGreenModeGetSet.value;
+}
+
+enums.OutputDynacalPanelTypeGreenModeGetSet
+    outputDynacalPanelTypeGreenModeGetSetFromJson(
+  Object? outputDynacalPanelTypeGreenModeGetSet, [
+  enums.OutputDynacalPanelTypeGreenModeGetSet? defaultValue,
+]) {
+  return enums.OutputDynacalPanelTypeGreenModeGetSet.values.firstWhereOrNull(
+          (e) =>
+              e.value.toString().toLowerCase() ==
+              outputDynacalPanelTypeGreenModeGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.OutputDynacalPanelTypeGreenModeGetSet.swaggerGeneratedUnknown;
+}
+
+enums.OutputDynacalPanelTypeGreenModeGetSet?
+    outputDynacalPanelTypeGreenModeGetSetNullableFromJson(
+  Object? outputDynacalPanelTypeGreenModeGetSet, [
+  enums.OutputDynacalPanelTypeGreenModeGetSet? defaultValue,
+]) {
+  if (outputDynacalPanelTypeGreenModeGetSet == null) {
+    return null;
+  }
+  return enums.OutputDynacalPanelTypeGreenModeGetSet.values.firstWhereOrNull(
+          (e) => e.value == outputDynacalPanelTypeGreenModeGetSet) ??
+      defaultValue;
+}
+
+String outputDynacalPanelTypeGreenModeGetSetExplodedListToJson(
+    List<enums.OutputDynacalPanelTypeGreenModeGetSet>?
+        outputDynacalPanelTypeGreenModeGetSet) {
+  return outputDynacalPanelTypeGreenModeGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> outputDynacalPanelTypeGreenModeGetSetListToJson(
+    List<enums.OutputDynacalPanelTypeGreenModeGetSet>?
+        outputDynacalPanelTypeGreenModeGetSet) {
+  if (outputDynacalPanelTypeGreenModeGetSet == null) {
+    return [];
+  }
+
+  return outputDynacalPanelTypeGreenModeGetSet.map((e) => e.value!).toList();
+}
+
+List<enums.OutputDynacalPanelTypeGreenModeGetSet>
+    outputDynacalPanelTypeGreenModeGetSetListFromJson(
+  List? outputDynacalPanelTypeGreenModeGetSet, [
+  List<enums.OutputDynacalPanelTypeGreenModeGetSet>? defaultValue,
+]) {
+  if (outputDynacalPanelTypeGreenModeGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return outputDynacalPanelTypeGreenModeGetSet
+      .map((e) => outputDynacalPanelTypeGreenModeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+List<enums.OutputDynacalPanelTypeGreenModeGetSet>?
+    outputDynacalPanelTypeGreenModeGetSetNullableListFromJson(
+  List? outputDynacalPanelTypeGreenModeGetSet, [
+  List<enums.OutputDynacalPanelTypeGreenModeGetSet>? defaultValue,
+]) {
+  if (outputDynacalPanelTypeGreenModeGetSet == null) {
+    return defaultValue;
+  }
+
+  return outputDynacalPanelTypeGreenModeGetSet
+      .map((e) => outputDynacalPanelTypeGreenModeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+String? outputDynacalPanelTypeModeGetSetNullableToJson(
+    enums.OutputDynacalPanelTypeModeGetSet? outputDynacalPanelTypeModeGetSet) {
+  return outputDynacalPanelTypeModeGetSet?.value;
+}
+
+String? outputDynacalPanelTypeModeGetSetToJson(
+    enums.OutputDynacalPanelTypeModeGetSet outputDynacalPanelTypeModeGetSet) {
+  return outputDynacalPanelTypeModeGetSet.value;
+}
+
+enums.OutputDynacalPanelTypeModeGetSet outputDynacalPanelTypeModeGetSetFromJson(
+  Object? outputDynacalPanelTypeModeGetSet, [
+  enums.OutputDynacalPanelTypeModeGetSet? defaultValue,
+]) {
+  return enums.OutputDynacalPanelTypeModeGetSet.values.firstWhereOrNull((e) =>
+          e.value.toString().toLowerCase() ==
+          outputDynacalPanelTypeModeGetSet?.toString().toLowerCase()) ??
+      defaultValue ??
+      enums.OutputDynacalPanelTypeModeGetSet.swaggerGeneratedUnknown;
+}
+
+enums.OutputDynacalPanelTypeModeGetSet?
+    outputDynacalPanelTypeModeGetSetNullableFromJson(
+  Object? outputDynacalPanelTypeModeGetSet, [
+  enums.OutputDynacalPanelTypeModeGetSet? defaultValue,
+]) {
+  if (outputDynacalPanelTypeModeGetSet == null) {
+    return null;
+  }
+  return enums.OutputDynacalPanelTypeModeGetSet.values.firstWhereOrNull(
+          (e) => e.value == outputDynacalPanelTypeModeGetSet) ??
+      defaultValue;
+}
+
+String outputDynacalPanelTypeModeGetSetExplodedListToJson(
+    List<enums.OutputDynacalPanelTypeModeGetSet>?
+        outputDynacalPanelTypeModeGetSet) {
+  return outputDynacalPanelTypeModeGetSet?.map((e) => e.value!).join(',') ?? '';
+}
+
+List<String> outputDynacalPanelTypeModeGetSetListToJson(
+    List<enums.OutputDynacalPanelTypeModeGetSet>?
+        outputDynacalPanelTypeModeGetSet) {
+  if (outputDynacalPanelTypeModeGetSet == null) {
+    return [];
+  }
+
+  return outputDynacalPanelTypeModeGetSet.map((e) => e.value!).toList();
+}
+
+List<enums.OutputDynacalPanelTypeModeGetSet>
+    outputDynacalPanelTypeModeGetSetListFromJson(
+  List? outputDynacalPanelTypeModeGetSet, [
+  List<enums.OutputDynacalPanelTypeModeGetSet>? defaultValue,
+]) {
+  if (outputDynacalPanelTypeModeGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return outputDynacalPanelTypeModeGetSet
+      .map((e) => outputDynacalPanelTypeModeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+List<enums.OutputDynacalPanelTypeModeGetSet>?
+    outputDynacalPanelTypeModeGetSetNullableListFromJson(
+  List? outputDynacalPanelTypeModeGetSet, [
+  List<enums.OutputDynacalPanelTypeModeGetSet>? defaultValue,
+]) {
+  if (outputDynacalPanelTypeModeGetSet == null) {
+    return defaultValue;
+  }
+
+  return outputDynacalPanelTypeModeGetSet
+      .map((e) => outputDynacalPanelTypeModeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+String? outputDynacalPanelTypeRedModeGetSetNullableToJson(
+    enums.OutputDynacalPanelTypeRedModeGetSet?
+        outputDynacalPanelTypeRedModeGetSet) {
+  return outputDynacalPanelTypeRedModeGetSet?.value;
+}
+
+String? outputDynacalPanelTypeRedModeGetSetToJson(
+    enums.OutputDynacalPanelTypeRedModeGetSet
+        outputDynacalPanelTypeRedModeGetSet) {
+  return outputDynacalPanelTypeRedModeGetSet.value;
+}
+
+enums.OutputDynacalPanelTypeRedModeGetSet
+    outputDynacalPanelTypeRedModeGetSetFromJson(
+  Object? outputDynacalPanelTypeRedModeGetSet, [
+  enums.OutputDynacalPanelTypeRedModeGetSet? defaultValue,
+]) {
+  return enums.OutputDynacalPanelTypeRedModeGetSet.values.firstWhereOrNull(
+          (e) =>
+              e.value.toString().toLowerCase() ==
+              outputDynacalPanelTypeRedModeGetSet?.toString().toLowerCase()) ??
+      defaultValue ??
+      enums.OutputDynacalPanelTypeRedModeGetSet.swaggerGeneratedUnknown;
+}
+
+enums.OutputDynacalPanelTypeRedModeGetSet?
+    outputDynacalPanelTypeRedModeGetSetNullableFromJson(
+  Object? outputDynacalPanelTypeRedModeGetSet, [
+  enums.OutputDynacalPanelTypeRedModeGetSet? defaultValue,
+]) {
+  if (outputDynacalPanelTypeRedModeGetSet == null) {
+    return null;
+  }
+  return enums.OutputDynacalPanelTypeRedModeGetSet.values.firstWhereOrNull(
+          (e) => e.value == outputDynacalPanelTypeRedModeGetSet) ??
+      defaultValue;
+}
+
+String outputDynacalPanelTypeRedModeGetSetExplodedListToJson(
+    List<enums.OutputDynacalPanelTypeRedModeGetSet>?
+        outputDynacalPanelTypeRedModeGetSet) {
+  return outputDynacalPanelTypeRedModeGetSet?.map((e) => e.value!).join(',') ??
+      '';
+}
+
+List<String> outputDynacalPanelTypeRedModeGetSetListToJson(
+    List<enums.OutputDynacalPanelTypeRedModeGetSet>?
+        outputDynacalPanelTypeRedModeGetSet) {
+  if (outputDynacalPanelTypeRedModeGetSet == null) {
+    return [];
+  }
+
+  return outputDynacalPanelTypeRedModeGetSet.map((e) => e.value!).toList();
+}
+
+List<enums.OutputDynacalPanelTypeRedModeGetSet>
+    outputDynacalPanelTypeRedModeGetSetListFromJson(
+  List? outputDynacalPanelTypeRedModeGetSet, [
+  List<enums.OutputDynacalPanelTypeRedModeGetSet>? defaultValue,
+]) {
+  if (outputDynacalPanelTypeRedModeGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return outputDynacalPanelTypeRedModeGetSet
+      .map((e) => outputDynacalPanelTypeRedModeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+List<enums.OutputDynacalPanelTypeRedModeGetSet>?
+    outputDynacalPanelTypeRedModeGetSetNullableListFromJson(
+  List? outputDynacalPanelTypeRedModeGetSet, [
+  List<enums.OutputDynacalPanelTypeRedModeGetSet>? defaultValue,
+]) {
+  if (outputDynacalPanelTypeRedModeGetSet == null) {
+    return defaultValue;
+  }
+
+  return outputDynacalPanelTypeRedModeGetSet
+      .map((e) => outputDynacalPanelTypeRedModeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+String? outputNetworkFrameRemappingFramesFrameModeGetSetNullableToJson(
+    enums.OutputNetworkFrameRemappingFramesFrameModeGetSet?
+        outputNetworkFrameRemappingFramesFrameModeGetSet) {
+  return outputNetworkFrameRemappingFramesFrameModeGetSet?.value;
+}
+
+String? outputNetworkFrameRemappingFramesFrameModeGetSetToJson(
+    enums.OutputNetworkFrameRemappingFramesFrameModeGetSet
+        outputNetworkFrameRemappingFramesFrameModeGetSet) {
+  return outputNetworkFrameRemappingFramesFrameModeGetSet.value;
+}
+
+enums.OutputNetworkFrameRemappingFramesFrameModeGetSet
+    outputNetworkFrameRemappingFramesFrameModeGetSetFromJson(
+  Object? outputNetworkFrameRemappingFramesFrameModeGetSet, [
+  enums.OutputNetworkFrameRemappingFramesFrameModeGetSet? defaultValue,
+]) {
+  return enums.OutputNetworkFrameRemappingFramesFrameModeGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              outputNetworkFrameRemappingFramesFrameModeGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.OutputNetworkFrameRemappingFramesFrameModeGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.OutputNetworkFrameRemappingFramesFrameModeGetSet?
+    outputNetworkFrameRemappingFramesFrameModeGetSetNullableFromJson(
+  Object? outputNetworkFrameRemappingFramesFrameModeGetSet, [
+  enums.OutputNetworkFrameRemappingFramesFrameModeGetSet? defaultValue,
+]) {
+  if (outputNetworkFrameRemappingFramesFrameModeGetSet == null) {
+    return null;
+  }
+  return enums.OutputNetworkFrameRemappingFramesFrameModeGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value == outputNetworkFrameRemappingFramesFrameModeGetSet) ??
+      defaultValue;
+}
+
+String outputNetworkFrameRemappingFramesFrameModeGetSetExplodedListToJson(
+    List<enums.OutputNetworkFrameRemappingFramesFrameModeGetSet>?
+        outputNetworkFrameRemappingFramesFrameModeGetSet) {
+  return outputNetworkFrameRemappingFramesFrameModeGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> outputNetworkFrameRemappingFramesFrameModeGetSetListToJson(
+    List<enums.OutputNetworkFrameRemappingFramesFrameModeGetSet>?
+        outputNetworkFrameRemappingFramesFrameModeGetSet) {
+  if (outputNetworkFrameRemappingFramesFrameModeGetSet == null) {
+    return [];
+  }
+
+  return outputNetworkFrameRemappingFramesFrameModeGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.OutputNetworkFrameRemappingFramesFrameModeGetSet>
+    outputNetworkFrameRemappingFramesFrameModeGetSetListFromJson(
+  List? outputNetworkFrameRemappingFramesFrameModeGetSet, [
+  List<enums.OutputNetworkFrameRemappingFramesFrameModeGetSet>? defaultValue,
+]) {
+  if (outputNetworkFrameRemappingFramesFrameModeGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return outputNetworkFrameRemappingFramesFrameModeGetSet
+      .map((e) => outputNetworkFrameRemappingFramesFrameModeGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+List<enums.OutputNetworkFrameRemappingFramesFrameModeGetSet>?
+    outputNetworkFrameRemappingFramesFrameModeGetSetNullableListFromJson(
+  List? outputNetworkFrameRemappingFramesFrameModeGetSet, [
+  List<enums.OutputNetworkFrameRemappingFramesFrameModeGetSet>? defaultValue,
+]) {
+  if (outputNetworkFrameRemappingFramesFrameModeGetSet == null) {
+    return defaultValue;
+  }
+
+  return outputNetworkFrameRemappingFramesFrameModeGetSet
+      .map((e) => outputNetworkFrameRemappingFramesFrameModeGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+String? outputNetworkGenlockPhaseOffsetModeGetSetNullableToJson(
+    enums.OutputNetworkGenlockPhaseOffsetModeGetSet?
+        outputNetworkGenlockPhaseOffsetModeGetSet) {
+  return outputNetworkGenlockPhaseOffsetModeGetSet?.value;
+}
+
+String? outputNetworkGenlockPhaseOffsetModeGetSetToJson(
+    enums.OutputNetworkGenlockPhaseOffsetModeGetSet
+        outputNetworkGenlockPhaseOffsetModeGetSet) {
+  return outputNetworkGenlockPhaseOffsetModeGetSet.value;
+}
+
+enums.OutputNetworkGenlockPhaseOffsetModeGetSet
+    outputNetworkGenlockPhaseOffsetModeGetSetFromJson(
+  Object? outputNetworkGenlockPhaseOffsetModeGetSet, [
+  enums.OutputNetworkGenlockPhaseOffsetModeGetSet? defaultValue,
+]) {
+  return enums.OutputNetworkGenlockPhaseOffsetModeGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              outputNetworkGenlockPhaseOffsetModeGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.OutputNetworkGenlockPhaseOffsetModeGetSet.swaggerGeneratedUnknown;
+}
+
+enums.OutputNetworkGenlockPhaseOffsetModeGetSet?
+    outputNetworkGenlockPhaseOffsetModeGetSetNullableFromJson(
+  Object? outputNetworkGenlockPhaseOffsetModeGetSet, [
+  enums.OutputNetworkGenlockPhaseOffsetModeGetSet? defaultValue,
+]) {
+  if (outputNetworkGenlockPhaseOffsetModeGetSet == null) {
+    return null;
+  }
+  return enums.OutputNetworkGenlockPhaseOffsetModeGetSet.values
+          .firstWhereOrNull(
+              (e) => e.value == outputNetworkGenlockPhaseOffsetModeGetSet) ??
+      defaultValue;
+}
+
+String outputNetworkGenlockPhaseOffsetModeGetSetExplodedListToJson(
+    List<enums.OutputNetworkGenlockPhaseOffsetModeGetSet>?
+        outputNetworkGenlockPhaseOffsetModeGetSet) {
+  return outputNetworkGenlockPhaseOffsetModeGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> outputNetworkGenlockPhaseOffsetModeGetSetListToJson(
+    List<enums.OutputNetworkGenlockPhaseOffsetModeGetSet>?
+        outputNetworkGenlockPhaseOffsetModeGetSet) {
+  if (outputNetworkGenlockPhaseOffsetModeGetSet == null) {
+    return [];
+  }
+
+  return outputNetworkGenlockPhaseOffsetModeGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.OutputNetworkGenlockPhaseOffsetModeGetSet>
+    outputNetworkGenlockPhaseOffsetModeGetSetListFromJson(
+  List? outputNetworkGenlockPhaseOffsetModeGetSet, [
+  List<enums.OutputNetworkGenlockPhaseOffsetModeGetSet>? defaultValue,
+]) {
+  if (outputNetworkGenlockPhaseOffsetModeGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return outputNetworkGenlockPhaseOffsetModeGetSet
+      .map((e) =>
+          outputNetworkGenlockPhaseOffsetModeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+List<enums.OutputNetworkGenlockPhaseOffsetModeGetSet>?
+    outputNetworkGenlockPhaseOffsetModeGetSetNullableListFromJson(
+  List? outputNetworkGenlockPhaseOffsetModeGetSet, [
+  List<enums.OutputNetworkGenlockPhaseOffsetModeGetSet>? defaultValue,
+]) {
+  if (outputNetworkGenlockPhaseOffsetModeGetSet == null) {
+    return defaultValue;
+  }
+
+  return outputNetworkGenlockPhaseOffsetModeGetSet
+      .map((e) =>
+          outputNetworkGenlockPhaseOffsetModeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+String? outputNetworkGenlockSourceGetSetNullableToJson(
+    enums.OutputNetworkGenlockSourceGetSet? outputNetworkGenlockSourceGetSet) {
+  return outputNetworkGenlockSourceGetSet?.value;
+}
+
+String? outputNetworkGenlockSourceGetSetToJson(
+    enums.OutputNetworkGenlockSourceGetSet outputNetworkGenlockSourceGetSet) {
+  return outputNetworkGenlockSourceGetSet.value;
+}
+
+enums.OutputNetworkGenlockSourceGetSet outputNetworkGenlockSourceGetSetFromJson(
+  Object? outputNetworkGenlockSourceGetSet, [
+  enums.OutputNetworkGenlockSourceGetSet? defaultValue,
+]) {
+  return enums.OutputNetworkGenlockSourceGetSet.values.firstWhereOrNull((e) =>
+          e.value.toString().toLowerCase() ==
+          outputNetworkGenlockSourceGetSet?.toString().toLowerCase()) ??
+      defaultValue ??
+      enums.OutputNetworkGenlockSourceGetSet.swaggerGeneratedUnknown;
+}
+
+enums.OutputNetworkGenlockSourceGetSet?
+    outputNetworkGenlockSourceGetSetNullableFromJson(
+  Object? outputNetworkGenlockSourceGetSet, [
+  enums.OutputNetworkGenlockSourceGetSet? defaultValue,
+]) {
+  if (outputNetworkGenlockSourceGetSet == null) {
+    return null;
+  }
+  return enums.OutputNetworkGenlockSourceGetSet.values.firstWhereOrNull(
+          (e) => e.value == outputNetworkGenlockSourceGetSet) ??
+      defaultValue;
+}
+
+String outputNetworkGenlockSourceGetSetExplodedListToJson(
+    List<enums.OutputNetworkGenlockSourceGetSet>?
+        outputNetworkGenlockSourceGetSet) {
+  return outputNetworkGenlockSourceGetSet?.map((e) => e.value!).join(',') ?? '';
+}
+
+List<String> outputNetworkGenlockSourceGetSetListToJson(
+    List<enums.OutputNetworkGenlockSourceGetSet>?
+        outputNetworkGenlockSourceGetSet) {
+  if (outputNetworkGenlockSourceGetSet == null) {
+    return [];
+  }
+
+  return outputNetworkGenlockSourceGetSet.map((e) => e.value!).toList();
+}
+
+List<enums.OutputNetworkGenlockSourceGetSet>
+    outputNetworkGenlockSourceGetSetListFromJson(
+  List? outputNetworkGenlockSourceGetSet, [
+  List<enums.OutputNetworkGenlockSourceGetSet>? defaultValue,
+]) {
+  if (outputNetworkGenlockSourceGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return outputNetworkGenlockSourceGetSet
+      .map((e) => outputNetworkGenlockSourceGetSetFromJson(e.toString()))
+      .toList();
+}
+
+List<enums.OutputNetworkGenlockSourceGetSet>?
+    outputNetworkGenlockSourceGetSetNullableListFromJson(
+  List? outputNetworkGenlockSourceGetSet, [
+  List<enums.OutputNetworkGenlockSourceGetSet>? defaultValue,
+]) {
+  if (outputNetworkGenlockSourceGetSet == null) {
+    return defaultValue;
+  }
+
+  return outputNetworkGenlockSourceGetSet
+      .map((e) => outputNetworkGenlockSourceGetSetFromJson(e.toString()))
+      .toList();
+}
+
+String? outputNetworkShuttersyncModeGetSetNullableToJson(
+    enums.OutputNetworkShuttersyncModeGetSet?
+        outputNetworkShuttersyncModeGetSet) {
+  return outputNetworkShuttersyncModeGetSet?.value;
+}
+
+String? outputNetworkShuttersyncModeGetSetToJson(
+    enums.OutputNetworkShuttersyncModeGetSet
+        outputNetworkShuttersyncModeGetSet) {
+  return outputNetworkShuttersyncModeGetSet.value;
+}
+
+enums.OutputNetworkShuttersyncModeGetSet
+    outputNetworkShuttersyncModeGetSetFromJson(
+  Object? outputNetworkShuttersyncModeGetSet, [
+  enums.OutputNetworkShuttersyncModeGetSet? defaultValue,
+]) {
+  return enums.OutputNetworkShuttersyncModeGetSet.values.firstWhereOrNull((e) =>
+          e.value.toString().toLowerCase() ==
+          outputNetworkShuttersyncModeGetSet?.toString().toLowerCase()) ??
+      defaultValue ??
+      enums.OutputNetworkShuttersyncModeGetSet.swaggerGeneratedUnknown;
+}
+
+enums.OutputNetworkShuttersyncModeGetSet?
+    outputNetworkShuttersyncModeGetSetNullableFromJson(
+  Object? outputNetworkShuttersyncModeGetSet, [
+  enums.OutputNetworkShuttersyncModeGetSet? defaultValue,
+]) {
+  if (outputNetworkShuttersyncModeGetSet == null) {
+    return null;
+  }
+  return enums.OutputNetworkShuttersyncModeGetSet.values.firstWhereOrNull(
+          (e) => e.value == outputNetworkShuttersyncModeGetSet) ??
+      defaultValue;
+}
+
+String outputNetworkShuttersyncModeGetSetExplodedListToJson(
+    List<enums.OutputNetworkShuttersyncModeGetSet>?
+        outputNetworkShuttersyncModeGetSet) {
+  return outputNetworkShuttersyncModeGetSet?.map((e) => e.value!).join(',') ??
+      '';
+}
+
+List<String> outputNetworkShuttersyncModeGetSetListToJson(
+    List<enums.OutputNetworkShuttersyncModeGetSet>?
+        outputNetworkShuttersyncModeGetSet) {
+  if (outputNetworkShuttersyncModeGetSet == null) {
+    return [];
+  }
+
+  return outputNetworkShuttersyncModeGetSet.map((e) => e.value!).toList();
+}
+
+List<enums.OutputNetworkShuttersyncModeGetSet>
+    outputNetworkShuttersyncModeGetSetListFromJson(
+  List? outputNetworkShuttersyncModeGetSet, [
+  List<enums.OutputNetworkShuttersyncModeGetSet>? defaultValue,
+]) {
+  if (outputNetworkShuttersyncModeGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return outputNetworkShuttersyncModeGetSet
+      .map((e) => outputNetworkShuttersyncModeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+List<enums.OutputNetworkShuttersyncModeGetSet>?
+    outputNetworkShuttersyncModeGetSetNullableListFromJson(
+  List? outputNetworkShuttersyncModeGetSet, [
+  List<enums.OutputNetworkShuttersyncModeGetSet>? defaultValue,
+]) {
+  if (outputNetworkShuttersyncModeGetSet == null) {
+    return defaultValue;
+  }
+
+  return outputNetworkShuttersyncModeGetSet
+      .map((e) => outputNetworkShuttersyncModeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+String? outputNetworkShuttersyncSensorTypeGetSetNullableToJson(
+    enums.OutputNetworkShuttersyncSensorTypeGetSet?
+        outputNetworkShuttersyncSensorTypeGetSet) {
+  return outputNetworkShuttersyncSensorTypeGetSet?.value;
+}
+
+String? outputNetworkShuttersyncSensorTypeGetSetToJson(
+    enums.OutputNetworkShuttersyncSensorTypeGetSet
+        outputNetworkShuttersyncSensorTypeGetSet) {
+  return outputNetworkShuttersyncSensorTypeGetSet.value;
+}
+
+enums.OutputNetworkShuttersyncSensorTypeGetSet
+    outputNetworkShuttersyncSensorTypeGetSetFromJson(
+  Object? outputNetworkShuttersyncSensorTypeGetSet, [
+  enums.OutputNetworkShuttersyncSensorTypeGetSet? defaultValue,
+]) {
+  return enums.OutputNetworkShuttersyncSensorTypeGetSet.values.firstWhereOrNull(
+          (e) =>
+              e.value.toString().toLowerCase() ==
+              outputNetworkShuttersyncSensorTypeGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.OutputNetworkShuttersyncSensorTypeGetSet.swaggerGeneratedUnknown;
+}
+
+enums.OutputNetworkShuttersyncSensorTypeGetSet?
+    outputNetworkShuttersyncSensorTypeGetSetNullableFromJson(
+  Object? outputNetworkShuttersyncSensorTypeGetSet, [
+  enums.OutputNetworkShuttersyncSensorTypeGetSet? defaultValue,
+]) {
+  if (outputNetworkShuttersyncSensorTypeGetSet == null) {
+    return null;
+  }
+  return enums.OutputNetworkShuttersyncSensorTypeGetSet.values.firstWhereOrNull(
+          (e) => e.value == outputNetworkShuttersyncSensorTypeGetSet) ??
+      defaultValue;
+}
+
+String outputNetworkShuttersyncSensorTypeGetSetExplodedListToJson(
+    List<enums.OutputNetworkShuttersyncSensorTypeGetSet>?
+        outputNetworkShuttersyncSensorTypeGetSet) {
+  return outputNetworkShuttersyncSensorTypeGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> outputNetworkShuttersyncSensorTypeGetSetListToJson(
+    List<enums.OutputNetworkShuttersyncSensorTypeGetSet>?
+        outputNetworkShuttersyncSensorTypeGetSet) {
+  if (outputNetworkShuttersyncSensorTypeGetSet == null) {
+    return [];
+  }
+
+  return outputNetworkShuttersyncSensorTypeGetSet.map((e) => e.value!).toList();
+}
+
+List<enums.OutputNetworkShuttersyncSensorTypeGetSet>
+    outputNetworkShuttersyncSensorTypeGetSetListFromJson(
+  List? outputNetworkShuttersyncSensorTypeGetSet, [
+  List<enums.OutputNetworkShuttersyncSensorTypeGetSet>? defaultValue,
+]) {
+  if (outputNetworkShuttersyncSensorTypeGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return outputNetworkShuttersyncSensorTypeGetSet
+      .map(
+          (e) => outputNetworkShuttersyncSensorTypeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+List<enums.OutputNetworkShuttersyncSensorTypeGetSet>?
+    outputNetworkShuttersyncSensorTypeGetSetNullableListFromJson(
+  List? outputNetworkShuttersyncSensorTypeGetSet, [
+  List<enums.OutputNetworkShuttersyncSensorTypeGetSet>? defaultValue,
+]) {
+  if (outputNetworkShuttersyncSensorTypeGetSet == null) {
+    return defaultValue;
+  }
+
+  return outputNetworkShuttersyncSensorTypeGetSet
+      .map(
+          (e) => outputNetworkShuttersyncSensorTypeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+String? overrideTestPatternCustomGradientOrientationGetSetNullableToJson(
+    enums.OverrideTestPatternCustomGradientOrientationGetSet?
+        overrideTestPatternCustomGradientOrientationGetSet) {
+  return overrideTestPatternCustomGradientOrientationGetSet?.value;
+}
+
+String? overrideTestPatternCustomGradientOrientationGetSetToJson(
+    enums.OverrideTestPatternCustomGradientOrientationGetSet
+        overrideTestPatternCustomGradientOrientationGetSet) {
+  return overrideTestPatternCustomGradientOrientationGetSet.value;
+}
+
+enums.OverrideTestPatternCustomGradientOrientationGetSet
+    overrideTestPatternCustomGradientOrientationGetSetFromJson(
+  Object? overrideTestPatternCustomGradientOrientationGetSet, [
+  enums.OverrideTestPatternCustomGradientOrientationGetSet? defaultValue,
+]) {
+  return enums.OverrideTestPatternCustomGradientOrientationGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value.toString().toLowerCase() ==
+              overrideTestPatternCustomGradientOrientationGetSet
+                  ?.toString()
+                  .toLowerCase()) ??
+      defaultValue ??
+      enums.OverrideTestPatternCustomGradientOrientationGetSet
+          .swaggerGeneratedUnknown;
+}
+
+enums.OverrideTestPatternCustomGradientOrientationGetSet?
+    overrideTestPatternCustomGradientOrientationGetSetNullableFromJson(
+  Object? overrideTestPatternCustomGradientOrientationGetSet, [
+  enums.OverrideTestPatternCustomGradientOrientationGetSet? defaultValue,
+]) {
+  if (overrideTestPatternCustomGradientOrientationGetSet == null) {
+    return null;
+  }
+  return enums.OverrideTestPatternCustomGradientOrientationGetSet.values
+          .firstWhereOrNull((e) =>
+              e.value == overrideTestPatternCustomGradientOrientationGetSet) ??
+      defaultValue;
+}
+
+String overrideTestPatternCustomGradientOrientationGetSetExplodedListToJson(
+    List<enums.OverrideTestPatternCustomGradientOrientationGetSet>?
+        overrideTestPatternCustomGradientOrientationGetSet) {
+  return overrideTestPatternCustomGradientOrientationGetSet
+          ?.map((e) => e.value!)
+          .join(',') ??
+      '';
+}
+
+List<String> overrideTestPatternCustomGradientOrientationGetSetListToJson(
+    List<enums.OverrideTestPatternCustomGradientOrientationGetSet>?
+        overrideTestPatternCustomGradientOrientationGetSet) {
+  if (overrideTestPatternCustomGradientOrientationGetSet == null) {
+    return [];
+  }
+
+  return overrideTestPatternCustomGradientOrientationGetSet
+      .map((e) => e.value!)
+      .toList();
+}
+
+List<enums.OverrideTestPatternCustomGradientOrientationGetSet>
+    overrideTestPatternCustomGradientOrientationGetSetListFromJson(
+  List? overrideTestPatternCustomGradientOrientationGetSet, [
+  List<enums.OverrideTestPatternCustomGradientOrientationGetSet>? defaultValue,
+]) {
+  if (overrideTestPatternCustomGradientOrientationGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return overrideTestPatternCustomGradientOrientationGetSet
+      .map((e) => overrideTestPatternCustomGradientOrientationGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+List<enums.OverrideTestPatternCustomGradientOrientationGetSet>?
+    overrideTestPatternCustomGradientOrientationGetSetNullableListFromJson(
+  List? overrideTestPatternCustomGradientOrientationGetSet, [
+  List<enums.OverrideTestPatternCustomGradientOrientationGetSet>? defaultValue,
+]) {
+  if (overrideTestPatternCustomGradientOrientationGetSet == null) {
+    return defaultValue;
+  }
+
+  return overrideTestPatternCustomGradientOrientationGetSet
+      .map((e) => overrideTestPatternCustomGradientOrientationGetSetFromJson(
+          e.toString()))
+      .toList();
+}
+
+String? overrideTestPatternFormatGetSetNullableToJson(
+    enums.OverrideTestPatternFormatGetSet? overrideTestPatternFormatGetSet) {
+  return overrideTestPatternFormatGetSet?.value;
+}
+
+String? overrideTestPatternFormatGetSetToJson(
+    enums.OverrideTestPatternFormatGetSet overrideTestPatternFormatGetSet) {
+  return overrideTestPatternFormatGetSet.value;
+}
+
+enums.OverrideTestPatternFormatGetSet overrideTestPatternFormatGetSetFromJson(
+  Object? overrideTestPatternFormatGetSet, [
+  enums.OverrideTestPatternFormatGetSet? defaultValue,
+]) {
+  return enums.OverrideTestPatternFormatGetSet.values.firstWhereOrNull((e) =>
+          e.value.toString().toLowerCase() ==
+          overrideTestPatternFormatGetSet?.toString().toLowerCase()) ??
+      defaultValue ??
+      enums.OverrideTestPatternFormatGetSet.swaggerGeneratedUnknown;
+}
+
+enums.OverrideTestPatternFormatGetSet?
+    overrideTestPatternFormatGetSetNullableFromJson(
+  Object? overrideTestPatternFormatGetSet, [
+  enums.OverrideTestPatternFormatGetSet? defaultValue,
+]) {
+  if (overrideTestPatternFormatGetSet == null) {
+    return null;
+  }
+  return enums.OverrideTestPatternFormatGetSet.values.firstWhereOrNull(
+          (e) => e.value == overrideTestPatternFormatGetSet) ??
+      defaultValue;
+}
+
+String overrideTestPatternFormatGetSetExplodedListToJson(
+    List<enums.OverrideTestPatternFormatGetSet>?
+        overrideTestPatternFormatGetSet) {
+  return overrideTestPatternFormatGetSet?.map((e) => e.value!).join(',') ?? '';
+}
+
+List<String> overrideTestPatternFormatGetSetListToJson(
+    List<enums.OverrideTestPatternFormatGetSet>?
+        overrideTestPatternFormatGetSet) {
+  if (overrideTestPatternFormatGetSet == null) {
+    return [];
+  }
+
+  return overrideTestPatternFormatGetSet.map((e) => e.value!).toList();
+}
+
+List<enums.OverrideTestPatternFormatGetSet>
+    overrideTestPatternFormatGetSetListFromJson(
+  List? overrideTestPatternFormatGetSet, [
+  List<enums.OverrideTestPatternFormatGetSet>? defaultValue,
+]) {
+  if (overrideTestPatternFormatGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return overrideTestPatternFormatGetSet
+      .map((e) => overrideTestPatternFormatGetSetFromJson(e.toString()))
+      .toList();
+}
+
+List<enums.OverrideTestPatternFormatGetSet>?
+    overrideTestPatternFormatGetSetNullableListFromJson(
+  List? overrideTestPatternFormatGetSet, [
+  List<enums.OverrideTestPatternFormatGetSet>? defaultValue,
+]) {
+  if (overrideTestPatternFormatGetSet == null) {
+    return defaultValue;
+  }
+
+  return overrideTestPatternFormatGetSet
+      .map((e) => overrideTestPatternFormatGetSetFromJson(e.toString()))
+      .toList();
+}
+
+String? overrideTestPatternTypeGetSetNullableToJson(
+    enums.OverrideTestPatternTypeGetSet? overrideTestPatternTypeGetSet) {
+  return overrideTestPatternTypeGetSet?.value;
+}
+
+String? overrideTestPatternTypeGetSetToJson(
+    enums.OverrideTestPatternTypeGetSet overrideTestPatternTypeGetSet) {
+  return overrideTestPatternTypeGetSet.value;
+}
+
+enums.OverrideTestPatternTypeGetSet overrideTestPatternTypeGetSetFromJson(
+  Object? overrideTestPatternTypeGetSet, [
+  enums.OverrideTestPatternTypeGetSet? defaultValue,
+]) {
+  return enums.OverrideTestPatternTypeGetSet.values.firstWhereOrNull((e) =>
+          e.value.toString().toLowerCase() ==
+          overrideTestPatternTypeGetSet?.toString().toLowerCase()) ??
+      defaultValue ??
+      enums.OverrideTestPatternTypeGetSet.swaggerGeneratedUnknown;
+}
+
+enums.OverrideTestPatternTypeGetSet?
+    overrideTestPatternTypeGetSetNullableFromJson(
+  Object? overrideTestPatternTypeGetSet, [
+  enums.OverrideTestPatternTypeGetSet? defaultValue,
+]) {
+  if (overrideTestPatternTypeGetSet == null) {
+    return null;
+  }
+  return enums.OverrideTestPatternTypeGetSet.values
+          .firstWhereOrNull((e) => e.value == overrideTestPatternTypeGetSet) ??
+      defaultValue;
+}
+
+String overrideTestPatternTypeGetSetExplodedListToJson(
+    List<enums.OverrideTestPatternTypeGetSet>? overrideTestPatternTypeGetSet) {
+  return overrideTestPatternTypeGetSet?.map((e) => e.value!).join(',') ?? '';
+}
+
+List<String> overrideTestPatternTypeGetSetListToJson(
+    List<enums.OverrideTestPatternTypeGetSet>? overrideTestPatternTypeGetSet) {
+  if (overrideTestPatternTypeGetSet == null) {
+    return [];
+  }
+
+  return overrideTestPatternTypeGetSet.map((e) => e.value!).toList();
+}
+
+List<enums.OverrideTestPatternTypeGetSet>
+    overrideTestPatternTypeGetSetListFromJson(
+  List? overrideTestPatternTypeGetSet, [
+  List<enums.OverrideTestPatternTypeGetSet>? defaultValue,
+]) {
+  if (overrideTestPatternTypeGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return overrideTestPatternTypeGetSet
+      .map((e) => overrideTestPatternTypeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+List<enums.OverrideTestPatternTypeGetSet>?
+    overrideTestPatternTypeGetSetNullableListFromJson(
+  List? overrideTestPatternTypeGetSet, [
+  List<enums.OverrideTestPatternTypeGetSet>? defaultValue,
+]) {
+  if (overrideTestPatternTypeGetSet == null) {
+    return defaultValue;
+  }
+
+  return overrideTestPatternTypeGetSet
+      .map((e) => overrideTestPatternTypeGetSetFromJson(e.toString()))
+      .toList();
+}
+
+String? processingColourReplaceMethodGetSetNullableToJson(
+    enums.ProcessingColourReplaceMethodGetSet?
+        processingColourReplaceMethodGetSet) {
+  return processingColourReplaceMethodGetSet?.value;
+}
+
+String? processingColourReplaceMethodGetSetToJson(
+    enums.ProcessingColourReplaceMethodGetSet
+        processingColourReplaceMethodGetSet) {
+  return processingColourReplaceMethodGetSet.value;
+}
+
+enums.ProcessingColourReplaceMethodGetSet
+    processingColourReplaceMethodGetSetFromJson(
+  Object? processingColourReplaceMethodGetSet, [
+  enums.ProcessingColourReplaceMethodGetSet? defaultValue,
+]) {
+  return enums.ProcessingColourReplaceMethodGetSet.values.firstWhereOrNull(
+          (e) =>
+              e.value.toString().toLowerCase() ==
+              processingColourReplaceMethodGetSet?.toString().toLowerCase()) ??
+      defaultValue ??
+      enums.ProcessingColourReplaceMethodGetSet.swaggerGeneratedUnknown;
+}
+
+enums.ProcessingColourReplaceMethodGetSet?
+    processingColourReplaceMethodGetSetNullableFromJson(
+  Object? processingColourReplaceMethodGetSet, [
+  enums.ProcessingColourReplaceMethodGetSet? defaultValue,
+]) {
+  if (processingColourReplaceMethodGetSet == null) {
+    return null;
+  }
+  return enums.ProcessingColourReplaceMethodGetSet.values.firstWhereOrNull(
+          (e) => e.value == processingColourReplaceMethodGetSet) ??
+      defaultValue;
+}
+
+String processingColourReplaceMethodGetSetExplodedListToJson(
+    List<enums.ProcessingColourReplaceMethodGetSet>?
+        processingColourReplaceMethodGetSet) {
+  return processingColourReplaceMethodGetSet?.map((e) => e.value!).join(',') ??
+      '';
+}
+
+List<String> processingColourReplaceMethodGetSetListToJson(
+    List<enums.ProcessingColourReplaceMethodGetSet>?
+        processingColourReplaceMethodGetSet) {
+  if (processingColourReplaceMethodGetSet == null) {
+    return [];
+  }
+
+  return processingColourReplaceMethodGetSet.map((e) => e.value!).toList();
+}
+
+List<enums.ProcessingColourReplaceMethodGetSet>
+    processingColourReplaceMethodGetSetListFromJson(
+  List? processingColourReplaceMethodGetSet, [
+  List<enums.ProcessingColourReplaceMethodGetSet>? defaultValue,
+]) {
+  if (processingColourReplaceMethodGetSet == null) {
+    return defaultValue ?? [];
+  }
+
+  return processingColourReplaceMethodGetSet
+      .map((e) => processingColourReplaceMethodGetSetFromJson(e.toString()))
+      .toList();
+}
+
+List<enums.ProcessingColourReplaceMethodGetSet>?
+    processingColourReplaceMethodGetSetNullableListFromJson(
+  List? processingColourReplaceMethodGetSet, [
+  List<enums.ProcessingColourReplaceMethodGetSet>? defaultValue,
+]) {
+  if (processingColourReplaceMethodGetSet == null) {
+    return defaultValue;
+  }
+
+  return processingColourReplaceMethodGetSet
+      .map((e) => processingColourReplaceMethodGetSetFromJson(e.toString()))
+      .toList();
 }
 
 // ignore: unused_element

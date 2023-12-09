@@ -6,8 +6,8 @@ part of 'brompton.swagger.dart';
 // ChopperGenerator
 // **************************************************************************
 
-// ignore_for_file: always_put_control_body_on_new_line, always_specify_types, prefer_const_declarations, unnecessary_brace_in_string_interps
-class _$Brompton extends Brompton {
+// ignore_for_file: type=lint
+final class _$Brompton extends Brompton {
   _$Brompton([ChopperClient? client]) {
     if (client == null) return;
     this.client = client;
@@ -17,7 +17,7 @@ class _$Brompton extends Brompton {
   final definitionType = Brompton;
 
   @override
-  Future<Response<Type$>> _devicesItemsSerialTypeGet(
+  Future<Response<Type$Response>> _devicesItemsSerialTypeGet(
       {required String? serial}) {
     final Uri $url = Uri.parse('/devices/items/${serial}/type');
     final Request $request = Request(
@@ -25,44 +25,46 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<Type$, Type$>($request);
+    return client.send<Type$Response, Type$Response>($request);
   }
 
   @override
-  Future<Response<AssociatedCount>> _devicesStatisticsAssociatedCountGet() {
+  Future<Response<AssociatedCount$Response>>
+      _devicesStatisticsAssociatedCountGet() {
     final Uri $url = Uri.parse('/devices/statistics/associated-count');
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
     );
-    return client.send<AssociatedCount, AssociatedCount>($request);
+    return client
+        .send<AssociatedCount$Response, AssociatedCount$Response>($request);
   }
 
   @override
-  Future<Response<ErrorCount>> _devicesStatisticsErrorCountGet() {
+  Future<Response<ErrorCount$Response>> _devicesStatisticsErrorCountGet() {
     final Uri $url = Uri.parse('/devices/statistics/error-count');
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
     );
-    return client.send<ErrorCount, ErrorCount>($request);
+    return client.send<ErrorCount$Response, ErrorCount$Response>($request);
   }
 
   @override
-  Future<Response<OnlineCount>> _devicesStatisticsOnlineCountGet() {
+  Future<Response<OnlineCount$Response>> _devicesStatisticsOnlineCountGet() {
     final Uri $url = Uri.parse('/devices/statistics/online-count');
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
     );
-    return client.send<OnlineCount, OnlineCount>($request);
+    return client.send<OnlineCount$Response, OnlineCount$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _groupsItemsNumberBrightnessGet({
+  Future<Response<Brightness$Response>> _groupsItemsNumberBrightnessGet({
     int? $set,
     required int? number,
   }) {
@@ -74,11 +76,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _groupsItemsNumberBrightnessPut({
+  Future<Response<Brightness$Response>> _groupsItemsNumberBrightnessPut({
     required int? number,
     required GroupsItemsNumberBrightnessPut$RequestBody? body,
   }) {
@@ -90,11 +92,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<ColourTemperature>> _groupsItemsNumberColourTemperatureGet({
+  Future<Response<ColourTemperature$Response>>
+      _groupsItemsNumberColourTemperatureGet({
     int? $set,
     required int? number,
   }) {
@@ -106,11 +109,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<ColourTemperature, ColourTemperature>($request);
+    return client
+        .send<ColourTemperature$Response, ColourTemperature$Response>($request);
   }
 
   @override
-  Future<Response<ColourTemperature>> _groupsItemsNumberColourTemperaturePut({
+  Future<Response<ColourTemperature$Response>>
+      _groupsItemsNumberColourTemperaturePut({
     required int? number,
     required GroupsItemsNumberColourTemperaturePut$RequestBody? body,
   }) {
@@ -122,11 +127,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<ColourTemperature, ColourTemperature>($request);
+    return client
+        .send<ColourTemperature$Response, ColourTemperature$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _groupsItemsNumberDarkMagicEnabledGet({
+  Future<Response<Enabled$Response>> _groupsItemsNumberDarkMagicEnabledGet({
     bool? $set,
     required int? number,
   }) {
@@ -138,11 +144,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _groupsItemsNumberDarkMagicEnabledPut({
+  Future<Response<Enabled$Response>> _groupsItemsNumberDarkMagicEnabledPut({
     required int? number,
     required GroupsItemsNumberDarkMagicEnabledPut$RequestBody? body,
   }) {
@@ -154,11 +160,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _groupsItemsNumberExtendedBitDepthEnabledGet({
+  Future<Response<Enabled$Response>>
+      _groupsItemsNumberExtendedBitDepthEnabledGet({
     bool? $set,
     required int? number,
   }) {
@@ -171,11 +178,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _groupsItemsNumberExtendedBitDepthEnabledPut({
+  Future<Response<Enabled$Response>>
+      _groupsItemsNumberExtendedBitDepthEnabledPut({
     required int? number,
     required GroupsItemsNumberExtendedBitDepthEnabledPut$RequestBody? body,
   }) {
@@ -188,11 +196,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _groupsItemsNumberGainsBlueGet({
+  Future<Response<Blue$Response>> _groupsItemsNumberGainsBlueGet({
     num? $set,
     required int? number,
   }) {
@@ -204,11 +212,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _groupsItemsNumberGainsBluePut({
+  Future<Response<Blue$Response>> _groupsItemsNumberGainsBluePut({
     required int? number,
     required GroupsItemsNumberGainsBluePut$RequestBody? body,
   }) {
@@ -220,11 +228,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _groupsItemsNumberGainsGreenGet({
+  Future<Response<Green$Response>> _groupsItemsNumberGainsGreenGet({
     num? $set,
     required int? number,
   }) {
@@ -236,11 +244,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _groupsItemsNumberGainsGreenPut({
+  Future<Response<Green$Response>> _groupsItemsNumberGainsGreenPut({
     required int? number,
     required GroupsItemsNumberGainsGreenPut$RequestBody? body,
   }) {
@@ -252,11 +260,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Intensity>> _groupsItemsNumberGainsIntensityGet({
+  Future<Response<Intensity$Response>> _groupsItemsNumberGainsIntensityGet({
     num? $set,
     required int? number,
   }) {
@@ -268,11 +276,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Intensity, Intensity>($request);
+    return client.send<Intensity$Response, Intensity$Response>($request);
   }
 
   @override
-  Future<Response<Intensity>> _groupsItemsNumberGainsIntensityPut({
+  Future<Response<Intensity$Response>> _groupsItemsNumberGainsIntensityPut({
     required int? number,
     required GroupsItemsNumberGainsIntensityPut$RequestBody? body,
   }) {
@@ -284,11 +292,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Intensity, Intensity>($request);
+    return client.send<Intensity$Response, Intensity$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _groupsItemsNumberGainsRedGet({
+  Future<Response<Red$Response>> _groupsItemsNumberGainsRedGet({
     num? $set,
     required int? number,
   }) {
@@ -300,11 +308,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _groupsItemsNumberGainsRedPut({
+  Future<Response<Red$Response>> _groupsItemsNumberGainsRedPut({
     required int? number,
     required GroupsItemsNumberGainsRedPut$RequestBody? body,
   }) {
@@ -316,11 +324,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Gamma>> _groupsItemsNumberGammaGet({
+  Future<Response<Gamma$Response>> _groupsItemsNumberGammaGet({
     num? $set,
     required int? number,
   }) {
@@ -332,11 +340,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Gamma, Gamma>($request);
+    return client.send<Gamma$Response, Gamma$Response>($request);
   }
 
   @override
-  Future<Response<Gamma>> _groupsItemsNumberGammaPut({
+  Future<Response<Gamma$Response>> _groupsItemsNumberGammaPut({
     required int? number,
     required GroupsItemsNumberGammaPut$RequestBody? body,
   }) {
@@ -348,11 +356,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Gamma, Gamma>($request);
+    return client.send<Gamma$Response, Gamma$Response>($request);
   }
 
   @override
-  Future<Response<GlobalColourOverride>>
+  Future<Response<GlobalColourOverride$Response>>
       _groupsItemsNumberGlobalColourOverrideGet({
     bool? $set,
     required int? number,
@@ -366,11 +374,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<GlobalColourOverride, GlobalColourOverride>($request);
+    return client.send<GlobalColourOverride$Response,
+        GlobalColourOverride$Response>($request);
   }
 
   @override
-  Future<Response<GlobalColourOverride>>
+  Future<Response<GlobalColourOverride$Response>>
       _groupsItemsNumberGlobalColourOverridePut({
     required int? number,
     required GroupsItemsNumberGlobalColourOverridePut$RequestBody? body,
@@ -384,11 +393,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<GlobalColourOverride, GlobalColourOverride>($request);
+    return client.send<GlobalColourOverride$Response,
+        GlobalColourOverride$Response>($request);
   }
 
   @override
-  Future<Response<GlobalGainsOverride>>
+  Future<Response<GlobalGainsOverride$Response>>
       _groupsItemsNumberGlobalGainsOverrideGet({
     bool? $set,
     required int? number,
@@ -401,11 +411,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<GlobalGainsOverride, GlobalGainsOverride>($request);
+    return client.send<GlobalGainsOverride$Response,
+        GlobalGainsOverride$Response>($request);
   }
 
   @override
-  Future<Response<GlobalGainsOverride>>
+  Future<Response<GlobalGainsOverride$Response>>
       _groupsItemsNumberGlobalGainsOverridePut({
     required int? number,
     required GroupsItemsNumberGlobalGainsOverridePut$RequestBody? body,
@@ -418,11 +429,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<GlobalGainsOverride, GlobalGainsOverride>($request);
+    return client.send<GlobalGainsOverride$Response,
+        GlobalGainsOverride$Response>($request);
   }
 
   @override
-  Future<Response<GlobalStartrackerOverride>>
+  Future<Response<GlobalStartrackerOverride$Response>>
       _groupsItemsNumberGlobalStartrackerOverrideGet({
     bool? $set,
     required int? number,
@@ -436,12 +448,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client
-        .send<GlobalStartrackerOverride, GlobalStartrackerOverride>($request);
+    return client.send<GlobalStartrackerOverride$Response,
+        GlobalStartrackerOverride$Response>($request);
   }
 
   @override
-  Future<Response<GlobalStartrackerOverride>>
+  Future<Response<GlobalStartrackerOverride$Response>>
       _groupsItemsNumberGlobalStartrackerOverridePut({
     required int? number,
     required GroupsItemsNumberGlobalStartrackerOverridePut$RequestBody? body,
@@ -455,12 +467,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client
-        .send<GlobalStartrackerOverride, GlobalStartrackerOverride>($request);
+    return client.send<GlobalStartrackerOverride$Response,
+        GlobalStartrackerOverride$Response>($request);
   }
 
   @override
-  Future<Response<Name>> _groupsItemsNumberNameGet({
+  Future<Response<Name$Response>> _groupsItemsNumberNameGet({
     String? $set,
     required int? number,
   }) {
@@ -472,11 +484,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Name, Name>($request);
+    return client.send<Name$Response, Name$Response>($request);
   }
 
   @override
-  Future<Response<Name>> _groupsItemsNumberNamePut({
+  Future<Response<Name$Response>> _groupsItemsNumberNamePut({
     required int? number,
     required GroupsItemsNumberNamePut$RequestBody? body,
   }) {
@@ -488,11 +500,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Name, Name>($request);
+    return client.send<Name$Response, Name$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _groupsItemsNumberOverdriveEnabledGet({
+  Future<Response<Enabled$Response>> _groupsItemsNumberOverdriveEnabledGet({
     bool? $set,
     required int? number,
   }) {
@@ -504,11 +516,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _groupsItemsNumberOverdriveEnabledPut({
+  Future<Response<Enabled$Response>> _groupsItemsNumberOverdriveEnabledPut({
     required int? number,
     required GroupsItemsNumberOverdriveEnabledPut$RequestBody? body,
   }) {
@@ -520,11 +532,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _groupsItemsNumberPuretoneEnabledGet({
+  Future<Response<Enabled$Response>> _groupsItemsNumberPuretoneEnabledGet({
     bool? $set,
     required int? number,
   }) {
@@ -536,11 +548,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _groupsItemsNumberPuretoneEnabledPut({
+  Future<Response<Enabled$Response>> _groupsItemsNumberPuretoneEnabledPut({
     required int? number,
     required GroupsItemsNumberPuretoneEnabledPut$RequestBody? body,
   }) {
@@ -552,11 +564,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _groupsItemsNumberStartrackerEnabledGet({
+  Future<Response<Enabled$Response>> _groupsItemsNumberStartrackerEnabledGet({
     bool? $set,
     required int? number,
   }) {
@@ -568,11 +580,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _groupsItemsNumberStartrackerEnabledPut({
+  Future<Response<Enabled$Response>> _groupsItemsNumberStartrackerEnabledPut({
     required int? number,
     required GroupsItemsNumberStartrackerEnabledPut$RequestBody? body,
   }) {
@@ -584,11 +596,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<PortNumber>> _inputActiveSourcePortNumberGet({int? $set}) {
+  Future<Response<PortNumber$Response>> _inputActiveSourcePortNumberGet(
+      {int? $set}) {
     final Uri $url = Uri.parse('/input/active/source/port-number');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -597,11 +610,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<PortNumber, PortNumber>($request);
+    return client.send<PortNumber$Response, PortNumber$Response>($request);
   }
 
   @override
-  Future<Response<PortNumber>> _inputActiveSourcePortNumberPut(
+  Future<Response<PortNumber$Response>> _inputActiveSourcePortNumberPut(
       {required InputActiveSourcePortNumberPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/input/active/source/port-number');
     final $body = body;
@@ -611,11 +624,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<PortNumber, PortNumber>($request);
+    return client.send<PortNumber$Response, PortNumber$Response>($request);
   }
 
   @override
-  Future<Response<PortType>> _inputActiveSourcePortTypeGet({String? $set}) {
+  Future<Response<PortType$Response>> _inputActiveSourcePortTypeGet(
+      {String? $set}) {
     final Uri $url = Uri.parse('/input/active/source/port-type');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -624,11 +638,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<PortType, PortType>($request);
+    return client.send<PortType$Response, PortType$Response>($request);
   }
 
   @override
-  Future<Response<PortType>> _inputActiveSourcePortTypePut(
+  Future<Response<PortType$Response>> _inputActiveSourcePortTypePut(
       {required InputActiveSourcePortTypePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/input/active/source/port-type');
     final $body = body;
@@ -638,11 +652,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<PortType, PortType>($request);
+    return client.send<PortType$Response, PortType$Response>($request);
   }
 
   @override
-  Future<Response<Colour>>
+  Future<Response<Colour$Response>>
       _inputPortsDviDviPortNumberControlsColourSpaceColourGet({
     String? $set,
     required int? dviPortNumber,
@@ -656,11 +670,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Colour, Colour>($request);
+    return client.send<Colour$Response, Colour$Response>($request);
   }
 
   @override
-  Future<Response<Colour>>
+  Future<Response<Colour$Response>>
       _inputPortsDviDviPortNumberControlsColourSpaceColourPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody?
@@ -675,11 +689,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Colour, Colour>($request);
+    return client.send<Colour$Response, Colour$Response>($request);
   }
 
   @override
-  Future<Response<DviColourFormat>>
+  Future<Response<DviColourFormat$Response>>
       _inputPortsDviDviPortNumberControlsDviColourFormatGet({
     String? $set,
     required int? dviPortNumber,
@@ -693,11 +707,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<DviColourFormat, DviColourFormat>($request);
+    return client
+        .send<DviColourFormat$Response, DviColourFormat$Response>($request);
   }
 
   @override
-  Future<Response<DviColourFormat>>
+  Future<Response<DviColourFormat$Response>>
       _inputPortsDviDviPortNumberControlsDviColourFormatPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody?
@@ -712,11 +727,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<DviColourFormat, DviColourFormat>($request);
+    return client
+        .send<DviColourFormat$Response, DviColourFormat$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsDviDviPortNumberDynacalBlueGamutGet({
+  Future<Response<Gamut$Response>>
+      _inputPortsDviDviPortNumberDynacalBlueGamutGet({
     String? $set,
     required int? dviPortNumber,
   }) {
@@ -729,11 +746,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsDviDviPortNumberDynacalBlueGamutPut({
+  Future<Response<Gamut$Response>>
+      _inputPortsDviDviPortNumberDynacalBlueGamutPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody? body,
   }) {
@@ -746,11 +764,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsDviDviPortNumberDynacalBlueXGet({
+  Future<Response<X$Response>> _inputPortsDviDviPortNumberDynacalBlueXGet({
     num? $set,
     required int? dviPortNumber,
   }) {
@@ -763,11 +781,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsDviDviPortNumberDynacalBlueXPut({
+  Future<Response<X$Response>> _inputPortsDviDviPortNumberDynacalBlueXPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalBlueXPut$RequestBody? body,
   }) {
@@ -780,11 +798,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsDviDviPortNumberDynacalBlueYGet({
+  Future<Response<Y$Response>> _inputPortsDviDviPortNumberDynacalBlueYGet({
     num? $set,
     required int? dviPortNumber,
   }) {
@@ -797,11 +815,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsDviDviPortNumberDynacalBlueYPut({
+  Future<Response<Y$Response>> _inputPortsDviDviPortNumberDynacalBlueYPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalBlueYPut$RequestBody? body,
   }) {
@@ -814,11 +832,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsDviDviPortNumberDynacalGreenGamutGet({
+  Future<Response<Gamut$Response>>
+      _inputPortsDviDviPortNumberDynacalGreenGamutGet({
     String? $set,
     required int? dviPortNumber,
   }) {
@@ -831,11 +850,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsDviDviPortNumberDynacalGreenGamutPut({
+  Future<Response<Gamut$Response>>
+      _inputPortsDviDviPortNumberDynacalGreenGamutPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody? body,
   }) {
@@ -848,11 +868,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsDviDviPortNumberDynacalGreenXGet({
+  Future<Response<X$Response>> _inputPortsDviDviPortNumberDynacalGreenXGet({
     num? $set,
     required int? dviPortNumber,
   }) {
@@ -865,11 +885,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsDviDviPortNumberDynacalGreenXPut({
+  Future<Response<X$Response>> _inputPortsDviDviPortNumberDynacalGreenXPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalGreenXPut$RequestBody? body,
   }) {
@@ -882,11 +902,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsDviDviPortNumberDynacalGreenYGet({
+  Future<Response<Y$Response>> _inputPortsDviDviPortNumberDynacalGreenYGet({
     num? $set,
     required int? dviPortNumber,
   }) {
@@ -899,11 +919,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsDviDviPortNumberDynacalGreenYPut({
+  Future<Response<Y$Response>> _inputPortsDviDviPortNumberDynacalGreenYPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalGreenYPut$RequestBody? body,
   }) {
@@ -916,11 +936,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsDviDviPortNumberDynacalRedGamutGet({
+  Future<Response<Gamut$Response>>
+      _inputPortsDviDviPortNumberDynacalRedGamutGet({
     String? $set,
     required int? dviPortNumber,
   }) {
@@ -933,11 +954,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsDviDviPortNumberDynacalRedGamutPut({
+  Future<Response<Gamut$Response>>
+      _inputPortsDviDviPortNumberDynacalRedGamutPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody? body,
   }) {
@@ -950,11 +972,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsDviDviPortNumberDynacalRedXGet({
+  Future<Response<X$Response>> _inputPortsDviDviPortNumberDynacalRedXGet({
     num? $set,
     required int? dviPortNumber,
   }) {
@@ -967,11 +989,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsDviDviPortNumberDynacalRedXPut({
+  Future<Response<X$Response>> _inputPortsDviDviPortNumberDynacalRedXPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalRedXPut$RequestBody? body,
   }) {
@@ -984,11 +1006,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsDviDviPortNumberDynacalRedYGet({
+  Future<Response<Y$Response>> _inputPortsDviDviPortNumberDynacalRedYGet({
     num? $set,
     required int? dviPortNumber,
   }) {
@@ -1001,11 +1023,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsDviDviPortNumberDynacalRedYPut({
+  Future<Response<Y$Response>> _inputPortsDviDviPortNumberDynacalRedYPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalRedYPut$RequestBody? body,
   }) {
@@ -1018,11 +1040,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<ColourTemperature>>
+  Future<Response<ColourTemperature$Response>>
       _inputPortsDviDviPortNumberDynacalWhiteColourTemperatureGet({
     int? $set,
     required int? dviPortNumber,
@@ -1036,11 +1058,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<ColourTemperature, ColourTemperature>($request);
+    return client
+        .send<ColourTemperature$Response, ColourTemperature$Response>($request);
   }
 
   @override
-  Future<Response<ColourTemperature>>
+  Future<Response<ColourTemperature$Response>>
       _inputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBody?
@@ -1055,11 +1078,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<ColourTemperature, ColourTemperature>($request);
+    return client
+        .send<ColourTemperature$Response, ColourTemperature$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsDviDviPortNumberDynacalWhiteGamutGet({
+  Future<Response<Gamut$Response>>
+      _inputPortsDviDviPortNumberDynacalWhiteGamutGet({
     String? $set,
     required int? dviPortNumber,
   }) {
@@ -1072,11 +1097,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsDviDviPortNumberDynacalWhiteGamutPut({
+  Future<Response<Gamut$Response>>
+      _inputPortsDviDviPortNumberDynacalWhiteGamutPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody? body,
   }) {
@@ -1089,11 +1115,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsDviDviPortNumberDynacalWhiteXGet({
+  Future<Response<X$Response>> _inputPortsDviDviPortNumberDynacalWhiteXGet({
     num? $set,
     required int? dviPortNumber,
   }) {
@@ -1106,11 +1132,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsDviDviPortNumberDynacalWhiteXPut({
+  Future<Response<X$Response>> _inputPortsDviDviPortNumberDynacalWhiteXPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBody? body,
   }) {
@@ -1123,11 +1149,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsDviDviPortNumberDynacalWhiteYGet({
+  Future<Response<Y$Response>> _inputPortsDviDviPortNumberDynacalWhiteYGet({
     num? $set,
     required int? dviPortNumber,
   }) {
@@ -1140,11 +1166,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsDviDviPortNumberDynacalWhiteYPut({
+  Future<Response<Y$Response>> _inputPortsDviDviPortNumberDynacalWhiteYPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberDynacalWhiteYPut$RequestBody? body,
   }) {
@@ -1157,11 +1183,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<RefreshRate>>
+  Future<Response<RefreshRate$Response>>
       _inputPortsDviDviPortNumberMetaDataRefreshRateGet(
           {required int? dviPortNumber}) {
     final Uri $url =
@@ -1171,11 +1197,11 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<RefreshRate, RefreshRate>($request);
+    return client.send<RefreshRate$Response, RefreshRate$Response>($request);
   }
 
   @override
-  Future<Response<Height>>
+  Future<Response<Height$Response>>
       _inputPortsDviDviPortNumberMetaDataResolutionHeightGet(
           {required int? dviPortNumber}) {
     final Uri $url = Uri.parse(
@@ -1185,12 +1211,13 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<Height, Height>($request);
+    return client.send<Height$Response, Height$Response>($request);
   }
 
   @override
-  Future<Response<Width>> _inputPortsDviDviPortNumberMetaDataResolutionWidthGet(
-      {required int? dviPortNumber}) {
+  Future<Response<Width$Response>>
+      _inputPortsDviDviPortNumberMetaDataResolutionWidthGet(
+          {required int? dviPortNumber}) {
     final Uri $url = Uri.parse(
         '/input/ports/dvi/${dviPortNumber}/meta-data/resolution/width');
     final Request $request = Request(
@@ -1198,11 +1225,12 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<Width, Width>($request);
+    return client.send<Width$Response, Width$Response>($request);
   }
 
   @override
-  Future<Response<BlackLevel>> _inputPortsDviDviPortNumberProcAmpBlackLevelGet({
+  Future<Response<BlackLevel$Response>>
+      _inputPortsDviDviPortNumberProcAmpBlackLevelGet({
     int? $set,
     required int? dviPortNumber,
   }) {
@@ -1215,11 +1243,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<BlackLevel, BlackLevel>($request);
+    return client.send<BlackLevel$Response, BlackLevel$Response>($request);
   }
 
   @override
-  Future<Response<BlackLevel>> _inputPortsDviDviPortNumberProcAmpBlackLevelPut({
+  Future<Response<BlackLevel$Response>>
+      _inputPortsDviDviPortNumberProcAmpBlackLevelPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBody? body,
   }) {
@@ -1232,11 +1261,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<BlackLevel, BlackLevel>($request);
+    return client.send<BlackLevel$Response, BlackLevel$Response>($request);
   }
 
   @override
-  Future<Response<Contrast>> _inputPortsDviDviPortNumberProcAmpContrastGet({
+  Future<Response<Contrast$Response>>
+      _inputPortsDviDviPortNumberProcAmpContrastGet({
     int? $set,
     required int? dviPortNumber,
   }) {
@@ -1249,11 +1279,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Contrast, Contrast>($request);
+    return client.send<Contrast$Response, Contrast$Response>($request);
   }
 
   @override
-  Future<Response<Contrast>> _inputPortsDviDviPortNumberProcAmpContrastPut({
+  Future<Response<Contrast$Response>>
+      _inputPortsDviDviPortNumberProcAmpContrastPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpContrastPut$RequestBody? body,
   }) {
@@ -1266,11 +1297,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Contrast, Contrast>($request);
+    return client.send<Contrast$Response, Contrast$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _inputPortsDviDviPortNumberProcAmpHighlightBlueGet({
+  Future<Response<Blue$Response>>
+      _inputPortsDviDviPortNumberProcAmpHighlightBlueGet({
     int? $set,
     required int? dviPortNumber,
   }) {
@@ -1283,11 +1315,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _inputPortsDviDviPortNumberProcAmpHighlightBluePut({
+  Future<Response<Blue$Response>>
+      _inputPortsDviDviPortNumberProcAmpHighlightBluePut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBody?
         body,
@@ -1301,11 +1334,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _inputPortsDviDviPortNumberProcAmpHighlightGreenGet({
+  Future<Response<Green$Response>>
+      _inputPortsDviDviPortNumberProcAmpHighlightGreenGet({
     int? $set,
     required int? dviPortNumber,
   }) {
@@ -1318,11 +1352,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _inputPortsDviDviPortNumberProcAmpHighlightGreenPut({
+  Future<Response<Green$Response>>
+      _inputPortsDviDviPortNumberProcAmpHighlightGreenPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBody?
         body,
@@ -1336,11 +1371,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _inputPortsDviDviPortNumberProcAmpHighlightRedGet({
+  Future<Response<Red$Response>>
+      _inputPortsDviDviPortNumberProcAmpHighlightRedGet({
     int? $set,
     required int? dviPortNumber,
   }) {
@@ -1353,11 +1389,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _inputPortsDviDviPortNumberProcAmpHighlightRedPut({
+  Future<Response<Red$Response>>
+      _inputPortsDviDviPortNumberProcAmpHighlightRedPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBody? body,
   }) {
@@ -1370,11 +1407,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _inputPortsDviDviPortNumberProcAmpHueGet({
+  Future<Response<Hue$Response>> _inputPortsDviDviPortNumberProcAmpHueGet({
     int? $set,
     required int? dviPortNumber,
   }) {
@@ -1387,11 +1424,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _inputPortsDviDviPortNumberProcAmpHuePut({
+  Future<Response<Hue$Response>> _inputPortsDviDviPortNumberProcAmpHuePut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpHuePut$RequestBody? body,
   }) {
@@ -1404,11 +1441,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _inputPortsDviDviPortNumberProcAmpSaturationGet({
+  Future<Response<Saturation$Response>>
+      _inputPortsDviDviPortNumberProcAmpSaturationGet({
     int? $set,
     required int? dviPortNumber,
   }) {
@@ -1421,11 +1459,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _inputPortsDviDviPortNumberProcAmpSaturationPut({
+  Future<Response<Saturation$Response>>
+      _inputPortsDviDviPortNumberProcAmpSaturationPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBody? body,
   }) {
@@ -1438,11 +1477,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _inputPortsDviDviPortNumberProcAmpShadowBlueGet({
+  Future<Response<Blue$Response>>
+      _inputPortsDviDviPortNumberProcAmpShadowBlueGet({
     int? $set,
     required int? dviPortNumber,
   }) {
@@ -1455,11 +1495,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _inputPortsDviDviPortNumberProcAmpShadowBluePut({
+  Future<Response<Blue$Response>>
+      _inputPortsDviDviPortNumberProcAmpShadowBluePut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBody? body,
   }) {
@@ -1472,11 +1513,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _inputPortsDviDviPortNumberProcAmpShadowGreenGet({
+  Future<Response<Green$Response>>
+      _inputPortsDviDviPortNumberProcAmpShadowGreenGet({
     int? $set,
     required int? dviPortNumber,
   }) {
@@ -1489,11 +1531,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _inputPortsDviDviPortNumberProcAmpShadowGreenPut({
+  Future<Response<Green$Response>>
+      _inputPortsDviDviPortNumberProcAmpShadowGreenPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBody? body,
   }) {
@@ -1506,11 +1549,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _inputPortsDviDviPortNumberProcAmpShadowRedGet({
+  Future<Response<Red$Response>>
+      _inputPortsDviDviPortNumberProcAmpShadowRedGet({
     int? $set,
     required int? dviPortNumber,
   }) {
@@ -1523,11 +1567,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _inputPortsDviDviPortNumberProcAmpShadowRedPut({
+  Future<Response<Red$Response>>
+      _inputPortsDviDviPortNumberProcAmpShadowRedPut({
     required int? dviPortNumber,
     required InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBody? body,
   }) {
@@ -1540,11 +1585,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Colour>>
+  Future<Response<Colour$Response>>
       _inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGet({
     String? $set,
     required int? hdmiPortNumber,
@@ -1558,11 +1603,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Colour, Colour>($request);
+    return client.send<Colour$Response, Colour$Response>($request);
   }
 
   @override
-  Future<Response<Colour>>
+  Future<Response<Colour$Response>>
       _inputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody?
@@ -1577,11 +1622,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Colour, Colour>($request);
+    return client.send<Colour$Response, Colour$Response>($request);
   }
 
   @override
-  Future<Response<InfoFrameOverrideEnabled>>
+  Future<Response<InfoFrameOverrideEnabled$Response>>
       _inputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledGet({
     bool? $set,
     required int? hdmiPortNumber,
@@ -1595,12 +1640,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client
-        .send<InfoFrameOverrideEnabled, InfoFrameOverrideEnabled>($request);
+    return client.send<InfoFrameOverrideEnabled$Response,
+        InfoFrameOverrideEnabled$Response>($request);
   }
 
   @override
-  Future<Response<InfoFrameOverrideEnabled>>
+  Future<Response<InfoFrameOverrideEnabled$Response>>
       _inputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBody?
@@ -1615,12 +1660,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client
-        .send<InfoFrameOverrideEnabled, InfoFrameOverrideEnabled>($request);
+    return client.send<InfoFrameOverrideEnabled$Response,
+        InfoFrameOverrideEnabled$Response>($request);
   }
 
   @override
-  Future<Response<HdmiColourFormat>>
+  Future<Response<HdmiColourFormat$Response>>
       _inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGet({
     String? $set,
     required int? hdmiPortNumber,
@@ -1634,11 +1679,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<HdmiColourFormat, HdmiColourFormat>($request);
+    return client
+        .send<HdmiColourFormat$Response, HdmiColourFormat$Response>($request);
   }
 
   @override
-  Future<Response<HdmiColourFormat>>
+  Future<Response<HdmiColourFormat$Response>>
       _inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody?
@@ -1653,11 +1699,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<HdmiColourFormat, HdmiColourFormat>($request);
+    return client
+        .send<HdmiColourFormat$Response, HdmiColourFormat$Response>($request);
   }
 
   @override
-  Future<Response<Format>> _inputPortsHdmiHdmiPortNumberControlsHdrFormatGet({
+  Future<Response<Format$Response>>
+      _inputPortsHdmiHdmiPortNumberControlsHdrFormatGet({
     String? $set,
     required int? hdmiPortNumber,
   }) {
@@ -1670,11 +1718,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Format, Format>($request);
+    return client.send<Format$Response, Format$Response>($request);
   }
 
   @override
-  Future<Response<Format>> _inputPortsHdmiHdmiPortNumberControlsHdrFormatPut({
+  Future<Response<Format$Response>>
+      _inputPortsHdmiHdmiPortNumberControlsHdrFormatPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody? body,
   }) {
@@ -1687,11 +1736,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Format, Format>($request);
+    return client.send<Format$Response, Format$Response>($request);
   }
 
   @override
-  Future<Response<AutoBrighten>>
+  Future<Response<AutoBrighten$Response>>
       _inputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenGet({
     bool? $set,
     required int? hdmiPortNumber,
@@ -1705,11 +1754,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<AutoBrighten, AutoBrighten>($request);
+    return client.send<AutoBrighten$Response, AutoBrighten$Response>($request);
   }
 
   @override
-  Future<Response<AutoBrighten>>
+  Future<Response<AutoBrighten$Response>>
       _inputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut$RequestBody?
@@ -1724,11 +1773,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<AutoBrighten, AutoBrighten>($request);
+    return client.send<AutoBrighten$Response, AutoBrighten$Response>($request);
   }
 
   @override
-  Future<Response<Gain>> _inputPortsHdmiHdmiPortNumberControlsHdrPqGainGet({
+  Future<Response<Gain$Response>>
+      _inputPortsHdmiHdmiPortNumberControlsHdrPqGainGet({
     num? $set,
     required int? hdmiPortNumber,
   }) {
@@ -1741,11 +1791,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Gain, Gain>($request);
+    return client.send<Gain$Response, Gain$Response>($request);
   }
 
   @override
-  Future<Response<Gain>> _inputPortsHdmiHdmiPortNumberControlsHdrPqGainPut({
+  Future<Response<Gain$Response>>
+      _inputPortsHdmiHdmiPortNumberControlsHdrPqGainPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberControlsHdrPqGainPut$RequestBody? body,
   }) {
@@ -1758,11 +1809,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Gain, Gain>($request);
+    return client.send<Gain$Response, Gain$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>>
+  Future<Response<Enabled$Response>>
       _inputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledGet({
     bool? $set,
     required int? hdmiPortNumber,
@@ -1776,11 +1827,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>>
+  Future<Response<Enabled$Response>>
       _inputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBody?
@@ -1795,11 +1846,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Luminance>>
+  Future<Response<Luminance$Response>>
       _inputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminanceGet({
     int? $set,
     required int? hdmiPortNumber,
@@ -1813,11 +1864,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Luminance, Luminance>($request);
+    return client.send<Luminance$Response, Luminance$Response>($request);
   }
 
   @override
-  Future<Response<Luminance>>
+  Future<Response<Luminance$Response>>
       _inputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBody?
@@ -1832,11 +1883,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Luminance, Luminance>($request);
+    return client.send<Luminance$Response, Luminance$Response>($request);
   }
 
   @override
-  Future<Response<QuantisationRange>>
+  Future<Response<QuantisationRange$Response>>
       _inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGet({
     String? $set,
     required int? hdmiPortNumber,
@@ -1850,11 +1901,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<QuantisationRange, QuantisationRange>($request);
+    return client
+        .send<QuantisationRange$Response, QuantisationRange$Response>($request);
   }
 
   @override
-  Future<Response<QuantisationRange>>
+  Future<Response<QuantisationRange$Response>>
       _inputPortsHdmiHdmiPortNumberControlsQuantisationRangePut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody?
@@ -1869,11 +1921,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<QuantisationRange, QuantisationRange>($request);
+    return client
+        .send<QuantisationRange$Response, QuantisationRange$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsHdmiHdmiPortNumberDynacalBlueGamutGet({
+  Future<Response<Gamut$Response>>
+      _inputPortsHdmiHdmiPortNumberDynacalBlueGamutGet({
     String? $set,
     required int? hdmiPortNumber,
   }) {
@@ -1886,11 +1940,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsHdmiHdmiPortNumberDynacalBlueGamutPut({
+  Future<Response<Gamut$Response>>
+      _inputPortsHdmiHdmiPortNumberDynacalBlueGamutPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody? body,
   }) {
@@ -1903,11 +1958,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsHdmiHdmiPortNumberDynacalBlueXGet({
+  Future<Response<X$Response>> _inputPortsHdmiHdmiPortNumberDynacalBlueXGet({
     num? $set,
     required int? hdmiPortNumber,
   }) {
@@ -1920,11 +1975,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsHdmiHdmiPortNumberDynacalBlueXPut({
+  Future<Response<X$Response>> _inputPortsHdmiHdmiPortNumberDynacalBlueXPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBody? body,
   }) {
@@ -1937,11 +1992,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsHdmiHdmiPortNumberDynacalBlueYGet({
+  Future<Response<Y$Response>> _inputPortsHdmiHdmiPortNumberDynacalBlueYGet({
     num? $set,
     required int? hdmiPortNumber,
   }) {
@@ -1954,11 +2009,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsHdmiHdmiPortNumberDynacalBlueYPut({
+  Future<Response<Y$Response>> _inputPortsHdmiHdmiPortNumberDynacalBlueYPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalBlueYPut$RequestBody? body,
   }) {
@@ -1971,11 +2026,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsHdmiHdmiPortNumberDynacalGreenGamutGet({
+  Future<Response<Gamut$Response>>
+      _inputPortsHdmiHdmiPortNumberDynacalGreenGamutGet({
     String? $set,
     required int? hdmiPortNumber,
   }) {
@@ -1988,11 +2044,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsHdmiHdmiPortNumberDynacalGreenGamutPut({
+  Future<Response<Gamut$Response>>
+      _inputPortsHdmiHdmiPortNumberDynacalGreenGamutPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody? body,
   }) {
@@ -2005,11 +2062,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsHdmiHdmiPortNumberDynacalGreenXGet({
+  Future<Response<X$Response>> _inputPortsHdmiHdmiPortNumberDynacalGreenXGet({
     num? $set,
     required int? hdmiPortNumber,
   }) {
@@ -2022,11 +2079,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsHdmiHdmiPortNumberDynacalGreenXPut({
+  Future<Response<X$Response>> _inputPortsHdmiHdmiPortNumberDynacalGreenXPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBody? body,
   }) {
@@ -2039,11 +2096,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsHdmiHdmiPortNumberDynacalGreenYGet({
+  Future<Response<Y$Response>> _inputPortsHdmiHdmiPortNumberDynacalGreenYGet({
     num? $set,
     required int? hdmiPortNumber,
   }) {
@@ -2056,11 +2113,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsHdmiHdmiPortNumberDynacalGreenYPut({
+  Future<Response<Y$Response>> _inputPortsHdmiHdmiPortNumberDynacalGreenYPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBody? body,
   }) {
@@ -2073,11 +2130,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsHdmiHdmiPortNumberDynacalRedGamutGet({
+  Future<Response<Gamut$Response>>
+      _inputPortsHdmiHdmiPortNumberDynacalRedGamutGet({
     String? $set,
     required int? hdmiPortNumber,
   }) {
@@ -2090,11 +2148,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsHdmiHdmiPortNumberDynacalRedGamutPut({
+  Future<Response<Gamut$Response>>
+      _inputPortsHdmiHdmiPortNumberDynacalRedGamutPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody? body,
   }) {
@@ -2107,11 +2166,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsHdmiHdmiPortNumberDynacalRedXGet({
+  Future<Response<X$Response>> _inputPortsHdmiHdmiPortNumberDynacalRedXGet({
     num? $set,
     required int? hdmiPortNumber,
   }) {
@@ -2124,11 +2183,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsHdmiHdmiPortNumberDynacalRedXPut({
+  Future<Response<X$Response>> _inputPortsHdmiHdmiPortNumberDynacalRedXPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalRedXPut$RequestBody? body,
   }) {
@@ -2141,11 +2200,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsHdmiHdmiPortNumberDynacalRedYGet({
+  Future<Response<Y$Response>> _inputPortsHdmiHdmiPortNumberDynacalRedYGet({
     num? $set,
     required int? hdmiPortNumber,
   }) {
@@ -2158,11 +2217,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsHdmiHdmiPortNumberDynacalRedYPut({
+  Future<Response<Y$Response>> _inputPortsHdmiHdmiPortNumberDynacalRedYPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalRedYPut$RequestBody? body,
   }) {
@@ -2175,11 +2234,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<ColourTemperature>>
+  Future<Response<ColourTemperature$Response>>
       _inputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperatureGet({
     int? $set,
     required int? hdmiPortNumber,
@@ -2193,11 +2252,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<ColourTemperature, ColourTemperature>($request);
+    return client
+        .send<ColourTemperature$Response, ColourTemperature$Response>($request);
   }
 
   @override
-  Future<Response<ColourTemperature>>
+  Future<Response<ColourTemperature$Response>>
       _inputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBody?
@@ -2212,11 +2272,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<ColourTemperature, ColourTemperature>($request);
+    return client
+        .send<ColourTemperature$Response, ColourTemperature$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGet({
+  Future<Response<Gamut$Response>>
+      _inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGet({
     String? $set,
     required int? hdmiPortNumber,
   }) {
@@ -2229,11 +2291,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut({
+  Future<Response<Gamut$Response>>
+      _inputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody? body,
   }) {
@@ -2246,11 +2309,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsHdmiHdmiPortNumberDynacalWhiteXGet({
+  Future<Response<X$Response>> _inputPortsHdmiHdmiPortNumberDynacalWhiteXGet({
     num? $set,
     required int? hdmiPortNumber,
   }) {
@@ -2263,11 +2326,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsHdmiHdmiPortNumberDynacalWhiteXPut({
+  Future<Response<X$Response>> _inputPortsHdmiHdmiPortNumberDynacalWhiteXPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalWhiteXPut$RequestBody? body,
   }) {
@@ -2280,11 +2343,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsHdmiHdmiPortNumberDynacalWhiteYGet({
+  Future<Response<Y$Response>> _inputPortsHdmiHdmiPortNumberDynacalWhiteYGet({
     num? $set,
     required int? hdmiPortNumber,
   }) {
@@ -2297,11 +2360,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsHdmiHdmiPortNumberDynacalWhiteYPut({
+  Future<Response<Y$Response>> _inputPortsHdmiHdmiPortNumberDynacalWhiteYPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberDynacalWhiteYPut$RequestBody? body,
   }) {
@@ -2314,12 +2377,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<BitDepth>> _inputPortsHdmiHdmiPortNumberMetaDataBitDepthGet(
-      {required int? hdmiPortNumber}) {
+  Future<Response<BitDepth$Response>>
+      _inputPortsHdmiHdmiPortNumberMetaDataBitDepthGet(
+          {required int? hdmiPortNumber}) {
     final Uri $url =
         Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/meta-data/bit-depth');
     final Request $request = Request(
@@ -2327,12 +2391,13 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<BitDepth, BitDepth>($request);
+    return client.send<BitDepth$Response, BitDepth$Response>($request);
   }
 
   @override
-  Future<Response<Format>> _inputPortsHdmiHdmiPortNumberMetaDataHdrFormatGet(
-      {required int? hdmiPortNumber}) {
+  Future<Response<Format$Response>>
+      _inputPortsHdmiHdmiPortNumberMetaDataHdrFormatGet(
+          {required int? hdmiPortNumber}) {
     final Uri $url =
         Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/meta-data/hdr/format');
     final Request $request = Request(
@@ -2340,11 +2405,11 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<Format, Format>($request);
+    return client.send<Format$Response, Format$Response>($request);
   }
 
   @override
-  Future<Response<RefreshRate>>
+  Future<Response<RefreshRate$Response>>
       _inputPortsHdmiHdmiPortNumberMetaDataRefreshRateGet(
           {required int? hdmiPortNumber}) {
     final Uri $url =
@@ -2354,11 +2419,11 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<RefreshRate, RefreshRate>($request);
+    return client.send<RefreshRate$Response, RefreshRate$Response>($request);
   }
 
   @override
-  Future<Response<Height>>
+  Future<Response<Height$Response>>
       _inputPortsHdmiHdmiPortNumberMetaDataResolutionHeightGet(
           {required int? hdmiPortNumber}) {
     final Uri $url = Uri.parse(
@@ -2368,11 +2433,11 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<Height, Height>($request);
+    return client.send<Height$Response, Height$Response>($request);
   }
 
   @override
-  Future<Response<Width>>
+  Future<Response<Width$Response>>
       _inputPortsHdmiHdmiPortNumberMetaDataResolutionWidthGet(
           {required int? hdmiPortNumber}) {
     final Uri $url = Uri.parse(
@@ -2382,12 +2447,13 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<Width, Width>($request);
+    return client.send<Width$Response, Width$Response>($request);
   }
 
   @override
-  Future<Response<Sampling>> _inputPortsHdmiHdmiPortNumberMetaDataSamplingGet(
-      {required int? hdmiPortNumber}) {
+  Future<Response<Sampling$Response>>
+      _inputPortsHdmiHdmiPortNumberMetaDataSamplingGet(
+          {required int? hdmiPortNumber}) {
     final Uri $url =
         Uri.parse('/input/ports/hdmi/${hdmiPortNumber}/meta-data/sampling');
     final Request $request = Request(
@@ -2395,11 +2461,11 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<Sampling, Sampling>($request);
+    return client.send<Sampling$Response, Sampling$Response>($request);
   }
 
   @override
-  Future<Response<BlackLevel>>
+  Future<Response<BlackLevel$Response>>
       _inputPortsHdmiHdmiPortNumberProcAmpBlackLevelGet({
     int? $set,
     required int? hdmiPortNumber,
@@ -2413,11 +2479,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<BlackLevel, BlackLevel>($request);
+    return client.send<BlackLevel$Response, BlackLevel$Response>($request);
   }
 
   @override
-  Future<Response<BlackLevel>>
+  Future<Response<BlackLevel$Response>>
       _inputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBody? body,
@@ -2431,11 +2497,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<BlackLevel, BlackLevel>($request);
+    return client.send<BlackLevel$Response, BlackLevel$Response>($request);
   }
 
   @override
-  Future<Response<Contrast>> _inputPortsHdmiHdmiPortNumberProcAmpContrastGet({
+  Future<Response<Contrast$Response>>
+      _inputPortsHdmiHdmiPortNumberProcAmpContrastGet({
     int? $set,
     required int? hdmiPortNumber,
   }) {
@@ -2448,11 +2515,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Contrast, Contrast>($request);
+    return client.send<Contrast$Response, Contrast$Response>($request);
   }
 
   @override
-  Future<Response<Contrast>> _inputPortsHdmiHdmiPortNumberProcAmpContrastPut({
+  Future<Response<Contrast$Response>>
+      _inputPortsHdmiHdmiPortNumberProcAmpContrastPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBody? body,
   }) {
@@ -2465,11 +2533,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Contrast, Contrast>($request);
+    return client.send<Contrast$Response, Contrast$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _inputPortsHdmiHdmiPortNumberProcAmpHighlightBlueGet({
+  Future<Response<Blue$Response>>
+      _inputPortsHdmiHdmiPortNumberProcAmpHighlightBlueGet({
     int? $set,
     required int? hdmiPortNumber,
   }) {
@@ -2482,11 +2551,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _inputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut({
+  Future<Response<Blue$Response>>
+      _inputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBody?
         body,
@@ -2500,11 +2570,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Green>>
+  Future<Response<Green$Response>>
       _inputPortsHdmiHdmiPortNumberProcAmpHighlightGreenGet({
     int? $set,
     required int? hdmiPortNumber,
@@ -2518,11 +2588,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Green>>
+  Future<Response<Green$Response>>
       _inputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBody?
@@ -2537,11 +2607,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _inputPortsHdmiHdmiPortNumberProcAmpHighlightRedGet({
+  Future<Response<Red$Response>>
+      _inputPortsHdmiHdmiPortNumberProcAmpHighlightRedGet({
     int? $set,
     required int? hdmiPortNumber,
   }) {
@@ -2554,11 +2625,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _inputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut({
+  Future<Response<Red$Response>>
+      _inputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBody?
         body,
@@ -2572,11 +2644,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _inputPortsHdmiHdmiPortNumberProcAmpHueGet({
+  Future<Response<Hue$Response>> _inputPortsHdmiHdmiPortNumberProcAmpHueGet({
     int? $set,
     required int? hdmiPortNumber,
   }) {
@@ -2589,11 +2661,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _inputPortsHdmiHdmiPortNumberProcAmpHuePut({
+  Future<Response<Hue$Response>> _inputPortsHdmiHdmiPortNumberProcAmpHuePut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBody? body,
   }) {
@@ -2606,11 +2678,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>>
+  Future<Response<Saturation$Response>>
       _inputPortsHdmiHdmiPortNumberProcAmpSaturationGet({
     int? $set,
     required int? hdmiPortNumber,
@@ -2624,11 +2696,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>>
+  Future<Response<Saturation$Response>>
       _inputPortsHdmiHdmiPortNumberProcAmpSaturationPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBody? body,
@@ -2642,11 +2714,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _inputPortsHdmiHdmiPortNumberProcAmpShadowBlueGet({
+  Future<Response<Blue$Response>>
+      _inputPortsHdmiHdmiPortNumberProcAmpShadowBlueGet({
     int? $set,
     required int? hdmiPortNumber,
   }) {
@@ -2659,11 +2732,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _inputPortsHdmiHdmiPortNumberProcAmpShadowBluePut({
+  Future<Response<Blue$Response>>
+      _inputPortsHdmiHdmiPortNumberProcAmpShadowBluePut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBody? body,
   }) {
@@ -2676,11 +2750,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _inputPortsHdmiHdmiPortNumberProcAmpShadowGreenGet({
+  Future<Response<Green$Response>>
+      _inputPortsHdmiHdmiPortNumberProcAmpShadowGreenGet({
     int? $set,
     required int? hdmiPortNumber,
   }) {
@@ -2693,11 +2768,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _inputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut({
+  Future<Response<Green$Response>>
+      _inputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBody?
         body,
@@ -2711,11 +2787,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _inputPortsHdmiHdmiPortNumberProcAmpShadowRedGet({
+  Future<Response<Red$Response>>
+      _inputPortsHdmiHdmiPortNumberProcAmpShadowRedGet({
     int? $set,
     required int? hdmiPortNumber,
   }) {
@@ -2728,11 +2805,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _inputPortsHdmiHdmiPortNumberProcAmpShadowRedPut({
+  Future<Response<Red$Response>>
+      _inputPortsHdmiHdmiPortNumberProcAmpShadowRedPut({
     required int? hdmiPortNumber,
     required InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBody? body,
   }) {
@@ -2745,11 +2823,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Colour>>
+  Future<Response<Colour$Response>>
       _inputPortsSdiSdiPortNumberControlsColourSpaceColourGet({
     String? $set,
     required int? sdiPortNumber,
@@ -2763,11 +2841,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Colour, Colour>($request);
+    return client.send<Colour$Response, Colour$Response>($request);
   }
 
   @override
-  Future<Response<Colour>>
+  Future<Response<Colour$Response>>
       _inputPortsSdiSdiPortNumberControlsColourSpaceColourPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody?
@@ -2782,11 +2860,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Colour, Colour>($request);
+    return client.send<Colour$Response, Colour$Response>($request);
   }
 
   @override
-  Future<Response<Format>> _inputPortsSdiSdiPortNumberControlsHdrFormatGet({
+  Future<Response<Format$Response>>
+      _inputPortsSdiSdiPortNumberControlsHdrFormatGet({
     String? $set,
     required int? sdiPortNumber,
   }) {
@@ -2799,11 +2878,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Format, Format>($request);
+    return client.send<Format$Response, Format$Response>($request);
   }
 
   @override
-  Future<Response<Format>> _inputPortsSdiSdiPortNumberControlsHdrFormatPut({
+  Future<Response<Format$Response>>
+      _inputPortsSdiSdiPortNumberControlsHdrFormatPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody? body,
   }) {
@@ -2816,11 +2896,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Format, Format>($request);
+    return client.send<Format$Response, Format$Response>($request);
   }
 
   @override
-  Future<Response<AutoBrighten>>
+  Future<Response<AutoBrighten$Response>>
       _inputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenGet({
     bool? $set,
     required int? sdiPortNumber,
@@ -2834,11 +2914,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<AutoBrighten, AutoBrighten>($request);
+    return client.send<AutoBrighten$Response, AutoBrighten$Response>($request);
   }
 
   @override
-  Future<Response<AutoBrighten>>
+  Future<Response<AutoBrighten$Response>>
       _inputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBody?
@@ -2853,11 +2933,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<AutoBrighten, AutoBrighten>($request);
+    return client.send<AutoBrighten$Response, AutoBrighten$Response>($request);
   }
 
   @override
-  Future<Response<Gain>> _inputPortsSdiSdiPortNumberControlsHdrPqGainGet({
+  Future<Response<Gain$Response>>
+      _inputPortsSdiSdiPortNumberControlsHdrPqGainGet({
     num? $set,
     required int? sdiPortNumber,
   }) {
@@ -2870,11 +2951,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Gain, Gain>($request);
+    return client.send<Gain$Response, Gain$Response>($request);
   }
 
   @override
-  Future<Response<Gain>> _inputPortsSdiSdiPortNumberControlsHdrPqGainPut({
+  Future<Response<Gain$Response>>
+      _inputPortsSdiSdiPortNumberControlsHdrPqGainPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberControlsHdrPqGainPut$RequestBody? body,
   }) {
@@ -2887,11 +2969,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Gain, Gain>($request);
+    return client.send<Gain$Response, Gain$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>>
+  Future<Response<Enabled$Response>>
       _inputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledGet({
     bool? $set,
     required int? sdiPortNumber,
@@ -2905,11 +2987,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>>
+  Future<Response<Enabled$Response>>
       _inputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBody?
@@ -2924,11 +3006,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Luminance>>
+  Future<Response<Luminance$Response>>
       _inputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminanceGet({
     int? $set,
     required int? sdiPortNumber,
@@ -2942,11 +3024,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Luminance, Luminance>($request);
+    return client.send<Luminance$Response, Luminance$Response>($request);
   }
 
   @override
-  Future<Response<Luminance>>
+  Future<Response<Luminance$Response>>
       _inputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBody?
@@ -2961,11 +3043,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Luminance, Luminance>($request);
+    return client.send<Luminance$Response, Luminance$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsSdiSdiPortNumberDynacalBlueGamutGet({
+  Future<Response<Gamut$Response>>
+      _inputPortsSdiSdiPortNumberDynacalBlueGamutGet({
     String? $set,
     required int? sdiPortNumber,
   }) {
@@ -2978,11 +3061,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsSdiSdiPortNumberDynacalBlueGamutPut({
+  Future<Response<Gamut$Response>>
+      _inputPortsSdiSdiPortNumberDynacalBlueGamutPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody? body,
   }) {
@@ -2995,11 +3079,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsSdiSdiPortNumberDynacalBlueXGet({
+  Future<Response<X$Response>> _inputPortsSdiSdiPortNumberDynacalBlueXGet({
     num? $set,
     required int? sdiPortNumber,
   }) {
@@ -3012,11 +3096,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsSdiSdiPortNumberDynacalBlueXPut({
+  Future<Response<X$Response>> _inputPortsSdiSdiPortNumberDynacalBlueXPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBody? body,
   }) {
@@ -3029,11 +3113,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsSdiSdiPortNumberDynacalBlueYGet({
+  Future<Response<Y$Response>> _inputPortsSdiSdiPortNumberDynacalBlueYGet({
     num? $set,
     required int? sdiPortNumber,
   }) {
@@ -3046,11 +3130,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsSdiSdiPortNumberDynacalBlueYPut({
+  Future<Response<Y$Response>> _inputPortsSdiSdiPortNumberDynacalBlueYPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalBlueYPut$RequestBody? body,
   }) {
@@ -3063,11 +3147,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsSdiSdiPortNumberDynacalGreenGamutGet({
+  Future<Response<Gamut$Response>>
+      _inputPortsSdiSdiPortNumberDynacalGreenGamutGet({
     String? $set,
     required int? sdiPortNumber,
   }) {
@@ -3080,11 +3165,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsSdiSdiPortNumberDynacalGreenGamutPut({
+  Future<Response<Gamut$Response>>
+      _inputPortsSdiSdiPortNumberDynacalGreenGamutPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody? body,
   }) {
@@ -3097,11 +3183,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsSdiSdiPortNumberDynacalGreenXGet({
+  Future<Response<X$Response>> _inputPortsSdiSdiPortNumberDynacalGreenXGet({
     num? $set,
     required int? sdiPortNumber,
   }) {
@@ -3114,11 +3200,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsSdiSdiPortNumberDynacalGreenXPut({
+  Future<Response<X$Response>> _inputPortsSdiSdiPortNumberDynacalGreenXPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBody? body,
   }) {
@@ -3131,11 +3217,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsSdiSdiPortNumberDynacalGreenYGet({
+  Future<Response<Y$Response>> _inputPortsSdiSdiPortNumberDynacalGreenYGet({
     num? $set,
     required int? sdiPortNumber,
   }) {
@@ -3148,11 +3234,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsSdiSdiPortNumberDynacalGreenYPut({
+  Future<Response<Y$Response>> _inputPortsSdiSdiPortNumberDynacalGreenYPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBody? body,
   }) {
@@ -3165,11 +3251,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsSdiSdiPortNumberDynacalRedGamutGet({
+  Future<Response<Gamut$Response>>
+      _inputPortsSdiSdiPortNumberDynacalRedGamutGet({
     String? $set,
     required int? sdiPortNumber,
   }) {
@@ -3182,11 +3269,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsSdiSdiPortNumberDynacalRedGamutPut({
+  Future<Response<Gamut$Response>>
+      _inputPortsSdiSdiPortNumberDynacalRedGamutPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody? body,
   }) {
@@ -3199,11 +3287,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsSdiSdiPortNumberDynacalRedXGet({
+  Future<Response<X$Response>> _inputPortsSdiSdiPortNumberDynacalRedXGet({
     num? $set,
     required int? sdiPortNumber,
   }) {
@@ -3216,11 +3304,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsSdiSdiPortNumberDynacalRedXPut({
+  Future<Response<X$Response>> _inputPortsSdiSdiPortNumberDynacalRedXPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBody? body,
   }) {
@@ -3233,11 +3321,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsSdiSdiPortNumberDynacalRedYGet({
+  Future<Response<Y$Response>> _inputPortsSdiSdiPortNumberDynacalRedYGet({
     num? $set,
     required int? sdiPortNumber,
   }) {
@@ -3250,11 +3338,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsSdiSdiPortNumberDynacalRedYPut({
+  Future<Response<Y$Response>> _inputPortsSdiSdiPortNumberDynacalRedYPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalRedYPut$RequestBody? body,
   }) {
@@ -3267,11 +3355,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<ColourTemperature>>
+  Future<Response<ColourTemperature$Response>>
       _inputPortsSdiSdiPortNumberDynacalWhiteColourTemperatureGet({
     int? $set,
     required int? sdiPortNumber,
@@ -3285,11 +3373,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<ColourTemperature, ColourTemperature>($request);
+    return client
+        .send<ColourTemperature$Response, ColourTemperature$Response>($request);
   }
 
   @override
-  Future<Response<ColourTemperature>>
+  Future<Response<ColourTemperature$Response>>
       _inputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBody?
@@ -3304,11 +3393,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<ColourTemperature, ColourTemperature>($request);
+    return client
+        .send<ColourTemperature$Response, ColourTemperature$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsSdiSdiPortNumberDynacalWhiteGamutGet({
+  Future<Response<Gamut$Response>>
+      _inputPortsSdiSdiPortNumberDynacalWhiteGamutGet({
     String? $set,
     required int? sdiPortNumber,
   }) {
@@ -3321,11 +3412,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<Gamut>> _inputPortsSdiSdiPortNumberDynacalWhiteGamutPut({
+  Future<Response<Gamut$Response>>
+      _inputPortsSdiSdiPortNumberDynacalWhiteGamutPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody? body,
   }) {
@@ -3338,11 +3430,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Gamut, Gamut>($request);
+    return client.send<Gamut$Response, Gamut$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsSdiSdiPortNumberDynacalWhiteXGet({
+  Future<Response<X$Response>> _inputPortsSdiSdiPortNumberDynacalWhiteXGet({
     num? $set,
     required int? sdiPortNumber,
   }) {
@@ -3355,11 +3447,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<X>> _inputPortsSdiSdiPortNumberDynacalWhiteXPut({
+  Future<Response<X$Response>> _inputPortsSdiSdiPortNumberDynacalWhiteXPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBody? body,
   }) {
@@ -3372,11 +3464,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsSdiSdiPortNumberDynacalWhiteYGet({
+  Future<Response<Y$Response>> _inputPortsSdiSdiPortNumberDynacalWhiteYGet({
     num? $set,
     required int? sdiPortNumber,
   }) {
@@ -3389,11 +3481,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _inputPortsSdiSdiPortNumberDynacalWhiteYPut({
+  Future<Response<Y$Response>> _inputPortsSdiSdiPortNumberDynacalWhiteYPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberDynacalWhiteYPut$RequestBody? body,
   }) {
@@ -3406,11 +3498,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<RefreshRate>>
+  Future<Response<RefreshRate$Response>>
       _inputPortsSdiSdiPortNumberMetaDataRefreshRateGet(
           {required int? sdiPortNumber}) {
     final Uri $url =
@@ -3420,11 +3512,11 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<RefreshRate, RefreshRate>($request);
+    return client.send<RefreshRate$Response, RefreshRate$Response>($request);
   }
 
   @override
-  Future<Response<Height>>
+  Future<Response<Height$Response>>
       _inputPortsSdiSdiPortNumberMetaDataResolutionHeightGet(
           {required int? sdiPortNumber}) {
     final Uri $url = Uri.parse(
@@ -3434,12 +3526,13 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<Height, Height>($request);
+    return client.send<Height$Response, Height$Response>($request);
   }
 
   @override
-  Future<Response<Width>> _inputPortsSdiSdiPortNumberMetaDataResolutionWidthGet(
-      {required int? sdiPortNumber}) {
+  Future<Response<Width$Response>>
+      _inputPortsSdiSdiPortNumberMetaDataResolutionWidthGet(
+          {required int? sdiPortNumber}) {
     final Uri $url = Uri.parse(
         '/input/ports/sdi/${sdiPortNumber}/meta-data/resolution/width');
     final Request $request = Request(
@@ -3447,11 +3540,12 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<Width, Width>($request);
+    return client.send<Width$Response, Width$Response>($request);
   }
 
   @override
-  Future<Response<BlackLevel>> _inputPortsSdiSdiPortNumberProcAmpBlackLevelGet({
+  Future<Response<BlackLevel$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpBlackLevelGet({
     int? $set,
     required int? sdiPortNumber,
   }) {
@@ -3464,11 +3558,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<BlackLevel, BlackLevel>($request);
+    return client.send<BlackLevel$Response, BlackLevel$Response>($request);
   }
 
   @override
-  Future<Response<BlackLevel>> _inputPortsSdiSdiPortNumberProcAmpBlackLevelPut({
+  Future<Response<BlackLevel$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpBlackLevelPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBody? body,
   }) {
@@ -3481,11 +3576,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<BlackLevel, BlackLevel>($request);
+    return client.send<BlackLevel$Response, BlackLevel$Response>($request);
   }
 
   @override
-  Future<Response<Contrast>> _inputPortsSdiSdiPortNumberProcAmpContrastGet({
+  Future<Response<Contrast$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpContrastGet({
     int? $set,
     required int? sdiPortNumber,
   }) {
@@ -3498,11 +3594,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Contrast, Contrast>($request);
+    return client.send<Contrast$Response, Contrast$Response>($request);
   }
 
   @override
-  Future<Response<Contrast>> _inputPortsSdiSdiPortNumberProcAmpContrastPut({
+  Future<Response<Contrast$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpContrastPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBody? body,
   }) {
@@ -3515,11 +3612,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Contrast, Contrast>($request);
+    return client.send<Contrast$Response, Contrast$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _inputPortsSdiSdiPortNumberProcAmpHighlightBlueGet({
+  Future<Response<Blue$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpHighlightBlueGet({
     int? $set,
     required int? sdiPortNumber,
   }) {
@@ -3532,11 +3630,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _inputPortsSdiSdiPortNumberProcAmpHighlightBluePut({
+  Future<Response<Blue$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpHighlightBluePut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBody?
         body,
@@ -3550,11 +3649,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _inputPortsSdiSdiPortNumberProcAmpHighlightGreenGet({
+  Future<Response<Green$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpHighlightGreenGet({
     int? $set,
     required int? sdiPortNumber,
   }) {
@@ -3567,11 +3667,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _inputPortsSdiSdiPortNumberProcAmpHighlightGreenPut({
+  Future<Response<Green$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpHighlightGreenPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBody?
         body,
@@ -3585,11 +3686,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _inputPortsSdiSdiPortNumberProcAmpHighlightRedGet({
+  Future<Response<Red$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpHighlightRedGet({
     int? $set,
     required int? sdiPortNumber,
   }) {
@@ -3602,11 +3704,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _inputPortsSdiSdiPortNumberProcAmpHighlightRedPut({
+  Future<Response<Red$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpHighlightRedPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBody? body,
   }) {
@@ -3619,11 +3722,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _inputPortsSdiSdiPortNumberProcAmpHueGet({
+  Future<Response<Hue$Response>> _inputPortsSdiSdiPortNumberProcAmpHueGet({
     int? $set,
     required int? sdiPortNumber,
   }) {
@@ -3636,11 +3739,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _inputPortsSdiSdiPortNumberProcAmpHuePut({
+  Future<Response<Hue$Response>> _inputPortsSdiSdiPortNumberProcAmpHuePut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBody? body,
   }) {
@@ -3653,11 +3756,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _inputPortsSdiSdiPortNumberProcAmpSaturationGet({
+  Future<Response<Saturation$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpSaturationGet({
     int? $set,
     required int? sdiPortNumber,
   }) {
@@ -3670,11 +3774,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _inputPortsSdiSdiPortNumberProcAmpSaturationPut({
+  Future<Response<Saturation$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpSaturationPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBody? body,
   }) {
@@ -3687,11 +3792,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _inputPortsSdiSdiPortNumberProcAmpShadowBlueGet({
+  Future<Response<Blue$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpShadowBlueGet({
     int? $set,
     required int? sdiPortNumber,
   }) {
@@ -3704,11 +3810,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _inputPortsSdiSdiPortNumberProcAmpShadowBluePut({
+  Future<Response<Blue$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpShadowBluePut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBody? body,
   }) {
@@ -3721,11 +3828,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _inputPortsSdiSdiPortNumberProcAmpShadowGreenGet({
+  Future<Response<Green$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpShadowGreenGet({
     int? $set,
     required int? sdiPortNumber,
   }) {
@@ -3738,11 +3846,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _inputPortsSdiSdiPortNumberProcAmpShadowGreenPut({
+  Future<Response<Green$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpShadowGreenPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBody? body,
   }) {
@@ -3755,11 +3864,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _inputPortsSdiSdiPortNumberProcAmpShadowRedGet({
+  Future<Response<Red$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpShadowRedGet({
     int? $set,
     required int? sdiPortNumber,
   }) {
@@ -3772,11 +3882,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _inputPortsSdiSdiPortNumberProcAmpShadowRedPut({
+  Future<Response<Red$Response>>
+      _inputPortsSdiSdiPortNumberProcAmpShadowRedPut({
     required int? sdiPortNumber,
     required InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBody? body,
   }) {
@@ -3789,11 +3900,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Mode>> _outputDynacalPanelTypeBlueModeGet({
+  Future<Response<Mode$Response>> _outputDynacalPanelTypeBlueModeGet({
     String? $set,
     required String? panelType,
   }) {
@@ -3805,11 +3916,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Mode, Mode>($request);
+    return client.send<Mode$Response, Mode$Response>($request);
   }
 
   @override
-  Future<Response<Mode>> _outputDynacalPanelTypeBlueModePut({
+  Future<Response<Mode$Response>> _outputDynacalPanelTypeBlueModePut({
     required String? panelType,
     required OutputDynacalPanelTypeBlueModePut$RequestBody? body,
   }) {
@@ -3821,11 +3932,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Mode, Mode>($request);
+    return client.send<Mode$Response, Mode$Response>($request);
   }
 
   @override
-  Future<Response<X>> _outputDynacalPanelTypeBlueXGet({
+  Future<Response<X$Response>> _outputDynacalPanelTypeBlueXGet({
     num? $set,
     required String? panelType,
   }) {
@@ -3837,11 +3948,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<X>> _outputDynacalPanelTypeBlueXPut({
+  Future<Response<X$Response>> _outputDynacalPanelTypeBlueXPut({
     required String? panelType,
     required OutputDynacalPanelTypeBlueXPut$RequestBody? body,
   }) {
@@ -3853,11 +3964,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _outputDynacalPanelTypeBlueYGet({
+  Future<Response<Y$Response>> _outputDynacalPanelTypeBlueYGet({
     num? $set,
     required String? panelType,
   }) {
@@ -3869,11 +3980,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _outputDynacalPanelTypeBlueYPut({
+  Future<Response<Y$Response>> _outputDynacalPanelTypeBlueYPut({
     required String? panelType,
     required OutputDynacalPanelTypeBlueYPut$RequestBody? body,
   }) {
@@ -3885,11 +3996,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Mode>> _outputDynacalPanelTypeGreenModeGet({
+  Future<Response<Mode$Response>> _outputDynacalPanelTypeGreenModeGet({
     String? $set,
     required String? panelType,
   }) {
@@ -3901,11 +4012,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Mode, Mode>($request);
+    return client.send<Mode$Response, Mode$Response>($request);
   }
 
   @override
-  Future<Response<Mode>> _outputDynacalPanelTypeGreenModePut({
+  Future<Response<Mode$Response>> _outputDynacalPanelTypeGreenModePut({
     required String? panelType,
     required OutputDynacalPanelTypeGreenModePut$RequestBody? body,
   }) {
@@ -3917,11 +4028,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Mode, Mode>($request);
+    return client.send<Mode$Response, Mode$Response>($request);
   }
 
   @override
-  Future<Response<X>> _outputDynacalPanelTypeGreenXGet({
+  Future<Response<X$Response>> _outputDynacalPanelTypeGreenXGet({
     num? $set,
     required String? panelType,
   }) {
@@ -3933,11 +4044,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<X>> _outputDynacalPanelTypeGreenXPut({
+  Future<Response<X$Response>> _outputDynacalPanelTypeGreenXPut({
     required String? panelType,
     required OutputDynacalPanelTypeGreenXPut$RequestBody? body,
   }) {
@@ -3949,11 +4060,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _outputDynacalPanelTypeGreenYGet({
+  Future<Response<Y$Response>> _outputDynacalPanelTypeGreenYGet({
     num? $set,
     required String? panelType,
   }) {
@@ -3965,11 +4076,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _outputDynacalPanelTypeGreenYPut({
+  Future<Response<Y$Response>> _outputDynacalPanelTypeGreenYPut({
     required String? panelType,
     required OutputDynacalPanelTypeGreenYPut$RequestBody? body,
   }) {
@@ -3981,11 +4092,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<LuminanceOnlyFraction>>
+  Future<Response<LuminanceOnlyFraction$Response>>
       _outputDynacalPanelTypeLuminanceOnlyFractionGet({
     int? $set,
     required String? panelType,
@@ -3999,11 +4110,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<LuminanceOnlyFraction, LuminanceOnlyFraction>($request);
+    return client.send<LuminanceOnlyFraction$Response,
+        LuminanceOnlyFraction$Response>($request);
   }
 
   @override
-  Future<Response<LuminanceOnlyFraction>>
+  Future<Response<LuminanceOnlyFraction$Response>>
       _outputDynacalPanelTypeLuminanceOnlyFractionPut({
     required String? panelType,
     required OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBody? body,
@@ -4017,11 +4129,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<LuminanceOnlyFraction, LuminanceOnlyFraction>($request);
+    return client.send<LuminanceOnlyFraction$Response,
+        LuminanceOnlyFraction$Response>($request);
   }
 
   @override
-  Future<Response<Mode>> _outputDynacalPanelTypeModeGet({
+  Future<Response<Mode$Response>> _outputDynacalPanelTypeModeGet({
     String? $set,
     required String? panelType,
   }) {
@@ -4033,11 +4146,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Mode, Mode>($request);
+    return client.send<Mode$Response, Mode$Response>($request);
   }
 
   @override
-  Future<Response<Mode>> _outputDynacalPanelTypeModePut({
+  Future<Response<Mode$Response>> _outputDynacalPanelTypeModePut({
     required String? panelType,
     required OutputDynacalPanelTypeModePut$RequestBody? body,
   }) {
@@ -4049,11 +4162,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Mode, Mode>($request);
+    return client.send<Mode$Response, Mode$Response>($request);
   }
 
   @override
-  Future<Response<Mode>> _outputDynacalPanelTypeRedModeGet({
+  Future<Response<Mode$Response>> _outputDynacalPanelTypeRedModeGet({
     String? $set,
     required String? panelType,
   }) {
@@ -4065,11 +4178,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Mode, Mode>($request);
+    return client.send<Mode$Response, Mode$Response>($request);
   }
 
   @override
-  Future<Response<Mode>> _outputDynacalPanelTypeRedModePut({
+  Future<Response<Mode$Response>> _outputDynacalPanelTypeRedModePut({
     required String? panelType,
     required OutputDynacalPanelTypeRedModePut$RequestBody? body,
   }) {
@@ -4081,11 +4194,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Mode, Mode>($request);
+    return client.send<Mode$Response, Mode$Response>($request);
   }
 
   @override
-  Future<Response<X>> _outputDynacalPanelTypeRedXGet({
+  Future<Response<X$Response>> _outputDynacalPanelTypeRedXGet({
     num? $set,
     required String? panelType,
   }) {
@@ -4097,11 +4210,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<X>> _outputDynacalPanelTypeRedXPut({
+  Future<Response<X$Response>> _outputDynacalPanelTypeRedXPut({
     required String? panelType,
     required OutputDynacalPanelTypeRedXPut$RequestBody? body,
   }) {
@@ -4113,11 +4226,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<X, X>($request);
+    return client.send<X$Response, X$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _outputDynacalPanelTypeRedYGet({
+  Future<Response<Y$Response>> _outputDynacalPanelTypeRedYGet({
     num? $set,
     required String? panelType,
   }) {
@@ -4129,11 +4242,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Y>> _outputDynacalPanelTypeRedYPut({
+  Future<Response<Y$Response>> _outputDynacalPanelTypeRedYPut({
     required String? panelType,
     required OutputDynacalPanelTypeRedYPut$RequestBody? body,
   }) {
@@ -4145,11 +4258,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Y, Y>($request);
+    return client.send<Y$Response, Y$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _outputGlobalColourBrightnessGet({int? $set}) {
+  Future<Response<Brightness$Response>> _outputGlobalColourBrightnessGet(
+      {int? $set}) {
     final Uri $url = Uri.parse('/output/global-colour/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -4158,11 +4272,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _outputGlobalColourBrightnessPut(
+  Future<Response<Brightness$Response>> _outputGlobalColourBrightnessPut(
       {required OutputGlobalColourBrightnessPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/global-colour/brightness');
     final $body = body;
@@ -4172,12 +4286,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<ColourTemperature>> _outputGlobalColourColourTemperatureGet(
-      {int? $set}) {
+  Future<Response<ColourTemperature$Response>>
+      _outputGlobalColourColourTemperatureGet({int? $set}) {
     final Uri $url = Uri.parse('/output/global-colour/colour-temperature');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -4186,12 +4300,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<ColourTemperature, ColourTemperature>($request);
+    return client
+        .send<ColourTemperature$Response, ColourTemperature$Response>($request);
   }
 
   @override
-  Future<Response<ColourTemperature>> _outputGlobalColourColourTemperaturePut(
-      {required OutputGlobalColourColourTemperaturePut$RequestBody? body}) {
+  Future<Response<ColourTemperature$Response>>
+      _outputGlobalColourColourTemperaturePut(
+          {required OutputGlobalColourColourTemperaturePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/global-colour/colour-temperature');
     final $body = body;
     final Request $request = Request(
@@ -4200,11 +4316,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<ColourTemperature, ColourTemperature>($request);
+    return client
+        .send<ColourTemperature$Response, ColourTemperature$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputGlobalColourDarkMagicEnabledGet(
+  Future<Response<Enabled$Response>> _outputGlobalColourDarkMagicEnabledGet(
       {bool? $set}) {
     final Uri $url = Uri.parse('/output/global-colour/dark-magic/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -4214,11 +4331,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputGlobalColourDarkMagicEnabledPut(
+  Future<Response<Enabled$Response>> _outputGlobalColourDarkMagicEnabledPut(
       {required OutputGlobalColourDarkMagicEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/global-colour/dark-magic/enabled');
     final $body = body;
@@ -4228,11 +4345,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<HighlightOverbrightPixelsEnabled>>
+  Future<Response<HighlightOverbrightPixelsEnabled$Response>>
       _outputGlobalColourDynacalHighlightOverbrightPixelsEnabledGet(
           {bool? $set}) {
     final Uri $url = Uri.parse(
@@ -4244,12 +4361,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<HighlightOverbrightPixelsEnabled,
-        HighlightOverbrightPixelsEnabled>($request);
+    return client.send<HighlightOverbrightPixelsEnabled$Response,
+        HighlightOverbrightPixelsEnabled$Response>($request);
   }
 
   @override
-  Future<Response<HighlightOverbrightPixelsEnabled>>
+  Future<Response<HighlightOverbrightPixelsEnabled$Response>>
       _outputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut(
           {required OutputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut$RequestBody?
               body}) {
@@ -4262,12 +4379,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<HighlightOverbrightPixelsEnabled,
-        HighlightOverbrightPixelsEnabled>($request);
+    return client.send<HighlightOverbrightPixelsEnabled$Response,
+        HighlightOverbrightPixelsEnabled$Response>($request);
   }
 
   @override
-  Future<Response<HightlightOutOfGamutPixelsEnabled>>
+  Future<Response<HightlightOutOfGamutPixelsEnabled$Response>>
       _outputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledGet(
           {bool? $set}) {
     final Uri $url = Uri.parse(
@@ -4279,12 +4396,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<HightlightOutOfGamutPixelsEnabled,
-        HightlightOutOfGamutPixelsEnabled>($request);
+    return client.send<HightlightOutOfGamutPixelsEnabled$Response,
+        HightlightOutOfGamutPixelsEnabled$Response>($request);
   }
 
   @override
-  Future<Response<HightlightOutOfGamutPixelsEnabled>>
+  Future<Response<HightlightOutOfGamutPixelsEnabled$Response>>
       _outputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut(
           {required OutputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut$RequestBody?
               body}) {
@@ -4297,13 +4414,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<HightlightOutOfGamutPixelsEnabled,
-        HightlightOutOfGamutPixelsEnabled>($request);
+    return client.send<HightlightOutOfGamutPixelsEnabled$Response,
+        HightlightOutOfGamutPixelsEnabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputGlobalColourExtendedBitDepthEnabledGet(
-      {bool? $set}) {
+  Future<Response<Enabled$Response>>
+      _outputGlobalColourExtendedBitDepthEnabledGet({bool? $set}) {
     final Uri $url =
         Uri.parse('/output/global-colour/extended-bit-depth/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -4313,13 +4430,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputGlobalColourExtendedBitDepthEnabledPut(
-      {required OutputGlobalColourExtendedBitDepthEnabledPut$RequestBody?
-          body}) {
+  Future<Response<Enabled$Response>>
+      _outputGlobalColourExtendedBitDepthEnabledPut(
+          {required OutputGlobalColourExtendedBitDepthEnabledPut$RequestBody?
+              body}) {
     final Uri $url =
         Uri.parse('/output/global-colour/extended-bit-depth/enabled');
     final $body = body;
@@ -4329,11 +4447,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _outputGlobalColourGainsBlueGet({num? $set}) {
+  Future<Response<Blue$Response>> _outputGlobalColourGainsBlueGet({num? $set}) {
     final Uri $url = Uri.parse('/output/global-colour/gains/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -4342,11 +4460,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _outputGlobalColourGainsBluePut(
+  Future<Response<Blue$Response>> _outputGlobalColourGainsBluePut(
       {required OutputGlobalColourGainsBluePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/global-colour/gains/blue');
     final $body = body;
@@ -4356,11 +4474,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _outputGlobalColourGainsGreenGet({num? $set}) {
+  Future<Response<Green$Response>> _outputGlobalColourGainsGreenGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/output/global-colour/gains/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -4369,11 +4488,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _outputGlobalColourGainsGreenPut(
+  Future<Response<Green$Response>> _outputGlobalColourGainsGreenPut(
       {required OutputGlobalColourGainsGreenPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/global-colour/gains/green');
     final $body = body;
@@ -4383,11 +4502,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Intensity>> _outputGlobalColourGainsIntensityGet(
+  Future<Response<Intensity$Response>> _outputGlobalColourGainsIntensityGet(
       {num? $set}) {
     final Uri $url = Uri.parse('/output/global-colour/gains/intensity');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -4397,11 +4516,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Intensity, Intensity>($request);
+    return client.send<Intensity$Response, Intensity$Response>($request);
   }
 
   @override
-  Future<Response<Intensity>> _outputGlobalColourGainsIntensityPut(
+  Future<Response<Intensity$Response>> _outputGlobalColourGainsIntensityPut(
       {required OutputGlobalColourGainsIntensityPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/global-colour/gains/intensity');
     final $body = body;
@@ -4411,11 +4530,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Intensity, Intensity>($request);
+    return client.send<Intensity$Response, Intensity$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _outputGlobalColourGainsRedGet({num? $set}) {
+  Future<Response<Red$Response>> _outputGlobalColourGainsRedGet({num? $set}) {
     final Uri $url = Uri.parse('/output/global-colour/gains/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -4424,11 +4543,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _outputGlobalColourGainsRedPut(
+  Future<Response<Red$Response>> _outputGlobalColourGainsRedPut(
       {required OutputGlobalColourGainsRedPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/global-colour/gains/red');
     final $body = body;
@@ -4438,11 +4557,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Gamma>> _outputGlobalColourGammaGet({num? $set}) {
+  Future<Response<Gamma$Response>> _outputGlobalColourGammaGet({num? $set}) {
     final Uri $url = Uri.parse('/output/global-colour/gamma');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -4451,11 +4570,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Gamma, Gamma>($request);
+    return client.send<Gamma$Response, Gamma$Response>($request);
   }
 
   @override
-  Future<Response<Gamma>> _outputGlobalColourGammaPut(
+  Future<Response<Gamma$Response>> _outputGlobalColourGammaPut(
       {required OutputGlobalColourGammaPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/global-colour/gamma');
     final $body = body;
@@ -4465,11 +4584,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Gamma, Gamma>($request);
+    return client.send<Gamma$Response, Gamma$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputGlobalColourOverdriveEnabledGet(
+  Future<Response<Enabled$Response>> _outputGlobalColourOverdriveEnabledGet(
       {bool? $set}) {
     final Uri $url = Uri.parse('/output/global-colour/overdrive/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -4479,11 +4598,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputGlobalColourOverdriveEnabledPut(
+  Future<Response<Enabled$Response>> _outputGlobalColourOverdriveEnabledPut(
       {required OutputGlobalColourOverdriveEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/global-colour/overdrive/enabled');
     final $body = body;
@@ -4493,11 +4612,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputGlobalColourPuretoneEnabledGet(
+  Future<Response<Enabled$Response>> _outputGlobalColourPuretoneEnabledGet(
       {bool? $set}) {
     final Uri $url = Uri.parse('/output/global-colour/puretone/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -4507,11 +4626,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputGlobalColourPuretoneEnabledPut(
+  Future<Response<Enabled$Response>> _outputGlobalColourPuretoneEnabledPut(
       {required OutputGlobalColourPuretoneEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/global-colour/puretone/enabled');
     final $body = body;
@@ -4521,11 +4640,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<BitDepth>> _outputNetworkBitDepthGet({int? $set}) {
+  Future<Response<BitDepth$Response>> _outputNetworkBitDepthGet({int? $set}) {
     final Uri $url = Uri.parse('/output/network/bit-depth');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -4534,11 +4653,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<BitDepth, BitDepth>($request);
+    return client.send<BitDepth$Response, BitDepth$Response>($request);
   }
 
   @override
-  Future<Response<BitDepth>> _outputNetworkBitDepthPut(
+  Future<Response<BitDepth$Response>> _outputNetworkBitDepthPut(
       {required OutputNetworkBitDepthPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/network/bit-depth');
     final $body = body;
@@ -4548,12 +4667,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<BitDepth, BitDepth>($request);
+    return client.send<BitDepth$Response, BitDepth$Response>($request);
   }
 
   @override
-  Future<Response<State>> _outputNetworkCableRedundancyLoopsLoopNumberStateGet(
-      {required int? loopNumber}) {
+  Future<Response<State$Response>>
+      _outputNetworkCableRedundancyLoopsLoopNumberStateGet(
+          {required int? loopNumber}) {
     final Uri $url =
         Uri.parse('/output/network/cable-redundancy/loops/${loopNumber}/state');
     final Request $request = Request(
@@ -4561,11 +4681,11 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<State, State>($request);
+    return client.send<State$Response, State$Response>($request);
   }
 
   @override
-  Future<Response<RequestFailover>>
+  Future<Response<RequestFailover$Response>>
       _outputNetworkFailoverActionsRequestFailoverGet({String? $set}) {
     final Uri $url =
         Uri.parse('/output/network/failover/actions/request-failover');
@@ -4576,11 +4696,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<RequestFailover, RequestFailover>($request);
+    return client
+        .send<RequestFailover$Response, RequestFailover$Response>($request);
   }
 
   @override
-  Future<Response<RequestFailover>>
+  Future<Response<RequestFailover$Response>>
       _outputNetworkFailoverActionsRequestFailoverPut(
           {required OutputNetworkFailoverActionsRequestFailoverPut$RequestBody?
               body}) {
@@ -4593,11 +4714,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<RequestFailover, RequestFailover>($request);
+    return client
+        .send<RequestFailover$Response, RequestFailover$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputNetworkFailoverSettingsEnabledGet(
+  Future<Response<Enabled$Response>> _outputNetworkFailoverSettingsEnabledGet(
       {bool? $set}) {
     final Uri $url = Uri.parse('/output/network/failover/settings/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -4607,11 +4729,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputNetworkFailoverSettingsEnabledPut(
+  Future<Response<Enabled$Response>> _outputNetworkFailoverSettingsEnabledPut(
       {required OutputNetworkFailoverSettingsEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/network/failover/settings/enabled');
     final $body = body;
@@ -4621,11 +4743,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<OnButtonPress>>
+  Future<Response<OnButtonPress$Response>>
       _outputNetworkFailoverSettingsModesOnButtonPressGet({bool? $set}) {
     final Uri $url =
         Uri.parse('/output/network/failover/settings/modes/on-button-press');
@@ -4636,15 +4758,15 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<OnButtonPress, OnButtonPress>($request);
+    return client
+        .send<OnButtonPress$Response, OnButtonPress$Response>($request);
   }
 
   @override
-  Future<
-      Response<
-          OnButtonPress>> _outputNetworkFailoverSettingsModesOnButtonPressPut(
-      {required OutputNetworkFailoverSettingsModesOnButtonPressPut$RequestBody?
-          body}) {
+  Future<Response<OnButtonPress$Response>>
+      _outputNetworkFailoverSettingsModesOnButtonPressPut(
+          {required OutputNetworkFailoverSettingsModesOnButtonPressPut$RequestBody?
+              body}) {
     final Uri $url =
         Uri.parse('/output/network/failover/settings/modes/on-button-press');
     final $body = body;
@@ -4654,11 +4776,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<OnButtonPress, OnButtonPress>($request);
+    return client
+        .send<OnButtonPress$Response, OnButtonPress$Response>($request);
   }
 
   @override
-  Future<Response<OnPartnerFail>>
+  Future<Response<OnPartnerFail$Response>>
       _outputNetworkFailoverSettingsModesOnPartnerFailGet({bool? $set}) {
     final Uri $url =
         Uri.parse('/output/network/failover/settings/modes/on-partner-fail');
@@ -4669,15 +4792,15 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<OnPartnerFail, OnPartnerFail>($request);
+    return client
+        .send<OnPartnerFail$Response, OnPartnerFail$Response>($request);
   }
 
   @override
-  Future<
-      Response<
-          OnPartnerFail>> _outputNetworkFailoverSettingsModesOnPartnerFailPut(
-      {required OutputNetworkFailoverSettingsModesOnPartnerFailPut$RequestBody?
-          body}) {
+  Future<Response<OnPartnerFail$Response>>
+      _outputNetworkFailoverSettingsModesOnPartnerFailPut(
+          {required OutputNetworkFailoverSettingsModesOnPartnerFailPut$RequestBody?
+              body}) {
     final Uri $url =
         Uri.parse('/output/network/failover/settings/modes/on-partner-fail');
     final $body = body;
@@ -4687,11 +4810,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<OnPartnerFail, OnPartnerFail>($request);
+    return client
+        .send<OnPartnerFail$Response, OnPartnerFail$Response>($request);
   }
 
   @override
-  Future<Response<OnPartnerVideoFail>>
+  Future<Response<OnPartnerVideoFail$Response>>
       _outputNetworkFailoverSettingsModesOnPartnerVideoFailGet({bool? $set}) {
     final Uri $url = Uri.parse(
         '/output/network/failover/settings/modes/on-partner-video-fail');
@@ -4702,11 +4826,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<OnPartnerVideoFail, OnPartnerVideoFail>($request);
+    return client.send<OnPartnerVideoFail$Response,
+        OnPartnerVideoFail$Response>($request);
   }
 
   @override
-  Future<Response<OnPartnerVideoFail>>
+  Future<Response<OnPartnerVideoFail$Response>>
       _outputNetworkFailoverSettingsModesOnPartnerVideoFailPut(
           {required OutputNetworkFailoverSettingsModesOnPartnerVideoFailPut$RequestBody?
               body}) {
@@ -4719,11 +4844,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<OnPartnerVideoFail, OnPartnerVideoFail>($request);
+    return client.send<OnPartnerVideoFail$Response,
+        OnPartnerVideoFail$Response>($request);
   }
 
   @override
-  Future<Response<PreferPrimary>>
+  Future<Response<PreferPrimary$Response>>
       _outputNetworkFailoverSettingsModesPreferPrimaryGet({bool? $set}) {
     final Uri $url =
         Uri.parse('/output/network/failover/settings/modes/prefer-primary');
@@ -4734,15 +4860,15 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<PreferPrimary, PreferPrimary>($request);
+    return client
+        .send<PreferPrimary$Response, PreferPrimary$Response>($request);
   }
 
   @override
-  Future<
-      Response<
-          PreferPrimary>> _outputNetworkFailoverSettingsModesPreferPrimaryPut(
-      {required OutputNetworkFailoverSettingsModesPreferPrimaryPut$RequestBody?
-          body}) {
+  Future<Response<PreferPrimary$Response>>
+      _outputNetworkFailoverSettingsModesPreferPrimaryPut(
+          {required OutputNetworkFailoverSettingsModesPreferPrimaryPut$RequestBody?
+              body}) {
     final Uri $url =
         Uri.parse('/output/network/failover/settings/modes/prefer-primary');
     final $body = body;
@@ -4752,33 +4878,34 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<PreferPrimary, PreferPrimary>($request);
+    return client
+        .send<PreferPrimary$Response, PreferPrimary$Response>($request);
   }
 
   @override
-  Future<Response<Role>> _outputNetworkFailoverSettingsRoleGet() {
+  Future<Response<Role$Response>> _outputNetworkFailoverSettingsRoleGet() {
     final Uri $url = Uri.parse('/output/network/failover/settings/role');
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
     );
-    return client.send<Role, Role>($request);
+    return client.send<Role$Response, Role$Response>($request);
   }
 
   @override
-  Future<Response<IsActive>> _outputNetworkFailoverStateIsActiveGet() {
+  Future<Response<IsActive$Response>> _outputNetworkFailoverStateIsActiveGet() {
     final Uri $url = Uri.parse('/output/network/failover/state/is-active');
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
     );
-    return client.send<IsActive, IsActive>($request);
+    return client.send<IsActive$Response, IsActive$Response>($request);
   }
 
   @override
-  Future<Response<IsPartnerPresent>>
+  Future<Response<IsPartnerPresent$Response>>
       _outputNetworkFailoverStateIsPartnerPresentGet() {
     final Uri $url =
         Uri.parse('/output/network/failover/state/is-partner-present');
@@ -4787,11 +4914,12 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<IsPartnerPresent, IsPartnerPresent>($request);
+    return client
+        .send<IsPartnerPresent$Response, IsPartnerPresent$Response>($request);
   }
 
   @override
-  Future<Response<PartnerAbsenceDuration>>
+  Future<Response<PartnerAbsenceDuration$Response>>
       _outputNetworkFailoverStatePartnerAbsenceDurationGet() {
     final Uri $url =
         Uri.parse('/output/network/failover/state/partner-absence-duration');
@@ -4800,23 +4928,24 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client
-        .send<PartnerAbsenceDuration, PartnerAbsenceDuration>($request);
+    return client.send<PartnerAbsenceDuration$Response,
+        PartnerAbsenceDuration$Response>($request);
   }
 
   @override
-  Future<Response<PartnerName>> _outputNetworkFailoverStatePartnerNameGet() {
+  Future<Response<PartnerName$Response>>
+      _outputNetworkFailoverStatePartnerNameGet() {
     final Uri $url = Uri.parse('/output/network/failover/state/partner-name');
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
     );
-    return client.send<PartnerName, PartnerName>($request);
+    return client.send<PartnerName$Response, PartnerName$Response>($request);
   }
 
   @override
-  Future<Response<PartnerSerial>>
+  Future<Response<PartnerSerial$Response>>
       _outputNetworkFailoverStatePartnerSerialGet() {
     final Uri $url = Uri.parse('/output/network/failover/state/partner-serial');
     final Request $request = Request(
@@ -4824,11 +4953,12 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<PartnerSerial, PartnerSerial>($request);
+    return client
+        .send<PartnerSerial$Response, PartnerSerial$Response>($request);
   }
 
   @override
-  Future<Response<PartnerVideoAbsenceDuration>>
+  Future<Response<PartnerVideoAbsenceDuration$Response>>
       _outputNetworkFailoverStatePartnerVideoAbsenceDurationGet() {
     final Uri $url = Uri.parse(
         '/output/network/failover/state/partner-video-absence-duration');
@@ -4837,13 +4967,13 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<PartnerVideoAbsenceDuration,
-        PartnerVideoAbsenceDuration>($request);
+    return client.send<PartnerVideoAbsenceDuration$Response,
+        PartnerVideoAbsenceDuration$Response>($request);
   }
 
   @override
-  Future<Response<FrameRateMultiplier>> _outputNetworkFrameRateMultiplierGet(
-      {int? $set}) {
+  Future<Response<FrameRateMultiplier$Response>>
+      _outputNetworkFrameRateMultiplierGet({int? $set}) {
     final Uri $url = Uri.parse('/output/network/frame-rate-multiplier');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -4852,12 +4982,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<FrameRateMultiplier, FrameRateMultiplier>($request);
+    return client.send<FrameRateMultiplier$Response,
+        FrameRateMultiplier$Response>($request);
   }
 
   @override
-  Future<Response<FrameRateMultiplier>> _outputNetworkFrameRateMultiplierPut(
-      {required OutputNetworkFrameRateMultiplierPut$RequestBody? body}) {
+  Future<Response<FrameRateMultiplier$Response>>
+      _outputNetworkFrameRateMultiplierPut(
+          {required OutputNetworkFrameRateMultiplierPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/network/frame-rate-multiplier');
     final $body = body;
     final Request $request = Request(
@@ -4866,11 +4998,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<FrameRateMultiplier, FrameRateMultiplier>($request);
+    return client.send<FrameRateMultiplier$Response,
+        FrameRateMultiplier$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputNetworkFrameRemappingEnabledGet(
+  Future<Response<Enabled$Response>> _outputNetworkFrameRemappingEnabledGet(
       {bool? $set}) {
     final Uri $url = Uri.parse('/output/network/frame-remapping/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -4880,11 +5013,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputNetworkFrameRemappingEnabledPut(
+  Future<Response<Enabled$Response>> _outputNetworkFrameRemappingEnabledPut(
       {required OutputNetworkFrameRemappingEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/network/frame-remapping/enabled');
     final $body = body;
@@ -4894,11 +5027,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _outputNetworkFrameRemappingFramesFrameBlueGet({
+  Future<Response<Blue$Response>>
+      _outputNetworkFrameRemappingFramesFrameBlueGet({
     int? $set,
     required int? frame,
   }) {
@@ -4911,11 +5045,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _outputNetworkFrameRemappingFramesFrameBluePut({
+  Future<Response<Blue$Response>>
+      _outputNetworkFrameRemappingFramesFrameBluePut({
     required int? frame,
     required OutputNetworkFrameRemappingFramesFrameBluePut$RequestBody? body,
   }) {
@@ -4928,11 +5063,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _outputNetworkFrameRemappingFramesFrameGreenGet({
+  Future<Response<Green$Response>>
+      _outputNetworkFrameRemappingFramesFrameGreenGet({
     int? $set,
     required int? frame,
   }) {
@@ -4945,11 +5081,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _outputNetworkFrameRemappingFramesFrameGreenPut({
+  Future<Response<Green$Response>>
+      _outputNetworkFrameRemappingFramesFrameGreenPut({
     required int? frame,
     required OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBody? body,
   }) {
@@ -4962,11 +5099,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Mode>> _outputNetworkFrameRemappingFramesFrameModeGet({
+  Future<Response<Mode$Response>>
+      _outputNetworkFrameRemappingFramesFrameModeGet({
     String? $set,
     required int? frame,
   }) {
@@ -4979,11 +5117,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Mode, Mode>($request);
+    return client.send<Mode$Response, Mode$Response>($request);
   }
 
   @override
-  Future<Response<Mode>> _outputNetworkFrameRemappingFramesFrameModePut({
+  Future<Response<Mode$Response>>
+      _outputNetworkFrameRemappingFramesFrameModePut({
     required int? frame,
     required OutputNetworkFrameRemappingFramesFrameModePut$RequestBody? body,
   }) {
@@ -4996,11 +5135,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Mode, Mode>($request);
+    return client.send<Mode$Response, Mode$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _outputNetworkFrameRemappingFramesFrameRedGet({
+  Future<Response<Red$Response>> _outputNetworkFrameRemappingFramesFrameRedGet({
     int? $set,
     required int? frame,
   }) {
@@ -5013,11 +5152,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _outputNetworkFrameRemappingFramesFrameRedPut({
+  Future<Response<Red$Response>> _outputNetworkFrameRemappingFramesFrameRedPut({
     required int? frame,
     required OutputNetworkFrameRemappingFramesFrameRedPut$RequestBody? body,
   }) {
@@ -5030,11 +5169,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<XOffset>> _outputNetworkFrameRemappingFramesFrameXOffsetGet({
+  Future<Response<XOffset$Response>>
+      _outputNetworkFrameRemappingFramesFrameXOffsetGet({
     int? $set,
     required int? frame,
   }) {
@@ -5047,11 +5187,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<XOffset, XOffset>($request);
+    return client.send<XOffset$Response, XOffset$Response>($request);
   }
 
   @override
-  Future<Response<XOffset>> _outputNetworkFrameRemappingFramesFrameXOffsetPut({
+  Future<Response<XOffset$Response>>
+      _outputNetworkFrameRemappingFramesFrameXOffsetPut({
     required int? frame,
     required OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBody? body,
   }) {
@@ -5064,11 +5205,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<XOffset, XOffset>($request);
+    return client.send<XOffset$Response, XOffset$Response>($request);
   }
 
   @override
-  Future<Response<YOffset>> _outputNetworkFrameRemappingFramesFrameYOffsetGet({
+  Future<Response<YOffset$Response>>
+      _outputNetworkFrameRemappingFramesFrameYOffsetGet({
     int? $set,
     required int? frame,
   }) {
@@ -5081,11 +5223,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<YOffset, YOffset>($request);
+    return client.send<YOffset$Response, YOffset$Response>($request);
   }
 
   @override
-  Future<Response<YOffset>> _outputNetworkFrameRemappingFramesFrameYOffsetPut({
+  Future<Response<YOffset$Response>>
+      _outputNetworkFrameRemappingFramesFrameYOffsetPut({
     required int? frame,
     required OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBody? body,
   }) {
@@ -5098,11 +5241,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<YOffset, YOffset>($request);
+    return client.send<YOffset$Response, YOffset$Response>($request);
   }
 
   @override
-  Future<Response<InternalRate>> _outputNetworkGenlockInternalRateGet(
+  Future<Response<InternalRate$Response>> _outputNetworkGenlockInternalRateGet(
       {num? $set}) {
     final Uri $url = Uri.parse('/output/network/genlock/internal-rate');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -5112,11 +5255,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<InternalRate, InternalRate>($request);
+    return client.send<InternalRate$Response, InternalRate$Response>($request);
   }
 
   @override
-  Future<Response<InternalRate>> _outputNetworkGenlockInternalRatePut(
+  Future<Response<InternalRate$Response>> _outputNetworkGenlockInternalRatePut(
       {required OutputNetworkGenlockInternalRatePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/network/genlock/internal-rate');
     final $body = body;
@@ -5126,12 +5269,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<InternalRate, InternalRate>($request);
+    return client.send<InternalRate$Response, InternalRate$Response>($request);
   }
 
   @override
-  Future<Response<Lines>> _outputNetworkGenlockPhaseOffsetAbsoluteLinesGet(
-      {int? $set}) {
+  Future<Response<Lines$Response>>
+      _outputNetworkGenlockPhaseOffsetAbsoluteLinesGet({int? $set}) {
     final Uri $url =
         Uri.parse('/output/network/genlock/phase-offset/absolute/lines');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -5141,13 +5284,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Lines, Lines>($request);
+    return client.send<Lines$Response, Lines$Response>($request);
   }
 
   @override
-  Future<Response<Lines>> _outputNetworkGenlockPhaseOffsetAbsoluteLinesPut(
-      {required OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBody?
-          body}) {
+  Future<Response<Lines$Response>>
+      _outputNetworkGenlockPhaseOffsetAbsoluteLinesPut(
+          {required OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBody?
+              body}) {
     final Uri $url =
         Uri.parse('/output/network/genlock/phase-offset/absolute/lines');
     final $body = body;
@@ -5157,12 +5301,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Lines, Lines>($request);
+    return client.send<Lines$Response, Lines$Response>($request);
   }
 
   @override
-  Future<Response<Pixels>> _outputNetworkGenlockPhaseOffsetAbsolutePixelsGet(
-      {int? $set}) {
+  Future<Response<Pixels$Response>>
+      _outputNetworkGenlockPhaseOffsetAbsolutePixelsGet({int? $set}) {
     final Uri $url =
         Uri.parse('/output/network/genlock/phase-offset/absolute/pixels');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -5172,11 +5316,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Pixels, Pixels>($request);
+    return client.send<Pixels$Response, Pixels$Response>($request);
   }
 
   @override
-  Future<Response<Pixels>> _outputNetworkGenlockPhaseOffsetAbsolutePixelsPut(
+  Future<
+      Response<
+          Pixels$Response>> _outputNetworkGenlockPhaseOffsetAbsolutePixelsPut(
       {required OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBody?
           body}) {
     final Uri $url =
@@ -5188,11 +5334,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Pixels, Pixels>($request);
+    return client.send<Pixels$Response, Pixels$Response>($request);
   }
 
   @override
-  Future<Response<Angle>> _outputNetworkGenlockPhaseOffsetAngleGet(
+  Future<Response<Angle$Response>> _outputNetworkGenlockPhaseOffsetAngleGet(
       {num? $set}) {
     final Uri $url = Uri.parse('/output/network/genlock/phase-offset/angle');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -5202,11 +5348,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Angle, Angle>($request);
+    return client.send<Angle$Response, Angle$Response>($request);
   }
 
   @override
-  Future<Response<Angle>> _outputNetworkGenlockPhaseOffsetAnglePut(
+  Future<Response<Angle$Response>> _outputNetworkGenlockPhaseOffsetAnglePut(
       {required OutputNetworkGenlockPhaseOffsetAnglePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/network/genlock/phase-offset/angle');
     final $body = body;
@@ -5216,12 +5362,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Angle, Angle>($request);
+    return client.send<Angle$Response, Angle$Response>($request);
   }
 
   @override
-  Future<Response<Fraction>> _outputNetworkGenlockPhaseOffsetFractionGet(
-      {num? $set}) {
+  Future<Response<Fraction$Response>>
+      _outputNetworkGenlockPhaseOffsetFractionGet({num? $set}) {
     final Uri $url = Uri.parse('/output/network/genlock/phase-offset/fraction');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -5230,12 +5376,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Fraction, Fraction>($request);
+    return client.send<Fraction$Response, Fraction$Response>($request);
   }
 
   @override
-  Future<Response<Fraction>> _outputNetworkGenlockPhaseOffsetFractionPut(
-      {required OutputNetworkGenlockPhaseOffsetFractionPut$RequestBody? body}) {
+  Future<Response<Fraction$Response>>
+      _outputNetworkGenlockPhaseOffsetFractionPut(
+          {required OutputNetworkGenlockPhaseOffsetFractionPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/output/network/genlock/phase-offset/fraction');
     final $body = body;
     final Request $request = Request(
@@ -5244,11 +5392,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Fraction, Fraction>($request);
+    return client.send<Fraction$Response, Fraction$Response>($request);
   }
 
   @override
-  Future<Response<Mode>> _outputNetworkGenlockPhaseOffsetModeGet(
+  Future<Response<Mode$Response>> _outputNetworkGenlockPhaseOffsetModeGet(
       {String? $set}) {
     final Uri $url = Uri.parse('/output/network/genlock/phase-offset/mode');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -5258,11 +5406,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Mode, Mode>($request);
+    return client.send<Mode$Response, Mode$Response>($request);
   }
 
   @override
-  Future<Response<Mode>> _outputNetworkGenlockPhaseOffsetModePut(
+  Future<Response<Mode$Response>> _outputNetworkGenlockPhaseOffsetModePut(
       {required OutputNetworkGenlockPhaseOffsetModePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/network/genlock/phase-offset/mode');
     final $body = body;
@@ -5272,11 +5420,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Mode, Mode>($request);
+    return client.send<Mode$Response, Mode$Response>($request);
   }
 
   @override
-  Future<Response<Source>> _outputNetworkGenlockSourceGet({String? $set}) {
+  Future<Response<Source$Response>> _outputNetworkGenlockSourceGet(
+      {String? $set}) {
     final Uri $url = Uri.parse('/output/network/genlock/source');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -5285,11 +5434,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Source, Source>($request);
+    return client.send<Source$Response, Source$Response>($request);
   }
 
   @override
-  Future<Response<Source>> _outputNetworkGenlockSourcePut(
+  Future<Response<Source$Response>> _outputNetworkGenlockSourcePut(
       {required OutputNetworkGenlockSourcePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/network/genlock/source');
     final $body = body;
@@ -5299,11 +5448,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Source, Source>($request);
+    return client.send<Source$Response, Source$Response>($request);
   }
 
   @override
-  Future<Response<CustomFrameRate>>
+  Future<Response<CustomFrameRate$Response>>
       _outputNetworkShuttersyncAngleSettingsCustomFrameRateGet({num? $set}) {
     final Uri $url = Uri.parse(
         '/output/network/shuttersync/angle-settings/custom-frame-rate');
@@ -5314,11 +5463,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<CustomFrameRate, CustomFrameRate>($request);
+    return client
+        .send<CustomFrameRate$Response, CustomFrameRate$Response>($request);
   }
 
   @override
-  Future<Response<CustomFrameRate>>
+  Future<Response<CustomFrameRate$Response>>
       _outputNetworkShuttersyncAngleSettingsCustomFrameRatePut(
           {required OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBody?
               body}) {
@@ -5331,11 +5481,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<CustomFrameRate, CustomFrameRate>($request);
+    return client
+        .send<CustomFrameRate$Response, CustomFrameRate$Response>($request);
   }
 
   @override
-  Future<Response<ShutterAngle>>
+  Future<Response<ShutterAngle$Response>>
       _outputNetworkShuttersyncAngleSettingsShutterAngleGet({num? $set}) {
     final Uri $url =
         Uri.parse('/output/network/shuttersync/angle-settings/shutter-angle');
@@ -5346,15 +5497,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<ShutterAngle, ShutterAngle>($request);
+    return client.send<ShutterAngle$Response, ShutterAngle$Response>($request);
   }
 
   @override
-  Future<
-      Response<
-          ShutterAngle>> _outputNetworkShuttersyncAngleSettingsShutterAnglePut(
-      {required OutputNetworkShuttersyncAngleSettingsShutterAnglePut$RequestBody?
-          body}) {
+  Future<Response<ShutterAngle$Response>>
+      _outputNetworkShuttersyncAngleSettingsShutterAnglePut(
+          {required OutputNetworkShuttersyncAngleSettingsShutterAnglePut$RequestBody?
+              body}) {
     final Uri $url =
         Uri.parse('/output/network/shuttersync/angle-settings/shutter-angle');
     final $body = body;
@@ -5364,11 +5514,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<ShutterAngle, ShutterAngle>($request);
+    return client.send<ShutterAngle$Response, ShutterAngle$Response>($request);
   }
 
   @override
-  Future<Response<UseCustomFrameRate>>
+  Future<Response<UseCustomFrameRate$Response>>
       _outputNetworkShuttersyncAngleSettingsUseCustomFrameRateGet(
           {bool? $set}) {
     final Uri $url = Uri.parse(
@@ -5380,11 +5530,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<UseCustomFrameRate, UseCustomFrameRate>($request);
+    return client.send<UseCustomFrameRate$Response,
+        UseCustomFrameRate$Response>($request);
   }
 
   @override
-  Future<Response<UseCustomFrameRate>>
+  Future<Response<UseCustomFrameRate$Response>>
       _outputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut(
           {required OutputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut$RequestBody?
               body}) {
@@ -5397,11 +5548,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<UseCustomFrameRate, UseCustomFrameRate>($request);
+    return client.send<UseCustomFrameRate$Response,
+        UseCustomFrameRate$Response>($request);
   }
 
   @override
-  Future<Response<Mode>> _outputNetworkShuttersyncModeGet({String? $set}) {
+  Future<Response<Mode$Response>> _outputNetworkShuttersyncModeGet(
+      {String? $set}) {
     final Uri $url = Uri.parse('/output/network/shuttersync/mode');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -5410,11 +5563,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Mode, Mode>($request);
+    return client.send<Mode$Response, Mode$Response>($request);
   }
 
   @override
-  Future<Response<Mode>> _outputNetworkShuttersyncModePut(
+  Future<Response<Mode$Response>> _outputNetworkShuttersyncModePut(
       {required OutputNetworkShuttersyncModePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/network/shuttersync/mode');
     final $body = body;
@@ -5424,11 +5577,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Mode, Mode>($request);
+    return client.send<Mode$Response, Mode$Response>($request);
   }
 
   @override
-  Future<Response<PrioritiseRefreshRate>>
+  Future<Response<PrioritiseRefreshRate$Response>>
       _outputNetworkShuttersyncPrioritiseRefreshRateGet({bool? $set}) {
     final Uri $url =
         Uri.parse('/output/network/shuttersync/prioritise-refresh-rate');
@@ -5439,11 +5592,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<PrioritiseRefreshRate, PrioritiseRefreshRate>($request);
+    return client.send<PrioritiseRefreshRate$Response,
+        PrioritiseRefreshRate$Response>($request);
   }
 
   @override
-  Future<Response<PrioritiseRefreshRate>>
+  Future<Response<PrioritiseRefreshRate$Response>>
       _outputNetworkShuttersyncPrioritiseRefreshRatePut(
           {required OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBody?
               body}) {
@@ -5456,11 +5610,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<PrioritiseRefreshRate, PrioritiseRefreshRate>($request);
+    return client.send<PrioritiseRefreshRate$Response,
+        PrioritiseRefreshRate$Response>($request);
   }
 
   @override
-  Future<Response<SensorReadoutTime>>
+  Future<Response<SensorReadoutTime$Response>>
       _outputNetworkShuttersyncSensorReadoutTimeGet({num? $set}) {
     final Uri $url =
         Uri.parse('/output/network/shuttersync/sensor-readout-time');
@@ -5471,11 +5626,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<SensorReadoutTime, SensorReadoutTime>($request);
+    return client
+        .send<SensorReadoutTime$Response, SensorReadoutTime$Response>($request);
   }
 
   @override
-  Future<Response<SensorReadoutTime>>
+  Future<Response<SensorReadoutTime$Response>>
       _outputNetworkShuttersyncSensorReadoutTimePut(
           {required OutputNetworkShuttersyncSensorReadoutTimePut$RequestBody?
               body}) {
@@ -5488,11 +5644,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<SensorReadoutTime, SensorReadoutTime>($request);
+    return client
+        .send<SensorReadoutTime$Response, SensorReadoutTime$Response>($request);
   }
 
   @override
-  Future<Response<SensorType>> _outputNetworkShuttersyncSensorTypeGet(
+  Future<Response<SensorType$Response>> _outputNetworkShuttersyncSensorTypeGet(
       {String? $set}) {
     final Uri $url = Uri.parse('/output/network/shuttersync/sensor-type');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -5502,11 +5659,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<SensorType, SensorType>($request);
+    return client.send<SensorType$Response, SensorType$Response>($request);
   }
 
   @override
-  Future<Response<SensorType>> _outputNetworkShuttersyncSensorTypePut(
+  Future<Response<SensorType$Response>> _outputNetworkShuttersyncSensorTypePut(
       {required OutputNetworkShuttersyncSensorTypePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/network/shuttersync/sensor-type');
     final $body = body;
@@ -5516,11 +5673,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<SensorType, SensorType>($request);
+    return client.send<SensorType$Response, SensorType$Response>($request);
   }
 
   @override
-  Future<Response<ShutterSpeed>>
+  Future<Response<ShutterSpeed$Response>>
       _outputNetworkShuttersyncSpeedSettingsShutterSpeedGet({num? $set}) {
     final Uri $url =
         Uri.parse('/output/network/shuttersync/speed-settings/shutter-speed');
@@ -5531,15 +5688,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<ShutterSpeed, ShutterSpeed>($request);
+    return client.send<ShutterSpeed$Response, ShutterSpeed$Response>($request);
   }
 
   @override
-  Future<
-      Response<
-          ShutterSpeed>> _outputNetworkShuttersyncSpeedSettingsShutterSpeedPut(
-      {required OutputNetworkShuttersyncSpeedSettingsShutterSpeedPut$RequestBody?
-          body}) {
+  Future<Response<ShutterSpeed$Response>>
+      _outputNetworkShuttersyncSpeedSettingsShutterSpeedPut(
+          {required OutputNetworkShuttersyncSpeedSettingsShutterSpeedPut$RequestBody?
+              body}) {
     final Uri $url =
         Uri.parse('/output/network/shuttersync/speed-settings/shutter-speed');
     final $body = body;
@@ -5549,11 +5705,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<ShutterSpeed, ShutterSpeed>($request);
+    return client.send<ShutterSpeed$Response, ShutterSpeed$Response>($request);
   }
 
   @override
-  Future<Response<Time>> _outputNetworkShuttersyncSpeedSettingsTimeGet(
+  Future<Response<Time$Response>> _outputNetworkShuttersyncSpeedSettingsTimeGet(
       {num? $set}) {
     final Uri $url =
         Uri.parse('/output/network/shuttersync/speed-settings/time');
@@ -5564,11 +5720,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Time, Time>($request);
+    return client.send<Time$Response, Time$Response>($request);
   }
 
   @override
-  Future<Response<Time>> _outputNetworkShuttersyncSpeedSettingsTimePut(
+  Future<Response<Time$Response>> _outputNetworkShuttersyncSpeedSettingsTimePut(
       {required OutputNetworkShuttersyncSpeedSettingsTimePut$RequestBody?
           body}) {
     final Uri $url =
@@ -5580,12 +5736,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Time, Time>($request);
+    return client.send<Time$Response, Time$Response>($request);
   }
 
   @override
-  Future<Response<BackgroundGain>> _outputNetworkStartrackerBackgroundGainGet(
-      {int? $set}) {
+  Future<Response<BackgroundGain$Response>>
+      _outputNetworkStartrackerBackgroundGainGet({int? $set}) {
     final Uri $url = Uri.parse('/output/network/startracker/background-gain');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -5594,12 +5750,15 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<BackgroundGain, BackgroundGain>($request);
+    return client
+        .send<BackgroundGain$Response, BackgroundGain$Response>($request);
   }
 
   @override
-  Future<Response<BackgroundGain>> _outputNetworkStartrackerBackgroundGainPut(
-      {required OutputNetworkStartrackerBackgroundGainPut$RequestBody? body}) {
+  Future<Response<BackgroundGain$Response>>
+      _outputNetworkStartrackerBackgroundGainPut(
+          {required OutputNetworkStartrackerBackgroundGainPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/output/network/startracker/background-gain');
     final $body = body;
     final Request $request = Request(
@@ -5608,11 +5767,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<BackgroundGain, BackgroundGain>($request);
+    return client
+        .send<BackgroundGain$Response, BackgroundGain$Response>($request);
   }
 
   @override
-  Future<Response<BlackoutAffectsMarkers>>
+  Future<Response<BlackoutAffectsMarkers$Response>>
       _outputNetworkStartrackerBlackoutAffectsMarkersGet({bool? $set}) {
     final Uri $url =
         Uri.parse('/output/network/startracker/blackout-affects-markers');
@@ -5623,12 +5783,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client
-        .send<BlackoutAffectsMarkers, BlackoutAffectsMarkers>($request);
+    return client.send<BlackoutAffectsMarkers$Response,
+        BlackoutAffectsMarkers$Response>($request);
   }
 
   @override
-  Future<Response<BlackoutAffectsMarkers>>
+  Future<Response<BlackoutAffectsMarkers$Response>>
       _outputNetworkStartrackerBlackoutAffectsMarkersPut(
           {required OutputNetworkStartrackerBlackoutAffectsMarkersPut$RequestBody?
               body}) {
@@ -5641,12 +5801,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client
-        .send<BlackoutAffectsMarkers, BlackoutAffectsMarkers>($request);
+    return client.send<BlackoutAffectsMarkers$Response,
+        BlackoutAffectsMarkers$Response>($request);
   }
 
   @override
-  Future<Response<DistanceToTracker>>
+  Future<Response<DistanceToTracker$Response>>
       _outputNetworkStartrackerBlueDistanceToTrackerGet({num? $set}) {
     final Uri $url =
         Uri.parse('/output/network/startracker/blue/distance-to-tracker');
@@ -5657,15 +5817,15 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<DistanceToTracker, DistanceToTracker>($request);
+    return client
+        .send<DistanceToTracker$Response, DistanceToTracker$Response>($request);
   }
 
   @override
-  Future<
-      Response<
-          DistanceToTracker>> _outputNetworkStartrackerBlueDistanceToTrackerPut(
-      {required OutputNetworkStartrackerBlueDistanceToTrackerPut$RequestBody?
-          body}) {
+  Future<Response<DistanceToTracker$Response>>
+      _outputNetworkStartrackerBlueDistanceToTrackerPut(
+          {required OutputNetworkStartrackerBlueDistanceToTrackerPut$RequestBody?
+              body}) {
     final Uri $url =
         Uri.parse('/output/network/startracker/blue/distance-to-tracker');
     final $body = body;
@@ -5675,11 +5835,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<DistanceToTracker, DistanceToTracker>($request);
+    return client
+        .send<DistanceToTracker$Response, DistanceToTracker$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputNetworkStartrackerBlueEnabledGet(
+  Future<Response<Enabled$Response>> _outputNetworkStartrackerBlueEnabledGet(
       {bool? $set}) {
     final Uri $url = Uri.parse('/output/network/startracker/blue/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -5689,11 +5850,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputNetworkStartrackerBlueEnabledPut(
+  Future<Response<Enabled$Response>> _outputNetworkStartrackerBlueEnabledPut(
       {required OutputNetworkStartrackerBlueEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/network/startracker/blue/enabled');
     final $body = body;
@@ -5703,12 +5864,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<MarkerGain>> _outputNetworkStartrackerBlueMarkerGainGet(
-      {int? $set}) {
+  Future<Response<MarkerGain$Response>>
+      _outputNetworkStartrackerBlueMarkerGainGet({int? $set}) {
     final Uri $url = Uri.parse('/output/network/startracker/blue/marker-gain');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -5717,12 +5878,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<MarkerGain, MarkerGain>($request);
+    return client.send<MarkerGain$Response, MarkerGain$Response>($request);
   }
 
   @override
-  Future<Response<MarkerGain>> _outputNetworkStartrackerBlueMarkerGainPut(
-      {required OutputNetworkStartrackerBlueMarkerGainPut$RequestBody? body}) {
+  Future<Response<MarkerGain$Response>>
+      _outputNetworkStartrackerBlueMarkerGainPut(
+          {required OutputNetworkStartrackerBlueMarkerGainPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/output/network/startracker/blue/marker-gain');
     final $body = body;
     final Request $request = Request(
@@ -5731,11 +5894,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<MarkerGain, MarkerGain>($request);
+    return client.send<MarkerGain$Response, MarkerGain$Response>($request);
   }
 
   @override
-  Future<Response<MarkerSizeScaler>>
+  Future<Response<MarkerSizeScaler$Response>>
       _outputNetworkStartrackerBlueMarkerSizeScalerGet({int? $set}) {
     final Uri $url =
         Uri.parse('/output/network/startracker/blue/marker-size-scaler');
@@ -5746,11 +5909,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<MarkerSizeScaler, MarkerSizeScaler>($request);
+    return client
+        .send<MarkerSizeScaler$Response, MarkerSizeScaler$Response>($request);
   }
 
   @override
-  Future<Response<MarkerSizeScaler>>
+  Future<Response<MarkerSizeScaler$Response>>
       _outputNetworkStartrackerBlueMarkerSizeScalerPut(
           {required OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBody?
               body}) {
@@ -5763,12 +5927,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<MarkerSizeScaler, MarkerSizeScaler>($request);
+    return client
+        .send<MarkerSizeScaler$Response, MarkerSizeScaler$Response>($request);
   }
 
   @override
-  Future<Response<StarMapSeed>> _outputNetworkStartrackerBlueStarMapSeedGet(
-      {int? $set}) {
+  Future<Response<StarMapSeed$Response>>
+      _outputNetworkStartrackerBlueStarMapSeedGet({int? $set}) {
     final Uri $url =
         Uri.parse('/output/network/startracker/blue/star-map-seed');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -5778,12 +5943,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<StarMapSeed, StarMapSeed>($request);
+    return client.send<StarMapSeed$Response, StarMapSeed$Response>($request);
   }
 
   @override
-  Future<Response<StarMapSeed>> _outputNetworkStartrackerBlueStarMapSeedPut(
-      {required OutputNetworkStartrackerBlueStarMapSeedPut$RequestBody? body}) {
+  Future<Response<StarMapSeed$Response>>
+      _outputNetworkStartrackerBlueStarMapSeedPut(
+          {required OutputNetworkStartrackerBlueStarMapSeedPut$RequestBody?
+              body}) {
     final Uri $url =
         Uri.parse('/output/network/startracker/blue/star-map-seed');
     final $body = body;
@@ -5793,11 +5960,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<StarMapSeed, StarMapSeed>($request);
+    return client.send<StarMapSeed$Response, StarMapSeed$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputNetworkStartrackerEnabledGet({bool? $set}) {
+  Future<Response<Enabled$Response>> _outputNetworkStartrackerEnabledGet(
+      {bool? $set}) {
     final Uri $url = Uri.parse('/output/network/startracker/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -5806,11 +5974,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputNetworkStartrackerEnabledPut(
+  Future<Response<Enabled$Response>> _outputNetworkStartrackerEnabledPut(
       {required OutputNetworkStartrackerEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/network/startracker/enabled');
     final $body = body;
@@ -5820,12 +5988,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<FramesEnabledOn>> _outputNetworkStartrackerFramesEnabledOnGet(
-      {List<dynamic>? $set}) {
+  Future<Response<FramesEnabledOn$Response>>
+      _outputNetworkStartrackerFramesEnabledOnGet({List<dynamic>? $set}) {
     final Uri $url = Uri.parse('/output/network/startracker/frames-enabled-on');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -5834,12 +6002,15 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<FramesEnabledOn, FramesEnabledOn>($request);
+    return client
+        .send<FramesEnabledOn$Response, FramesEnabledOn$Response>($request);
   }
 
   @override
-  Future<Response<FramesEnabledOn>> _outputNetworkStartrackerFramesEnabledOnPut(
-      {required OutputNetworkStartrackerFramesEnabledOnPut$RequestBody? body}) {
+  Future<Response<FramesEnabledOn$Response>>
+      _outputNetworkStartrackerFramesEnabledOnPut(
+          {required OutputNetworkStartrackerFramesEnabledOnPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/output/network/startracker/frames-enabled-on');
     final $body = body;
     final Request $request = Request(
@@ -5848,11 +6019,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<FramesEnabledOn, FramesEnabledOn>($request);
+    return client
+        .send<FramesEnabledOn$Response, FramesEnabledOn$Response>($request);
   }
 
   @override
-  Future<Response<DistanceToTracker>>
+  Future<Response<DistanceToTracker$Response>>
       _outputNetworkStartrackerGreenDistanceToTrackerGet({num? $set}) {
     final Uri $url =
         Uri.parse('/output/network/startracker/green/distance-to-tracker');
@@ -5863,15 +6035,15 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<DistanceToTracker, DistanceToTracker>($request);
+    return client
+        .send<DistanceToTracker$Response, DistanceToTracker$Response>($request);
   }
 
   @override
-  Future<
-      Response<
-          DistanceToTracker>> _outputNetworkStartrackerGreenDistanceToTrackerPut(
-      {required OutputNetworkStartrackerGreenDistanceToTrackerPut$RequestBody?
-          body}) {
+  Future<Response<DistanceToTracker$Response>>
+      _outputNetworkStartrackerGreenDistanceToTrackerPut(
+          {required OutputNetworkStartrackerGreenDistanceToTrackerPut$RequestBody?
+              body}) {
     final Uri $url =
         Uri.parse('/output/network/startracker/green/distance-to-tracker');
     final $body = body;
@@ -5881,11 +6053,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<DistanceToTracker, DistanceToTracker>($request);
+    return client
+        .send<DistanceToTracker$Response, DistanceToTracker$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputNetworkStartrackerGreenEnabledGet(
+  Future<Response<Enabled$Response>> _outputNetworkStartrackerGreenEnabledGet(
       {bool? $set}) {
     final Uri $url = Uri.parse('/output/network/startracker/green/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -5895,11 +6068,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputNetworkStartrackerGreenEnabledPut(
+  Future<Response<Enabled$Response>> _outputNetworkStartrackerGreenEnabledPut(
       {required OutputNetworkStartrackerGreenEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/network/startracker/green/enabled');
     final $body = body;
@@ -5909,12 +6082,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<MarkerGain>> _outputNetworkStartrackerGreenMarkerGainGet(
-      {int? $set}) {
+  Future<Response<MarkerGain$Response>>
+      _outputNetworkStartrackerGreenMarkerGainGet({int? $set}) {
     final Uri $url = Uri.parse('/output/network/startracker/green/marker-gain');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -5923,12 +6096,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<MarkerGain, MarkerGain>($request);
+    return client.send<MarkerGain$Response, MarkerGain$Response>($request);
   }
 
   @override
-  Future<Response<MarkerGain>> _outputNetworkStartrackerGreenMarkerGainPut(
-      {required OutputNetworkStartrackerGreenMarkerGainPut$RequestBody? body}) {
+  Future<Response<MarkerGain$Response>>
+      _outputNetworkStartrackerGreenMarkerGainPut(
+          {required OutputNetworkStartrackerGreenMarkerGainPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/output/network/startracker/green/marker-gain');
     final $body = body;
     final Request $request = Request(
@@ -5937,11 +6112,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<MarkerGain, MarkerGain>($request);
+    return client.send<MarkerGain$Response, MarkerGain$Response>($request);
   }
 
   @override
-  Future<Response<MarkerSizeScaler>>
+  Future<Response<MarkerSizeScaler$Response>>
       _outputNetworkStartrackerGreenMarkerSizeScalerGet({int? $set}) {
     final Uri $url =
         Uri.parse('/output/network/startracker/green/marker-size-scaler');
@@ -5952,15 +6127,15 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<MarkerSizeScaler, MarkerSizeScaler>($request);
+    return client
+        .send<MarkerSizeScaler$Response, MarkerSizeScaler$Response>($request);
   }
 
   @override
-  Future<
-      Response<
-          MarkerSizeScaler>> _outputNetworkStartrackerGreenMarkerSizeScalerPut(
-      {required OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBody?
-          body}) {
+  Future<Response<MarkerSizeScaler$Response>>
+      _outputNetworkStartrackerGreenMarkerSizeScalerPut(
+          {required OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBody?
+              body}) {
     final Uri $url =
         Uri.parse('/output/network/startracker/green/marker-size-scaler');
     final $body = body;
@@ -5970,12 +6145,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<MarkerSizeScaler, MarkerSizeScaler>($request);
+    return client
+        .send<MarkerSizeScaler$Response, MarkerSizeScaler$Response>($request);
   }
 
   @override
-  Future<Response<StarMapSeed>> _outputNetworkStartrackerGreenStarMapSeedGet(
-      {int? $set}) {
+  Future<Response<StarMapSeed$Response>>
+      _outputNetworkStartrackerGreenStarMapSeedGet({int? $set}) {
     final Uri $url =
         Uri.parse('/output/network/startracker/green/star-map-seed');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -5985,13 +6161,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<StarMapSeed, StarMapSeed>($request);
+    return client.send<StarMapSeed$Response, StarMapSeed$Response>($request);
   }
 
   @override
-  Future<Response<StarMapSeed>> _outputNetworkStartrackerGreenStarMapSeedPut(
-      {required OutputNetworkStartrackerGreenStarMapSeedPut$RequestBody?
-          body}) {
+  Future<Response<StarMapSeed$Response>>
+      _outputNetworkStartrackerGreenStarMapSeedPut(
+          {required OutputNetworkStartrackerGreenStarMapSeedPut$RequestBody?
+              body}) {
     final Uri $url =
         Uri.parse('/output/network/startracker/green/star-map-seed');
     final $body = body;
@@ -6001,11 +6178,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<StarMapSeed, StarMapSeed>($request);
+    return client.send<StarMapSeed$Response, StarMapSeed$Response>($request);
   }
 
   @override
-  Future<Response<DistanceToTracker>>
+  Future<Response<DistanceToTracker$Response>>
       _outputNetworkStartrackerRedDistanceToTrackerGet({num? $set}) {
     final Uri $url =
         Uri.parse('/output/network/startracker/red/distance-to-tracker');
@@ -6016,11 +6193,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<DistanceToTracker, DistanceToTracker>($request);
+    return client
+        .send<DistanceToTracker$Response, DistanceToTracker$Response>($request);
   }
 
   @override
-  Future<Response<DistanceToTracker>>
+  Future<Response<DistanceToTracker$Response>>
       _outputNetworkStartrackerRedDistanceToTrackerPut(
           {required OutputNetworkStartrackerRedDistanceToTrackerPut$RequestBody?
               body}) {
@@ -6033,11 +6211,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<DistanceToTracker, DistanceToTracker>($request);
+    return client
+        .send<DistanceToTracker$Response, DistanceToTracker$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputNetworkStartrackerRedEnabledGet(
+  Future<Response<Enabled$Response>> _outputNetworkStartrackerRedEnabledGet(
       {bool? $set}) {
     final Uri $url = Uri.parse('/output/network/startracker/red/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -6047,11 +6226,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _outputNetworkStartrackerRedEnabledPut(
+  Future<Response<Enabled$Response>> _outputNetworkStartrackerRedEnabledPut(
       {required OutputNetworkStartrackerRedEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/output/network/startracker/red/enabled');
     final $body = body;
@@ -6061,12 +6240,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<MarkerGain>> _outputNetworkStartrackerRedMarkerGainGet(
-      {int? $set}) {
+  Future<Response<MarkerGain$Response>>
+      _outputNetworkStartrackerRedMarkerGainGet({int? $set}) {
     final Uri $url = Uri.parse('/output/network/startracker/red/marker-gain');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6075,12 +6254,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<MarkerGain, MarkerGain>($request);
+    return client.send<MarkerGain$Response, MarkerGain$Response>($request);
   }
 
   @override
-  Future<Response<MarkerGain>> _outputNetworkStartrackerRedMarkerGainPut(
-      {required OutputNetworkStartrackerRedMarkerGainPut$RequestBody? body}) {
+  Future<Response<MarkerGain$Response>>
+      _outputNetworkStartrackerRedMarkerGainPut(
+          {required OutputNetworkStartrackerRedMarkerGainPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/output/network/startracker/red/marker-gain');
     final $body = body;
     final Request $request = Request(
@@ -6089,11 +6270,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<MarkerGain, MarkerGain>($request);
+    return client.send<MarkerGain$Response, MarkerGain$Response>($request);
   }
 
   @override
-  Future<Response<MarkerSizeScaler>>
+  Future<Response<MarkerSizeScaler$Response>>
       _outputNetworkStartrackerRedMarkerSizeScalerGet({int? $set}) {
     final Uri $url =
         Uri.parse('/output/network/startracker/red/marker-size-scaler');
@@ -6104,11 +6285,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<MarkerSizeScaler, MarkerSizeScaler>($request);
+    return client
+        .send<MarkerSizeScaler$Response, MarkerSizeScaler$Response>($request);
   }
 
   @override
-  Future<Response<MarkerSizeScaler>>
+  Future<Response<MarkerSizeScaler$Response>>
       _outputNetworkStartrackerRedMarkerSizeScalerPut(
           {required OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBody?
               body}) {
@@ -6121,12 +6303,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<MarkerSizeScaler, MarkerSizeScaler>($request);
+    return client
+        .send<MarkerSizeScaler$Response, MarkerSizeScaler$Response>($request);
   }
 
   @override
-  Future<Response<StarMapSeed>> _outputNetworkStartrackerRedStarMapSeedGet(
-      {int? $set}) {
+  Future<Response<StarMapSeed$Response>>
+      _outputNetworkStartrackerRedStarMapSeedGet({int? $set}) {
     final Uri $url = Uri.parse('/output/network/startracker/red/star-map-seed');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6135,12 +6318,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<StarMapSeed, StarMapSeed>($request);
+    return client.send<StarMapSeed$Response, StarMapSeed$Response>($request);
   }
 
   @override
-  Future<Response<StarMapSeed>> _outputNetworkStartrackerRedStarMapSeedPut(
-      {required OutputNetworkStartrackerRedStarMapSeedPut$RequestBody? body}) {
+  Future<Response<StarMapSeed$Response>>
+      _outputNetworkStartrackerRedStarMapSeedPut(
+          {required OutputNetworkStartrackerRedStarMapSeedPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/output/network/startracker/red/star-map-seed');
     final $body = body;
     final Request $request = Request(
@@ -6149,11 +6334,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<StarMapSeed, StarMapSeed>($request);
+    return client.send<StarMapSeed$Response, StarMapSeed$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _overrideBlackoutEnabledGet({bool? $set}) {
+  Future<Response<Enabled$Response>> _overrideBlackoutEnabledGet({bool? $set}) {
     final Uri $url = Uri.parse('/override/blackout/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6162,11 +6347,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _overrideBlackoutEnabledPut(
+  Future<Response<Enabled$Response>> _overrideBlackoutEnabledPut(
       {required OverrideBlackoutEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/override/blackout/enabled');
     final $body = body;
@@ -6176,11 +6361,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<FadeTime>> _overrideBlackoutFadeTimeGet({num? $set}) {
+  Future<Response<FadeTime$Response>> _overrideBlackoutFadeTimeGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/override/blackout/fade-time');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6189,11 +6375,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<FadeTime, FadeTime>($request);
+    return client.send<FadeTime$Response, FadeTime$Response>($request);
   }
 
   @override
-  Future<Response<FadeTime>> _overrideBlackoutFadeTimePut(
+  Future<Response<FadeTime$Response>> _overrideBlackoutFadeTimePut(
       {required OverrideBlackoutFadeTimePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/override/blackout/fade-time');
     final $body = body;
@@ -6203,11 +6389,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<FadeTime, FadeTime>($request);
+    return client.send<FadeTime$Response, FadeTime$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _overrideFreezeEnabledGet({bool? $set}) {
+  Future<Response<Enabled$Response>> _overrideFreezeEnabledGet({bool? $set}) {
     final Uri $url = Uri.parse('/override/freeze/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6216,11 +6402,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _overrideFreezeEnabledPut(
+  Future<Response<Enabled$Response>> _overrideFreezeEnabledPut(
       {required OverrideFreezeEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/override/freeze/enabled');
     final $body = body;
@@ -6230,11 +6416,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _overrideTestPatternCustomColourBlueGet({int? $set}) {
+  Future<Response<Blue$Response>> _overrideTestPatternCustomColourBlueGet(
+      {int? $set}) {
     final Uri $url = Uri.parse('/override/test-pattern/custom-colour/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6243,11 +6430,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _overrideTestPatternCustomColourBluePut(
+  Future<Response<Blue$Response>> _overrideTestPatternCustomColourBluePut(
       {required OverrideTestPatternCustomColourBluePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/override/test-pattern/custom-colour/blue');
     final $body = body;
@@ -6257,11 +6444,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _overrideTestPatternCustomColourGreenGet(
+  Future<Response<Green$Response>> _overrideTestPatternCustomColourGreenGet(
       {int? $set}) {
     final Uri $url = Uri.parse('/override/test-pattern/custom-colour/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -6271,11 +6458,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _overrideTestPatternCustomColourGreenPut(
+  Future<Response<Green$Response>> _overrideTestPatternCustomColourGreenPut(
       {required OverrideTestPatternCustomColourGreenPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/override/test-pattern/custom-colour/green');
     final $body = body;
@@ -6285,11 +6472,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _overrideTestPatternCustomColourRedGet({int? $set}) {
+  Future<Response<Red$Response>> _overrideTestPatternCustomColourRedGet(
+      {int? $set}) {
     final Uri $url = Uri.parse('/override/test-pattern/custom-colour/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6298,11 +6486,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _overrideTestPatternCustomColourRedPut(
+  Future<Response<Red$Response>> _overrideTestPatternCustomColourRedPut(
       {required OverrideTestPatternCustomColourRedPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/override/test-pattern/custom-colour/red');
     final $body = body;
@@ -6312,12 +6500,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _overrideTestPatternCustomGradientEndColourBlueGet(
-      {int? $set}) {
+  Future<Response<Blue$Response>>
+      _overrideTestPatternCustomGradientEndColourBlueGet({int? $set}) {
     final Uri $url =
         Uri.parse('/override/test-pattern/custom-gradient/end-colour/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -6327,11 +6515,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _overrideTestPatternCustomGradientEndColourBluePut(
+  Future<
+      Response<
+          Blue$Response>> _overrideTestPatternCustomGradientEndColourBluePut(
       {required OverrideTestPatternCustomGradientEndColourBluePut$RequestBody?
           body}) {
     final Uri $url =
@@ -6343,12 +6533,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _overrideTestPatternCustomGradientEndColourGreenGet(
-      {int? $set}) {
+  Future<Response<Green$Response>>
+      _overrideTestPatternCustomGradientEndColourGreenGet({int? $set}) {
     final Uri $url =
         Uri.parse('/override/test-pattern/custom-gradient/end-colour/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -6358,11 +6548,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _overrideTestPatternCustomGradientEndColourGreenPut(
+  Future<
+      Response<
+          Green$Response>> _overrideTestPatternCustomGradientEndColourGreenPut(
       {required OverrideTestPatternCustomGradientEndColourGreenPut$RequestBody?
           body}) {
     final Uri $url =
@@ -6374,12 +6566,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _overrideTestPatternCustomGradientEndColourRedGet(
-      {int? $set}) {
+  Future<Response<Red$Response>>
+      _overrideTestPatternCustomGradientEndColourRedGet({int? $set}) {
     final Uri $url =
         Uri.parse('/override/test-pattern/custom-gradient/end-colour/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -6389,11 +6581,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _overrideTestPatternCustomGradientEndColourRedPut(
+  Future<
+      Response<
+          Red$Response>> _overrideTestPatternCustomGradientEndColourRedPut(
       {required OverrideTestPatternCustomGradientEndColourRedPut$RequestBody?
           body}) {
     final Uri $url =
@@ -6405,11 +6599,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Orientation>>
+  Future<Response<Orientation$Response>>
       _overrideTestPatternCustomGradientOrientationGet({String? $set}) {
     final Uri $url =
         Uri.parse('/override/test-pattern/custom-gradient/orientation');
@@ -6420,11 +6614,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Orientation, Orientation>($request);
+    return client.send<Orientation$Response, Orientation$Response>($request);
   }
 
   @override
-  Future<Response<Orientation>>
+  Future<Response<Orientation$Response>>
       _overrideTestPatternCustomGradientOrientationPut(
           {required OverrideTestPatternCustomGradientOrientationPut$RequestBody?
               body}) {
@@ -6437,12 +6631,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Orientation, Orientation>($request);
+    return client.send<Orientation$Response, Orientation$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _overrideTestPatternCustomGradientStartColourBlueGet(
-      {int? $set}) {
+  Future<Response<Blue$Response>>
+      _overrideTestPatternCustomGradientStartColourBlueGet({int? $set}) {
     final Uri $url =
         Uri.parse('/override/test-pattern/custom-gradient/start-colour/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -6452,11 +6646,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _overrideTestPatternCustomGradientStartColourBluePut(
+  Future<
+      Response<
+          Blue$Response>> _overrideTestPatternCustomGradientStartColourBluePut(
       {required OverrideTestPatternCustomGradientStartColourBluePut$RequestBody?
           body}) {
     final Uri $url =
@@ -6468,12 +6664,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _overrideTestPatternCustomGradientStartColourGreenGet(
-      {int? $set}) {
+  Future<Response<Green$Response>>
+      _overrideTestPatternCustomGradientStartColourGreenGet({int? $set}) {
     final Uri $url =
         Uri.parse('/override/test-pattern/custom-gradient/start-colour/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -6483,11 +6679,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _overrideTestPatternCustomGradientStartColourGreenPut(
+  Future<
+      Response<
+          Green$Response>> _overrideTestPatternCustomGradientStartColourGreenPut(
       {required OverrideTestPatternCustomGradientStartColourGreenPut$RequestBody?
           body}) {
     final Uri $url =
@@ -6499,12 +6697,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _overrideTestPatternCustomGradientStartColourRedGet(
-      {int? $set}) {
+  Future<Response<Red$Response>>
+      _overrideTestPatternCustomGradientStartColourRedGet({int? $set}) {
     final Uri $url =
         Uri.parse('/override/test-pattern/custom-gradient/start-colour/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -6514,11 +6712,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _overrideTestPatternCustomGradientStartColourRedPut(
+  Future<
+      Response<
+          Red$Response>> _overrideTestPatternCustomGradientStartColourRedPut(
       {required OverrideTestPatternCustomGradientStartColourRedPut$RequestBody?
           body}) {
     final Uri $url =
@@ -6530,11 +6730,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _overrideTestPatternEnabledGet({bool? $set}) {
+  Future<Response<Enabled$Response>> _overrideTestPatternEnabledGet(
+      {bool? $set}) {
     final Uri $url = Uri.parse('/override/test-pattern/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6543,11 +6744,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _overrideTestPatternEnabledPut(
+  Future<Response<Enabled$Response>> _overrideTestPatternEnabledPut(
       {required OverrideTestPatternEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/override/test-pattern/enabled');
     final $body = body;
@@ -6557,11 +6758,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Format>> _overrideTestPatternFormatGet({String? $set}) {
+  Future<Response<Format$Response>> _overrideTestPatternFormatGet(
+      {String? $set}) {
     final Uri $url = Uri.parse('/override/test-pattern/format');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6570,11 +6772,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Format, Format>($request);
+    return client.send<Format$Response, Format$Response>($request);
   }
 
   @override
-  Future<Response<Format>> _overrideTestPatternFormatPut(
+  Future<Response<Format$Response>> _overrideTestPatternFormatPut(
       {required OverrideTestPatternFormatPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/override/test-pattern/format');
     final $body = body;
@@ -6584,11 +6786,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Format, Format>($request);
+    return client.send<Format$Response, Format$Response>($request);
   }
 
   @override
-  Future<Response<RestrictToAchievableColours>>
+  Future<Response<RestrictToAchievableColours$Response>>
       _overrideTestPatternRestrictToAchievableColoursGet({bool? $set}) {
     final Uri $url =
         Uri.parse('/override/test-pattern/restrict-to-achievable-colours');
@@ -6599,12 +6801,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<RestrictToAchievableColours,
-        RestrictToAchievableColours>($request);
+    return client.send<RestrictToAchievableColours$Response,
+        RestrictToAchievableColours$Response>($request);
   }
 
   @override
-  Future<Response<RestrictToAchievableColours>>
+  Future<Response<RestrictToAchievableColours$Response>>
       _overrideTestPatternRestrictToAchievableColoursPut(
           {required OverrideTestPatternRestrictToAchievableColoursPut$RequestBody?
               body}) {
@@ -6617,12 +6819,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<RestrictToAchievableColours,
-        RestrictToAchievableColours>($request);
+    return client.send<RestrictToAchievableColours$Response,
+        RestrictToAchievableColours$Response>($request);
   }
 
   @override
-  Future<Response<Type$>> _overrideTestPatternTypeGet({String? $set}) {
+  Future<Response<Type$Response>> _overrideTestPatternTypeGet({String? $set}) {
     final Uri $url = Uri.parse('/override/test-pattern/type');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6631,11 +6833,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Type$, Type$>($request);
+    return client.send<Type$Response, Type$Response>($request);
   }
 
   @override
-  Future<Response<Type$>> _overrideTestPatternTypePut(
+  Future<Response<Type$Response>> _overrideTestPatternTypePut(
       {required OverrideTestPatternTypePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/override/test-pattern/type');
     final $body = body;
@@ -6645,22 +6847,22 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Type$, Type$>($request);
+    return client.send<Type$Response, Type$Response>($request);
   }
 
   @override
-  Future<Response<Name>> _presetsActiveNameGet() {
+  Future<Response<Name$Response>> _presetsActiveNameGet() {
     final Uri $url = Uri.parse('/presets/active/name');
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
     );
-    return client.send<Name, Name>($request);
+    return client.send<Name$Response, Name$Response>($request);
   }
 
   @override
-  Future<Response<Number>> _presetsActiveNumberGet({int? $set}) {
+  Future<Response<Number$Response>> _presetsActiveNumberGet({int? $set}) {
     final Uri $url = Uri.parse('/presets/active/number');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6669,11 +6871,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Number, Number>($request);
+    return client.send<Number$Response, Number$Response>($request);
   }
 
   @override
-  Future<Response<Number>> _presetsActiveNumberPut(
+  Future<Response<Number$Response>> _presetsActiveNumberPut(
       {required PresetsActiveNumberPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/presets/active/number');
     final $body = body;
@@ -6683,11 +6885,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Number, Number>($request);
+    return client.send<Number$Response, Number$Response>($request);
   }
 
   @override
-  Future<Response<Name>> _presetsItemsNumberNameGet({
+  Future<Response<Name$Response>> _presetsItemsNumberNameGet({
     String? $set,
     required int? number,
   }) {
@@ -6699,11 +6901,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Name, Name>($request);
+    return client.send<Name$Response, Name$Response>($request);
   }
 
   @override
-  Future<Response<Name>> _presetsItemsNumberNamePut({
+  Future<Response<Name$Response>> _presetsItemsNumberNamePut({
     required int? number,
     required PresetsItemsNumberNamePut$RequestBody? body,
   }) {
@@ -6715,11 +6917,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Name, Name>($request);
+    return client.send<Name$Response, Name$Response>($request);
   }
 
   @override
-  Future<Response<Status>> _presetsItemsNumberStatusGet(
+  Future<Response<Status$Response>> _presetsItemsNumberStatusGet(
       {required int? number}) {
     final Uri $url = Uri.parse('/presets/items/${number}/status');
     final Request $request = Request(
@@ -6727,11 +6929,12 @@ class _$Brompton extends Brompton {
       $url,
       client.baseUrl,
     );
-    return client.send<Status, Status>($request);
+    return client.send<Status$Response, Status$Response>($request);
   }
 
   @override
-  Future<Response<Data>> _processing3dLutDataGet({List<dynamic>? $set}) {
+  Future<Response<Data$Response>> _processing3dLutDataGet(
+      {List<dynamic>? $set}) {
     final Uri $url = Uri.parse('/processing/3d-lut/data');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6740,11 +6943,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Data, Data>($request);
+    return client.send<Data$Response, Data$Response>($request);
   }
 
   @override
-  Future<Response<Data>> _processing3dLutDataPut(
+  Future<Response<Data$Response>> _processing3dLutDataPut(
       {required Processing3dLutDataPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/3d-lut/data');
     final $body = body;
@@ -6754,11 +6957,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Data, Data>($request);
+    return client.send<Data$Response, Data$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _processing3dLutEnabledGet({bool? $set}) {
+  Future<Response<Enabled$Response>> _processing3dLutEnabledGet({bool? $set}) {
     final Uri $url = Uri.parse('/processing/3d-lut/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6767,11 +6970,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _processing3dLutEnabledPut(
+  Future<Response<Enabled$Response>> _processing3dLutEnabledPut(
       {required Processing3dLutEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/3d-lut/enabled');
     final $body = body;
@@ -6781,22 +6984,22 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Filename>> _processing3dLutFilenameGet() {
+  Future<Response<Filename$Response>> _processing3dLutFilenameGet() {
     final Uri $url = Uri.parse('/processing/3d-lut/filename');
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
     );
-    return client.send<Filename, Filename>($request);
+    return client.send<Filename$Response, Filename$Response>($request);
   }
 
   @override
-  Future<Response<Strength>> _processing3dLutStrengthGet({num? $set}) {
+  Future<Response<Strength$Response>> _processing3dLutStrengthGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/3d-lut/strength');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6805,11 +7008,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Strength, Strength>($request);
+    return client.send<Strength$Response, Strength$Response>($request);
   }
 
   @override
-  Future<Response<Strength>> _processing3dLutStrengthPut(
+  Future<Response<Strength$Response>> _processing3dLutStrengthPut(
       {required Processing3dLutStrengthPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/3d-lut/strength');
     final $body = body;
@@ -6819,11 +7022,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Strength, Strength>($request);
+    return client.send<Strength$Response, Strength$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _processingColourCorrectBlackBlueGet({num? $set}) {
+  Future<Response<Blue$Response>> _processingColourCorrectBlackBlueGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/black/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6832,11 +7036,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _processingColourCorrectBlackBluePut(
+  Future<Response<Blue$Response>> _processingColourCorrectBlackBluePut(
       {required ProcessingColourCorrectBlackBluePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/black/blue');
     final $body = body;
@@ -6846,11 +7050,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _processingColourCorrectBlackGreenGet({num? $set}) {
+  Future<Response<Green$Response>> _processingColourCorrectBlackGreenGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/black/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6859,11 +7064,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _processingColourCorrectBlackGreenPut(
+  Future<Response<Green$Response>> _processingColourCorrectBlackGreenPut(
       {required ProcessingColourCorrectBlackGreenPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/black/green');
     final $body = body;
@@ -6873,11 +7078,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _processingColourCorrectBlackRedGet({num? $set}) {
+  Future<Response<Red$Response>> _processingColourCorrectBlackRedGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/black/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6886,11 +7092,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _processingColourCorrectBlackRedPut(
+  Future<Response<Red$Response>> _processingColourCorrectBlackRedPut(
       {required ProcessingColourCorrectBlackRedPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/black/red');
     final $body = body;
@@ -6900,12 +7106,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectBlueBrightnessGet(
-      {num? $set}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectBlueBrightnessGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/blue/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6914,12 +7120,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectBlueBrightnessPut(
-      {required ProcessingColourCorrectBlueBrightnessPut$RequestBody? body}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectBlueBrightnessPut(
+          {required ProcessingColourCorrectBlueBrightnessPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/blue/brightness');
     final $body = body;
     final Request $request = Request(
@@ -6928,11 +7136,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectBlueHueGet({num? $set}) {
+  Future<Response<Hue$Response>> _processingColourCorrectBlueHueGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/blue/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6941,11 +7150,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectBlueHuePut(
+  Future<Response<Hue$Response>> _processingColourCorrectBlueHuePut(
       {required ProcessingColourCorrectBlueHuePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/blue/hue');
     final $body = body;
@@ -6955,12 +7164,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectBlueSaturationGet(
-      {num? $set}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectBlueSaturationGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/blue/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6969,12 +7178,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectBlueSaturationPut(
-      {required ProcessingColourCorrectBlueSaturationPut$RequestBody? body}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectBlueSaturationPut(
+          {required ProcessingColourCorrectBlueSaturationPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/blue/saturation');
     final $body = body;
     final Request $request = Request(
@@ -6983,12 +7194,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectCobaltBrightnessGet(
-      {num? $set}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectCobaltBrightnessGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/cobalt/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -6997,12 +7208,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectCobaltBrightnessPut(
-      {required ProcessingColourCorrectCobaltBrightnessPut$RequestBody? body}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectCobaltBrightnessPut(
+          {required ProcessingColourCorrectCobaltBrightnessPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/cobalt/brightness');
     final $body = body;
     final Request $request = Request(
@@ -7011,11 +7224,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectCobaltHueGet({num? $set}) {
+  Future<Response<Hue$Response>> _processingColourCorrectCobaltHueGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/cobalt/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7024,11 +7238,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectCobaltHuePut(
+  Future<Response<Hue$Response>> _processingColourCorrectCobaltHuePut(
       {required ProcessingColourCorrectCobaltHuePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/cobalt/hue');
     final $body = body;
@@ -7038,12 +7252,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectCobaltSaturationGet(
-      {num? $set}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectCobaltSaturationGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/cobalt/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7052,12 +7266,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectCobaltSaturationPut(
-      {required ProcessingColourCorrectCobaltSaturationPut$RequestBody? body}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectCobaltSaturationPut(
+          {required ProcessingColourCorrectCobaltSaturationPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/cobalt/saturation');
     final $body = body;
     final Request $request = Request(
@@ -7066,12 +7282,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectCrimsonBrightnessGet(
-      {num? $set}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectCrimsonBrightnessGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/crimson/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7080,13 +7296,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectCrimsonBrightnessPut(
-      {required ProcessingColourCorrectCrimsonBrightnessPut$RequestBody?
-          body}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectCrimsonBrightnessPut(
+          {required ProcessingColourCorrectCrimsonBrightnessPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/crimson/brightness');
     final $body = body;
     final Request $request = Request(
@@ -7095,11 +7312,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectCrimsonHueGet({num? $set}) {
+  Future<Response<Hue$Response>> _processingColourCorrectCrimsonHueGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/crimson/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7108,11 +7326,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectCrimsonHuePut(
+  Future<Response<Hue$Response>> _processingColourCorrectCrimsonHuePut(
       {required ProcessingColourCorrectCrimsonHuePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/crimson/hue');
     final $body = body;
@@ -7122,12 +7340,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectCrimsonSaturationGet(
-      {num? $set}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectCrimsonSaturationGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/crimson/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7136,13 +7354,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectCrimsonSaturationPut(
-      {required ProcessingColourCorrectCrimsonSaturationPut$RequestBody?
-          body}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectCrimsonSaturationPut(
+          {required ProcessingColourCorrectCrimsonSaturationPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/crimson/saturation');
     final $body = body;
     final Request $request = Request(
@@ -7151,12 +7370,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectCyanBrightnessGet(
-      {num? $set}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectCyanBrightnessGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/cyan/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7165,12 +7384,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectCyanBrightnessPut(
-      {required ProcessingColourCorrectCyanBrightnessPut$RequestBody? body}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectCyanBrightnessPut(
+          {required ProcessingColourCorrectCyanBrightnessPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/cyan/brightness');
     final $body = body;
     final Request $request = Request(
@@ -7179,11 +7400,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectCyanHueGet({num? $set}) {
+  Future<Response<Hue$Response>> _processingColourCorrectCyanHueGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/cyan/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7192,11 +7414,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectCyanHuePut(
+  Future<Response<Hue$Response>> _processingColourCorrectCyanHuePut(
       {required ProcessingColourCorrectCyanHuePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/cyan/hue');
     final $body = body;
@@ -7206,12 +7428,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectCyanSaturationGet(
-      {num? $set}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectCyanSaturationGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/cyan/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7220,12 +7442,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectCyanSaturationPut(
-      {required ProcessingColourCorrectCyanSaturationPut$RequestBody? body}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectCyanSaturationPut(
+          {required ProcessingColourCorrectCyanSaturationPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/cyan/saturation');
     final $body = body;
     final Request $request = Request(
@@ -7234,11 +7458,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _processingColourCorrectEnabledGet({bool? $set}) {
+  Future<Response<Enabled$Response>> _processingColourCorrectEnabledGet(
+      {bool? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7247,11 +7472,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _processingColourCorrectEnabledPut(
+  Future<Response<Enabled$Response>> _processingColourCorrectEnabledPut(
       {required ProcessingColourCorrectEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/enabled');
     final $body = body;
@@ -7261,12 +7486,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectGreenBrightnessGet(
-      {num? $set}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectGreenBrightnessGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/green/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7275,12 +7500,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectGreenBrightnessPut(
-      {required ProcessingColourCorrectGreenBrightnessPut$RequestBody? body}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectGreenBrightnessPut(
+          {required ProcessingColourCorrectGreenBrightnessPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/green/brightness');
     final $body = body;
     final Request $request = Request(
@@ -7289,11 +7516,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectGreenHueGet({num? $set}) {
+  Future<Response<Hue$Response>> _processingColourCorrectGreenHueGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/green/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7302,11 +7530,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectGreenHuePut(
+  Future<Response<Hue$Response>> _processingColourCorrectGreenHuePut(
       {required ProcessingColourCorrectGreenHuePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/green/hue');
     final $body = body;
@@ -7316,12 +7544,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectGreenSaturationGet(
-      {num? $set}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectGreenSaturationGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/green/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7330,12 +7558,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectGreenSaturationPut(
-      {required ProcessingColourCorrectGreenSaturationPut$RequestBody? body}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectGreenSaturationPut(
+          {required ProcessingColourCorrectGreenSaturationPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/green/saturation');
     final $body = body;
     final Request $request = Request(
@@ -7344,12 +7574,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectLimeBrightnessGet(
-      {num? $set}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectLimeBrightnessGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/lime/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7358,12 +7588,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectLimeBrightnessPut(
-      {required ProcessingColourCorrectLimeBrightnessPut$RequestBody? body}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectLimeBrightnessPut(
+          {required ProcessingColourCorrectLimeBrightnessPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/lime/brightness');
     final $body = body;
     final Request $request = Request(
@@ -7372,11 +7604,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectLimeHueGet({num? $set}) {
+  Future<Response<Hue$Response>> _processingColourCorrectLimeHueGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/lime/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7385,11 +7618,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectLimeHuePut(
+  Future<Response<Hue$Response>> _processingColourCorrectLimeHuePut(
       {required ProcessingColourCorrectLimeHuePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/lime/hue');
     final $body = body;
@@ -7399,12 +7632,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectLimeSaturationGet(
-      {num? $set}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectLimeSaturationGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/lime/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7413,12 +7646,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectLimeSaturationPut(
-      {required ProcessingColourCorrectLimeSaturationPut$RequestBody? body}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectLimeSaturationPut(
+          {required ProcessingColourCorrectLimeSaturationPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/lime/saturation');
     final $body = body;
     final Request $request = Request(
@@ -7427,12 +7662,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectMagentaBrightnessGet(
-      {num? $set}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectMagentaBrightnessGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/magenta/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7441,13 +7676,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectMagentaBrightnessPut(
-      {required ProcessingColourCorrectMagentaBrightnessPut$RequestBody?
-          body}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectMagentaBrightnessPut(
+          {required ProcessingColourCorrectMagentaBrightnessPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/magenta/brightness');
     final $body = body;
     final Request $request = Request(
@@ -7456,11 +7692,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectMagentaHueGet({num? $set}) {
+  Future<Response<Hue$Response>> _processingColourCorrectMagentaHueGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/magenta/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7469,11 +7706,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectMagentaHuePut(
+  Future<Response<Hue$Response>> _processingColourCorrectMagentaHuePut(
       {required ProcessingColourCorrectMagentaHuePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/magenta/hue');
     final $body = body;
@@ -7483,12 +7720,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectMagentaSaturationGet(
-      {num? $set}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectMagentaSaturationGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/magenta/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7497,13 +7734,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectMagentaSaturationPut(
-      {required ProcessingColourCorrectMagentaSaturationPut$RequestBody?
-          body}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectMagentaSaturationPut(
+          {required ProcessingColourCorrectMagentaSaturationPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/magenta/saturation');
     final $body = body;
     final Request $request = Request(
@@ -7512,12 +7750,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectOrangeBrightnessGet(
-      {num? $set}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectOrangeBrightnessGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/orange/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7526,12 +7764,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectOrangeBrightnessPut(
-      {required ProcessingColourCorrectOrangeBrightnessPut$RequestBody? body}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectOrangeBrightnessPut(
+          {required ProcessingColourCorrectOrangeBrightnessPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/orange/brightness');
     final $body = body;
     final Request $request = Request(
@@ -7540,11 +7780,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectOrangeHueGet({num? $set}) {
+  Future<Response<Hue$Response>> _processingColourCorrectOrangeHueGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/orange/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7553,11 +7794,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectOrangeHuePut(
+  Future<Response<Hue$Response>> _processingColourCorrectOrangeHuePut(
       {required ProcessingColourCorrectOrangeHuePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/orange/hue');
     final $body = body;
@@ -7567,12 +7808,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectOrangeSaturationGet(
-      {num? $set}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectOrangeSaturationGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/orange/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7581,12 +7822,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectOrangeSaturationPut(
-      {required ProcessingColourCorrectOrangeSaturationPut$RequestBody? body}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectOrangeSaturationPut(
+          {required ProcessingColourCorrectOrangeSaturationPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/orange/saturation');
     final $body = body;
     final Request $request = Request(
@@ -7595,12 +7838,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectRedBrightnessGet(
-      {num? $set}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectRedBrightnessGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/red/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7609,12 +7852,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectRedBrightnessPut(
-      {required ProcessingColourCorrectRedBrightnessPut$RequestBody? body}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectRedBrightnessPut(
+          {required ProcessingColourCorrectRedBrightnessPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/red/brightness');
     final $body = body;
     final Request $request = Request(
@@ -7623,11 +7868,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectRedHueGet({num? $set}) {
+  Future<Response<Hue$Response>> _processingColourCorrectRedHueGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/red/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7636,11 +7882,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectRedHuePut(
+  Future<Response<Hue$Response>> _processingColourCorrectRedHuePut(
       {required ProcessingColourCorrectRedHuePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/red/hue');
     final $body = body;
@@ -7650,12 +7896,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectRedSaturationGet(
-      {num? $set}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectRedSaturationGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/red/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7664,12 +7910,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectRedSaturationPut(
-      {required ProcessingColourCorrectRedSaturationPut$RequestBody? body}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectRedSaturationPut(
+          {required ProcessingColourCorrectRedSaturationPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/red/saturation');
     final $body = body;
     final Request $request = Request(
@@ -7678,12 +7926,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectTurquoiseBrightnessGet(
-      {num? $set}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectTurquoiseBrightnessGet({num? $set}) {
     final Uri $url =
         Uri.parse('/processing/colour-correct/turquoise/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -7693,13 +7941,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectTurquoiseBrightnessPut(
-      {required ProcessingColourCorrectTurquoiseBrightnessPut$RequestBody?
-          body}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectTurquoiseBrightnessPut(
+          {required ProcessingColourCorrectTurquoiseBrightnessPut$RequestBody?
+              body}) {
     final Uri $url =
         Uri.parse('/processing/colour-correct/turquoise/brightness');
     final $body = body;
@@ -7709,11 +7958,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectTurquoiseHueGet({num? $set}) {
+  Future<Response<Hue$Response>> _processingColourCorrectTurquoiseHueGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/turquoise/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7722,11 +7972,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectTurquoiseHuePut(
+  Future<Response<Hue$Response>> _processingColourCorrectTurquoiseHuePut(
       {required ProcessingColourCorrectTurquoiseHuePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/turquoise/hue');
     final $body = body;
@@ -7736,12 +7986,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectTurquoiseSaturationGet(
-      {num? $set}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectTurquoiseSaturationGet({num? $set}) {
     final Uri $url =
         Uri.parse('/processing/colour-correct/turquoise/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -7751,13 +8001,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectTurquoiseSaturationPut(
-      {required ProcessingColourCorrectTurquoiseSaturationPut$RequestBody?
-          body}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectTurquoiseSaturationPut(
+          {required ProcessingColourCorrectTurquoiseSaturationPut$RequestBody?
+              body}) {
     final Uri $url =
         Uri.parse('/processing/colour-correct/turquoise/saturation');
     final $body = body;
@@ -7767,12 +8018,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectVioletBrightnessGet(
-      {num? $set}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectVioletBrightnessGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/violet/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7781,12 +8032,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectVioletBrightnessPut(
-      {required ProcessingColourCorrectVioletBrightnessPut$RequestBody? body}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectVioletBrightnessPut(
+          {required ProcessingColourCorrectVioletBrightnessPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/violet/brightness');
     final $body = body;
     final Request $request = Request(
@@ -7795,11 +8048,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectVioletHueGet({num? $set}) {
+  Future<Response<Hue$Response>> _processingColourCorrectVioletHueGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/violet/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7808,11 +8062,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectVioletHuePut(
+  Future<Response<Hue$Response>> _processingColourCorrectVioletHuePut(
       {required ProcessingColourCorrectVioletHuePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/violet/hue');
     final $body = body;
@@ -7822,12 +8076,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectVioletSaturationGet(
-      {num? $set}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectVioletSaturationGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/violet/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7836,12 +8090,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectVioletSaturationPut(
-      {required ProcessingColourCorrectVioletSaturationPut$RequestBody? body}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectVioletSaturationPut(
+          {required ProcessingColourCorrectVioletSaturationPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/violet/saturation');
     final $body = body;
     final Request $request = Request(
@@ -7850,11 +8106,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _processingColourCorrectWhiteBlueGet({num? $set}) {
+  Future<Response<Blue$Response>> _processingColourCorrectWhiteBlueGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/white/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7863,11 +8120,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _processingColourCorrectWhiteBluePut(
+  Future<Response<Blue$Response>> _processingColourCorrectWhiteBluePut(
       {required ProcessingColourCorrectWhiteBluePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/white/blue');
     final $body = body;
@@ -7877,11 +8134,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _processingColourCorrectWhiteGreenGet({num? $set}) {
+  Future<Response<Green$Response>> _processingColourCorrectWhiteGreenGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/white/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7890,11 +8148,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _processingColourCorrectWhiteGreenPut(
+  Future<Response<Green$Response>> _processingColourCorrectWhiteGreenPut(
       {required ProcessingColourCorrectWhiteGreenPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/white/green');
     final $body = body;
@@ -7904,11 +8162,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _processingColourCorrectWhiteRedGet({num? $set}) {
+  Future<Response<Red$Response>> _processingColourCorrectWhiteRedGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/white/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7917,11 +8176,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _processingColourCorrectWhiteRedPut(
+  Future<Response<Red$Response>> _processingColourCorrectWhiteRedPut(
       {required ProcessingColourCorrectWhiteRedPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/white/red');
     final $body = body;
@@ -7931,12 +8190,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectYellowBrightnessGet(
-      {num? $set}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectYellowBrightnessGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/yellow/brightness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7945,12 +8204,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Brightness>> _processingColourCorrectYellowBrightnessPut(
-      {required ProcessingColourCorrectYellowBrightnessPut$RequestBody? body}) {
+  Future<Response<Brightness$Response>>
+      _processingColourCorrectYellowBrightnessPut(
+          {required ProcessingColourCorrectYellowBrightnessPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/yellow/brightness');
     final $body = body;
     final Request $request = Request(
@@ -7959,11 +8220,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Brightness, Brightness>($request);
+    return client.send<Brightness$Response, Brightness$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectYellowHueGet({num? $set}) {
+  Future<Response<Hue$Response>> _processingColourCorrectYellowHueGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/yellow/hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -7972,11 +8234,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Hue>> _processingColourCorrectYellowHuePut(
+  Future<Response<Hue$Response>> _processingColourCorrectYellowHuePut(
       {required ProcessingColourCorrectYellowHuePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/yellow/hue');
     final $body = body;
@@ -7986,12 +8248,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Hue, Hue>($request);
+    return client.send<Hue$Response, Hue$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectYellowSaturationGet(
-      {num? $set}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectYellowSaturationGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-correct/yellow/saturation');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -8000,12 +8262,14 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<Saturation>> _processingColourCorrectYellowSaturationPut(
-      {required ProcessingColourCorrectYellowSaturationPut$RequestBody? body}) {
+  Future<Response<Saturation$Response>>
+      _processingColourCorrectYellowSaturationPut(
+          {required ProcessingColourCorrectYellowSaturationPut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-correct/yellow/saturation');
     final $body = body;
     final Request $request = Request(
@@ -8014,11 +8278,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Saturation, Saturation>($request);
+    return client.send<Saturation$Response, Saturation$Response>($request);
   }
 
   @override
-  Future<Response<ApplyToBrightness>>
+  Future<Response<ApplyToBrightness$Response>>
       _processingColourReplaceApplyToBrightnessGet({bool? $set}) {
     final Uri $url =
         Uri.parse('/processing/colour-replace/apply-to-brightness');
@@ -8029,11 +8293,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<ApplyToBrightness, ApplyToBrightness>($request);
+    return client
+        .send<ApplyToBrightness$Response, ApplyToBrightness$Response>($request);
   }
 
   @override
-  Future<Response<ApplyToBrightness>>
+  Future<Response<ApplyToBrightness$Response>>
       _processingColourReplaceApplyToBrightnessPut(
           {required ProcessingColourReplaceApplyToBrightnessPut$RequestBody?
               body}) {
@@ -8046,11 +8311,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<ApplyToBrightness, ApplyToBrightness>($request);
+    return client
+        .send<ApplyToBrightness$Response, ApplyToBrightness$Response>($request);
   }
 
   @override
-  Future<Response<ApplyToHue>> _processingColourReplaceApplyToHueGet(
+  Future<Response<ApplyToHue$Response>> _processingColourReplaceApplyToHueGet(
       {bool? $set}) {
     final Uri $url = Uri.parse('/processing/colour-replace/apply-to-hue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -8060,11 +8326,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<ApplyToHue, ApplyToHue>($request);
+    return client.send<ApplyToHue$Response, ApplyToHue$Response>($request);
   }
 
   @override
-  Future<Response<ApplyToHue>> _processingColourReplaceApplyToHuePut(
+  Future<Response<ApplyToHue$Response>> _processingColourReplaceApplyToHuePut(
       {required ProcessingColourReplaceApplyToHuePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-replace/apply-to-hue');
     final $body = body;
@@ -8074,11 +8340,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<ApplyToHue, ApplyToHue>($request);
+    return client.send<ApplyToHue$Response, ApplyToHue$Response>($request);
   }
 
   @override
-  Future<Response<ApplyToSaturation>>
+  Future<Response<ApplyToSaturation$Response>>
       _processingColourReplaceApplyToSaturationGet({bool? $set}) {
     final Uri $url =
         Uri.parse('/processing/colour-replace/apply-to-saturation');
@@ -8089,11 +8355,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<ApplyToSaturation, ApplyToSaturation>($request);
+    return client
+        .send<ApplyToSaturation$Response, ApplyToSaturation$Response>($request);
   }
 
   @override
-  Future<Response<ApplyToSaturation>>
+  Future<Response<ApplyToSaturation$Response>>
       _processingColourReplaceApplyToSaturationPut(
           {required ProcessingColourReplaceApplyToSaturationPut$RequestBody?
               body}) {
@@ -8106,11 +8373,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<ApplyToSaturation, ApplyToSaturation>($request);
+    return client
+        .send<ApplyToSaturation$Response, ApplyToSaturation$Response>($request);
   }
 
   @override
-  Future<Response<BrightnessTolerance>>
+  Future<Response<BrightnessTolerance$Response>>
       _processingColourReplaceBrightnessToleranceGet({num? $set}) {
     final Uri $url =
         Uri.parse('/processing/colour-replace/brightness-tolerance');
@@ -8121,11 +8389,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<BrightnessTolerance, BrightnessTolerance>($request);
+    return client.send<BrightnessTolerance$Response,
+        BrightnessTolerance$Response>($request);
   }
 
   @override
-  Future<Response<BrightnessTolerance>>
+  Future<Response<BrightnessTolerance$Response>>
       _processingColourReplaceBrightnessTolerancePut(
           {required ProcessingColourReplaceBrightnessTolerancePut$RequestBody?
               body}) {
@@ -8138,11 +8407,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<BrightnessTolerance, BrightnessTolerance>($request);
+    return client.send<BrightnessTolerance$Response,
+        BrightnessTolerance$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _processingColourReplaceColourFromBlueGet(
+  Future<Response<Blue$Response>> _processingColourReplaceColourFromBlueGet(
       {int? $set}) {
     final Uri $url = Uri.parse('/processing/colour-replace/colour-from/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -8152,11 +8422,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _processingColourReplaceColourFromBluePut(
+  Future<Response<Blue$Response>> _processingColourReplaceColourFromBluePut(
       {required ProcessingColourReplaceColourFromBluePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-replace/colour-from/blue');
     final $body = body;
@@ -8166,11 +8436,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _processingColourReplaceColourFromGreenGet(
+  Future<Response<Green$Response>> _processingColourReplaceColourFromGreenGet(
       {int? $set}) {
     final Uri $url = Uri.parse('/processing/colour-replace/colour-from/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -8180,11 +8450,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _processingColourReplaceColourFromGreenPut(
+  Future<Response<Green$Response>> _processingColourReplaceColourFromGreenPut(
       {required ProcessingColourReplaceColourFromGreenPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-replace/colour-from/green');
     final $body = body;
@@ -8194,11 +8464,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _processingColourReplaceColourFromRedGet({int? $set}) {
+  Future<Response<Red$Response>> _processingColourReplaceColourFromRedGet(
+      {int? $set}) {
     final Uri $url = Uri.parse('/processing/colour-replace/colour-from/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -8207,11 +8478,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _processingColourReplaceColourFromRedPut(
+  Future<Response<Red$Response>> _processingColourReplaceColourFromRedPut(
       {required ProcessingColourReplaceColourFromRedPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-replace/colour-from/red');
     final $body = body;
@@ -8221,11 +8492,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _processingColourReplaceColourToBlueGet({int? $set}) {
+  Future<Response<Blue$Response>> _processingColourReplaceColourToBlueGet(
+      {int? $set}) {
     final Uri $url = Uri.parse('/processing/colour-replace/colour-to/blue');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -8234,11 +8506,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Blue>> _processingColourReplaceColourToBluePut(
+  Future<Response<Blue$Response>> _processingColourReplaceColourToBluePut(
       {required ProcessingColourReplaceColourToBluePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-replace/colour-to/blue');
     final $body = body;
@@ -8248,11 +8520,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Blue, Blue>($request);
+    return client.send<Blue$Response, Blue$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _processingColourReplaceColourToGreenGet(
+  Future<Response<Green$Response>> _processingColourReplaceColourToGreenGet(
       {int? $set}) {
     final Uri $url = Uri.parse('/processing/colour-replace/colour-to/green');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -8262,11 +8534,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Green>> _processingColourReplaceColourToGreenPut(
+  Future<Response<Green$Response>> _processingColourReplaceColourToGreenPut(
       {required ProcessingColourReplaceColourToGreenPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-replace/colour-to/green');
     final $body = body;
@@ -8276,11 +8548,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Green, Green>($request);
+    return client.send<Green$Response, Green$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _processingColourReplaceColourToRedGet({int? $set}) {
+  Future<Response<Red$Response>> _processingColourReplaceColourToRedGet(
+      {int? $set}) {
     final Uri $url = Uri.parse('/processing/colour-replace/colour-to/red');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -8289,11 +8562,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<Red>> _processingColourReplaceColourToRedPut(
+  Future<Response<Red$Response>> _processingColourReplaceColourToRedPut(
       {required ProcessingColourReplaceColourToRedPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-replace/colour-to/red');
     final $body = body;
@@ -8303,12 +8576,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Red, Red>($request);
+    return client.send<Red$Response, Red$Response>($request);
   }
 
   @override
-  Future<Response<ColourTolerance>> _processingColourReplaceColourToleranceGet(
-      {num? $set}) {
+  Future<Response<ColourTolerance$Response>>
+      _processingColourReplaceColourToleranceGet({num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-replace/colour-tolerance');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -8317,12 +8590,15 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<ColourTolerance, ColourTolerance>($request);
+    return client
+        .send<ColourTolerance$Response, ColourTolerance$Response>($request);
   }
 
   @override
-  Future<Response<ColourTolerance>> _processingColourReplaceColourTolerancePut(
-      {required ProcessingColourReplaceColourTolerancePut$RequestBody? body}) {
+  Future<Response<ColourTolerance$Response>>
+      _processingColourReplaceColourTolerancePut(
+          {required ProcessingColourReplaceColourTolerancePut$RequestBody?
+              body}) {
     final Uri $url = Uri.parse('/processing/colour-replace/colour-tolerance');
     final $body = body;
     final Request $request = Request(
@@ -8331,11 +8607,13 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<ColourTolerance, ColourTolerance>($request);
+    return client
+        .send<ColourTolerance$Response, ColourTolerance$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _processingColourReplaceEnabledGet({bool? $set}) {
+  Future<Response<Enabled$Response>> _processingColourReplaceEnabledGet(
+      {bool? $set}) {
     final Uri $url = Uri.parse('/processing/colour-replace/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -8344,11 +8622,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _processingColourReplaceEnabledPut(
+  Future<Response<Enabled$Response>> _processingColourReplaceEnabledPut(
       {required ProcessingColourReplaceEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-replace/enabled');
     final $body = body;
@@ -8358,11 +8636,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Method$>> _processingColourReplaceMethodGet({String? $set}) {
+  Future<Response<Method$Response>> _processingColourReplaceMethodGet(
+      {String? $set}) {
     final Uri $url = Uri.parse('/processing/colour-replace/method');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -8371,11 +8650,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Method$, Method$>($request);
+    return client.send<Method$Response, Method$Response>($request);
   }
 
   @override
-  Future<Response<Method$>> _processingColourReplaceMethodPut(
+  Future<Response<Method$Response>> _processingColourReplaceMethodPut(
       {required ProcessingColourReplaceMethodPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-replace/method');
     final $body = body;
@@ -8385,11 +8664,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Method$, Method$>($request);
+    return client.send<Method$Response, Method$Response>($request);
   }
 
   @override
-  Future<Response<Softness>> _processingColourReplaceSoftnessGet({num? $set}) {
+  Future<Response<Softness$Response>> _processingColourReplaceSoftnessGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-replace/softness');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -8398,11 +8678,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Softness, Softness>($request);
+    return client.send<Softness$Response, Softness$Response>($request);
   }
 
   @override
-  Future<Response<Softness>> _processingColourReplaceSoftnessPut(
+  Future<Response<Softness$Response>> _processingColourReplaceSoftnessPut(
       {required ProcessingColourReplaceSoftnessPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-replace/softness');
     final $body = body;
@@ -8412,11 +8692,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Softness, Softness>($request);
+    return client.send<Softness$Response, Softness$Response>($request);
   }
 
   @override
-  Future<Response<Strength>> _processingColourReplaceStrengthGet({num? $set}) {
+  Future<Response<Strength$Response>> _processingColourReplaceStrengthGet(
+      {num? $set}) {
     final Uri $url = Uri.parse('/processing/colour-replace/strength');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -8425,11 +8706,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Strength, Strength>($request);
+    return client.send<Strength$Response, Strength$Response>($request);
   }
 
   @override
-  Future<Response<Strength>> _processingColourReplaceStrengthPut(
+  Future<Response<Strength$Response>> _processingColourReplaceStrengthPut(
       {required ProcessingColourReplaceStrengthPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-replace/strength');
     final $body = body;
@@ -8439,11 +8720,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Strength, Strength>($request);
+    return client.send<Strength$Response, Strength$Response>($request);
   }
 
   @override
-  Future<Response<ViewMatte>> _processingColourReplaceViewMatteGet(
+  Future<Response<ViewMatte$Response>> _processingColourReplaceViewMatteGet(
       {bool? $set}) {
     final Uri $url = Uri.parse('/processing/colour-replace/view-matte');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -8453,11 +8734,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<ViewMatte, ViewMatte>($request);
+    return client.send<ViewMatte$Response, ViewMatte$Response>($request);
   }
 
   @override
-  Future<Response<ViewMatte>> _processingColourReplaceViewMattePut(
+  Future<Response<ViewMatte$Response>> _processingColourReplaceViewMattePut(
       {required ProcessingColourReplaceViewMattePut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/colour-replace/view-matte');
     final $body = body;
@@ -8467,11 +8748,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<ViewMatte, ViewMatte>($request);
+    return client.send<ViewMatte$Response, ViewMatte$Response>($request);
   }
 
   @override
-  Future<Response<Points>> _processingCurvesBluePointsGet(
+  Future<Response<Points$Response>> _processingCurvesBluePointsGet(
       {List<dynamic>? $set}) {
     final Uri $url = Uri.parse('/processing/curves/blue/points');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -8481,11 +8762,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Points, Points>($request);
+    return client.send<Points$Response, Points$Response>($request);
   }
 
   @override
-  Future<Response<Points>> _processingCurvesBluePointsPut(
+  Future<Response<Points$Response>> _processingCurvesBluePointsPut(
       {required ProcessingCurvesBluePointsPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/curves/blue/points');
     final $body = body;
@@ -8495,11 +8776,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Points, Points>($request);
+    return client.send<Points$Response, Points$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _processingCurvesEnabledGet({bool? $set}) {
+  Future<Response<Enabled$Response>> _processingCurvesEnabledGet({bool? $set}) {
     final Uri $url = Uri.parse('/processing/curves/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -8508,11 +8789,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _processingCurvesEnabledPut(
+  Future<Response<Enabled$Response>> _processingCurvesEnabledPut(
       {required ProcessingCurvesEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/curves/enabled');
     final $body = body;
@@ -8522,11 +8803,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Points>> _processingCurvesGreenPointsGet(
+  Future<Response<Points$Response>> _processingCurvesGreenPointsGet(
       {List<dynamic>? $set}) {
     final Uri $url = Uri.parse('/processing/curves/green/points');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -8536,11 +8817,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Points, Points>($request);
+    return client.send<Points$Response, Points$Response>($request);
   }
 
   @override
-  Future<Response<Points>> _processingCurvesGreenPointsPut(
+  Future<Response<Points$Response>> _processingCurvesGreenPointsPut(
       {required ProcessingCurvesGreenPointsPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/curves/green/points');
     final $body = body;
@@ -8550,11 +8831,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Points, Points>($request);
+    return client.send<Points$Response, Points$Response>($request);
   }
 
   @override
-  Future<Response<Points>> _processingCurvesRedPointsGet(
+  Future<Response<Points$Response>> _processingCurvesRedPointsGet(
       {List<dynamic>? $set}) {
     final Uri $url = Uri.parse('/processing/curves/red/points');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -8564,11 +8845,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Points, Points>($request);
+    return client.send<Points$Response, Points$Response>($request);
   }
 
   @override
-  Future<Response<Points>> _processingCurvesRedPointsPut(
+  Future<Response<Points$Response>> _processingCurvesRedPointsPut(
       {required ProcessingCurvesRedPointsPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/curves/red/points');
     final $body = body;
@@ -8578,11 +8859,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Points, Points>($request);
+    return client.send<Points$Response, Points$Response>($request);
   }
 
   @override
-  Future<Response<Points>> _processingCurvesWhitePointsGet(
+  Future<Response<Points$Response>> _processingCurvesWhitePointsGet(
       {List<dynamic>? $set}) {
     final Uri $url = Uri.parse('/processing/curves/white/points');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -8592,11 +8873,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Points, Points>($request);
+    return client.send<Points$Response, Points$Response>($request);
   }
 
   @override
-  Future<Response<Points>> _processingCurvesWhitePointsPut(
+  Future<Response<Points$Response>> _processingCurvesWhitePointsPut(
       {required ProcessingCurvesWhitePointsPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/curves/white/points');
     final $body = body;
@@ -8606,11 +8887,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Points, Points>($request);
+    return client.send<Points$Response, Points$Response>($request);
   }
 
   @override
-  Future<Response<ModuleCorrectionEnabled>>
+  Future<Response<ModuleCorrectionEnabled$Response>>
       _processingOscaModuleCorrectionEnabledGet({bool? $set}) {
     final Uri $url = Uri.parse('/processing/osca/module-correction-enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -8620,12 +8901,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client
-        .send<ModuleCorrectionEnabled, ModuleCorrectionEnabled>($request);
+    return client.send<ModuleCorrectionEnabled$Response,
+        ModuleCorrectionEnabled$Response>($request);
   }
 
   @override
-  Future<Response<ModuleCorrectionEnabled>>
+  Future<Response<ModuleCorrectionEnabled$Response>>
       _processingOscaModuleCorrectionEnabledPut(
           {required ProcessingOscaModuleCorrectionEnabledPut$RequestBody?
               body}) {
@@ -8637,12 +8918,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client
-        .send<ModuleCorrectionEnabled, ModuleCorrectionEnabled>($request);
+    return client.send<ModuleCorrectionEnabled$Response,
+        ModuleCorrectionEnabled$Response>($request);
   }
 
   @override
-  Future<Response<SeamCorrectionEnabled>>
+  Future<Response<SeamCorrectionEnabled$Response>>
       _processingOscaSeamCorrectionEnabledGet({bool? $set}) {
     final Uri $url = Uri.parse('/processing/osca/seam-correction-enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
@@ -8652,11 +8933,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<SeamCorrectionEnabled, SeamCorrectionEnabled>($request);
+    return client.send<SeamCorrectionEnabled$Response,
+        SeamCorrectionEnabled$Response>($request);
   }
 
   @override
-  Future<Response<SeamCorrectionEnabled>>
+  Future<Response<SeamCorrectionEnabled$Response>>
       _processingOscaSeamCorrectionEnabledPut(
           {required ProcessingOscaSeamCorrectionEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/osca/seam-correction-enabled');
@@ -8667,11 +8949,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<SeamCorrectionEnabled, SeamCorrectionEnabled>($request);
+    return client.send<SeamCorrectionEnabled$Response,
+        SeamCorrectionEnabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _processingScalerEnabledGet({bool? $set}) {
+  Future<Response<Enabled$Response>> _processingScalerEnabledGet({bool? $set}) {
     final Uri $url = Uri.parse('/processing/scaler/enabled');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -8680,11 +8963,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Enabled>> _processingScalerEnabledPut(
+  Future<Response<Enabled$Response>> _processingScalerEnabledPut(
       {required ProcessingScalerEnabledPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/processing/scaler/enabled');
     final $body = body;
@@ -8694,11 +8977,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Enabled, Enabled>($request);
+    return client.send<Enabled$Response, Enabled$Response>($request);
   }
 
   @override
-  Future<Response<Reboot>> _systemActionsRebootGet({String? $set}) {
+  Future<Response<Reboot$Response>> _systemActionsRebootGet({String? $set}) {
     final Uri $url = Uri.parse('/system/actions/reboot');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -8707,11 +8990,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Reboot, Reboot>($request);
+    return client.send<Reboot$Response, Reboot$Response>($request);
   }
 
   @override
-  Future<Response<Reboot>> _systemActionsRebootPut(
+  Future<Response<Reboot$Response>> _systemActionsRebootPut(
       {required SystemActionsRebootPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/system/actions/reboot');
     final $body = body;
@@ -8721,11 +9004,12 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Reboot, Reboot>($request);
+    return client.send<Reboot$Response, Reboot$Response>($request);
   }
 
   @override
-  Future<Response<Shutdown>> _systemActionsShutdownGet({String? $set}) {
+  Future<Response<Shutdown$Response>> _systemActionsShutdownGet(
+      {String? $set}) {
     final Uri $url = Uri.parse('/system/actions/shutdown');
     final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
     final Request $request = Request(
@@ -8734,11 +9018,11 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<Shutdown, Shutdown>($request);
+    return client.send<Shutdown$Response, Shutdown$Response>($request);
   }
 
   @override
-  Future<Response<Shutdown>> _systemActionsShutdownPut(
+  Future<Response<Shutdown$Response>> _systemActionsShutdownPut(
       {required SystemActionsShutdownPut$RequestBody? body}) {
     final Uri $url = Uri.parse('/system/actions/shutdown');
     final $body = body;
@@ -8748,39 +9032,42 @@ class _$Brompton extends Brompton {
       client.baseUrl,
       body: $body,
     );
-    return client.send<Shutdown, Shutdown>($request);
+    return client.send<Shutdown$Response, Shutdown$Response>($request);
   }
 
   @override
-  Future<Response<CurrentDateTime>> _systemCurrentDateTimeGet() {
+  Future<Response<CurrentDateTime$Response>> _systemCurrentDateTimeGet() {
     final Uri $url = Uri.parse('/system/current-date-time');
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
     );
-    return client.send<CurrentDateTime, CurrentDateTime>($request);
+    return client
+        .send<CurrentDateTime$Response, CurrentDateTime$Response>($request);
   }
 
   @override
-  Future<Response<ProcessorType>> _systemProcessorTypeGet() {
+  Future<Response<ProcessorType$Response>> _systemProcessorTypeGet() {
     final Uri $url = Uri.parse('/system/processor-type');
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
     );
-    return client.send<ProcessorType, ProcessorType>($request);
+    return client
+        .send<ProcessorType$Response, ProcessorType$Response>($request);
   }
 
   @override
-  Future<Response<SoftwareVersion>> _systemSoftwareVersionGet() {
+  Future<Response<SoftwareVersion$Response>> _systemSoftwareVersionGet() {
     final Uri $url = Uri.parse('/system/software-version');
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
     );
-    return client.send<SoftwareVersion, SoftwareVersion>($request);
+    return client
+        .send<SoftwareVersion$Response, SoftwareVersion$Response>($request);
   }
 }

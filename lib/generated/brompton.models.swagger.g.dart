@@ -6,7 +6,8 @@ part of 'brompton.models.swagger.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-BadRequest _$BadRequestFromJson(Map<String, dynamic> json) => BadRequest(
+BadRequest$Response _$BadRequest$ResponseFromJson(Map<String, dynamic> json) =>
+    BadRequest$Response(
       errorMessages: (json['error-messages'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
@@ -14,982 +15,1169 @@ BadRequest _$BadRequestFromJson(Map<String, dynamic> json) => BadRequest(
       responseCode: json['response-code'] as String?,
     );
 
-Map<String, dynamic> _$BadRequestToJson(BadRequest instance) =>
+Map<String, dynamic> _$BadRequest$ResponseToJson(
+        BadRequest$Response instance) =>
     <String, dynamic>{
       'error-messages': instance.errorMessages,
       'response-code': instance.responseCode,
     };
 
-Angle _$AngleFromJson(Map<String, dynamic> json) => Angle(
+Angle$Response _$Angle$ResponseFromJson(Map<String, dynamic> json) =>
+    Angle$Response(
       angle: (json['angle'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$AngleToJson(Angle instance) => <String, dynamic>{
+Map<String, dynamic> _$Angle$ResponseToJson(Angle$Response instance) =>
+    <String, dynamic>{
       'angle': instance.angle,
     };
 
-ApplyToBrightness _$ApplyToBrightnessFromJson(Map<String, dynamic> json) =>
-    ApplyToBrightness(
+ApplyToBrightness$Response _$ApplyToBrightness$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    ApplyToBrightness$Response(
       applyToBrightness: json['apply-to-brightness'],
     );
 
-Map<String, dynamic> _$ApplyToBrightnessToJson(ApplyToBrightness instance) =>
+Map<String, dynamic> _$ApplyToBrightness$ResponseToJson(
+        ApplyToBrightness$Response instance) =>
     <String, dynamic>{
       'apply-to-brightness': instance.applyToBrightness,
     };
 
-ApplyToHue _$ApplyToHueFromJson(Map<String, dynamic> json) => ApplyToHue(
+ApplyToHue$Response _$ApplyToHue$ResponseFromJson(Map<String, dynamic> json) =>
+    ApplyToHue$Response(
       applyToHue: json['apply-to-hue'],
     );
 
-Map<String, dynamic> _$ApplyToHueToJson(ApplyToHue instance) =>
+Map<String, dynamic> _$ApplyToHue$ResponseToJson(
+        ApplyToHue$Response instance) =>
     <String, dynamic>{
       'apply-to-hue': instance.applyToHue,
     };
 
-ApplyToSaturation _$ApplyToSaturationFromJson(Map<String, dynamic> json) =>
-    ApplyToSaturation(
+ApplyToSaturation$Response _$ApplyToSaturation$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    ApplyToSaturation$Response(
       applyToSaturation: json['apply-to-saturation'],
     );
 
-Map<String, dynamic> _$ApplyToSaturationToJson(ApplyToSaturation instance) =>
+Map<String, dynamic> _$ApplyToSaturation$ResponseToJson(
+        ApplyToSaturation$Response instance) =>
     <String, dynamic>{
       'apply-to-saturation': instance.applyToSaturation,
     };
 
-AssociatedCount _$AssociatedCountFromJson(Map<String, dynamic> json) =>
-    AssociatedCount(
+AssociatedCount$Response _$AssociatedCount$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    AssociatedCount$Response(
       associatedCount: json['associated-count'] as int?,
     );
 
-Map<String, dynamic> _$AssociatedCountToJson(AssociatedCount instance) =>
+Map<String, dynamic> _$AssociatedCount$ResponseToJson(
+        AssociatedCount$Response instance) =>
     <String, dynamic>{
       'associated-count': instance.associatedCount,
     };
 
-AutoBrighten _$AutoBrightenFromJson(Map<String, dynamic> json) => AutoBrighten(
+AutoBrighten$Response _$AutoBrighten$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    AutoBrighten$Response(
       autoBrighten: json['auto-brighten'],
     );
 
-Map<String, dynamic> _$AutoBrightenToJson(AutoBrighten instance) =>
+Map<String, dynamic> _$AutoBrighten$ResponseToJson(
+        AutoBrighten$Response instance) =>
     <String, dynamic>{
       'auto-brighten': instance.autoBrighten,
     };
 
-BackgroundGain _$BackgroundGainFromJson(Map<String, dynamic> json) =>
-    BackgroundGain(
+BackgroundGain$Response _$BackgroundGain$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    BackgroundGain$Response(
       backgroundGain: json['background-gain'] as int?,
     );
 
-Map<String, dynamic> _$BackgroundGainToJson(BackgroundGain instance) =>
+Map<String, dynamic> _$BackgroundGain$ResponseToJson(
+        BackgroundGain$Response instance) =>
     <String, dynamic>{
       'background-gain': instance.backgroundGain,
     };
 
-BitDepth _$BitDepthFromJson(Map<String, dynamic> json) => BitDepth(
+BitDepth$Response _$BitDepth$ResponseFromJson(Map<String, dynamic> json) =>
+    BitDepth$Response(
       bitDepth: json['bit-depth'] as int?,
     );
 
-Map<String, dynamic> _$BitDepthToJson(BitDepth instance) => <String, dynamic>{
+Map<String, dynamic> _$BitDepth$ResponseToJson(BitDepth$Response instance) =>
+    <String, dynamic>{
       'bit-depth': instance.bitDepth,
     };
 
-BlackLevel _$BlackLevelFromJson(Map<String, dynamic> json) => BlackLevel(
+BlackLevel$Response _$BlackLevel$ResponseFromJson(Map<String, dynamic> json) =>
+    BlackLevel$Response(
       blackLevel: json['black-level'] as int?,
     );
 
-Map<String, dynamic> _$BlackLevelToJson(BlackLevel instance) =>
+Map<String, dynamic> _$BlackLevel$ResponseToJson(
+        BlackLevel$Response instance) =>
     <String, dynamic>{
       'black-level': instance.blackLevel,
     };
 
-BlackoutAffectsMarkers _$BlackoutAffectsMarkersFromJson(
+BlackoutAffectsMarkers$Response _$BlackoutAffectsMarkers$ResponseFromJson(
         Map<String, dynamic> json) =>
-    BlackoutAffectsMarkers(
+    BlackoutAffectsMarkers$Response(
       blackoutAffectsMarkers: json['blackout-affects-markers'],
     );
 
-Map<String, dynamic> _$BlackoutAffectsMarkersToJson(
-        BlackoutAffectsMarkers instance) =>
+Map<String, dynamic> _$BlackoutAffectsMarkers$ResponseToJson(
+        BlackoutAffectsMarkers$Response instance) =>
     <String, dynamic>{
       'blackout-affects-markers': instance.blackoutAffectsMarkers,
     };
 
-Blue _$BlueFromJson(Map<String, dynamic> json) => Blue(
+Blue$Response _$Blue$ResponseFromJson(Map<String, dynamic> json) =>
+    Blue$Response(
       blue: json['blue'] as int?,
     );
 
-Map<String, dynamic> _$BlueToJson(Blue instance) => <String, dynamic>{
+Map<String, dynamic> _$Blue$ResponseToJson(Blue$Response instance) =>
+    <String, dynamic>{
       'blue': instance.blue,
     };
 
-Brightness _$BrightnessFromJson(Map<String, dynamic> json) => Brightness(
+Brightness$Response _$Brightness$ResponseFromJson(Map<String, dynamic> json) =>
+    Brightness$Response(
       brightness: (json['brightness'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$BrightnessToJson(Brightness instance) =>
+Map<String, dynamic> _$Brightness$ResponseToJson(
+        Brightness$Response instance) =>
     <String, dynamic>{
       'brightness': instance.brightness,
     };
 
-BrightnessTolerance _$BrightnessToleranceFromJson(Map<String, dynamic> json) =>
-    BrightnessTolerance(
+BrightnessTolerance$Response _$BrightnessTolerance$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    BrightnessTolerance$Response(
       brightnessTolerance: (json['brightness-tolerance'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$BrightnessToleranceToJson(
-        BrightnessTolerance instance) =>
+Map<String, dynamic> _$BrightnessTolerance$ResponseToJson(
+        BrightnessTolerance$Response instance) =>
     <String, dynamic>{
       'brightness-tolerance': instance.brightnessTolerance,
     };
 
-Colour _$ColourFromJson(Map<String, dynamic> json) => Colour(
+Colour$Response _$Colour$ResponseFromJson(Map<String, dynamic> json) =>
+    Colour$Response(
       colour: json['colour'] as String?,
     );
 
-Map<String, dynamic> _$ColourToJson(Colour instance) => <String, dynamic>{
+Map<String, dynamic> _$Colour$ResponseToJson(Colour$Response instance) =>
+    <String, dynamic>{
       'colour': instance.colour,
     };
 
-ColourTemperature _$ColourTemperatureFromJson(Map<String, dynamic> json) =>
-    ColourTemperature(
+ColourTemperature$Response _$ColourTemperature$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    ColourTemperature$Response(
       colourTemperature: json['colour-temperature'] as int?,
     );
 
-Map<String, dynamic> _$ColourTemperatureToJson(ColourTemperature instance) =>
+Map<String, dynamic> _$ColourTemperature$ResponseToJson(
+        ColourTemperature$Response instance) =>
     <String, dynamic>{
       'colour-temperature': instance.colourTemperature,
     };
 
-ColourTolerance _$ColourToleranceFromJson(Map<String, dynamic> json) =>
-    ColourTolerance(
+ColourTolerance$Response _$ColourTolerance$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    ColourTolerance$Response(
       colourTolerance: (json['colour-tolerance'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$ColourToleranceToJson(ColourTolerance instance) =>
+Map<String, dynamic> _$ColourTolerance$ResponseToJson(
+        ColourTolerance$Response instance) =>
     <String, dynamic>{
       'colour-tolerance': instance.colourTolerance,
     };
 
-Contrast _$ContrastFromJson(Map<String, dynamic> json) => Contrast(
+Contrast$Response _$Contrast$ResponseFromJson(Map<String, dynamic> json) =>
+    Contrast$Response(
       contrast: json['contrast'] as int?,
     );
 
-Map<String, dynamic> _$ContrastToJson(Contrast instance) => <String, dynamic>{
+Map<String, dynamic> _$Contrast$ResponseToJson(Contrast$Response instance) =>
+    <String, dynamic>{
       'contrast': instance.contrast,
     };
 
-CurrentDateTime _$CurrentDateTimeFromJson(Map<String, dynamic> json) =>
-    CurrentDateTime(
+CurrentDateTime$Response _$CurrentDateTime$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    CurrentDateTime$Response(
       currentDateTime: json['current-date-time'] as String?,
     );
 
-Map<String, dynamic> _$CurrentDateTimeToJson(CurrentDateTime instance) =>
+Map<String, dynamic> _$CurrentDateTime$ResponseToJson(
+        CurrentDateTime$Response instance) =>
     <String, dynamic>{
       'current-date-time': instance.currentDateTime,
     };
 
-CustomFrameRate _$CustomFrameRateFromJson(Map<String, dynamic> json) =>
-    CustomFrameRate(
+CustomFrameRate$Response _$CustomFrameRate$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    CustomFrameRate$Response(
       customFrameRate: (json['custom-frame-rate'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$CustomFrameRateToJson(CustomFrameRate instance) =>
+Map<String, dynamic> _$CustomFrameRate$ResponseToJson(
+        CustomFrameRate$Response instance) =>
     <String, dynamic>{
       'custom-frame-rate': instance.customFrameRate,
     };
 
-Data _$DataFromJson(Map<String, dynamic> json) => Data(
+Data$Response _$Data$ResponseFromJson(Map<String, dynamic> json) =>
+    Data$Response(
       data:
           (json['data'] as List<dynamic>?)?.map((e) => e as Object).toList() ??
               [],
     );
 
-Map<String, dynamic> _$DataToJson(Data instance) => <String, dynamic>{
+Map<String, dynamic> _$Data$ResponseToJson(Data$Response instance) =>
+    <String, dynamic>{
       'data': instance.data,
     };
 
-DistanceToTracker _$DistanceToTrackerFromJson(Map<String, dynamic> json) =>
-    DistanceToTracker(
+DistanceToTracker$Response _$DistanceToTracker$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    DistanceToTracker$Response(
       distanceToTracker: (json['distance-to-tracker'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$DistanceToTrackerToJson(DistanceToTracker instance) =>
+Map<String, dynamic> _$DistanceToTracker$ResponseToJson(
+        DistanceToTracker$Response instance) =>
     <String, dynamic>{
       'distance-to-tracker': instance.distanceToTracker,
     };
 
-DviColourFormat _$DviColourFormatFromJson(Map<String, dynamic> json) =>
-    DviColourFormat(
+DviColourFormat$Response _$DviColourFormat$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    DviColourFormat$Response(
       dviColourFormat: json['dvi-colour-format'] as String?,
     );
 
-Map<String, dynamic> _$DviColourFormatToJson(DviColourFormat instance) =>
+Map<String, dynamic> _$DviColourFormat$ResponseToJson(
+        DviColourFormat$Response instance) =>
     <String, dynamic>{
       'dvi-colour-format': instance.dviColourFormat,
     };
 
-Enabled _$EnabledFromJson(Map<String, dynamic> json) => Enabled(
+Enabled$Response _$Enabled$ResponseFromJson(Map<String, dynamic> json) =>
+    Enabled$Response(
       enabled: json['enabled'],
     );
 
-Map<String, dynamic> _$EnabledToJson(Enabled instance) => <String, dynamic>{
+Map<String, dynamic> _$Enabled$ResponseToJson(Enabled$Response instance) =>
+    <String, dynamic>{
       'enabled': instance.enabled,
     };
 
-ErrorCount _$ErrorCountFromJson(Map<String, dynamic> json) => ErrorCount(
+ErrorCount$Response _$ErrorCount$ResponseFromJson(Map<String, dynamic> json) =>
+    ErrorCount$Response(
       errorCount: json['error-count'] as int?,
     );
 
-Map<String, dynamic> _$ErrorCountToJson(ErrorCount instance) =>
+Map<String, dynamic> _$ErrorCount$ResponseToJson(
+        ErrorCount$Response instance) =>
     <String, dynamic>{
       'error-count': instance.errorCount,
     };
 
-FadeTime _$FadeTimeFromJson(Map<String, dynamic> json) => FadeTime(
+FadeTime$Response _$FadeTime$ResponseFromJson(Map<String, dynamic> json) =>
+    FadeTime$Response(
       fadeTime: (json['fade-time'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$FadeTimeToJson(FadeTime instance) => <String, dynamic>{
+Map<String, dynamic> _$FadeTime$ResponseToJson(FadeTime$Response instance) =>
+    <String, dynamic>{
       'fade-time': instance.fadeTime,
     };
 
-Filename _$FilenameFromJson(Map<String, dynamic> json) => Filename(
+Filename$Response _$Filename$ResponseFromJson(Map<String, dynamic> json) =>
+    Filename$Response(
       filename: json['filename'] as String?,
     );
 
-Map<String, dynamic> _$FilenameToJson(Filename instance) => <String, dynamic>{
+Map<String, dynamic> _$Filename$ResponseToJson(Filename$Response instance) =>
+    <String, dynamic>{
       'filename': instance.filename,
     };
 
-Format _$FormatFromJson(Map<String, dynamic> json) => Format(
+Format$Response _$Format$ResponseFromJson(Map<String, dynamic> json) =>
+    Format$Response(
       format: json['format'] as String?,
     );
 
-Map<String, dynamic> _$FormatToJson(Format instance) => <String, dynamic>{
+Map<String, dynamic> _$Format$ResponseToJson(Format$Response instance) =>
+    <String, dynamic>{
       'format': instance.format,
     };
 
-Fraction _$FractionFromJson(Map<String, dynamic> json) => Fraction(
+Fraction$Response _$Fraction$ResponseFromJson(Map<String, dynamic> json) =>
+    Fraction$Response(
       fraction: (json['fraction'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$FractionToJson(Fraction instance) => <String, dynamic>{
+Map<String, dynamic> _$Fraction$ResponseToJson(Fraction$Response instance) =>
+    <String, dynamic>{
       'fraction': instance.fraction,
     };
 
-FrameRateMultiplier _$FrameRateMultiplierFromJson(Map<String, dynamic> json) =>
-    FrameRateMultiplier(
+FrameRateMultiplier$Response _$FrameRateMultiplier$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    FrameRateMultiplier$Response(
       frameRateMultiplier: json['frame-rate-multiplier'] as int?,
     );
 
-Map<String, dynamic> _$FrameRateMultiplierToJson(
-        FrameRateMultiplier instance) =>
+Map<String, dynamic> _$FrameRateMultiplier$ResponseToJson(
+        FrameRateMultiplier$Response instance) =>
     <String, dynamic>{
       'frame-rate-multiplier': instance.frameRateMultiplier,
     };
 
-FramesEnabledOn _$FramesEnabledOnFromJson(Map<String, dynamic> json) =>
-    FramesEnabledOn(
+FramesEnabledOn$Response _$FramesEnabledOn$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    FramesEnabledOn$Response(
       framesEnabledOn: (json['frames-enabled-on'] as List<dynamic>?)
               ?.map((e) => e as Object)
               .toList() ??
           [],
     );
 
-Map<String, dynamic> _$FramesEnabledOnToJson(FramesEnabledOn instance) =>
+Map<String, dynamic> _$FramesEnabledOn$ResponseToJson(
+        FramesEnabledOn$Response instance) =>
     <String, dynamic>{
       'frames-enabled-on': instance.framesEnabledOn,
     };
 
-Gain _$GainFromJson(Map<String, dynamic> json) => Gain(
+Gain$Response _$Gain$ResponseFromJson(Map<String, dynamic> json) =>
+    Gain$Response(
       gain: (json['gain'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$GainToJson(Gain instance) => <String, dynamic>{
+Map<String, dynamic> _$Gain$ResponseToJson(Gain$Response instance) =>
+    <String, dynamic>{
       'gain': instance.gain,
     };
 
-Gamma _$GammaFromJson(Map<String, dynamic> json) => Gamma(
+Gamma$Response _$Gamma$ResponseFromJson(Map<String, dynamic> json) =>
+    Gamma$Response(
       gamma: (json['gamma'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$GammaToJson(Gamma instance) => <String, dynamic>{
+Map<String, dynamic> _$Gamma$ResponseToJson(Gamma$Response instance) =>
+    <String, dynamic>{
       'gamma': instance.gamma,
     };
 
-Gamut _$GamutFromJson(Map<String, dynamic> json) => Gamut(
+Gamut$Response _$Gamut$ResponseFromJson(Map<String, dynamic> json) =>
+    Gamut$Response(
       gamut: json['gamut'] as String?,
     );
 
-Map<String, dynamic> _$GamutToJson(Gamut instance) => <String, dynamic>{
+Map<String, dynamic> _$Gamut$ResponseToJson(Gamut$Response instance) =>
+    <String, dynamic>{
       'gamut': instance.gamut,
     };
 
-GlobalColourOverride _$GlobalColourOverrideFromJson(
+GlobalColourOverride$Response _$GlobalColourOverride$ResponseFromJson(
         Map<String, dynamic> json) =>
-    GlobalColourOverride(
+    GlobalColourOverride$Response(
       globalColourOverride: json['global-colour-override'],
     );
 
-Map<String, dynamic> _$GlobalColourOverrideToJson(
-        GlobalColourOverride instance) =>
+Map<String, dynamic> _$GlobalColourOverride$ResponseToJson(
+        GlobalColourOverride$Response instance) =>
     <String, dynamic>{
       'global-colour-override': instance.globalColourOverride,
     };
 
-GlobalGainsOverride _$GlobalGainsOverrideFromJson(Map<String, dynamic> json) =>
-    GlobalGainsOverride(
+GlobalGainsOverride$Response _$GlobalGainsOverride$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    GlobalGainsOverride$Response(
       globalGainsOverride: json['global-gains-override'],
     );
 
-Map<String, dynamic> _$GlobalGainsOverrideToJson(
-        GlobalGainsOverride instance) =>
+Map<String, dynamic> _$GlobalGainsOverride$ResponseToJson(
+        GlobalGainsOverride$Response instance) =>
     <String, dynamic>{
       'global-gains-override': instance.globalGainsOverride,
     };
 
-GlobalStartrackerOverride _$GlobalStartrackerOverrideFromJson(
+GlobalStartrackerOverride$Response _$GlobalStartrackerOverride$ResponseFromJson(
         Map<String, dynamic> json) =>
-    GlobalStartrackerOverride(
+    GlobalStartrackerOverride$Response(
       globalStartrackerOverride: json['global-startracker-override'],
     );
 
-Map<String, dynamic> _$GlobalStartrackerOverrideToJson(
-        GlobalStartrackerOverride instance) =>
+Map<String, dynamic> _$GlobalStartrackerOverride$ResponseToJson(
+        GlobalStartrackerOverride$Response instance) =>
     <String, dynamic>{
       'global-startracker-override': instance.globalStartrackerOverride,
     };
 
-Green _$GreenFromJson(Map<String, dynamic> json) => Green(
+Green$Response _$Green$ResponseFromJson(Map<String, dynamic> json) =>
+    Green$Response(
       green: json['green'] as int?,
     );
 
-Map<String, dynamic> _$GreenToJson(Green instance) => <String, dynamic>{
+Map<String, dynamic> _$Green$ResponseToJson(Green$Response instance) =>
+    <String, dynamic>{
       'green': instance.green,
     };
 
-HdmiColourFormat _$HdmiColourFormatFromJson(Map<String, dynamic> json) =>
-    HdmiColourFormat(
+HdmiColourFormat$Response _$HdmiColourFormat$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    HdmiColourFormat$Response(
       hdmiColourFormat: json['hdmi-colour-format'] as String?,
     );
 
-Map<String, dynamic> _$HdmiColourFormatToJson(HdmiColourFormat instance) =>
+Map<String, dynamic> _$HdmiColourFormat$ResponseToJson(
+        HdmiColourFormat$Response instance) =>
     <String, dynamic>{
       'hdmi-colour-format': instance.hdmiColourFormat,
     };
 
-Height _$HeightFromJson(Map<String, dynamic> json) => Height(
+Height$Response _$Height$ResponseFromJson(Map<String, dynamic> json) =>
+    Height$Response(
       height: json['height'] as int?,
     );
 
-Map<String, dynamic> _$HeightToJson(Height instance) => <String, dynamic>{
+Map<String, dynamic> _$Height$ResponseToJson(Height$Response instance) =>
+    <String, dynamic>{
       'height': instance.height,
     };
 
-HighlightOverbrightPixelsEnabled _$HighlightOverbrightPixelsEnabledFromJson(
-        Map<String, dynamic> json) =>
-    HighlightOverbrightPixelsEnabled(
-      highlightOverbrightPixelsEnabled:
-          json['highlight-overbright-pixels-enabled'],
-    );
+HighlightOverbrightPixelsEnabled$Response
+    _$HighlightOverbrightPixelsEnabled$ResponseFromJson(
+            Map<String, dynamic> json) =>
+        HighlightOverbrightPixelsEnabled$Response(
+          highlightOverbrightPixelsEnabled:
+              json['highlight-overbright-pixels-enabled'],
+        );
 
-Map<String, dynamic> _$HighlightOverbrightPixelsEnabledToJson(
-        HighlightOverbrightPixelsEnabled instance) =>
+Map<String, dynamic> _$HighlightOverbrightPixelsEnabled$ResponseToJson(
+        HighlightOverbrightPixelsEnabled$Response instance) =>
     <String, dynamic>{
       'highlight-overbright-pixels-enabled':
           instance.highlightOverbrightPixelsEnabled,
     };
 
-HightlightOutOfGamutPixelsEnabled _$HightlightOutOfGamutPixelsEnabledFromJson(
-        Map<String, dynamic> json) =>
-    HightlightOutOfGamutPixelsEnabled(
-      hightlightOutOfGamutPixelsEnabled:
-          json['hightlight-out-of-gamut-pixels-enabled'],
-    );
+HightlightOutOfGamutPixelsEnabled$Response
+    _$HightlightOutOfGamutPixelsEnabled$ResponseFromJson(
+            Map<String, dynamic> json) =>
+        HightlightOutOfGamutPixelsEnabled$Response(
+          hightlightOutOfGamutPixelsEnabled:
+              json['hightlight-out-of-gamut-pixels-enabled'],
+        );
 
-Map<String, dynamic> _$HightlightOutOfGamutPixelsEnabledToJson(
-        HightlightOutOfGamutPixelsEnabled instance) =>
+Map<String, dynamic> _$HightlightOutOfGamutPixelsEnabled$ResponseToJson(
+        HightlightOutOfGamutPixelsEnabled$Response instance) =>
     <String, dynamic>{
       'hightlight-out-of-gamut-pixels-enabled':
           instance.hightlightOutOfGamutPixelsEnabled,
     };
 
-Hue _$HueFromJson(Map<String, dynamic> json) => Hue(
+Hue$Response _$Hue$ResponseFromJson(Map<String, dynamic> json) => Hue$Response(
       hue: (json['hue'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$HueToJson(Hue instance) => <String, dynamic>{
+Map<String, dynamic> _$Hue$ResponseToJson(Hue$Response instance) =>
+    <String, dynamic>{
       'hue': instance.hue,
     };
 
-InfoFrameOverrideEnabled _$InfoFrameOverrideEnabledFromJson(
+InfoFrameOverrideEnabled$Response _$InfoFrameOverrideEnabled$ResponseFromJson(
         Map<String, dynamic> json) =>
-    InfoFrameOverrideEnabled(
+    InfoFrameOverrideEnabled$Response(
       infoFrameOverrideEnabled: json['info-frame-override-enabled'],
     );
 
-Map<String, dynamic> _$InfoFrameOverrideEnabledToJson(
-        InfoFrameOverrideEnabled instance) =>
+Map<String, dynamic> _$InfoFrameOverrideEnabled$ResponseToJson(
+        InfoFrameOverrideEnabled$Response instance) =>
     <String, dynamic>{
       'info-frame-override-enabled': instance.infoFrameOverrideEnabled,
     };
 
-Intensity _$IntensityFromJson(Map<String, dynamic> json) => Intensity(
+Intensity$Response _$Intensity$ResponseFromJson(Map<String, dynamic> json) =>
+    Intensity$Response(
       intensity: (json['intensity'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$IntensityToJson(Intensity instance) => <String, dynamic>{
+Map<String, dynamic> _$Intensity$ResponseToJson(Intensity$Response instance) =>
+    <String, dynamic>{
       'intensity': instance.intensity,
     };
 
-InternalRate _$InternalRateFromJson(Map<String, dynamic> json) => InternalRate(
+InternalRate$Response _$InternalRate$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    InternalRate$Response(
       internalRate: (json['internal-rate'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$InternalRateToJson(InternalRate instance) =>
+Map<String, dynamic> _$InternalRate$ResponseToJson(
+        InternalRate$Response instance) =>
     <String, dynamic>{
       'internal-rate': instance.internalRate,
     };
 
-IsActive _$IsActiveFromJson(Map<String, dynamic> json) => IsActive(
+IsActive$Response _$IsActive$ResponseFromJson(Map<String, dynamic> json) =>
+    IsActive$Response(
       isActive: json['is-active'],
     );
 
-Map<String, dynamic> _$IsActiveToJson(IsActive instance) => <String, dynamic>{
+Map<String, dynamic> _$IsActive$ResponseToJson(IsActive$Response instance) =>
+    <String, dynamic>{
       'is-active': instance.isActive,
     };
 
-IsPartnerPresent _$IsPartnerPresentFromJson(Map<String, dynamic> json) =>
-    IsPartnerPresent(
+IsPartnerPresent$Response _$IsPartnerPresent$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    IsPartnerPresent$Response(
       isPartnerPresent: json['is-partner-present'],
     );
 
-Map<String, dynamic> _$IsPartnerPresentToJson(IsPartnerPresent instance) =>
+Map<String, dynamic> _$IsPartnerPresent$ResponseToJson(
+        IsPartnerPresent$Response instance) =>
     <String, dynamic>{
       'is-partner-present': instance.isPartnerPresent,
     };
 
-Lines _$LinesFromJson(Map<String, dynamic> json) => Lines(
+Lines$Response _$Lines$ResponseFromJson(Map<String, dynamic> json) =>
+    Lines$Response(
       lines: json['lines'] as int?,
     );
 
-Map<String, dynamic> _$LinesToJson(Lines instance) => <String, dynamic>{
+Map<String, dynamic> _$Lines$ResponseToJson(Lines$Response instance) =>
+    <String, dynamic>{
       'lines': instance.lines,
     };
 
-Luminance _$LuminanceFromJson(Map<String, dynamic> json) => Luminance(
+Luminance$Response _$Luminance$ResponseFromJson(Map<String, dynamic> json) =>
+    Luminance$Response(
       luminance: json['luminance'] as int?,
     );
 
-Map<String, dynamic> _$LuminanceToJson(Luminance instance) => <String, dynamic>{
+Map<String, dynamic> _$Luminance$ResponseToJson(Luminance$Response instance) =>
+    <String, dynamic>{
       'luminance': instance.luminance,
     };
 
-LuminanceOnlyFraction _$LuminanceOnlyFractionFromJson(
+LuminanceOnlyFraction$Response _$LuminanceOnlyFraction$ResponseFromJson(
         Map<String, dynamic> json) =>
-    LuminanceOnlyFraction(
+    LuminanceOnlyFraction$Response(
       luminanceOnlyFraction: json['luminance-only-fraction'] as int?,
     );
 
-Map<String, dynamic> _$LuminanceOnlyFractionToJson(
-        LuminanceOnlyFraction instance) =>
+Map<String, dynamic> _$LuminanceOnlyFraction$ResponseToJson(
+        LuminanceOnlyFraction$Response instance) =>
     <String, dynamic>{
       'luminance-only-fraction': instance.luminanceOnlyFraction,
     };
 
-MarkerGain _$MarkerGainFromJson(Map<String, dynamic> json) => MarkerGain(
+MarkerGain$Response _$MarkerGain$ResponseFromJson(Map<String, dynamic> json) =>
+    MarkerGain$Response(
       markerGain: json['marker-gain'] as int?,
     );
 
-Map<String, dynamic> _$MarkerGainToJson(MarkerGain instance) =>
+Map<String, dynamic> _$MarkerGain$ResponseToJson(
+        MarkerGain$Response instance) =>
     <String, dynamic>{
       'marker-gain': instance.markerGain,
     };
 
-MarkerSizeScaler _$MarkerSizeScalerFromJson(Map<String, dynamic> json) =>
-    MarkerSizeScaler(
+MarkerSizeScaler$Response _$MarkerSizeScaler$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    MarkerSizeScaler$Response(
       markerSizeScaler: json['marker-size-scaler'] as int?,
     );
 
-Map<String, dynamic> _$MarkerSizeScalerToJson(MarkerSizeScaler instance) =>
+Map<String, dynamic> _$MarkerSizeScaler$ResponseToJson(
+        MarkerSizeScaler$Response instance) =>
     <String, dynamic>{
       'marker-size-scaler': instance.markerSizeScaler,
     };
 
-Method$ _$Method$FromJson(Map<String, dynamic> json) => Method$(
+Method$Response _$Method$ResponseFromJson(Map<String, dynamic> json) =>
+    Method$Response(
       method: json['method'] as String?,
     );
 
-Map<String, dynamic> _$Method$ToJson(Method$ instance) => <String, dynamic>{
+Map<String, dynamic> _$Method$ResponseToJson(Method$Response instance) =>
+    <String, dynamic>{
       'method': instance.method,
     };
 
-Mode _$ModeFromJson(Map<String, dynamic> json) => Mode(
+Mode$Response _$Mode$ResponseFromJson(Map<String, dynamic> json) =>
+    Mode$Response(
       mode: json['mode'] as String?,
     );
 
-Map<String, dynamic> _$ModeToJson(Mode instance) => <String, dynamic>{
+Map<String, dynamic> _$Mode$ResponseToJson(Mode$Response instance) =>
+    <String, dynamic>{
       'mode': instance.mode,
     };
 
-ModuleCorrectionEnabled _$ModuleCorrectionEnabledFromJson(
+ModuleCorrectionEnabled$Response _$ModuleCorrectionEnabled$ResponseFromJson(
         Map<String, dynamic> json) =>
-    ModuleCorrectionEnabled(
+    ModuleCorrectionEnabled$Response(
       moduleCorrectionEnabled: json['module-correction-enabled'],
     );
 
-Map<String, dynamic> _$ModuleCorrectionEnabledToJson(
-        ModuleCorrectionEnabled instance) =>
+Map<String, dynamic> _$ModuleCorrectionEnabled$ResponseToJson(
+        ModuleCorrectionEnabled$Response instance) =>
     <String, dynamic>{
       'module-correction-enabled': instance.moduleCorrectionEnabled,
     };
 
-Name _$NameFromJson(Map<String, dynamic> json) => Name(
+Name$Response _$Name$ResponseFromJson(Map<String, dynamic> json) =>
+    Name$Response(
       name: json['name'] as String?,
     );
 
-Map<String, dynamic> _$NameToJson(Name instance) => <String, dynamic>{
+Map<String, dynamic> _$Name$ResponseToJson(Name$Response instance) =>
+    <String, dynamic>{
       'name': instance.name,
     };
 
-Number _$NumberFromJson(Map<String, dynamic> json) => Number(
+Number$Response _$Number$ResponseFromJson(Map<String, dynamic> json) =>
+    Number$Response(
       number: json['number'] as int?,
     );
 
-Map<String, dynamic> _$NumberToJson(Number instance) => <String, dynamic>{
+Map<String, dynamic> _$Number$ResponseToJson(Number$Response instance) =>
+    <String, dynamic>{
       'number': instance.number,
     };
 
-OnButtonPress _$OnButtonPressFromJson(Map<String, dynamic> json) =>
-    OnButtonPress(
+OnButtonPress$Response _$OnButtonPress$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    OnButtonPress$Response(
       onButtonPress: json['on-button-press'],
     );
 
-Map<String, dynamic> _$OnButtonPressToJson(OnButtonPress instance) =>
+Map<String, dynamic> _$OnButtonPress$ResponseToJson(
+        OnButtonPress$Response instance) =>
     <String, dynamic>{
       'on-button-press': instance.onButtonPress,
     };
 
-OnPartnerFail _$OnPartnerFailFromJson(Map<String, dynamic> json) =>
-    OnPartnerFail(
+OnPartnerFail$Response _$OnPartnerFail$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    OnPartnerFail$Response(
       onPartnerFail: json['on-partner-fail'],
     );
 
-Map<String, dynamic> _$OnPartnerFailToJson(OnPartnerFail instance) =>
+Map<String, dynamic> _$OnPartnerFail$ResponseToJson(
+        OnPartnerFail$Response instance) =>
     <String, dynamic>{
       'on-partner-fail': instance.onPartnerFail,
     };
 
-OnPartnerVideoFail _$OnPartnerVideoFailFromJson(Map<String, dynamic> json) =>
-    OnPartnerVideoFail(
+OnPartnerVideoFail$Response _$OnPartnerVideoFail$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    OnPartnerVideoFail$Response(
       onPartnerVideoFail: json['on-partner-video-fail'],
     );
 
-Map<String, dynamic> _$OnPartnerVideoFailToJson(OnPartnerVideoFail instance) =>
+Map<String, dynamic> _$OnPartnerVideoFail$ResponseToJson(
+        OnPartnerVideoFail$Response instance) =>
     <String, dynamic>{
       'on-partner-video-fail': instance.onPartnerVideoFail,
     };
 
-OnlineCount _$OnlineCountFromJson(Map<String, dynamic> json) => OnlineCount(
+OnlineCount$Response _$OnlineCount$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    OnlineCount$Response(
       onlineCount: json['online-count'] as int?,
     );
 
-Map<String, dynamic> _$OnlineCountToJson(OnlineCount instance) =>
+Map<String, dynamic> _$OnlineCount$ResponseToJson(
+        OnlineCount$Response instance) =>
     <String, dynamic>{
       'online-count': instance.onlineCount,
     };
 
-Orientation _$OrientationFromJson(Map<String, dynamic> json) => Orientation(
+Orientation$Response _$Orientation$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    Orientation$Response(
       orientation: json['orientation'] as String?,
     );
 
-Map<String, dynamic> _$OrientationToJson(Orientation instance) =>
+Map<String, dynamic> _$Orientation$ResponseToJson(
+        Orientation$Response instance) =>
     <String, dynamic>{
       'orientation': instance.orientation,
     };
 
-PartnerAbsenceDuration _$PartnerAbsenceDurationFromJson(
+PartnerAbsenceDuration$Response _$PartnerAbsenceDuration$ResponseFromJson(
         Map<String, dynamic> json) =>
-    PartnerAbsenceDuration(
+    PartnerAbsenceDuration$Response(
       partnerAbsenceDuration: json['partner-absence-duration'] as String?,
     );
 
-Map<String, dynamic> _$PartnerAbsenceDurationToJson(
-        PartnerAbsenceDuration instance) =>
+Map<String, dynamic> _$PartnerAbsenceDuration$ResponseToJson(
+        PartnerAbsenceDuration$Response instance) =>
     <String, dynamic>{
       'partner-absence-duration': instance.partnerAbsenceDuration,
     };
 
-PartnerName _$PartnerNameFromJson(Map<String, dynamic> json) => PartnerName(
+PartnerName$Response _$PartnerName$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    PartnerName$Response(
       partnerName: json['partner-name'] as String?,
     );
 
-Map<String, dynamic> _$PartnerNameToJson(PartnerName instance) =>
+Map<String, dynamic> _$PartnerName$ResponseToJson(
+        PartnerName$Response instance) =>
     <String, dynamic>{
       'partner-name': instance.partnerName,
     };
 
-PartnerSerial _$PartnerSerialFromJson(Map<String, dynamic> json) =>
-    PartnerSerial(
+PartnerSerial$Response _$PartnerSerial$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    PartnerSerial$Response(
       partnerSerial: json['partner-serial'] as String?,
     );
 
-Map<String, dynamic> _$PartnerSerialToJson(PartnerSerial instance) =>
+Map<String, dynamic> _$PartnerSerial$ResponseToJson(
+        PartnerSerial$Response instance) =>
     <String, dynamic>{
       'partner-serial': instance.partnerSerial,
     };
 
-PartnerVideoAbsenceDuration _$PartnerVideoAbsenceDurationFromJson(
-        Map<String, dynamic> json) =>
-    PartnerVideoAbsenceDuration(
-      partnerVideoAbsenceDuration:
-          json['partner-video-absence-duration'] as String?,
-    );
+PartnerVideoAbsenceDuration$Response
+    _$PartnerVideoAbsenceDuration$ResponseFromJson(Map<String, dynamic> json) =>
+        PartnerVideoAbsenceDuration$Response(
+          partnerVideoAbsenceDuration:
+              json['partner-video-absence-duration'] as String?,
+        );
 
-Map<String, dynamic> _$PartnerVideoAbsenceDurationToJson(
-        PartnerVideoAbsenceDuration instance) =>
+Map<String, dynamic> _$PartnerVideoAbsenceDuration$ResponseToJson(
+        PartnerVideoAbsenceDuration$Response instance) =>
     <String, dynamic>{
       'partner-video-absence-duration': instance.partnerVideoAbsenceDuration,
     };
 
-Pixels _$PixelsFromJson(Map<String, dynamic> json) => Pixels(
+Pixels$Response _$Pixels$ResponseFromJson(Map<String, dynamic> json) =>
+    Pixels$Response(
       pixels: json['pixels'] as int?,
     );
 
-Map<String, dynamic> _$PixelsToJson(Pixels instance) => <String, dynamic>{
+Map<String, dynamic> _$Pixels$ResponseToJson(Pixels$Response instance) =>
+    <String, dynamic>{
       'pixels': instance.pixels,
     };
 
-Points _$PointsFromJson(Map<String, dynamic> json) => Points(
+Points$Response _$Points$ResponseFromJson(Map<String, dynamic> json) =>
+    Points$Response(
       points: (json['points'] as List<dynamic>?)
               ?.map((e) => e as Object)
               .toList() ??
           [],
     );
 
-Map<String, dynamic> _$PointsToJson(Points instance) => <String, dynamic>{
+Map<String, dynamic> _$Points$ResponseToJson(Points$Response instance) =>
+    <String, dynamic>{
       'points': instance.points,
     };
 
-PortNumber _$PortNumberFromJson(Map<String, dynamic> json) => PortNumber(
+PortNumber$Response _$PortNumber$ResponseFromJson(Map<String, dynamic> json) =>
+    PortNumber$Response(
       portNumber: json['port-number'] as int?,
     );
 
-Map<String, dynamic> _$PortNumberToJson(PortNumber instance) =>
+Map<String, dynamic> _$PortNumber$ResponseToJson(
+        PortNumber$Response instance) =>
     <String, dynamic>{
       'port-number': instance.portNumber,
     };
 
-PortType _$PortTypeFromJson(Map<String, dynamic> json) => PortType(
+PortType$Response _$PortType$ResponseFromJson(Map<String, dynamic> json) =>
+    PortType$Response(
       portType: json['port-type'] as String?,
     );
 
-Map<String, dynamic> _$PortTypeToJson(PortType instance) => <String, dynamic>{
+Map<String, dynamic> _$PortType$ResponseToJson(PortType$Response instance) =>
+    <String, dynamic>{
       'port-type': instance.portType,
     };
 
-PreferPrimary _$PreferPrimaryFromJson(Map<String, dynamic> json) =>
-    PreferPrimary(
+PreferPrimary$Response _$PreferPrimary$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    PreferPrimary$Response(
       preferPrimary: json['prefer-primary'],
     );
 
-Map<String, dynamic> _$PreferPrimaryToJson(PreferPrimary instance) =>
+Map<String, dynamic> _$PreferPrimary$ResponseToJson(
+        PreferPrimary$Response instance) =>
     <String, dynamic>{
       'prefer-primary': instance.preferPrimary,
     };
 
-PrioritiseRefreshRate _$PrioritiseRefreshRateFromJson(
+PrioritiseRefreshRate$Response _$PrioritiseRefreshRate$ResponseFromJson(
         Map<String, dynamic> json) =>
-    PrioritiseRefreshRate(
+    PrioritiseRefreshRate$Response(
       prioritiseRefreshRate: json['prioritise-refresh-rate'],
     );
 
-Map<String, dynamic> _$PrioritiseRefreshRateToJson(
-        PrioritiseRefreshRate instance) =>
+Map<String, dynamic> _$PrioritiseRefreshRate$ResponseToJson(
+        PrioritiseRefreshRate$Response instance) =>
     <String, dynamic>{
       'prioritise-refresh-rate': instance.prioritiseRefreshRate,
     };
 
-ProcessorType _$ProcessorTypeFromJson(Map<String, dynamic> json) =>
-    ProcessorType(
+ProcessorType$Response _$ProcessorType$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    ProcessorType$Response(
       processorType: json['processor-type'] as String?,
     );
 
-Map<String, dynamic> _$ProcessorTypeToJson(ProcessorType instance) =>
+Map<String, dynamic> _$ProcessorType$ResponseToJson(
+        ProcessorType$Response instance) =>
     <String, dynamic>{
       'processor-type': instance.processorType,
     };
 
-QuantisationRange _$QuantisationRangeFromJson(Map<String, dynamic> json) =>
-    QuantisationRange(
+QuantisationRange$Response _$QuantisationRange$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    QuantisationRange$Response(
       quantisationRange: json['quantisation-range'] as String?,
     );
 
-Map<String, dynamic> _$QuantisationRangeToJson(QuantisationRange instance) =>
+Map<String, dynamic> _$QuantisationRange$ResponseToJson(
+        QuantisationRange$Response instance) =>
     <String, dynamic>{
       'quantisation-range': instance.quantisationRange,
     };
 
-Reboot _$RebootFromJson(Map<String, dynamic> json) => Reboot(
+Reboot$Response _$Reboot$ResponseFromJson(Map<String, dynamic> json) =>
+    Reboot$Response(
       reboot: json['reboot'] as String?,
     );
 
-Map<String, dynamic> _$RebootToJson(Reboot instance) => <String, dynamic>{
+Map<String, dynamic> _$Reboot$ResponseToJson(Reboot$Response instance) =>
+    <String, dynamic>{
       'reboot': instance.reboot,
     };
 
-Red _$RedFromJson(Map<String, dynamic> json) => Red(
+Red$Response _$Red$ResponseFromJson(Map<String, dynamic> json) => Red$Response(
       red: json['red'] as int?,
     );
 
-Map<String, dynamic> _$RedToJson(Red instance) => <String, dynamic>{
+Map<String, dynamic> _$Red$ResponseToJson(Red$Response instance) =>
+    <String, dynamic>{
       'red': instance.red,
     };
 
-RefreshRate _$RefreshRateFromJson(Map<String, dynamic> json) => RefreshRate(
+RefreshRate$Response _$RefreshRate$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    RefreshRate$Response(
       refreshRate: (json['refresh-rate'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$RefreshRateToJson(RefreshRate instance) =>
+Map<String, dynamic> _$RefreshRate$ResponseToJson(
+        RefreshRate$Response instance) =>
     <String, dynamic>{
       'refresh-rate': instance.refreshRate,
     };
 
-RequestFailover _$RequestFailoverFromJson(Map<String, dynamic> json) =>
-    RequestFailover(
+RequestFailover$Response _$RequestFailover$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    RequestFailover$Response(
       requestFailover: json['request-failover'] as String?,
     );
 
-Map<String, dynamic> _$RequestFailoverToJson(RequestFailover instance) =>
+Map<String, dynamic> _$RequestFailover$ResponseToJson(
+        RequestFailover$Response instance) =>
     <String, dynamic>{
       'request-failover': instance.requestFailover,
     };
 
-RestrictToAchievableColours _$RestrictToAchievableColoursFromJson(
-        Map<String, dynamic> json) =>
-    RestrictToAchievableColours(
-      restrictToAchievableColours: json['restrict-to-achievable-colours'],
-    );
+RestrictToAchievableColours$Response
+    _$RestrictToAchievableColours$ResponseFromJson(Map<String, dynamic> json) =>
+        RestrictToAchievableColours$Response(
+          restrictToAchievableColours: json['restrict-to-achievable-colours'],
+        );
 
-Map<String, dynamic> _$RestrictToAchievableColoursToJson(
-        RestrictToAchievableColours instance) =>
+Map<String, dynamic> _$RestrictToAchievableColours$ResponseToJson(
+        RestrictToAchievableColours$Response instance) =>
     <String, dynamic>{
       'restrict-to-achievable-colours': instance.restrictToAchievableColours,
     };
 
-Role _$RoleFromJson(Map<String, dynamic> json) => Role(
+Role$Response _$Role$ResponseFromJson(Map<String, dynamic> json) =>
+    Role$Response(
       role: json['role'] as String?,
     );
 
-Map<String, dynamic> _$RoleToJson(Role instance) => <String, dynamic>{
+Map<String, dynamic> _$Role$ResponseToJson(Role$Response instance) =>
+    <String, dynamic>{
       'role': instance.role,
     };
 
-Sampling _$SamplingFromJson(Map<String, dynamic> json) => Sampling(
+Sampling$Response _$Sampling$ResponseFromJson(Map<String, dynamic> json) =>
+    Sampling$Response(
       sampling: json['sampling'] as String?,
     );
 
-Map<String, dynamic> _$SamplingToJson(Sampling instance) => <String, dynamic>{
+Map<String, dynamic> _$Sampling$ResponseToJson(Sampling$Response instance) =>
+    <String, dynamic>{
       'sampling': instance.sampling,
     };
 
-Saturation _$SaturationFromJson(Map<String, dynamic> json) => Saturation(
+Saturation$Response _$Saturation$ResponseFromJson(Map<String, dynamic> json) =>
+    Saturation$Response(
       saturation: (json['saturation'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$SaturationToJson(Saturation instance) =>
+Map<String, dynamic> _$Saturation$ResponseToJson(
+        Saturation$Response instance) =>
     <String, dynamic>{
       'saturation': instance.saturation,
     };
 
-SeamCorrectionEnabled _$SeamCorrectionEnabledFromJson(
+SeamCorrectionEnabled$Response _$SeamCorrectionEnabled$ResponseFromJson(
         Map<String, dynamic> json) =>
-    SeamCorrectionEnabled(
+    SeamCorrectionEnabled$Response(
       seamCorrectionEnabled: json['seam-correction-enabled'],
     );
 
-Map<String, dynamic> _$SeamCorrectionEnabledToJson(
-        SeamCorrectionEnabled instance) =>
+Map<String, dynamic> _$SeamCorrectionEnabled$ResponseToJson(
+        SeamCorrectionEnabled$Response instance) =>
     <String, dynamic>{
       'seam-correction-enabled': instance.seamCorrectionEnabled,
     };
 
-SensorReadoutTime _$SensorReadoutTimeFromJson(Map<String, dynamic> json) =>
-    SensorReadoutTime(
+SensorReadoutTime$Response _$SensorReadoutTime$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    SensorReadoutTime$Response(
       sensorReadoutTime: (json['sensor-readout-time'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$SensorReadoutTimeToJson(SensorReadoutTime instance) =>
+Map<String, dynamic> _$SensorReadoutTime$ResponseToJson(
+        SensorReadoutTime$Response instance) =>
     <String, dynamic>{
       'sensor-readout-time': instance.sensorReadoutTime,
     };
 
-SensorType _$SensorTypeFromJson(Map<String, dynamic> json) => SensorType(
+SensorType$Response _$SensorType$ResponseFromJson(Map<String, dynamic> json) =>
+    SensorType$Response(
       sensorType: json['sensor-type'] as String?,
     );
 
-Map<String, dynamic> _$SensorTypeToJson(SensorType instance) =>
+Map<String, dynamic> _$SensorType$ResponseToJson(
+        SensorType$Response instance) =>
     <String, dynamic>{
       'sensor-type': instance.sensorType,
     };
 
-Shutdown _$ShutdownFromJson(Map<String, dynamic> json) => Shutdown(
+Shutdown$Response _$Shutdown$ResponseFromJson(Map<String, dynamic> json) =>
+    Shutdown$Response(
       shutdown: json['shutdown'] as String?,
     );
 
-Map<String, dynamic> _$ShutdownToJson(Shutdown instance) => <String, dynamic>{
+Map<String, dynamic> _$Shutdown$ResponseToJson(Shutdown$Response instance) =>
+    <String, dynamic>{
       'shutdown': instance.shutdown,
     };
 
-ShutterAngle _$ShutterAngleFromJson(Map<String, dynamic> json) => ShutterAngle(
+ShutterAngle$Response _$ShutterAngle$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    ShutterAngle$Response(
       shutterAngle: (json['shutter-angle'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$ShutterAngleToJson(ShutterAngle instance) =>
+Map<String, dynamic> _$ShutterAngle$ResponseToJson(
+        ShutterAngle$Response instance) =>
     <String, dynamic>{
       'shutter-angle': instance.shutterAngle,
     };
 
-ShutterSpeed _$ShutterSpeedFromJson(Map<String, dynamic> json) => ShutterSpeed(
+ShutterSpeed$Response _$ShutterSpeed$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    ShutterSpeed$Response(
       shutterSpeed: (json['shutter-speed'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$ShutterSpeedToJson(ShutterSpeed instance) =>
+Map<String, dynamic> _$ShutterSpeed$ResponseToJson(
+        ShutterSpeed$Response instance) =>
     <String, dynamic>{
       'shutter-speed': instance.shutterSpeed,
     };
 
-Softness _$SoftnessFromJson(Map<String, dynamic> json) => Softness(
+Softness$Response _$Softness$ResponseFromJson(Map<String, dynamic> json) =>
+    Softness$Response(
       softness: (json['softness'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$SoftnessToJson(Softness instance) => <String, dynamic>{
+Map<String, dynamic> _$Softness$ResponseToJson(Softness$Response instance) =>
+    <String, dynamic>{
       'softness': instance.softness,
     };
 
-SoftwareVersion _$SoftwareVersionFromJson(Map<String, dynamic> json) =>
-    SoftwareVersion(
+SoftwareVersion$Response _$SoftwareVersion$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    SoftwareVersion$Response(
       softwareVersion: json['software-version'] as String?,
     );
 
-Map<String, dynamic> _$SoftwareVersionToJson(SoftwareVersion instance) =>
+Map<String, dynamic> _$SoftwareVersion$ResponseToJson(
+        SoftwareVersion$Response instance) =>
     <String, dynamic>{
       'software-version': instance.softwareVersion,
     };
 
-Source _$SourceFromJson(Map<String, dynamic> json) => Source(
+Source$Response _$Source$ResponseFromJson(Map<String, dynamic> json) =>
+    Source$Response(
       source: json['source'] as String?,
     );
 
-Map<String, dynamic> _$SourceToJson(Source instance) => <String, dynamic>{
+Map<String, dynamic> _$Source$ResponseToJson(Source$Response instance) =>
+    <String, dynamic>{
       'source': instance.source,
     };
 
-StarMapSeed _$StarMapSeedFromJson(Map<String, dynamic> json) => StarMapSeed(
+StarMapSeed$Response _$StarMapSeed$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    StarMapSeed$Response(
       starMapSeed: json['star-map-seed'] as int?,
     );
 
-Map<String, dynamic> _$StarMapSeedToJson(StarMapSeed instance) =>
+Map<String, dynamic> _$StarMapSeed$ResponseToJson(
+        StarMapSeed$Response instance) =>
     <String, dynamic>{
       'star-map-seed': instance.starMapSeed,
     };
 
-State _$StateFromJson(Map<String, dynamic> json) => State(
+State$Response _$State$ResponseFromJson(Map<String, dynamic> json) =>
+    State$Response(
       state: json['state'] as String?,
     );
 
-Map<String, dynamic> _$StateToJson(State instance) => <String, dynamic>{
+Map<String, dynamic> _$State$ResponseToJson(State$Response instance) =>
+    <String, dynamic>{
       'state': instance.state,
     };
 
-Status _$StatusFromJson(Map<String, dynamic> json) => Status(
+Status$Response _$Status$ResponseFromJson(Map<String, dynamic> json) =>
+    Status$Response(
       status: json['status'],
     );
 
-Map<String, dynamic> _$StatusToJson(Status instance) => <String, dynamic>{
+Map<String, dynamic> _$Status$ResponseToJson(Status$Response instance) =>
+    <String, dynamic>{
       'status': instance.status,
     };
 
-Strength _$StrengthFromJson(Map<String, dynamic> json) => Strength(
+Strength$Response _$Strength$ResponseFromJson(Map<String, dynamic> json) =>
+    Strength$Response(
       strength: (json['strength'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$StrengthToJson(Strength instance) => <String, dynamic>{
+Map<String, dynamic> _$Strength$ResponseToJson(Strength$Response instance) =>
+    <String, dynamic>{
       'strength': instance.strength,
     };
 
-Time _$TimeFromJson(Map<String, dynamic> json) => Time(
+Time$Response _$Time$ResponseFromJson(Map<String, dynamic> json) =>
+    Time$Response(
       time: (json['time'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$TimeToJson(Time instance) => <String, dynamic>{
+Map<String, dynamic> _$Time$ResponseToJson(Time$Response instance) =>
+    <String, dynamic>{
       'time': instance.time,
     };
 
-Type$ _$Type$FromJson(Map<String, dynamic> json) => Type$(
+Type$Response _$Type$ResponseFromJson(Map<String, dynamic> json) =>
+    Type$Response(
       type: json['type'] as String?,
     );
 
-Map<String, dynamic> _$Type$ToJson(Type$ instance) => <String, dynamic>{
+Map<String, dynamic> _$Type$ResponseToJson(Type$Response instance) =>
+    <String, dynamic>{
       'type': instance.type,
     };
 
-UseCustomFrameRate _$UseCustomFrameRateFromJson(Map<String, dynamic> json) =>
-    UseCustomFrameRate(
+UseCustomFrameRate$Response _$UseCustomFrameRate$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    UseCustomFrameRate$Response(
       useCustomFrameRate: json['use-custom-frame-rate'],
     );
 
-Map<String, dynamic> _$UseCustomFrameRateToJson(UseCustomFrameRate instance) =>
+Map<String, dynamic> _$UseCustomFrameRate$ResponseToJson(
+        UseCustomFrameRate$Response instance) =>
     <String, dynamic>{
       'use-custom-frame-rate': instance.useCustomFrameRate,
     };
 
-ViewMatte _$ViewMatteFromJson(Map<String, dynamic> json) => ViewMatte(
+ViewMatte$Response _$ViewMatte$ResponseFromJson(Map<String, dynamic> json) =>
+    ViewMatte$Response(
       viewMatte: json['view-matte'],
     );
 
-Map<String, dynamic> _$ViewMatteToJson(ViewMatte instance) => <String, dynamic>{
+Map<String, dynamic> _$ViewMatte$ResponseToJson(ViewMatte$Response instance) =>
+    <String, dynamic>{
       'view-matte': instance.viewMatte,
     };
 
-Width _$WidthFromJson(Map<String, dynamic> json) => Width(
+Width$Response _$Width$ResponseFromJson(Map<String, dynamic> json) =>
+    Width$Response(
       width: json['width'] as int?,
     );
 
-Map<String, dynamic> _$WidthToJson(Width instance) => <String, dynamic>{
+Map<String, dynamic> _$Width$ResponseToJson(Width$Response instance) =>
+    <String, dynamic>{
       'width': instance.width,
     };
 
-X _$XFromJson(Map<String, dynamic> json) => X(
+X$Response _$X$ResponseFromJson(Map<String, dynamic> json) => X$Response(
       x: (json['x'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$XToJson(X instance) => <String, dynamic>{
+Map<String, dynamic> _$X$ResponseToJson(X$Response instance) =>
+    <String, dynamic>{
       'x': instance.x,
     };
 
-XOffset _$XOffsetFromJson(Map<String, dynamic> json) => XOffset(
+XOffset$Response _$XOffset$ResponseFromJson(Map<String, dynamic> json) =>
+    XOffset$Response(
       xOffset: json['x-offset'] as int?,
     );
 
-Map<String, dynamic> _$XOffsetToJson(XOffset instance) => <String, dynamic>{
+Map<String, dynamic> _$XOffset$ResponseToJson(XOffset$Response instance) =>
+    <String, dynamic>{
       'x-offset': instance.xOffset,
     };
 
-Y _$YFromJson(Map<String, dynamic> json) => Y(
+Y$Response _$Y$ResponseFromJson(Map<String, dynamic> json) => Y$Response(
       y: (json['y'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$YToJson(Y instance) => <String, dynamic>{
+Map<String, dynamic> _$Y$ResponseToJson(Y$Response instance) =>
+    <String, dynamic>{
       'y': instance.y,
     };
 
-YOffset _$YOffsetFromJson(Map<String, dynamic> json) => YOffset(
+YOffset$Response _$YOffset$ResponseFromJson(Map<String, dynamic> json) =>
+    YOffset$Response(
       yOffset: json['y-offset'] as int?,
     );
 
-Map<String, dynamic> _$YOffsetToJson(YOffset instance) => <String, dynamic>{
+Map<String, dynamic> _$YOffset$ResponseToJson(YOffset$Response instance) =>
+    <String, dynamic>{
       'y-offset': instance.yOffset,
     };
 
