@@ -70,7 +70,7 @@ Map<String, dynamic> _$ApplyToSaturation$ResponseToJson(
 AssociatedCount$Response _$AssociatedCount$ResponseFromJson(
         Map<String, dynamic> json) =>
     AssociatedCount$Response(
-      associatedCount: json['associated-count'] as int?,
+      associatedCount: (json['associated-count'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$AssociatedCount$ResponseToJson(
@@ -94,7 +94,7 @@ Map<String, dynamic> _$AutoBrighten$ResponseToJson(
 BackgroundGain$Response _$BackgroundGain$ResponseFromJson(
         Map<String, dynamic> json) =>
     BackgroundGain$Response(
-      backgroundGain: json['background-gain'] as int?,
+      backgroundGain: (json['background-gain'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$BackgroundGain$ResponseToJson(
@@ -105,7 +105,7 @@ Map<String, dynamic> _$BackgroundGain$ResponseToJson(
 
 BitDepth$Response _$BitDepth$ResponseFromJson(Map<String, dynamic> json) =>
     BitDepth$Response(
-      bitDepth: json['bit-depth'] as int?,
+      bitDepth: (json['bit-depth'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$BitDepth$ResponseToJson(BitDepth$Response instance) =>
@@ -115,7 +115,7 @@ Map<String, dynamic> _$BitDepth$ResponseToJson(BitDepth$Response instance) =>
 
 BlackLevel$Response _$BlackLevel$ResponseFromJson(Map<String, dynamic> json) =>
     BlackLevel$Response(
-      blackLevel: json['black-level'] as int?,
+      blackLevel: (json['black-level'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$BlackLevel$ResponseToJson(
@@ -138,7 +138,7 @@ Map<String, dynamic> _$BlackoutAffectsMarkers$ResponseToJson(
 
 Blue$Response _$Blue$ResponseFromJson(Map<String, dynamic> json) =>
     Blue$Response(
-      blue: json['blue'] as int?,
+      blue: (json['blue'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$Blue$ResponseToJson(Blue$Response instance) =>
@@ -182,7 +182,7 @@ Map<String, dynamic> _$Colour$ResponseToJson(Colour$Response instance) =>
 ColourTemperature$Response _$ColourTemperature$ResponseFromJson(
         Map<String, dynamic> json) =>
     ColourTemperature$Response(
-      colourTemperature: json['colour-temperature'] as int?,
+      colourTemperature: (json['colour-temperature'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$ColourTemperature$ResponseToJson(
@@ -205,7 +205,7 @@ Map<String, dynamic> _$ColourTolerance$ResponseToJson(
 
 Contrast$Response _$Contrast$ResponseFromJson(Map<String, dynamic> json) =>
     Contrast$Response(
-      contrast: json['contrast'] as int?,
+      contrast: (json['contrast'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$Contrast$ResponseToJson(Contrast$Response instance) =>
@@ -285,7 +285,7 @@ Map<String, dynamic> _$Enabled$ResponseToJson(Enabled$Response instance) =>
 
 ErrorCount$Response _$ErrorCount$ResponseFromJson(Map<String, dynamic> json) =>
     ErrorCount$Response(
-      errorCount: json['error-count'] as int?,
+      errorCount: (json['error-count'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$ErrorCount$ResponseToJson(
@@ -337,7 +337,7 @@ Map<String, dynamic> _$Fraction$ResponseToJson(Fraction$Response instance) =>
 FrameRateMultiplier$Response _$FrameRateMultiplier$ResponseFromJson(
         Map<String, dynamic> json) =>
     FrameRateMultiplier$Response(
-      frameRateMultiplier: json['frame-rate-multiplier'] as int?,
+      frameRateMultiplier: (json['frame-rate-multiplier'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$FrameRateMultiplier$ResponseToJson(
@@ -429,7 +429,7 @@ Map<String, dynamic> _$GlobalStartrackerOverride$ResponseToJson(
 
 Green$Response _$Green$ResponseFromJson(Map<String, dynamic> json) =>
     Green$Response(
-      green: json['green'] as int?,
+      green: (json['green'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$Green$ResponseToJson(Green$Response instance) =>
@@ -451,7 +451,7 @@ Map<String, dynamic> _$HdmiColourFormat$ResponseToJson(
 
 Height$Response _$Height$ResponseFromJson(Map<String, dynamic> json) =>
     Height$Response(
-      height: json['height'] as int?,
+      height: (json['height'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$Height$ResponseToJson(Height$Response instance) =>
@@ -556,7 +556,7 @@ Map<String, dynamic> _$IsPartnerPresent$ResponseToJson(
 
 Lines$Response _$Lines$ResponseFromJson(Map<String, dynamic> json) =>
     Lines$Response(
-      lines: json['lines'] as int?,
+      lines: (json['lines'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$Lines$ResponseToJson(Lines$Response instance) =>
@@ -566,7 +566,7 @@ Map<String, dynamic> _$Lines$ResponseToJson(Lines$Response instance) =>
 
 Luminance$Response _$Luminance$ResponseFromJson(Map<String, dynamic> json) =>
     Luminance$Response(
-      luminance: json['luminance'] as int?,
+      luminance: (json['luminance'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$Luminance$ResponseToJson(Luminance$Response instance) =>
@@ -577,7 +577,7 @@ Map<String, dynamic> _$Luminance$ResponseToJson(Luminance$Response instance) =>
 LuminanceOnlyFraction$Response _$LuminanceOnlyFraction$ResponseFromJson(
         Map<String, dynamic> json) =>
     LuminanceOnlyFraction$Response(
-      luminanceOnlyFraction: json['luminance-only-fraction'] as int?,
+      luminanceOnlyFraction: (json['luminance-only-fraction'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$LuminanceOnlyFraction$ResponseToJson(
@@ -588,7 +588,7 @@ Map<String, dynamic> _$LuminanceOnlyFraction$ResponseToJson(
 
 MarkerGain$Response _$MarkerGain$ResponseFromJson(Map<String, dynamic> json) =>
     MarkerGain$Response(
-      markerGain: json['marker-gain'] as int?,
+      markerGain: (json['marker-gain'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$MarkerGain$ResponseToJson(
@@ -600,7 +600,7 @@ Map<String, dynamic> _$MarkerGain$ResponseToJson(
 MarkerSizeScaler$Response _$MarkerSizeScaler$ResponseFromJson(
         Map<String, dynamic> json) =>
     MarkerSizeScaler$Response(
-      markerSizeScaler: json['marker-size-scaler'] as int?,
+      markerSizeScaler: (json['marker-size-scaler'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$MarkerSizeScaler$ResponseToJson(
@@ -653,7 +653,7 @@ Map<String, dynamic> _$Name$ResponseToJson(Name$Response instance) =>
 
 Number$Response _$Number$ResponseFromJson(Map<String, dynamic> json) =>
     Number$Response(
-      number: json['number'] as int?,
+      number: (json['number'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$Number$ResponseToJson(Number$Response instance) =>
@@ -700,7 +700,7 @@ Map<String, dynamic> _$OnPartnerVideoFail$ResponseToJson(
 OnlineCount$Response _$OnlineCount$ResponseFromJson(
         Map<String, dynamic> json) =>
     OnlineCount$Response(
-      onlineCount: json['online-count'] as int?,
+      onlineCount: (json['online-count'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$OnlineCount$ResponseToJson(
@@ -772,7 +772,7 @@ Map<String, dynamic> _$PartnerVideoAbsenceDuration$ResponseToJson(
 
 Pixels$Response _$Pixels$ResponseFromJson(Map<String, dynamic> json) =>
     Pixels$Response(
-      pixels: json['pixels'] as int?,
+      pixels: (json['pixels'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$Pixels$ResponseToJson(Pixels$Response instance) =>
@@ -795,7 +795,7 @@ Map<String, dynamic> _$Points$ResponseToJson(Points$Response instance) =>
 
 PortNumber$Response _$PortNumber$ResponseFromJson(Map<String, dynamic> json) =>
     PortNumber$Response(
-      portNumber: json['port-number'] as int?,
+      portNumber: (json['port-number'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$PortNumber$ResponseToJson(
@@ -873,7 +873,7 @@ Map<String, dynamic> _$Reboot$ResponseToJson(Reboot$Response instance) =>
     };
 
 Red$Response _$Red$ResponseFromJson(Map<String, dynamic> json) => Red$Response(
-      red: json['red'] as int?,
+      red: (json['red'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$Red$ResponseToJson(Red$Response instance) =>
@@ -1049,10 +1049,34 @@ Map<String, dynamic> _$Source$ResponseToJson(Source$Response instance) =>
       'source': instance.source,
     };
 
+SpectralBoost$Response _$SpectralBoost$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    SpectralBoost$Response(
+      spectralBoost: (json['spectral-boost'] as num?)?.toDouble(),
+    );
+
+Map<String, dynamic> _$SpectralBoost$ResponseToJson(
+        SpectralBoost$Response instance) =>
+    <String, dynamic>{
+      'spectral-boost': instance.spectralBoost,
+    };
+
+SpectralPreference$Response _$SpectralPreference$ResponseFromJson(
+        Map<String, dynamic> json) =>
+    SpectralPreference$Response(
+      spectralPreference: (json['spectral-preference'] as num?)?.toDouble(),
+    );
+
+Map<String, dynamic> _$SpectralPreference$ResponseToJson(
+        SpectralPreference$Response instance) =>
+    <String, dynamic>{
+      'spectral-preference': instance.spectralPreference,
+    };
+
 StarMapSeed$Response _$StarMapSeed$ResponseFromJson(
         Map<String, dynamic> json) =>
     StarMapSeed$Response(
-      starMapSeed: json['star-map-seed'] as int?,
+      starMapSeed: (json['star-map-seed'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$StarMapSeed$ResponseToJson(
@@ -1135,7 +1159,7 @@ Map<String, dynamic> _$ViewMatte$ResponseToJson(ViewMatte$Response instance) =>
 
 Width$Response _$Width$ResponseFromJson(Map<String, dynamic> json) =>
     Width$Response(
-      width: json['width'] as int?,
+      width: (json['width'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$Width$ResponseToJson(Width$Response instance) =>
@@ -1154,7 +1178,7 @@ Map<String, dynamic> _$X$ResponseToJson(X$Response instance) =>
 
 XOffset$Response _$XOffset$ResponseFromJson(Map<String, dynamic> json) =>
     XOffset$Response(
-      xOffset: json['x-offset'] as int?,
+      xOffset: (json['x-offset'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$XOffset$ResponseToJson(XOffset$Response instance) =>
@@ -1173,7 +1197,7 @@ Map<String, dynamic> _$Y$ResponseToJson(Y$Response instance) =>
 
 YOffset$Response _$YOffset$ResponseFromJson(Map<String, dynamic> json) =>
     YOffset$Response(
-      yOffset: json['y-offset'] as int?,
+      yOffset: (json['y-offset'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$YOffset$ResponseToJson(YOffset$Response instance) =>
@@ -1185,7 +1209,7 @@ GroupsItemsNumberBrightnessPut$RequestBody
     _$GroupsItemsNumberBrightnessPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         GroupsItemsNumberBrightnessPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic> _$GroupsItemsNumberBrightnessPut$RequestBodyToJson(
@@ -1198,7 +1222,7 @@ GroupsItemsNumberColourTemperaturePut$RequestBody
     _$GroupsItemsNumberColourTemperaturePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         GroupsItemsNumberColourTemperaturePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic> _$GroupsItemsNumberColourTemperaturePut$RequestBodyToJson(
@@ -1396,7 +1420,7 @@ InputActiveSourcePortNumberPut$RequestBody
     _$InputActiveSourcePortNumberPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputActiveSourcePortNumberPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic> _$InputActiveSourcePortNumberPut$RequestBodyToJson(
@@ -1578,7 +1602,7 @@ InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBody
     _$InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -1635,7 +1659,7 @@ InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBody
     _$InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String,
@@ -1649,7 +1673,7 @@ InputPortsDviDviPortNumberProcAmpContrastPut$RequestBody
     _$InputPortsDviDviPortNumberProcAmpContrastPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsDviDviPortNumberProcAmpContrastPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String,
@@ -1663,7 +1687,7 @@ InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBody
     _$InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -1678,7 +1702,7 @@ InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBody
     _$InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -1693,7 +1717,7 @@ InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBody
     _$InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -1708,7 +1732,7 @@ InputPortsDviDviPortNumberProcAmpHuePut$RequestBody
     _$InputPortsDviDviPortNumberProcAmpHuePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsDviDviPortNumberProcAmpHuePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -1722,7 +1746,7 @@ InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBody
     _$InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String,
@@ -1736,7 +1760,7 @@ InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBody
     _$InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String,
@@ -1750,7 +1774,7 @@ InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBody
     _$InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -1765,7 +1789,7 @@ InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBody
     _$InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String,
@@ -1884,7 +1908,7 @@ InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBody
     _$InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2042,7 +2066,7 @@ InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBody
     _$InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2100,7 +2124,7 @@ InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBody
     _$InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2115,7 +2139,7 @@ InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBody
     _$InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String,
@@ -2129,7 +2153,7 @@ InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBody
     _$InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2144,7 +2168,7 @@ InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBody
     _$InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2159,7 +2183,7 @@ InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBody
     _$InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2174,7 +2198,7 @@ InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBody
     _$InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2188,7 +2212,7 @@ InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBody
     _$InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2203,7 +2227,7 @@ InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBody
     _$InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2218,7 +2242,7 @@ InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBody
     _$InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2233,7 +2257,7 @@ InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBody
     _$InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2321,7 +2345,7 @@ InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBody
     _$InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2462,7 +2486,7 @@ InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBody
     _$InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2519,7 +2543,7 @@ InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBody
     _$InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String,
@@ -2533,7 +2557,7 @@ InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBody
     _$InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String,
@@ -2547,7 +2571,7 @@ InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBody
     _$InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2562,7 +2586,7 @@ InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBody
     _$InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2577,7 +2601,7 @@ InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBody
     _$InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2592,7 +2616,7 @@ InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBody
     _$InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2606,7 +2630,7 @@ InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBody
     _$InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String,
@@ -2620,7 +2644,7 @@ InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBody
     _$InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String,
@@ -2634,7 +2658,7 @@ InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBody
     _$InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -2649,7 +2673,7 @@ InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBody
     _$InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String,
@@ -2741,7 +2765,7 @@ OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBody
     _$OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String,
@@ -2807,7 +2831,7 @@ OutputGlobalColourBrightnessPut$RequestBody
     _$OutputGlobalColourBrightnessPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputGlobalColourBrightnessPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic> _$OutputGlobalColourBrightnessPut$RequestBodyToJson(
@@ -2820,7 +2844,7 @@ OutputGlobalColourColourTemperaturePut$RequestBody
     _$OutputGlobalColourColourTemperaturePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputGlobalColourColourTemperaturePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic> _$OutputGlobalColourColourTemperaturePut$RequestBodyToJson(
@@ -2977,10 +3001,52 @@ Map<String, dynamic> _$OutputGlobalColourPuretoneEnabledPut$RequestBodyToJson(
       'data': instance.data,
     };
 
+OutputGlobalColourTruelightEnabledPut$RequestBody
+    _$OutputGlobalColourTruelightEnabledPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        OutputGlobalColourTruelightEnabledPut$RequestBody(
+          data: json['data'] as Object,
+        );
+
+Map<String, dynamic> _$OutputGlobalColourTruelightEnabledPut$RequestBodyToJson(
+        OutputGlobalColourTruelightEnabledPut$RequestBody instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
+OutputGlobalColourTruelightSpectralBoostPut$RequestBody
+    _$OutputGlobalColourTruelightSpectralBoostPut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        OutputGlobalColourTruelightSpectralBoostPut$RequestBody(
+          data: (json['data'] as num).toDouble(),
+        );
+
+Map<String, dynamic>
+    _$OutputGlobalColourTruelightSpectralBoostPut$RequestBodyToJson(
+            OutputGlobalColourTruelightSpectralBoostPut$RequestBody instance) =>
+        <String, dynamic>{
+          'data': instance.data,
+        };
+
+OutputGlobalColourTruelightSpectralPreferencePut$RequestBody
+    _$OutputGlobalColourTruelightSpectralPreferencePut$RequestBodyFromJson(
+            Map<String, dynamic> json) =>
+        OutputGlobalColourTruelightSpectralPreferencePut$RequestBody(
+          data: (json['data'] as num).toDouble(),
+        );
+
+Map<String, dynamic>
+    _$OutputGlobalColourTruelightSpectralPreferencePut$RequestBodyToJson(
+            OutputGlobalColourTruelightSpectralPreferencePut$RequestBody
+                instance) =>
+        <String, dynamic>{
+          'data': instance.data,
+        };
+
 OutputNetworkBitDepthPut$RequestBody
     _$OutputNetworkBitDepthPut$RequestBodyFromJson(Map<String, dynamic> json) =>
         OutputNetworkBitDepthPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic> _$OutputNetworkBitDepthPut$RequestBodyToJson(
@@ -3081,7 +3147,7 @@ OutputNetworkFrameRateMultiplierPut$RequestBody
     _$OutputNetworkFrameRateMultiplierPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkFrameRateMultiplierPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic> _$OutputNetworkFrameRateMultiplierPut$RequestBodyToJson(
@@ -3107,7 +3173,7 @@ OutputNetworkFrameRemappingFramesFrameBluePut$RequestBody
     _$OutputNetworkFrameRemappingFramesFrameBluePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkFrameRemappingFramesFrameBluePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String,
@@ -3121,7 +3187,7 @@ OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBody
     _$OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String,
@@ -3149,7 +3215,7 @@ OutputNetworkFrameRemappingFramesFrameRedPut$RequestBody
     _$OutputNetworkFrameRemappingFramesFrameRedPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkFrameRemappingFramesFrameRedPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String,
@@ -3163,7 +3229,7 @@ OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBody
     _$OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3178,7 +3244,7 @@ OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBody
     _$OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3206,7 +3272,7 @@ OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBody
     _$OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3221,7 +3287,7 @@ OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBody
     _$OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3419,7 +3485,7 @@ OutputNetworkStartrackerBackgroundGainPut$RequestBody
     _$OutputNetworkStartrackerBackgroundGainPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkStartrackerBackgroundGainPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3476,7 +3542,7 @@ OutputNetworkStartrackerBlueMarkerGainPut$RequestBody
     _$OutputNetworkStartrackerBlueMarkerGainPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkStartrackerBlueMarkerGainPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3490,7 +3556,7 @@ OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBody
     _$OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3505,7 +3571,7 @@ OutputNetworkStartrackerBlueStarMapSeedPut$RequestBody
     _$OutputNetworkStartrackerBlueStarMapSeedPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkStartrackerBlueStarMapSeedPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3578,7 +3644,7 @@ OutputNetworkStartrackerGreenMarkerGainPut$RequestBody
     _$OutputNetworkStartrackerGreenMarkerGainPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkStartrackerGreenMarkerGainPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3592,7 +3658,7 @@ OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBody
     _$OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3607,7 +3673,7 @@ OutputNetworkStartrackerGreenStarMapSeedPut$RequestBody
     _$OutputNetworkStartrackerGreenStarMapSeedPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkStartrackerGreenStarMapSeedPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3649,7 +3715,7 @@ OutputNetworkStartrackerRedMarkerGainPut$RequestBody
     _$OutputNetworkStartrackerRedMarkerGainPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkStartrackerRedMarkerGainPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3663,7 +3729,7 @@ OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBody
     _$OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String,
@@ -3677,7 +3743,7 @@ OutputNetworkStartrackerRedStarMapSeedPut$RequestBody
     _$OutputNetworkStartrackerRedStarMapSeedPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OutputNetworkStartrackerRedStarMapSeedPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3729,7 +3795,7 @@ OverrideTestPatternCustomColourBluePut$RequestBody
     _$OverrideTestPatternCustomColourBluePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OverrideTestPatternCustomColourBluePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic> _$OverrideTestPatternCustomColourBluePut$RequestBodyToJson(
@@ -3742,7 +3808,7 @@ OverrideTestPatternCustomColourGreenPut$RequestBody
     _$OverrideTestPatternCustomColourGreenPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OverrideTestPatternCustomColourGreenPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3756,7 +3822,7 @@ OverrideTestPatternCustomColourRedPut$RequestBody
     _$OverrideTestPatternCustomColourRedPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OverrideTestPatternCustomColourRedPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic> _$OverrideTestPatternCustomColourRedPut$RequestBodyToJson(
@@ -3769,7 +3835,7 @@ OverrideTestPatternCustomGradientEndColourBluePut$RequestBody
     _$OverrideTestPatternCustomGradientEndColourBluePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OverrideTestPatternCustomGradientEndColourBluePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3784,7 +3850,7 @@ OverrideTestPatternCustomGradientEndColourGreenPut$RequestBody
     _$OverrideTestPatternCustomGradientEndColourGreenPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OverrideTestPatternCustomGradientEndColourGreenPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3799,7 +3865,7 @@ OverrideTestPatternCustomGradientEndColourRedPut$RequestBody
     _$OverrideTestPatternCustomGradientEndColourRedPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OverrideTestPatternCustomGradientEndColourRedPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3829,7 +3895,7 @@ OverrideTestPatternCustomGradientStartColourBluePut$RequestBody
     _$OverrideTestPatternCustomGradientStartColourBluePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OverrideTestPatternCustomGradientStartColourBluePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3844,7 +3910,7 @@ OverrideTestPatternCustomGradientStartColourGreenPut$RequestBody
     _$OverrideTestPatternCustomGradientStartColourGreenPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OverrideTestPatternCustomGradientStartColourGreenPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3859,7 +3925,7 @@ OverrideTestPatternCustomGradientStartColourRedPut$RequestBody
     _$OverrideTestPatternCustomGradientStartColourRedPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         OverrideTestPatternCustomGradientStartColourRedPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -3927,7 +3993,7 @@ Map<String, dynamic> _$OverrideTestPatternTypePut$RequestBodyToJson(
 PresetsActiveNumberPut$RequestBody _$PresetsActiveNumberPut$RequestBodyFromJson(
         Map<String, dynamic> json) =>
     PresetsActiveNumberPut$RequestBody(
-      data: json['data'] as int,
+      data: (json['data'] as num).toInt(),
     );
 
 Map<String, dynamic> _$PresetsActiveNumberPut$RequestBodyToJson(
@@ -4631,7 +4697,7 @@ ProcessingColourReplaceColourFromBluePut$RequestBody
     _$ProcessingColourReplaceColourFromBluePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         ProcessingColourReplaceColourFromBluePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -4645,7 +4711,7 @@ ProcessingColourReplaceColourFromGreenPut$RequestBody
     _$ProcessingColourReplaceColourFromGreenPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         ProcessingColourReplaceColourFromGreenPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -4659,7 +4725,7 @@ ProcessingColourReplaceColourFromRedPut$RequestBody
     _$ProcessingColourReplaceColourFromRedPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         ProcessingColourReplaceColourFromRedPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -4673,7 +4739,7 @@ ProcessingColourReplaceColourToBluePut$RequestBody
     _$ProcessingColourReplaceColourToBluePut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         ProcessingColourReplaceColourToBluePut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic> _$ProcessingColourReplaceColourToBluePut$RequestBodyToJson(
@@ -4686,7 +4752,7 @@ ProcessingColourReplaceColourToGreenPut$RequestBody
     _$ProcessingColourReplaceColourToGreenPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         ProcessingColourReplaceColourToGreenPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic>
@@ -4700,7 +4766,7 @@ ProcessingColourReplaceColourToRedPut$RequestBody
     _$ProcessingColourReplaceColourToRedPut$RequestBodyFromJson(
             Map<String, dynamic> json) =>
         ProcessingColourReplaceColourToRedPut$RequestBody(
-          data: json['data'] as int,
+          data: (json['data'] as num).toInt(),
         );
 
 Map<String, dynamic> _$ProcessingColourReplaceColourToRedPut$RequestBodyToJson(

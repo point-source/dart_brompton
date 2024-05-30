@@ -6,6 +6,7 @@ part of 'brompton.swagger.dart';
 // ChopperGenerator
 // **************************************************************************
 
+// coverage:ignore-file
 // ignore_for_file: type=lint
 final class _$Brompton extends Brompton {
   _$Brompton([ChopperClient? client]) {
@@ -14,7 +15,7 @@ final class _$Brompton extends Brompton {
   }
 
   @override
-  final definitionType = Brompton;
+  final Type definitionType = Brompton;
 
   @override
   Future<Response<Type$Response>> _devicesItemsSerialTypeGet(
@@ -4641,6 +4642,102 @@ final class _$Brompton extends Brompton {
       body: $body,
     );
     return client.send<Enabled$Response, Enabled$Response>($request);
+  }
+
+  @override
+  Future<Response<Enabled$Response>> _outputGlobalColourTruelightEnabledGet(
+      {bool? $set}) {
+    final Uri $url = Uri.parse('/output/global-colour/truelight/enabled');
+    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
+    final Request $request = Request(
+      'GET',
+      $url,
+      client.baseUrl,
+      parameters: $params,
+    );
+    return client.send<Enabled$Response, Enabled$Response>($request);
+  }
+
+  @override
+  Future<Response<Enabled$Response>> _outputGlobalColourTruelightEnabledPut(
+      {required OutputGlobalColourTruelightEnabledPut$RequestBody? body}) {
+    final Uri $url = Uri.parse('/output/global-colour/truelight/enabled');
+    final $body = body;
+    final Request $request = Request(
+      'PUT',
+      $url,
+      client.baseUrl,
+      body: $body,
+    );
+    return client.send<Enabled$Response, Enabled$Response>($request);
+  }
+
+  @override
+  Future<Response<SpectralBoost$Response>>
+      _outputGlobalColourTruelightSpectralBoostGet({num? $set}) {
+    final Uri $url =
+        Uri.parse('/output/global-colour/truelight/spectral-boost');
+    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
+    final Request $request = Request(
+      'GET',
+      $url,
+      client.baseUrl,
+      parameters: $params,
+    );
+    return client
+        .send<SpectralBoost$Response, SpectralBoost$Response>($request);
+  }
+
+  @override
+  Future<Response<SpectralBoost$Response>>
+      _outputGlobalColourTruelightSpectralBoostPut(
+          {required OutputGlobalColourTruelightSpectralBoostPut$RequestBody?
+              body}) {
+    final Uri $url =
+        Uri.parse('/output/global-colour/truelight/spectral-boost');
+    final $body = body;
+    final Request $request = Request(
+      'PUT',
+      $url,
+      client.baseUrl,
+      body: $body,
+    );
+    return client
+        .send<SpectralBoost$Response, SpectralBoost$Response>($request);
+  }
+
+  @override
+  Future<Response<SpectralPreference$Response>>
+      _outputGlobalColourTruelightSpectralPreferenceGet({num? $set}) {
+    final Uri $url =
+        Uri.parse('/output/global-colour/truelight/spectral-preference');
+    final Map<String, dynamic> $params = <String, dynamic>{'set': $set};
+    final Request $request = Request(
+      'GET',
+      $url,
+      client.baseUrl,
+      parameters: $params,
+    );
+    return client.send<SpectralPreference$Response,
+        SpectralPreference$Response>($request);
+  }
+
+  @override
+  Future<Response<SpectralPreference$Response>>
+      _outputGlobalColourTruelightSpectralPreferencePut(
+          {required OutputGlobalColourTruelightSpectralPreferencePut$RequestBody?
+              body}) {
+    final Uri $url =
+        Uri.parse('/output/global-colour/truelight/spectral-preference');
+    final $body = body;
+    final Request $request = Request(
+      'PUT',
+      $url,
+      client.baseUrl,
+      body: $body,
+    );
+    return client.send<SpectralPreference$Response,
+        SpectralPreference$Response>($request);
   }
 
   @override

@@ -28,7 +28,7 @@ class BadRequest$Response {
   static const fromJsonFactory = _$BadRequest$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is BadRequest$Response &&
             (identical(other.errorMessages, errorMessages) ||
@@ -84,7 +84,7 @@ class Angle$Response {
   static const fromJsonFactory = _$Angle$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Angle$Response &&
             (identical(other.angle, angle) ||
@@ -126,7 +126,7 @@ class ApplyToBrightness$Response {
   static const fromJsonFactory = _$ApplyToBrightness$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ApplyToBrightness$Response &&
             (identical(other.applyToBrightness, applyToBrightness) ||
@@ -175,7 +175,7 @@ class ApplyToHue$Response {
   static const fromJsonFactory = _$ApplyToHue$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ApplyToHue$Response &&
             (identical(other.applyToHue, applyToHue) ||
@@ -219,7 +219,7 @@ class ApplyToSaturation$Response {
   static const fromJsonFactory = _$ApplyToSaturation$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ApplyToSaturation$Response &&
             (identical(other.applyToSaturation, applyToSaturation) ||
@@ -268,7 +268,7 @@ class AssociatedCount$Response {
   static const fromJsonFactory = _$AssociatedCount$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is AssociatedCount$Response &&
             (identical(other.associatedCount, associatedCount) ||
@@ -316,7 +316,7 @@ class AutoBrighten$Response {
   static const fromJsonFactory = _$AutoBrighten$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is AutoBrighten$Response &&
             (identical(other.autoBrighten, autoBrighten) ||
@@ -362,7 +362,7 @@ class BackgroundGain$Response {
   static const fromJsonFactory = _$BackgroundGain$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is BackgroundGain$Response &&
             (identical(other.backgroundGain, backgroundGain) ||
@@ -410,7 +410,7 @@ class BitDepth$Response {
   static const fromJsonFactory = _$BitDepth$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is BitDepth$Response &&
             (identical(other.bitDepth, bitDepth) ||
@@ -454,7 +454,7 @@ class BlackLevel$Response {
   static const fromJsonFactory = _$BlackLevel$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is BlackLevel$Response &&
             (identical(other.blackLevel, blackLevel) ||
@@ -499,7 +499,7 @@ class BlackoutAffectsMarkers$Response {
   static const fromJsonFactory = _$BlackoutAffectsMarkers$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is BlackoutAffectsMarkers$Response &&
             (identical(other.blackoutAffectsMarkers, blackoutAffectsMarkers) ||
@@ -550,7 +550,7 @@ class Blue$Response {
   static const fromJsonFactory = _$Blue$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Blue$Response &&
             (identical(other.blue, blue) ||
@@ -592,7 +592,7 @@ class Brightness$Response {
   static const fromJsonFactory = _$Brightness$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Brightness$Response &&
             (identical(other.brightness, brightness) ||
@@ -636,7 +636,7 @@ class BrightnessTolerance$Response {
   static const fromJsonFactory = _$BrightnessTolerance$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is BrightnessTolerance$Response &&
             (identical(other.brightnessTolerance, brightnessTolerance) ||
@@ -686,7 +686,7 @@ class Colour$Response {
   static const fromJsonFactory = _$Colour$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Colour$Response &&
             (identical(other.colour, colour) ||
@@ -729,7 +729,7 @@ class ColourTemperature$Response {
   static const fromJsonFactory = _$ColourTemperature$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ColourTemperature$Response &&
             (identical(other.colourTemperature, colourTemperature) ||
@@ -778,7 +778,7 @@ class ColourTolerance$Response {
   static const fromJsonFactory = _$ColourTolerance$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ColourTolerance$Response &&
             (identical(other.colourTolerance, colourTolerance) ||
@@ -827,7 +827,7 @@ class Contrast$Response {
   static const fromJsonFactory = _$Contrast$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Contrast$Response &&
             (identical(other.contrast, contrast) ||
@@ -871,7 +871,7 @@ class CurrentDateTime$Response {
   static const fromJsonFactory = _$CurrentDateTime$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is CurrentDateTime$Response &&
             (identical(other.currentDateTime, currentDateTime) ||
@@ -920,7 +920,7 @@ class CustomFrameRate$Response {
   static const fromJsonFactory = _$CustomFrameRate$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is CustomFrameRate$Response &&
             (identical(other.customFrameRate, customFrameRate) ||
@@ -969,7 +969,7 @@ class Data$Response {
   static const fromJsonFactory = _$Data$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Data$Response &&
             (identical(other.data, data) ||
@@ -1011,7 +1011,7 @@ class DistanceToTracker$Response {
   static const fromJsonFactory = _$DistanceToTracker$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is DistanceToTracker$Response &&
             (identical(other.distanceToTracker, distanceToTracker) ||
@@ -1060,7 +1060,7 @@ class DviColourFormat$Response {
   static const fromJsonFactory = _$DviColourFormat$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is DviColourFormat$Response &&
             (identical(other.dviColourFormat, dviColourFormat) ||
@@ -1109,7 +1109,7 @@ class Enabled$Response {
   static const fromJsonFactory = _$Enabled$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Enabled$Response &&
             (identical(other.enabled, enabled) ||
@@ -1152,7 +1152,7 @@ class ErrorCount$Response {
   static const fromJsonFactory = _$ErrorCount$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ErrorCount$Response &&
             (identical(other.errorCount, errorCount) ||
@@ -1196,7 +1196,7 @@ class FadeTime$Response {
   static const fromJsonFactory = _$FadeTime$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is FadeTime$Response &&
             (identical(other.fadeTime, fadeTime) ||
@@ -1240,7 +1240,7 @@ class Filename$Response {
   static const fromJsonFactory = _$Filename$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Filename$Response &&
             (identical(other.filename, filename) ||
@@ -1284,7 +1284,7 @@ class Format$Response {
   static const fromJsonFactory = _$Format$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Format$Response &&
             (identical(other.format, format) ||
@@ -1327,7 +1327,7 @@ class Fraction$Response {
   static const fromJsonFactory = _$Fraction$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Fraction$Response &&
             (identical(other.fraction, fraction) ||
@@ -1371,7 +1371,7 @@ class FrameRateMultiplier$Response {
   static const fromJsonFactory = _$FrameRateMultiplier$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is FrameRateMultiplier$Response &&
             (identical(other.frameRateMultiplier, frameRateMultiplier) ||
@@ -1421,7 +1421,7 @@ class FramesEnabledOn$Response {
   static const fromJsonFactory = _$FramesEnabledOn$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is FramesEnabledOn$Response &&
             (identical(other.framesEnabledOn, framesEnabledOn) ||
@@ -1470,7 +1470,7 @@ class Gain$Response {
   static const fromJsonFactory = _$Gain$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Gain$Response &&
             (identical(other.gain, gain) ||
@@ -1512,7 +1512,7 @@ class Gamma$Response {
   static const fromJsonFactory = _$Gamma$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Gamma$Response &&
             (identical(other.gamma, gamma) ||
@@ -1554,7 +1554,7 @@ class Gamut$Response {
   static const fromJsonFactory = _$Gamut$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Gamut$Response &&
             (identical(other.gamut, gamut) ||
@@ -1596,7 +1596,7 @@ class GlobalColourOverride$Response {
   static const fromJsonFactory = _$GlobalColourOverride$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GlobalColourOverride$Response &&
             (identical(other.globalColourOverride, globalColourOverride) ||
@@ -1647,7 +1647,7 @@ class GlobalGainsOverride$Response {
   static const fromJsonFactory = _$GlobalGainsOverride$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GlobalGainsOverride$Response &&
             (identical(other.globalGainsOverride, globalGainsOverride) ||
@@ -1699,7 +1699,7 @@ class GlobalStartrackerOverride$Response {
   static const fromJsonFactory = _$GlobalStartrackerOverride$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GlobalStartrackerOverride$Response &&
             (identical(other.globalStartrackerOverride,
@@ -1753,7 +1753,7 @@ class Green$Response {
   static const fromJsonFactory = _$Green$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Green$Response &&
             (identical(other.green, green) ||
@@ -1795,7 +1795,7 @@ class HdmiColourFormat$Response {
   static const fromJsonFactory = _$HdmiColourFormat$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is HdmiColourFormat$Response &&
             (identical(other.hdmiColourFormat, hdmiColourFormat) ||
@@ -1844,7 +1844,7 @@ class Height$Response {
   static const fromJsonFactory = _$Height$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Height$Response &&
             (identical(other.height, height) ||
@@ -1891,7 +1891,7 @@ class HighlightOverbrightPixelsEnabled$Response {
       _$HighlightOverbrightPixelsEnabled$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is HighlightOverbrightPixelsEnabled$Response &&
             (identical(other.highlightOverbrightPixelsEnabled,
@@ -1950,7 +1950,7 @@ class HightlightOutOfGamutPixelsEnabled$Response {
       _$HightlightOutOfGamutPixelsEnabled$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is HightlightOutOfGamutPixelsEnabled$Response &&
             (identical(other.hightlightOutOfGamutPixelsEnabled,
@@ -2005,7 +2005,7 @@ class Hue$Response {
   static const fromJsonFactory = _$Hue$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Hue$Response &&
             (identical(other.hue, hue) ||
@@ -2049,7 +2049,7 @@ class InfoFrameOverrideEnabled$Response {
   static const fromJsonFactory = _$InfoFrameOverrideEnabled$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InfoFrameOverrideEnabled$Response &&
             (identical(
@@ -2102,7 +2102,7 @@ class Intensity$Response {
   static const fromJsonFactory = _$Intensity$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Intensity$Response &&
             (identical(other.intensity, intensity) ||
@@ -2146,7 +2146,7 @@ class InternalRate$Response {
   static const fromJsonFactory = _$InternalRate$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InternalRate$Response &&
             (identical(other.internalRate, internalRate) ||
@@ -2192,7 +2192,7 @@ class IsActive$Response {
   static const fromJsonFactory = _$IsActive$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is IsActive$Response &&
             (identical(other.isActive, isActive) ||
@@ -2236,7 +2236,7 @@ class IsPartnerPresent$Response {
   static const fromJsonFactory = _$IsPartnerPresent$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is IsPartnerPresent$Response &&
             (identical(other.isPartnerPresent, isPartnerPresent) ||
@@ -2285,7 +2285,7 @@ class Lines$Response {
   static const fromJsonFactory = _$Lines$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Lines$Response &&
             (identical(other.lines, lines) ||
@@ -2327,7 +2327,7 @@ class Luminance$Response {
   static const fromJsonFactory = _$Luminance$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Luminance$Response &&
             (identical(other.luminance, luminance) ||
@@ -2371,7 +2371,7 @@ class LuminanceOnlyFraction$Response {
   static const fromJsonFactory = _$LuminanceOnlyFraction$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is LuminanceOnlyFraction$Response &&
             (identical(other.luminanceOnlyFraction, luminanceOnlyFraction) ||
@@ -2422,7 +2422,7 @@ class MarkerGain$Response {
   static const fromJsonFactory = _$MarkerGain$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is MarkerGain$Response &&
             (identical(other.markerGain, markerGain) ||
@@ -2466,7 +2466,7 @@ class MarkerSizeScaler$Response {
   static const fromJsonFactory = _$MarkerSizeScaler$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is MarkerSizeScaler$Response &&
             (identical(other.markerSizeScaler, markerSizeScaler) ||
@@ -2514,7 +2514,7 @@ class Method$Response {
   static const fromJsonFactory = _$Method$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Method$Response &&
             (identical(other.method, method) ||
@@ -2557,7 +2557,7 @@ class Mode$Response {
   static const fromJsonFactory = _$Mode$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Mode$Response &&
             (identical(other.mode, mode) ||
@@ -2601,7 +2601,7 @@ class ModuleCorrectionEnabled$Response {
   static const fromJsonFactory = _$ModuleCorrectionEnabled$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ModuleCorrectionEnabled$Response &&
             (identical(
@@ -2653,7 +2653,7 @@ class Name$Response {
   static const fromJsonFactory = _$Name$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Name$Response &&
             (identical(other.name, name) ||
@@ -2695,7 +2695,7 @@ class Number$Response {
   static const fromJsonFactory = _$Number$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Number$Response &&
             (identical(other.number, number) ||
@@ -2738,7 +2738,7 @@ class OnButtonPress$Response {
   static const fromJsonFactory = _$OnButtonPress$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OnButtonPress$Response &&
             (identical(other.onButtonPress, onButtonPress) ||
@@ -2784,7 +2784,7 @@ class OnPartnerFail$Response {
   static const fromJsonFactory = _$OnPartnerFail$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OnPartnerFail$Response &&
             (identical(other.onPartnerFail, onPartnerFail) ||
@@ -2830,7 +2830,7 @@ class OnPartnerVideoFail$Response {
   static const fromJsonFactory = _$OnPartnerVideoFail$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OnPartnerVideoFail$Response &&
             (identical(other.onPartnerVideoFail, onPartnerVideoFail) ||
@@ -2879,7 +2879,7 @@ class OnlineCount$Response {
   static const fromJsonFactory = _$OnlineCount$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OnlineCount$Response &&
             (identical(other.onlineCount, onlineCount) ||
@@ -2924,7 +2924,7 @@ class Orientation$Response {
   static const fromJsonFactory = _$Orientation$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Orientation$Response &&
             (identical(other.orientation, orientation) ||
@@ -2970,7 +2970,7 @@ class PartnerAbsenceDuration$Response {
   static const fromJsonFactory = _$PartnerAbsenceDuration$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is PartnerAbsenceDuration$Response &&
             (identical(other.partnerAbsenceDuration, partnerAbsenceDuration) ||
@@ -3021,7 +3021,7 @@ class PartnerName$Response {
   static const fromJsonFactory = _$PartnerName$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is PartnerName$Response &&
             (identical(other.partnerName, partnerName) ||
@@ -3066,7 +3066,7 @@ class PartnerSerial$Response {
   static const fromJsonFactory = _$PartnerSerial$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is PartnerSerial$Response &&
             (identical(other.partnerSerial, partnerSerial) ||
@@ -3114,7 +3114,7 @@ class PartnerVideoAbsenceDuration$Response {
   static const fromJsonFactory = _$PartnerVideoAbsenceDuration$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is PartnerVideoAbsenceDuration$Response &&
             (identical(other.partnerVideoAbsenceDuration,
@@ -3168,7 +3168,7 @@ class Pixels$Response {
   static const fromJsonFactory = _$Pixels$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Pixels$Response &&
             (identical(other.pixels, pixels) ||
@@ -3211,7 +3211,7 @@ class Points$Response {
   static const fromJsonFactory = _$Points$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Points$Response &&
             (identical(other.points, points) ||
@@ -3254,7 +3254,7 @@ class PortNumber$Response {
   static const fromJsonFactory = _$PortNumber$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is PortNumber$Response &&
             (identical(other.portNumber, portNumber) ||
@@ -3298,7 +3298,7 @@ class PortType$Response {
   static const fromJsonFactory = _$PortType$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is PortType$Response &&
             (identical(other.portType, portType) ||
@@ -3342,7 +3342,7 @@ class PreferPrimary$Response {
   static const fromJsonFactory = _$PreferPrimary$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is PreferPrimary$Response &&
             (identical(other.preferPrimary, preferPrimary) ||
@@ -3388,7 +3388,7 @@ class PrioritiseRefreshRate$Response {
   static const fromJsonFactory = _$PrioritiseRefreshRate$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is PrioritiseRefreshRate$Response &&
             (identical(other.prioritiseRefreshRate, prioritiseRefreshRate) ||
@@ -3439,7 +3439,7 @@ class ProcessorType$Response {
   static const fromJsonFactory = _$ProcessorType$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessorType$Response &&
             (identical(other.processorType, processorType) ||
@@ -3485,7 +3485,7 @@ class QuantisationRange$Response {
   static const fromJsonFactory = _$QuantisationRange$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is QuantisationRange$Response &&
             (identical(other.quantisationRange, quantisationRange) ||
@@ -3534,7 +3534,7 @@ class Reboot$Response {
   static const fromJsonFactory = _$Reboot$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Reboot$Response &&
             (identical(other.reboot, reboot) ||
@@ -3577,7 +3577,7 @@ class Red$Response {
   static const fromJsonFactory = _$Red$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Red$Response &&
             (identical(other.red, red) ||
@@ -3619,7 +3619,7 @@ class RefreshRate$Response {
   static const fromJsonFactory = _$RefreshRate$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is RefreshRate$Response &&
             (identical(other.refreshRate, refreshRate) ||
@@ -3664,7 +3664,7 @@ class RequestFailover$Response {
   static const fromJsonFactory = _$RequestFailover$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is RequestFailover$Response &&
             (identical(other.requestFailover, requestFailover) ||
@@ -3715,7 +3715,7 @@ class RestrictToAchievableColours$Response {
   static const fromJsonFactory = _$RestrictToAchievableColours$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is RestrictToAchievableColours$Response &&
             (identical(other.restrictToAchievableColours,
@@ -3769,7 +3769,7 @@ class Role$Response {
   static const fromJsonFactory = _$Role$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Role$Response &&
             (identical(other.role, role) ||
@@ -3811,7 +3811,7 @@ class Sampling$Response {
   static const fromJsonFactory = _$Sampling$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Sampling$Response &&
             (identical(other.sampling, sampling) ||
@@ -3855,7 +3855,7 @@ class Saturation$Response {
   static const fromJsonFactory = _$Saturation$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Saturation$Response &&
             (identical(other.saturation, saturation) ||
@@ -3899,7 +3899,7 @@ class SeamCorrectionEnabled$Response {
   static const fromJsonFactory = _$SeamCorrectionEnabled$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is SeamCorrectionEnabled$Response &&
             (identical(other.seamCorrectionEnabled, seamCorrectionEnabled) ||
@@ -3950,7 +3950,7 @@ class SensorReadoutTime$Response {
   static const fromJsonFactory = _$SensorReadoutTime$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is SensorReadoutTime$Response &&
             (identical(other.sensorReadoutTime, sensorReadoutTime) ||
@@ -3999,7 +3999,7 @@ class SensorType$Response {
   static const fromJsonFactory = _$SensorType$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is SensorType$Response &&
             (identical(other.sensorType, sensorType) ||
@@ -4043,7 +4043,7 @@ class Shutdown$Response {
   static const fromJsonFactory = _$Shutdown$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Shutdown$Response &&
             (identical(other.shutdown, shutdown) ||
@@ -4087,7 +4087,7 @@ class ShutterAngle$Response {
   static const fromJsonFactory = _$ShutterAngle$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ShutterAngle$Response &&
             (identical(other.shutterAngle, shutterAngle) ||
@@ -4133,7 +4133,7 @@ class ShutterSpeed$Response {
   static const fromJsonFactory = _$ShutterSpeed$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ShutterSpeed$Response &&
             (identical(other.shutterSpeed, shutterSpeed) ||
@@ -4179,7 +4179,7 @@ class Softness$Response {
   static const fromJsonFactory = _$Softness$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Softness$Response &&
             (identical(other.softness, softness) ||
@@ -4223,7 +4223,7 @@ class SoftwareVersion$Response {
   static const fromJsonFactory = _$SoftwareVersion$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is SoftwareVersion$Response &&
             (identical(other.softwareVersion, softwareVersion) ||
@@ -4272,7 +4272,7 @@ class Source$Response {
   static const fromJsonFactory = _$Source$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Source$Response &&
             (identical(other.source, source) ||
@@ -4299,6 +4299,101 @@ extension $Source$ResponseExtension on Source$Response {
 }
 
 @JsonSerializable(explicitToJson: true)
+class SpectralBoost$Response {
+  const SpectralBoost$Response({
+    this.spectralBoost,
+  });
+
+  factory SpectralBoost$Response.fromJson(Map<String, dynamic> json) =>
+      _$SpectralBoost$ResponseFromJson(json);
+
+  static const toJsonFactory = _$SpectralBoost$ResponseToJson;
+  Map<String, dynamic> toJson() => _$SpectralBoost$ResponseToJson(this);
+
+  @JsonKey(name: 'spectral-boost')
+  final double? spectralBoost;
+  static const fromJsonFactory = _$SpectralBoost$ResponseFromJson;
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other is SpectralBoost$Response &&
+            (identical(other.spectralBoost, spectralBoost) ||
+                const DeepCollectionEquality()
+                    .equals(other.spectralBoost, spectralBoost)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(spectralBoost) ^ runtimeType.hashCode;
+}
+
+extension $SpectralBoost$ResponseExtension on SpectralBoost$Response {
+  SpectralBoost$Response copyWith({double? spectralBoost}) {
+    return SpectralBoost$Response(
+        spectralBoost: spectralBoost ?? this.spectralBoost);
+  }
+
+  SpectralBoost$Response copyWithWrapped({Wrapped<double?>? spectralBoost}) {
+    return SpectralBoost$Response(
+        spectralBoost:
+            (spectralBoost != null ? spectralBoost.value : this.spectralBoost));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class SpectralPreference$Response {
+  const SpectralPreference$Response({
+    this.spectralPreference,
+  });
+
+  factory SpectralPreference$Response.fromJson(Map<String, dynamic> json) =>
+      _$SpectralPreference$ResponseFromJson(json);
+
+  static const toJsonFactory = _$SpectralPreference$ResponseToJson;
+  Map<String, dynamic> toJson() => _$SpectralPreference$ResponseToJson(this);
+
+  @JsonKey(name: 'spectral-preference')
+  final double? spectralPreference;
+  static const fromJsonFactory = _$SpectralPreference$ResponseFromJson;
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other is SpectralPreference$Response &&
+            (identical(other.spectralPreference, spectralPreference) ||
+                const DeepCollectionEquality()
+                    .equals(other.spectralPreference, spectralPreference)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(spectralPreference) ^
+      runtimeType.hashCode;
+}
+
+extension $SpectralPreference$ResponseExtension on SpectralPreference$Response {
+  SpectralPreference$Response copyWith({double? spectralPreference}) {
+    return SpectralPreference$Response(
+        spectralPreference: spectralPreference ?? this.spectralPreference);
+  }
+
+  SpectralPreference$Response copyWithWrapped(
+      {Wrapped<double?>? spectralPreference}) {
+    return SpectralPreference$Response(
+        spectralPreference: (spectralPreference != null
+            ? spectralPreference.value
+            : this.spectralPreference));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class StarMapSeed$Response {
   const StarMapSeed$Response({
     this.starMapSeed,
@@ -4315,7 +4410,7 @@ class StarMapSeed$Response {
   static const fromJsonFactory = _$StarMapSeed$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is StarMapSeed$Response &&
             (identical(other.starMapSeed, starMapSeed) ||
@@ -4360,7 +4455,7 @@ class State$Response {
   static const fromJsonFactory = _$State$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is State$Response &&
             (identical(other.state, state) ||
@@ -4402,7 +4497,7 @@ class Status$Response {
   static const fromJsonFactory = _$Status$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Status$Response &&
             (identical(other.status, status) ||
@@ -4445,7 +4540,7 @@ class Strength$Response {
   static const fromJsonFactory = _$Strength$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Strength$Response &&
             (identical(other.strength, strength) ||
@@ -4489,7 +4584,7 @@ class Time$Response {
   static const fromJsonFactory = _$Time$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Time$Response &&
             (identical(other.time, time) ||
@@ -4531,7 +4626,7 @@ class Type$Response {
   static const fromJsonFactory = _$Type$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Type$Response &&
             (identical(other.type, type) ||
@@ -4573,7 +4668,7 @@ class UseCustomFrameRate$Response {
   static const fromJsonFactory = _$UseCustomFrameRate$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is UseCustomFrameRate$Response &&
             (identical(other.useCustomFrameRate, useCustomFrameRate) ||
@@ -4622,7 +4717,7 @@ class ViewMatte$Response {
   static const fromJsonFactory = _$ViewMatte$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ViewMatte$Response &&
             (identical(other.viewMatte, viewMatte) ||
@@ -4666,7 +4761,7 @@ class Width$Response {
   static const fromJsonFactory = _$Width$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Width$Response &&
             (identical(other.width, width) ||
@@ -4708,7 +4803,7 @@ class X$Response {
   static const fromJsonFactory = _$X$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is X$Response &&
             (identical(other.x, x) ||
@@ -4750,7 +4845,7 @@ class XOffset$Response {
   static const fromJsonFactory = _$XOffset$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is XOffset$Response &&
             (identical(other.xOffset, xOffset) ||
@@ -4793,7 +4888,7 @@ class Y$Response {
   static const fromJsonFactory = _$Y$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Y$Response &&
             (identical(other.y, y) ||
@@ -4835,7 +4930,7 @@ class YOffset$Response {
   static const fromJsonFactory = _$YOffset$ResponseFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is YOffset$Response &&
             (identical(other.yOffset, yOffset) ||
@@ -4882,7 +4977,7 @@ class GroupsItemsNumberBrightnessPut$RequestBody {
       _$GroupsItemsNumberBrightnessPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GroupsItemsNumberBrightnessPut$RequestBody &&
             (identical(other.data, data) ||
@@ -4931,7 +5026,7 @@ class GroupsItemsNumberColourTemperaturePut$RequestBody {
       _$GroupsItemsNumberColourTemperaturePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GroupsItemsNumberColourTemperaturePut$RequestBody &&
             (identical(other.data, data) ||
@@ -4981,7 +5076,7 @@ class GroupsItemsNumberDarkMagicEnabledPut$RequestBody {
       _$GroupsItemsNumberDarkMagicEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GroupsItemsNumberDarkMagicEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -5031,7 +5126,7 @@ class GroupsItemsNumberExtendedBitDepthEnabledPut$RequestBody {
       _$GroupsItemsNumberExtendedBitDepthEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GroupsItemsNumberExtendedBitDepthEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -5082,7 +5177,7 @@ class GroupsItemsNumberGainsBluePut$RequestBody {
       _$GroupsItemsNumberGainsBluePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GroupsItemsNumberGainsBluePut$RequestBody &&
             (identical(other.data, data) ||
@@ -5131,7 +5226,7 @@ class GroupsItemsNumberGainsGreenPut$RequestBody {
       _$GroupsItemsNumberGainsGreenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GroupsItemsNumberGainsGreenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -5180,7 +5275,7 @@ class GroupsItemsNumberGainsIntensityPut$RequestBody {
       _$GroupsItemsNumberGainsIntensityPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GroupsItemsNumberGainsIntensityPut$RequestBody &&
             (identical(other.data, data) ||
@@ -5229,7 +5324,7 @@ class GroupsItemsNumberGainsRedPut$RequestBody {
       _$GroupsItemsNumberGainsRedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GroupsItemsNumberGainsRedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -5277,7 +5372,7 @@ class GroupsItemsNumberGammaPut$RequestBody {
       _$GroupsItemsNumberGammaPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GroupsItemsNumberGammaPut$RequestBody &&
             (identical(other.data, data) ||
@@ -5326,7 +5421,7 @@ class GroupsItemsNumberGlobalColourOverridePut$RequestBody {
       _$GroupsItemsNumberGlobalColourOverridePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GroupsItemsNumberGlobalColourOverridePut$RequestBody &&
             (identical(other.data, data) ||
@@ -5377,7 +5472,7 @@ class GroupsItemsNumberGlobalGainsOverridePut$RequestBody {
       _$GroupsItemsNumberGlobalGainsOverridePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GroupsItemsNumberGlobalGainsOverridePut$RequestBody &&
             (identical(other.data, data) ||
@@ -5427,7 +5522,7 @@ class GroupsItemsNumberGlobalStartrackerOverridePut$RequestBody {
       _$GroupsItemsNumberGlobalStartrackerOverridePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GroupsItemsNumberGlobalStartrackerOverridePut$RequestBody &&
             (identical(other.data, data) ||
@@ -5476,7 +5571,7 @@ class GroupsItemsNumberNamePut$RequestBody {
   static const fromJsonFactory = _$GroupsItemsNumberNamePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GroupsItemsNumberNamePut$RequestBody &&
             (identical(other.data, data) ||
@@ -5525,7 +5620,7 @@ class GroupsItemsNumberOverdriveEnabledPut$RequestBody {
       _$GroupsItemsNumberOverdriveEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GroupsItemsNumberOverdriveEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -5575,7 +5670,7 @@ class GroupsItemsNumberPuretoneEnabledPut$RequestBody {
       _$GroupsItemsNumberPuretoneEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GroupsItemsNumberPuretoneEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -5625,7 +5720,7 @@ class GroupsItemsNumberStartrackerEnabledPut$RequestBody {
       _$GroupsItemsNumberStartrackerEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is GroupsItemsNumberStartrackerEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -5675,7 +5770,7 @@ class InputActiveSourcePortNumberPut$RequestBody {
       _$InputActiveSourcePortNumberPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputActiveSourcePortNumberPut$RequestBody &&
             (identical(other.data, data) ||
@@ -5723,7 +5818,7 @@ class InputActiveSourcePortTypePut$RequestBody {
       _$InputActiveSourcePortTypePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputActiveSourcePortTypePut$RequestBody &&
             (identical(other.data, data) ||
@@ -5774,7 +5869,7 @@ class InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody {
       _$InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberControlsColourSpaceColourPut$RequestBody &&
             (identical(other.data, data) ||
@@ -5827,7 +5922,7 @@ class InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody {
       _$InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberControlsDviColourFormatPut$RequestBody &&
             (identical(other.data, data) ||
@@ -5878,7 +5973,7 @@ class InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody {
       _$InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberDynacalBlueGamutPut$RequestBody &&
             (identical(other.data, data) ||
@@ -5929,7 +6024,7 @@ class InputPortsDviDviPortNumberDynacalBlueXPut$RequestBody {
       _$InputPortsDviDviPortNumberDynacalBlueXPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberDynacalBlueXPut$RequestBody &&
             (identical(other.data, data) ||
@@ -5980,7 +6075,7 @@ class InputPortsDviDviPortNumberDynacalBlueYPut$RequestBody {
       _$InputPortsDviDviPortNumberDynacalBlueYPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberDynacalBlueYPut$RequestBody &&
             (identical(other.data, data) ||
@@ -6032,7 +6127,7 @@ class InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody {
       _$InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberDynacalGreenGamutPut$RequestBody &&
             (identical(other.data, data) ||
@@ -6083,7 +6178,7 @@ class InputPortsDviDviPortNumberDynacalGreenXPut$RequestBody {
       _$InputPortsDviDviPortNumberDynacalGreenXPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberDynacalGreenXPut$RequestBody &&
             (identical(other.data, data) ||
@@ -6134,7 +6229,7 @@ class InputPortsDviDviPortNumberDynacalGreenYPut$RequestBody {
       _$InputPortsDviDviPortNumberDynacalGreenYPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberDynacalGreenYPut$RequestBody &&
             (identical(other.data, data) ||
@@ -6185,7 +6280,7 @@ class InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody {
       _$InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberDynacalRedGamutPut$RequestBody &&
             (identical(other.data, data) ||
@@ -6236,7 +6331,7 @@ class InputPortsDviDviPortNumberDynacalRedXPut$RequestBody {
       _$InputPortsDviDviPortNumberDynacalRedXPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberDynacalRedXPut$RequestBody &&
             (identical(other.data, data) ||
@@ -6287,7 +6382,7 @@ class InputPortsDviDviPortNumberDynacalRedYPut$RequestBody {
       _$InputPortsDviDviPortNumberDynacalRedYPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberDynacalRedYPut$RequestBody &&
             (identical(other.data, data) ||
@@ -6340,7 +6435,7 @@ class InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBody {
       _$InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberDynacalWhiteColourTemperaturePut$RequestBody &&
             (identical(other.data, data) ||
@@ -6392,7 +6487,7 @@ class InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody {
       _$InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberDynacalWhiteGamutPut$RequestBody &&
             (identical(other.data, data) ||
@@ -6443,7 +6538,7 @@ class InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBody {
       _$InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberDynacalWhiteXPut$RequestBody &&
             (identical(other.data, data) ||
@@ -6494,7 +6589,7 @@ class InputPortsDviDviPortNumberDynacalWhiteYPut$RequestBody {
       _$InputPortsDviDviPortNumberDynacalWhiteYPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberDynacalWhiteYPut$RequestBody &&
             (identical(other.data, data) ||
@@ -6546,7 +6641,7 @@ class InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberProcAmpBlackLevelPut$RequestBody &&
             (identical(other.data, data) ||
@@ -6597,7 +6692,7 @@ class InputPortsDviDviPortNumberProcAmpContrastPut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpContrastPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberProcAmpContrastPut$RequestBody &&
             (identical(other.data, data) ||
@@ -6650,7 +6745,7 @@ class InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberProcAmpHighlightBluePut$RequestBody &&
             (identical(other.data, data) ||
@@ -6703,7 +6798,7 @@ class InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberProcAmpHighlightGreenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -6756,7 +6851,7 @@ class InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberProcAmpHighlightRedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -6807,7 +6902,7 @@ class InputPortsDviDviPortNumberProcAmpHuePut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpHuePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberProcAmpHuePut$RequestBody &&
             (identical(other.data, data) ||
@@ -6858,7 +6953,7 @@ class InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberProcAmpSaturationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -6910,7 +7005,7 @@ class InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberProcAmpShadowBluePut$RequestBody &&
             (identical(other.data, data) ||
@@ -6962,7 +7057,7 @@ class InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberProcAmpShadowGreenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7013,7 +7108,7 @@ class InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBody {
       _$InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsDviDviPortNumberProcAmpShadowRedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7066,7 +7161,7 @@ class InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberControlsColourSpaceColourPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7119,7 +7214,7 @@ class InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut
       _$InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberControlsColourSpaceInfoFrameOverrideEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7172,7 +7267,7 @@ class InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7225,7 +7320,7 @@ class InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberControlsHdrFormatPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7278,7 +7373,7 @@ class InputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberControlsHdrPqAutoBrightenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7331,7 +7426,7 @@ class InputPortsHdmiHdmiPortNumberControlsHdrPqGainPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberControlsHdrPqGainPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberControlsHdrPqGainPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7384,7 +7479,7 @@ class InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestB
       _$InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7437,7 +7532,7 @@ class InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$Reques
       _$InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBody &&
             (identical(other.data, data) ||
@@ -7490,7 +7585,7 @@ class InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberControlsQuantisationRangePut$RequestBody &&
             (identical(other.data, data) ||
@@ -7542,7 +7637,7 @@ class InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberDynacalBlueGamutPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7593,7 +7688,7 @@ class InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberDynacalBlueXPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7644,7 +7739,7 @@ class InputPortsHdmiHdmiPortNumberDynacalBlueYPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalBlueYPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberDynacalBlueYPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7697,7 +7792,7 @@ class InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberDynacalGreenGamutPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7748,7 +7843,7 @@ class InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberDynacalGreenXPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7799,7 +7894,7 @@ class InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberDynacalGreenYPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7851,7 +7946,7 @@ class InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberDynacalRedGamutPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7902,7 +7997,7 @@ class InputPortsHdmiHdmiPortNumberDynacalRedXPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalRedXPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberDynacalRedXPut$RequestBody &&
             (identical(other.data, data) ||
@@ -7953,7 +8048,7 @@ class InputPortsHdmiHdmiPortNumberDynacalRedYPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalRedYPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberDynacalRedYPut$RequestBody &&
             (identical(other.data, data) ||
@@ -8006,7 +8101,7 @@ class InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberDynacalWhiteColourTemperaturePut$RequestBody &&
             (identical(other.data, data) ||
@@ -8059,7 +8154,7 @@ class InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberDynacalWhiteGamutPut$RequestBody &&
             (identical(other.data, data) ||
@@ -8110,7 +8205,7 @@ class InputPortsHdmiHdmiPortNumberDynacalWhiteXPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalWhiteXPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberDynacalWhiteXPut$RequestBody &&
             (identical(other.data, data) ||
@@ -8161,7 +8256,7 @@ class InputPortsHdmiHdmiPortNumberDynacalWhiteYPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberDynacalWhiteYPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberDynacalWhiteYPut$RequestBody &&
             (identical(other.data, data) ||
@@ -8214,7 +8309,7 @@ class InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberProcAmpBlackLevelPut$RequestBody &&
             (identical(other.data, data) ||
@@ -8266,7 +8361,7 @@ class InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberProcAmpContrastPut$RequestBody &&
             (identical(other.data, data) ||
@@ -8319,7 +8414,7 @@ class InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberProcAmpHighlightBluePut$RequestBody &&
             (identical(other.data, data) ||
@@ -8372,7 +8467,7 @@ class InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberProcAmpHighlightGreenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -8425,7 +8520,7 @@ class InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberProcAmpHighlightRedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -8476,7 +8571,7 @@ class InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberProcAmpHuePut$RequestBody &&
             (identical(other.data, data) ||
@@ -8528,7 +8623,7 @@ class InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberProcAmpSaturationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -8581,7 +8676,7 @@ class InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberProcAmpShadowBluePut$RequestBody &&
             (identical(other.data, data) ||
@@ -8634,7 +8729,7 @@ class InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberProcAmpShadowGreenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -8686,7 +8781,7 @@ class InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBody {
       _$InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsHdmiHdmiPortNumberProcAmpShadowRedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -8739,7 +8834,7 @@ class InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody {
       _$InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberControlsColourSpaceColourPut$RequestBody &&
             (identical(other.data, data) ||
@@ -8791,7 +8886,7 @@ class InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody {
       _$InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberControlsHdrFormatPut$RequestBody &&
             (identical(other.data, data) ||
@@ -8844,7 +8939,7 @@ class InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBody {
       _$InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberControlsHdrPqAutoBrightenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -8896,7 +8991,7 @@ class InputPortsSdiSdiPortNumberControlsHdrPqGainPut$RequestBody {
       _$InputPortsSdiSdiPortNumberControlsHdrPqGainPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberControlsHdrPqGainPut$RequestBody &&
             (identical(other.data, data) ||
@@ -8949,7 +9044,7 @@ class InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBod
       _$InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9002,7 +9097,7 @@ class InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestB
       _$InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberControlsHdrPqMaxCllOverrideLuminancePut$RequestBody &&
             (identical(other.data, data) ||
@@ -9053,7 +9148,7 @@ class InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody {
       _$InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberDynacalBlueGamutPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9104,7 +9199,7 @@ class InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBody {
       _$InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberDynacalBlueXPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9155,7 +9250,7 @@ class InputPortsSdiSdiPortNumberDynacalBlueYPut$RequestBody {
       _$InputPortsSdiSdiPortNumberDynacalBlueYPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberDynacalBlueYPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9207,7 +9302,7 @@ class InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody {
       _$InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberDynacalGreenGamutPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9258,7 +9353,7 @@ class InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBody {
       _$InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberDynacalGreenXPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9309,7 +9404,7 @@ class InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBody {
       _$InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberDynacalGreenYPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9360,7 +9455,7 @@ class InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody {
       _$InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberDynacalRedGamutPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9411,7 +9506,7 @@ class InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBody {
       _$InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberDynacalRedXPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9462,7 +9557,7 @@ class InputPortsSdiSdiPortNumberDynacalRedYPut$RequestBody {
       _$InputPortsSdiSdiPortNumberDynacalRedYPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberDynacalRedYPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9515,7 +9610,7 @@ class InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBody {
       _$InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberDynacalWhiteColourTemperaturePut$RequestBody &&
             (identical(other.data, data) ||
@@ -9567,7 +9662,7 @@ class InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody {
       _$InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberDynacalWhiteGamutPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9618,7 +9713,7 @@ class InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBody {
       _$InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberDynacalWhiteXPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9669,7 +9764,7 @@ class InputPortsSdiSdiPortNumberDynacalWhiteYPut$RequestBody {
       _$InputPortsSdiSdiPortNumberDynacalWhiteYPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberDynacalWhiteYPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9721,7 +9816,7 @@ class InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberProcAmpBlackLevelPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9772,7 +9867,7 @@ class InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberProcAmpContrastPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9825,7 +9920,7 @@ class InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberProcAmpHighlightBluePut$RequestBody &&
             (identical(other.data, data) ||
@@ -9878,7 +9973,7 @@ class InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberProcAmpHighlightGreenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9931,7 +10026,7 @@ class InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberProcAmpHighlightRedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -9982,7 +10077,7 @@ class InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberProcAmpHuePut$RequestBody &&
             (identical(other.data, data) ||
@@ -10033,7 +10128,7 @@ class InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberProcAmpSaturationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -10085,7 +10180,7 @@ class InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberProcAmpShadowBluePut$RequestBody &&
             (identical(other.data, data) ||
@@ -10137,7 +10232,7 @@ class InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberProcAmpShadowGreenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -10188,7 +10283,7 @@ class InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBody {
       _$InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is InputPortsSdiSdiPortNumberProcAmpShadowRedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -10239,7 +10334,7 @@ class OutputDynacalPanelTypeBlueModePut$RequestBody {
       _$OutputDynacalPanelTypeBlueModePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputDynacalPanelTypeBlueModePut$RequestBody &&
             (identical(other.data, data) ||
@@ -10289,7 +10384,7 @@ class OutputDynacalPanelTypeBlueXPut$RequestBody {
       _$OutputDynacalPanelTypeBlueXPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputDynacalPanelTypeBlueXPut$RequestBody &&
             (identical(other.data, data) ||
@@ -10338,7 +10433,7 @@ class OutputDynacalPanelTypeBlueYPut$RequestBody {
       _$OutputDynacalPanelTypeBlueYPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputDynacalPanelTypeBlueYPut$RequestBody &&
             (identical(other.data, data) ||
@@ -10387,7 +10482,7 @@ class OutputDynacalPanelTypeGreenModePut$RequestBody {
       _$OutputDynacalPanelTypeGreenModePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputDynacalPanelTypeGreenModePut$RequestBody &&
             (identical(other.data, data) ||
@@ -10437,7 +10532,7 @@ class OutputDynacalPanelTypeGreenXPut$RequestBody {
       _$OutputDynacalPanelTypeGreenXPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputDynacalPanelTypeGreenXPut$RequestBody &&
             (identical(other.data, data) ||
@@ -10486,7 +10581,7 @@ class OutputDynacalPanelTypeGreenYPut$RequestBody {
       _$OutputDynacalPanelTypeGreenYPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputDynacalPanelTypeGreenYPut$RequestBody &&
             (identical(other.data, data) ||
@@ -10536,7 +10631,7 @@ class OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBody {
       _$OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputDynacalPanelTypeLuminanceOnlyFractionPut$RequestBody &&
             (identical(other.data, data) ||
@@ -10587,7 +10682,7 @@ class OutputDynacalPanelTypeModePut$RequestBody {
       _$OutputDynacalPanelTypeModePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputDynacalPanelTypeModePut$RequestBody &&
             (identical(other.data, data) ||
@@ -10636,7 +10731,7 @@ class OutputDynacalPanelTypeRedModePut$RequestBody {
       _$OutputDynacalPanelTypeRedModePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputDynacalPanelTypeRedModePut$RequestBody &&
             (identical(other.data, data) ||
@@ -10686,7 +10781,7 @@ class OutputDynacalPanelTypeRedXPut$RequestBody {
       _$OutputDynacalPanelTypeRedXPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputDynacalPanelTypeRedXPut$RequestBody &&
             (identical(other.data, data) ||
@@ -10735,7 +10830,7 @@ class OutputDynacalPanelTypeRedYPut$RequestBody {
       _$OutputDynacalPanelTypeRedYPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputDynacalPanelTypeRedYPut$RequestBody &&
             (identical(other.data, data) ||
@@ -10784,7 +10879,7 @@ class OutputGlobalColourBrightnessPut$RequestBody {
       _$OutputGlobalColourBrightnessPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputGlobalColourBrightnessPut$RequestBody &&
             (identical(other.data, data) ||
@@ -10833,7 +10928,7 @@ class OutputGlobalColourColourTemperaturePut$RequestBody {
       _$OutputGlobalColourColourTemperaturePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputGlobalColourColourTemperaturePut$RequestBody &&
             (identical(other.data, data) ||
@@ -10883,7 +10978,7 @@ class OutputGlobalColourDarkMagicEnabledPut$RequestBody {
       _$OutputGlobalColourDarkMagicEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputGlobalColourDarkMagicEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -10935,7 +11030,7 @@ class OutputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut$RequestBody {
       _$OutputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputGlobalColourDynacalHighlightOverbrightPixelsEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -10988,7 +11083,7 @@ class OutputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut$RequestBody 
       _$OutputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputGlobalColourDynacalHightlightOutOfGamutPixelsEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11039,7 +11134,7 @@ class OutputGlobalColourExtendedBitDepthEnabledPut$RequestBody {
       _$OutputGlobalColourExtendedBitDepthEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputGlobalColourExtendedBitDepthEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11090,7 +11185,7 @@ class OutputGlobalColourGainsBluePut$RequestBody {
       _$OutputGlobalColourGainsBluePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputGlobalColourGainsBluePut$RequestBody &&
             (identical(other.data, data) ||
@@ -11139,7 +11234,7 @@ class OutputGlobalColourGainsGreenPut$RequestBody {
       _$OutputGlobalColourGainsGreenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputGlobalColourGainsGreenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11188,7 +11283,7 @@ class OutputGlobalColourGainsIntensityPut$RequestBody {
       _$OutputGlobalColourGainsIntensityPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputGlobalColourGainsIntensityPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11238,7 +11333,7 @@ class OutputGlobalColourGainsRedPut$RequestBody {
       _$OutputGlobalColourGainsRedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputGlobalColourGainsRedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11286,7 +11381,7 @@ class OutputGlobalColourGammaPut$RequestBody {
       _$OutputGlobalColourGammaPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputGlobalColourGammaPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11335,7 +11430,7 @@ class OutputGlobalColourOverdriveEnabledPut$RequestBody {
       _$OutputGlobalColourOverdriveEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputGlobalColourOverdriveEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11385,7 +11480,7 @@ class OutputGlobalColourPuretoneEnabledPut$RequestBody {
       _$OutputGlobalColourPuretoneEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputGlobalColourPuretoneEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11415,6 +11510,160 @@ extension $OutputGlobalColourPuretoneEnabledPut$RequestBodyExtension
 }
 
 @JsonSerializable(explicitToJson: true)
+class OutputGlobalColourTruelightEnabledPut$RequestBody {
+  const OutputGlobalColourTruelightEnabledPut$RequestBody({
+    required this.data,
+  });
+
+  factory OutputGlobalColourTruelightEnabledPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$OutputGlobalColourTruelightEnabledPut$RequestBodyFromJson(json);
+
+  static const toJsonFactory =
+      _$OutputGlobalColourTruelightEnabledPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OutputGlobalColourTruelightEnabledPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final Object data;
+  static const fromJsonFactory =
+      _$OutputGlobalColourTruelightEnabledPut$RequestBodyFromJson;
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other is OutputGlobalColourTruelightEnabledPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $OutputGlobalColourTruelightEnabledPut$RequestBodyExtension
+    on OutputGlobalColourTruelightEnabledPut$RequestBody {
+  OutputGlobalColourTruelightEnabledPut$RequestBody copyWith({Object? data}) {
+    return OutputGlobalColourTruelightEnabledPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  OutputGlobalColourTruelightEnabledPut$RequestBody copyWithWrapped(
+      {Wrapped<Object>? data}) {
+    return OutputGlobalColourTruelightEnabledPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class OutputGlobalColourTruelightSpectralBoostPut$RequestBody {
+  const OutputGlobalColourTruelightSpectralBoostPut$RequestBody({
+    required this.data,
+  });
+
+  factory OutputGlobalColourTruelightSpectralBoostPut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$OutputGlobalColourTruelightSpectralBoostPut$RequestBodyFromJson(json);
+
+  static const toJsonFactory =
+      _$OutputGlobalColourTruelightSpectralBoostPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OutputGlobalColourTruelightSpectralBoostPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputGlobalColourTruelightSpectralBoostPut$RequestBodyFromJson;
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other is OutputGlobalColourTruelightSpectralBoostPut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $OutputGlobalColourTruelightSpectralBoostPut$RequestBodyExtension
+    on OutputGlobalColourTruelightSpectralBoostPut$RequestBody {
+  OutputGlobalColourTruelightSpectralBoostPut$RequestBody copyWith(
+      {double? data}) {
+    return OutputGlobalColourTruelightSpectralBoostPut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  OutputGlobalColourTruelightSpectralBoostPut$RequestBody copyWithWrapped(
+      {Wrapped<double>? data}) {
+    return OutputGlobalColourTruelightSpectralBoostPut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class OutputGlobalColourTruelightSpectralPreferencePut$RequestBody {
+  const OutputGlobalColourTruelightSpectralPreferencePut$RequestBody({
+    required this.data,
+  });
+
+  factory OutputGlobalColourTruelightSpectralPreferencePut$RequestBody.fromJson(
+          Map<String, dynamic> json) =>
+      _$OutputGlobalColourTruelightSpectralPreferencePut$RequestBodyFromJson(
+          json);
+
+  static const toJsonFactory =
+      _$OutputGlobalColourTruelightSpectralPreferencePut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$OutputGlobalColourTruelightSpectralPreferencePut$RequestBodyToJson(
+          this);
+
+  @JsonKey(name: 'data')
+  final double data;
+  static const fromJsonFactory =
+      _$OutputGlobalColourTruelightSpectralPreferencePut$RequestBodyFromJson;
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other is OutputGlobalColourTruelightSpectralPreferencePut$RequestBody &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(data) ^ runtimeType.hashCode;
+}
+
+extension $OutputGlobalColourTruelightSpectralPreferencePut$RequestBodyExtension
+    on OutputGlobalColourTruelightSpectralPreferencePut$RequestBody {
+  OutputGlobalColourTruelightSpectralPreferencePut$RequestBody copyWith(
+      {double? data}) {
+    return OutputGlobalColourTruelightSpectralPreferencePut$RequestBody(
+        data: data ?? this.data);
+  }
+
+  OutputGlobalColourTruelightSpectralPreferencePut$RequestBody copyWithWrapped(
+      {Wrapped<double>? data}) {
+    return OutputGlobalColourTruelightSpectralPreferencePut$RequestBody(
+        data: (data != null ? data.value : this.data));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class OutputNetworkBitDepthPut$RequestBody {
   const OutputNetworkBitDepthPut$RequestBody({
     required this.data,
@@ -11433,7 +11682,7 @@ class OutputNetworkBitDepthPut$RequestBody {
   static const fromJsonFactory = _$OutputNetworkBitDepthPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkBitDepthPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11482,7 +11731,7 @@ class OutputNetworkFailoverActionsRequestFailoverPut$RequestBody {
       _$OutputNetworkFailoverActionsRequestFailoverPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkFailoverActionsRequestFailoverPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11533,7 +11782,7 @@ class OutputNetworkFailoverSettingsEnabledPut$RequestBody {
       _$OutputNetworkFailoverSettingsEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkFailoverSettingsEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11585,7 +11834,7 @@ class OutputNetworkFailoverSettingsModesOnButtonPressPut$RequestBody {
       _$OutputNetworkFailoverSettingsModesOnButtonPressPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkFailoverSettingsModesOnButtonPressPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11638,7 +11887,7 @@ class OutputNetworkFailoverSettingsModesOnPartnerFailPut$RequestBody {
       _$OutputNetworkFailoverSettingsModesOnPartnerFailPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkFailoverSettingsModesOnPartnerFailPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11691,7 +11940,7 @@ class OutputNetworkFailoverSettingsModesOnPartnerVideoFailPut$RequestBody {
       _$OutputNetworkFailoverSettingsModesOnPartnerVideoFailPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkFailoverSettingsModesOnPartnerVideoFailPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11744,7 +11993,7 @@ class OutputNetworkFailoverSettingsModesPreferPrimaryPut$RequestBody {
       _$OutputNetworkFailoverSettingsModesPreferPrimaryPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkFailoverSettingsModesPreferPrimaryPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11795,7 +12044,7 @@ class OutputNetworkFrameRateMultiplierPut$RequestBody {
       _$OutputNetworkFrameRateMultiplierPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkFrameRateMultiplierPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11845,7 +12094,7 @@ class OutputNetworkFrameRemappingEnabledPut$RequestBody {
       _$OutputNetworkFrameRemappingEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkFrameRemappingEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11895,7 +12144,7 @@ class OutputNetworkFrameRemappingFramesFrameBluePut$RequestBody {
       _$OutputNetworkFrameRemappingFramesFrameBluePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkFrameRemappingFramesFrameBluePut$RequestBody &&
             (identical(other.data, data) ||
@@ -11947,7 +12196,7 @@ class OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBody {
       _$OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkFrameRemappingFramesFrameGreenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -11998,7 +12247,7 @@ class OutputNetworkFrameRemappingFramesFrameModePut$RequestBody {
       _$OutputNetworkFrameRemappingFramesFrameModePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkFrameRemappingFramesFrameModePut$RequestBody &&
             (identical(other.data, data) ||
@@ -12049,7 +12298,7 @@ class OutputNetworkFrameRemappingFramesFrameRedPut$RequestBody {
       _$OutputNetworkFrameRemappingFramesFrameRedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkFrameRemappingFramesFrameRedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -12102,7 +12351,7 @@ class OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBody {
       _$OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkFrameRemappingFramesFrameXOffsetPut$RequestBody &&
             (identical(other.data, data) ||
@@ -12155,7 +12404,7 @@ class OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBody {
       _$OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkFrameRemappingFramesFrameYOffsetPut$RequestBody &&
             (identical(other.data, data) ||
@@ -12206,7 +12455,7 @@ class OutputNetworkGenlockInternalRatePut$RequestBody {
       _$OutputNetworkGenlockInternalRatePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkGenlockInternalRatePut$RequestBody &&
             (identical(other.data, data) ||
@@ -12257,7 +12506,7 @@ class OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBody {
       _$OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkGenlockPhaseOffsetAbsoluteLinesPut$RequestBody &&
             (identical(other.data, data) ||
@@ -12310,7 +12559,7 @@ class OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBody {
       _$OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkGenlockPhaseOffsetAbsolutePixelsPut$RequestBody &&
             (identical(other.data, data) ||
@@ -12361,7 +12610,7 @@ class OutputNetworkGenlockPhaseOffsetAnglePut$RequestBody {
       _$OutputNetworkGenlockPhaseOffsetAnglePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkGenlockPhaseOffsetAnglePut$RequestBody &&
             (identical(other.data, data) ||
@@ -12411,7 +12660,7 @@ class OutputNetworkGenlockPhaseOffsetFractionPut$RequestBody {
       _$OutputNetworkGenlockPhaseOffsetFractionPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkGenlockPhaseOffsetFractionPut$RequestBody &&
             (identical(other.data, data) ||
@@ -12462,7 +12711,7 @@ class OutputNetworkGenlockPhaseOffsetModePut$RequestBody {
       _$OutputNetworkGenlockPhaseOffsetModePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkGenlockPhaseOffsetModePut$RequestBody &&
             (identical(other.data, data) ||
@@ -12512,7 +12761,7 @@ class OutputNetworkGenlockSourcePut$RequestBody {
       _$OutputNetworkGenlockSourcePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkGenlockSourcePut$RequestBody &&
             (identical(other.data, data) ||
@@ -12563,7 +12812,7 @@ class OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBody {
       _$OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkShuttersyncAngleSettingsCustomFrameRatePut$RequestBody &&
             (identical(other.data, data) ||
@@ -12616,7 +12865,7 @@ class OutputNetworkShuttersyncAngleSettingsShutterAnglePut$RequestBody {
       _$OutputNetworkShuttersyncAngleSettingsShutterAnglePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkShuttersyncAngleSettingsShutterAnglePut$RequestBody &&
             (identical(other.data, data) ||
@@ -12669,7 +12918,7 @@ class OutputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut$RequestBody {
       _$OutputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkShuttersyncAngleSettingsUseCustomFrameRatePut$RequestBody &&
             (identical(other.data, data) ||
@@ -12720,7 +12969,7 @@ class OutputNetworkShuttersyncModePut$RequestBody {
       _$OutputNetworkShuttersyncModePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkShuttersyncModePut$RequestBody &&
             (identical(other.data, data) ||
@@ -12771,7 +13020,7 @@ class OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBody {
       _$OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkShuttersyncPrioritiseRefreshRatePut$RequestBody &&
             (identical(other.data, data) ||
@@ -12822,7 +13071,7 @@ class OutputNetworkShuttersyncSensorReadoutTimePut$RequestBody {
       _$OutputNetworkShuttersyncSensorReadoutTimePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkShuttersyncSensorReadoutTimePut$RequestBody &&
             (identical(other.data, data) ||
@@ -12873,7 +13122,7 @@ class OutputNetworkShuttersyncSensorTypePut$RequestBody {
       _$OutputNetworkShuttersyncSensorTypePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkShuttersyncSensorTypePut$RequestBody &&
             (identical(other.data, data) ||
@@ -12925,7 +13174,7 @@ class OutputNetworkShuttersyncSpeedSettingsShutterSpeedPut$RequestBody {
       _$OutputNetworkShuttersyncSpeedSettingsShutterSpeedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkShuttersyncSpeedSettingsShutterSpeedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -12976,7 +13225,7 @@ class OutputNetworkShuttersyncSpeedSettingsTimePut$RequestBody {
       _$OutputNetworkShuttersyncSpeedSettingsTimePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkShuttersyncSpeedSettingsTimePut$RequestBody &&
             (identical(other.data, data) ||
@@ -13027,7 +13276,7 @@ class OutputNetworkStartrackerBackgroundGainPut$RequestBody {
       _$OutputNetworkStartrackerBackgroundGainPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerBackgroundGainPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13079,7 +13328,7 @@ class OutputNetworkStartrackerBlackoutAffectsMarkersPut$RequestBody {
       _$OutputNetworkStartrackerBlackoutAffectsMarkersPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerBlackoutAffectsMarkersPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13132,7 +13381,7 @@ class OutputNetworkStartrackerBlueDistanceToTrackerPut$RequestBody {
       _$OutputNetworkStartrackerBlueDistanceToTrackerPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerBlueDistanceToTrackerPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13183,7 +13432,7 @@ class OutputNetworkStartrackerBlueEnabledPut$RequestBody {
       _$OutputNetworkStartrackerBlueEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerBlueEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13233,7 +13482,7 @@ class OutputNetworkStartrackerBlueMarkerGainPut$RequestBody {
       _$OutputNetworkStartrackerBlueMarkerGainPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerBlueMarkerGainPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13284,7 +13533,7 @@ class OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBody {
       _$OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerBlueMarkerSizeScalerPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13335,7 +13584,7 @@ class OutputNetworkStartrackerBlueStarMapSeedPut$RequestBody {
       _$OutputNetworkStartrackerBlueStarMapSeedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerBlueStarMapSeedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13385,7 +13634,7 @@ class OutputNetworkStartrackerEnabledPut$RequestBody {
       _$OutputNetworkStartrackerEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13435,7 +13684,7 @@ class OutputNetworkStartrackerFramesEnabledOnPut$RequestBody {
       _$OutputNetworkStartrackerFramesEnabledOnPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerFramesEnabledOnPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13488,7 +13737,7 @@ class OutputNetworkStartrackerGreenDistanceToTrackerPut$RequestBody {
       _$OutputNetworkStartrackerGreenDistanceToTrackerPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerGreenDistanceToTrackerPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13539,7 +13788,7 @@ class OutputNetworkStartrackerGreenEnabledPut$RequestBody {
       _$OutputNetworkStartrackerGreenEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerGreenEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13589,7 +13838,7 @@ class OutputNetworkStartrackerGreenMarkerGainPut$RequestBody {
       _$OutputNetworkStartrackerGreenMarkerGainPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerGreenMarkerGainPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13641,7 +13890,7 @@ class OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBody {
       _$OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerGreenMarkerSizeScalerPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13692,7 +13941,7 @@ class OutputNetworkStartrackerGreenStarMapSeedPut$RequestBody {
       _$OutputNetworkStartrackerGreenStarMapSeedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerGreenStarMapSeedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13744,7 +13993,7 @@ class OutputNetworkStartrackerRedDistanceToTrackerPut$RequestBody {
       _$OutputNetworkStartrackerRedDistanceToTrackerPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerRedDistanceToTrackerPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13795,7 +14044,7 @@ class OutputNetworkStartrackerRedEnabledPut$RequestBody {
       _$OutputNetworkStartrackerRedEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerRedEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13845,7 +14094,7 @@ class OutputNetworkStartrackerRedMarkerGainPut$RequestBody {
       _$OutputNetworkStartrackerRedMarkerGainPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerRedMarkerGainPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13896,7 +14145,7 @@ class OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBody {
       _$OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerRedMarkerSizeScalerPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13947,7 +14196,7 @@ class OutputNetworkStartrackerRedStarMapSeedPut$RequestBody {
       _$OutputNetworkStartrackerRedStarMapSeedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OutputNetworkStartrackerRedStarMapSeedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -13996,7 +14245,7 @@ class OverrideBlackoutEnabledPut$RequestBody {
       _$OverrideBlackoutEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideBlackoutEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -14044,7 +14293,7 @@ class OverrideBlackoutFadeTimePut$RequestBody {
       _$OverrideBlackoutFadeTimePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideBlackoutFadeTimePut$RequestBody &&
             (identical(other.data, data) ||
@@ -14091,7 +14340,7 @@ class OverrideFreezeEnabledPut$RequestBody {
   static const fromJsonFactory = _$OverrideFreezeEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideFreezeEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -14140,7 +14389,7 @@ class OverrideTestPatternCustomColourBluePut$RequestBody {
       _$OverrideTestPatternCustomColourBluePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideTestPatternCustomColourBluePut$RequestBody &&
             (identical(other.data, data) ||
@@ -14190,7 +14439,7 @@ class OverrideTestPatternCustomColourGreenPut$RequestBody {
       _$OverrideTestPatternCustomColourGreenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideTestPatternCustomColourGreenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -14240,7 +14489,7 @@ class OverrideTestPatternCustomColourRedPut$RequestBody {
       _$OverrideTestPatternCustomColourRedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideTestPatternCustomColourRedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -14292,7 +14541,7 @@ class OverrideTestPatternCustomGradientEndColourBluePut$RequestBody {
       _$OverrideTestPatternCustomGradientEndColourBluePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideTestPatternCustomGradientEndColourBluePut$RequestBody &&
             (identical(other.data, data) ||
@@ -14345,7 +14594,7 @@ class OverrideTestPatternCustomGradientEndColourGreenPut$RequestBody {
       _$OverrideTestPatternCustomGradientEndColourGreenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideTestPatternCustomGradientEndColourGreenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -14398,7 +14647,7 @@ class OverrideTestPatternCustomGradientEndColourRedPut$RequestBody {
       _$OverrideTestPatternCustomGradientEndColourRedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideTestPatternCustomGradientEndColourRedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -14450,7 +14699,7 @@ class OverrideTestPatternCustomGradientOrientationPut$RequestBody {
       _$OverrideTestPatternCustomGradientOrientationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideTestPatternCustomGradientOrientationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -14503,7 +14752,7 @@ class OverrideTestPatternCustomGradientStartColourBluePut$RequestBody {
       _$OverrideTestPatternCustomGradientStartColourBluePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideTestPatternCustomGradientStartColourBluePut$RequestBody &&
             (identical(other.data, data) ||
@@ -14556,7 +14805,7 @@ class OverrideTestPatternCustomGradientStartColourGreenPut$RequestBody {
       _$OverrideTestPatternCustomGradientStartColourGreenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideTestPatternCustomGradientStartColourGreenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -14609,7 +14858,7 @@ class OverrideTestPatternCustomGradientStartColourRedPut$RequestBody {
       _$OverrideTestPatternCustomGradientStartColourRedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideTestPatternCustomGradientStartColourRedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -14660,7 +14909,7 @@ class OverrideTestPatternEnabledPut$RequestBody {
       _$OverrideTestPatternEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideTestPatternEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -14708,7 +14957,7 @@ class OverrideTestPatternFormatPut$RequestBody {
       _$OverrideTestPatternFormatPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideTestPatternFormatPut$RequestBody &&
             (identical(other.data, data) ||
@@ -14759,7 +15008,7 @@ class OverrideTestPatternRestrictToAchievableColoursPut$RequestBody {
       _$OverrideTestPatternRestrictToAchievableColoursPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideTestPatternRestrictToAchievableColoursPut$RequestBody &&
             (identical(other.data, data) ||
@@ -14809,7 +15058,7 @@ class OverrideTestPatternTypePut$RequestBody {
       _$OverrideTestPatternTypePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is OverrideTestPatternTypePut$RequestBody &&
             (identical(other.data, data) ||
@@ -14856,7 +15105,7 @@ class PresetsActiveNumberPut$RequestBody {
   static const fromJsonFactory = _$PresetsActiveNumberPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is PresetsActiveNumberPut$RequestBody &&
             (identical(other.data, data) ||
@@ -14903,7 +15152,7 @@ class PresetsItemsNumberNamePut$RequestBody {
       _$PresetsItemsNumberNamePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is PresetsItemsNumberNamePut$RequestBody &&
             (identical(other.data, data) ||
@@ -14950,7 +15199,7 @@ class Processing3dLutDataPut$RequestBody {
   static const fromJsonFactory = _$Processing3dLutDataPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Processing3dLutDataPut$RequestBody &&
             (identical(other.data, data) ||
@@ -14998,7 +15247,7 @@ class Processing3dLutEnabledPut$RequestBody {
       _$Processing3dLutEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Processing3dLutEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -15046,7 +15295,7 @@ class Processing3dLutStrengthPut$RequestBody {
       _$Processing3dLutStrengthPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is Processing3dLutStrengthPut$RequestBody &&
             (identical(other.data, data) ||
@@ -15095,7 +15344,7 @@ class ProcessingColourCorrectBlackBluePut$RequestBody {
       _$ProcessingColourCorrectBlackBluePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectBlackBluePut$RequestBody &&
             (identical(other.data, data) ||
@@ -15145,7 +15394,7 @@ class ProcessingColourCorrectBlackGreenPut$RequestBody {
       _$ProcessingColourCorrectBlackGreenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectBlackGreenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -15195,7 +15444,7 @@ class ProcessingColourCorrectBlackRedPut$RequestBody {
       _$ProcessingColourCorrectBlackRedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectBlackRedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -15245,7 +15494,7 @@ class ProcessingColourCorrectBlueBrightnessPut$RequestBody {
       _$ProcessingColourCorrectBlueBrightnessPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectBlueBrightnessPut$RequestBody &&
             (identical(other.data, data) ||
@@ -15296,7 +15545,7 @@ class ProcessingColourCorrectBlueHuePut$RequestBody {
       _$ProcessingColourCorrectBlueHuePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectBlueHuePut$RequestBody &&
             (identical(other.data, data) ||
@@ -15346,7 +15595,7 @@ class ProcessingColourCorrectBlueSaturationPut$RequestBody {
       _$ProcessingColourCorrectBlueSaturationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectBlueSaturationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -15397,7 +15646,7 @@ class ProcessingColourCorrectCobaltBrightnessPut$RequestBody {
       _$ProcessingColourCorrectCobaltBrightnessPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectCobaltBrightnessPut$RequestBody &&
             (identical(other.data, data) ||
@@ -15448,7 +15697,7 @@ class ProcessingColourCorrectCobaltHuePut$RequestBody {
       _$ProcessingColourCorrectCobaltHuePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectCobaltHuePut$RequestBody &&
             (identical(other.data, data) ||
@@ -15498,7 +15747,7 @@ class ProcessingColourCorrectCobaltSaturationPut$RequestBody {
       _$ProcessingColourCorrectCobaltSaturationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectCobaltSaturationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -15549,7 +15798,7 @@ class ProcessingColourCorrectCrimsonBrightnessPut$RequestBody {
       _$ProcessingColourCorrectCrimsonBrightnessPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectCrimsonBrightnessPut$RequestBody &&
             (identical(other.data, data) ||
@@ -15600,7 +15849,7 @@ class ProcessingColourCorrectCrimsonHuePut$RequestBody {
       _$ProcessingColourCorrectCrimsonHuePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectCrimsonHuePut$RequestBody &&
             (identical(other.data, data) ||
@@ -15650,7 +15899,7 @@ class ProcessingColourCorrectCrimsonSaturationPut$RequestBody {
       _$ProcessingColourCorrectCrimsonSaturationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectCrimsonSaturationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -15701,7 +15950,7 @@ class ProcessingColourCorrectCyanBrightnessPut$RequestBody {
       _$ProcessingColourCorrectCyanBrightnessPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectCyanBrightnessPut$RequestBody &&
             (identical(other.data, data) ||
@@ -15752,7 +16001,7 @@ class ProcessingColourCorrectCyanHuePut$RequestBody {
       _$ProcessingColourCorrectCyanHuePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectCyanHuePut$RequestBody &&
             (identical(other.data, data) ||
@@ -15802,7 +16051,7 @@ class ProcessingColourCorrectCyanSaturationPut$RequestBody {
       _$ProcessingColourCorrectCyanSaturationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectCyanSaturationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -15853,7 +16102,7 @@ class ProcessingColourCorrectEnabledPut$RequestBody {
       _$ProcessingColourCorrectEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -15903,7 +16152,7 @@ class ProcessingColourCorrectGreenBrightnessPut$RequestBody {
       _$ProcessingColourCorrectGreenBrightnessPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectGreenBrightnessPut$RequestBody &&
             (identical(other.data, data) ||
@@ -15954,7 +16203,7 @@ class ProcessingColourCorrectGreenHuePut$RequestBody {
       _$ProcessingColourCorrectGreenHuePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectGreenHuePut$RequestBody &&
             (identical(other.data, data) ||
@@ -16004,7 +16253,7 @@ class ProcessingColourCorrectGreenSaturationPut$RequestBody {
       _$ProcessingColourCorrectGreenSaturationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectGreenSaturationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -16055,7 +16304,7 @@ class ProcessingColourCorrectLimeBrightnessPut$RequestBody {
       _$ProcessingColourCorrectLimeBrightnessPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectLimeBrightnessPut$RequestBody &&
             (identical(other.data, data) ||
@@ -16106,7 +16355,7 @@ class ProcessingColourCorrectLimeHuePut$RequestBody {
       _$ProcessingColourCorrectLimeHuePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectLimeHuePut$RequestBody &&
             (identical(other.data, data) ||
@@ -16156,7 +16405,7 @@ class ProcessingColourCorrectLimeSaturationPut$RequestBody {
       _$ProcessingColourCorrectLimeSaturationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectLimeSaturationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -16207,7 +16456,7 @@ class ProcessingColourCorrectMagentaBrightnessPut$RequestBody {
       _$ProcessingColourCorrectMagentaBrightnessPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectMagentaBrightnessPut$RequestBody &&
             (identical(other.data, data) ||
@@ -16258,7 +16507,7 @@ class ProcessingColourCorrectMagentaHuePut$RequestBody {
       _$ProcessingColourCorrectMagentaHuePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectMagentaHuePut$RequestBody &&
             (identical(other.data, data) ||
@@ -16308,7 +16557,7 @@ class ProcessingColourCorrectMagentaSaturationPut$RequestBody {
       _$ProcessingColourCorrectMagentaSaturationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectMagentaSaturationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -16359,7 +16608,7 @@ class ProcessingColourCorrectOrangeBrightnessPut$RequestBody {
       _$ProcessingColourCorrectOrangeBrightnessPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectOrangeBrightnessPut$RequestBody &&
             (identical(other.data, data) ||
@@ -16410,7 +16659,7 @@ class ProcessingColourCorrectOrangeHuePut$RequestBody {
       _$ProcessingColourCorrectOrangeHuePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectOrangeHuePut$RequestBody &&
             (identical(other.data, data) ||
@@ -16460,7 +16709,7 @@ class ProcessingColourCorrectOrangeSaturationPut$RequestBody {
       _$ProcessingColourCorrectOrangeSaturationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectOrangeSaturationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -16511,7 +16760,7 @@ class ProcessingColourCorrectRedBrightnessPut$RequestBody {
       _$ProcessingColourCorrectRedBrightnessPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectRedBrightnessPut$RequestBody &&
             (identical(other.data, data) ||
@@ -16561,7 +16810,7 @@ class ProcessingColourCorrectRedHuePut$RequestBody {
       _$ProcessingColourCorrectRedHuePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectRedHuePut$RequestBody &&
             (identical(other.data, data) ||
@@ -16611,7 +16860,7 @@ class ProcessingColourCorrectRedSaturationPut$RequestBody {
       _$ProcessingColourCorrectRedSaturationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectRedSaturationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -16661,7 +16910,7 @@ class ProcessingColourCorrectTurquoiseBrightnessPut$RequestBody {
       _$ProcessingColourCorrectTurquoiseBrightnessPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectTurquoiseBrightnessPut$RequestBody &&
             (identical(other.data, data) ||
@@ -16712,7 +16961,7 @@ class ProcessingColourCorrectTurquoiseHuePut$RequestBody {
       _$ProcessingColourCorrectTurquoiseHuePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectTurquoiseHuePut$RequestBody &&
             (identical(other.data, data) ||
@@ -16762,7 +17011,7 @@ class ProcessingColourCorrectTurquoiseSaturationPut$RequestBody {
       _$ProcessingColourCorrectTurquoiseSaturationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectTurquoiseSaturationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -16813,7 +17062,7 @@ class ProcessingColourCorrectVioletBrightnessPut$RequestBody {
       _$ProcessingColourCorrectVioletBrightnessPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectVioletBrightnessPut$RequestBody &&
             (identical(other.data, data) ||
@@ -16864,7 +17113,7 @@ class ProcessingColourCorrectVioletHuePut$RequestBody {
       _$ProcessingColourCorrectVioletHuePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectVioletHuePut$RequestBody &&
             (identical(other.data, data) ||
@@ -16914,7 +17163,7 @@ class ProcessingColourCorrectVioletSaturationPut$RequestBody {
       _$ProcessingColourCorrectVioletSaturationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectVioletSaturationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -16965,7 +17214,7 @@ class ProcessingColourCorrectWhiteBluePut$RequestBody {
       _$ProcessingColourCorrectWhiteBluePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectWhiteBluePut$RequestBody &&
             (identical(other.data, data) ||
@@ -17015,7 +17264,7 @@ class ProcessingColourCorrectWhiteGreenPut$RequestBody {
       _$ProcessingColourCorrectWhiteGreenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectWhiteGreenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -17065,7 +17314,7 @@ class ProcessingColourCorrectWhiteRedPut$RequestBody {
       _$ProcessingColourCorrectWhiteRedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectWhiteRedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -17115,7 +17364,7 @@ class ProcessingColourCorrectYellowBrightnessPut$RequestBody {
       _$ProcessingColourCorrectYellowBrightnessPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectYellowBrightnessPut$RequestBody &&
             (identical(other.data, data) ||
@@ -17166,7 +17415,7 @@ class ProcessingColourCorrectYellowHuePut$RequestBody {
       _$ProcessingColourCorrectYellowHuePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectYellowHuePut$RequestBody &&
             (identical(other.data, data) ||
@@ -17216,7 +17465,7 @@ class ProcessingColourCorrectYellowSaturationPut$RequestBody {
       _$ProcessingColourCorrectYellowSaturationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourCorrectYellowSaturationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -17267,7 +17516,7 @@ class ProcessingColourReplaceApplyToBrightnessPut$RequestBody {
       _$ProcessingColourReplaceApplyToBrightnessPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourReplaceApplyToBrightnessPut$RequestBody &&
             (identical(other.data, data) ||
@@ -17318,7 +17567,7 @@ class ProcessingColourReplaceApplyToHuePut$RequestBody {
       _$ProcessingColourReplaceApplyToHuePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourReplaceApplyToHuePut$RequestBody &&
             (identical(other.data, data) ||
@@ -17368,7 +17617,7 @@ class ProcessingColourReplaceApplyToSaturationPut$RequestBody {
       _$ProcessingColourReplaceApplyToSaturationPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourReplaceApplyToSaturationPut$RequestBody &&
             (identical(other.data, data) ||
@@ -17419,7 +17668,7 @@ class ProcessingColourReplaceBrightnessTolerancePut$RequestBody {
       _$ProcessingColourReplaceBrightnessTolerancePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourReplaceBrightnessTolerancePut$RequestBody &&
             (identical(other.data, data) ||
@@ -17470,7 +17719,7 @@ class ProcessingColourReplaceColourFromBluePut$RequestBody {
       _$ProcessingColourReplaceColourFromBluePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourReplaceColourFromBluePut$RequestBody &&
             (identical(other.data, data) ||
@@ -17520,7 +17769,7 @@ class ProcessingColourReplaceColourFromGreenPut$RequestBody {
       _$ProcessingColourReplaceColourFromGreenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourReplaceColourFromGreenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -17570,7 +17819,7 @@ class ProcessingColourReplaceColourFromRedPut$RequestBody {
       _$ProcessingColourReplaceColourFromRedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourReplaceColourFromRedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -17620,7 +17869,7 @@ class ProcessingColourReplaceColourToBluePut$RequestBody {
       _$ProcessingColourReplaceColourToBluePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourReplaceColourToBluePut$RequestBody &&
             (identical(other.data, data) ||
@@ -17670,7 +17919,7 @@ class ProcessingColourReplaceColourToGreenPut$RequestBody {
       _$ProcessingColourReplaceColourToGreenPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourReplaceColourToGreenPut$RequestBody &&
             (identical(other.data, data) ||
@@ -17720,7 +17969,7 @@ class ProcessingColourReplaceColourToRedPut$RequestBody {
       _$ProcessingColourReplaceColourToRedPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourReplaceColourToRedPut$RequestBody &&
             (identical(other.data, data) ||
@@ -17770,7 +18019,7 @@ class ProcessingColourReplaceColourTolerancePut$RequestBody {
       _$ProcessingColourReplaceColourTolerancePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourReplaceColourTolerancePut$RequestBody &&
             (identical(other.data, data) ||
@@ -17821,7 +18070,7 @@ class ProcessingColourReplaceEnabledPut$RequestBody {
       _$ProcessingColourReplaceEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourReplaceEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -17871,7 +18120,7 @@ class ProcessingColourReplaceMethodPut$RequestBody {
       _$ProcessingColourReplaceMethodPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourReplaceMethodPut$RequestBody &&
             (identical(other.data, data) ||
@@ -17921,7 +18170,7 @@ class ProcessingColourReplaceSoftnessPut$RequestBody {
       _$ProcessingColourReplaceSoftnessPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourReplaceSoftnessPut$RequestBody &&
             (identical(other.data, data) ||
@@ -17971,7 +18220,7 @@ class ProcessingColourReplaceStrengthPut$RequestBody {
       _$ProcessingColourReplaceStrengthPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourReplaceStrengthPut$RequestBody &&
             (identical(other.data, data) ||
@@ -18021,7 +18270,7 @@ class ProcessingColourReplaceViewMattePut$RequestBody {
       _$ProcessingColourReplaceViewMattePut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingColourReplaceViewMattePut$RequestBody &&
             (identical(other.data, data) ||
@@ -18071,7 +18320,7 @@ class ProcessingCurvesBluePointsPut$RequestBody {
       _$ProcessingCurvesBluePointsPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingCurvesBluePointsPut$RequestBody &&
             (identical(other.data, data) ||
@@ -18119,7 +18368,7 @@ class ProcessingCurvesEnabledPut$RequestBody {
       _$ProcessingCurvesEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingCurvesEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -18168,7 +18417,7 @@ class ProcessingCurvesGreenPointsPut$RequestBody {
       _$ProcessingCurvesGreenPointsPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingCurvesGreenPointsPut$RequestBody &&
             (identical(other.data, data) ||
@@ -18216,7 +18465,7 @@ class ProcessingCurvesRedPointsPut$RequestBody {
       _$ProcessingCurvesRedPointsPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingCurvesRedPointsPut$RequestBody &&
             (identical(other.data, data) ||
@@ -18265,7 +18514,7 @@ class ProcessingCurvesWhitePointsPut$RequestBody {
       _$ProcessingCurvesWhitePointsPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingCurvesWhitePointsPut$RequestBody &&
             (identical(other.data, data) ||
@@ -18314,7 +18563,7 @@ class ProcessingOscaModuleCorrectionEnabledPut$RequestBody {
       _$ProcessingOscaModuleCorrectionEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingOscaModuleCorrectionEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -18365,7 +18614,7 @@ class ProcessingOscaSeamCorrectionEnabledPut$RequestBody {
       _$ProcessingOscaSeamCorrectionEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingOscaSeamCorrectionEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -18414,7 +18663,7 @@ class ProcessingScalerEnabledPut$RequestBody {
       _$ProcessingScalerEnabledPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is ProcessingScalerEnabledPut$RequestBody &&
             (identical(other.data, data) ||
@@ -18461,7 +18710,7 @@ class SystemActionsRebootPut$RequestBody {
   static const fromJsonFactory = _$SystemActionsRebootPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is SystemActionsRebootPut$RequestBody &&
             (identical(other.data, data) ||
@@ -18507,7 +18756,7 @@ class SystemActionsShutdownPut$RequestBody {
   static const fromJsonFactory = _$SystemActionsShutdownPut$RequestBodyFromJson;
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other is SystemActionsShutdownPut$RequestBody &&
             (identical(other.data, data) ||
@@ -18549,9 +18798,8 @@ enums.InputActiveSourcePortTypeGetSet inputActiveSourcePortTypeGetSetFromJson(
   Object? inputActiveSourcePortTypeGetSet, [
   enums.InputActiveSourcePortTypeGetSet? defaultValue,
 ]) {
-  return enums.InputActiveSourcePortTypeGetSet.values.firstWhereOrNull((e) =>
-          e.value.toString().toLowerCase() ==
-          inputActiveSourcePortTypeGetSet?.toString().toLowerCase()) ??
+  return enums.InputActiveSourcePortTypeGetSet.values.firstWhereOrNull(
+          (e) => e.value == inputActiveSourcePortTypeGetSet) ??
       defaultValue ??
       enums.InputActiveSourcePortTypeGetSet.swaggerGeneratedUnknown;
 }
@@ -18632,10 +18880,8 @@ enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet
 ]) {
   return enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsDviDviPortNumberControlsColourSpaceColourGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value ==
+              inputPortsDviDviPortNumberControlsColourSpaceColourGetSet) ??
       defaultValue ??
       enums.InputPortsDviDviPortNumberControlsColourSpaceColourGetSet
           .swaggerGeneratedUnknown;
@@ -18732,10 +18978,8 @@ enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet
 ]) {
   return enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsDviDviPortNumberControlsDviColourFormatGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value ==
+              inputPortsDviDviPortNumberControlsDviColourFormatGetSet) ??
       defaultValue ??
       enums.InputPortsDviDviPortNumberControlsDviColourFormatGetSet
           .swaggerGeneratedUnknown;
@@ -18831,10 +19075,7 @@ enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet
 ]) {
   return enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsDviDviPortNumberDynacalBlueGamutGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value == inputPortsDviDviPortNumberDynacalBlueGamutGetSet) ??
       defaultValue ??
       enums.InputPortsDviDviPortNumberDynacalBlueGamutGetSet
           .swaggerGeneratedUnknown;
@@ -18924,10 +19165,7 @@ enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet
 ]) {
   return enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsDviDviPortNumberDynacalGreenGamutGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value == inputPortsDviDviPortNumberDynacalGreenGamutGetSet) ??
       defaultValue ??
       enums.InputPortsDviDviPortNumberDynacalGreenGamutGetSet
           .swaggerGeneratedUnknown;
@@ -19017,10 +19255,7 @@ enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet
 ]) {
   return enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsDviDviPortNumberDynacalRedGamutGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value == inputPortsDviDviPortNumberDynacalRedGamutGetSet) ??
       defaultValue ??
       enums.InputPortsDviDviPortNumberDynacalRedGamutGetSet
           .swaggerGeneratedUnknown;
@@ -19110,10 +19345,7 @@ enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet
 ]) {
   return enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsDviDviPortNumberDynacalWhiteGamutGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value == inputPortsDviDviPortNumberDynacalWhiteGamutGetSet) ??
       defaultValue ??
       enums.InputPortsDviDviPortNumberDynacalWhiteGamutGetSet
           .swaggerGeneratedUnknown;
@@ -19206,10 +19438,8 @@ enums.InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet
   return enums
           .InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value ==
+              inputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet) ??
       defaultValue ??
       enums.InputPortsHdmiHdmiPortNumberControlsColourSpaceColourGetSet
           .swaggerGeneratedUnknown;
@@ -19310,10 +19540,8 @@ enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet
 ]) {
   return enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value ==
+              inputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet) ??
       defaultValue ??
       enums.InputPortsHdmiHdmiPortNumberControlsHdmiColourFormatGetSet
           .swaggerGeneratedUnknown;
@@ -19411,10 +19639,7 @@ enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet
 ]) {
   return enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value == inputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet) ??
       defaultValue ??
       enums.InputPortsHdmiHdmiPortNumberControlsHdrFormatGetSet
           .swaggerGeneratedUnknown;
@@ -19507,10 +19732,8 @@ enums.InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet
   return enums
           .InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value ==
+              inputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet) ??
       defaultValue ??
       enums.InputPortsHdmiHdmiPortNumberControlsQuantisationRangeGetSet
           .swaggerGeneratedUnknown;
@@ -19609,10 +19832,7 @@ enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet
 ]) {
   return enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value == inputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet) ??
       defaultValue ??
       enums.InputPortsHdmiHdmiPortNumberDynacalBlueGamutGetSet
           .swaggerGeneratedUnknown;
@@ -19702,10 +19922,7 @@ enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet
 ]) {
   return enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value == inputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet) ??
       defaultValue ??
       enums.InputPortsHdmiHdmiPortNumberDynacalGreenGamutGetSet
           .swaggerGeneratedUnknown;
@@ -19795,10 +20012,7 @@ enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet
 ]) {
   return enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value == inputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet) ??
       defaultValue ??
       enums.InputPortsHdmiHdmiPortNumberDynacalRedGamutGetSet
           .swaggerGeneratedUnknown;
@@ -19888,10 +20102,7 @@ enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet
 ]) {
   return enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value == inputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet) ??
       defaultValue ??
       enums.InputPortsHdmiHdmiPortNumberDynacalWhiteGamutGetSet
           .swaggerGeneratedUnknown;
@@ -19981,10 +20192,8 @@ enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet
 ]) {
   return enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value ==
+              inputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet) ??
       defaultValue ??
       enums.InputPortsSdiSdiPortNumberControlsColourSpaceColourGetSet
           .swaggerGeneratedUnknown;
@@ -20081,10 +20290,7 @@ enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet
 ]) {
   return enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsSdiSdiPortNumberControlsHdrFormatGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value == inputPortsSdiSdiPortNumberControlsHdrFormatGetSet) ??
       defaultValue ??
       enums.InputPortsSdiSdiPortNumberControlsHdrFormatGetSet
           .swaggerGeneratedUnknown;
@@ -20174,10 +20380,7 @@ enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet
 ]) {
   return enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value == inputPortsSdiSdiPortNumberDynacalBlueGamutGetSet) ??
       defaultValue ??
       enums.InputPortsSdiSdiPortNumberDynacalBlueGamutGetSet
           .swaggerGeneratedUnknown;
@@ -20267,10 +20470,7 @@ enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet
 ]) {
   return enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value == inputPortsSdiSdiPortNumberDynacalGreenGamutGetSet) ??
       defaultValue ??
       enums.InputPortsSdiSdiPortNumberDynacalGreenGamutGetSet
           .swaggerGeneratedUnknown;
@@ -20360,10 +20560,7 @@ enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet
 ]) {
   return enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsSdiSdiPortNumberDynacalRedGamutGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value == inputPortsSdiSdiPortNumberDynacalRedGamutGetSet) ??
       defaultValue ??
       enums.InputPortsSdiSdiPortNumberDynacalRedGamutGetSet
           .swaggerGeneratedUnknown;
@@ -20453,10 +20650,7 @@ enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet
 ]) {
   return enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value == inputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet) ??
       defaultValue ??
       enums.InputPortsSdiSdiPortNumberDynacalWhiteGamutGetSet
           .swaggerGeneratedUnknown;
@@ -20545,9 +20739,7 @@ enums.OutputDynacalPanelTypeBlueModeGetSet
   enums.OutputDynacalPanelTypeBlueModeGetSet? defaultValue,
 ]) {
   return enums.OutputDynacalPanelTypeBlueModeGetSet.values.firstWhereOrNull(
-          (e) =>
-              e.value.toString().toLowerCase() ==
-              outputDynacalPanelTypeBlueModeGetSet?.toString().toLowerCase()) ??
+          (e) => e.value == outputDynacalPanelTypeBlueModeGetSet) ??
       defaultValue ??
       enums.OutputDynacalPanelTypeBlueModeGetSet.swaggerGeneratedUnknown;
 }
@@ -20628,11 +20820,7 @@ enums.OutputDynacalPanelTypeGreenModeGetSet
   enums.OutputDynacalPanelTypeGreenModeGetSet? defaultValue,
 ]) {
   return enums.OutputDynacalPanelTypeGreenModeGetSet.values.firstWhereOrNull(
-          (e) =>
-              e.value.toString().toLowerCase() ==
-              outputDynacalPanelTypeGreenModeGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+          (e) => e.value == outputDynacalPanelTypeGreenModeGetSet) ??
       defaultValue ??
       enums.OutputDynacalPanelTypeGreenModeGetSet.swaggerGeneratedUnknown;
 }
@@ -20711,9 +20899,8 @@ enums.OutputDynacalPanelTypeModeGetSet outputDynacalPanelTypeModeGetSetFromJson(
   Object? outputDynacalPanelTypeModeGetSet, [
   enums.OutputDynacalPanelTypeModeGetSet? defaultValue,
 ]) {
-  return enums.OutputDynacalPanelTypeModeGetSet.values.firstWhereOrNull((e) =>
-          e.value.toString().toLowerCase() ==
-          outputDynacalPanelTypeModeGetSet?.toString().toLowerCase()) ??
+  return enums.OutputDynacalPanelTypeModeGetSet.values.firstWhereOrNull(
+          (e) => e.value == outputDynacalPanelTypeModeGetSet) ??
       defaultValue ??
       enums.OutputDynacalPanelTypeModeGetSet.swaggerGeneratedUnknown;
 }
@@ -20793,9 +20980,7 @@ enums.OutputDynacalPanelTypeRedModeGetSet
   enums.OutputDynacalPanelTypeRedModeGetSet? defaultValue,
 ]) {
   return enums.OutputDynacalPanelTypeRedModeGetSet.values.firstWhereOrNull(
-          (e) =>
-              e.value.toString().toLowerCase() ==
-              outputDynacalPanelTypeRedModeGetSet?.toString().toLowerCase()) ??
+          (e) => e.value == outputDynacalPanelTypeRedModeGetSet) ??
       defaultValue ??
       enums.OutputDynacalPanelTypeRedModeGetSet.swaggerGeneratedUnknown;
 }
@@ -20877,10 +21062,7 @@ enums.OutputNetworkFrameRemappingFramesFrameModeGetSet
 ]) {
   return enums.OutputNetworkFrameRemappingFramesFrameModeGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              outputNetworkFrameRemappingFramesFrameModeGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value == outputNetworkFrameRemappingFramesFrameModeGetSet) ??
       defaultValue ??
       enums.OutputNetworkFrameRemappingFramesFrameModeGetSet
           .swaggerGeneratedUnknown;
@@ -20969,11 +21151,8 @@ enums.OutputNetworkGenlockPhaseOffsetModeGetSet
   enums.OutputNetworkGenlockPhaseOffsetModeGetSet? defaultValue,
 ]) {
   return enums.OutputNetworkGenlockPhaseOffsetModeGetSet.values
-          .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              outputNetworkGenlockPhaseOffsetModeGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+          .firstWhereOrNull(
+              (e) => e.value == outputNetworkGenlockPhaseOffsetModeGetSet) ??
       defaultValue ??
       enums.OutputNetworkGenlockPhaseOffsetModeGetSet.swaggerGeneratedUnknown;
 }
@@ -21057,9 +21236,8 @@ enums.OutputNetworkGenlockSourceGetSet outputNetworkGenlockSourceGetSetFromJson(
   Object? outputNetworkGenlockSourceGetSet, [
   enums.OutputNetworkGenlockSourceGetSet? defaultValue,
 ]) {
-  return enums.OutputNetworkGenlockSourceGetSet.values.firstWhereOrNull((e) =>
-          e.value.toString().toLowerCase() ==
-          outputNetworkGenlockSourceGetSet?.toString().toLowerCase()) ??
+  return enums.OutputNetworkGenlockSourceGetSet.values.firstWhereOrNull(
+          (e) => e.value == outputNetworkGenlockSourceGetSet) ??
       defaultValue ??
       enums.OutputNetworkGenlockSourceGetSet.swaggerGeneratedUnknown;
 }
@@ -21138,9 +21316,8 @@ enums.OutputNetworkShuttersyncModeGetSet
   Object? outputNetworkShuttersyncModeGetSet, [
   enums.OutputNetworkShuttersyncModeGetSet? defaultValue,
 ]) {
-  return enums.OutputNetworkShuttersyncModeGetSet.values.firstWhereOrNull((e) =>
-          e.value.toString().toLowerCase() ==
-          outputNetworkShuttersyncModeGetSet?.toString().toLowerCase()) ??
+  return enums.OutputNetworkShuttersyncModeGetSet.values.firstWhereOrNull(
+          (e) => e.value == outputNetworkShuttersyncModeGetSet) ??
       defaultValue ??
       enums.OutputNetworkShuttersyncModeGetSet.swaggerGeneratedUnknown;
 }
@@ -21221,11 +21398,7 @@ enums.OutputNetworkShuttersyncSensorTypeGetSet
   enums.OutputNetworkShuttersyncSensorTypeGetSet? defaultValue,
 ]) {
   return enums.OutputNetworkShuttersyncSensorTypeGetSet.values.firstWhereOrNull(
-          (e) =>
-              e.value.toString().toLowerCase() ==
-              outputNetworkShuttersyncSensorTypeGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+          (e) => e.value == outputNetworkShuttersyncSensorTypeGetSet) ??
       defaultValue ??
       enums.OutputNetworkShuttersyncSensorTypeGetSet.swaggerGeneratedUnknown;
 }
@@ -21311,10 +21484,7 @@ enums.OverrideTestPatternCustomGradientOrientationGetSet
 ]) {
   return enums.OverrideTestPatternCustomGradientOrientationGetSet.values
           .firstWhereOrNull((e) =>
-              e.value.toString().toLowerCase() ==
-              overrideTestPatternCustomGradientOrientationGetSet
-                  ?.toString()
-                  .toLowerCase()) ??
+              e.value == overrideTestPatternCustomGradientOrientationGetSet) ??
       defaultValue ??
       enums.OverrideTestPatternCustomGradientOrientationGetSet
           .swaggerGeneratedUnknown;
@@ -21399,9 +21569,8 @@ enums.OverrideTestPatternFormatGetSet overrideTestPatternFormatGetSetFromJson(
   Object? overrideTestPatternFormatGetSet, [
   enums.OverrideTestPatternFormatGetSet? defaultValue,
 ]) {
-  return enums.OverrideTestPatternFormatGetSet.values.firstWhereOrNull((e) =>
-          e.value.toString().toLowerCase() ==
-          overrideTestPatternFormatGetSet?.toString().toLowerCase()) ??
+  return enums.OverrideTestPatternFormatGetSet.values.firstWhereOrNull(
+          (e) => e.value == overrideTestPatternFormatGetSet) ??
       defaultValue ??
       enums.OverrideTestPatternFormatGetSet.swaggerGeneratedUnknown;
 }
@@ -21477,9 +21646,8 @@ enums.OverrideTestPatternTypeGetSet overrideTestPatternTypeGetSetFromJson(
   Object? overrideTestPatternTypeGetSet, [
   enums.OverrideTestPatternTypeGetSet? defaultValue,
 ]) {
-  return enums.OverrideTestPatternTypeGetSet.values.firstWhereOrNull((e) =>
-          e.value.toString().toLowerCase() ==
-          overrideTestPatternTypeGetSet?.toString().toLowerCase()) ??
+  return enums.OverrideTestPatternTypeGetSet.values
+          .firstWhereOrNull((e) => e.value == overrideTestPatternTypeGetSet) ??
       defaultValue ??
       enums.OverrideTestPatternTypeGetSet.swaggerGeneratedUnknown;
 }
@@ -21557,9 +21725,7 @@ enums.ProcessingColourReplaceMethodGetSet
   enums.ProcessingColourReplaceMethodGetSet? defaultValue,
 ]) {
   return enums.ProcessingColourReplaceMethodGetSet.values.firstWhereOrNull(
-          (e) =>
-              e.value.toString().toLowerCase() ==
-              processingColourReplaceMethodGetSet?.toString().toLowerCase()) ??
+          (e) => e.value == processingColourReplaceMethodGetSet) ??
       defaultValue ??
       enums.ProcessingColourReplaceMethodGetSet.swaggerGeneratedUnknown;
 }

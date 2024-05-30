@@ -28,6 +28,7 @@ abstract class Brompton extends ChopperService {
     ChopperClient? client,
     http.Client? httpClient,
     Authenticator? authenticator,
+    ErrorConverter? errorConverter,
     Converter? converter,
     Uri? baseUrl,
     Iterable<dynamic>? interceptors,
@@ -42,6 +43,7 @@ abstract class Brompton extends ChopperService {
         interceptors: interceptors ?? [],
         client: httpClient,
         authenticator: authenticator,
+        errorConverter: errorConverter,
         baseUrl: baseUrl ?? Uri.parse('http://'));
     return _$Brompton(newClient);
   }
@@ -6147,6 +6149,119 @@ abstract class Brompton extends ChopperService {
       _outputGlobalColourPuretoneEnabledPut(
           {@Body()
           required OutputGlobalColourPuretoneEnabledPut$RequestBody? body});
+
+  ///Get Truelight Enabled
+  ///@param set Sets the enabled
+  Future<chopper.Response<Enabled$Response>>
+      outputGlobalColourTruelightEnabledGet({bool? $set}) {
+    generatedMapping.putIfAbsent(
+        Enabled$Response, () => Enabled$Response.fromJsonFactory);
+
+    return _outputGlobalColourTruelightEnabledGet($set: $set);
+  }
+
+  ///Get Truelight Enabled
+  ///@param set Sets the enabled
+  @Get(path: '/output/global-colour/truelight/enabled')
+  Future<chopper.Response<Enabled$Response>>
+      _outputGlobalColourTruelightEnabledGet({@Query('set') bool? $set});
+
+  ///Set Truelight Enabled
+  Future<chopper.Response<Enabled$Response>>
+      outputGlobalColourTruelightEnabledPut(
+          {required OutputGlobalColourTruelightEnabledPut$RequestBody? body}) {
+    generatedMapping.putIfAbsent(
+        Enabled$Response, () => Enabled$Response.fromJsonFactory);
+
+    return _outputGlobalColourTruelightEnabledPut(body: body);
+  }
+
+  ///Set Truelight Enabled
+  @Put(
+    path: '/output/global-colour/truelight/enabled',
+    optionalBody: true,
+  )
+  Future<chopper.Response<Enabled$Response>>
+      _outputGlobalColourTruelightEnabledPut(
+          {@Body()
+          required OutputGlobalColourTruelightEnabledPut$RequestBody? body});
+
+  ///Get Spectral Boost
+  ///@param set Sets the spectral-boost
+  Future<chopper.Response<SpectralBoost$Response>>
+      outputGlobalColourTruelightSpectralBoostGet({num? $set}) {
+    generatedMapping.putIfAbsent(
+        SpectralBoost$Response, () => SpectralBoost$Response.fromJsonFactory);
+
+    return _outputGlobalColourTruelightSpectralBoostGet($set: $set);
+  }
+
+  ///Get Spectral Boost
+  ///@param set Sets the spectral-boost
+  @Get(path: '/output/global-colour/truelight/spectral-boost')
+  Future<chopper.Response<SpectralBoost$Response>>
+      _outputGlobalColourTruelightSpectralBoostGet({@Query('set') num? $set});
+
+  ///Set Spectral Boost
+  Future<chopper.Response<SpectralBoost$Response>>
+      outputGlobalColourTruelightSpectralBoostPut(
+          {required OutputGlobalColourTruelightSpectralBoostPut$RequestBody?
+              body}) {
+    generatedMapping.putIfAbsent(
+        SpectralBoost$Response, () => SpectralBoost$Response.fromJsonFactory);
+
+    return _outputGlobalColourTruelightSpectralBoostPut(body: body);
+  }
+
+  ///Set Spectral Boost
+  @Put(
+    path: '/output/global-colour/truelight/spectral-boost',
+    optionalBody: true,
+  )
+  Future<chopper.Response<SpectralBoost$Response>>
+      _outputGlobalColourTruelightSpectralBoostPut(
+          {@Body()
+          required OutputGlobalColourTruelightSpectralBoostPut$RequestBody?
+              body});
+
+  ///Get Spectral Preference
+  ///@param set Sets the spectral-preference
+  Future<chopper.Response<SpectralPreference$Response>>
+      outputGlobalColourTruelightSpectralPreferenceGet({num? $set}) {
+    generatedMapping.putIfAbsent(SpectralPreference$Response,
+        () => SpectralPreference$Response.fromJsonFactory);
+
+    return _outputGlobalColourTruelightSpectralPreferenceGet($set: $set);
+  }
+
+  ///Get Spectral Preference
+  ///@param set Sets the spectral-preference
+  @Get(path: '/output/global-colour/truelight/spectral-preference')
+  Future<chopper.Response<SpectralPreference$Response>>
+      _outputGlobalColourTruelightSpectralPreferenceGet(
+          {@Query('set') num? $set});
+
+  ///Set Spectral Preference
+  Future<chopper.Response<SpectralPreference$Response>>
+      outputGlobalColourTruelightSpectralPreferencePut(
+          {required OutputGlobalColourTruelightSpectralPreferencePut$RequestBody?
+              body}) {
+    generatedMapping.putIfAbsent(SpectralPreference$Response,
+        () => SpectralPreference$Response.fromJsonFactory);
+
+    return _outputGlobalColourTruelightSpectralPreferencePut(body: body);
+  }
+
+  ///Set Spectral Preference
+  @Put(
+    path: '/output/global-colour/truelight/spectral-preference',
+    optionalBody: true,
+  )
+  Future<chopper.Response<SpectralPreference$Response>>
+      _outputGlobalColourTruelightSpectralPreferencePut(
+          {@Body()
+          required OutputGlobalColourTruelightSpectralPreferencePut$RequestBody?
+              body});
 
   ///Get Network Bit Depth
   ///@param set Sets the bit-depth

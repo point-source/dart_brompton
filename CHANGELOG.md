@@ -1,3 +1,10 @@
+## 5.0.0
+
+- Upgrade chopper to 8.0.0
+- Add output/global-colour/truelight/enabled (3.6.0)
+- Add output/global-colour/truelight/spectral-preference (3.6.0)
+- Add output/global-colour/truelight/spectral-boost (3.6.0)
+
 ## 4.0.0
 
 - Upgrade Dart SDK requirement to ">=3.0.0 <4.0.0"

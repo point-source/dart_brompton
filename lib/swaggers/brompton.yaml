@@ -6427,6 +6427,127 @@ paths:
       summary: Set Pure Tone Enabled
       tags:
         - output
+  /output/global-colour/truelight/enabled:
+    get:
+      description: Get - Enables or disables Truelight
+      operationId: getTruelight-Enabled
+      parameters:
+        - description: Sets the enabled
+          in: query
+          name: set
+          schema:
+            type: bool
+      responses:
+        "200":
+          $ref: "#/components/responses/enabled"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+      summary: Get Truelight Enabled
+    put:
+      description: Set - Enables or disables Truelight
+      operationId: setTruelight-Enabled
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                data:
+                  type: bool
+              required:
+                - data
+              type: object
+        description: SetsTruelight Enabled
+        required: true
+      responses:
+        "200":
+          $ref: "#/components/responses/enabled"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+      summary: Set Truelight Enabled
+      tags:
+        - output
+  /output/global-colour/truelight/spectral-boost:
+    get:
+      description: Get - Set Spectral Boost
+      operationId: getSpectral-Boost
+      parameters:
+        - description: Sets the spectral-boost
+          in: query
+          name: set
+          schema:
+            type: number
+      responses:
+        "200":
+          $ref: "#/components/responses/spectral-boost"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+      summary: Get Spectral Boost
+    put:
+      description: Set - Set Spectral Boost
+      operationId: setSpectral-Boost
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                data:
+                  maximum: "5.00"
+                  minimum: "1.00"
+                  type: number
+              required:
+                - data
+              type: object
+        description: SetsSpectral Boost
+        required: true
+      responses:
+        "200":
+          $ref: "#/components/responses/spectral-boost"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+      summary: Set Spectral Boost
+      tags:
+        - output
+  /output/global-colour/truelight/spectral-preference:
+    get:
+      description: Get - Set Spectral Preference (from Narrow to Broad)
+      operationId: getSpectral-Preference
+      parameters:
+        - description: Sets the spectral-preference
+          in: query
+          name: set
+          schema:
+            type: number
+      responses:
+        "200":
+          $ref: "#/components/responses/spectral-preference"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+      summary: Get Spectral Preference
+    put:
+      description: Set - Set Spectral Preference (from Narrow to Broad)
+      operationId: setSpectral-Preference
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                data:
+                  maximum: "100"
+                  minimum: "0"
+                  type: number
+              required:
+                - data
+              type: object
+        description: SetsSpectral Preference
+        required: true
+      responses:
+        "200":
+          $ref: "#/components/responses/spectral-preference"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+      summary: Set Spectral Preference
+      tags:
+        - output
   /output/network/bit-depth:
     get:
       description: Get - bit depth of video output. Valid values are 8, 10, and 12
@@ -13328,6 +13449,24 @@ components:
                 type: string
             type: object
       description: Genlock Source Success
+    spectral-boost:
+      content:
+        application/json:
+          schema:
+            properties:
+              spectral-boost:
+                type: number
+            type: object
+      description: Spectral Boost Success
+    spectral-preference:
+      content:
+        application/json:
+          schema:
+            properties:
+              spectral-preference:
+                type: number
+            type: object
+      description: Spectral Preference Success
     star-map-seed:
       content:
         application/json:
